@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1502010014U" Left="8" OnLoadCompleted="D1502010014U_OnLoadCompleted" PidAttrib="7" Title="D1502010014U_위험작업변경&#32;승인요청&#32;목록_투자외부" Top="8" Ver="1.0" Width="700" WorkArea="false">
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="위험작업변경&#32;승인요청&#32;목록_투자외부" Transparent="TRUE" Width="700"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_part" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="395" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="258" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="695" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="137" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="690">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="90"/>
+						<col width="98"/>
+						<col width="169"/>
+						<col width="90"/>
+						<col width="98"/>
+						<col width="98"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="위험작업번호"/>
+						<cell col="2" display="text" text="위험작업명"/>
+						<cell col="3" display="normal" text="작업위치"/>
+						<cell col="4" display="text" text="작업요청일"/>
+						<cell col="5" display="text" text="작업구분"/>
+						<cell col="6" display="text" text="신청구분"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="4" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="6" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="137" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="695" TabOrder="3" Top="134" Type="Rectangle" Width="690"></Shape>
+		<Shape BKColor="user9" Bottom="114" Height="46" Id="Shape0" Left="5" LineColor="user10" Right="695" TabOrder="4" Top="68" Type="Rectangle" Width="690"></Shape>
+		<Image Align="Left" Height="5" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search_1" TabOrder="5" Text="지사" Top="77" Transparent="TRUE" Width="51"></Image>
+		<Div Height="29" Id="Div0" Left="45" TabOrder="6" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="650">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="B1401070010F" Left="54" Style="combo" TabOrder="7" Top="70" Width="115"></Combo>
+		<Image Align="Left" Height="5" Id="Image2" ImageID="blt" Left="174" LeftMargin="12" Style="blt_search_1" TabOrder="8" Text="구" Top="77" Transparent="TRUE" Width="51"></Image>
+		<Combo Border="Flat" Height="18" Id="Combo0" Left="201" Style="combo" TabOrder="9" Top="70" Width="115"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo1" Left="378" Style="combo" TabOrder="11" Top="70" Width="125"></Combo>
+		<Image Align="Left" Height="5" Id="Image3" ImageID="blt" Left="326" LeftMargin="12" Style="blt_search_1" TabOrder="10" Text="시공사" Top="77" Transparent="TRUE" Width="51"></Image>
+		<Combo Border="Flat" Height="18" Id="Combo2" Left="575" Style="combo" TabOrder="12" Top="70" Width="95"></Combo>
+		<Image Align="Left" Height="5" Id="Image4" ImageID="blt" Left="512" LeftMargin="12" Style="blt_search_1" TabOrder="13" Text="작업구분" Top="77" Transparent="TRUE" Width="61"></Image>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="14" Text="위험작업&#32;조회" Top="118" Width="127"></Image>
+		<Image Align="Left" Height="5" Id="Image6" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search_1" TabOrder="15" Text="요청일자" Top="98" Transparent="TRUE" Width="66"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar1" Left="181" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="16" Top="93" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="C2502030010F" Left="170" Style="static" TabOrder="18" Text="~" Top="96" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="C1302030010F" Left="79" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="17" Top="93" WeeksFont="Default,-1" Width="88"></Calendar>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+function D1502010014U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	gfn_SetButton("0001111");
+	
+}]]></Script>
+</Window>

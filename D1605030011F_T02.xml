@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="744" Id="D1605030011F_T01" Left="8" PidAttrib="7" Title="승인일자별정산내역" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Shape BKColor="user15" Bottom="5" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1254" TabOrder="2" Top="2" Type="Rectangle" Width="1249"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button15" ImageID="btn_addrow" Left="1104" LeftMargin="15" OnClick="Btn_Rst_OnClick" Style="button" TabOrder="3" Text="추가" Top="403" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button231" ImageID="btn_8_Search" Left="1122" LeftMargin="21" OnClick="Button231_OnClick" Style="button" TabOrder="4" Text="DCVG탐사이력조회" Top="209" Width="132"></Button>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Acc" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="736" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="731" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="silver" LineType="ExVERT" OnHeadClick="Grid1_OnHeadClick" Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="0" TabStop="true" Top="5" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="82"/>
+						<col width="82"/>
+						<col width="82"/>
+						<col width="82"/>
+						<col width="82"/>
+						<col width="171"/>
+						<col width="200"/>
+						<col width="93"/>
+						<col width="88"/>
+						<col width="88"/>
+						<col width="57"/>
+						<col width="119"/>
+						<col width="59"/>
+						<col width="70"/>
+						<col width="95"/>
+						<col width="40"/>
+						<col width="40"/>
+						<col width="70"/>
+						<col width="244"/>
+						<col width="75"/>
+						<col width="72"/>
+						<col width="72"/>
+						<col width="71"/>
+						<col width="75"/>
+						<col width="69"/>
+						<col width="73"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="정비보수번호"/>
+						<cell col="1" colspan="3" display="text" text="승인일자"/>
+						<cell col="1" display="text" row="1" text="공사비"/>
+						<cell col="2" display="text" row="1" text="직접복구비"/>
+						<cell col="3" display="text" row="1" text="간접복구비"/>
+						<cell col="4" display="text" rowspan="2" text="의뢰일자"/>
+						<cell col="5" display="text" rowspan="2" text="공사위치"/>
+						<cell col="6" display="text" rowspan="2" text="의뢰내역"/>
+						<cell col="7" display="text" rowspan="2" text="대분류"/>
+						<cell col="8" display="text" rowspan="2" text="중분류"/>
+						<cell col="9" display="text" rowspan="2" text="작업시간"/>
+						<cell col="10" display="text" rowspan="2" text="지사"/>
+						<cell col="11" display="text" rowspan="2" text="팀"/>
+						<cell col="12" display="text" rowspan="2" text="시/구"/>
+						<cell col="13" display="text" rowspan="2" text="의뢰자"/>
+						<cell col="14" display="text" rowspan="2" text="시공사"/>
+						<cell col="15" display="text" rowspan="2" text="정산"/>
+						<cell col="16" display="text" rowspan="2" text="유무상&#10;구분"/>
+						<cell col="17" display="text" rowspan="2" text="조치일자"/>
+						<cell col="18" display="text" rowspan="2" text="조치내용"/>
+						<cell col="19" display="text" rowspan="2" text="공사금액"/>
+						<cell col="20" display="text" rowspan="2" text="전표번호"/>
+						<cell col="21" colspan="6" display="text" text="복구비"/>
+						<cell col="21" display="text" row="1" text="직접복구비"/>
+						<cell col="22" display="text" row="1" text="검토일자"/>
+						<cell col="23" display="text" row="1" text="전표번호"/>
+						<cell col="24" display="text" row="1" text="간접복구비"/>
+						<cell col="25" display="text" row="1" text="검토일자"/>
+						<cell col="26" display="text" row="1" text="전표번호"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MAINTER_NUM" display="text"/>
+						<cell align="center" col="1" colid="ASSENT_YMD_WORK_COST" display="date"/>
+						<cell col="2" colid="ASSENT_YMD_DIR_COST" display="date"/>
+						<cell col="3" colid="ASSENT_YMD_IND_COST" display="date"/>
+						<cell col="4" colid="WORK_REQ_YMD_1" display="date"/>
+						<cell align="left" col="5" colid="LOT_NUM_UNION" display="text"/>
+						<cell align="left" col="6" colid="WORK_REQ_DESC" display="text"/>
+						<cell align="left" col="7" colid="WORK_L_FLAG" display="text"/>
+						<cell align="left" col="8" colid="WORK_M_FLAG" display="text"/>
+						<cell align="center" col="9" colid="ACT_TIME" display="text"/>
+						<cell align="center" col="10" colid="BRANCH_NM" display="text"/>
+						<cell align="left" col="11" colid="TEAM_NM" display="text"/>
+						<cell align="center" col="12" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="left" col="13" colid="WORK_REQ_NAME" display="text"/>
+						<cell align="left" col="14" colid="WORK_FIRM_NM" display="text"/>
+						<cell align="center" col="15" colid="ADJ_TYPE_NM" display="text"/>
+						<cell align="center" col="16" colid="WORK_TYPE" display="text"/>
+						<cell align="center" col="17" colid="REAL_JOB_YMD" display="date"/>
+						<cell col="18" colid="ACT_DESC" display="text"/>
+						<cell align="right" col="19" colid="WORK_AMT" display="number"/>
+						<cell align="center" col="20" colid="WORK_BILL_NO" display="text"/>
+						<cell align="right" col="21" colid="DIR_RC_AMT" display="number"/>
+						<cell align="center" col="22" colid="DECIDE_YMD_IND_COST" display="date"/>
+						<cell align="center" col="23" colid="DIR_BILL_NO" display="text"/>
+						<cell align="right" col="24" colid="IND_RC_AMT" display="number"/>
+						<cell align="center" col="25" colid="DECIDE_YMD_DIR_COST" display="date"/>
+						<cell align="center" col="26" colid="IND_BILL_NO" display="text"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" colspan="19" display="text" expr='&quot;합&#32;&#32;&#32;&#32;&#32;&#32;계&#32;&#32;&#32;(&quot;&#32;+&#32;COUNT(&apos;MAINTER_NUM&apos;)&#32;+&#32;&quot;건)&quot;' text="합&#32;&#32;&#32;&#32;계"/>
+						<cell align="right" col="19" display="number" expr="sum(&apos;WORK_AMT&apos;)"/>
+						<cell col="20" display="text"/>
+						<cell align="right" col="21" colid="DIR_RC_AMT" display="number" expr="sum(&apos;DIR_RC_AMT&apos;)"/>
+						<cell col="22" display="text"/>
+						<cell col="23" display="text"/>
+						<cell align="right" col="24" display="number" expr="sum(&apos;IND_RC_AMT&apos;)"/>
+						<cell col="25" display="text"/>
+						<cell col="26" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1605030011F.xml
+* Form 설명  : DCVG탐사 계획/구간/결과 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-23
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_addRow()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	ds_Search_Acc.ClearData();
+	var row = ds_Search_Acc.AddRow();
+	ds_Search_Acc.SetColumn(row,"STR_ASSENT_YMD_WORK",cal_Ymd_From.Value);
+	ds_Search_Acc.SetColumn(row,"END_ASSENT_YMD_WORK",cal_Ymd_To.Value);
+	ds_Search_Acc.SetColumn(row,"STR_ASSENT_YMD_DIR",cal_Ymd_From.Value);
+	ds_Search_Acc.SetColumn(row,"END_ASSENT_YMD_DIR",cal_Ymd_To.Value);
+	ds_Search_Acc.SetColumn(row,"STR_ASSENT_YMD_IND",cal_Ymd_From.Value);
+	ds_Search_Acc.SetColumn(row,"END_ASSENT_YMD_IND",cal_Ymd_To.Value);
+	ds_Search_Acc.SetColumn(row,"BRANCH_CD",cob_branch.Value);
+	ds_Search_Acc.SetColumn(row,"TEAM_CD",cob_TeamCdSearch.Value);
+	ds_Search_Acc.SetColumn(row,"ZIP_NO1",cob_CountyFlag.Value);
+	ds_Search_Acc.SetColumn(row,"WORK_FIRM_CD",edt_WorkFirmCd.Text);
+	
+	ds_Acc.ClearData();
+	
+    var strSvcID        = "search_Acc";
+	var strPart         = "D10";	             
+	var strURL          = "handle.do?ServiceName=D1605030011F-service";
+	var strInDatasets   = "ds_Search_Acc=ds_Search_Acc";
+	var strOutDatasets  = "ds_Acc=ds_Acc";
+	var strArgument     = "search_Acc=1";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );			   
+}
+
+function fn_D1_Excel(){
+
+	var SearchCondition= "";
+   
+    SearchCondition = SearchCondition + "지사 : " +     RPad(cob_branch.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 : " +    RPad(cob_CountyFlag.Text," ",20);
+    SearchCondition = SearchCondition + "승인일자 : " + RPad(substr(today(),0,4) + '0101' + ' ~ ' + today()," ",40);
+	SearchCondition = SearchCondition + "시공업체 : " + RPad(edt_WorkFirmNm.Text," ",20);
+    
+    gfn_ExportExcel("정비보수 승인 내역(승인일자별)", 5, SearchCondition, "Grid1");       
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명  : 탐사일지 장표를 출력한다. 
+// arguments 없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_D1_Print()
+{
+	PrintScreen();
+}
+
+function Grid1_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+		//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+]]></Script>
+</Window>

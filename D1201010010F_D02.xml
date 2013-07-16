@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="730" Id="D1201010010F_D02" Left="8" OnLoadCompleted="D1201010010F_D02_OnLoadCompleted" PidAttrib="7" Title="순찰점검&#32;주&#32;계획조회" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_listweek">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="WEEK" size="256" type="STRING"/>
+					<colinfo id="WEEKDAY" size="256" type="STRING"/>
+					<colinfo id="CONTENT" size="256" type="STRING"/>
+					<colinfo id="CONTENT_1" size="256" type="STRING"/>
+					<colinfo id="CONTENT_2" size="256" type="STRING"/>
+					<colinfo id="CONTENT_3" size="256" type="STRING"/>
+					<colinfo id="CONTENT_4" size="256" type="STRING"/>
+					<colinfo id="CONTENT_5" size="256" type="STRING"/>
+					<colinfo id="CONTENT_6" size="256" type="STRING"/>
+					<colinfo id="CONTENT_7" size="256" type="STRING"/>
+					<colinfo id="CONTENT_8" size="256" type="STRING"/>
+					<colinfo id="CONTENT_9" size="256" type="STRING"/>
+					<colinfo id="CONTENT_10" size="256" type="STRING"/>
+					<colinfo id="CONTENT_11" size="256" type="STRING"/>
+					<colinfo id="CONTENT_12" size="256" type="STRING"/>
+					<colinfo id="CONTENT_13" size="256" type="STRING"/>
+					<colinfo id="CONTENT_14" size="256" type="STRING"/>
+					<colinfo id="CONTENT_15" size="256" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_grid">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WEEK" size="256" summ="default" type="STRING"/>
+					<colinfo id="WEEKDAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONTENT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="722" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="719" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="silver" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1256" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="2" TabStop="true" Top="3" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1251">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="60"/>
+						<col width="852"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="주간"/>
+						<cell col="1" display="text" text="순찰계획"/>
+					</head>
+					<body>
+						<cell col="0" colid="WEEKDAY" display="text"/>
+						<cell col="1" colid="CONTENT" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="3" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1256" TabOrder="1" Top="0" Type="Rectangle" Width="1251"></Shape>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+function D1201010010F_D02_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	Combo5.index = 0;
+	Combo5.enable = true;
+	Combo4.value = today();
+	
+	Combo4.enable = true;
+	Combo5.enable = true;
+	
+	cal_day.value = "";
+	cal_day.enable = false;
+	cob_FaciFlag.enable = true;
+	cob_FaciFlag.value = "";
+}
+
+/********************************************************************************
+* 기      능   :  순찰점검 월 계획조회
+********************************************************************************/
+function fn_D1_Search() {
+
+    ds_grid.ClearData();
+    
+    var strSvcID = "";
+    var strPart = "D10";
+    var strURL = "handle.do?ServiceName=D1_PatrolMonthCheckMgr-service" 
+               + "&BRANCH_CD=" + cob_BranchCd.value 
+               + "&TEAM_CD="   + cob_TeamCd.value 
+               + "&PLAN_YMD="  + substr(Combo4.value, 0, 6) 
+               + "&BLOCK_CD="  + cob_PBlockCd.value
+               + "&WEEK="      + Combo5.value 
+               + "&FACI_NUM="  + cob_FaciFlag.value
+               ;
+               
+    var strInDatasets  = "";
+    var strOutDatasets = "ds_listweek=ds_listweek";
+    var strArgument    = "search2";
+    var callBack       = "fn_callBack";
+ 
+    gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , callBack
+			   );	
+}
+
+/********************************************************************************
+* 기      능   :  조회 후 그리드 세팅
+********************************************************************************/
+function fn_callBack() {
+    
+    Grid1.BindDataset = "";
+    
+    var mon = "";
+    var tue = "";
+    var wed = "";
+    var thu = "";
+    var fri = "";
+    var sat = "";
+    var sun = "";
+    
+    ds_grid.ClearData();
+    
+    ds_grid.AddRow();
+	ds_grid.AddRow();
+	ds_grid.AddRow();
+	ds_grid.AddRow();
+	ds_grid.AddRow();
+	ds_grid.AddRow();
+	ds_grid.AddRow();
+
+	for (var i = 0; i < ds_listweek.RowCount(); i++) {
+	
+	    if (substr(ds_listweek.GetColumn(i, "WEEKDAY"), 3, 1) == "월") {
+			
+			mon += ds_listweek.GetColumn(i, "CONTENT") + ds_listweek.GetColumn(i, "CONTENT_1")
+				 + ds_listweek.GetColumn(i, "CONTENT_2") + ds_listweek.GetColumn(i, "CONTENT_3")
+				 + ds_listweek.GetColumn(i, "CONTENT_4") + ds_listweek.GetColumn(i, "CONTENT_5")
+				 + ds_listweek.GetColumn(i, "CONTENT_6") + ds_listweek.GetColumn(i, "CONTENT_7")
+				 + ds_listweek.GetColumn(i, "CONTENT_8") + ds_listweek.GetColumn(i, "CONTENT_9")
+				 + ds_listweek.GetColumn(i, "CONTENT_10") + ds_listweek.GetColumn(i, "CONTENT_11")
+				 + ds_listweek.GetColumn(i, "CONTENT_12") + ds_listweek.GetColumn(i, "CONTENT_13")
+				 + ds_listweek.GetColumn(i, "CONTENT_14") + ds_listweek.GetColumn(i, "CONTENT_15");
+				 
+			ds_grid.SetColumn(1, "WEEKDAY", ds_listweek.GetColumn(i, "WEEKDAY")); 
+		    ds_grid.SetColumn(1, "CONTENT", mon);   
+			
+		} else if (substr(ds_listweek.GetColumn(i, "WEEKDAY"), 3, 1) == "화") {
+		
+		   	tue += ds_listweek.GetColumn(i, "CONTENT") + ds_listweek.GetColumn(i, "CONTENT_1")
+				 + ds_listweek.GetColumn(i, "CONTENT_2") + ds_listweek.GetColumn(i, "CONTENT_3")
+				 + ds_listweek.GetColumn(i, "CONTENT_4") + ds_listweek.GetColumn(i, "CONTENT_5")
+				 + ds_listweek.GetColumn(i, "CONTENT_6") + ds_listweek.GetColumn(i, "CONTENT_7")
+				 + ds_listweek.GetColumn(i, "CONTENT_8") + ds_listweek.GetColumn(i, "CONTENT_9")
+				 + ds_listweek.GetColumn(i, "CONTENT_10") + ds_listweek.GetColumn(i, "CONTENT_11")
+				 + ds_listweek.GetColumn(i, "CONTENT_12") + ds_listweek.GetColumn(i, "CONTENT_13")
+				 + ds_listweek.GetColumn(i, "CONTENT_14") + ds_listweek.GetColumn(i, "CONTENT_15");
+			
+			ds_grid.SetColumn(2, "WEEKDAY", ds_listweek.GetColumn(i, "WEEKDAY"));   
+			ds_grid.SetColumn(2, "CONTENT", tue);  
+			
+		} else if (substr(ds_listweek.GetColumn(i, "WEEKDAY"), 3, 1) == "수") {
+		
+		   	wed += ds_listweek.GetColumn(i, "CONTENT") + ds_listweek.GetColumn(i, "CONTENT_1")
+				 + ds_listweek.GetColumn(i, "CONTENT_2") + ds_listweek.GetColumn(i, "CONTENT_3")
+				 + ds_listweek.GetColumn(i, "CONTENT_4") + ds_listweek.GetColumn(i, "CONTENT_5")
+				 + ds_listweek.GetColumn(i, "CONTENT_6") + ds_listweek.GetColumn(i, "CONTENT_7")
+				 + ds_listweek.GetColumn(i, "CONTENT_8") + ds_listweek.GetColumn(i, "CONTENT_9")
+				 + ds_listweek.GetColumn(i, "CONTENT_10") + ds_listweek.GetColumn(i, "CONTENT_11")
+				 + ds_listweek.GetColumn(i, "CONTENT_12") + ds_listweek.GetColumn(i, "CONTENT_13")
+				 + ds_listweek.GetColumn(i, "CONTENT_14") + ds_listweek.GetColumn(i, "CONTENT_15");
+				
+			ds_grid.SetColumn(3, "WEEKDAY", ds_listweek.GetColumn(i, "WEEKDAY"));  
+			ds_grid.SetColumn(3, "CONTENT", wed);  
+			
+		} else if (substr(ds_listweek.GetColumn(i, "WEEKDAY"), 3, 1) == "목") {
+		
+		  	thu += ds_listweek.GetColumn(i, "CONTENT") + ds_listweek.GetColumn(i, "CONTENT_1")
+				 + ds_listweek.GetColumn(i, "CONTENT_2") + ds_listweek.GetColumn(i, "CONTENT_3")
+				 + ds_listweek.GetColumn(i, "CONTENT_4") + ds_listweek.GetColumn(i, "CONTENT_5")
+				 + ds_listweek.GetColumn(i, "CONTENT_6") + ds_listweek.GetColumn(i, "CONTENT_7")
+				 + ds_listweek.GetColumn(i, "CONTENT_8") + ds_listweek.GetColumn(i, "CONTENT_9")
+				 + ds_listweek.GetColumn(i, "CONTENT_10") + ds_listweek.GetColumn(i, "CONTENT_11")
+				 + ds_listweek.GetColumn(i, "CONTENT_12") + ds_listweek.GetColumn(i, "CONTENT_13")
+				 + ds_listweek.GetColumn(i, "CONTENT_14") + ds_listweek.GetColumn(i, "CONTENT_15");
+				 
+			ds_grid.SetColumn(4, "WEEKDAY", ds_listweek.GetColumn(i, "WEEKDAY")); 
+			ds_grid.SetColumn(4, "CONTENT", thu);    
+			
+		} else if (substr(ds_listweek.GetColumn(i, "WEEKDAY"), 3, 1) == "금") {
+		
+		    fri += ds_listweek.GetColumn(i, "CONTENT") + ds_listweek.GetColumn(i, "CONTENT_1")
+				 + ds_listweek.GetColumn(i, "CONTENT_2") + ds_listweek.GetColumn(i, "CONTENT_3")
+				 + ds_listweek.GetColumn(i, "CONTENT_4") + ds_listweek.GetColumn(i, "CONTENT_5")
+				 + ds_listweek.GetColumn(i, "CONTENT_6") + ds_listweek.GetColumn(i, "CONTENT_7")
+				 + ds_listweek.GetColumn(i, "CONTENT_8") + ds_listweek.GetColumn(i, "CONTENT_9")
+				 + ds_listweek.GetColumn(i, "CONTENT_10") + ds_listweek.GetColumn(i, "CONTENT_11")
+				 + ds_listweek.GetColumn(i, "CONTENT_12") + ds_listweek.GetColumn(i, "CONTENT_13")
+				 + ds_listweek.GetColumn(i, "CONTENT_14") + ds_listweek.GetColumn(i, "CONTENT_15");
+			
+			ds_grid.SetColumn(5, "WEEKDAY", ds_listweek.GetColumn(i, "WEEKDAY")); 
+			ds_grid.SetColumn(5, "CONTENT", fri);  
+			
+		} else if (substr(ds_listweek.GetColumn(i, "WEEKDAY"), 3, 1) == "토") {
+				
+			sat += ds_listweek.GetColumn(i, "CONTENT") + ds_listweek.GetColumn(i, "CONTENT_1")
+				 + ds_listweek.GetColumn(i, "CONTENT_2") + ds_listweek.GetColumn(i, "CONTENT_3")
+				 + ds_listweek.GetColumn(i, "CONTENT_4") + ds_listweek.GetColumn(i, "CONTENT_5")
+				 + ds_listweek.GetColumn(i, "CONTENT_6") + ds_listweek.GetColumn(i, "CONTENT_7")
+				 + ds_listweek.GetColumn(i, "CONTENT_8") + ds_listweek.GetColumn(i, "CONTENT_9")
+				 + ds_listweek.GetColumn(i, "CONTENT_10") + ds_listweek.GetColumn(i, "CONTENT_11")
+				 + ds_listweek.GetColumn(i, "CONTENT_12") + ds_listweek.GetColumn(i, "CONTENT_13")
+				 + ds_listweek.GetColumn(i, "CONTENT_14") + ds_listweek.GetColumn(i, "CONTENT_15");
+			
+			ds_grid.SetColumn(6, "WEEKDAY", ds_listweek.GetColumn(i, "WEEKDAY"));
+			ds_grid.SetColumn(6, "CONTENT", sat); 
+			
+		} else if (substr(ds_listweek.GetColumn(i, "WEEKDAY"), 3, 1) == "일") {
+				
+			sun += ds_listweek.GetColumn(i, "CONTENT") + ds_listweek.GetColumn(i, "CONTENT_1")
+				 + ds_listweek.GetColumn(i, "CONTENT_2") + ds_listweek.GetColumn(i, "CONTENT_3") 
+				 + ds_listweek.GetColumn(i, "CONTENT_4") + ds_listweek.GetColumn(i, "CONTENT_5") 
+				 + ds_listweek.GetColumn(i, "CONTENT_6") + ds_listweek.GetColumn(i, "CONTENT_7") 
+				 + ds_listweek.GetColumn(i, "CONTENT_8") + ds_listweek.GetColumn(i, "CONTENT_9") 
+				 + ds_listweek.GetColumn(i, "CONTENT_10") + ds_listweek.GetColumn(i, "CONTENT_11") 
+				 + ds_listweek.GetColumn(i, "CONTENT_12") + ds_listweek.GetColumn(i, "CONTENT_13") 
+				 + ds_listweek.GetColumn(i, "CONTENT_14") + ds_listweek.GetColumn(i, "CONTENT_15");
+				 
+			ds_grid.SetColumn(0, "WEEKDAY", ds_listweek.GetColumn(i, "WEEKDAY")); 
+			ds_grid.SetColumn(0, "CONTENT", sun); 
+		}   
+	}
+	
+	for (var m = ds_grid.RowCount(); m >= 0; m--) {
+	    
+	    if (trim(ds_grid.GetColumn(m, "CONTENT")) == "" || trim(ds_grid.GetColumn(m, "CONTENT")) == null) {
+	        ds_grid.DeleteRow(m);
+	    }
+	}		
+	
+	Grid1.BindDataset = "ds_grid";
+	
+	if(ds_listweek.GetRowCount()==0)
+        Grid1.NoDataText="조회결과가 없습니다.";
+}
+]]></Script>
+</Window>

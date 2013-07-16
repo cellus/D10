@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="768" Id="D2001010015F" Left="8" OnLoadCompleted="D2001010015F_OnLoadCompleted" PidAttrib="7" Title="GIS&#32;현황통계" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Radio1">
+				<Contents>
+					<colinfo id="mount" size="256" summ="default" type="STRING"/>
+					<record>
+						<mount>전분기대비&#32;증감현황</mount>
+					</record>
+					<record>
+						<mount>밸브,&#32;TB,&#32;수취기&#32;현황</mount>
+					</record>
+					<record>
+						<mount>배관&#32;및&#32;시설물&#32;현황총괄표</mount>
+					</record>
+					<record>
+						<mount>구별&#32;공급전&#32;현황</mount>
+					</record>
+					<record>
+						<mount>구청별&#32;정압실&#32;현황</mount>
+					</record>
+					<record>
+						<mount>지역&#32;정압실&#32;설치현황</mount>
+					</record>
+					<record>
+						<mount>중압관&#32;년도,&#32;재질별&#32;현황(도로상)</mount>
+					</record>
+					<record>
+						<mount>배관&#32;내&#32;가스체적&#32;현황</mount>
+					</record>
+					<record>
+						<mount>저압관&#32;년도,&#32;재질별&#32;현황(도로상)</mount>
+					</record>
+					<record>
+						<mount>도로상&#32;교체시설물,&#32;재질별&#32;현황</mount>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Radio2">
+				<Contents>
+					<colinfo id="mount" size="256" summ="default" type="STRING"/>
+					<record>
+						<mount>공급관&#32;상세내역</mount>
+					</record>
+					<record>
+						<mount>인입관&#32;상세내역</mount>
+					</record>
+					<record>
+						<mount>밸브&#32;상세내역</mount>
+					</record>
+					<record>
+						<mount>테스트박스&#32;상세내역</mount>
+					</record>
+					<record>
+						<mount>수취기&#32;상세내역</mount>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Radio3">
+				<Contents>
+					<colinfo id="mount" size="256" summ="default" type="STRING"/>
+					<record>
+						<mount>배관망해석&#32;의뢰/검토&#32;현황</mount>
+					</record>
+					<record>
+						<mount>단관&#32;배관망해석&#32;검토&#32;현황</mount>
+					</record>
+					<record>
+						<mount>배관망해석&#32;진행&#32;통계&#32;분석표</mount>
+					</record>
+					<record>
+						<mount>준공도&#32;접수&#32;현황</mount>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_month">
+				<Contents>
+					<colinfo id="CD_ID" size="256" type="STRING"/>
+					<colinfo id="CD_NAME" size="256" type="STRING"/>
+					<record>
+						<CD_ID>01</CD_ID>
+						<CD_NAME>1월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>02</CD_ID>
+						<CD_NAME>2월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>03</CD_ID>
+						<CD_NAME>3월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>04</CD_ID>
+						<CD_NAME>4월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>05</CD_ID>
+						<CD_NAME>5월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>06</CD_ID>
+						<CD_NAME>6월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>07</CD_ID>
+						<CD_NAME>7월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>08</CD_ID>
+						<CD_NAME>8월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>09</CD_ID>
+						<CD_NAME>9월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>10</CD_ID>
+						<CD_NAME>10월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>11</CD_ID>
+						<CD_NAME>11월</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>12</CD_ID>
+						<CD_NAME>12월</CD_NAME>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Color="blue" Height="18" Id="Image8" ImageID="blt" Left="7" LeftMargin="12" Style="blt_search" TabOrder="1" TabStop="FALSE" Text="기준년도" Top="47" Width="59"></Image>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="224" LeftMargin="12" Style="blt_search_Indis" TabOrder="2" TabStop="FALSE" Text="기준월" Top="47" Width="59"></Image>
+		<Spin Border="Flat" Height="18" Id="cob_year" Left="79" Min="1900" Style="spin_indis" TabOrder="3" Text="1900" Top="47" Width="78"></Spin>
+		<Combo Border="Flat" CodeColumn="CD_ID" DataColumn="CD_NAME" Height="18" Id="cob_month" InnerDataset="ds_month" Left="287" Style="combo_indis" TabOrder="4" Top="47" Width="68"></Combo>
+		<Image Align="Left" Height="10" Id="Image0" ImageID="blt_8" Left="61" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="5" TabStop="FALSE" Text="&#32;월별&#32;시설물&#32;현황" Top="81" Width="127"></Image>
+		<Radio Border="None" ColumnCount="2" DataColumn="mount" Height="219" Id="Radio0" INDEX="0" InnerDataset="ds_Radio1" Left="34" OnClick="Radio0_OnClick" Style="radio" TabOrder="6" Top="109" Width="750">
+			<Contents>
+				<Layout Height="20" left="0" text="전분기대비&#32;증감현황" width="80"/>
+				<Layout Height="20" left="80" text="밸브,&#32;TB,&#32;수취기&#32;현황" width="80"/>
+				<Layout Height="20" left="0" text="배관&#32;및&#32;시설물&#32;현황총괄표" width="80"/>
+				<Layout Height="20" left="0" text="구별&#32;공급전&#32;현황" width="80"/>
+				<Layout Height="20" left="0" text="구청별&#32;정압실&#32;현황" width="80"/>
+				<Layout Height="20" left="0" text="지역&#32;정압실&#32;설치&#32;현황" width="80"/>
+				<Layout Height="20" left="0" text="중압관&#32;년도,&#32;재질별&#32;현황(도로상)" width="80"/>
+				<Layout Height="20" left="0" text="배관&#32;내&#32;가스체적&#32;현황" width="80"/>
+				<Layout Height="20" left="0" text="저압관&#32;년도,&#32;재질별&#32;현황(도로상)" width="80"/>
+				<Layout Height="20" left="0" text="도로상&#32;교체시설물,&#32;재질별&#32;현황" width="80"/>
+			</Contents>
+		</Radio>
+		<Image Align="Left" Height="10" Id="Image1" ImageID="blt_8" Left="61" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="7" TabStop="FALSE" Text="&#32;월별&#32;시설물&#32;현황&#32;상세내역" Top="371" Width="183"></Image>
+		<Radio Border="None" ColumnCount="2" DataColumn="mount" Height="144" Id="Radio1" INDEX="0" InnerDataset="ds_Radio2" Left="34" OnClick="Radio1_OnClick" Style="radio" TabOrder="8" Top="400" Width="694">
+			<Contents>
+				<Layout Height="20" left="0" text="공급관&#32;상세내역" width="80"/>
+				<Layout Height="20" left="0" text="인입관&#32;상세내역" width="80"/>
+				<Layout Height="20" left="0" text="밸브&#32;상세내역" width="80"/>
+				<Layout Height="20" left="0" text="테스트박스&#32;상세내역" width="80"/>
+				<Layout Height="20" left="0" text="수취기&#32;상세내역" width="80"/>
+			</Contents>
+		</Radio>
+		<Image Align="Left" Height="10" Id="Image2" ImageID="blt_8" Left="61" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="9" TabStop="FALSE" Text="&#32;준공도&#32;접수&#32;현황&#32;및&#32;배관망해석&#32;현황" Top="585" Width="239"></Image>
+		<Radio Border="None" ColumnCount="2" DataColumn="mount" Height="120" Id="Radio2" INDEX="0" InnerDataset="ds_Radio3" Left="34" OnClick="Radio2_OnClick" Style="radio" TabOrder="10" Top="616" Width="726">
+			<Contents>
+				<Layout Height="20" left="0" text="배관망해석&#32;의뢰/검토&#32;현황" width="80"/>
+				<Layout Height="20" left="0" text="단관&#32;배관망해석&#32;검토&#32;현황" width="80"/>
+				<Layout Height="20" left="0" text="배관망&#32;해석&#32;진행&#32;통계&#32;분석표" width="80"/>
+				<Layout Height="20" left="0" text="준공도&#32;접수&#32;현황" width="80"/>
+			</Contents>
+		</Radio>
+		<Shape BKColor="user15" Bottom="87" Height="3" Id="Shape0" Left="192" LineWidth="0" Right="803" TabOrder="11" Top="84" Type="Rectangle" Width="611"></Shape>
+		<Shape BKColor="user15" Bottom="341" Height="254" Id="Shape1" Left="800" LineWidth="0" Right="803" TabOrder="12" Top="87" Type="Rectangle" Width="3"></Shape>
+		<Shape BKColor="user15" Bottom="343" Height="3" Id="Shape2" Left="16" LineWidth="0" Right="802" TabOrder="13" Top="340" Type="Rectangle" Width="786"></Shape>
+		<Shape BKColor="user15" Bottom="341" Height="254" Id="Shape3" Left="16" LineWidth="0" Right="19" TabOrder="14" Top="87" Type="Rectangle" Width="3"></Shape>
+		<Shape BKColor="user15" Bottom="87" Height="3" Id="Shape4" Left="16" LineWidth="0" Right="51" TabOrder="15" Top="84" Type="Rectangle" Width="35"></Shape>
+		<Shape BKColor="user15" Bottom="378" Height="3" Id="Shape5" Left="16" LineWidth="0" Right="51" TabOrder="20" Top="375" Type="Rectangle" Width="35"></Shape>
+		<Shape BKColor="user15" Bottom="375" Height="3" Id="Shape6" Left="256" LineWidth="0" Right="803" TabOrder="16" Top="372" Type="Rectangle" Width="547"></Shape>
+		<Shape BKColor="user15" Bottom="557" Height="182" Id="Shape7" Left="16" LineWidth="0" Right="19" TabOrder="19" Top="375" Type="Rectangle" Width="3"></Shape>
+		<Shape BKColor="user15" Bottom="557" Height="182" Id="Shape8" Left="800" LineWidth="0" Right="803" TabOrder="17" Top="375" Type="Rectangle" Width="3"></Shape>
+		<Shape BKColor="user15" Bottom="559" Height="3" Id="Shape9" Left="16" LineWidth="0" Right="802" TabOrder="18" Top="556" Type="Rectangle" Width="786"></Shape>
+		<Shape BKColor="user15" Bottom="592" Height="3" Id="Shape10" Left="16" LineWidth="0" Right="51" TabOrder="25" Top="589" Type="Rectangle" Width="35"></Shape>
+		<Shape BKColor="user15" Bottom="747" Height="158" Id="Shape11" Left="16" LineWidth="0" Right="19" TabOrder="24" Top="589" Type="Rectangle" Width="3"></Shape>
+		<Shape BKColor="user15" Bottom="589" Height="3" Id="Shape12" Left="320" LineWidth="0" Right="803" TabOrder="21" Top="586" Type="Rectangle" Width="483"></Shape>
+		<Shape BKColor="user15" Bottom="747" Height="158" Id="Shape13" Left="800" LineWidth="0" Right="803" TabOrder="22" Top="589" Type="Rectangle" Width="3"></Shape>
+		<Shape BKColor="user15" Bottom="749" Height="3" Id="Shape14" Left="16" LineWidth="0" Right="802" TabOrder="23" Top="746" Type="Rectangle" Width="786"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="26" Text="Div0" Top="8" Url="globals::ComHead.xml" Visible="FALSE" Width="1012">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D2001010015F.xml
+* Form 설명  : GIS 현황
+* 시스템 명  : GIS (D3)
+* 작성자     : 노준배 
+* 작성일     : 2009-04-29
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONB30001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+function D2001010015F_OnLoadCompleted(obj) {
+
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_Init()
+// 설명: 초기 셋팅 함수
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_Init() {
+
+    cob_year.Value = substr(today(), 0, 4);
+    cob_month.Value = substr(today(), 4, 2);
+    Radio0.Value = "";
+    Radio1.Value = "";
+    Radio2.Value = "";
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명: 출력 button 실행, 데이터를 출력 한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonPrint() {
+   
+    if (Radio0.Value == "" && Radio1.Value == "" && Radio2.Value == "") {
+	    alert("출력물을 선택해주세요.");
+	    
+	} else if (Radio0.Value != "") {
+	    if (Radio0.Index == 0) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="전분기대비 증감현황"; 
+			var strPart ="D30";           
+			var strReport="D3204020010P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio0.Index == 1) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="밸브, TB, 수취기 현황"; 
+			var strPart ="D30";           
+			var strReport="D3204020060P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio0.Index == 2) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="배관 및 시설물 현황총괄표"; 
+			var strPart ="D30";           
+			var strReport="D3204020020P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio0.Index == 3) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="구별 공급전 현황"; 
+			var strPart ="D30";           
+			var strReport="D3204020070P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio0.Index == 4) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="구청별 정압실 현황"; 
+			var strPart ="D30";           
+			var strReport="D3204020030P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio0.Index == 5) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="지역 정압실 설치현황"; 
+			var strPart ="D30";           
+			var strReport="D3204020080P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio0.Index == 6) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="중압관 년도, 재질별 현황(도로상)"; 
+			var strPart ="D30";           
+			var strReport="D3204020040P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio0.Index == 7) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="배관 내 가스체적 현황"; 
+			var strPart ="D30";           
+			var strReport="D3204020090P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio0.Index == 8) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="저압관 년도, 재질별 현황(도로상)"; 
+			var strPart ="D30";           
+			var strReport="D3204020050P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio0.Index == 9) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="도로상 교체시설물, 재질별 현황"; 
+			var strPart ="D30";           
+			var strReport="D3204020100P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+	    } 
+	      
+	} else if (Radio1.Value != "") {
+	    if (Radio1.Index == 0) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="공급관 상세내역"; 
+			var strPart ="D30";           
+			var strReport="D3204020110P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio1.Index == 1) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="인입관 상세내역"; 
+			var strPart ="D30";           
+			var strReport="D3204020120P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio1.Index == 2) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="밸브 상세내역"; 
+			var strPart ="D30";           
+			var strReport="D3204020130P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio1.Index == 3) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="테스트박스 상세내역"; 
+			var strPart ="D30";           
+			var strReport="D3204020140P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio1.Index == 4) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="수취기 상세내역"; 
+			var strPart ="D30";           
+			var strReport="D3204020150P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+	    } 
+	     
+	} else if (Radio2.Value != "") {
+	    if (Radio2.Index == 0) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="배관망해석 의뢰/검토 현황"; 
+			var strPart ="D30";           
+			var strReport="D3204020160P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio2.Index == 1) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="단관 배관망해석 검토 현황"; 
+			var strPart ="D30";           
+			var strReport="D3204020170P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+	    } else if (Radio2.Index == 2) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="배관망해석 진행 통계 분석표"; 
+			var strPart ="D30";           
+			var strReport="D3204020180P";
+			var strParameter="CLS_YM=" + cob_year.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			
+	    } else if (Radio2.Index == 3) {
+	    
+	        // 함수 호출용 파라미터를 설정한다
+			var strTitle ="준공도 접수 현황"; 
+			var strPart ="D30";           
+			var strReport="D3204020190P";
+			var strParameter="CLS_YM=" + cob_year.Value + cob_month.Value;
+			// 공통 레포트 팝업 함수 호출 
+			gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+	    } 
+	} 
+}
+
+function Radio0_OnClick(obj) {
+
+	Radio1.Value = "";
+    Radio2.Value = "";
+    
+    Image4.Visible = true;
+    cob_month.Visible = true;
+}
+
+function Radio1_OnClick(obj) {
+
+	Radio0.Value = "";
+    Radio2.Value = "";
+    
+    Image4.Visible = true;
+    cob_month.Visible = true;
+}
+
+function Radio2_OnClick(obj) {
+
+	Radio0.Value = "";
+    Radio1.Value = "";
+    
+    if (Radio2.Index == 2) {
+        Image4.Visible = false;
+        cob_month.Visible = false;
+        
+    } else {
+        Image4.Visible = true;
+        cob_month.Visible = true;
+    }
+}
+]]></Script>
+</Window>

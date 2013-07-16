@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1505010010U" Left="8" OnLoadCompleted="D1505010010U_OnLoadCompleted" PidAttrib="7" Title="정압기조회_D1505010010U" Top="8" Ver="1.0" Width="660" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_ROOM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROCATION" size="256" summ="default" type="STRING"/>
+					<colinfo id="STD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_MODEL_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Radio">
+				<Contents>
+					<colinfo id="name" size="256" type="STRING"/>
+					<colinfo id="value" size="256" type="STRING"/>
+					<record>
+						<name>정압실&#32;코드</name>
+						<value>0</value>
+					</record>
+					<record>
+						<name>정압실&#32;명</name>
+						<value>1</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Excel">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_ROOM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROCATION" size="256" summ="default" type="STRING"/>
+					<colinfo id="STD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_MODEL_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="정압기조회" Transparent="TRUE" Width="660"></Image>
+		<Shape BKColor="user16" Bottom="93" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="655" TabOrder="3" Top="90" Type="Rectangle" Width="650"></Shape>
+		<Shape BKColor="user9" Bottom="89" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="655" TabOrder="4" Top="65" Type="Rectangle" Width="650"></Shape>
+		<Image Align="Left" Height="5" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search_1" TabOrder="5" Top="74" Transparent="TRUE" Width="30"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_Gov" ImeMode="none" Left="183" Style="edit_Indis" TabOrder="6" Top="68" Width="129"></Edit>
+		<Div Height="24" Id="Div0" TabOrder="7" Text="Div0" Top="40" Url="globals::ComButton.xml" Width="656">
+			<Contents></Contents>
+		</Div>
+		<Radio BKColor="user9" Border="None" CodeColumn="value" Color="user17" ColumnCount="2" DataColumn="name" Height="13" Id="Radio" INDEX="0" InnerDataset="ds_Radio" Left="26" OnClick="Radio_OnClick" Style="radio" TabOrder="8" Top="72" Width="155">
+			<Contents>
+				<Layout Height="20" left="0" text="명" width="80"/>
+				<Layout Height="20" left="80" text="코드" width="80"/>
+			</Contents>
+		</Radio>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi_Excel" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="393" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="300" Id="grd_ExcelList" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellDBLClick="grd_list_OnCellDblClick" Right="655" SelColor="MENU" Style="grid_pop" TabOrder="9" TabStop="true" Top="93" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="650">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="91"/>
+						<col width="90"/>
+						<col width="98"/>
+						<col width="351"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="normal" text="정압실코드"/>
+						<cell bkcolor="user11" col="1" display="text" text="정압실&#32;명&#32;"/>
+						<cell bkcolor="user11" col="2" display="text" text="정압기&#32;구분"/>
+						<cell bkcolor="user11" col="3" display="text" text="주소"/>
+					</head>
+					<body>
+						<cell col="0" colid="FACI_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="GOV_ROOM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="GOV_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="ROCATION" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="393" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="300" Id="grd_list" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellDBLClick="grd_list_OnCellDblClick" Right="655" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="93" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="650">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="91"/>
+						<col width="90"/>
+						<col width="98"/>
+						<col width="351"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="정압실코드"/>
+						<cell col="1" display="text" text="정압실&#32;명&#32;"/>
+						<cell col="2" display="text" text="정압기&#32;구분"/>
+						<cell col="3" display="text" text="주소"/>
+					</head>
+					<body>
+						<cell col="0" colid="FACI_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="GOV_ROOM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="GOV_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="ROCATION" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1505010010U.xml
+* Form 설명  : 정압기 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2008-12-18
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+  추가 fn_CommonAddRow
+  삭제 fn_CommonDeleteRow
+  저장 fn_CommonSave
+  조회 fn_CommonSearch
+  엑셀 fn_CommonExcelExport
+  인쇄 fn_CommonPrint
+  닫기 공통에서 처리
+===============================================================================*/ 
+
+function D1505010010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	Radio_OnClick(obj);
+	gfn_D1_SetGrid_Sort(grd_list);
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+    if(Radio.Value == 1){
+		fn_D1_Search();
+		fn_D1_FindListExcel01();
+	}else{
+		fn_D1_Search_s();
+		fn_D1_FindListExcel02();
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FindList()
+//   설명:  정비보수 작업접수를 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Search()
+{	
+	var strSvcID = "fn_D1_Search";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_GovernorSearMgr-service&search1=1"
+			   + "&GOV_ROOM_NM=" +edt_Gov.Text
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "";
+	var strCallbackFunc = "fn_CallBack";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallbackFunc
+			   );
+	grd_list.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");
+}
+
+function fn_D1_Search_s()
+{	
+	var strSvcID = "fn_D1_Search";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_GovernorSearMgr-service&search2=1"
+			   + "&FACI_NUM=" +edt_Gov.Text
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "";
+	var strCallbackFunc = "fn_CallBack";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallbackFunc
+			   );
+	grd_list.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");
+}
+//-------------------------------------------------------------------------------
+// 함수명   : fn_D1_FindListExcel()
+// 설명     : 위험작업내역 조회 (Excel 출력) 
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function fn_D1_FindListExcel01()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_GovernorSearMgr-service&excel1=1"
+			   + "&GOV_ROOM_NM=" +edt_Gov.Text
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi_Excel=ds_Multi_Excel";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+//-------------------------------------------------------------------------------
+// 함수명   : fn_D1_FindListExcel()
+// 설명     : 위험작업내역 조회 (Excel 출력) 
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function fn_D1_FindListExcel02()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_GovernorSearMgr-service&excel2=1"
+			   + "&GOV_ROOM_NM=" +edt_Gov.Text
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi_Excel=ds_Multi_Excel";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+/*===============================================================================
+ * 기      능   :  공통 Excel
+===============================================================================*/
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    SearchCondition = SearchCondition + "정압실명/정압실코드 :" + RPad(edt_Gov.Text," ",20);
+    gfn_ExportExcel("정압기 조회", 5, SearchCondition, "grd_ExcelList"); 	
+}
+/*===============================================================================
+ * callback
+===============================================================================*/
+function fn_CallBack(svcId, ErrorCode, ErrorMsg)
+{
+	if ( ErrorCode <0 )
+	{
+		var tr_name;
+		var tr_kname;
+		switch(svcId){
+			case "fn_D1_Search": 
+			//수정 실패시 
+				tr_name="find";
+				tr_kname="수정";
+			break;
+		}
+		return;
+	}
+
+	 switch(svcid)
+	 {
+		case "fn_D1_Search":
+			trace("fn_D1_Search callback");
+			//업데이트 완료후
+				fn_D1_Search();
+				alert('정상적으로 조회를 완료하였습니다.');
+		break;
+	}
+}
+
+/********************************************************************************
+* 기      능   :  부모창으로 인자값 보내기
+********************************************************************************/
+function grd_list_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	 var arr = ds_Multi.getcolumn(grd_list.ClickedRow, "FACI_NUM") + "#"  	       //정압실 코드
+             + ds_Multi.getcolumn(grd_list.ClickedRow, "GOV_MODEL_NM") + "#"       //정압기 명
+             + ds_Multi.getcolumn(grd_list.ClickedRow, "STD") + "#"			       //규격
+             + ds_Multi.getcolumn(grd_list.ClickedRow, "ROCATION") + "#"	       //설치위치
+             + ds_Multi.getcolumn(grd_list.ClickedRow, "BRANCH_CD") + "#"   	   //지사코드
+             + ds_Multi.getcolumn(grd_list.ClickedRow, "GOV_NUM") + "#"		  	   //정압기번호
+             + ds_Multi.getcolumn(grd_list.ClickedRow, "GOV_ROOM_NM") + "#"        //정압실 명
+             + ds_Multi.getcolumn(grd_list.ClickedRow, "GOV_ROOM_TYPE");	       //정압실 타입 
+     this.close(arr);	 
+}
+
+/********************************************************************************
+* 기      능   :  조건 변화
+********************************************************************************/
+function Radio_OnClick(obj)
+{
+	if(Radio.Value == 0)
+	{
+		edt_Gov.MaxLength = 8;
+		edt_Gov.Text = "";
+	}else{
+		edt_Gov.MaxLength = 160;
+		edt_Gov.Text = "";
+	}
+}
+//-------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 인쇄
+//-------------------------------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+]]></Script>
+</Window>

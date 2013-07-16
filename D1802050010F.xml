@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1802050010F" Left="8" OnLoadCompleted="D1802050010F_OnLoadCompleted" PidAttrib="7" Title="도로상&#32;점용&#32;정배류기,RTU&#32;상세&#32;조회_D1802050010F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_GovRtu1">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="OBJECT_FLAG" size="256" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" type="STRING"/>
+					<colinfo id="LEASE_FACI_FLAG" size="256" type="STRING"/>
+					<colinfo id="OLD_NEW_FLAG" size="256" type="STRING"/>
+					<colinfo id="AREA_CD" size="256" type="STRING"/>
+					<colinfo id="AREA_NM" size="256" type="STRING"/>
+					<colinfo id="INST_LOC" size="256" type="STRING"/>
+					<colinfo id="COMPL_YMD" size="256" type="STRING"/>
+					<colinfo id="INST_FLAG" size="256" type="STRING"/>
+					<colinfo id="INST_NM" size="256" type="STRING"/>
+					<colinfo id="SQUARE" size="256" type="STRING"/>
+					<colinfo id="FACI_CNT" size="256" type="STRING"/>
+					<colinfo id="INCOME_FLAG" size="256" type="STRING"/>
+					<colinfo id="LEASE_LOC" size="256" type="STRING"/>
+					<colinfo id="PUBLIC_PRC" size="256" type="STRING"/>
+					<colinfo id="EXPECT_LEASE_AMT" size="256" type="STRING"/>
+					<colinfo id="UNIT_PRC" size="256" type="STRING"/>
+					<colinfo id="PERIOD" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="0" LineColor="user7" Right="995" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="8" Top="30" Type="RoundRect" Width="995"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="5" LineWidth="0" Right="990" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="9" Top="35" Type="Rectangle" Width="985"></Shape>
+		<Image Align="Left" Height="6" Id="Image7" ImageID="blt" Left="12" LeftMargin="12" Style="blt_search" TabOrder="1" Text="기준년도" Top="46" Width="84"></Image>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="152" LeftMargin="12" Style="blt_search" TabOrder="2" Text="점용기간" Top="46" Width="95"></Image>
+		<Shape BKColor="#6cbae1" Bottom="95" Height="3" Id="Shape0" Left="0" LineWidth="0" Right="995" TabOrder="4" Top="92" Type="Rectangle" Width="995"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_GovRtu1" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="577" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="482" Id="Grid0" InputPanel="FALSE" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="995" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="95" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="120"/>
+						<col width="150"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="102"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="순번"/>
+						<cell col="1" display="text" text="GIS_ID"/>
+						<cell col="2" display="text" text="준공일자"/>
+						<cell col="3" display="text" text="시설구분"/>
+						<cell col="4" display="text" text="지역"/>
+						<cell col="5" display="text" text="수입구분"/>
+						<cell col="6" display="text" text="설치위치"/>
+						<cell col="7" display="text" text="설치구분"/>
+						<cell col="8" display="text" text="개소"/>
+						<cell col="9" display="text" text="점용위치"/>
+						<cell col="10" display="text" text="점용단가"/>
+						<cell col="11" display="text" text="예상점용로"/>
+					</head>
+					<body>
+						<cell col="0" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="BASE_YEAR" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="INST_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="AREA_CD" display="text"/>
+						<cell align="center" col="5" colid="INCOME_FLAG" display="text"/>
+						<cell align="center" col="6" colid="INST_LOC" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="7" colid="INST_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="8" colid="FACI_CNT" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="9" colid="LEASE_LOC" display="text"/>
+						<cell col="10" colid="UNIT_PRC" display="currency"/>
+						<cell col="11" colid="EXPECT_LEASE_AMT" display="currency"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" LeftMargin="12" Style="text_title" TabOrder="5" Text="배관,&#32;밸브&#32;도로상&#32;점용&#32;상세내역" Top="75" Width="270"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Period" Left="216" Style="combo_indis" TabOrder="6" Top="39" Width="140"></Combo>
+		<Image Align="Left" Height="6" Id="Image10" ImageID="blt" Left="365" LeftMargin="12" Style="blt_search" TabOrder="7" Text="점용위치" Top="46" Width="84"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="10" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="995">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="cob_LeaseLoc" Left="427" Style="combo_indis" TabOrder="11" Top="39" Width="140"></Combo>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear" Left="85" Min="0" Style="spin" TabOrder="12" Text="2008" Top="41" Width="54"></Spin>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802040010F.xml
+* Form 설명  : 도로상 점용 정배류기, RTU상세조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-15
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+function D1802050010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	//fn_E3_Find();  //  초기조회
+}
+
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	//gfn_SetButton("0011011");
+	
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_SetComboBox_Comcode("",gfn_setDsObject_Comcode("cob_Period"));
+	gfn_SetComboBox_Comcode("D10013",gfn_setDsObject_Comcode("cob_LeaseLoc"));
+	
+	//-----------------------------------------
+	//  콤보박스의 초기 설정 : 기준년도, 점용기간, 점용위치
+	//-----------------------------------------
+	cob_BaseYear.Value  = Substr(Today(),0,4)+"년";
+	cob_Period.Index    = 0;
+	cob_LeaseLoc.Index  = 0;
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//---------------------------------------------------------
+function fn_CommonSave()
+{
+	if(fn_PreSave() == false) {
+		
+		return false;
+	}
+	
+	if(ds_Asset.GetRowCount() == 0){
+		alert(gfn_GetMessage("M000008","%AAA%", "저장대상이")); //"저장대상이 없습니다."
+		return;
+	}
+    
+	if(!ds_Asset.GetUpdate()){
+		alert(gfn_GetMessage("M000008","%AAA%", "변경내역이")); //"변경내역이 없습니다."
+		return;
+    }
+    
+    if(!confirm(gfn_GetMessage("M000016","%AAA%","편집된 내용을 저장"))){
+		return false;
+	}
+		
+	fn_E3_Save();
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	fn_E3_Find();
+}
+
+function fn_CommonExcelExport(){
+	Grid0.ExportExcel("sheet1"); 
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_FindPipeVelveList()
+//   설명  : 정기 검사 정압기 결과를 조회한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_E3_Find()
+{	
+	var strSvcID        = "fn_E3_Find";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_RoadLeaseRectiDetaSearMgr-service&BASE_YEAR=" + cob_BaseYear.Value + "&LEASE_LOC=" + '10' + "&PERIOD=" + '0';
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_GovRtu1=ds_GovRtu1";
+	var strArgument     = "find";
+	var strCallbackFunc = "fn_CallBack";
+		
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallbackFunc
+			   );
+			   
+	if(ds_GovRtu1.GetRowCount()==0) trace("조회결과가 없습니다.");
+	trace(ds_GovRtu1.SaveXML());
+}
+
+/*===============================================================================
+ * callback
+===============================================================================
+*/
+function fn_CallBack(svcid, errcd, errmsg)
+{
+	Trace("callback");
+		
+	switch(svcid)
+	{	
+		case "fn_E3_Find": 
+			trace("fn_E3_Find callback");
+			trace(ds_GovRtu1.SaveXML());			
+			break;	
+		case "fn_E3_Save":			
+			trace("fn_E3_Save callback");		
+			fn_E3_Find();
+			break;	
+		case "fn_E3_Delete":			
+			trace("fn_E3_Delete callback");		
+			fn_E3_Find();
+			break;				
+	}
+}]]></Script>
+</Window>

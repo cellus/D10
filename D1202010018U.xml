@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="900" Id="D1202010018U" Left="8" PidAttrib="7" Title="T/B시설물카드조회_D1202010018U" Top="8" Ver="1.0" Width="1170" WorkArea="false">
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static30" Left="110" Style="table" TabOrder="66" Top="237" VAlign="Middle" Width="1041" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="T/B시설물카드&#32;조회" Transparent="TRUE" Width="1150"></Image>
+		<Shape BKColor="user16" Bottom="303" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="1150" TabOrder="2" Top="300" Type="Rectangle" Width="1145"></Shape>
+		<Image Align="Left" Height="9" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="3" Text="점검이력" Top="285" Width="117"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_part" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="616" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="144" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="1150" SelColor="MENU" Style="grid_pop" TabOrder="4" TabStop="true" Top="472" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1145">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="204"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="0"/>
+						<col width="100"/>
+						<col width="0"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="보수일자"/>
+						<cell col="1" display="text" text="보수내용"/>
+						<cell col="2" display="text" text="보수자"/>
+						<cell col="3" display="text" text="보수비용"/>
+						<cell col="4" display="text" text="팀"/>
+						<cell col="5" display="text" text="특기사항"/>
+						<cell col="6" display="text" text="성명"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="6" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="472" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1150" TabOrder="5" Top="469" Type="Rectangle" Width="1145"></Shape>
+		<Image Align="Left" Height="9" Id="Image2" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="6" Text="보수이력" Top="453" Width="117"></Image>
+		<Image Align="Left" Height="9" Id="Image3" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="7" Text="도면정보" Top="622" Width="117"></Image>
+		<Static BKColor="white" Border="Flat" Height="179" Id="Static9" Left="5" Style="table" TabOrder="8" Top="637" VAlign="Middle" Width="1145" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="9" Id="Image4" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="9" Text="사진정보" Top="822" Width="117"></Image>
+		<Static BKColor="white" Border="Flat" Height="179" Id="Static24" Left="5" Style="table" TabOrder="10" Top="837" VAlign="Middle" Width="1145" WordWrap="TRUE"></Static>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_part" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="447" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="144" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="1150" SelColor="MENU" Style="grid_pop" TabOrder="11" TabStop="true" Top="303" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1145">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="249"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="순찰일자"/>
+						<cell col="1" display="text" text="외관상태"/>
+						<cell col="2" display="text" text="측정전위"/>
+						<cell col="3" display="text" text="보정전위"/>
+						<cell col="4" display="text" text="점검자1"/>
+						<cell col="5" display="text" text="점검자2"/>
+						<cell col="6" display="text" text="점검사항"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" display="text"/>
+						<cell col="5" display="text"/>
+						<cell col="6" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Div Height="29" Id="Div0" Left="51" TabOrder="12" Text="Div0" Top="44" Url="globals::ComButton.xml" Width="1099">
+			<Contents></Contents>
+		</Div>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static25" Left="110" Style="table" TabOrder="17" Top="153" VAlign="Middle" Width="1041" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static22" Left="110" Style="table" TabOrder="15" Top="132" VAlign="Middle" Width="1041" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static16" Left="110" Style="table" TabOrder="33" Top="258" VAlign="Middle" Width="1041" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit3" ImeMode="none" Left="128" Style="edit" TabOrder="34" Top="239" Width="1019"></Edit>
+		<Edit BindDataset="ds_TBDetail" Border="Flat" Column="NEW_DETAIL_ADDR" Enable="FALSE" Height="18" Id="Edit20" ImeMode="none" Left="596" Style="edit" TabOrder="45" Top="155" Width="551"></Edit>
+		<Edit BindDataset="ds_TBDetail" Border="Flat" Column="DETAIL_ADDR" Enable="FALSE" Height="18" Id="Edit13" ImeMode="none" Left="596" Style="edit" TabOrder="40" Top="134" Width="551"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static26" Left="110" Style="table" TabOrder="13" Top="111" VAlign="Middle" Width="1041" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static27" Left="5" Style="pop_table" TabOrder="14" Text="주소" Top="132" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static28" Left="5" Style="pop_table" TabOrder="16" Text="신주소" Top="153" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static29" Left="110" Style="table" TabOrder="19" Top="174" VAlign="Middle" Width="1041" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static31" Left="287" Style="pop_table" TabOrder="18" Text="방식구분" Top="111" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static45" Left="5" Style="pop_table" TabOrder="20" Text="포장" Top="174" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static32" Left="110" Style="table" TabOrder="22" Top="90" VAlign="Middle" Width="1041" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static33" Left="5" Style="pop_table" TabOrder="21" Text="시설물번호" Top="90" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static34" Left="287" Style="pop_table" TabOrder="23" Text="공사번호" Top="90" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static35" Left="569" Style="pop_table" TabOrder="24" Text="T/B구분" Top="90" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static36" Left="5" Style="pop_table" TabOrder="25" Text="압력" Top="111" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static37" Left="110" Style="table" TabOrder="27" Top="195" VAlign="Middle" Width="1041" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static38" Left="287" Style="pop_table" TabOrder="26" Text="시설구분" Top="174" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static39" Left="569" Style="pop_table" TabOrder="28" Text="방식시공회사" Top="174" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="13" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="29" Text="T/B&#32;정보" Top="73" Width="117"></Image>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static40" Left="569" Style="pop_table" TabOrder="30" Text="정,배류기명" Top="111" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit19" ImeMode="none" Left="128" Style="edit" TabOrder="35" Top="260" Width="1019"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static41" Left="5" Style="pop_table" TabOrder="31" Text="첨부파일" Top="237" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static42" Left="5" Style="pop_table" TabOrder="32" Text="첨부문서" Top="258" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_TBDetail" Border="Flat" Column="ZIP_NO1" Enable="FALSE" Height="18" Id="DetailZip1" ImeMode="none" Left="128" Style="edit" TabOrder="36" Top="134" Width="38"></Edit>
+		<Static Height="13" Id="C2502030010F" Left="167" Style="static" TabOrder="37" Text="-" Top="137" Width="10"></Static>
+		<Edit BindDataset="ds_TBDetail" Border="Flat" Column="ZIP_NO2" Enable="FALSE" Height="18" Id="DetailZip2" ImeMode="none" Left="175" Style="edit" TabOrder="38" Top="134" Width="38"></Edit>
+		<Edit BindDataset="ds_TBDetail" Border="Flat" Column="ADDR" Enable="FALSE" Height="18" Id="DetailZip3" ImeMode="none" Left="214" Style="edit" TabOrder="39" Top="134" Width="381"></Edit>
+		<Edit BindDataset="ds_TBDetail" Border="Flat" Column="NEW_ADDR" Enable="FALSE" Height="18" Id="NewZip3" ImeMode="none" Left="214" Style="edit" TabOrder="44" Top="155" Width="381"></Edit>
+		<Edit BindDataset="ds_TBDetail" Border="Flat" Column="NEW_ZIP_NO1" Enable="FALSE" Height="18" Id="NewZip1" ImeMode="none" Left="128" Style="edit" TabOrder="41" Top="155" Width="38"></Edit>
+		<Edit BindDataset="ds_TBDetail" Border="Flat" Column="NEW_ZIP_NO2" Enable="FALSE" Height="18" Id="NewZip2" ImeMode="none" Left="175" Style="edit" TabOrder="43" Top="155" Width="38"></Edit>
+		<Static Height="13" Id="Static43" Left="167" Style="static" TabOrder="42" Text="-" Top="158" Width="10"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static44" Left="863" Style="pop_table" TabOrder="46" Text="설치일자" Top="174" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static47" Left="287" Style="pop_table" TabOrder="48" Text="무선전위대상" Top="195" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static48" Left="5" Style="pop_table" TabOrder="47" Text="단구간여부" Top="195" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static49" Left="110" Style="table" TabOrder="49" Top="216" VAlign="Middle" Width="1041" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static50" Left="5" Style="pop_table" TabOrder="50" Text="특기사항" Top="216" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit21" ImeMode="none" Left="128" Style="edit" TabOrder="51" Top="218" Width="1019"></Edit>
+		<Calendar Border="Flat" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar1" Left="986" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="52" Top="176" WeeksFont="Default,-1" Width="161"></Calendar>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit28" ImeMode="none" Left="128" Style="edit" TabOrder="53" Top="176" Width="156"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit30" ImeMode="none" Left="692" Style="edit" TabOrder="54" Top="92" Width="168"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit49" ImeMode="none" Left="128" Style="edit" TabOrder="55" Top="197" Width="156"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit60" ImeMode="none" Left="692" Style="edit" TabOrder="56" Top="113" Width="168"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit68" ImeMode="none" Left="986" Style="edit" TabOrder="57" Top="92" Width="161"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit0" ImeMode="none" Left="128" Style="edit" TabOrder="58" Top="92" Width="156"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit1" ImeMode="none" Left="128" Style="edit" TabOrder="59" Top="113" Width="156"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit2" ImeMode="none" Left="410" Style="edit" TabOrder="60" Top="176" Width="156"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit4" ImeMode="none" Left="410" Style="edit" TabOrder="61" Top="197" Width="156"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit5" ImeMode="none" Left="410" Style="edit" TabOrder="62" Top="92" Width="156"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit6" ImeMode="none" Left="410" Style="edit" TabOrder="63" Top="113" Width="156"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static46" Left="863" Style="pop_table" TabOrder="64" Text="지사" Top="90" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit7" ImeMode="none" Left="692" Style="edit" TabOrder="65" Top="176" Width="168"></Edit>
+	</Form>
+	<Script></Script>
+</Window>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="312" Id="D1503010012U" Left="8" OnLoadCompleted="D1503010012U_OnLoadCompleted" PidAttrib="7" Title="안전수칙(가정관)_D1503010012U" Top="8" Ver="1.0" Width="660" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Sign">
+				<Contents>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo encrypt="base64" id="SIGN" size="256" summ="default" type="BLOB"/>
+					<colinfo id="CHK" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="안전수칙(가정관)" Transparent="TRUE" Width="660"></Image>
+		<Shape BKColor="user16" Bottom="79" Height="5" Id="Shape1" Left="0" LineWidth="0" Right="659" TabOrder="2" Top="74" Type="Rectangle" Width="659"></Shape>
+		<Static Align="Center" Border="Flat" Height="125" Id="Static139" Style="table" TabOrder="7" Text="안전조치&#32;준수사항" Top="79" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="32" Id="Static127" Left="124" Style="table" TabOrder="3" Text="&#32;1.&#32;작업전&#32;안전장비를&#32;점검하여&#32;최상의&#32;상태로&#32;가동" Top="79" VAlign="Middle" Width="535" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="32" Id="Static128" Left="124" Style="table" TabOrder="4" Text="&#32;2.&#32;위험작업&#32;현장에는&#32;안전장비와&#32;소화기를&#32;비치" Top="110" VAlign="Middle" Width="535" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="32" Id="Static129" Left="124" Style="table" TabOrder="5" Text="&#32;3.&#32;현장주변에는&#32;절대금연하고&#32;화기접근을&#32;통제" Top="141" VAlign="Middle" Width="535" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="32" Id="Static137" Left="124" Style="table" TabOrder="6" Text="&#32;4.&#32;퍼지&#32;시&#32;방출가스의&#32;안전확보&#32;다시한번&#32;확인" Top="172" VAlign="Middle" Width="535" WordWrap="TRUE"></Static>
+		<Div DisableBKColor="white" Height="29" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="8" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="659">
+			<Contents></Contents>
+		</Div>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button41" ImageID="btn_4_Close&#32;cancellation" Left="580" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="9" Text="서명취소" Top="206" Width="76"></Button>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="31" Id="edt_WorkFirmCdNm" Left="170" Style="table" TabOrder="13" Top="229" VAlign="Middle" Width="230" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="30" Id="edt_SiteChiefNm" Left="170" Style="table" TabOrder="14" Top="259" VAlign="Middle" Width="230" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="30" Id="Static2" Left="124" Style="table" TabOrder="12" Text="성명" Top="259" VAlign="Middle" Width="47" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="31" Id="Static1" Left="124" Style="table" TabOrder="11" Text="업체명" Top="229" VAlign="Middle" Width="47" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="60" Id="Static0" Style="table" TabOrder="10" Text="안전교육실시&#32;확인" Top="229" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Sign BindDataset="ds_Sign" Border="FLAT" Column="SIGN" Height="60" Id="sign" Left="386" TabOrder="15" Text="(서명)" Top="229" Width="270"></Sign>
+		<Image BindDataset="ds_Sign" Border="Flat" Column="SIGN" Height="60" Id="SignImg" Left="386" TabOrder="16" Top="229" Width="270"></Image>
+		<File Bottom="40" Height="24" Id="File1" Left="672" Right="696" TabOrder="16" Top="16" Width="24"></File>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+var strDANGER_NUM = "";
+var strDANGER_JOB_FLAG = "";
+
+function D1503010012U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	if(WORK_FIRM_CD == "" && SITE_CHIEF_NM == ""){
+		edt_WorkFirmCdNm.Text = "";
+		edt_SiteChiefNm .Text = "";
+	}else if(WORK_FIRM_CD != "" && SITE_CHIEF_NM == ""){
+		edt_WorkFirmCdNm.Text = WORK_FIRM_CD;
+		edt_SiteChiefNm .Text = "";
+	}else if(WORK_FIRM_CD == "" && SITE_CHIEF_NM != null){
+		edt_WorkFirmCdNm.Text = "";
+		edt_SiteChiefNm .Text = SITE_CHIEF_NM;		
+	}else if(WORK_FIRM_CD != "" && SITE_CHIEF_NM != null){
+		edt_WorkFirmCdNm .Text = WORK_FIRM_CD;
+		edt_SiteChiefNm  .Text = SITE_CHIEF_NM;		
+	}
+
+	// edt_WorkFirmCdNm.Text = WORK_FIRM_CD;
+	// edt_SiteChiefNm.Text = SITE_CHIEF_NM;
+
+	strDANGER_NUM = DANGER_NUM;	
+	strDANGER_JOB_FLAG = DANGER_JOB_FLAG;
+
+//trace("strDANGER_NUM:"+strDANGER_NUM);
+//trace("strDANGER_JOB_FLAG:"+strDANGER_JOB_FLAG);
+	
+	fn_D11_FindList();	
+}
+
+function fn_CommonExcelExport()
+{
+	grd_list.ExportExcel("sheet1");
+}
+
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+function fn_D11_FindList()
+{
+
+	sign.BindDataset = "";
+	sign.Column = "";
+	
+	var strSvcID = "SignSearch";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Sign=ds_Sign";
+	var strArgument  = "SignSearch=1";
+		strArgument	+= " DANGER_NUM=" + quote(strDANGER_NUM);
+	    strArgument += " DANGER_JOB_FLAG=" + quote(strDANGER_JOB_FLAG);
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ds_Sign.GetColumn(0, "CHK") = null){		
+		sign.BindDataset = "ds_Sign";
+		sign.Column = "SIGN";	
+		
+		SignImg.Visible = false;
+		sign.Visible    = true;
+	}else{
+	
+		SignImg.Visible = true;
+		sign.Visible    = false;
+	}
+}
+
+function fn_CommonSave()
+{
+	fn_update();
+}
+
+function fn_update()
+{	
+	ds_Sign.UpdateControl = false;
+	ds_Sign.SetRowType(0,"update");
+	
+	
+	sign.SaveFile("JPG", "C:\\test.jpg");
+	File1.FileName = "C:\\test.jpg";
+	if (File1.open('rb'))
+	{
+		var sbuff;
+		sbuff = File1.ReadBinary();
+		File1.Close();
+		ds_Sign.SetColumn(0, "SIGN", sbuff);
+	}
+	
+	ds_Sign.SetColumn(0, "DANGER_NUM", strDANGER_NUM);
+	ds_Sign.SetColumn(0, "DANGER_JOB_FLAG", strDANGER_JOB_FLAG);
+	
+	var strSvcID = "sign";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";
+	var strInDatasets  = "ds_Sign=ds_Sign:u";
+	var strOutDatasets  = "";
+	var strArgument  = "sign=1";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+				  
+    if ( ErrorCode > 0 )
+	{
+		return false;
+	}else{
+		alert("저장 되었습니다.");
+		return true;
+	}
+}
+
+function Button0_OnClick(obj)
+{
+	sign.Clear();
+	
+	SignImg.Visible = false;
+	sign.Visible    = true;
+}
+]]></Script>
+</Window>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="500" Id="D1604010010U" Left="8" PidAttrib="7" Title="D1604010010U_정비보수&#32;작업공사비등록" Top="8" Ver="1.0" Width="650" WorkArea="true">
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="정비보수&#32;작업공사비등록" Transparent="TRUE" Width="650"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="92"></Button>
+		<Shape BKColor="user16" Bottom="71" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="645" TabOrder="4" Top="68" Type="Rectangle" Width="640"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="445" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="374" Id="Grid2" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="645" SelColor="MENU" Style="grid_pop" TabOrder="3" TabStop="true" Top="71" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="640">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="구분"/>
+						<cell col="1" display="text" text="분류"/>
+						<cell col="2" display="text" text="인원(수량)"/>
+						<cell col="3" display="text" text="시간"/>
+						<cell col="4" display="text" text="단가"/>
+						<cell col="5" display="text" text="금액"/>
+					</head>
+					<body>
+						<cell col="0" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" display="text"/>
+						<cell col="4" display="text"/>
+						<cell col="5" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Div Height="29" Id="Div0" Left="5" TabOrder="5" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="640">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[
+#include "JS::COMMONA10001.js";
+
+function D1101010014U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	gfn_SetButton("0001111");
+	
+}]]></Script>
+</Window>

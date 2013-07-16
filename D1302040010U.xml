@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="650" Id="D1302040010U" Left="8" OnLoadCompleted="D1302040010U_OnLoadCompleted" PidAttrib="7" Title="도시가스공급시설(배관)&#32;자율검사서_D1302040010U" Top="8" Ver="1.0" Width="855" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_FreePipeList">
+				<Contents>
+					<colinfo id="PIPE_INSPECT_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_RSLT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK2" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_ITEM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FileList">
+				<Contents>
+					<colinfo id="FILE_ID" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NUM" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_FLAG" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_KIND" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_ID" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM" size="256" type="STRING"/>
+					<colinfo id="ORIG_ATTACH_FILE_NM" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_PATH" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_SIZE" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_TYPE" size="256" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" type="STRING"/>
+					<colinfo id="USE_YN" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SignView">
+				<Contents>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_INSPECT_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo encrypt="base64" id="SIGN_1" size="256" summ="default" type="BLOB"/>
+					<colinfo encrypt="base64" id="SIGN_2" size="256" summ="default" type="BLOB"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Sign">
+				<Contents>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_INSPECT_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo encrypt="base64" id="SIGN" size="256" summ="default" type="BLOB"/>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<INSPECT_FLAG></INSPECT_FLAG>
+						<INSPECT_ITEM></INSPECT_ITEM>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM></PIPE_INSPECT_ITEM>
+						<SIGN></SIGN>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FreePipe" OnColumnChanged="ds_FreePipe_OnColumnChanged">
+				<Contents>
+					<colinfo id="ROW_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_INSPECT_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_PASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_NOT_PASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_NONE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK2" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_RSLT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_INSPECT_ITEM0" size="256" summ="default" type="STRING"/>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶지면에&#32;설치된&#32;라인마크&#32;및&#32;표시판의&#32;설치상태</DESC>
+						<INSPECT_ITEM>10</INSPECT_ITEM>
+						<INSPECT_KITEM>배관의&#32;표시</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>10</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1></RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>1</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶배관의&#32;전위측정&#32;및&#32;측정용터미널&#32;설치상태</DESC>
+						<INSPECT_ITEM>11</INSPECT_ITEM>
+						<INSPECT_KITEM>부식방지&#32;장치</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>20</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1>측정표&#32;첨부</RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>2</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶중압관&#32;검지공철개,&#32;박스상태&#32;및&#32;가스누출검지기로&#32;점검</DESC>
+						<INSPECT_ITEM>12</INSPECT_ITEM>
+						<INSPECT_KITEM>지하매설배관의&#32;설치</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>25</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1></RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>3</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶철개,&#32;박스상태,&#32;작동여부,&#32;부식상태,&#32;청결상태</DESC>
+						<INSPECT_ITEM>13</INSPECT_ITEM>
+						<INSPECT_KITEM>가스차단장치</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>30</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1></RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>4</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶교량에&#32;첨가된&#32;배관의&#32;지지대상태,&#32;코팅상태</DESC>
+						<INSPECT_ITEM>14</INSPECT_ITEM>
+						<INSPECT_KITEM>배관의&#32;지지</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>35</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1></RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>5</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶도로상&#32;누출점검(FID,OMD,707등)</DESC>
+						<INSPECT_ITEM>15</INSPECT_ITEM>
+						<INSPECT_KITEM>누출검사</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>40</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1></RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>6</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶밸브,&#32;수취기는&#32;가스누검지기로&#32;점검</DESC>
+						<INSPECT_ITEM>15</INSPECT_ITEM>
+						<INSPECT_KITEM>누출검사</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>41</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1></RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>6</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶최고사용압력의&#32;1,1배&#32;또는&#32;8.4Kpa중&#32;높은&#32;압력으로&#32;실시</DESC>
+						<INSPECT_ITEM>16</INSPECT_ITEM>
+						<INSPECT_KITEM>기밀시험</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>50</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1>누출검사로&#32;대체</RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>7</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶양끝은&#32;지반붕괴가&#32;없는&#32;땅에&#32;지지(6m이내),그&#32;밖의&#32;경우&#32;3m&#32;마다&#32;설치된&#32;받침대&#32;설치상태</DESC>
+						<INSPECT_ITEM>17</INSPECT_ITEM>
+						<INSPECT_KITEM>굴착으로&#32;주위가&#32;노출된&#32;배관의&#32;경우</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>60</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1></RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>8</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶100A&#32;이상의&#32;배관이&#32;100M&#32;이상&#32;노출된&#32;경우&#32;가스차단밸브&#32;확인</DESC>
+						<INSPECT_ITEM>17</INSPECT_ITEM>
+						<INSPECT_KITEM>굴착으로&#32;주위가&#32;노출된&#32;배관의&#32;경우</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>61</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1></RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>8</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<CHK_NONE></CHK_NONE>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_PASS></CHK_PASS>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▶검사에&#32;합격한&#32;제품&#32;사용여부</DESC>
+						<INSPECT_ITEM>18</INSPECT_ITEM>
+						<INSPECT_KITEM>특정설비&#32;및&#32;가스용품</INSPECT_KITEM>
+						<INSPECT_NM_1></INSPECT_NM_1>
+						<INSPECT_NM_2></INSPECT_NM_2>
+						<INSPECT_RSLT_CD></INSPECT_RSLT_CD>
+						<INSPECT_STR_YMD></INSPECT_STR_YMD>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<PIPE_INSPECT_ITEM>70</PIPE_INSPECT_ITEM>
+						<PIPE_INSPECT_ITEM0></PIPE_INSPECT_ITEM0>
+						<RMK1></RMK1>
+						<RMK2></RMK2>
+						<ROW_NUM>9</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeRstFlag1"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeResult">
+				<Contents>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK2" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_RSLT_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static73" Left="5" Style="table" TabOrder="49" Top="106" VAlign="Middle" Width="413" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="5" Style="table" TabOrder="2" Top="64" VAlign="Middle" Width="342" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="266" Style="table" TabOrder="44" Top="64" VAlign="Middle" Width="80" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="157" Id="edt_SiteChiefNm" Left="414" Style="table" TabOrder="31" Top="488" VAlign="Middle" Width="188" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="157" Id="Static14" Left="662" Style="table" TabOrder="32" Top="488" VAlign="Middle" Width="188" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="159" Id="Static11" Left="3" Style="table" TabOrder="28" Top="485" VAlign="Middle" Width="402" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static72" Left="481" Style="table" TabOrder="20" Top="85" VAlign="Middle" Width="369" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static7" Left="5" Style="table" TabOrder="19" Top="85" VAlign="Middle" Width="413" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="39" Id="Image1" ImageID="popup_top" LeftMargin="33" OnClick="Image1_OnClick" Style="popup_title" TabOrder="1" Text="도시가스공급시설(배관)&#32;자율검사서" Transparent="TRUE" Width="854"></Image>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static79" Left="5" Style="pop_table" TabOrder="3" Text="시점" Top="85" VAlign="Middle" Width="104" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static81" Left="417" Style="pop_table" TabOrder="4" Text="종점" Top="85" VAlign="Middle" Width="104" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static71" Left="5" Style="pop_table" TabOrder="5" Text="구간" Top="43" VAlign="Middle" Width="104" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static75" Left="108" Style="pop_table" TabOrder="6" Text="밸브(개)" Top="43" VAlign="Middle" Width="80" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static76" Left="187" Style="pop_table" TabOrder="7" Text="수취기" Top="43" VAlign="Middle" Width="80" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static77" Left="266" Style="pop_table" TabOrder="8" Text="T/B" Top="43" VAlign="Middle" Width="80" WordWrap="TRUE"></Static>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="485" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="350" Id="grd_FreePipe" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="849" RowHeight="28" SelColor="MENU" Style="grid" TabOrder="9" TabStop="true" Top="135" UseDBuff="true" UsePopupMenu="true" UseSelColor="FALSE" Visible="true" VLineColor="default" WheelScrollRow="1" Width="844">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="30"/>
+						<col width="140"/>
+						<col width="387"/>
+						<col width="40"/>
+						<col width="40"/>
+						<col width="55"/>
+						<col width="195"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" rowspan="2" text="번호"/>
+						<cell col="1" display="text" rowspan="2" text="검사항목"/>
+						<cell col="2" display="text" rowspan="2" text="세부사항"/>
+						<cell col="3" colspan="2" display="text" text="판정"/>
+						<cell col="5" display="text" rowspan="2" text="해당없음"/>
+						<cell col="6" display="text" rowspan="2" text="비고"/>
+						<cell col="3" display="text" row="1" text="적"/>
+						<cell col="4" display="text" row="1" text="부"/>
+					</head>
+					<body>
+						<cell align="center" bkcolor="user12" col="0" colid="ROW_NUM" display="text" expandsize="18" suppress="1" SuppressAlign="Middle"/>
+						<cell align="left" bkcolor="user12" col="1" colid="INSPECT_KITEM" display="text" expandsize="18" suppress="2" SuppressAlign="Middle" wordwrap="word"/>
+						<cell bkcolor="user12" col="2" colid="DESC" display="text" expandsize="18" suppress="3" SuppressAlign="Middle" TrimType="Left" wordwrap="word"/>
+						<cell bkcolor="user12" col="3" colid="CHK_PASS" display="checkbox" edit="checkbox" expandsize="18" wordwrap="word"/>
+						<cell bkcolor="user12" col="4" colid="CHK_NOT_PASS" display="checkbox" edit="checkbox" expandsize="18" wordwrap="word"/>
+						<cell bkcolor="user12" col="5" colid="CHK_NONE" display="checkbox" edit="checkbox" expandsize="18" wordwrap="word"/>
+						<cell bkcolor="user12" col="6" colid="RMK1" display="text" edit="normal" expandsize="18" limit="50" wordwrap="allchar"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="135" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="849" TabOrder="10" Top="132" Type="Rectangle" Width="844"></Shape>
+		<TextArea Border="Flat" Height="111" Id="ta_Rmk2" Left="37" MaxLength="160" Style="textarea" TabOrder="11" Top="487" VScroll="TRUE" Width="366"></TextArea>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="429" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="12" Text="Div0" Top="38" Url="globals::ComButton.xml" Visible="FALSE" Width="416">
+			<Contents></Contents>
+		</Div>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_BlockNm" Left="7" Style="edit" TabOrder="13" Top="66" Width="100"></Edit>
+		<Edit Align="RIGHT" Border="Flat" Enable="FALSE" Height="18" Id="edt_ValveCnt" Left="110" Style="edit" TabOrder="14" Top="66" Width="76"></Edit>
+		<Edit Align="RIGHT" Border="Flat" Enable="FALSE" Height="18" Id="edt_WtdrCnt" Left="189" Style="edit" TabOrder="15" Top="66" Width="76"></Edit>
+		<Edit Align="RIGHT" Border="Flat" Enable="FALSE" Height="18" Id="edt_TbCnt" Left="268" Style="edit" TabOrder="16" Top="66" Width="77"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_StrPoint" Left="110" Style="edit" TabOrder="17" Top="87" Width="306"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_EndPoint" Left="522" Style="edit" TabOrder="18" Top="87" Width="326"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_PipeProc" ImageID="btn_4" Left="445" LeftMargin="21" OnClick="btn_PipeProc_OnClick" Style="button" TabOrder="21" Text="전자결재" Top="64" Width="76"></Button>
+		<Edit Align="CENTER" Border="Flat" DisableBKColor="user8" Height="28" Id="edt_InspectNm1" Left="472" MaxLength="10" Style="edit" TabOrder="22" Top="488" Width="128"></Edit>
+		<Edit Align="CENTER" Border="Flat" DisableBKColor="user8" Height="28" Id="edt_InspectNm2" Left="720" MaxLength="10" Style="edit" TabOrder="23" Top="488" Width="128"></Edit>
+		<Static Align="Center" Border="Flat" Height="43" Id="Static8" Left="5" Style="pop_table" TabOrder="24" Text="첨부파일" Top="599" VAlign="Middle" Width="30" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="43" Id="edtFileList" Left="37" Style="edit" TabOrder="25" Top="599" Width="290"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="18" Id="Button23" ImageID="btn_4_fileadd" Left="328" LeftMargin="21" OnClick="Button23_OnClick" Style="button" TabOrder="26" Text="파일첨부&#32;" Top="624" Width="75"></Button>
+		<Static Align="Center" Border="Flat" Height="111" Id="Static5" Left="5" Style="pop_table" TabOrder="27" Text="특기사항" Top="487" VAlign="Middle" Width="30" WordWrap="TRUE"></Static>
+		<File Bottom="120" Height="24" Id="File0" Left="984" Right="1008" TabOrder="43" Top="96" Width="24"></File>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Sign" ImageID="btn_4_Close&#32;cancellation" Left="603" LeftMargin="21" OnClick="btn_Sign_OnClick" Style="button" TabOrder="29" Text="취소" Top="520" Width="52"></Button>
+		<Static Align="Center" BKColor="user6" Border="Flat" Height="28" Id="Static10" Left="416" Style="table" TabOrder="30" Text="검사원" Top="488" VAlign="Middle" Width="57" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="user6" Border="Flat" Height="28" Id="Static13" Left="664" Style="table" TabOrder="31" Text="검사원" Top="488" VAlign="Middle" Width="57" WordWrap="TRUE"></Static>
+		<Image BindDataset="ds_Sign" Border="Flat" Column="SIGN" Height="61" Id="Image0" Left="395" OnClick="Image0_OnClick" TabOrder="33" Top="335" Width="270"></Image>
+		<Sign BindDataset="ds_SignView" Border="FLAT" Column="SIGN_1" Height="124" Id="sign" Left="416" TabOrder="34" Text="(서명)" Top="519" Width="184"></Sign>
+		<Image BindDataset="ds_SignView" Border="Flat" Column="SIGN_1" Height="124" Id="SignImg" Left="416" TabOrder="35" Top="519" Width="184"></Image>
+		<Image BindDataset="ds_SignView" Border="Flat" Column="SIGN_2" Height="124" Id="SignImg1" Left="664" TabOrder="38" Top="519" Width="184"></Image>
+		<Sign BindDataset="ds_SignView" Border="FLAT" Column="SIGN_2" Height="124" Id="sign1" Left="664" TabOrder="37" Text="(서명)" Top="519" Width="184"></Sign>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="551" LeftMargin="12" Style="blt_search" TabOrder="39" TabStop="FALSE" Text="등록일자&#32;:&#32;" Top="111" Width="67"></Image>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="423" LeftMargin="12" Style="blt_search" TabOrder="41" TabStop="FALSE" Text="등록자&#32;:&#32;" Top="111" Width="67"></Image>
+		<Static Height="13" Id="st_CRTNM" Left="485" Style="static" TabOrder="42" Top="114" Width="62"></Static>
+		<Static Height="13" Id="st_CRTTIME" Left="624" Style="static" TabOrder="40" Top="112" Width="112"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static1" Left="108" Style="table" TabOrder="43" Top="64" VAlign="Middle" Width="80" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static80" Left="5" Style="pop_table" TabOrder="45" Text="검사일자" Top="106" VAlign="Middle" Width="104" WordWrap="TRUE"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_InspectYmd" Left="110" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="46" Top="108" WeeksFont="Default,-1" Width="100"></Calendar>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static82" Left="211" Style="pop_table" TabOrder="47" Text="전검사일자" Top="106" VAlign="Middle" Width="104" WordWrap="TRUE"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_InspectYmdPri1" Left="316" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="48" Top="108" WeeksFont="Default,-1" Width="100"></Calendar>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button80" ImageID="btn_4_copy" Left="366" LeftMargin="21" OnClick="fn_D1_Print1" Style="button" TabOrder="50" Text="장표출력" Top="64" Width="76"></Button>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="530" LeftMargin="12" Style="blt_search" TabOrder="51" TabStop="FALSE" Text="결재상태&#32;:&#32;" Top="66" Width="67"></Image>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="671" LeftMargin="12" Style="blt_search" TabOrder="52" TabStop="FALSE" Text="결재일자&#32;:&#32;" Top="66" Width="67"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_DecideYmd" Left="741" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="53" Top="66" WeeksFont="Default,-1" Width="100"></Calendar>
+		<Edit Align="CENTER" Border="Flat" DisableColor="red" Enable="FALSE" Height="18" Id="edt_Decide_proc_sts" Left="603" Style="edit" TabOrder="54" Top="66" Width="63"></Edit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1302040010U.xml
+* Form 설명  : 자율 검사 배관장표를 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2009-01-05
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언s
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10008.js";
+
+var strBlockCd     = "";
+var strInspectYear = "";
+var strRowType     = "";
+
+function D1302040010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);	
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 넘어온 파라메터가 있으면
+	if(IsExistVar("INSPECT_STR_YMD"))
+	{
+		cal_InspectYmd.Text = INSPECT_STR_YMD;
+	}
+	
+	cal_DecideYmd.Text = DECIDE_YMD;
+	edt_Decide_proc_sts.Text = DECIDE_PROC_STS;
+	
+	if(IsExistVar("BLOCK_NM"))
+	{
+		edt_BlockNm.Text = BLOCK_NM;
+		edt_BlockNm.Text = Replace(edt_BlockNm.Text,"&"," ");
+	}
+	if(IsExistVar("VALVE_CNT"))
+	{
+		edt_ValveCnt.Text = VALVE_CNT;
+	}
+	if(IsExistVar("TB_CNT"))
+	{
+		edt_TbCnt.Text = TB_CNT;
+	}
+	if(IsExistVar("WTDR_CNT"))
+	{
+		edt_WtdrCnt.Text = WTDR_CNT;
+	}
+	if(IsExistVar("STR_POINT"))
+	{
+		edt_StrPoint.Text = STR_POINT;
+	}
+	if(IsExistVar("END_POINT"))
+	{
+		edt_EndPoint.Text = END_POINT;
+	}
+	if(IsExistVar("INSPECT_YMD_PRI1"))
+	{
+		cal_InspectYmdPri1.Text = INSPECT_YMD_PRI1;
+	}
+	if(IsExistVar("BLOCK_CD"))
+	{
+		strBlockCd = BLOCK_CD;
+	}
+	if(IsExistVar("INSPECT_YEAR"))
+	{
+		strInspectYear = INSPECT_YEAR;
+	}
+	
+	if(IsExistVar("CRT_EMPID"))
+	{
+		st_CRTNM = CRT_EMPID;
+	}
+	
+	if(IsExistVar("CRT_DTM"))
+	{
+		st_CRTTIME = CRT_DTM;
+	}
+	
+	if(IsExistVar("ROWTYPE"))
+	{
+		strRowType = ROWTYPE;
+		
+		if(strRowType == "search" || strRowType == "update")
+		{
+			fn_D1_FindPipe();
+		}
+		
+		if(strRowType == "search")
+		{
+			grd_FreePipe.Editable = "false";
+			edt_InspectNm1.Enable = "false";
+			edt_InspectNm2.Enable = "false";
+		}
+	}
+	grd_FreePipe.BindDataset = "ds_FreePipe";
+	fn_D1_SignSearch();	
+}
+
+function fn_CommonSearch(){
+	fn_D1_FindPipe();
+	fn_D1_SignSearch();	
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FindPipe()
+//   설명:  자율 검사 대상 배관장표를 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FindPipe()
+{	
+	var strSvcID = "fn_D1_Find";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeListMgr-service&INSPECT_YEAR="+strInspectYear+"&BLOCK_CD="+strBlockCd+"&INSPECT_STR_YMD="+cal_InspectYmd.Value;
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_FreePipeList=ds_FreePipeList";
+	var strArgument  = "findPipe";
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );	
+			   
+	fn_D1_FreePipeInit();
+	fn_D1_FileListNm();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FreePipeInit()
+//   설명:  자율 검사 대상 배관장표 해당 내용을 셋팅한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FreePipeInit()
+{	
+	for(var i=0;i<ds_FreePipeList.RowCount();i++)
+	{
+		if(ds_FreePipeList.GetColumn(i,"INSPECT_RSLT_CD") == "1")
+		{
+			ds_FreePipe.SetColumn(i,"CHK_PASS",1);
+		}else if(ds_FreePipeList.GetColumn(i,"INSPECT_RSLT_CD") == "2")
+		{
+			ds_FreePipe.SetColumn(i,"CHK_NOT_PASS",1);
+		}else if(ds_FreePipeList.GetColumn(i,"INSPECT_RSLT_CD") == "3")
+		{
+			ds_FreePipe.SetColumn(i,"CHK_NONE",1);
+		}
+		ds_FreePipe.SetColumn(i,"INSPECT_ITEM",ds_FreePipeList.GetColumn(i,"INSPECT_ITEM"));
+		ds_FreePipe.SetColumn(i,"PIPE_INSPECT_ITEM",ds_FreePipeList.GetColumn(i,"PIPE_INSPECT_ITEM"));
+		ds_FreePipe.SetColumn(i,"RMK1",ds_FreePipeList.GetColumn(i,"RMK1"));
+		edt_InspectNm1.Text = ds_FreePipeList.GetColumn(i,"INSPECT_NM_1");
+		edt_InspectNm2.Text = ds_FreePipeList.GetColumn(i,"INSPECT_NM_2");
+		ta_Rmk2.Text = ds_FreePipeList.GetColumn(i,"RMK2");
+	}
+}
+//---------------------------------------------------------
+// 검사 결과 에 따른 체크값 설정
+//---------------------------------------------------------
+function grd_FreePipe_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(grd_FreePipe.Editable == "true")
+	{
+		if("CHK_PASS" == grd_FreePipe.GetCellProp("body",nCell,"ColId"))
+		{
+			ds_FreePipe.SetColumn(nRow,"CHK_NOT_PASS",0);
+			ds_FreePipe.SetColumn(nRow,"CHK_NONE",0);
+		}else if("CHK_NOT_PASS" == grd_FreePipe.GetCellProp("body",nCell,"ColId"))
+		{
+			ds_FreePipe.SetColumn(nRow,"CHK_PASS",0);
+			ds_FreePipe.SetColumn(nRow,"CHK_NONE",0);
+		}else if("CHK_NONE" == grd_FreePipe.GetCellProp("body",nCell,"ColId"))
+		{
+			ds_FreePipe.SetColumn(nRow,"CHK_NOT_PASS",0);
+			ds_FreePipe.SetColumn(nRow,"CHK_PASS",0);
+		}
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: btn_PipeProc_OnClick()
+//   설명: 배관장표 결제 처리
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function btn_PipeProc_OnClick()
+{
+	if(edt_Decide_proc_sts.text == '승인' || edt_Decide_proc_sts.text == '결재중')
+	{
+		alert("현재 " + edt_Decide_proc_sts.text + " 상태입니다.");
+		return;
+	}
+	
+	if(strRowType == "search" || strRowType == "update")
+	{
+		var InspectStrYmd = cal_InspectYmd.Value;
+		var InspectFlag = '20';
+		var InspectYear = strInspectYear;
+		var BlockCd = strBlockCd;
+	
+		//그룹웨어에서 차량번호(한글)파라메터 전달 불가로 로그인자 사번넘겨 차량번호 참조 오즈로 넘겨줌 
+		gfv_callGWInfo("fmD10","D10","D1302040010P",4,InspectYear+","+InspectFlag+","+BlockCd+","+InspectStrYmd);
+	   // 1번 : 화면명칭   2번 : 업무그룹 (b10,b20... OZ 인경우 필수), 3번: 프로그램ID (oz인경우 필수) 4: 아규먼트 갯수 (1....5)
+	   // 5번 : 아규먼트 목록 (형식 , 표시로 각 아규먼트 구분자 사용)	
+	}	
+}
+
+
+function fn_D1_Print1(obj)
+{
+	var strTitle    = "도시가스공급시설(배관) 자율검사서" ;  		// 출력물 제목
+    var strPart     = "D10" ;         	    		  				// 시스템 명 
+	var strReport   = "D1302040010P" ;  	    	 				// 출력물 ID 
+	var strParameter= "INSPECT_STR_YMD="     + cal_InspectYmd.Value
+					+ ",INSPECT_FLAG="	     + '20'
+				    + ",INSPECT_YEAR="	     + strInspectYear
+				    + ",BLOCK_CD="		     + strBlockCd
+				    ;			   
+				   
+	//공통 레포트 팝업 함수 호출 
+	gfn_ReportPopup(strTitle,strPart,strReport,strParameter);	
+}
+
+function fn_CommonSelect(){
+	
+	fn_D1_FindPipe();
+	
+	var strType = "";
+	var strNotPass = "";
+	
+	if(strRowType == "update")
+	{
+		strType = "update";
+		
+	}else if(strRowType == "insert")
+	{
+		strType = "insert";
+	
+	}else if(strRowType == "search")
+	{
+		strType = "search";
+	}
+	
+	for(var i=0; i<ds_FreePipe.RowCount(); i++)
+	{
+		var strRstCd = 0;
+	
+		if(ds_FreePipe.GetColumn(i, "INSPECT_ITEM") != '20'){
+			if(ds_FreePipe.GetColumn(i,"CHK_PASS") == 1)
+			{
+				strRstCd   = 1;
+			}else if(ds_FreePipe.GetColumn(i,"CHK_NOT_PASS") == 1)
+			{
+				strRstCd   = 2;
+				strNotPass = "Y";
+			}else if(ds_FreePipe.GetColumn(i,"CHK_NONE") == 1)
+			{
+				strRstCd = 3;
+			}
+		}
+	}
+		
+	var nCount  = 0;
+	
+	for(var i=0; i<ds_FreePipe.RowCount(); i++)
+	{	
+		if(ds_FreePipe.GetColumn(i, "INSPECT_ITEM") != '20'){
+			if(ds_FreePipe.GetColumn(i,"CHK_NOT_PASS") == 1)
+			{
+				nCount = toNumber(nCount) + 1;
+			}
+		}
+	}
+		
+	var arrList = array();
+	
+	arrList[0] = edt_InspectNm1.Text;
+	arrList[1] = edt_InspectNm2.Text;	
+	
+	var str_INSPECT_YEAR = strInspectYear      ;
+	var str_INSPECT_YMD  = cal_InspectYmd.Value;
+	var str_BLOCK_CD     = strBlockCd          ;
+	
+	var strChkFlag = fn_D1_CheckReg1(str_INSPECT_YEAR, str_INSPECT_YMD, str_BLOCK_CD);
+	
+	if(!strChkFlag) 
+	{
+		if(nCount > 0){
+			arrList[2] = "saveNotPass";
+			Close(arrList);
+		}else{			
+			
+			arrList[2] = "savePass";
+			Close(arrList);
+		}
+	}else{
+		arrList[2] = "none";
+		Close(arrList);
+	}
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSave()
+   설명:  배관장표에 관한 내용을 저장
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonSave()
+{
+
+	if(edt_Decide_proc_sts.text == '승인' || edt_Decide_proc_sts.text == '결재중')
+	{
+		alert("현재 " + edt_Decide_proc_sts.text + " 상태입니다.");
+		return;
+	}
+	
+	var str_INSPECT_YEAR = strInspectYear      ;
+	var str_INSPECT_YMD  = cal_InspectYmd.Value;
+	var str_BLOCK_CD     = strBlockCd          ;
+
+	var strChkFlag = fn_D1_CheckReg1(str_INSPECT_YEAR, str_INSPECT_YMD, str_BLOCK_CD);
+	
+	if(!strChkFlag) 
+	{
+		var str_CRTDTM = ds_PipeRstFlag1.GetColumn(0, "CRT_TIME" );
+		var str_CRTNM  = ds_PipeRstFlag1.GetColumn(0, "CRT_EMPNM");
+	
+		var str_INSPECT_YMD1     = substr(str_INSPECT_YMD, 0, 4);
+			str_INSPECT_YMD1	+= "년 ";
+			str_INSPECT_YMD1	+= substr(str_INSPECT_YMD, 4, 2);
+			str_INSPECT_YMD1	+= "월 ";
+			str_INSPECT_YMD1	+= substr(str_INSPECT_YMD, 6, 2);
+			str_INSPECT_YMD1	+= "일";
+	
+		alert("검사일자 " + str_INSPECT_YMD1 + "에 대한 결과 데이터는 \n" + str_CRTNM + "님께서 " + str_CRTDTM + "에 이미 등록하신 데이터입니다. \n데이터를 조회해 주십시오. ");
+		strType = "select";
+		return;
+	}
+	
+	var strType = "";
+	var strNotPass = "";
+	if(strRowType == "update")
+	{
+		strType = "update";
+	}else if(strRowType == "insert")
+	{
+		strType = "insert";
+	}else {
+		close();
+	}
+	
+	for(var i=0; i<ds_FreePipe.RowCount(); i++)
+	{
+		var strRstCd = 0;
+		
+		if(ds_FreePipe.GetColumn(i,"CHK_PASS") == 1)
+		{
+			strRstCd   = 1;
+		}else if(ds_FreePipe.GetColumn(i,"CHK_NOT_PASS") == 1)
+		{
+			strRstCd   = 2;
+			strNotPass = "Y";				
+		}else if(ds_FreePipe.GetColumn(i,"CHK_NONE") == 1)
+		{
+			strRstCd   = 3;
+		}else 
+		{
+			if(ds_FreePipe.GetColumn(i, "INSPECT_ITEM") != '90' && ds_FreePipe.GetColumn(i, "INSPECT_ITEM") != '91'){
+				alert('검사항목을 모두 체크해 주세요');
+				return;
+			}
+		}
+		
+		if(edt_InspectNm1.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","검사원1을"));
+			return;
+		}
+		
+		//if(edt_InspectNm2.Text == "")
+		//{
+		//	alert(gfn_GetMessage("M000011","%AAA%","검사원2을"));
+		//	return;
+		//}
+		
+		ds_FreePipe.UpdateControl = false;
+		ds_FreePipe.SetRowType(i, strType);
+		
+		ds_FreePipe.SetColumn(i, "INSPECT_RSLT_CD", strRstCd		    );
+		ds_FreePipe.SetColumn(i, "INSPECT_STR_YMD", cal_InspectYmd.Value);
+		ds_FreePipe.SetColumn(i, "RMK2"	 		  , ta_Rmk2.Text	    );
+		ds_FreePipe.SetColumn(i, "INSPECT_NM_1"   , edt_InspectNm1.Text );
+		ds_FreePipe.SetColumn(i, "INSPECT_NM_2"   , edt_InspectNm2.Text );
+		ds_FreePipe.SetColumn(i, "BLOCK_CD"	  	  , strBlockCd		    );
+		ds_FreePipe.SetColumn(i, "INSPECT_YEAR"	  , strInspectYear      );
+		
+		//수정 등록시 셋팅할 사용자 정보
+		ds_FreePipe.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"  ));
+		ds_FreePipe.SetColumn(i, "UPD_IP"	, gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_FreePipe.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"  ));
+		ds_FreePipe.SetColumn(i, "CRT_IP"	, gfn_GetGlobalValue("G_IPADDRESS"));
+	}
+	
+	ds_PipeResult.ClearData();
+	ds_PipeResult.AddRow();
+	
+	if(strNotPass = "Y"){
+		ds_PipeResult.SetColumn(0, "INSPECT_RSLT_CD", 20);
+	}else{
+		ds_PipeResult.SetColumn(0, "INSPECT_RSLT_CD", 10);
+	}
+	
+	ds_PipeResult.SetColumn(0, "UPD_EMPID"		  , gfn_GetGlobalValue("G_USER_NO"  ));
+	ds_PipeResult.SetColumn(0, "UPD_IP"			  , gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_PipeResult.SetColumn(0, "INSPECT_STR_YMD"  , ds_FreePipe.GetColumn(0, "INSPECT_STR_YMD"));
+	ds_PipeResult.SetColumn(0, "RMK2"			  , ds_FreePipe.GetColumn(0, "RMK2"));
+	ds_PipeResult.SetColumn(0, "INSPECT_NM_1"	  , ds_FreePipe.GetColumn(0, "INSPECT_NM_1"));
+	ds_PipeResult.SetColumn(0, "INSPECT_NM_2"	  , ds_FreePipe.GetColumn(0, "INSPECT_NM_2"));
+	ds_PipeResult.SetColumn(0, "BLOCK_CD"		  , ds_FreePipe.GetColumn(0, "BLOCK_CD"));
+	ds_PipeResult.SetColumn(0, "INSPECT_YEAR"     , ds_FreePipe.GetColumn(0, "INSPECT_YEAR"));
+				
+	ds_PipeResult.UpdateControl = false;
+	ds_PipeResult.SetRowType(0, "update");
+			
+	var strSvcID 	   = "savePipe";
+	var strPart 	   = "D10";
+	var strURL 		   = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeListMgr-service"  ;
+	var strInDatasets  = "ds_FreePipe=ds_FreePipe:u ds_PipeResult=ds_PipeResult:u";
+	var strOutDatasets = "";
+	var strArgument    = "savaPipeRst";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	fn_D1_SignSave();	
+					   
+	if(strRowType == "update")
+	{
+		alert("데이터가 정상적으로 변경되었습니다. ");
+	}else if(strRowType == "insert")
+	{
+		strType = "insert";
+		alert("데이터가 정상적으로 저장되었습니다. ");
+	}	
+}
+
+function Button23_OnClick(obj)
+{
+	var arg = "fa_Url=handle.do?ServiceName=D1_SelfTestRsltRegisPipeListMgr-service&INSPECT_YEAR="+strInspectYear+"&INSPECT_FLAG=20"+"&BLOCK_CD="+strBlockCd+"&INSPECT_STR_YMD="+cal_InspectYmd.Value+" fa_Part=D10";
+	var arrList = gfn_Dialog("D10","D1101010018U",arg,450,280,true,-1,-1);
+	edtFileList.text = "";
+	for(var i=0; i<arrList.length; i++)
+	{
+		edtFileList.text += arrList[i];
+		if(arrList.length-1 != i) edtFileList.text += "/";
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FileListNm()
+//   설명: 시설물 파일명을 조회 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FileListNm()
+{	
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+    var ServiceId     = "search";
+    var ServicePart   = "D10";
+    var Url           = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeListMgr-service&INSPECT_YEAR="+strInspectYear+"&INSPECT_FLAG=20"+"&BLOCK_CD="+strBlockCd+"&INSPECT_STR_YMD="+cal_InspectYmd.Value;
+    var InputDsList   = "";
+    var OutputDsList  = "ds_FileList=ds_FileList";
+    var Argument      = "findFile";
+    
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	
+	edtFileList.text = "";
+	for(var i=0; i<ds_FileList.RowCount(); i++)
+	{
+		edtFileList.text += ds_FileList.GetColumn(i,"ATTACH_FILE_NM");
+		if(ds_FileList.RowCount()-1 != i) edtFileList.text += "/";
+	}
+}
+
+/*===============================================================================
+ * 함수명: fn_D11_SignSave()
+   설명:  배관장표에 관한 서명을 조회
+   return 내용: 없음
+===============================================================================*/ 
+function fn_D1_SignSearch()
+{
+	var strSvcID = "";
+	var strPart  = "D10";	
+	var strURL   = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeListMgr-service&SignSearch=1"
+				 + "&INSPECT_YEAR="		+ strInspectYear
+				 + "&BLOCK_CD="			+ strBlockCd
+				 + "&INSPECT_STR_YMD="  + cal_InspectYmd.Value
+				 ; 
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_SignView=ds_SignView";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );	   		   
+	
+	if(ds_SignView.GetCount() < 1){
+		ds_SignView.AddRow();
+	}
+	
+	if(ds_SignView.GetColumn(0, "SIGN_1") == null || ds_SignView.GetColumn(0, "SIGN_1") == ''){
+		 SignImg.Visible = false;
+		 sign.Visible    = true;
+		 sign.Enable     = true;
+	}else{
+		 SignImg.Visible = true;
+		 sign.Visible    = false;
+	}
+			   
+	 if(ds_SignView.GetColumn(0, "SIGN_2") == null || ds_SignView.GetColumn(0, "SIGN_2") == ''){
+		 SignImg1.Visible = false;
+		 sign1.Visible    = true;
+		 sign1.Enable     = true;
+	 }else{
+		 SignImg1.Visible = true;
+		 sign1.Visible    = false;
+	 }
+}
+
+function fn_D1_SignSave()
+{		
+		ds_Sign.UpdateControl = false;
+		ds_Sign.SetRowType(0, "update");
+		
+		sign.SaveFile("JPG", "C:\\test.jpg");
+		File0.FileName = "C:\\test.jpg";
+		
+		if (File0.open('rb'))
+		{
+			var sbuff;
+			sbuff = File0.ReadBinary();
+			File0.Close();
+			ds_Sign.SetColumn(0, "SIGN", sbuff);
+		}
+			
+		ds_Sign.SetColumn(0, "INSPECT_YEAR"     , ds_FreePipe.GetColumn(ds_FreePipe.row, "INSPECT_YEAR"     ));
+		ds_Sign.SetColumn(0, "BLOCK_CD"         , ds_FreePipe.GetColumn(ds_FreePipe.row, "BLOCK_CD"         ));
+		ds_Sign.SetColumn(0, "INSPECT_STR_YMD"  , ds_FreePipe.GetColumn(ds_FreePipe.row, "INSPECT_STR_YMD"  ));
+		ds_Sign.SetColumn(0, "INSPECT_ITEM"     , "1");
+		
+		var strSvcID       = "";
+		var strPart        = "D10";
+		var strURL         = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeListMgr-service&sign=1";
+		var strInDatasets  = "ds_Sign=ds_Sign:u";
+		var strOutDatasets = "";
+		var strArgument    = "";
+		
+		gfn_SyncCall(
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+					  );
+					  
+		if ( ErrorCode > 0 ){ return false ;}
+		
+		ds_Sign.UpdateControl = false;
+		ds_Sign.SetRowType(0, "update");
+		
+		sign1.SaveFile("JPG", "C:\\test.jpg");
+		File0.FileName = "C:\\test.jpg";
+		
+		if (File0.open('rb'))
+		{
+			var sbuff;
+			sbuff = File0.ReadBinary();
+			File0.Close();
+			ds_Sign.SetColumn(0, "SIGN", sbuff);
+		}
+		
+		var strSvcID       = "";
+		var strPart        = "D10";
+		var strURL         = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeListMgr-service&sign1=1";
+		var strInDatasets  = "ds_Sign=ds_Sign:u";
+		var strOutDatasets = "";
+		var strArgument    = "";
+		
+		gfn_SyncCall(
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+					  );
+					  
+		if ( ErrorCode > 0 ){ return false ;}
+}
+
+function btn_Sign_OnClick(obj)
+{
+	if(edt_Decide_proc_sts.text == '승인' || edt_Decide_proc_sts.text == '결재중')
+	{
+		alert("현재 " + edt_Decide_proc_sts.text + " 상태입니다.");
+		return;
+	}
+	
+	ds_Sign.ClearData();
+	ds_Sign.AddRow();
+	ds_SignView.ClearData();
+	ds_SignView.AddRow();
+	
+	SignImg.Visible = false;
+	sign.Visible    = true;
+	sign.Enable     = true;
+	
+	SignImg1.Visible = false;
+	sign1.Visible    = true;
+	sign1.Enable     = true;	
+	
+}
+
+function ds_FreePipe_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	
+	if(varOldValue != varNewValue)
+	{	
+		ds_FreePipe.FireEvent = false;
+		//확인 필요 권기철	2010.01.11
+		//=================
+		if(strColumnID == "CHK_PASS"){
+			 if( ds_FreePipe.GetColumn(nRow, "CHK_PASS") == '1'){
+				 ds_FreePipe.SetColumn(nRow,"CHK_NOT_PASS", 0);
+				 ds_FreePipe.SetColumn(nRow,"CHK_NONE"    , 0);
+			 }
+		}
+		
+		if(strColumnID == "CHK_NOT_PASS"){
+			if( ds_FreePipe.GetColumn(nRow, "CHK_NOT_PASS") == '1'){
+				ds_FreePipe.SetColumn(nRow,"CHK_PASS"    , 0);
+				ds_FreePipe.SetColumn(nRow,"CHK_NONE"    , 0);
+			}
+		}
+		
+		if(strColumnID == "CHK_NONE"){
+			if( ds_FreePipe.GetColumn(nRow, "CHK_NONE") == '1'){
+				ds_FreePipe.SetColumn(nRow,"CHK_PASS"    , 0);
+				ds_FreePipe.SetColumn(nRow,"CHK_NOT_PASS", 0);
+			}
+		}
+		ds_FreePipe.FireEvent = true;
+	}	
+	
+}
+
+//------------------------------------------------------------------------------- 
+//  함수명: fn_D1_CheckReg1()
+//  설명: 자율검사 결과등록을 하기 전 장표 등록 여부 확인
+//  arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_CheckReg1(str_INSPECT_YEAR, str_INSPECT_STR_YMD, str_BLOCK_CD)
+{	
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+    var strSvcID       = "fn_D1_CheckReg1";
+    var strPart        = "D10";
+    var strURL         = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeMgr-service";			  
+		strURL		   += "&INSPECT_YEAR="    + str_INSPECT_YEAR    ;
+		strURL		   += "&BLOCK_CD="        + str_BLOCK_CD        ;
+		strURL		   += "&INSPECT_STR_YMD=" + str_INSPECT_STR_YMD ;
+					  
+    var strInDatasets  = "";
+    var strOutDatasets = "ds_PipeRstFlag1=ds_PipeRstFlag1";
+    var strArgument      = "findRstFlag1";   
+    
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	if(ds_PipeRstFlag1.RowCount() != 0) return false;
+	return true;
+}
+]]></Script>
+</Window>

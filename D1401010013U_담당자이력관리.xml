@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1401010013U" Left="8" OnLoadCompleted="D1401010013U_OnLoadCompleted" PidAttrib="7" Title="D1401010013U_담당자이력&#32;관리" Top="8" Ver="1.0" Width="450" WorkArea="true">
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="담당자이력&#32;관리" Transparent="TRUE" Width="450"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="2"></Button>
+		<Div Height="24" Id="Div0" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="450">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user9" Bottom="87" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="445" TabOrder="4" Top="63" Type="Rectangle" Width="440"></Shape>
+		<Image Align="Left" Height="5" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="5" Text="EOCS번호" Top="73" Transparent="TRUE" Width="71"></Image>
+		<Shape BKColor="user16" Bottom="96" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="445" TabOrder="7" Top="93" Type="Rectangle" Width="440"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="395" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="299" Id="Grid2" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="445" SelColor="MENU" Style="grid_pop" TabOrder="6" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="440">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="담당자&#32;변경날짜"/>
+						<cell col="1" display="text" text="담당자1"/>
+						<cell col="2" display="text" text="담당자2"/>
+					</head>
+					<body>
+						<cell col="0" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Edit Border="Flat" Height="18" Id="Edit1" ImeMode="none" Left="88" Style="edit" TabOrder="8" Top="66" Width="116"></Edit>
+	</Form>
+	<Script><![CDATA[
+#include "JS::COMMONA10001.js";
+
+function D1401010013U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	gfn_SetButton("0001111");
+	
+}]]></Script>
+</Window>

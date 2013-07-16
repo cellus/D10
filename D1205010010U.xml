@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1205010010U" Left="8" OnLoadCompleted="D1205010010U_OnLoadCompleted" PidAttrib="7" Title="순찰실적&#32;통계_D1205010010U" Top="8" Ver="1.0" Width="600" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_END_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="1" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents></Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PartCombo">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE_ID>1</CODE_ID>
+						<CODE_ITEM>btn_group_1_1</CODE_ITEM>
+						<ITEM_KNAME>벨브점검실적&#32;[&#32;본딩전위통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>2</CODE_ID>
+						<CODE_ITEM>btn_group_1_2</CODE_ITEM>
+						<ITEM_KNAME>벨브점검실적&#32;[&#32;전단전위통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>3</CODE_ID>
+						<CODE_ITEM>btn_group_1_3</CODE_ITEM>
+						<ITEM_KNAME>벨브점검실적&#32;[&#32;후단전위통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>4</CODE_ID>
+						<CODE_ITEM>btn_group_2_1</CODE_ITEM>
+						<ITEM_KNAME>테스트박스점검실적&#32;[&#32;측정전위통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>5</CODE_ID>
+						<CODE_ITEM>btn_group_2_2</CODE_ITEM>
+						<ITEM_KNAME>테스트박스점검실적&#32;[&#32;MG전위통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>6</CODE_ID>
+						<CODE_ITEM>btn_group_2_3</CODE_ITEM>
+						<ITEM_KNAME>테스트박스점검실적&#32;[&#32;MG전류통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>7</CODE_ID>
+						<CODE_ITEM>btn_group_3_1</CODE_ITEM>
+						<ITEM_KNAME>정류기점검실적&#32;[&#32;방식전위통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>8</CODE_ID>
+						<CODE_ITEM>btn_group_3_2</CODE_ITEM>
+						<ITEM_KNAME>정류기점검실적&#32;[&#32;측정전압통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>9</CODE_ID>
+						<CODE_ITEM>btn_group_3_3</CODE_ITEM>
+						<ITEM_KNAME>정류기점검실적&#32;[&#32;측정전류통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>10</CODE_ID>
+						<CODE_ITEM>btn_group_4_1</CODE_ITEM>
+						<ITEM_KNAME>배류기점검실적&#32;[&#32;방식전위통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>11</CODE_ID>
+						<CODE_ITEM>btn_group_4_2</CODE_ITEM>
+						<ITEM_KNAME>배류기점검실적&#32;[&#32;측정전압통계&#32;]</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID>12</CODE_ID>
+						<CODE_ITEM>btn_group_4_3</CODE_ITEM>
+						<ITEM_KNAME>배류기점검실적&#32;[&#32;측정전류통계&#32;]</ITEM_KNAME>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="순찰실적&#32;통계" Transparent="TRUE" Width="600"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="17"></Button>
+		<Div Height="29" Id="Div0" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="600">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="595" TabOrder="4" Top="68" Type="Rectangle" Width="590"></Shape>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="5" Text="기간" Top="71" Transparent="TRUE" Width="66"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="fromCal" Left="56" OnChanged="fromCal_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="7" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="C2502030010F" Left="146" Style="static" TabOrder="8" Text="~" Top="76" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="toCal" Left="156" OnChanged="toCal_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="6" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<XChart Bottom="394" Grid="ChartGrid_Horz" Height="298" Id="ct01" Left="8" NSeries="2" NValues="5" PointLabels="true" Right="598" SerLegBox="true" Top="96" Visible="FALSE" Width="590">
+			<_PersistData>&#13;&#10;/6z/kRLj30NGWDYA8vJNQ/9oYXJ0RlgsIP9WZXJzaW9uPf82LjIuMTM0Mv8uMCwgQ3VsdP91cmU9bmV1dP9yYWwsIFB1Yv9saWNL&#13;&#10;ZXlUb/9rZW49YTE4N/84ZTIwNTJjMP84ZGNlElNvZv90d2FyZUZYLlr59B/y8wAj8vAgXgR6aw0E8vABAf7/gQUqawUBawUCawYG&#13;&#10;pQSRBdUy8vAQ8vAD8vD7/4d/f4JlAXwCvwKRBQG/BUFyaWFs8vBBpG8P8vIFjgWsBQBGD1h/Ei5IaWdobCkQ/3RTZXR0aW5nZ3MQ&#13;&#10;CZMIRR8AB3YFzwEBAAgCHRMfWAWfLkF4aXOVAX0CAPECOhDy82UWKDjgAAUKRxULRxmeB88f3BmVAYKeAQGABtwfdwuNDo8FAgkM&#13;&#10;mx+tEA2xH2IvdC/nHLB/B3wvEi/DLwAOWhgP6I4FvAHy8VL59C5CYUNzZQAPEg8kDzYNF3cf/vwiDS5JR2FsbH9lcnlUeXBllQFF&#13;&#10;FDIlEfoMiT+VOBKVNR0TjQcoQEu/AHEz8vDxFeQtRz/7IwkuTGk/bmVJbmZv2wK9LCTTAzohQpU/lwgBuBqBAfUWI0UX5RcPRGVm&#13;&#10;/WEYMC5XaW5kbwN3cw==&#13;&#10;</_PersistData>
+		</XChart>
+		<Combo Border="Flat" CodeColumn="CODE_ITEM" DataColumn="ITEM_KNAME" Height="18" Id="cob_part" InnerDataset="ds_PartCombo" Left="372" OnChanged="cob_part_OnChanged" Style="combo_Indis" TabOrder="10" TabStop="FALSE" Top="70" Visible="FALSE" Width="220"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1205010010U.xml
+* Form 설명  : 순찰실적통계
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김기경
+* 작성일     : 2013-03-26
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+var fa_id ;
+var fa_FACI_NUM;
+var fa_sYmd ;
+var fa_eYmd ;
+
+function D1205010010U_OnLoadCompleted(obj) { 
+	
+	gfn_LoadForm(obj); 
+	fromCal.Value = fa_sYmd;
+	toCal.Value   = fa_eYmd; 
+	gfn_SetButton("00010001");
+	fn_D1_Search(); 
+	fn_initData();	
+}   
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_initData() {  
+	ct01.ClearData("COD_Values");
+	ct01.ClearData("COD_Colors");
+	ct01.BackColor="#e5eaeb"; 
+	cob_part.Value = fa_id;
+	
+	ds_PartCombo.Filter("substr(CODE_ITEM, 0, 11)=='"+substr(fa_id,0,11)+"'");
+	
+	fn_CommonSearch();
+}
+
+/********************************************************************************
+* 기      능   :  공통 조회 클릭시 조회 업무 수행 
+********************************************************************************/
+function fn_D1_Search() {    
+	var strSvcID = "fn_D1_Tr_find";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_GraphMgr-service&find03=1"                
+	           + "&PATROL_STR_YMD=" + fromCal.Value	//기준일자FROM 
+	           + "&PATROL_END_YMD=" + toCal.Value   //기준일자TO  
+	           + "&FACI_NUM=" + fa_FACI_NUM      	//시설물번호
+	           ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_Multi=ds_Multi";
+	
+	var strArgument  = "";
+	
+	var strCallbackFunc = "fn_D1_CallBack";
+	              
+	gfn_SyncCall( strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);
+	
+	if ( ErrorCode < 0 ) {
+		
+	} else { 
+		//btn_chart_OnClick();
+	}  			 
+}	
+
+/********************************************************************************
+* 기      능   :  공통 조회 클릭시 조회 업무 수행 
+********************************************************************************/
+function fn_CommonSearch() {	
+
+	fn_D1_Search();  
+	fn_Chart_Display();	
+}
+
+function fn_Chart_Display() { 
+ 
+	ct01.AxisX.LabelAngle = 60;  //날짜 세로
+	ct01.AxisY.LabelsFormat.Decimals = 1; // 소수점이하 자리수 표시 1: 첫째자리, 2: 둘째자리 3: 셋째자리	
+	ct01.AxisY.LabelsFormat.Format = "AxisFormat_Number";
+	
+	ct01.AxisY2.LabelsFormat.Decimals = 1;
+	ct01.AxisY2.LabelsFormat.Format = "AxisFormat_Number";
+	ct01.SerLegBoxObj.Docked 		= "Docked_Top"; // 범례위치 고정
+        
+	ct01.Series[0].Gallery = "Gallery_Bar"; // 1: Line Chart, 2:  Bar Chart 
+	ct01.Series[0].cylsides = 30; 
+	
+    ct01.Volume = 35; // 그래프의 넓이 
+    
+	ct01.Series[1].Gallery     = "Gallery_Lines"; // 1: Line Chart, 2:  Bar Chart 
+	ct01.Series[1].MarkerShape = "MarkerShape_Circle";    
+	 
+	var loopCnt =  toNumber(ds_Multi.GetColumn( toNumber( SubStr( fa_id , 10 , 1  ) ) - 1 , "LINE_CNT" )) ;
+	ct01.OpenData("COD_Values", 2 , loopCnt ); 
+	ct01.OpenData("COD_Colors", 2 , loopCnt ); 
+	
+	//ct01.Value(0, 0) = 0;
+	//ct01.Value(1, 0) = 0; 
+	//ct01.Axis[2].Label(0) = "기준"; 
+	// 데이터및 라벨 표시  
+	
+	var vMax;
+	var vMin; 
+	
+	//alert(ds_Multi.Min("TB_VOLTAIC"));
+	//alert(ds_Multi.Max("TB_VOLTAIC"));
+	switch ( fa_id ) {
+			case "btn_group_1_1" :     
+				vMin = iif( ds_Multi.Min("VV_BONDING") < 0 , ds_Multi.Min("VV_BONDING") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("VV_BONDING") >= 0 , ds_Multi.Max("VV_BONDING") * 1.1 , 0 );  
+				break;
+			case "btn_group_1_2" :   
+				vMin = iif( ds_Multi.Min("VV_PREVI_ELECT") < 0 , ds_Multi.Min("VV_PREVI_ELECT") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("VV_PREVI_ELECT") >= 0 , ds_Multi.Max("VV_PREVI_ELECT") * 1.1 , 0 );
+				break;
+			case "btn_group_1_3" :  				
+				vMin = iif( ds_Multi.Min("VV_LATER_ELEC_POT") < 0 , ds_Multi.Min("VV_LATER_ELEC_POT") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("VV_LATER_ELEC_POT") >= 0 , ds_Multi.Max("VV_LATER_ELEC_POT") * 1.1 , 0 );
+				break;
+			case "btn_group_2_1" :   
+				vMin = iif( ds_Multi.Min("TB_MEAS_ELECT_POT") < 0 , ds_Multi.Min("TB_MEAS_ELECT_POT") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("TB_MEAS_ELECT_POT") >= 0 , ds_Multi.Max("TB_MEAS_ELECT_POT") * 1.1 , 0 );
+				break;
+			case "btn_group_2_2" :  
+				vMin = iif( ds_Multi.Min("TB_MG_ELECT_POT") < 0 , ds_Multi.Min("TB_MG_ELECT_POT") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("TB_MG_ELECT_POT") >= 0 , ds_Multi.Max("TB_MG_ELECT_POT") * 1.1 , 0 ); 
+				break;
+			case "btn_group_2_3" :   
+				vMin = iif( ds_Multi.Min("TB_VOLTAIC") < 0 , ds_Multi.Min("TB_VOLTAIC") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("TB_VOLTAIC") >= 0 , ds_Multi.Max("TB_VOLTAIC") * 1.1 , 0 ); 
+				break;
+			case "btn_group_3_1" :  
+				vMin = iif( ds_Multi.Min("REC_ELECT_POT") < 0 , ds_Multi.Min("REC_ELECT_POT") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("REC_ELECT_POT") >= 0 , ds_Multi.Max("REC_ELECT_POT") * 1.1 , 0 ); 
+				break;
+			case "btn_group_3_2" :  
+				vMin = iif( ds_Multi.Min("REC_VOLTAGE") < 0 , ds_Multi.Min("REC_VOLTAGE") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("REC_VOLTAGE") >= 0 , ds_Multi.Max("REC_VOLTAGE") * 1.1 , 0 ); 
+				break;
+			case "btn_group_3_3" :  
+				vMin = iif( ds_Multi.Min("REC_VOLTAIC") < 0 , ds_Multi.Min("REC_VOLTAIC") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("REC_VOLTAIC") >= 0 , ds_Multi.Max("REC_VOLTAIC") * 1.1 , 0 ); 
+				break;
+			case "btn_group_4_1" :  
+				vMin = iif( ds_Multi.Min("DRA_ELECT_POT") < 0 , ds_Multi.Min("DRA_ELECT_POT") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("DRA_ELECT_POT") >= 0 , ds_Multi.Max("DRA_ELECT_POT") * 1.1 , 0 ); 
+				break;
+			case "btn_group_4_2" :  
+				vMin = iif( ds_Multi.Min("DRA_VOLTAGE") < 0 , ds_Multi.Min("DRA_VOLTAGE") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("DRA_VOLTAGE") >= 0 , ds_Multi.Max("DRA_VOLTAGE") * 1.1 , 0 ); 
+				break;
+				
+			case "btn_group_4_3" :  
+				vMin = iif( ds_Multi.Min("DRA_VOLTAIC") < 0 , ds_Multi.Min("DRA_VOLTAIC") * 1.1 , 0 );  
+				vMax = iif( ds_Multi.Min("DRA_VOLTAIC") >= 0 , ds_Multi.Max("DRA_VOLTAIC") * 1.1 , 0 ); 
+				break; 
+			default : 
+	}
+	ct01.AxisY.Min = vMin;
+	ct01.AxisY.Max = vMax;
+	//ct01.AxisY.Min  = vMin ;
+	//ct01.AxisY.Max   = vMax ; 
+	//ct01.AxisY2.Max  = vMax ;
+			
+	for(i = 0 , j = 0 ; i < ds_Multi.RowCount(); i++) {
+		switch ( fa_id ) {
+			case "btn_group_1_1" :    
+					if( gfn_isNull( ds_Multi.GetColumn(i, "VV_PATROL_YMD") )) continue;   
+										
+					ct01.SerLeg(0) = "본딩전위통계";
+					ct01.SerLeg(1) = "본딩전위통계"; 
+					ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "VV_PATROL_YMD"), "@@@@.@@.@@"); 
+					ct01.Value(0, j) = ds_Multi.GetColumn( i, "VV_BONDING");
+					ct01.Value(1, j) = ds_Multi.GetColumn( i, "VV_BONDING");  
+					j++;
+				break;
+			case "btn_group_1_2" : 
+					if( gfn_isNull( ds_Multi.GetColumn(i, "VV_PATROL_YMD") )) continue;  
+					ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "VV_PATROL_YMD"), "@@@@.@@.@@"); 
+					ct01.Value(0, j) = ds_Multi.GetColumn( i, "VV_PREVI_ELECT");
+					ct01.Value(1, j) = ds_Multi.GetColumn( i, "VV_PREVI_ELECT"); 
+					ct01.SerLeg(0) = "전단전위통계";
+					ct01.SerLeg(1) = "전단전위통계";  
+					j++;
+				break;
+			case "btn_group_1_3" :
+				if( gfn_isNull( ds_Multi.GetColumn(i, "VV_PATROL_YMD") )) continue;  
+				ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "VV_PATROL_YMD"), "@@@@.@@.@@"); 
+				ct01.Value(0, j) = ds_Multi.GetColumn( i, "VV_LATER_ELEC_POT");
+				ct01.Value(1, j) = ds_Multi.GetColumn( i, "VV_LATER_ELEC_POT");  
+					ct01.SerLeg(0) = "후단전위통계";
+					ct01.SerLeg(1) = "후단전위통계";  
+					j++;
+				break;
+			case "btn_group_2_1" : 
+				if( gfn_isNull( ds_Multi.GetColumn(i, "TB_PATROL_YMD") )) continue;  
+				ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "TB_PATROL_YMD"), "@@@@.@@.@@"); 
+				ct01.Value(0, j) = ds_Multi.GetColumn( i, "TB_MEAS_ELECT_POT");
+				ct01.Value(1, j) = ds_Multi.GetColumn( i, "TB_MEAS_ELECT_POT");  
+					ct01.SerLeg(0) = "측정전위통계";
+					ct01.SerLeg(1) = "측정전위통계";  
+					j++;
+				break;
+			case "btn_group_2_2" : 
+				if( gfn_isNull( ds_Multi.GetColumn(i, "TB_PATROL_YMD") )) continue; 
+				ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "TB_PATROL_YMD"), "@@@@.@@.@@"); 
+				ct01.Value(0, j) = ds_Multi.GetColumn( i, "TB_MG_ELECT_POT");
+				ct01.Value(1, j) = ds_Multi.GetColumn( i, "TB_MG_ELECT_POT");  
+					ct01.SerLeg(0) = "MG전위통계";
+					ct01.SerLeg(1) = "MG전위통계"; 
+					j++;
+				break;
+			case "btn_group_2_3" : 
+				if( gfn_isNull( ds_Multi.GetColumn(i, "TB_PATROL_YMD") )) continue; 
+				ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "TB_PATROL_YMD"), "@@@@.@@.@@"); 
+				ct01.Value(0, j) = ds_Multi.GetColumn( i, "TB_VOLTAIC");
+				ct01.Value(1, j) = ds_Multi.GetColumn( i, "TB_VOLTAIC");  
+					ct01.SerLeg(0) = "MG전류통계";
+					ct01.SerLeg(1) = "MG전류통계";  
+					j++;
+				break;
+			case "btn_group_3_1" : 
+				if( gfn_isNull( ds_Multi.GetColumn(i, "REC_PATROL_YMD") )) continue; 
+				ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "REC_PATROL_YMD"), "@@@@.@@.@@"); 
+				ct01.Value(0, j) = ds_Multi.GetColumn( i, "REC_ELECT_POT");  
+				ct01.Value(1, j) = ds_Multi.GetColumn( i, "REC_ELECT_POT");   
+					ct01.SerLeg(0) = "방식전위";
+					ct01.SerLeg(1) = "방식전위";  
+					j++;
+				break;
+			case "btn_group_3_2" : 
+				if( gfn_isNull( ds_Multi.GetColumn(i, "REC_PATROL_YMD") )) continue; 
+				ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "REC_PATROL_YMD"), "@@@@.@@.@@"); 
+				ct01.Value(0, j) = ds_Multi.GetColumn( i, "REC_VOLTAGE");
+				ct01.Value(1, j) = ds_Multi.GetColumn( i, "REC_VOLTAGE");  
+					ct01.SerLeg(0) = "측정전압통계";
+					ct01.SerLeg(1) = "측정전압통계"; 
+					j++;
+				break;
+			case "btn_group_3_3" : 
+				if( gfn_isNull( ds_Multi.GetColumn(i, "REC_PATROL_YMD") )) continue; 
+				ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "REC_PATROL_YMD"), "@@@@.@@.@@"); 
+				ct01.Value(0, j) = ds_Multi.GetColumn( i, "REC_VOLTAIC");
+				ct01.Value(1, j) = ds_Multi.GetColumn( i, "REC_VOLTAIC");  
+					ct01.SerLeg(0) = "측정전류통계";
+					ct01.SerLeg(1) = "측정전류통계"; 
+					j++;
+				break;
+			case "btn_group_4_1" : 
+				if( gfn_isNull( ds_Multi.GetColumn(i, "DRA_PATROL_YMD") )) continue; 
+				ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "DRA_PATROL_YMD"), "@@@@.@@.@@"); 
+				ct01.Value(0, j) = ds_Multi.GetColumn( i, "DRA_ELECT_POT");  
+				ct01.Value(1, j) = ds_Multi.GetColumn( i, "DRA_ELECT_POT");   
+					ct01.SerLeg(0) = "방식전위";
+					ct01.SerLeg(1) = "방식전위"; 
+					j++;
+				break;
+			case "btn_group_4_2" : 
+				if( gfn_isNull( ds_Multi.GetColumn(i, "DRA_PATROL_YMD") )) continue; 
+				
+				ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "DRA_PATROL_YMD"), "@@@@.@@.@@"); 
+				ct01.Value(0, j) = ds_Multi.GetColumn( i, "DRA_VOLTAGE");
+				ct01.Value(1, j) = ds_Multi.GetColumn( i, "DRA_VOLTAGE");  
+					ct01.SerLeg(0) = "측정전압통계";
+					ct01.SerLeg(1) = "측정전압통계";  
+					j++;
+				break;
+				
+			case "btn_group_4_3" : 
+				if( gfn_isNull( ds_Multi.GetColumn(i, "DRA_PATROL_YMD") )) continue; 
+				
+				ct01.Axis[2].Label(j) = toString( ds_Multi.GetColumn(i, "DRA_PATROL_YMD"), "@@@@.@@.@@"); 
+				ct01.Value(0, j) = ds_Multi.GetColumn( i, "DRA_VOLTAIC");
+				ct01.Value(1, j) = ds_Multi.GetColumn( i, "DRA_VOLTAIC");  
+					ct01.SerLeg(0) = "측정전류통계";
+					ct01.SerLeg(1) = "측정전류통계"; 
+					j++;
+				break; 
+			default :  
+		} 
+		
+	} 
+	Image0.Text = cob_part.Text; 
+	ct01.AxisX.Title.Text = "점검일자";  
+	ct01.AxisY.Title.Text = "VALUE";  
+	// CloseData
+	ct01.CloseData("COD_Values");
+	ct01.CloseData("COD_Colors"); 
+	ct01.Visible = true; 
+}
+
+function fromCal_OnChanged(obj,strOldText,strNewText)
+{
+	fn_DateCheck(fromCal, toCal);
+}
+
+function toCal_OnChanged(obj,strOldText,strNewText)
+{
+	fn_DateCheck(fromCal, toCal);
+}
+function cob_part_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	//alert( strCode );
+	fa_id = strCode;
+	fn_CommonSearch();
+}
+]]></Script>
+</Window>

@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="784" Id="D1402050010U" Left="8" OnLoadCompleted="D1402050010U_OnLoadCompleted" OnUnloadCompleted="D1402050010U_OnUnloadCompleted" PidAttrib="7" Title="굴착공사인수인계서작성" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_tel">
+				<Contents>
+					<colinfo id="TEL_DDD" size="256" type="STRING"/>
+					<record>
+						<TEL_DDD>02</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>031</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>032</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>033</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>041</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>042</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>043</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>051</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>052</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>053</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>054</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>055</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>061</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>062</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>063</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>064</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>011</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>016</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>018</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>010</TEL_DDD>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="EOCS_NUM" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_NM" size="256" type="STRING"/>
+					<colinfo id="STR_LOT_NUM_UNION" size="256" type="STRING"/>
+					<colinfo id="END_LOT_NUM_UNION" size="256" type="STRING"/>
+					<colinfo id="LENG" size="256" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_YMD" size="256" type="STRING"/>
+					<colinfo id="CHK" size="256" type="STRING"/>
+					<colinfo id="DIG_KIND" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list">
+				<Contents>
+					<colinfo id="EOCS_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="HANDOVER_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_PLAN_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAY_NIGHT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_TAKER_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_TAKER_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_TAKER_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="HANDOVER_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="HANDO_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="HANDO_NM_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="HANDO_NM_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="HANDO_NM_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEAK_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEAK_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="HANDO_EMPID_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_branch">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" type="STRING"/>
+					<record>
+						<BRANCH_CD>100068</BRANCH_CD>
+						<BRANCH_NM>강북지사</BRANCH_NM>
+					</record>
+					<record>
+						<BRANCH_CD>100069</BRANCH_CD>
+						<BRANCH_NM>서부지사</BRANCH_NM>
+					</record>
+					<record>
+						<BRANCH_CD>100070</BRANCH_CD>
+						<BRANCH_NM>남부지사</BRANCH_NM>
+					</record>
+					<record>
+						<BRANCH_CD>100071</BRANCH_CD>
+						<BRANCH_NM>경기지사</BRANCH_NM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_del">
+				<Contents>
+					<colinfo id="EOCS_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="HANDOVER_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_sts">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE_ID>10</CODE_ID>
+						<CODE_NAME>요청중</CODE_NAME>
+					</record>
+					<record>
+						<CODE_ID>20</CODE_ID>
+						<CODE_NAME>진행중</CODE_NAME>
+					</record>
+					<record>
+						<CODE_ID>30</CODE_ID>
+						<CODE_NAME>처리완료</CODE_NAME>
+					</record>
+					<record>
+						<CODE_ID>40</CODE_ID>
+						<CODE_NAME>취소</CODE_NAME>
+					</record>
+					<record>
+						<CODE_ID>99</CODE_ID>
+						<CODE_NAME>전체</CODE_NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_chk">
+				<Contents></Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="110" Height="40" Id="Shape1" Left="5" LineColor="user7" Right="1263" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="22" Top="70" Type="RoundRect" Width="1258"></Shape>
+		<Shape BKColor="user8" Bottom="105" Height="30" Id="Shape2" Left="9" LineWidth="0" Right="1257" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="23" Top="75" Type="Rectangle" Width="1248"></Shape>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="172" LeftMargin="12" Style="blt_search_1" TabOrder="10" Text="굴착종류" Top="81" Width="59"></Image>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="11" Text="지사" Top="81" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="53" ResetIndex="FIRST" Style="combo" TabOrder="1" Top="79" Width="104"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_digKind" Left="236" Style="combo" TabOrder="2" Top="79" Width="114"></Combo>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="12" Text="굴착공사&#32;내역" Top="124" Width="117"></Image>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="359" LeftMargin="12" Style="blt_search_1" TabOrder="13" Text="작업종류" Top="81" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_jobCd" Left="423" Style="combo" TabOrder="3" Top="79" Width="114"></Combo>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="989" LeftMargin="12" Style="blt_search_1" TabOrder="14" Text="진행상태" Top="81" Visible="FALSE" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_digWorkProcSts" Left="1055" Style="combo" TabOrder="4" Top="79" Visible="FALSE" Width="114"></Combo>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Search" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="385" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="242" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnHeadClick="grd_List_OnHeadClick" Right="1263" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="15" TabStop="true" Top="143" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1258">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="371"/>
+						<col width="290"/>
+						<col width="290"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="200"/>
+					</columns>
+					<head>
+						<cell col="0" display="checkbox" edit="checkbox"/>
+						<cell col="1" display="text" text="EOCS번호"/>
+						<cell col="2" display="text" text="굴착공사명"/>
+						<cell col="3" display="text" text="공사시점"/>
+						<cell col="4" display="text" text="공사종점"/>
+						<cell col="5" display="text" text="연장(m)"/>
+						<cell col="6" display="text" text="접수일자"/>
+						<cell col="7" display="text" text="굴착기간"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHK" display="checkbox" edit="checkbox"/>
+						<cell align="center" col="1" colid="EOCS_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="2" colid="DIG_WORK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="3" colid="STR_LOT_NUM_UNION" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="4" colid="END_LOT_NUM_UNION" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="5" colid="LENG" display="text"/>
+						<cell align="center" col="6" colid="RECEIVE_YMD" display="date"/>
+						<cell align="center" col="7" colid="DIG_WORK_YMD" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="#6cbae1" Bottom="143" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1263" TabOrder="16" Top="140" Type="Rectangle" Width="1258"></Shape>
+		<Image Align="Left" Height="9" Id="Image4" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="17" Text="굴착공사&#32;인수인계&#32;등록" Top="410" Width="167"></Image>
+		<Shape BKColor="#6cbae1" Bottom="428" Height="3" Id="Shape3" Left="5" LineWidth="0" Right="1263" TabOrder="19" Top="425" Type="Rectangle" Width="1258"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_list" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="779" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="347" Id="Grid1" InputPanel="true" Left="8" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnCellClick="Grid1_OnCellClick" OnExpandEdit="grd_MultiSave_OnExpandEdit" OnHeadClick="grd_Insert_OnHeadClick" Right="1266" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="18" TabStop="true" Top="432" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1258">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col fix="left" width="40"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="317"/>
+						<col fix="left" width="100"/>
+						<col width="86"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="85"/>
+						<col width="100"/>
+						<col width="78"/>
+						<col width="100"/>
+						<col width="50"/>
+						<col width="40"/>
+						<col width="40"/>
+						<col width="400"/>
+						<col width="90"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="58"/>
+						<col width="319"/>
+					</columns>
+					<head>
+						<cell col="0" display="checkbox"/>
+						<cell col="1" display="normal" text="NO"/>
+						<cell col="2" display="text" text="EOCS번호"/>
+						<cell col="3" display="text" text="굴착종류"/>
+						<cell col="4" display="text" text="굴착공사명"/>
+						<cell bkcolor="user11" col="5" display="text" expandcolor="user12" text="인계일자"/>
+						<cell bkcolor="user11" col="6" display="text" text="인계시간"/>
+						<cell bkcolor="user11" col="7" display="text" expandcolor="user12" text="굴착예정일자"/>
+						<cell bkcolor="user11" col="8" display="text" expandcolor="user12" text="굴착예정시간"/>
+						<cell col="9" display="text" text="노출예상일자"/>
+						<cell col="10" display="text" text="노출예정시간"/>
+						<cell bkcolor="user11" col="11" display="text" expandcolor="user12" text="압력"/>
+						<cell bkcolor="user11" col="12" display="text" expandcolor="user12" text="주야"/>
+						<cell col="13" display="text" text="인계자"/>
+						<cell col="14" colspan="3" display="text">
+							<cell align="right" col="0" display="text" text="휴대"/>
+							<cell col="1" display="text" text="전화"/>
+							<cell align="left" col="2" display="text" text="번호"/>
+						</cell>
+						<cell col="17" display="text" text="위치"/>
+						<cell col="18" display="text" text="굴착담당자"/>
+						<cell col="19" colspan="3" display="text" text="연락처"/>
+						<cell col="22" display="text" text="GIS위치"/>
+						<cell col="23" display="text" text="요청사항"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHK" display="checkbox" edit="checkbox"/>
+						<cell align="center" col="1" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell col="2" colid="EOCS_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="DIG_KIND" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="4" colid="DIG_WORK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="5" colid="HANDOVER_YMD" display="date" edit="date" expandimage="Calendar" expandshow="true"/>
+						<cell align="center" col="6" colid="HANDOVER_TIME" display="text" edit="mask" limit="4" Mask="##:##"/>
+						<cell align="center" col="7" colid="DIG_PLAN_YMD" display="date" edit="date" expandimage="calendar" expandshow="true" expandsize="18" limit="8" wordwrap="word"/>
+						<cell align="center" col="8" colid="DIG_PLAN_TIME" display="text" edit="mask" limit="4" Mask="##:##"/>
+						<cell col="9" colid="LEAK_YMD" display="date" edit="date" expandimage="Calendar" expandshow="true"/>
+						<cell align="center" col="10" colid="LEAK_TIME" display="text" edit="mask" limit="4" Mask="##:##"/>
+						<cell align="center" col="11" colid="PRESS_FLAG" display="text" edit="number" expandimage="combo" expandshow="true" limit="1"/>
+						<cell align="center" col="12" colid="DAY_NIGHT_FLAG" display="text" edit="normal" expandimage="combo" expandshow="true" limit="1"/>
+						<cell col="13" colid="HANDO_EMPID_NM" display="text" expandimage="search" expandshow="true"/>
+						<cell col="14" colid="HANDO_NM_TEL_DDD" display="combo" edit="combo" expandimage="combo" expandshow="true" limit="4"/>
+						<cell align="center" col="15" colid="HANDO_NM_TEL_EXN" display="text" edit="numchar" limit="4"/>
+						<cell align="center" col="16" colid="HANDO_NM_TEL_NUM" display="text" edit="numchar" limit="4"/>
+						<cell col="17" colid="WORK_LOC" display="text" edit="normal"/>
+						<cell align="center" col="18" colid="DIG_WORK_TAKER_NM" display="text" edit="normal"/>
+						<cell col="19" colid="DIG_TAKER_TEL_DDD" display="combo" edit="combo" expandimage="combo" expandshow="true" limit="4"/>
+						<cell align="center" col="20" colid="DIG_TAKER_TEL_EXN" display="text" edit="numchar" limit="4"/>
+						<cell align="center" col="21" colid="DIG_TAKER_TEL_NUM" display="text" edit="numchar" limit="4"/>
+						<cell col="22" display="text" expandimage="search" expandshow="true"/>
+						<cell align="left" col="23" colid="REQ_RMK" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="544" LeftMargin="12" Style="blt_search_1" TabOrder="20" Text="접수일자" Top="81" Width="61"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Receive1" Left="609" OnChanged="cal_Receive1_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="5" Top="80" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static0" Left="698" Style="static" TabOrder="21" Text="~" Top="83" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Receive2" Left="708" OnChanged="cal_Receive1_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="6" Top="80" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Button Cursor="HAND" Height="19" Id="Button83" ImageID="down" Left="644" OnClick="fn_D10_select" TabOrder="24" Text="Button8" Top="401" Width="21"></Button>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="923" LeftMargin="12" OnClick="Image0_OnClick" Style="blt_search_1" TabOrder="25" Text="인수인계날자" Top="402" Width="85"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_HandoverYmd1" Left="1013" OnChanged="cal_HandoverYmd1_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="7" Top="402" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static2" Left="1102" Style="static" TabOrder="26" Text="~" Top="405" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_HandoverYmd2" Left="1112" OnChanged="cal_HandoverYmd1_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="8" Top="402" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Button ButtonStyle="TRUE" Height="19" Id="Button58" ImageID="btn_popInquiry" Left="1205" LeftMargin="21" OnClick="fn_D10_Serach3" Style="button" TabOrder="9" Text="조회" Top="401" Width="50"></Button>
+		<Div DisableBKColor="white" Height="24" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="27" Text="Div0" Top="41" Url="globals::ComButton.xml" Visible="FALSE" Width="1258">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="39" Id="Image10" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="28" TabStop="FALSE" Text="굴착공사인수인계" Transparent="TRUE" Width="1266"></Image>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="774" LeftMargin="12" Style="blt_search_1" TabOrder="30" Text="지사" Top="402" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd3" Left="814" Style="combo" TabOrder="29" Top="401" Width="104"></Combo>
+		<Edit Align="RIGHT" Border="None" Height="18" Id="st_totalcnt" ImeMode="none" Left="1202" Number="TRUE" Readonly="TRUE" Style="edit" TabOrder="31" TabStop="FALSE" Top="119" Width="31"></Edit>
+		<Edit Border="None" Height="18" Id="Edit3" ImeMode="none" Left="1239" Style="edit" TabOrder="32" TabStop="FALSE" Text="건" Top="119" Width="17"></Edit>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="810" LeftMargin="12" Style="blt_search" TabOrder="33" TabStop="FALSE" Text="처리상태" Top="81" Visible="FALSE" Width="73"></Image>
+		<Combo Border="Flat" CodeColumn="CODE_ID" DataColumn="CODE_NAME" Height="18" Id="cob_Sts" InnerDataset="ds_sts" Left="872" OnChanged="cob_Sts_OnChanged" ResetIndex="FIRST" Style="combo" TabOrder="34" Top="79" Visible="FALSE" Width="104"></Combo>
+	</Form>
+	<Script><![CDATA[/*******************************************************************************
+* FormID     : D1402050010F.xml
+* Form 설명  : 굴착공사 인수인계 내역을 저장 조회한다.
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 문달호
+* 작성일     : 2009-01-30
+* 변경내용   : 
+*******************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+
+var cnt =0;
+function D1402050010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+
+	//fn_Init();
+	//gfn_D1_SetGrid_Sort(Grid0);
+	//gfn_D1_SetGrid_Sort(Grid1);
+   	if (IsExistVar("WORK_NUM", true)) 
+   	{
+   	    fn_Init2();
+   	    var P_WORK_NUM = WORK_NUM;
+   	    var P_BRANCHCD = BRANCHCD;
+   	    var P_DUTY_YMD = DUTY_YMD;
+		fn_D10_Serach4(P_WORK_NUM,P_BRANCHCD,P_DUTY_YMD);
+	}else
+	{
+		fn_Init();
+	}
+}
+
+
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+
+function fn_Init()
+{
+	//  콤보박스의 내용을 셋팅한다.	
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd3"));
+	gfn_D1_All_SetComboBox_Comcode("D10166",gfn_setDsObject_Comcode("cob_jobCd"),"");  //작업종류
+    gfn_D1_All_SetComboBox_Comcode("D10165",gfn_setDsObject_Comcode("cob_digKind"),"");// 굴착종류 
+    gfn_D1_All_SetComboBox_Comcode("D10187",gfn_setDsObject_Comcode("cob_digWorkProcSts"),""); //진행상태 
+	gfn_SetGrdComboBox_Comcode("Grid1",11,"D10034");
+	gfn_SetGrdComboBox_Comcode("Grid1",12,"B20031");
+	gfn_SetGrdComboBox_Comcode("Grid1",14,"A10100");
+	gfn_SetGrdComboBox_Comcode("Grid1",19,"A10100");
+	
+	cob_BranchCd.Value = cob_BranchCd2;
+	cob_BranchCd3.Value = cob_BranchCd2;
+	
+	if(cob_DigKind2 == null)
+	{
+		cob_digKind.Index = 0;
+	}
+	else
+	{
+		cob_digKind.Value = cob_DigKind2;
+	}
+	
+	if(cob_JobCd2 == null)
+	{
+		cob_jobCd.Index = 0;
+	}
+	else
+	{
+		cob_jobCd.Value = cob_JobCd2;
+	}
+
+	if(cob_DigWorkProcSts2 == null)
+	{
+		cob_digWorkProcSts.Index = 0;
+	}
+	else
+	{
+		cob_digWorkProcSts.Value = cob_DigWorkProcSts2;
+	}
+
+	if(cob_WorkSts == null)
+	{
+		cob_Sts.Index = 0;
+	}
+	else
+	{
+		cob_Sts.Value = cob_WorkSts;
+	}
+	cob_Sts_OnChanged();
+	fn_D10_Serach();
+
+	cal_HandoverYmd1.Value = Today();
+	cal_HandoverYmd2.Value = Today();
+	
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") 
+	{
+		cob_BranchCd.Enable = true;
+		cob_BranchCd3.Enable = true;
+	} 
+	else 
+	{	
+		cob_BranchCd.Enable = false;
+		cob_BranchCd3.Enable = false;
+	}	
+
+}
+
+function fn_Init2()
+{
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd3"));
+	gfn_D1_All_SetComboBox_Comcode("D10166",gfn_setDsObject_Comcode("cob_jobCd"),"");  //작업종류
+    gfn_D1_All_SetComboBox_Comcode("D10165",gfn_setDsObject_Comcode("cob_digKind"),"");// 굴착종류 
+    gfn_D1_All_SetComboBox_Comcode("D10187",gfn_setDsObject_Comcode("cob_digWorkProcSts"),""); //진행상태 
+	gfn_SetGrdComboBox_Comcode("Grid1",11,"D10034");
+	gfn_SetGrdComboBox_Comcode("Grid1",12,"B20031");
+	gfn_SetGrdComboBox_Comcode("Grid1",14,"A10100");
+	gfn_SetGrdComboBox_Comcode("Grid1",19,"A10100");
+	cob_Sts_OnChanged();
+	cob_BranchCd.Value = cob_BranchCd2;
+	cob_BranchCd3.Value = cob_BranchCd2;
+	
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") 
+	{
+		cob_BranchCd.Enable = true;
+		cob_BranchCd3.Enable = true;
+	} 
+	else 
+	{	
+		cob_BranchCd.Enable = false;
+		cob_BranchCd3.Enable = false;
+	}		
+}
+
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonExcelExport()
+//   설명  :  엑셀다운 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 :" + RPad(cob_BranchCd.Text," ",20);
+    SearchCondition = SearchCondition + "인수일계일자 :" + RPad(cal_HandoverYmd1.Text +" ~ "+ cal_HandoverYmd2.Text," ",20);
+    gfn_ExportExcel("굴착공사인수인계내역", 5, SearchCondition, "Grid1"); 
+	
+}
+
+//------------------------
+// 함수명 :fn_CommonPrint()
+// 설명   : 인쇄 
+//
+//-------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+//-----------------------------------------
+//  공통조회
+//-----------------------------------------
+
+function fn_CommonSearch()
+{
+    fn_D10_Serach2();
+}
+
+//-------------------------
+// 공통 삭제 버튼 
+//-------------------------
+function fn_CommonDeleteRow()
+{   
+
+	if(ds_list.GetRowCount() > 0) 
+	{
+		if(confirm("삭제하시겠습니까?"))
+		{
+			
+			cnt=ds_list.GetRowCount()-1;
+			for(cnt; cnt >= 0; cnt--)
+			{
+				if(ds_list.GetColumn(cnt,"CHK")=="1")
+				{
+					ds_list.DeleteRow(cnt);
+				}
+			}
+			fn_D10_Delete();
+		}
+	}
+	else{
+		alert("삭제할 내용이 없습니다.");
+	}
+	
+}
+
+//----------------------------
+// 저장 
+//---------------------------
+function fn_CommonSave()
+{   
+	if(!ds_list.GetUpdate())
+	{
+		alert("변동사항이 없습니다.");
+		return;
+	}
+	for(var i=0; i < ds_list.GetRowCount(); i++)
+	{  
+		if(ds_list.GetColumn(i,"CHK")=="1")
+		{   
+		    if(ds_list.GetRowType(i)=="insert")
+		    {
+				var streocs = ds_list.GetColumn(i,"EOCS_NUM");
+				var strflag = ds_list.GetColumn(i,"DIG_WORK_PATH_FLAG");
+				var strymd  = ds_list.GetColumn(i,"HANDOVER_YMD");
+				
+				fn_D10_Chk(streocs,strflag,strymd);
+
+				if(ds_chk.GetRowCount() > 0)
+				{
+					alert(ds_list.GetColumn(i,"EOCS_NUM")+" 공사번호의 인수인계일자가 이미 등록되어 있습니다.");
+					return;
+				}
+		    }
+		    
+		    var Result = fn_d1_Chkvalue(i);
+		    if(Result=="1")
+		    {
+				return;
+		    }
+			ds_list.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	        ds_list.SetColumn(i, "CRT_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+		}
+		else
+		{
+			ds_list.UpdateControl=false;
+			ds_list.SetRowType(i,"normal");
+		}
+	}
+    fn_D10_Save();
+	fn_D10_Serach();
+}
+ 
+//-----------------------------------------
+//   CHECK 함수 
+//-----------------------------------------
+function fn_D10_Chk(streocs,strflag,strymd)
+{
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkHandOverMgr-service&chk=1"
+	            + "&EOCS_NUM="+ streocs
+	            + "&DIG_WORK_PATH_FLAG="+ strflag
+	            + "&HANDOVER_YMD="+ strymd
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_chk=ds_chk";
+	var strArgument     = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+}
+
+  
+//-----------------------------------------
+//   조회 함수 
+//-----------------------------------------
+function fn_D10_Serach()
+{
+
+    var brcd= cob_BranchCd.VALUE;   
+	var strSvcID = "";
+	var strPart = "D10";
+	
+	// 2013-05-27 팽무진 부모창에서 넘겨주는 변수가 없는 상황이 연출 되면 에러가 남. 강제 변수처리.
+	var brcd_local = brcd;
+	var eocs_num_local =  eocs_num;
+	var dig_work_flag_local =  dig_work_flag;
+
+  // 2013-05-27 팽무진 부모창에서 넘겨주는 변수가 없는 상황이 연출 되면 에러가 남. 강제 변수처리.
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkHandOverMgr-service&Search=1"
+	            + "&BRANCH_CD="+ brcd_local
+	             //+ "&DIG_KIND="+ cob_digWorkPathFlag.Value
+	             + "&DIG_KIND="+ cob_digkind.Value
+	             + "&JOB_CD="+ cob_jobCd.Value
+	             + "&DIG_WORK_PROC_STS="+ cob_digWorkProcSts.Value
+	             + "&RECEIVE_YMD1="+ cal_Receive1.Value
+	             + "&RECEIVE_YMD2="+ cal_Receive2.Value
+	             + "&EOCS_NUM="+ eocs_num_local           //타블렛에서는 안넘어옴
+	             + "&DIG_WORK_PATH_FLAG="+ Replace(dig_work_flag_local,"_"," ") //타블렛에서는 안넘어옴  
+	            ;
+	            
+/*
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkHandOverMgr-service&Search=1"
+	            + "&BRANCH_CD=1"
+	             + "&DIG_KIND=2"
+	             + "&JOB_CD=3"
+	             + "&DIG_WORK_PROC_STS=0"
+	             + "&RECEIVE_YMD1=20120102"
+	             + "&RECEIVE_YMD2=20130102"
+	             + "EOCS_NUM="+ eocs_num  
+	             + "&DIG_WORK_PATH_FLAG=111"
+	            ;
+*/
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Search=ds_Search ds_list=ds_list";
+	var strArgument     = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+    st_totalcnt.Text = ds_Search.GetRowCount();
+}
+
+//---------------------------------------------------------------------------------
+// Function : fn_D10_Serach2()
+// comment  :  인수인계 공사대상 조회 
+// arg      : 
+// return   : 
+//---------------------------------------------------------------------------------
+function fn_D10_Serach2()
+{
+	var vsts = cob_Sts.Value;
+	var digWorkSts1 = "";
+	var digWorkSts2 = "";
+	var digWorkSts3 = "";
+	var digWorkSts4 = "";
+	var digWorkSts5 = "";
+	var digWorkSts6 = "";
+	var digWorkSts7 = "";
+	var digWorkSts8 = "";
+	var digWorkSts9 = "";
+	var digWorkSts10 = "";
+	var digWorkSts11 = "";
+	if(vsts=="10") // 요청중
+	{
+		digWorkSts1 = "20";
+		digWorkSts2 = "30";
+	}
+	else if(vsts=="20") // 진행중
+	{
+		digWorkSts3 = "40";
+		digWorkSts4 = "50";
+		digWorkSts5 = "60";
+		digWorkSts6 = "65";
+		digWorkSts7 = "70";
+		digWorkSts8 = "80";
+
+	}
+	else if(vsts=="30") // 처리완료
+	{
+		digWorkSts10="90";
+	}
+	else if(vsts=="40") // 취소
+	{
+		digWorkSts11="15";
+	}
+	else if(vsts=="99")
+	{
+		digWorkSts1 =  "20";
+		digWorkSts2 =  "30";
+		digWorkSts3 =  "40";
+		digWorkSts4 =  "50";
+		digWorkSts5 =  "60";
+		digWorkSts6 =  "65";
+		digWorkSts7 =  "70";
+		digWorkSts8 =  "80";
+		digWorkSts10 = "90";
+		digWorkStS11 = "15";
+		
+		
+	}
+	    
+    var brcd= cob_BranchCd.VALUE;
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkHandOverMgr-service&Search1=1"
+	            + "&BRANCH_CD="+ brcd
+	            + "&DIG_KIND="+ cob_digWorkPathFlag.Value
+	            + "&JOB_CD="+ cob_jobCd.Value
+	            + "&DIG_WORK_PROC_STS="+ cob_digWorkProcSts.Value
+	            + "&RECEIVE_YMD1="+ cal_Receive1.Value
+	            + "&RECEIVE_YMD2="+ cal_Receive2.Value
+	            + "&DIG_WORK_STS1="+digWorkSts1
+	            + "&DIG_WORK_STS2="+digWorkSts2
+	            + "&DIG_WORK_STS3="+digWorkSts3
+	            + "&DIG_WORK_STS4="+digWorkSts4
+	            + "&DIG_WORK_STS5="+digWorkSts5
+	            + "&DIG_WORK_STS6="+digWorkSts6
+	            + "&DIG_WORK_STS7="+digWorkSts7
+	            + "&DIG_WORK_STS8="+digWorkSts8
+	            + "&DIG_WORK_STS10="+digWorkSts10
+                + "&DIG_WORK_STS11="+digWorkSts11
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Search=ds_Search ds_list=ds_list";
+	var strArgument     = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	else
+	{
+		
+		Grid0.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");
+	}
+	st_totalcnt.Text = ds_Search.GetRowCount();
+
+}
+
+//---------------------------------------------------------------------------------
+// Function : fn_D10_Serach3()
+// comment  :  지사별 일자별 인수인계 내역 조회  
+// arg      : 
+// return   : 
+//---------------------------------------------------------------------------------
+function fn_D10_Serach3()
+{
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkHandOverMgr-service&Search3=1"
+	            + "&HANDOVER_YMD1="+cal_HandoverYmd1.Value 
+	            + "&HANDOVER_YMD2="+cal_HandoverYmd2.Value 
+	            + "&BRANCH_CD="+cob_BranchCd3.Value
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_list=ds_list";
+	var strArgument     = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	else
+	{
+		
+		Grid1.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");
+	}
+
+}
+
+// 당직인수인계서에서 호출할때 조회 
+function fn_D10_Serach4(P_WORK_NUM,P_BRANCHCD,P_DUTY_YMD)
+{
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkHandOverMgr-service&Search4=1"
+	            + "&HANDOVER_YMD1="+P_DUTY_YMD 
+	            + "&HANDOVER_YMD2="+P_DUTY_YMD
+	            + "&BRANCH_CD="+P_BRANCHCD
+	            + "&EOCS_NUM="+P_WORK_NUM
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_list=ds_list";
+	var strArgument     = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	else
+	{
+		
+		Grid1.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");
+	}
+
+}
+//-----------------------------------------
+//   등록과 수정함수 
+//-----------------------------------------
+function fn_D10_select()
+{
+
+	for (var i = 0; i < ds_Search.RowCount(); i ++) 
+	{
+  
+       if (ds_Search.GetColumn(i, "CHK") == 1) 
+       {
+         var temp = ds_list.RowCount();
+         var j = ParseInt(temp);
+      
+           ds_list.addrow();
+           ds_list.SetColumn(j, "EOCS_NUM", ds_Search.GetColumn(i, "EOCS_NUM"));  
+		   ds_list.SetColumn(j, "DIG_WORK_PATH_FLAG", ds_Search.GetColumn(i, "DIG_WORK_PATH_FLAG")); 
+		   ds_list.SetColumn(j, "DIG_WORK_NM", ds_Search.GetColumn(i, "DIG_WORK_NM")); 
+		   ds_list.SetColumn(j, "HANDO_EMPID_NM", gfn_GetGlobalValue("G_NAME"));  
+		   ds_list.SetColumn(j, "HANDO_EMPID",gfn_GetGlobalValue("G_USER_NO")); // HANDOVER_TIME
+		   ds_list.SetColumn(j, "HANDOVER_YMD",today());
+       }
+   }
+}
+
+//---------------------------------------------------------------------------------
+// Function : fn_D10_Delete()
+// comment  : 인수인계 삭제 한다.
+// arg      : 
+// return   : 없음
+//---------------------------------------------------------------------------------
+function fn_D10_Delete()
+{  
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkHandOverMgr-service&save=1";       
+	var strInDatasets   = "ds_list=ds_list:u";
+	var strOutDatasets  = "";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else
+	{
+		alert(gfn_GetMessage("M000009","%AAA%","정상적으로 삭제"));
+	}
+}
+
+//---------------------------------------------------------------------------------
+// Function : fn_D10_Save()
+// comment  : 인수인계 저장 및 수정 한다.
+// arg      : 
+// return   : 없음
+//---------------------------------------------------------------------------------
+function fn_D10_Save()
+{  
+    var v_UpdatType ="N";
+    
+    for(var i=0; i<ds_list.GetRowCount();i++)
+    {
+		if(ds_list.GetRowType(i)=="insert"||ds_list.GetRowType(i)=="update")
+		{
+			v_UpdatType ="Y";
+		}
+    }
+    if(v_UpdatType=="N")
+    {
+		return;
+    }
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkHandOverMgr-service&save=1";       
+	var strInDatasets   = "ds_list=ds_list:u";
+	var strOutDatasets  = "";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else
+	{
+		alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장"));
+	}
+}
+
+//---------------------------------------------------------
+// 달력 팝업
+//---------------------------------------------------------
+function grd_MultiSave_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+	if("HANDOVER_YMD" == Grid1.GetCellProp("body",nCell,"ColId"))
+	{
+		gfn_SetCalendar(obj, nRow, nCell);
+	}
+	if("DIG_PLAN_YMD" == Grid1.GetCellProp("body",nCell,"ColId"))
+	{
+		gfn_SetCalendar(obj, nRow, nCell);
+	}
+	if("LEAK_YMD" == Grid1.GetCellProp("body",nCell,"ColId"))
+	{
+		gfn_SetCalendar(obj, nRow, nCell);
+	}
+}
+
+
+
+// 화면 종료시 이벤트 
+function D1402050010U_OnUnloadCompleted(obj)
+{
+	if(ds_list.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 값이 있습니다. 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+
+
+//-----------------------
+//  체크박스 체크
+//-----------------------
+function grd_List_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	if(nCell=="0")
+	{
+		gfn_GridSelChk(obj, "CHK");
+	}
+}
+
+
+//-----------------------
+//  체크박스 체크
+//-----------------------
+function grd_Insert_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	if(nCell=="0")
+	{
+		gfn_GridSelChk(obj, "CHK");
+	}
+}
+
+//  필수값 체크 
+function fn_d1_Chkvalue(i)
+{
+	if(ds_list.GetColumn(i,"HANDOVER_YMD")==""||ds_list.GetColumn(i,"HANDOVER_YMD")==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","인수인계날자는"));
+		return 1;
+	}
+	if(ds_list.GetColumn(i,"DIG_PLAN_YMD")==""||ds_list.GetColumn(i,"DIG_PLAN_YMD")==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","굴착예정일자는"));
+		return 1;
+	}
+	if(ds_list.GetColumn(i,"DIG_PLAN_TIME")==""||ds_list.GetColumn(i,"DIG_PLAN_TIME")==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","굴착예정시간은"));
+		return 1;
+	}
+	if(ds_list.GetColumn(i,"PRESS_FLAG")==""||ds_list.GetColumn(i,"PRESS_FLAG")==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","압력은"));
+		return 1;
+	}
+	if(ds_list.GetColumn(i,"DAY_NIGHT_FLAG")==""||ds_list.GetColumn(i,"DAY_NIGHT_FLAG")==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","주야는"));
+		return 1;
+	}
+}
+
+// 지사콤보 이벤트 
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	fn_SetComboBox_Comcode("1", cob_BranchCd.Value, fn_setDsObject_Comcode("1", "cob_ZipNo"));
+
+}
+
+// 그리드 클릭시 이벤트 
+function Grid1_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(nCell=="22")
+	{
+		var args  = "BUNGI=14" ;
+	        args += " EOCS_NUM=" + ds_list.GetColumn(nRow,"EOCS_NUM") ;
+	        args += " DIG_WORK_PATH_FLAG=" + ds_list.GetColumn(nRow,"DIG_WORK_PATH_FLAG");
+	    
+		gfn_Dialog("D10","D1402060011U",args,1208,840,"Scroll",-1,-1);
+	}
+	if(nCell=="13")
+	{
+		var retValue = gfn_E2_SearchOutEmplDialog(ds_list.GetColumn(Grid1.ClickedRow,"HANDO_EMPID")); //사용자코드(조회조건용)
+
+		ds_list.SetColumn(Grid1.ClickedRow,"HANDO_EMPID",retValue[0]);
+		ds_list.SetColumn(Grid1.ClickedRow,"HANDO_EMPID_NM",retValue[1]);
+	}
+	
+}
+
+// 날자 체크 
+function cal_Receive1_OnChanged(obj,strOldText,strNewText)
+{
+	fn_DateCheck(cal_Receive1,cal_Receive2);
+}
+// 날자 체크 
+function cal_HandoverYmd1_OnChanged(obj,strOldText,strNewText)
+{
+	fn_DateCheck(cal_HandoverYmd1,cal_HandoverYmd2);
+}
+
+
+
+
+
+function cob_Sts_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	if(cob_Sts.Value=="10")
+	{   
+		cob_digWorkProcSts.Enable=false;
+		cob_digWorkProcSts.Value="";
+	}
+	else if(cob_Sts.Value=="20")
+	{
+		cob_digWorkProcSts.Enable=false;
+		cob_digWorkProcSts.Value="";
+	}
+	else if(cob_Sts.Value=="30")
+	{
+		cob_digWorkProcSts.Enable=false;
+		cob_digWorkProcSts.Value="";
+	}
+	else if(cob_Sts.Value=="40")
+	{
+		cob_digWorkProcSts.Enable=false;
+		cob_digWorkProcSts.Value="";
+	}	
+	else if(cob_Sts.Value=="99")
+	{   
+		cob_digWorkProcSts.Enable=true;
+	}	
+}
+]]></Script>
+</Window>

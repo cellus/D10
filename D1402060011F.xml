@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1402060011F" Left="8" OnLoadCompleted="D1402060011F_OnLoadCompleted" PidAttrib="7" Title="GIS데이터&#32;수정의뢰서&#32;내역조회_D1402060011F" Top="8" Ver="1.0" Width="1270" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_list"></Dataset>
+		</Datasets>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="1174" LeftMargin="12" Style="blt_search" TabOrder="13" TabStop="FALSE" Text="건수&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;건" Top="74" Width="83"></Image>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1264" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="0" Top="30" Type="RoundRect" Width="1259"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1259" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="35" Type="Rectangle" Width="1249"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="1" TabStop="FALSE" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1259">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="#6cbae1" Bottom="98" Height="3" Id="Shape0" Left="4" LineWidth="0" Right="1266" TabOrder="3" Top="95" Type="Rectangle" Width="1262"></Shape>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image5_OnClick" Style="text_title" TabOrder="2" TabStop="FALSE" Text="GIS데이터&#32;수정의뢰서&#32;내역" Top="80" Width="270"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_list" BkColor2="user3" BoldHead="FALSE" Border="Flat" BorderColor="user7" Bottom="844" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="746" Id="grd_list" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnCellClick="grd_list_OnCellClick" OnExpandEdit="grd_MultiSave_OnExpandEdit" OnHeadClick="grd_list_OnHeadClick" Right="1265" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="6" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1260">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="35"/>
+						<col width="80"/>
+						<col width="67"/>
+						<col width="85"/>
+						<col width="102"/>
+						<col width="99"/>
+						<col width="241"/>
+						<col width="269"/>
+						<col width="65"/>
+						<col width="108"/>
+						<col width="48"/>
+						<col width="56"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="No"/>
+						<cell col="1" display="text" text="지사"/>
+						<cell col="2" display="text" text="시/구"/>
+						<cell col="3" display="text" text="확인일자"/>
+						<cell col="4" display="text" text="GIS수정의뢰번호"/>
+						<cell col="5" display="text" text="공사구분"/>
+						<cell col="6" display="text" text="공사명"/>
+						<cell col="7" display="text" text="주소"/>
+						<cell col="8" display="text" text="등록자"/>
+						<cell col="9" display="text" text="등록일시"/>
+						<cell col="10" display="text" text="상세보기"/>
+						<cell col="11" display="text" text="결재여부"/>
+					</head>
+					<body>
+						<cell col="0" display="text" expr="rowindex+1"/>
+						<cell align="center" col="1" colid="BRANCH_NM" display="text"/>
+						<cell align="left" col="2" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="center" col="3" colid="CONF_YMD" display="date"/>
+						<cell align="center" col="4" colid="GIS_UPD_REQ_NUM" display="text"/>
+						<cell align="left" col="5" colid="GIS_UPD_REQ_PATH_NM" display="text"/>
+						<cell align="left" col="6" colid="WORK_NM" display="text"/>
+						<cell col="7" colid="LOT_NUM_UNION" display="text"/>
+						<cell align="center" col="8" colid="CRT_EMPID_NM" display="text"/>
+						<cell align="center" col="9" colid="CRT_DTM" display="date"/>
+						<cell align="center" col="10" cursor="hand" display="normal" expandimage="SEarch" expandshow="true" expandsize="30"/>
+						<cell col="11" colid="DECIDE_YN" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Color="blue" Height="18" Id="Image8" ImageID="blt" Left="15" LeftMargin="12" Style="blt_search" TabOrder="8" TabStop="FALSE" Text="지사" Top="40" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Branc" Left="56" OnChanged="cob_Branc_OnChanged" Style="combo_indis" TabOrder="7" TabStop="FALSE" Top="40" Width="125"></Combo>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="192" LeftMargin="12" Style="blt_search_Indis" TabOrder="10" TabStop="FALSE" Text="시/구" Top="40" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo1" INDEX="0" Left="237" Style="combo_indis" TabOrder="9" TabStop="FALSE" Top="40" Width="125"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_GisUpdReqPathCd" INDEX="0" Left="445" Style="combo" TabOrder="11" TabStop="FALSE" Top="40" Width="125"></Combo>
+		<Image Align="Left" Color="user0" Height="18" Id="Image0" ImageID="blt" Left="376" LeftMargin="12" Style="blt_search_Indis" TabOrder="12" TabStop="FALSE" Text="공사구분" Top="40" Width="59"></Image>
+		<Static Align="Right" Height="13" Id="st_Reg" Left="1219" Style="static" TabOrder="14" Text="0" Top="77" Width="24"></Static>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="582" LeftMargin="12" Style="blt_search" TabOrder="17" Text="확인일자" Top="40" Width="84"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_YMD_FROM" Left="647" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="15" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_YMD_TO" Left="750" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="16" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1402060011F.xml
+* Form 설명  : GIS데이터 수정의뢰서 내역조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 노준배 
+* 작성일     : 2008-05-08
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1402060011F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	// 지사코드, 영업구코드
+	//-----------------------------------------
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branc"));   
+	gfn_D1_All_SetComboBox_Comcode("D10192",gfn_setDsObject_Comcode("cob_GisUpdReqPathCd"));
+	cob_Branc.Index = 0;
+	cob_Branc_OnChanged();
+	cob_ZipNo1.Index = 0;
+}
+
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_Branc_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_Branc.value, fn_setDsObject_Comcode("1", "cob_ZipNo1"));
+    cob_ZipNo1.Index = 0;
+}
+
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+	
+	fn_D1_find();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  GIS데이터 수정의뢰서 내역
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1402060011F-service"
+						+ "&BRANCH_CD="           + cob_Branc.Value						
+						+ "&ZIP_NO1="             + cob_ZipNo1.Value
+						+ "&GIS_UPD_REQ_PATH_CD=" + cob_GisUpdReqPathCd.Value
+						+ "&YMD_FROM=" 			  + cal_YMD_FROM.Value
+						+ "&YMD_TO=" 			  + cal_YMD_TO
+						;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_list=ds_list";
+	var strArgument     = "find";
+		 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_list.GetRowCount()==0) { grd_list.NoDataText = "조회결과가 없습니다."; }
+
+	st_Reg.Text = ds_list.GetRowCount();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 : "  +     RPad(cob_Branc.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 : " +     RPad(cob_ZipNo1.Text," ",20);
+    SearchCondition = SearchCondition + "공사구분 : " +  RPad(cob_GisUpdReqPathCd.Text," ",20);
+        
+    gfn_ExportExcel("GIS데이터 수정의뢰서 내역조회", 5, SearchCondition, "grd_list");
+}
+
+function grd_list_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if (nCell == 10) {
+	    
+	    var args = "GIS_UPD_REQ_NUM=" + ds_list.GetColumn(nRow, "GIS_UPD_REQ_NUM")
+	             + " GIS_UPD_REQ_PATH_CD=" + ds_list.GetColumn(nRow, "GIS_UPD_REQ_PATH_CD")
+	             ;
+	    gfn_Dialog("D10", "D1402060010U", args, 1272, 1024, true, -1, -1);     
+    } 
+}
+
+// 2012.10.10. 이건민 - 주철민 계장 요청사항 (정렬기능 추가)
+function grd_list_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_D1_SetGrid_Sort(grd_list);
+}
+]]></Script>
+</Window>

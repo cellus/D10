@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="720" Id="D1802020010F" Left="8" OnLoadCompleted="D1802020010U_OnLoadCompleted" PidAttrib="7" Title="도로점용단가&#32;등록" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Pri">
+				<Contents>
+					<colinfo id="FIRST_SEOUL_UNIT_PRC" size="256" type="STRING"/>
+					<colinfo id="THIRD_GYEONGGI_UNIT_PRC" size="256" type="STRING"/>
+					<colinfo id="LEASE_FACI_DIAM_FLAG" size="256" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="256" type="STRING"/>
+					<colinfo id="col1" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Menu">
+				<Contents>
+					<colinfo id="FIRST_SEOUL_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="THIRD_GYEONGGI_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="col1" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_FACI_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<record>
+						<col1>0.1M&#32;이하(010cm)</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>090</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+					<record>
+						<col1>0.2M&#32;이하(020cm)</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>140</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+					<record>
+						<col1>0.4M&#32;이하(040cm)</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>160</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+					<record>
+						<col1>0.6M&#32;이하(060cm)</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>220</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+					<record>
+						<col1>0.8M&#32;이하(080cm)</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>280</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+					<record>
+						<col1>1.0M&#32;이하(090cm)</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>315</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+					<record>
+						<col1>2.0M&#32;이하(100cm)</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>355</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+					<record>
+						<col1>3.0M&#32;이하(300cm)</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>450</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+					<record>
+						<col1>3.0M&#32;초과(300cm)</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>500</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+					<record>
+						<col1>정배류기</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>600</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+					<record>
+						<col1>RTU</col1>
+						<FIRST_SEOUL_UNIT_PRC></FIRST_SEOUL_UNIT_PRC>
+						<LEASE_FACI_DIAM_FLAG>700</LEASE_FACI_DIAM_FLAG>
+						<THIRD_GYEONGGI_UNIT_PRC></THIRD_GYEONGGI_UNIT_PRC>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Pri" BkColor2="default" BoldHead="FALSE" Border="Flat" BorderColor="user7" Bottom="716" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="622" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="1271" RowHeight="20" SelColor="MENU" Style="grid_pop" TabOrder="1" TabStop="true" Top="94" UseDBuff="true" UsePopupMenu="true" UseSelColor="FALSE" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1266">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" colspan="3" display="normal" text="2008&#32;단가"/>
+						<cell bkcolor="user11" col="0" display="text" row="1" text="환산직경/개소"/>
+						<cell bkcolor="user11" col="1" display="text" row="1" text="갑지-서울(원)"/>
+						<cell bkcolor="user11" col="2" display="text" row="1" text="병지-경기(원)"/>
+					</head>
+					<body>
+						<cell align="center" bkcolor="user12" col="0" colid="col1" display="text" expandsize="18" suppress="1" SuppressAlign="Middle" wordwrap="word"/>
+						<cell col="1" colid="FIRST_SEOUL_UNIT_PRC" display="number" edit="number" expandsize="18" limit="10" wordwrap="word"/>
+						<cell col="2" colid="THIRD_GYEONGGI_UNIT_PRC" display="number" edit="number" expandsize="18" limit="10" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="249" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="455" TabOrder="2" Top="246" Type="Rectangle" Width="450"></Shape>
+		<Static Height="13" Id="Static0" Left="1216" Style="static" TabOrder="3" Text="(단위:&#32;원)" Top="74" Width="55"></Static>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape2" Left="5" LineColor="user7" Right="1273" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="8" Top="30" Type="RoundRect" Width="1268"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape3" Left="10" LineWidth="0" Right="1268" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="7" Top="35" Type="Rectangle" Width="1258"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div1" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="5" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1268">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search" TabOrder="6" Text="기준년도" Top="40" Width="84"></Image>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="4" Text="도로점용단가&#32;등록" Top="75" Width="270"></Image>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear" Left="80" OnMouseOut="cob_BaseYear_OnMouseOut" Style="spin_indis" TabOrder="9" Text="2008" Top="40" Width="54"></Spin>
+		<Shape BKColor="#6cbae1" Bottom="95" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1271" TabOrder="10" Top="92" Type="Rectangle" Width="1266"></Shape>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D18020320010U.xml
+* Form 설명  : 도로상 점용 단가 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-15
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+var saveFlag = ''; // INSERT, UPDATE FLAG
+
+//---------------------------------------------------------
+//	화면 OnLoadCompleted 이벤트처리 발생하는 함수( 화면ID_OnLoadCompleted )
+//---------------------------------------------------------
+function D1802020010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	fn_D1_Find(); // 초기 조회
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	//gfn_SetButton("0011011");
+	
+	//-----------------------------------------
+	//  콤보박스의 초기 설정 : 기준년도
+	//-----------------------------------------
+	cob_BaseYear.Value      = toString(parseInt(Substr(Today(),0,4))-1);
+	Grid0.SetCellProp("head",0,"Text",cob_BaseYear.Value + '년 단가');
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//---------------------------------------------------------
+function fn_CommonSave(){
+
+	for(var i=0; i<ds_Pri.GetRowCount(); i++){
+		if(gfn_IsNull(ds_Pri.GetColumn(i, "FIRST_SEOUL_UNIT_PRC"))){
+			alert("갑지-서울(원)은 필수 입력값입니다. ");
+			return;
+		}
+		if(gfn_IsNull(ds_Pri.GetColumn(i, "THIRD_GYEONGGI_UNIT_PRC"))){
+			alert("병지-경기(원)은 필수 입력값입니다. ");
+			return;
+		}
+	}
+	
+	fn_D1_Save();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_SAVE
+//   설명  : 도로 점용 단가를 등록/업데이트한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_D1_Save()
+{		
+	var USER_ID    = gfn_GetGlobalValue("G_USER_NO");   // SESSION ID
+	var USER_IP    = gfn_GetGlobalValue("G_IPADDRESS"); // SESSION IP
+	
+	ds_Pri.AddColumn("UPD_EMPID"           , "STRING", 256);	// ID
+	ds_Pri.AddColumn("UPD_IP"              , "STRING", 256);	// IP
+	ds_Pri.AddColumn("CRT_EMPID"           , "STRING", 256);	// ID
+	ds_Pri.AddColumn("CRT_IP"              , "STRING", 256);	// IP
+	ds_Pri.AddColumn("BASE_YEAR"           , "STRING", 256);	// IP
+	ds_Pri.AddColumn("LEASE_FACI_DIAM_FLAG", "STRING", 256);	// IP
+	
+
+	ds_Pri.UpdateControl = false;
+		
+	var rCount = ds_Pri.GetRowCount();
+	
+	for(var i=0; i<rCount; i++) {		
+		ds_Pri.SetRowType(i, saveFlag);
+		ds_Pri.SetColumn (i, "UPD_EMPID", USER_ID       );
+		ds_Pri.SetColumn (i, "UPD_IP"   , USER_IP      );	
+		ds_Pri.SetColumn (i, "CRT_EMPID", USER_ID       );
+		ds_Pri.SetColumn (i, "CRT_IP"   , USER_IP       );
+		
+		ds_Pri.SetColumn(i, "BASE_YEAR" , cob_BaseYear.Value);
+	}
+				
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_RoadLeaseUnitPrcRegisMgr-service"
+						 + "&BASE_YEAR=" + cob_BaseYear.Value;
+						 
+	var strInDatasets    = "ds_Pri=ds_Pri:u";		
+	var strOutDatasets   = "";		
+	var strArgument      = "save";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   	
+	if(ErrorCode<0)
+	{
+		return false;
+	}
+	
+	alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+	fn_D1_Find();
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	fn_D1_Find();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  도로 점용단가를 조회한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{		
+	Grid0.SetCellProp("head",0,"Text",cob_BaseYear.Value + '년 단가');
+	
+    var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_RoadLeaseUnitPrcRegisMgr-service&BASE_YEAR=" + cob_BaseYear.Value ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Pri=ds_Pri";
+	var strArgument     = "find";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_Pri.GetRowCount()==0) {
+			Grid0.NoDataText = gfn_GetMessage("M000009","%AAA%","조회를");
+			ds_Pri.Copy(ds_Menu);
+			saveFlag = 'insert';
+	}else{
+		ds_Pri.SetColumn( 0, "col1", "0.1M 이하");
+		ds_Pri.SetColumn( 1, "col1", "0.2M 이하");
+		ds_Pri.SetColumn( 2, "col1", "0.4M 이하");
+		ds_Pri.SetColumn( 3, "col1", "0.6M 이하");
+		ds_Pri.SetColumn( 4, "col1", "0.8M 이하");
+		ds_Pri.SetColumn( 5, "col1", "1.0M 이하");
+		ds_Pri.SetColumn( 6, "col1", "2.0M 이하");
+		ds_Pri.SetColumn( 7, "col1", "3.0M 이하");
+		ds_Pri.SetColumn( 8, "col1", "3.0M 초과");
+		ds_Pri.SetColumn( 9, "col1", "정배류기");
+		ds_Pri.SetColumn(10, "col1", "RTU"     );
+		saveFlag = 'update';
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "기준년도 : " +     RPad(cob_BaseYear.Text," ",20)  ;
+        
+    gfn_ExportExcel("도로점용단가 등록", 5, SearchCondition, "Grid0");
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명: 출력 button 실행, 데이터를 출력 한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonPrint(){
+	PrintScreen();
+}
+
+function cob_BaseYear_OnMouseOut(obj)
+{
+	cob_BaseYear.Value      = Substr(Today(),0,4)+"년";
+	Grid0.SetCellProp("head",0,"Text",cob_BaseYear.Value + '년 단가');
+	fn_D1_Find();
+}
+]]></Script>
+</Window>

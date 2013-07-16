@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1205010010F" Left="8" OnLoadCompleted="D1205010010F_OnLoadCompleted" PidAttrib="7" Title="점검실적조회_안전기술팀" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_END_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="1" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team">
+				<Contents>
+					<colinfo id="KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_QuarterCombo">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PressCombo">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape3" Left="8" LineColor="user7" Right="1271" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="6" Top="30" Type="RoundRect" Width="1263"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape0" Left="13" LineWidth="0" Right="1266" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="0" Top="35" Type="Rectangle" Width="1253"></Shape>
+		<Shape BKColor="user6" Bottom="-1" Height="39" Id="Shape1" Left="-88" LineColor="user7" Right="907" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="3" Top="-40" Type="RoundRect" Width="995"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image3" ImageID="blt" Left="18" LeftMargin="12" Style="blt_search" TabOrder="3" TabStop="FALSE" Text="지사" Top="41" Width="119"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_branch" Left="58" OnChanged="cob_Branch_OnChanged" Style="edit_Indis" TabOrder="2" Top="41" Width="127"></Combo>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="7" TabStop="FALSE" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1274">
+			<Contents></Contents>
+		</Div>
+		<Tab Border="Flat" FixedImage="FALSE" Height="768" Id="tab_FaciReg" Left="8" OnChanged="tab_FaciReg_OnChanged" Style="tab" TabOrder="8" TabStop="FALSE" Top="72" Width="1263">
+			<Contents>
+				<TabPage Height="738" Id="tab10" ImageID="tab" Left="2" TabOrder="1" Text="밸브&#32;점검실적" Top="28" Url="D10::D1205010010F_T01.xml" Width="1259"></TabPage>
+				<TabPage Height="738" Id="tab11" ImageID="tab" Left="2" TabOrder="1" Text="테스트박스&#32;점검실적" Top="28" Url="D10::D1205010010F_T02.xml" Width="1259"></TabPage>
+				<TabPage Height="738" Id="tab12" ImageID="tab" Left="2" TabOrder="1" Text="정류기&#32;점검실적" Top="28" Url="D10::D1205010010F_T03.xml" Width="1259"></TabPage>
+				<TabPage Height="738" Id="tab13" ImageID="tab" Left="2" TabOrder="7" Text="배류기&#32;점검실적" Top="28" Url="D10::D1205010010F_T04.xml" Width="1259"></TabPage>
+				<TabPage Height="738" Id="tab14" ImageID="tab" Left="2" TabOrder="7" Text="전기방식불량내역" Top="28" Url="D10::D1205010010F_T05.xml" Width="1259"></TabPage>
+			</Contents>
+		</Tab>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="363" LeftMargin="12" Style="blt_search" TabOrder="10" TabStop="FALSE" Text="점검일자" Top="41" Width="63"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Ymd_From" Left="432" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="9" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Ymd_To" Left="536" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="11" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="188" LeftMargin="12" Style="blt_search" TabOrder="13" Text="팀" Top="41" Width="61"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_TeamCdSearch" InnerDataset="ds_Team" Left="216" Style="combo_indis" TabOrder="12" Top="40" Width="140"></Combo>
+		<Spin Border="Flat" Height="18" Id="sp_CheckYear" Left="714" OnClickUpDown="sp_CheckYear_OnClickUpDown" Style="spin_indis" TabOrder="14" Text="2013" Top="41" Width="54"></Spin>
+		<Combo Border="Flat" CodeColumn="CODE_ITEM" DataColumn="ITEM_KNAME" Height="18" Id="cob_CheckQ" InnerDataset="ds_QuarterCombo" Left="856" OnChanged="cob_CheckQ_OnChanged" Style="combo_Indis" TabOrder="15" TabStop="FALSE" Top="40" Width="100"></Combo>
+		<Combo Border="Flat" CodeColumn="CODE_ITEM" DataColumn="ITEM_KNAME" Height="18" Id="cob_Press" InnerDataset="ds_PressCombo" Left="1016" Style="combo_Indis" TabOrder="1" TabStop="FALSE" Top="40" Width="100"></Combo>
+		<Image Align="Left" Height="16" Id="Image0" ImageID="blt" Left="645" LeftMargin="12" Style="blt_search" TabOrder="16" TabStop="FALSE" Text="점검년도" Top="43" Width="70"></Image>
+		<Image Align="Left" Height="16" Id="Image1" ImageID="blt" Left="789" LeftMargin="12" Style="blt_search" TabOrder="17" TabStop="FALSE" Text="점검주기" Top="43" Width="70"></Image>
+		<Image Align="Left" Height="16" Id="Image2" ImageID="blt" Left="974" LeftMargin="12" Style="blt_search" TabOrder="18" TabStop="FALSE" Text="압력" Top="42" Width="40"></Image>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_1_1" ImageID="btn_5_Graph" Left="971" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="19" Text="본딩전위통계" Top="74" Width="94"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_1_2" ImageID="btn_5_Graph" Left="1073" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="20" Text="전단전위통계" Top="74" Width="94"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_1_3" ImageID="btn_5_Graph" Left="1172" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="21" Text="후단전위통계" Top="74" Width="92"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_2_1" ImageID="btn_5_Graph" Left="971" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="22" Text="측정전위통계" Top="74" Visible="FALSE" Width="94"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_2_2" ImageID="btn_5_Graph" Left="1072" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="23" Text="MG전위통계" Top="74" Visible="FALSE" Width="94"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_2_3" ImageID="btn_5_Graph" Left="1172" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="24" Text="MG전류통계" Top="74" Visible="FALSE" Width="94"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_3_1" ImageID="btn_5_Graph" Left="971" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="25" Text="방식전위통계" Top="74" Visible="FALSE" Width="94"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_3_2" ImageID="btn_5_Graph" Left="1072" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="26" Text="측정전압통계" Top="74" Visible="FALSE" Width="94"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_3_3" ImageID="btn_5_Graph" Left="1172" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="27" Text="측정전류통계" Top="74" Visible="FALSE" Width="94"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_4_1" ImageID="btn_5_Graph" Left="971" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="28" Text="방식전위통계" Top="74" Visible="FALSE" Width="94"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_4_2" ImageID="btn_5_Graph" Left="1072" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="29" Text="측정전압통계" Top="74" Visible="FALSE" Width="94"></Button>
+		<Button ButtonStyle="TRUE" Font="돋움,8" Height="20" Id="btn_group_4_3" ImageID="btn_5_Graph" Left="1172" LeftMargin="21" OnClick="btn_group_OnClick" Style="button" TabOrder="30" Text="측정전류통계" Top="74" Visible="FALSE" Width="94"></Button>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1205010010F.xml
+* Form 설명  : 안전기술팀용 순찰실적 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 권기철
+* 작성일     : 2010-08-24
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+
+function D1205010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") 
+	{
+		// 지사설정
+		cob_Branch.Enable = true;
+		cob_Branch.Value = "";
+		cob_Branch_OnChanged();	
+	} 
+	else 
+	{
+		// 지사설정
+		cob_Branch.Enable = false;
+		cob_Branch.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+		cob_Branch_OnChanged();
+	}			
+	
+	cob_Branch_OnChanged();	
+}
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{	
+	gfn_D1_SetComboBox_Comcode("E50059", "ds_QuarterCombo" ); 
+	gfn_D1_SetComboBox_Comcode("D10034", "ds_PressCombo" ); 
+	ds_QuarterCombo.insertRow(0);
+	ds_QuarterCombo.SetColumn(ds_QuarterCombo.row,"CODE_ITEM", "%" );
+	ds_QuarterCombo.SetColumn(ds_QuarterCombo.row,"ITEM_KNAME", "전체" ); 
+	ds_PressCombo.insertRow(0);
+	ds_PressCombo.SetColumn(ds_PressCombo.row,"CODE_ITEM", "%" );
+	ds_PressCombo.SetColumn(ds_PressCombo.row,"ITEM_KNAME", "전체" );
+         
+	cob_CheckQ.Index = 0;
+	cob_Press.Index = 0;
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branch"));		//지사코드
+	cal_Ymd_From.Value = substr(AddMonth(today(),-1),0,6) + '01';
+	cal_Ymd_To.Value = today();
+	cob_branch_OnChanged();
+}
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonAddRow()
+// 설명: 구간등록 행을 추가한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonAddRow()
+{
+}
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonDeleteRow()
+// 설명: 구간등록 행을 삭제한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+
+function fn_CommonDeleteRow(){
+
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonSave()
+// 설명: 등록된 내용을 저장한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSave()
+{		
+
+}
+
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_find();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{	
+   tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_Excel();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명: 출력 button 실행, 데이터를 출력 한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonPrint(){
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_Print();
+}
+
+
+function cob_Branch_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) 
+{
+    gfn_D1_SetComboBox_Teamcd("ds_Team",cob_branch);
+    cob_TeamCdSearch.Value = "";
+}
+function cob_CheckQ_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{  
+	var initDay = sp_CheckYear.Value + "0101"; 
+	switch( strCode ) {
+		case  "1" : 
+			cal_Ymd_From.Value = initDay;
+			cal_Ymd_To.Value   = AddDate( AddMonth( initDay , 3) , -1 ) ;
+			break;
+		
+		case  "2" : 
+			cal_Ymd_From.Value = AddMonth( initDay , 3 );
+			cal_Ymd_To.Value   = AddDate( AddMonth( initDay , 6) , -1 ) ;
+			break;
+		
+		case  "3" : 
+			cal_Ymd_From.Value = AddMonth( initDay , 6 );
+			cal_Ymd_To.Value   = AddDate( AddMonth( initDay , 9) , -1 ) ;
+			break;
+		
+		case  "4" : 
+			cal_Ymd_From.Value = AddMonth( initDay , 9 );
+			cal_Ymd_To.Value   = AddDate( AddMonth( initDay , 12) , -1 ) ;
+			break;
+		
+		default :
+			cal_Ymd_From.Value = initDay;
+			cal_Ymd_To.Value   = AddDate( AddMonth( initDay , 12) , -1 ) ;
+	}
+} 
+
+function sp_CheckYear_OnClickUpDown(obj,strOldText,strText,bUp)
+{	
+	if( strText > SubStr( ToDay() , 0 , 4 ) ) 
+	{ 
+		alert( "현재년도를 초과하여 조회하실수 없습니다." ); 
+		sp_CheckYear.Value = strOldText; 
+		return;
+	}
+	cob_CheckQ_OnChanged( null , cob_CheckQ.Value , null , null , null );
+}
+
+function btn_group_OnClick(obj) 
+{
+	var faci_num; 
+	var arg = "fa_id=" + obj.id; 
+		switch(tab_FaciReg.TabIndex) {
+			case 0:  
+				faci_num =   tab_FaciReg.GetItem(tab_FaciReg.TabIndex).ds_vb.GetColumn( 
+						     tab_FaciReg.GetItem(tab_FaciReg.TabIndex).ds_vb.row
+						   , "FACI_NUM"
+				           );
+				break;
+			case 1:
+				faci_num =   tab_FaciReg.GetItem(tab_FaciReg.TabIndex).ds_tb.GetColumn( 
+						     tab_FaciReg.GetItem(tab_FaciReg.TabIndex).ds_tb.row
+						   , "FACI_NUM"
+				           );
+				break;
+			case 2:
+				faci_num =   tab_FaciReg.GetItem(tab_FaciReg.TabIndex).ds_rect.GetColumn( 
+						     tab_FaciReg.GetItem(tab_FaciReg.TabIndex).ds_rect.row
+						   , "FACI_NUM"
+				           );
+				break;
+			case 3:
+				faci_num =   tab_FaciReg.GetItem(tab_FaciReg.TabIndex).ds_drain.GetColumn( 
+						     tab_FaciReg.GetItem(tab_FaciReg.TabIndex).ds_drain.row
+						   , "FACI_NUM"
+				           );
+				break;
+			default; 
+		} 
+		if( gfn_isNull(faci_num) ) {
+			alert( '선택하신 데이터가 없습니다. 조회후 다시 시도해주세요.' );
+			return; 
+		}
+		arg = arg + " fa_FACI_NUM=" + faci_num; 
+	    arg = arg + " fa_sYmd=" + cal_Ymd_From.Value;
+	    arg = arg + " fa_eYmd=" + cal_Ymd_To.Value;  
+	    
+	gfn_Dialog( "D10" , "D1205010010U" , arg , 700 , 500 , true , -1 , -1 ); 
+}
+ 
+
+function tab_FaciReg_OnChanged(obj,nOldIndex,nNewindex)
+{  
+	//각탭에 맞는 그래프 버튼이 나오도록 한다.
+	for( var i = 1 ; i <= 4 ; i ++ ) {
+		Object( "btn_group_" + i + "_1" ).Visible = false;
+		Object( "btn_group_" + i + "_2" ).Visible = false;
+		Object( "btn_group_" + i + "_3" ).Visible = false;
+	}
+	if( nNewindex < 4 ) {
+		Object( "btn_group_" + ( nNewindex + 1 ) + "_1" ).Visible = True;
+		Object( "btn_group_" + ( nNewindex + 1 ) + "_2" ).Visible = True;
+		Object( "btn_group_" + ( nNewindex + 1 ) + "_3" ).Visible = True; 
+	}
+	//벨브 및 테스트박스 외에는 압력콤보를 비활성화 시킨다.
+	if( nNewindex > 1 ) {
+		cob_Press.Enable = False;
+	} else {
+		cob_Press.Enable = True;
+	}
+}
+]]></Script>
+</Window>

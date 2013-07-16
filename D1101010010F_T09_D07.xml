@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="762" Id="D1101010010F_T09_D07" Left="8" OnLoadCompleted="D1101010010F_T09_D07_OnLoadCompleted" PidAttrib="7" Title="시설물정보등록_특별관리시설&#32;등록_15년경과" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" FireFirstCount="1000" FireNextCount="1000" Id="ds_Speci" OnLoadCompleted="ds_Speci_OnLoadCompleted">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SATRT_ADDR_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Single">
+				<Contents>
+					<colinfo id="rowDisp" size="256" summ="default" type="STRING"/>
+					<colinfo id="currPage" size="256" summ="default" type="STRING"/>
+					<colinfo id="nextPage" size="256" summ="default" type="STRING"/>
+					<record>
+						<currPage>1</currPage>
+						<nextPage>1</nextPage>
+						<rowDisp>100</rowDisp>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Speci_tr">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SATRT_ADDR_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="1144" LeftMargin="12" Style="blt_search" TabOrder="12" TabStop="FALSE" Text="건수&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;건" Top="8" Width="107"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Speci" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="757" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="727" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="#cecece" LineType="ExVERT" MinWidth="100" OnCellClick="Grid0_OnCellClick" OnScrollLast="Grid0_OnScrollLast" OnTrackLast="Grid0_OnScrollLast" Right="1251" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="4" TabStop="true" Top="30" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="40"/>
+						<col width="90"/>
+						<col width="295"/>
+						<col width="295"/>
+						<col width="90"/>
+						<col width="74"/>
+						<col width="66"/>
+						<col width="79"/>
+						<col width="100"/>
+						<col width="95"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="내용년수"/>
+						<cell col="1" display="text" text="NO"/>
+						<cell col="2" display="text" text="공사번호"/>
+						<cell col="3" display="text" text="시점"/>
+						<cell col="4" display="text" text="종점"/>
+						<cell col="5" display="text" text="배관번호"/>
+						<cell col="6" display="text" text="관경"/>
+						<cell col="7" display="text" text="압력"/>
+						<cell col="8" display="text" text="연장(m)"/>
+						<cell col="9" display="text" text="시공년도"/>
+						<cell col="10" display="text" text="GIS&#32;위치보기"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="1" display="text" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="2" colid="WORK_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="3" colid="STR_ADDR" display="text"/>
+						<cell align="left" col="4" colid="END_ADDR" display="text"/>
+						<cell align="right" col="5" colid="PIPE_ID" display="text"/>
+						<cell align="left" col="6" colid="PIPE_DIAM_FLAG" display="text"/>
+						<cell align="left" col="7" colid="PRESS_FLAG" display="text"/>
+						<cell align="right" col="8" colid="REAL_LENG" display="text"/>
+						<cell align="center" col="9" colid="COMPL_YEAR" display="text"/>
+						<cell align="center" col="10" colid="GIS" cursor="hand" display="text" expandimage="search" expandshow="true"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="#6cbae1" Bottom="30" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1251" TabOrder="6" Top="27" Type="Rectangle" Width="1246"></Shape>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="8" LeftMargin="12" Style="blt_search_Indis" TabOrder="7" Text="지사" Top="5" Width="61"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Branc" Left="48" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="1" Top="5" Width="113"></Combo>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="171" LeftMargin="12" Style="blt_search_Indis" TabOrder="8" Text="시/구" Top="5" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo1" Left="214" Style="combo_indis" TabOrder="2" Top="5" Width="98"></Combo>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="594" LeftMargin="12" Style="blt_search_Indis" TabOrder="9" Text="팀" Top="8" Visible="FALSE" Width="41"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_Team" InnerDataset="ds_Team" Left="621" Style="combo_indis" TabOrder="5" Top="5" Visible="FALSE" Width="123"></Combo>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="319" LeftMargin="12" Style="blt_search_Indis" TabOrder="10" Text="기준년도" Top="5" Width="66"></Image>
+		<Spin Border="Flat" Height="18" Id="sp_Year" Left="383" Style="spin_indis" TabOrder="3" Text="2009" Top="5" Width="83"></Spin>
+		<Static Align="Right" Height="13" Id="Static1" Left="1191" Style="static" TabOrder="11" Text="0" Top="11" Width="44"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101010010F_T09_D07.xml
+* Form 설명  : 시설내역등록 특별관리시설  
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2008-12-17
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+ 
+// ===============================================================================
+// 함수명: D1101010010F_T09_D07_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1101010010F_T09_D07_OnLoadCompleted(obj)
+{
+    gfn_LoadForm(obj);
+    
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branc"));
+	
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+	    cob_Branc.value = '';
+	} else {
+	    cob_Branc.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+	    cob_Branc.Enable = false;
+	}
+	
+	cob_BranchCd_OnChanged();
+	gfn_D1_SetGrid_Sort(Grid0);
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_Branc.value, fn_setDsObject_Comcode("1", "cob_ZipNo1"));
+    
+	if (cob_Branc.Value == "" || cob_Branc.Value == null) {
+    //    cob_ZipNo1.Enable = false;
+	//권기철20091008
+		cob_ZipNo1.Value = "";
+	//	cob_ZipNo1.Index = 0;
+    } else {
+		cob_ZipNo1.Value = "";
+    //    cob_ZipNo1.Enable = true;
+    //    cob_ZipNo1.Index  = 0;
+    }
+    
+    gfn_D1_SetComboBox_Teamcd("ds_Team",cob_Branc);
+    cob_Team.Index = 0;
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Search()
+//  설명: 특별관리시설  15년경과화면 리스트를 조회 하는 함수
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Search()
+{	
+    ds_Single.SetColumn(0, "currPage", 1);
+	ds_Single.SetColumn(0, "nextPage", 1);
+	fn_serach();
+}
+
+function fn_serach() {
+
+    // nextPage 가 1인 경우 첫번째 조회임 
+	var nextPage=(parseInt(ds_Single.GetColumn(0,"nextPage")));
+	
+	if(nextPage==1){
+	
+		ds_Speci.ClearData(); // 데이터셋을 클리어 
+	}else{
+		//마지막 로우를 rowPosition 으로 잡는다 (포커스 이동방지 )
+		ds_Speci.rowposition=ds_Speci.lastrow; 
+	}
+	
+	var gu_nm = "";
+	
+	if (cob_ZipNo1.Value == "" || cob_ZipNo1.Value == null) {
+	    gu_nm = "";
+	} else {
+	    gu_nm = cob_ZipNo1.Text;
+	}
+	
+	var BRANCH = "";
+	
+	if (cob_Branc.Value == "") {
+	    BRANCH = "";
+	} else {
+	    BRANCH = cob_Branc.Text;
+	} 
+	
+	//-------------------------------------------------------------------------------
+	//  Kind   :  현재 화면 종류
+	//  ServiceId   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+	
+    var ServiceId    = "selectOver";
+    var ServicePart  = "D10";
+    var strURL 		 = "handle.do?ServiceName=D1_FacilityInfoMgr-service"
+				     + "&BRANCH_CD=" + BRANCH
+				     + "&INST_YMD="  + sp_Year.Value
+				     + "&GU_NM="     + gu_nm
+				     ;
+    //var InputDsList  = "ds_Single=ds_Single";
+    
+    var InputDsList  = "";
+    //var OutputDsList = "ds_Speci_tr=ds_Speci ds_Single=ds_Single";
+    var OutputDsList = "ds_Speci=ds_Speci";
+    var Argument     = "selectOver";
+    
+   	gfn_AsyncCall( 
+					 ServiceId
+				   , ServicePart
+				   , strURL
+				   , InputDsList
+				   , OutputDsList
+				   , Argument
+				   , ""				   
+			   );  
+    
+    if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	
+	if(nextPage==1){
+	    ds_Speci.Copy(ds_Speci_tr);
+	} else {
+	    ds_Speci.AppendDataSet("ds_Speci_tr");
+	}
+	
+    Static1.Text = ds_Speci.RowCount();
+}
+
+function Grid0_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if("GIS" ==Grid0.GetCellProp("body",nCell,"ColId"))
+	{
+		 var arr = split(ds_Speci.GetColumn(nRow, "STR_ADDR"), " ");
+         
+         var arrlist = split(arr[2], "-");
+         
+         var args = "BUNGI='01'";
+            args += " GU_NM=" + quote(arr[0])
+                 + " DONG_NM_H=" + quote(arr[1])
+                 + " FNU=" + quote(arrlist[0])  
+                 + " SNU=" + quote(arrlist[1])  
+                 ;
+        
+		 Dialog("D10::D1402060011U.xml", args, 1208, 840, "Resize=true Scroll=true", -1, -1);
+	}
+}
+
+function fn_D1_ExcelExport()
+{	
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 :" + RPad(cob_Branc.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo1.Text," ",20);
+    SearchCondition = SearchCondition + "기준년도 :" + RPad(sp_Year.Text," ",20);
+	gfn_ExportExcel("15년경과 조회 ", 5, SearchCondition, "Grid0"); 
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonAddRow()
+//   설명: 공동주택등록 내용를 신규 추가 하는 모드로 변경 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonAddRow()
+{	
+	return;
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonDeleteRow()
+//   설명: 공동주택등록를 삭제 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonDeleteRow()
+{
+	return;
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSave()
+//   설명: 공동주택등록 상세 내용를 저장 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSave()
+{
+	return;
+}
+
+function Grid0_OnScrollLast(obj)
+{
+	var currPage=(parseInt(ds_Single.GetColumn(0,"currPage")));
+	var nextPage=(parseInt(ds_Single.GetColumn(0,"nextPage")));
+	if(nextPage!=1&&currPage<nextPage){
+		ds_Single.SetColumn(0,"currPage",nextPage);
+		fn_serach();
+	}
+}
+
+function ds_Speci_OnLoadCompleted(obj,nErrorCode,strErrorMsg,nReason)
+{
+	edit_cnt.Text = ds_Speci.GetRowCount();
+}
+]]></Script>
+</Window>

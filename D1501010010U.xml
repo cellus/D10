@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1501010010U" Left="8" OnLoadCompleted="D1501010010U_OnLoadCompleted" PidAttrib="7" Title="위험작업조회_D1501010010U" Top="8" Ver="1.0" Width="495" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_DangerList"></Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="위험작업&#32;조회" Transparent="TRUE" Width="495"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_DangerList" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="393" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="297" Id="grd_List" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MinWidth="100" Right="493" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="485">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="245"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" text="위험작업번호"/>
+						<cell col="1" text="공사명"/>
+						<cell col="2" display="text" text="작업위치"/>
+						<cell col="3" display="text" text="작업요청일"/>
+					</head>
+					<body>
+						<cell col="0" colid="DANGER_NUM" combodataset="ds_DangerList"/>
+						<cell col="1" colid="WORK_NAME" combodataset="ds_DangerList" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="JOB_LOC" combodataset="ds_DangerList" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="JOB_REQ_YMD1" combodataset="ds_DangerList" display="date" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="98" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="490" TabOrder="3" Top="95" Type="Rectangle" Width="485"></Shape>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="490" TabOrder="4" Top="68" Type="Rectangle" Width="485"></Shape>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search_1" TabOrder="5" Text="위험작업번호" Top="71" Transparent="TRUE" Width="141"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_DangerNum" ImeMode="none" Left="104" Style="edit_Indis" TabOrder="6" Top="71" Width="129"></Edit>
+		<Div Height="29" Id="Div0" Left="4" TabOrder="7" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="487">
+			<Contents></Contents>
+		</Div>
+		<Edit Border="Flat" Height="17" Id="edt_WorkName" ImeMode="none" Left="318" Style="edit_Indis" TabOrder="9" Top="71" Width="162"></Edit>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="244" LeftMargin="12" Style="blt_search_1" TabOrder="8" Text="위험작업명" Top="71" Transparent="TRUE" Width="141"></Image>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+//---------------------------------------------------------
+//	화면변수선언 
+//---------------------------------------------------------
+var	strDangerNum;				// 위험작업번호 
+var	strWorkName;				// 위험작업명 
+
+
+function D1501010010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+//	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+// function fn_Init()
+// {
+	
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+//	gfn_SetButton("0001111");
+	
+//}
+
+//-------------------------------------------------------------------------------
+// 조회 버튼 실행 
+//-------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	//sorting - Sort Mark를 제거 
+	
+	gfn_SetHeadClearAll(grd_List);
+	
+	var strSvcID = "CommonSearch";
+	var strPart = "D10";
+	var strURL = "";
+	var checkOpt = "find1";				    // 기본적인 검색경로 
+	
+	strComId = "01";
+
+	strDangerNum = edt_DangerNum.Text;
+	strWorkName = edt_WorkName.Text;
+	
+	strURL = "handle.do?ServiceName=d1501010010u-service&"+checkOpt+"=1&COM_ID=" + strComId;
+	
+	strURL = strURL + "&DANGER_NUM=" + strDangerNum;
+	strURL = strURL + "&WORK_NAME1=" + strWorkName;
+	
+	var strInDatasets  = "";
+	    //strInDatasets += "ds_codem=ds_codem";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_DangerList=ds_codem";
+	var strArgument  = "";
+	var strCallbackFunc = "fn_CallBack";
+	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			       , strCallbackFunc
+			   );
+}
+//-------------------------------------------------------------------------------
+// 
+//-------------------------------------------------------------------------------
+function fn_CallBack(srvId,ErrorCode,ErrorMsg)
+{
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+	
+	
+	if(srvId == "CommonSearch")
+	{
+		// 조회 후 처리
+		
+	}
+}
+
+
+//-------------------------------------------------------------------------------
+// 엑셀 버튼 실행 
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	grd_List.ExportExcelEx("sheet1");
+	
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 선택
+//---------------------------------------------------------
+function fn_CommonSelect()
+{
+	var arrList = array();
+	var nRow = ds_codem.row;
+	
+	// 담당자명 
+	
+	arrList[0] = grd_List.GetColumn(nRow,"DANGER_NUM");		// 위험작업번호  
+	
+	Close(arrList);
+}
+
+function grd_List_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fn_CommonSelect();
+}
+]]></Script>
+</Window>

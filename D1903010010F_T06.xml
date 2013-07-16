@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="1380" Id="D1903010010F_T06" Left="8" OnLoadCompleted="fn_OnLoadCompleted" PidAttrib="7" Title="ECDA일지_D1903010010F_T06" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME3" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="GAP_DISTANCE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME6" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaDiary" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_DUTY_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID3" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME3" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID6" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME6" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DRAFTER_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_ROUTE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_OPINI" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaArRst" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="DECIMAL"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaTotal">
+				<Contents>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAIN_PIPE_PLN" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="SUPPLY_PIPE_PLN" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="PIPE_PLN_SUM" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="MAIN_PIPE_TODAY" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="MAIN_PIPE_DAMAGE_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="SUPPLY_PIPE_TODAY" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="SUPPLY_PIPE_DAMAGE_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="MAIN_PIPE_SUM" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="MAIN_PIPE_DAMAGE_CNT_SUM" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="SUPPLY_PIPE_SUM" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="SUPPLY_PIPE_DAMAGE_CNT_SUM" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="PIPE_SUM" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="MAIN_PIPE_PROG" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="SUPPLY_PIPE_PROG" size="256" summ="default" type="DECIMAL"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaRstM">
+				<Contents>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="M_DAM_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_INT_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_REP_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_MNG_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_WAT_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_IGN_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_DAM_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_INT_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_REP_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_MNG_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_WAT_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_IGN_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_CNT_SUM" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_CNT_SUM" size="256" summ="default" type="DECIMAL"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaRstRL">
+				<Contents>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="M_DAM_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_INT_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_REP_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_MNG_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_WAT_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_IGN_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_DAM_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_INT_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_REP_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_MNG_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_WAT_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_IGN_CNT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="M_CNT_SUM" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="S_M_CNT_SUM" size="256" summ="default" type="DECIMAL"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaRst" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="GAP_DISTANCE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RST_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DamageFlag">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_RepairFlag">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user15" Bottom="1101" Height="3" Id="Shape1" Left="7" LineWidth="0" Right="1237" TabOrder="1" Top="1098" Type="Rectangle" Width="1230"></Shape>
+		<Image Align="Left" Height="16" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="2" Text="업무내용" Top="1079" Width="82"></Image>
+		<Button ButtonStyle="TRUE" Height="19" Id="btn_CarOperat" ImageID="btn_4_Putson" Left="1159" LeftMargin="21" OnClick="Button91_OnClick" Style="button" TabOrder="3" Text="차량운행" Top="11" Width="76"></Button>
+		<Image Align="Left" Height="16" Id="Image1" ImageID="blt_8" Left="9" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="4" Text="특이사항" Top="1223" Width="83"></Image>
+		<Shape BKColor="user15" Bottom="1245" Height="3" Id="Shape2" Left="7" LineWidth="0" Right="1237" TabOrder="5" Top="1242" Type="Rectangle" Width="1230"></Shape>
+		<Image Align="Left" Height="13" Id="Image2" ImageID="blt" Left="21" LeftMargin="12" Style="blt_search_Indis" TabOrder="8" Text="탐사자" Top="40" Width="56"></Image>
+		<Button Cursor="HAND" Height="17" Id="btn_emp2" ImageID="search" Left="234" OnClick="btn_emp2_OnClick" TabOrder="6" Text="Button8" Top="38" Width="17"></Button>
+		<Button Cursor="HAND" Height="17" Id="btn_emp3" ImageID="search" Left="344" OnClick="btn_emp3_OnClick" TabOrder="7" Text="Button8" Top="38" Width="17"></Button>
+		<Edit Align="CENTER" BindDataset="ds_EcdaDiary" Border="Flat" Column="RESECH_NAME1" Enable="FALSE" Height="18" Id="edt_reserchempid1" ImeMode="none" Left="82" OnChanged="edt_reserchempid1_OnChanged" Style="edit" TabOrder="9" Top="37" Width="73"></Edit>
+		<Edit BindDataset="ds_EcdaDiary" Border="Flat" Column="RESECH_NAME2" Enable="FALSE" Height="18" Id="edt_reserchempid2" ImeMode="none" Left="159" Style="edit" TabOrder="10" Top="37" Width="73"></Edit>
+		<Edit BindDataset="ds_EcdaDiary" Border="Flat" Column="RESECH_NAME3" Enable="FALSE" Height="18" Id="edt_reserchempid3" ImeMode="none" Left="269" Style="edit" TabOrder="11" Top="37" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_emp5" ImageID="search" Left="547" OnClick="btn_emp5_OnClick" TabOrder="12" Text="Button8" Top="38" Width="17"></Button>
+		<Button Cursor="HAND" Height="17" Id="btn_emp6" ImageID="search" Left="645" OnClick="btn_emp6_OnClick" TabOrder="13" Text="Button8" Top="38" Width="17"></Button>
+		<Edit Align="CENTER" BindDataset="ds_EcdaDiary" Border="Flat" Column="RESECH_NAME4" Enable="FALSE" Height="18" Id="edt_reserchempid4" ImeMode="none" Left="366" Style="edit" TabOrder="14" Top="37" Width="73"></Edit>
+		<Edit BindDataset="ds_EcdaDiary" Border="Flat" Column="RESECH_NAME5" Enable="FALSE" Height="18" Id="edt_reserchempid5" ImeMode="none" Left="472" Style="edit" TabOrder="15" Top="37" Width="73"></Edit>
+		<Edit BindDataset="ds_EcdaDiary" Border="Flat" Column="RESECH_NAME6" Enable="FALSE" Height="18" Id="edt_reserchempid6" ImeMode="none" Left="570" Style="edit" TabOrder="16" Top="37" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_emp4" ImageID="search" Left="441" OnClick="btn_emp4_OnClick" TabOrder="17" Text="Button8" Top="38" Width="17"></Button>
+		<Image Align="Left" Height="13" Id="Image3" ImageID="blt" Left="21" LeftMargin="12" Style="blt_search_Indis" TabOrder="18" Text="일자" Top="14" Width="56"></Image>
+		<Image Align="Left" Height="13" Id="Image4" ImageID="blt" Left="517" LeftMargin="12" Style="blt_search_Indis" TabOrder="19" Text="결재상태" Top="14" Width="64"></Image>
+		<Edit Align="CENTER" BindDataset="ds_EcdaDiary" Border="Flat" Column="DECIDE_PROC_STS_NM" DisableColor="user24" Enable="FALSE" Height="18" Id="Edit8" ImeMode="none" Left="590" Style="edit" TabOrder="20" Top="11" Width="73"></Edit>
+		<Button ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Sanction" ImageID="btn_5_Amendment" Left="1062" LeftMargin="21" OnClick="btn_Sanction_OnClick" Style="button" TabOrder="21" Text="일지&#32;결재" Top="11" Width="90"></Button>
+		<TextArea BindDataset="ds_EcdaDiary" Border="Flat" Column="EXPLOR_DUTY_DESC" Height="116" Id="txa_desc" Left="7" Style="textarea" TabOrder="22" Top="1101" Width="1230"></TextArea>
+		<TextArea BindDataset="ds_EcdaDiary" Border="Flat" Column="EXPLOR_RMK" Height="116" Id="txa_rmk" Left="7" Style="textarea" TabOrder="23" Top="1245" Width="1230"></TextArea>
+		<Image Align="Left" Height="9" Id="Image5" ImageID="blt_8" Left="8" LeftMargin="12" Style="text_title" TabOrder="25" Text="ECDA&#32;집계현황" Top="66" Width="182"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_EcdaTotal" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="279" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="197" Id="Grid" InputPanel="FALSE" Left="7" LineColor="silver" LineType="ExVERT" NoDataText="조회내역이&#32;없습니다." Right="1236" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="24" TabStop="true" Top="82" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1229">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="115"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="3" text="구분"/>
+						<cell col="1" colspan="3" display="text" rowspan="2" text="계획(m)"/>
+						<cell col="4" colspan="4" display="text" text="금일점검"/>
+						<cell col="8" colspan="5" display="text" text="점검누계"/>
+						<cell col="13" colspan="2" display="text" rowspan="2" text="진행율(%)"/>
+						<cell col="4" colspan="4" display="text" row="1" text="실적(m,건)"/>
+						<cell col="8" colspan="5" display="text" row="1" text="실적누계(m,건)"/>
+						<cell col="1" display="text" row="2" text="본관"/>
+						<cell col="2" display="text" row="2" text="공급관"/>
+						<cell col="3" display="text" row="2" text="소계"/>
+						<cell col="4" display="text" row="2" text="본관"/>
+						<cell col="5" display="text" row="2" text="의심부"/>
+						<cell col="6" display="text" row="2" text="공급관"/>
+						<cell col="7" display="text" row="2" text="의심부"/>
+						<cell col="8" display="text" row="2" text="본관"/>
+						<cell col="9" display="text" row="2" text="의심부"/>
+						<cell col="10" display="text" row="2" text="공급관"/>
+						<cell col="11" display="text" row="2" text="의심부"/>
+						<cell col="12" display="text" row="2" text="소계"/>
+						<cell col="13" display="text" row="2" text="본관"/>
+						<cell col="14" display="text" row="2" text="공급관"/>
+					</head>
+					<body>
+						<cell align="left" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="0" colid="ITEM_KNAME" display="text"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="1" colid="MAIN_PIPE_PLN" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="2" colid="SUPPLY_PIPE_PLN" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="3" colid="PIPE_PLN_SUM" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="4" colid="MAIN_PIPE_TODAY" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="5" colid="MAIN_PIPE_DAMAGE_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="6" colid="SUPPLY_PIPE_TODAY" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="7" colid="SUPPLY_PIPE_DAMAGE_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="8" colid="MAIN_PIPE_SUM" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="9" colid="MAIN_PIPE_DAMAGE_CNT_SUM" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="10" colid="SUPPLY_PIPE_SUM" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="11" colid="SUPPLY_PIPE_DAMAGE_CNT_SUM" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="12" colid="PIPE_SUM" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="13" colid="MAIN_PIPE_PROG" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="14" colid="SUPPLY_PIPE_PROG" display="number" LimitDec="2"/>
+					</body>
+					<summary>
+						<cell align="center" bkcolor="greenyellow" col="0" display="text" text="계"/>
+						<cell align="right" bkcolor="greenyellow" col="1" display="number" expr='SUM(&quot;MAIN_PIPE_PLN&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="2" display="number" expr='SUM(&quot;SUPPLY_PIPE_PLN&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="3" display="number" expr='SUM(&quot;PIPE_PLN_SUM&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="4" display="number" expr='SUM(&quot;MAIN_PIPE_TODAY&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="5" display="number" expr='SUM(&quot;MAIN_PIPE_DAMAGE_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="6" display="number" expr='SUM(&quot;SUPPLY_PIPE_TODAY&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="7" display="number" expr='SUM(&quot;SUPPLY_PIPE_DAMAGE_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="8" display="number" expr='SUM(&quot;MAIN_PIPE_SUM&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="9" display="number" expr='SUM(&quot;MAIN_PIPE_DAMAGE_CNT_SUM&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="10" display="number" expr='SUM(&quot;SUPPLY_PIPE_SUM&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="11" display="number" expr='SUM(&quot;SUPPLY_PIPE_DAMAGE_CNT_SUM&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="12" display="number" expr='SUM(&quot;PIPE_SUM&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="13" display="number" expr='TRUNCATE(SUM(&quot;MAIN_PIPE_PROG&quot;)&#32;/&#32;SUM(&quot;&#32;DECODE(CODE_ITEM,&apos;999999&apos;,0,1)&#32;&#32;&quot;),2)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="14" display="number" expr='TRUNCATE(SUM(&quot;SUPPLY_PIPE_PROG&quot;)&#32;/&#32;SUM(&quot;&#32;DECODE(CODE_ITEM,&apos;999999&apos;,0,1)&#32;&#32;&quot;)&#32;,2)' LimitDec="2"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="9" Id="Image6" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="27" Text="정밀진단구간" Top="291" Width="182"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_EcdaArRst" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="443" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="137" Id="Grid0" InputPanel="FALSE" Left="7" LineColor="silver" LineType="ExVERT" MinWidth="100" NoDataText="조회내역이&#32;없습니다." OnHeadClick="Grid_OnHeadClick" Right="1236" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="26" TabStop="true" Top="306" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1229">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="120"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="61"/>
+						<col width="109"/>
+						<col width="102"/>
+						<col width="148"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="배관번호"/>
+						<cell col="1" display="text" text="시점"/>
+						<cell col="2" display="text" text="종점"/>
+						<cell col="3" display="text" text="압력"/>
+						<cell col="4" display="text" text="관경"/>
+						<cell col="5" display="text" text="연장"/>
+						<cell col="6" display="text" text="탐사구분"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MPIPE_ID" display="text"/>
+						<cell align="left" col="1" colid="EXPLOR_STR_ADDR" display="text"/>
+						<cell align="left" col="2" colid="EXPLOR_END_ADDR" display="text"/>
+						<cell align="center" col="3" colid="PRESS_NM" display="text"/>
+						<cell align="center" col="4" colid="PIPE_DIAM_NM" display="text"/>
+						<cell align="right" col="5" colid="EXPLOR_LENG" display="number"/>
+						<cell align="left" col="6" colid="EXPLOR_FLAG_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="9" Id="Image7" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="29" Text="손상부&#32;판정결과" Top="915" Width="182"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_EcdaRst" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="1069" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="137" Id="Grid1" InputPanel="FALSE" Left="7" LineColor="silver" LineType="ExVERT" MinWidth="100" NoDataText="조회내역이&#32;없습니다." OnHeadClick="Grid_OnHeadClick" Right="1236" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="28" TabStop="true" Top="932" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1229">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="273"/>
+						<col width="105"/>
+						<col width="370"/>
+						<col width="61"/>
+						<col width="109"/>
+						<col width="70"/>
+						<col width="70"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="관리번호"/>
+						<cell col="1" colspan="2" display="text" text="손상위치"/>
+						<cell col="3" display="text" text="압력"/>
+						<cell col="4" display="text" text="관경(A)"/>
+						<cell col="5" display="text" text="손상여부"/>
+						<cell col="6" display="text" text="보수여부"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MANAGE_NUM" display="text"/>
+						<cell align="center" col="1" colid="ZIP_NO" display="text"/>
+						<cell align="left" col="2" colid="DAMAGE_ADDR" display="text" limit="5" LimitDec="0"/>
+						<cell align="center" col="3" colid="PRESS_FLAG" display="text"/>
+						<cell align="center" col="4" colid="PIPE_DIAM_NM" display="text"/>
+						<cell align="center" col="5" colid="DAMAGE_FLAG" combocol="CODE_ITEM" combodataset="ds_DamageFlag" combotext="ITEM_KNAME" display="combo"/>
+						<cell align="center" col="6" colid="REPAIR_FLAG" combocol="CODE_ITEM" combodataset="ds_RepairFlag" combotext="ITEM_KNAME" display="combo"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Calendar Border="Flat" CanChange="cal_CanChange" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ExplorYmd" Left="82" OnChanged="cal_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="30" ToolTipText="일자" Top="11" WeeksFont="Default,-1" Width="170"></Calendar>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="319" OnChanged="cob_OnChanged" Style="combo_indis" TabOrder="31" ToolTipText="지사" Top="9" Width="177"></Combo>
+		<Image Align="Left" Height="13" Id="Image8" ImageID="blt" Left="269" LeftMargin="12" Style="blt_search_Indis" TabOrder="32" Text="지사" Top="14" Width="48"></Image>
+		<Image Align="Left" Height="13" Id="Image9" ImageID="blt_8" Left="8" LeftMargin="12" Style="text_title" TabOrder="34" Text="본관&#32;손상부&#32;진단평가" Top="458" Width="182"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_EcdaRstM" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="671" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="197" Id="Grid2" InputPanel="FALSE" Left="7" LineColor="silver" LineType="ExVERT" NoDataText="조회내역이&#32;없습니다." Right="1236" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="33" TabStop="true" Top="474" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1229">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="115"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="구분"/>
+						<cell col="1" colspan="3" display="text" text="금일점검결과"/>
+						<cell col="4" colspan="3" display="text" text="점검누계"/>
+						<cell col="7" colspan="4" display="text" text="금일배관평가"/>
+						<cell col="11" colspan="4" display="text" text="점검누계"/>
+						<cell col="1" display="text" row="1" text="손상"/>
+						<cell col="2" display="text" row="1" text="간섭"/>
+						<cell col="3" display="text" row="1" text="계"/>
+						<cell col="4" display="text" row="1" text="손상"/>
+						<cell col="5" display="text" row="1" text="간섭"/>
+						<cell col="6" display="text" row="1" text="계"/>
+						<cell col="7" display="text" row="1" text="보수"/>
+						<cell col="8" display="text" row="1" text="관리"/>
+						<cell col="9" display="text" row="1" text="감시"/>
+						<cell col="10" display="text" row="1" text="무시"/>
+						<cell col="11" display="text" row="1" text="보수"/>
+						<cell col="12" display="text" row="1" text="관리"/>
+						<cell col="13" display="text" row="1" text="감시"/>
+						<cell col="14" display="text" row="1" text="무시"/>
+					</head>
+					<body>
+						<cell align="left" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="0" colid="ITEM_KNAME" display="text"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="1" colid="M_DAM_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="2" colid="M_INT_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="3" colid="M_CNT_SUM" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="4" colid="S_M_DAM_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="5" colid="S_M_INT_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="6" colid="S_M_CNT_SUM" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="7" colid="M_REP_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="8" colid="M_MNG_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="9" colid="M_WAT_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="10" colid="M_IGN_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="11" colid="S_M_REP_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="12" colid="S_M_MNG_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="13" colid="S_M_WAT_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="14" colid="S_M_IGN_CNT" display="number" LimitDec="2"/>
+					</body>
+					<summary>
+						<cell align="center" bkcolor="greenyellow" col="0" display="text" text="계"/>
+						<cell align="right" bkcolor="greenyellow" col="1" display="number" expr='SUM(&quot;M_DAM_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="2" display="number" expr='SUM(&quot;M_INT_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="3" display="number" expr='SUM(&quot;M_CNT_SUM&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="4" display="number" expr='SUM(&quot;S_M_DAM_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="5" display="number" expr='SUM(&quot;S_M_INT_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="6" display="number" expr='SUM(&quot;S_M_CNT_SUM&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="7" display="number" expr='SUM(&quot;M_REP_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="8" display="number" expr='SUM(&quot;M_MNG_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="9" display="number" expr='SUM(&quot;M_WAT_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="10" display="number" expr='SUM(&quot;M_IGN_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="11" display="number" expr='SUM(&quot;S_M_REP_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="12" display="number" expr='SUM(&quot;S_M_MNG_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="13" display="number" expr='SUM(&quot;S_M_WAT_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="14" display="number" expr='SUM(&quot;S_M_IGN_CNT&quot;)' LimitDec="2"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="9" Id="Image10" ImageID="blt_8" Left="8" LeftMargin="12" Style="text_title" TabOrder="35" Text="공급관&#32;손상부&#32;진단평가" Top="686" Width="182"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_EcdaRstRL" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="899" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="197" Id="Grid3" InputPanel="FALSE" Left="7" LineColor="silver" LineType="ExVERT" NoDataText="조회내역이&#32;없습니다." Right="1236" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="36" TabStop="true" Top="702" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1229">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="115"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="구분"/>
+						<cell col="1" colspan="3" display="text" text="금일점검결과"/>
+						<cell col="4" colspan="3" display="text" text="점검누계"/>
+						<cell col="7" colspan="4" display="text" text="금일배관평가"/>
+						<cell col="11" colspan="4" display="text" text="점검누계"/>
+						<cell col="1" display="text" row="1" text="손상"/>
+						<cell col="2" display="text" row="1" text="간섭"/>
+						<cell col="3" display="text" row="1" text="계"/>
+						<cell col="4" display="text" row="1" text="손상"/>
+						<cell col="5" display="text" row="1" text="간섭"/>
+						<cell col="6" display="text" row="1" text="계"/>
+						<cell col="7" display="text" row="1" text="보수"/>
+						<cell col="8" display="text" row="1" text="관리"/>
+						<cell col="9" display="text" row="1" text="감시"/>
+						<cell col="10" display="text" row="1" text="무시"/>
+						<cell col="11" display="text" row="1" text="보수"/>
+						<cell col="12" display="text" row="1" text="관리"/>
+						<cell col="13" display="text" row="1" text="감시"/>
+						<cell col="14" display="text" row="1" text="무시"/>
+					</head>
+					<body>
+						<cell align="left" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="0" colid="ITEM_KNAME" display="text"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="1" colid="M_DAM_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="2" colid="M_INT_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="3" colid="M_CNT_SUM" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="4" colid="S_M_DAM_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="5" colid="S_M_INT_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="6" colid="S_M_CNT_SUM" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="7" colid="M_REP_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="8" colid="M_MNG_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="9" colid="M_WAT_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="10" colid="M_IGN_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="11" colid="S_M_REP_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="12" colid="S_M_MNG_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="13" colid="S_M_WAT_CNT" display="number" LimitDec="2"/>
+						<cell align="right" bkcolor='expr:iif(ITEM_KNAME=&apos;비계획&apos;,&quot;pink&quot;,&quot;white&quot;)' col="14" colid="S_M_IGN_CNT" display="number" LimitDec="2"/>
+					</body>
+					<summary>
+						<cell align="center" bkcolor="greenyellow" col="0" display="text" text="계"/>
+						<cell align="right" bkcolor="greenyellow" col="1" display="number" expr='SUM(&quot;M_DAM_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="2" display="number" expr='SUM(&quot;M_INT_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="3" display="number" expr='SUM(&quot;M_CNT_SUM&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="4" display="number" expr='SUM(&quot;S_M_DAM_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="5" display="number" expr='SUM(&quot;S_M_INT_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="6" display="number" expr='SUM(&quot;S_M_CNT_SUM&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="7" display="number" expr='SUM(&quot;M_REP_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="8" display="number" expr='SUM(&quot;M_MNG_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="9" display="number" expr='SUM(&quot;M_WAT_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="10" display="number" expr='SUM(&quot;M_IGN_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="11" display="number" expr='SUM(&quot;S_M_REP_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="12" display="number" expr='SUM(&quot;S_M_MNG_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="13" display="number" expr='SUM(&quot;S_M_WAT_CNT&quot;)' LimitDec="2"/>
+						<cell align="right" bkcolor="greenyellow" col="14" display="number" expr='SUM(&quot;S_M_IGN_CNT&quot;)' LimitDec="2"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="82" Height="3" Id="Shape4" Left="7" LineWidth="0" Right="1236" TabOrder="37" Top="79" Type="Rectangle" Width="1229"></Shape>
+		<Shape BKColor="user15" Bottom="306" Height="3" Id="Shape0" Left="7" LineWidth="0" Right="1236" TabOrder="38" Top="303" Type="Rectangle" Width="1229"></Shape>
+		<Shape BKColor="user15" Bottom="474" Height="3" Id="Shape3" Left="7" LineWidth="0" Right="1236" TabOrder="39" Top="471" Type="Rectangle" Width="1229"></Shape>
+		<Shape BKColor="user15" Bottom="702" Height="3" Id="Shape5" Left="7" LineWidth="0" Right="1236" TabOrder="40" Top="699" Type="Rectangle" Width="1229"></Shape>
+		<Shape BKColor="user15" Bottom="932" Height="3" Id="Shape6" Left="7" LineWidth="0" Right="1236" TabOrder="41" Top="929" Type="Rectangle" Width="1229"></Shape>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1903010010F_T06.xml
+* Form 설명  : 배관진단실적등록 / ECDA일지
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 최재영 
+* 작성일     : 2013-04-04
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONB30001.js";
+#include "JS::COMMONC10001.js";
+
+
+function fn_OnLoadCompleted(obj)
+{	
+	gfn_LoadForm(obj);
+	//gfn_SetGrdComboBox_Comcode("Grid",7,"A10411");
+	
+	
+	//init에 들어가면 조회할때마다 초기화됨
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	cob_BranchCd.Index = 0;
+	
+	cal_ExplorYmd.Value = gfn_GetServerDate();
+	
+	fn_CompControl(false);
+	
+	fn_init();
+	
+	
+	
+}
+function fn_Init()
+{	
+	gfn_SetComboBox_Comcode("D10084","ds_DamageFlag");	// 손상여부
+	gfn_SetComboBox_Comcode("D10085","ds_RepairFlag");	// 보수여부
+	
+
+}
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+function fn_D1_addRow()
+{
+	alert("조회 버튼을 클릭 후 저장/수정하세요...");
+}
+
+
+function fn_D1_deleteRow(){
+	if(ds_EcdaDiary.GetRowType(ds_EcdaDiary.row) == "insert"){
+		ds_EcdaDiary.DeleteRow(ds_EcdaDiary.row);
+		return;
+	}
+
+	if(ds_EcdaDiary.GetRowCount() == 0)
+	{
+		return;
+	}
+
+	if((ds_EcdaDiary.GetColumn(0,"DECIDE_PROC_STS") == '0') 
+	  || (ds_EcdaDiary.GetColumn(0,"DECIDE_PROC_STS") == '1')
+	  || (ds_EcdaDiary.GetColumn(0,"DECIDE_PROC_STS") == '2'))
+	{  
+		alert("결재건으로 삭제가 불가능합니다..");
+		return;
+	}	
+		
+	if(confirm("ECDA 탐사내역을 삭제하시겠습니까?"))
+	{
+		fn_DelDiary();
+	}	
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonDeleteRow()
+// 설명: 접수행을 삭제 한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_DelDiary()
+{	
+	ds_EcdaDiary.DeleteRow(ds_EcdaDiary.row);
+
+    var strSvcID        = "save_EcdaDiary";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service"
+						;
+												
+	var strInDatasets   = "ds_EcdaDiary=ds_EcdaDiary:u";
+	var strOutDatasets  = "";
+	var strArgument     = "save_EcdaDiary";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+	
+	alert("정상 삭제 되었습니다.");
+	
+	fn_D1_find();
+}
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_SAVE
+//   설명  : 구간 실적 등록된 내용을 저장한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------
+//  Transition   : Service id
+//  ServicePart   : Service part
+//  Url          : Server url
+//  InputDsList   : Input Dataset List
+//  OutputDsList   : Output Dataset List
+//  Argument   :  Argument
+//-------------------------------------------------------------------------------
+function fn_D1_save()
+{			
+	if (ds_EcdaDiary.RowCount() == 0)
+	{
+		return;
+	}
+	
+	if((ds_EcdaDiary.GetColumn(0,"DECIDE_PROC_STS") == '0')
+	  || (ds_EcdaDiary.GetColumn(0,"DECIDE_PROC_STS") == '1')	
+	  || (ds_EcdaDiary.GetColumn(0,"DECIDE_PROC_STS") == '2'))
+	{  
+		alert("결재건으로 수정이 불가능합니다..");
+		return;
+	}
+	
+	if (ds_EcdaDiary.GetRowType(0) == 'insert' || ds_EcdaDiary.GetRowType(0) == 'update')
+	{	
+		if(ds_EcdaDiary.GetColumn(0, "RESECH_EMPID1") == '' || ds_EcdaDiary.GetColumn(0, "RESECH_EMPID1") == null)
+		{
+			alert("조회 후 등록하세요. ");
+			return;
+		}
+		
+		if(ds_EcdaDiary.GetColumn(0, "EXPLOR_DUTY_DESC") == '' || ds_EcdaDiary.GetColumn(0, "EXPLOR_DUTY_DESC") == null)
+		{
+			alert("업무내용을 입력하세요. ");
+			return;
+		}
+		
+		if (ds_EcdaDiary.GetRowType(0) == 'insert') 
+		{
+			ds_EcdaDiary.SetColumn(0,"UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_EcdaDiary.SetColumn(0,"UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+			ds_EcdaDiary.SetColumn(0,"CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+			ds_EcdaDiary.SetColumn(0,"CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP
+		}	
+		else
+		{	
+			ds_EcdaDiary.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_EcdaDiary.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+		}
+	}
+	
+	var strSvcID         = "save_EcdaDiary";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service" ;	
+	var strInDatasets    = "ds_EcdaDiary=ds_EcdaDiary:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_EcdaDiary";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}
+				
+	alert("저장/수정 되었습니다.");
+	
+	fn_D1_find();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  ECDA일지 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	
+	if(!gfn_B3_CheckRequired(this, 30, 31)) return;
+	
+	ds_EcdaDiary.ClearData();
+	ds_EcdaTotal.ClearData();
+	ds_EcdaArRst.ClearData();
+	
+	ds_Search.ClearData();
+	var nRow = ds_Search.AddRow();
+	//Search Parameter Setting
+	//조회조건에 대한 정리 필요 - 현재 BASE_YEAR 을 제외한 탭외부의 조회조건은 무시
+    //탭내부의 일자 , 지사 조회조건	
+	
+	ds_Search.SetColumn(nRow, "BASE_YEAR", sp_Year.Value);
+	ds_Search.SetColumn(nRow, "BRANCH_CD", cob_BranchCd.Value);
+	ds_Search.SetColumn(nRow, "EXPLOR_YMD",cal_ExplorYmd.Value );
+	
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url 
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------	
+    var ServiceId     = "view_EcdaDiary";
+    var ServicePart   = "D10";
+    var Url           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+    var InputDsList   = "ds_Search=ds_Search";
+    var OutputDsList  = "ds_EcdaDiary=ds_EcdaDiary ds_EcdaTotal=ds_EcdaTotal ds_EcdaArRst=ds_EcdaArRst ";
+		OutputDsList += "ds_EcdaRstM=ds_EcdaRstM ds_EcdaRstRL=ds_EcdaRstRL ds_EcdaRst=ds_EcdaRst";
+    var Argument      = "view_EcdaDiary";
+	
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument); 
+	
+	if(ds_EcdaDiary.GetRowCount() < 1) 	//신규작성
+	{
+		ds_EcdaDiary.AddRow();
+		ds_EcdaDiary.SetColumn(0,"BASE_YEAR",sp_Year.Value);
+		ds_EcdaDiary.SetColumn(0,"EXPLOR_YMD",cal_ExplorYmd.Value);
+		ds_EcdaDiary.SetColumn(0,"BRANCH_CD",cob_BranchCd.Value);
+		ds_EcdaDiary.SetColumn(0,"RESECH_EMPID1",gfn_GetGlobalValue("G_USER_NO"));
+		ds_EcdaDiary.SetColumn(0,"RESECH_NAME1",gfn_GetGlobalValue("G_NAME")); 
+		
+		fn_CompControl(true);
+	}
+	//else if(gfn_isNull(ds_EcdaDiary.GetColumn(ds_EcdaDiary.row,"DECIDE_PROC_STS"))){
+	// 2013-07-12 김형수 요청취소(4), 반려(5)도 수정가능 할 수 있게 변경
+	if((ds_EcdaDiary.GetColumn(0,"DECIDE_PROC_STS") == '4')
+	  || (ds_EcdaDiary.GetColumn(0,"DECIDE_PROC_STS") == '5'))	// 4:요청취소, 5:반려
+	{
+		
+		//fn_CompControl(true);
+		fn_CompControl(true);
+	}
+	else{
+		fn_CompControl(false);
+	}
+	
+	Grid.SetFocus();
+	
+}
+
+ 
+// 차량 운행일지 팝업
+function Button91_OnClick(obj)
+{
+	//gfn_Dialog("E30","E3201080010F","",1005,557,true,-1,-1);
+	 var strPrefix = "E30";
+	 var strFormid = "E3201080010F";
+	 var strArg    = "" ;
+	 gfn_NewWindow(strPrefix, strFormid, strArg, "차량 운행기록", strFormid, "", 0, "");
+} 
+
+function fn_D1_Excel(){
+
+	var SearchCondition= "";
+   
+    SearchCondition = SearchCondition + "기준년도 : " + RPad(sp_Year.Value," ",20);
+    SearchCondition = SearchCondition + "일자 : " + Rpad(gfn_GetDateFormat(cal_ExplorYmd.Value,"-")," ",20);
+    SearchCondition = SearchCondition + "지사 : " +     RPad(cob_BranchCd.Text," ",20);
+    
+    gfn_ExportExcel("배관진단실적등록_ECDA일지", 5, SearchCondition, "Grid");             
+}
+
+
+function btn_emp2_OnClick(obj)
+{
+	if(ds_EcdaDiary.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}	
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_reserchempid2.Text); //사용자코드(조회조건용)
+	ds_EcdaDiary.SetColumn(0,"RESECH_EMPID2",retValue[0]);
+	ds_EcdaDiary.SetColumn(0,"RESECH_NAME2",retValue[1]);
+}
+
+function btn_emp3_OnClick(obj)
+{
+	if(ds_EcdaDiary.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}	
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_reserchempid3.Text); //사용자코드(조회조건용)
+	ds_EcdaDiary.SetColumn(0,"RESECH_EMPID3",retValue[0]);
+	ds_EcdaDiary.SetColumn(0,"RESECH_NAME3",retValue[1]);
+}
+
+function btn_Sanction_OnClick(obj)
+{
+	if(ds_EcdaDiary.GetRowType(ds_EcdaDiary.row) == "insert"){
+		ds_EcdaDiary.ClearData();
+		return;
+	}
+
+	if(ds_EcdaDiary.GetRowCount() == 0)
+	{
+		return;
+	}
+	
+	alert("ECDA 탐사일지는 지사별 결재로 진행됩니다..");
+	
+	var Base_year = substr(cal_ExplorYmd.Value,0,4);
+	var Explor_Ymd = cal_ExplorYmd.Value;
+	var Branch_Cd = cob_BranchCd.Value;
+	
+	//그룹웨어에서 차량번호(한글)파라메터 전달 불가로 로그인자 사번넘겨 차량번호 참조 오즈로 넘겨줌 
+	gfv_callGWInfo("fmD44","D10","D1903030011P",3,Base_year+","+Explor_Ymd+","+Branch_Cd);
+   // 1번 : 화면명칭   2번 : 업무그룹 (b10,b20... OZ 인경우 필수), 3번: 프로그램ID (oz인경우 필수) 4: 아규먼트 갯수 (1....5)
+   // 5번 : 아규먼트 목록 (형식 , 표시로 각 아규먼트 구분자 사용)
+
+}
+
+function btn_emp4_OnClick(obj)
+{
+	if(ds_EcdaDiary.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}	
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_reserchempid4.Text); //사용자코드(조회조건용)
+	ds_EcdaDiary.SetColumn(0,"RESECH_EMPID4",retValue[0]);
+	ds_EcdaDiary.SetColumn(0,"RESECH_NAME4",retValue[1]);	
+}
+
+function btn_emp5_OnClick(obj)
+{
+	if(ds_EcdaDiary.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}		
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_reserchempid5.Text); //사용자코드(조회조건용)
+	ds_EcdaDiary.SetColumn(0,"RESECH_EMPID5",retValue[0]);
+	ds_EcdaDiary.SetColumn(0,"RESECH_NAME5",retValue[1]);	
+}
+
+function btn_emp6_OnClick(obj)
+{
+	if(ds_EcdaDiary.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}		
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_reserchempid6.Text); //사용자코드(조회조건용)
+	ds_EcdaDiary.SetColumn(0,"RESECH_EMPID6",retValue[0]);
+	ds_EcdaDiary.SetColumn(0,"RESECH_NAME6",retValue[1]);	
+}
+
+function Grid_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+		//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+
+
+function fn_CompControl(bFlag){
+	
+	btn_emp2.Enable = bFlag;
+	btn_emp3.Enable = bFlag;
+	btn_emp4.Enable = bFlag;
+	btn_emp5.Enable = bFlag;
+	btn_emp6.Enable = bFlag;
+	txa_desc.Enable =bFlag;
+	txa_rmk.Enable = bFlag;
+}
+
+
+
+function cal_CanChange(obj,strOldText,strText)
+{
+	if(obj.ID == "cal_ExplorYmd"){
+		if(ds_EcdaDiary.rowcount > 0 ){
+			if(!Confirm("지사나 일자를 변경할 시에 해당 지사내역 혹은 정보가 초기화 됩니다. 진행하시겠습니까?")){
+				return false;
+			}
+		}
+	}
+}
+
+function cal_OnChanged(obj,strOldText,strNewText)
+{
+	if(obj.ID == "cal_ExplorYmd"){
+
+		fn_D1_find();
+
+	}
+}
+
+function cob_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	if(obj.ID == "cob_BranchCd"){
+
+		//if(ds_EcdaDiary.rowcount > 0 && ds_EcdaDiary.GetRowType(ds_EcdaDiary.row) != "insert"){
+
+		if(ds_EcdaDiary.rowcount > 0 ){
+
+			if(!Confirm("지사나 일자를 변경할 시에 해당 지사내역 혹은 정보가 초기화 됩니다. 진행하시겠습니까?")){
+				obj.Index = nOldIndex;
+				return;
+			}
+		}				
+		
+		fn_D1_find();
+		
+	}
+}
+]]></Script>
+</Window>

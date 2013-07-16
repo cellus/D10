@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="360" Id="D1101010015U" Left="8" OnLoadCompleted="D1101010015U_OnLoadCompleted" OnUnloadCompleted="D1101010015U_OnUnloadCompleted" PidAttrib="7" Title="조치결과&#32;등록_D1101010015U" Top="8" Ver="1.0" Width="700" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_SepciAct">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="ACT_SEQ" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="ACT_ACT_YMD" size="256" type="STRING"/>
+					<colinfo id="TREAT_METHOD" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="조치결과&#32;등록" Transparent="TRUE" Width="700"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="17"></Button>
+		<Div Height="29" Id="Div0" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="695">
+			<Contents></Contents>
+		</Div>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_SepciAct" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="353" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="274" Id="grd_SepciAct" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellClick="grd_SepciAct_OnCellClick" Right="693" SelColor="MENU" Style="grid_pop" TabOrder="4" TabStop="true" Top="79" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="688">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="110"/>
+						<col width="17"/>
+						<col width="112"/>
+						<col width="148"/>
+						<col width="16"/>
+						<col width="98"/>
+						<col width="133"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" colspan="2" display="text">
+							<cell col="0" display="text" text="공사번호"/>
+							<cell col="1" display="text"/>
+						</cell>
+						<cell bkcolor="user11" col="2" display="text" text="정비보수번호"/>
+						<cell bkcolor="user11" col="3" colspan="2" display="text" text="시공업체"/>
+						<cell bkcolor="user11" col="5" display="text" text="조치일자"/>
+						<cell bkcolor="user11" col="6" display="text" text="처리방법"/>
+					</head>
+					<body>
+						<cell col="0" colid="WORK_NUM" combodataset="ds_codem" display="text" expandsize="18" limit="11" wordwrap="word"/>
+						<cell col="1" colid="WORK_NUM_POP" display="text" expandimage="search" expandshow="true"/>
+						<cell col="2" colid="MAINTER_NUM" combodataset="ds_codem" display="text" edit="number" expandsize="18" limit="11" wordwrap="word"/>
+						<cell col="3" colid="WORK_FIRM_NM" combodataset="ds_codem" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="WORK_FIRM_POP" display="text" expandimage="search" expandshow="true"/>
+						<cell col="5" colid="ACT_ACT_YMD" display="date" edit="date" expandimage="calendar" expandshow="true" expandsize="18" wordwrap="word"/>
+						<cell col="6" colid="TREAT_METHOD" combodataset="ds_codem" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="79" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="694" TabOrder="5" Top="76" Type="Rectangle" Width="689"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_SepciAct" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="420" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="37" Id="grd_Excel" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellClick="Grid0_OnCellClick" Right="693" SelColor="MENU" Style="grid_pop" TabOrder="6" TabStop="true" Top="383" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="688">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="110"/>
+						<col width="110"/>
+						<col width="112"/>
+						<col width="148"/>
+						<col width="98"/>
+						<col width="133"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="시설물번호"/>
+						<cell col="1" display="text" text="공사번호"/>
+						<cell col="2" display="text" text="정비보수번호"/>
+						<cell col="3" display="text" text="시공업체"/>
+						<cell col="4" display="text" text="조치일자"/>
+						<cell col="5" display="text" text="처리방법"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="FACI_NUM" display="text"/>
+						<cell align="center" col="1" colid="WORK_NUM" combodataset="ds_codem" display="text" edit="number" expandsize="18" limit="11" wordwrap="word"/>
+						<cell align="center" col="2" colid="MAINTER_NUM" combodataset="ds_codem" display="text" edit="number" expandsize="18" limit="11" wordwrap="word"/>
+						<cell col="3" colid="WORK_FIRM_NM" combodataset="ds_codem" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="4" colid="ACT_ACT_YMD" display="date" edit="date" expandimage="calendar" expandshow="true" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="5" colid="TREAT_METHOD" combodataset="ds_codem" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101010015U.xml
+* Form 설명  : 조치결과등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화
+* 작성일     : 2009-01-09
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+
+//-------------------------------------------------------------------------------
+//  fv_NowWorkNum   : 특별관리시설번호
+//-------------------------------------------------------------------------------
+var fv_faciNum = "";
+
+
+function D1101010015U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	if(IsExistVar("FACI_NUM")) {
+		fv_faciNum = FACI_NUM;		
+		
+		fn_D1_Search();
+	}	
+}
+
+function WORK_NUM_SEARCH(obj)
+{
+	var arrList = gfn_Dialog("D10","D1101010016U","",450,400,true,-1,-1);
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSearch()
+   설명: 공통 조회 클릭시 조회 업무  수행 
+   return 내용: 없음
+===============================================================================*/ 
+
+function fn_CommonSearch(){	
+	fn_D1_Search();
+}
+
+
+/*===============================================================================
+ * 함수명: fn_CommonAddRow()
+   설명: 내용dmf 신규 추가 하는 모드로 변경 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonAddRow()
+{
+	ds_SepciAct.AddRow();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Search()
+//  설명: 특별관리시설 조치 등록 화면 리스트를 조회 하는 함수
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Search()
+{	
+	//-------------------------------------------------------------------------------
+	//  Kind   :  현재 화면 종류
+	//  ServiceId   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+	
+    var ServiceId     = "fn_D1_Search";
+    var ServicePart     = "D10";
+    var strURL 			= "handle.do?ServiceName=D1_FacilityInfoMgr-service&FACI_NUM="+fv_faciNum;
+    var InputDsList     = "";
+    var OutputDsList = "ds_SepciAct=ds_SepciAct";
+    var Argument      = "searchSepciAct";
+    gfn_SyncCall(ServiceId, ServicePart, strURL, InputDsList, OutputDsList, Argument);
+    
+    if(ds_SepciAct.GetRowCount()==0)
+        grd_SepciAct.NoDataText="조회결과가 없습니다.";
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSave()
+//   설명: 공동주택등록 상세 내용를 저장 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSave()
+{
+	fn_D1_Save();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonDelete()
+//   설명: 공동주택등록 상세 내용를 저장 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonDeleteRow()
+{
+	var strLastRow = ds_SepciAct.RowCount()-1;
+	
+	if(toString(ds_SepciAct.GetColumn(strLastRow,"WORK_NUM")) == "" && toString(ds_SepciAct.GetColumn(strLastRow,"MAINTER_NUM")) == "" && toString(ds_SepciAct.GetColumn(strLastRow,"WORK_FIRM_NM")) == "" && toString(ds_SepciAct.GetColumn(strLastRow,"ACT_ACT_YMD")) == "" && toString(ds_SepciAct.GetColumn(strLastRow,"TREAT_METHOD")) == "" && ds_SepciAct.GetRowType(strLastRow) == "insert")
+	{
+		ds_SepciAct.DeleteRow(strLastRow);
+	}else{
+		alert('기존에 저장된 행은 삭제되지 않으며,\n새로 추가된 행은 값이 다 비워있어야 \n삭제가 가능합니다.');
+	}
+}
+
+
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonExcelExport()
+//   설명  :  엑셀다운 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+	gfn_ExportExcel("조치결과 등록 ", 5, SearchCondition, "grd_Excel"); 
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Save()
+//  설명: 특별관리시설 조치 내용을 등록하는 함수
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save()
+{	
+	for(var i=0 ; i<ds_SepciAct.RowCount(); i++)
+	{
+		if(toString(ds_SepciAct.GetColumn(i,"WORK_NUM")) == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","공사번호를"));
+			return;
+		}
+		if(toString(ds_SepciAct.GetColumn(i,"MAINTER_NUM")) == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","정비보수번호를"));
+			return;
+		}
+		if(toString(ds_SepciAct.GetColumn(i,"WORK_FIRM_NM")) == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","시공업체를"));
+			return;
+		}
+		if(toString(ds_SepciAct.GetColumn(i,"ACT_ACT_YMD")) == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","조치일자를"));
+			return;
+		}
+		if(toString(ds_SepciAct.GetColumn(i,"TREAT_METHOD")) == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","처리방법을"));
+			return;
+		}
+		
+		if(ds_SepciAct.GetRowType(i) == "insert")
+		{
+			ds_SepciAct.SetColumn(i, "FACI_NUM", fv_faciNum);
+			//수정 등록시 셋팅할 사용자 정보
+			ds_SepciAct.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_SepciAct.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+			ds_SepciAct.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_SepciAct.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		}else if(ds_SepciAct.GetRowType(i) == "update")
+		{
+			ds_SepciAct.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_SepciAct.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		}
+	}
+	var Transition     = "fn_D1_Save";
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName=D1_FacilityInfoMgr-service";
+    var InputDsList     = "ds_SepciAct=ds_SepciAct:u";
+    var OutputDsList = "";
+    var Argument      = "saveSepciAct";
+    
+    gfn_SyncCall(Transition, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+    gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+    
+    fn_D1_Search();
+}
+
+function D1101010015U_OnUnloadCompleted(obj)
+{
+	if(ds_SepciAct.GetUpdate()){
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 내용이 있습니다.종료")))
+		{
+			return false;
+		}
+	}
+}
+
+function grd_SepciAct_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if("ACT_ACT_YMD" == grd_SepciAct.GetCellProp("body",nCell,"ColId"))
+	{
+		gfn_SetCalendar(obj, nRow, nCell);
+	}
+	else if("WORK_FIRM_POP" == grd_SepciAct.GetCellProp("body",nCell,"ColId"))
+	{
+		var retValue = gfn_Dialog("B20","B2203050011U","",450,400,true,-1,-1);
+		if(retValue != null)
+		{
+			ds_SepciAct.SetColumn(nRow,"WORK_FIRM_NM",retValue[1]);
+		}
+	}
+	else if("WORK_NUM_POP" == grd_SepciAct.GetCellProp("body",nCell,"ColId"))
+	{
+		var retValue = gfn_Dialog("B20","B2202010012U","",450,400,true,-1,-1);
+		if(retValue != null)
+		{
+			ds_SepciAct.SetColumn(nRow,"WORK_NUM",retValue[0]);
+		}
+	}
+}
+]]></Script>
+</Window>

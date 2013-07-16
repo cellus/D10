@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1201010010F" Left="8" OnLoadCompleted="D1201010010F_OnLoadCompleted" PidAttrib="7" Title="순찰점검&#32;계획&#32;조회_D1201010010F" Top="8" Ver="1.0" Width="1270" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Radio">
+				<Contents>
+					<colinfo id="mount" size="256" type="STRING"/>
+					<record>
+						<mount>월별계획</mount>
+					</record>
+					<record>
+						<mount>주별계획</mount>
+					</record>
+					<record>
+						<mount>일별계획</mount>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_week">
+				<Contents>
+					<colinfo id="CD_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CD_NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CD_ID>0</CD_ID>
+						<CD_NAME>1주차</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>1</CD_ID>
+						<CD_NAME>2주차</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>2</CD_ID>
+						<CD_NAME>3주차</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>3</CD_ID>
+						<CD_NAME>4주차</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>4</CD_ID>
+						<CD_NAME>5주차</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>5</CD_ID>
+						<CD_NAME>6주차</CD_NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Block">
+				<Contents>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Align="Right" BKColor="#f2fafe" Border="Flat" Height="30" Id="Static26" Left="5" Style="table" TabOrder="8" Top="75" VAlign="Middle" Width="269" WordWrap="TRUE"></Static>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="1" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1259">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1264" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="3" Top="30" Type="RoundRect" Width="1259"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape0" Left="10" LineWidth="0" Right="1259" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="35" Type="Rectangle" Width="1249"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image7" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="2" Text="지사" Top="41" Width="61"></Image>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="175" LeftMargin="12" Style="blt_search" TabOrder="5" Text="팀" Top="40" Width="52"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="53" OnChanged="cob_BranchCd_OnChanged" Style="combo" TabOrder="6" Top="39" Width="117"></Combo>
+		<Radio BKColor="user23" Border="None" ColumnCount="3" DataColumn="mount" Height="16" Id="Radio1" INDEX="0" InnerDataset="ds_Radio" Left="10" OnClick="pagesearch" Style="radio" TabOrder="7" Top="83" Width="259">
+			<Contents>
+				<Layout Height="20" left="0" text="철길통과" width="80"/>
+				<Layout Height="20" left="80" text="하상통과" width="80"/>
+				<Layout Height="20" left="160" text="교량첨가" width="80"/>
+			</Contents>
+		</Radio>
+		<Div Height="730" Id="Div1" OnLoadCompleted="D1201010010F_D01_OnLoadCompleted" scroll="true" TabOrder="9" Text="Div0" Top="110" Url="D10::D1201010010F_D01.xml" Width="1260">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_TeamCd" InnerDataset="ds_Team" Left="202" OnChanged="cob_TeamCd_OnChanged" Style="combo" TabOrder="10" Top="40" Width="133"></Combo>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="608" LeftMargin="12" Style="blt_search" TabOrder="11" Text="년월" Top="41" Width="36"></Image>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="746" LeftMargin="12" Style="blt_search" TabOrder="12" Text="주간" Top="41" Width="36"></Image>
+		<Combo Border="Flat" CodeColumn="CD_ID" DataColumn="CD_NAME" Height="18" Id="Combo5" InnerDataset="ds_week" Left="786" Style="combo" TabOrder="13" Top="40" Width="65"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_FaciFlag" Left="1126" Style="combo" TabOrder="15" Top="41" Width="85"></Combo>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="1052" LeftMargin="12" Style="blt_search" TabOrder="14" Text="시설물구분" Top="42" Width="71"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_day" Left="958" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="16" Top="41" WeeksFont="Default,-1" Width="86"></Calendar>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="858" LeftMargin="12" Style="blt_search" TabOrder="17" Text="순찰점검계획일" Top="41" Width="100"></Image>
+		<Combo Border="Flat" Enable="FALSE" Height="18" Id="cob_ShiftWorkCd" Left="380" Style="combo" TabOrder="18" Top="79" Visible="FALSE" Width="92"></Combo>
+		<Image Align="Left" Enable="FALSE" Height="18" Id="Image1" ImageID="blt" Left="354" LeftMargin="12" Style="blt_search" TabOrder="19" Text="조" Top="79" Visible="FALSE" Width="36"></Image>
+		<Calendar Border="Flat" Dateformat="yyyy-MM" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Combo4" Left="649" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="20" Top="40" WeeksFont="Default,-1" Width="93"></Calendar>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="341" LeftMargin="12" Style="blt_search" TabOrder="21" Text="구간" Top="41" Width="45"></Image>
+		<Combo Border="Flat" CodeColumn="BLOCK_CD" DataColumn="BLOCK_NM" Height="18" Id="cob_PBlockCd" InnerDataset="ds_Block" Left="379" Style="combo" TabOrder="22" Top="40" Width="220"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID      : D1201010010F.xml
+* Form 설명   : 순찰점검계획 조회
+* 시스템 명   : 안전공급(D1)
+* 작성자      : 임성수
+* 작성일      : 2008-12-11
+* 변경내용    : 변경내용없음
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+//---------------------------------------------------------
+//	화면 OnLoadCompleted 이벤트처리 발생하는 함수( 화면ID_OnLoadCompleted )
+//---------------------------------------------------------
+function D1201010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_D1_On_load();
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{	
+	Div1.fn_D1_Search();    
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 엑셀 Export
+//---------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	grd_Multi.ExportExcelEx("순찰점검계획");
+}
+
+function fn_D1_On_load()
+{
+	gfn_LoadForm(obj);
+	
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	gfn_SetComboBox_Comcode("D10070",gfn_setDsObject_Comcode("cob_ShiftWorkCd"));
+	gfn_D1_SetComboBox_Comcode1("D10001",gfn_D1_setDsObject_Comcode("cob_FaciFlag"), "AP#DO#DU#DW#GV#LD#OP#SP#VT#VV#ZZ");
+	
+	//-----------------------------------------
+	//  콤보박스의 초기 설정
+	//-----------------------------------------
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+		 cob_BranchCd.Index  = 0;
+	//	 cob_BranchCd.Enable = true;
+	} else {
+	     cob_BranchCd.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+	     cob_BranchCd.Enable = false;
+	}
+	
+	Combo4.value = today();
+	cob_ShiftWorkCd.Index = 0;
+		
+	cal_day.value = "";
+	cal_day.enable = false;
+	
+	cob_BranchCd_OnChanged();
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+    
+    gfn_D1_SetComboBox_Teamcd("ds_Team",cob_BranchCd);
+
+    if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+	    cob_TeamCd.Index = 0;
+	} else {
+	    cob_TeamCd.value = gfn_GetGlobalValue("G_DEPT_CODE");
+	}
+	
+    cob_TeamCd_OnChanged();
+}   
+
+function pagesearch()
+{
+  var pageradio = Radio1.Index;
+  if(pageradio==0)
+  {
+	Div1.Url = "D10::D1201010010F_D01.xml";
+  }
+  else if(pageradio==1)
+  {
+	Div1.Url = "D10::D1201010010F_D02.xml";
+  }
+  else if(pageradio==2)
+  {  
+	Div1.Url = "D10::D1201010010F_D03.xml";
+  }
+}
+
+function cob_TeamCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	ds_Search.ClearData();
+	ds_Search.AddRow();
+	
+	ds_Search.SetColumn(0, "BRANCH_CD" , cob_BranchCd.Value);
+	ds_Search.SetColumn(0, "TEAM_CD", cob_TeamCd.Value);
+
+	var strSvcID = "find_block";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_PatrolMonthCheckMgr-service";
+	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Block=ds_Block";
+	var strArgument  = "find_block=1";
+				
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );					 	           
+    
+    if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	
+	cob_PBlockCd.Index = 0;
+	
+	if(ds_Block.GetRowCount() == 0){
+		cob_PBlockCd.Enable = false;
+	}else{
+		cob_PBlockCd.Enable = true;
+		// 전체추가
+		var str_nRow = ds_Block.AppendRow();
+		ds_Block.SetColumn(str_nRow, "BLOCK_CD", ""    );
+		ds_Block.SetColumn(str_nRow, "BLOCK_NM", "전체");
+	}	
+}
+]]></Script>
+</Window>

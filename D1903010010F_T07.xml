@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="728" Id="D1903010010F_T07" Left="8" OnLoadCompleted="D1903010010F_T07_OnLoadCompleted" PidAttrib="7" Title="굴착보수_D1903010010F_T07" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME3" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME6" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Press">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_RepairFlag">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaRstCard" UseClientLayout="1">
+				<Contents>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORIGINAL_INPUT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_GR_CONN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ANODE_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ISOLATION" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAGE" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAIC" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAIC_MACHINE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR_POTENTIAL" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_END_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_END_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="POTENTIAL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXIST_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DigInfo" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_POS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_QTY" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_CAUSE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_DETAIL_CAUSE" size="256" summ="default" type="STRING"/>
+					<colinfo id="COAT_STATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="SOIL_PH" size="256" summ="default" type="STRING"/>
+					<colinfo id="SOIL_RESIS" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_ID1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_ID2" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM2" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DamagePos">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DamageCause">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DamageDetailCause">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_CoatState">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_MngDiv">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaRst" OnRowPosChanged="ds_EcdaRst_OnRowPosChanged" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORIGINAL_INPUT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DigDamageInf" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BASE_YEAR" MapValue="KEY" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" MapValue="KEY" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" MapValue="KEY" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_SEQ" MapValue="KEY" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="MNG_DIV_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_WIDTH" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="AREA_VERTICAL" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="AREA_SQUARE" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="AREA_DEPTH" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="9" Id="Image4" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="2" Text="굴착보수" Top="9" Width="182"></Image>
+		<Shape BKColor="user15" Bottom="25" Height="3" Id="Shape5" Left="8" LineWidth="0" Right="1254" TabOrder="1" Top="22" Type="Rectangle" Width="1246"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_EcdaRst" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="156" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="132" Id="Grid" InputPanel="FALSE" Left="8" LineColor="silver" LineType="ExVERT" MinWidth="100" NoDataText="조회내역이&#32;없습니다." OnHeadClick="Grid_OnHeadClick" Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="24" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="166"/>
+						<col width="87"/>
+						<col width="87"/>
+						<col width="65"/>
+						<col width="80"/>
+						<col width="284"/>
+						<col width="44"/>
+						<col width="65"/>
+						<col width="86"/>
+						<col width="73"/>
+						<col width="72"/>
+						<col width="70"/>
+						<col width="58"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="관리번호"/>
+						<cell col="1" display="text" text="배관ID"/>
+						<cell col="2" display="text" text="초기입력ID"/>
+						<cell col="3" display="text" text="탐사일자"/>
+						<cell col="4" colspan="2" display="text" text="손상위치"/>
+						<cell col="6" display="text" text="압력"/>
+						<cell col="7" display="text" text="설치일자"/>
+						<cell col="8" display="text" text="공사코드"/>
+						<cell col="9" display="text" text="지사"/>
+						<cell col="10" display="text" text="시/구"/>
+						<cell col="11" display="text" text="보수여부"/>
+						<cell col="12" display="text" text="탐사구분"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MANAGE_NUM" display="text"/>
+						<cell align="center" col="1" colid="MPIPE_ID" display="text"/>
+						<cell align="center" col="2" colid="ORIGINAL_INPUT_ID" display="text"/>
+						<cell align="center" col="3" colid="EXPLOR_YMD" display="date"/>
+						<cell align="center" col="4" colid="ZIP_NO" display="text"/>
+						<cell align="left" col="5" colid="DAMAGE_ADDR" display="text" limit="50"/>
+						<cell align="center" col="6" colid="PRESS_FLAG" combocol="CODE_ITEM" combodataset="ds_Press" combotext="ITEM_KNAME" display="combo"/>
+						<cell align="center" col="7" colid="COMPL_YMD" display="date"/>
+						<cell align="center" col="8" colid="WORK_NUM" display="text"/>
+						<cell align="center" col="9" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="10" colid="GU_NM" display="text"/>
+						<cell align="center" col="11" colid="REPAIR_FLAG" combocol="CODE_ITEM" combodataset="ds_RepairFlag" combotext="ITEM_KNAME" display="combo"/>
+						<cell align="center" col="12" colid="EXPLOR_FLAG_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="4" Text="ECDA분석카드&#32;정보" Top="168" Width="137"></Image>
+		<Div Height="136" Id="div_Card" Left="7" TabOrder="5" Text="Div0" Top="181" Width="1261">
+			<Contents>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static10" Left="-1" Style="table" TabOrder="32" Top="42" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static14" Left="-1" Style="table" TabOrder="35" Top="105" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static13" Left="-1" Style="table" TabOrder="34" Top="84" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static12" Left="-1" Style="table" TabOrder="33" Top="63" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="-1" Style="table" TabOrder="24" Top="21" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="-1" Style="table" TabOrder="20" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static1" Style="table" TabOrder="17" Text="관리번호" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static3" Style="table" TabOrder="18" Text="주소" Top="21" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static23" Style="table" TabOrder="15" Text="배관접지" Top="42" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static29" Style="table" TabOrder="16" Text="배관절연" Top="63" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="43" Id="Static11" Style="table" TabOrder="19" Text="정류기출력" Top="84" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRstCard" Border="Flat" Column="MANAGE_NUM" Enable="FALSE" Height="18" Id="edt_ManageNum" ImeMode="none" Left="136" Style="edit" TabOrder="11" TabStop="FALSE" Top="2" Width="170"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static2" Left="307" Style="table" TabOrder="21" Text="탐사일자" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRstCard" Border="Flat" Column="EXPLOR_YMD_NM" Enable="FALSE" Height="18" Id="edt_EcdaExplorYmd" ImeMode="none" Left="443" Style="edit" TabOrder="12" TabStop="FALSE" Top="2" Width="170"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static4" Left="614" Style="table" TabOrder="22" Text="배관ID" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRstCard" Border="Flat" Column="MPIPE_ID" Enable="FALSE" Height="18" Id="edt_MpipeId" ImeMode="none" Left="750" Style="edit" TabOrder="13" TabStop="FALSE" Top="2" Width="170"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static5" Left="921" Style="table" TabOrder="14" Text="초기입력ID" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRstCard" Border="Flat" Column="ORIGINAL_INPUT_ID" Enable="FALSE" Height="18" Id="edt_OriginakInputId" ImeMode="none" Left="1057" Style="edit" TabOrder="14" TabStop="FALSE" Top="2" Width="170"></Edit>
+				<Edit BindDataset="ds_EcdaRstCard" Border="Flat" Column="DAMAGE_ADDR" Enable="FALSE" Height="18" Id="edt_DamageAddr" ImeMode="none" Left="136" Style="edit" TabOrder="15" TabStop="FALSE" Top="23" Width="355"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static7" Left="492" Style="table" TabOrder="26" Text="매설년도" Top="21" VAlign="Middle" Width="55" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRstCard" Border="Flat" Column="COMPL_YEAR" Enable="FALSE" Height="18" Id="edit_ComplYear" ImeMode="none" Left="548" Style="edit" TabOrder="16" TabStop="FALSE" Top="23" Width="65"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static8" Left="614" Style="table" TabOrder="28" Text="관경" Top="21" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRstCard" Border="Flat" Column="PIPE_DIAM_NM" Enable="FALSE" Height="18" Id="Edit4" ImeMode="none" Left="750" Style="edit" TabOrder="17" TabStop="FALSE" Top="23" Width="170"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static9" Left="921" Style="table" TabOrder="30" Text="포종" Top="21" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRstCard" Border="Flat" Column="PAVEMENT_KIND_NM" Enable="FALSE" Height="18" Id="Edit5" ImeMode="none" Left="1057" Style="edit" TabOrder="18" TabStop="FALSE" Top="23" Width="170"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static15" Left="614" Style="table" TabOrder="36" Text="양극점" Top="42" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit BindDataset="ds_EcdaRstCard" Border="Flat" Column="ANODE_POINT" Enable="FALSE" Height="18" Id="edt_AnodePoint" ImeMode="none" Left="750" MaxLength="200" Style="edit" TabOrder="2" Top="44" Width="477"></Edit>
+				<Edit BindDataset="ds_EcdaRstCard" Border="Flat" Column="PIPE_ISOLATION" Enable="FALSE" Height="17" Id="edt_PipeIsolation" ImeMode="none" Left="136" MaxLength="400" Style="edit" TabOrder="3" Top="66" Width="1091"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static16" Left="134" Style="table" TabOrder="37" Text="전압(V)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static17" Left="283" Style="table" TabOrder="38" Text="전류(A)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static18" Left="432" Style="table" TabOrder="39" Text="전류계(A)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static19" Left="581" Style="table" TabOrder="40" Text="손상부전위차△V(mV)" Top="84" VAlign="Middle" Width="201" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static20" Left="781" Style="table" TabOrder="41" Text="관말&#32;On(mV)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static21" Left="930" Style="table" TabOrder="42" Text="관말&#32;Off(mV)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static22" Left="1079" Style="table" TabOrder="43" Text="전위차△V(mV)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<MaskEdit BindDataset="ds_EcdaRstCard" Border="Flat" Column="VOLTAGE" DecimalLen="1" Enable="FALSE" Height="18" Id="msk_Voltage" Left="136" MaxLength="4" Style="edit" TabOrder="4" Top="107" Value="MaskEdit0" Width="147"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRstCard" Border="Flat" Column="Voltaic" DecimalLen="2" Enable="FALSE" Height="18" Id="msk_Voltaic" Left="285" MaxLength="4" Style="edit" TabOrder="5" Top="107" Width="147"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRstCard" Border="Flat" Column="VOLTAIC_MACHINE" DecimalLen="1" Enable="FALSE" Height="18" Id="msk_VoltaicMachine" Left="434" MaxLength="4" Style="edit" TabOrder="6" Top="107" Value="MaskEdit0" Width="147"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRstCard" Border="Flat" Column="DAMAGE_ADDR_POTENTIAL" DecimalLen="1" Enable="FALSE" Height="18" Id="msk_DamageAddrPotential" Left="582" MaxLength="4" Style="edit" TabOrder="7" Top="107" Value="MaskEdit0" Width="198"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRstCard" Border="Flat" Column="PIPE_END_ON" DecimalLen="1" Enable="FALSE" Height="18" Id="msk_PipeEndOn" Left="782" MaxLength="4" Style="edit" TabOrder="8" Top="107" Value="MaskEdit0" Width="147"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRstCard" Border="Flat" Column="PIPE_END_OFF" DecimalLen="1" Enable="FALSE" Height="18" Id="msk_PipeEndOff" Left="931" MaxLength="4" Style="edit" TabOrder="9" Top="107" Value="MaskEdit0" Width="147"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRstCard" Border="Flat" Column="POTENTIAL" DecimalLen="1" Enable="FALSE" Height="18" Id="msk_Potential" Left="1079" MaxLength="4" Style="edit" TabOrder="10" Top="107" Value="MaskEdit0" Width="148"></MaskEdit>
+				<Edit BindDataset="ds_EcdaRstCard" Border="Flat" Column="PIPE_GR_CONN" Enable="FALSE" Height="18" Id="edt_Pipegrconn" ImeMode="none" Left="136" MaxLength="200" Style="edit" TabOrder="1" Top="44" Width="477"></Edit>
+			</Contents>
+		</Div>
+		<Image Align="Left" Height="9" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="6" Text="굴착정보입력" Top="320" Width="117"></Image>
+		<Div Height="132" Id="div_Info" Left="7" TabOrder="7" Text="Div0" Top="333" Width="933">
+			<Contents>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static10" Left="-1" Style="table" TabOrder="22" Top="42" VAlign="Middle" Width="922" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static14" Left="-1" Style="table" TabOrder="25" Top="105" VAlign="Middle" Width="922" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static13" Left="-1" Style="table" TabOrder="24" Top="84" VAlign="Middle" Width="922" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static12" Left="-1" Style="table" TabOrder="23" Top="63" VAlign="Middle" Width="922" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="-1" Style="table" TabOrder="17" Top="21" VAlign="Middle" Width="922" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="-1" Style="table" TabOrder="3" VAlign="Middle" Width="922" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="red" Height="22" Id="Static1" Style="table" TabOrder="7" Text="보수일자" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="red" Height="22" Id="Static3" Style="table" TabOrder="8" Text="손상수량" Top="21" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="red" Height="22" Id="Static23" Style="table" TabOrder="9" Text="피복상태" Top="42" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="red" Height="22" Id="Static29" Style="table" TabOrder="10" Text="보수비용" Top="63" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="red" Height="22" Id="Static2" Left="307" Style="table" TabOrder="15" Text="굴착업체" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="red" Height="22" Id="Static4" Left="614" Style="table" TabOrder="16" Text="손상위치" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="red" Height="22" Id="Static15" Left="614" Style="table" TabOrder="26" Text="토양비저항" Top="42" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<MaskEdit BindDataset="ds_DigInfo" Border="Flat" Column="DAMAGE_QTY" DecimalLen="0" Height="18" Id="msk_Voltage" Left="136" MaxLength="4" Style="edit_Indis" TabOrder="4" ToolTipText="손상수량" Top="23" Value="MaskEdit0" Width="170"></MaskEdit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="red" Height="22" Id="Static11" Style="table" TabOrder="27" Text="조치사항" Top="84" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static24" Style="table" TabOrder="28" Text="첨부파일" Top="105" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit BindDataset="ds_DigInfo" Border="Flat" Column="DAMAGE_RMK" Height="17" Id="edt_DamageRmk" ImeMode="none" Left="136" MaxLength="160" Style="edit_Indis" TabOrder="12" ToolTipText="조치사항" Top="87" Width="784"></Edit>
+				<Calendar BindDataset="ds_DigInfo" Border="Flat" Column="REPAIR_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_RepairYmd" Left="137" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="1" ToolTipText="보수일자" Top="2" WeeksFont="Default,-1" Width="170"></Calendar>
+				<Edit BindDataset="ds_DigInfo" Border="Flat" Column="DIG_FIRM_NM" Height="18" Id="edt_DigFirmNm" ImeMode="none" Left="443" Readonly="TRUE" Style="edit_Indis" TabOrder="2" ToolTipText="굴착업체" Top="2" Width="152"></Edit>
+				<Button Cursor="HAND" Height="17" Id="btn_DigFirmCd" ImageID="search" Left="596" OnClick="div_Info_btn_DigFirmCd_OnClick" TabOrder="15" TabStop="FALSE" Text="Button8" ToolTipText="굴착업체조회" Top="2" Width="17"></Button>
+				<Combo BindDataset="ds_DigInfo" Border="Flat" CodeColumn="CODE_ITEM" Column="DAMAGE_POS" DataColumn="ITEM_KNAME" Height="18" Id="cob_DamagePos" InnerDataset="ds_DamagePos" Left="749" ResetIndex="FIRST" Style="combo_indis" TabOrder="3" ToolTipText="손상위치" Top="1" Width="173"></Combo>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="red" Height="22" Id="Static5" Left="307" Style="table" TabOrder="30" Text="손상원인" Top="21" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Combo BindDataset="ds_DigInfo" Border="Flat" CodeColumn="CODE_ITEM" Column="DAMAGE_CAUSE" DataColumn="ITEM_KNAME" Height="18" Id="cob_DamageCause" InnerDataset="ds_DamageCause" Left="442" OnChanged="div_Info_cob_DamageCause_OnChanged" ResetIndex="FIRST" Style="combo_indis" TabOrder="5" ToolTipText="손상원인" Top="22" Width="173"></Combo>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static7" Left="614" Style="table" TabOrder="31" Text="상세원인" Top="21" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Combo BindDataset="ds_DigInfo" Border="Flat" CodeColumn="CODE_ITEM" Column="DAMAGE_DETAIL_CAUSE" DataColumn="ITEM_KNAME" Height="18" Id="cob_DamageDetailCause" ImeMode="none" InnerDataset="ds_DamageDetailCause" Left="749" ResetIndex="FIRST" Style="combo" TabOrder="6" ToolTipText="상세원인" Top="22" Width="173"></Combo>
+				<Combo BindDataset="ds_DigInfo" Border="Flat" CodeColumn="CODE_ITEM" Column="COAT_STATE" DataColumn="ITEM_KNAME" Height="18" Id="cob_CoatState" InnerDataset="ds_CoatState" Left="135" ResetIndex="FIRST" Style="combo_indis" TabOrder="7" ToolTipText="피복상태" Top="43" Width="173"></Combo>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="red" Height="22" Id="Static8" Left="307" Style="table" TabOrder="32" Text="토양ph" Top="42" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<MaskEdit BindDataset="ds_DigInfo" Border="Flat" Column="SOIL_PH" DecimalLen="1" DigitLen="5" Height="18" Id="msk_SoilPh" Left="443" Style="edit_Indis" TabOrder="8" ToolTipText="토양ph" Top="44" Value="MaskEdit0" Width="170"></MaskEdit>
+				<MaskEdit BindDataset="ds_DigInfo" Border="Flat" Column="SOIL_RESIS" DecimalLen="1" DigitLen="5" Height="18" Id="msk_SoilResis" Left="750" Style="edit_Indis" TabOrder="9" ToolTipText="토양비저항" Top="44" Value="MaskEdit0" Width="170"></MaskEdit>
+				<MaskEdit BindDataset="ds_DigInfo" Border="Flat" Column="REPAIR_COST" DecimalLen="0" Height="18" Id="msk_RepairCost" Left="136" MaxLength="13" Style="edit_Indis" TabOrder="10" ToolTipText="보수비" Top="65" Value="MaskEdit0" Width="170"></MaskEdit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static9" Left="307" Style="table" TabOrder="33" Text="기타" Top="63" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit BindDataset="ds_DigInfo" Border="Flat" Column="RMK" Height="17" Id="edt_Rmk" ImeMode="none" Left="443" MaxLength="160" Style="edit" TabOrder="11" Top="66" Width="477"></Edit>
+				<Edit BindDataset="ds_DigInfo" Border="Flat" Column="ATTACH_FILE_NM1" Enable="FALSE" Height="18" Id="edt_AttachFileNm1" ImeMode="none" Left="136" Readonly="TRUE" Style="edit" TabOrder="13" Top="107" Width="246"></Edit>
+				<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_FileUpload1" ImageID="btn_4_fileadd" Left="384" LeftMargin="21" OnClick="bt_d1_FileUpload" Style="button" TabOrder="16" TabStop="FALSE" Text="파일첨부&#32;" Top="107" Width="76"></Button>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static16" Left="461" Style="table" TabOrder="35" Text="이미지" Top="105" VAlign="Middle" Width="115" WordWrap="TRUE"></Static>
+				<Edit BindDataset="ds_DigInfo" Border="Flat" Column="ATTACH_FILE_NM2" Enable="FALSE" Height="18" Id="edt_AttachFileNm2" ImeMode="none" Left="577" Readonly="TRUE" Style="edit" TabOrder="14" Top="107" Width="266"></Edit>
+				<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_FileUpload2" ImageID="btn_4_fileadd" Left="844" LeftMargin="21" OnClick="bt_d1_FileUpload" Style="button" TabOrder="37" TabStop="FALSE" Text="파일첨부&#32;" Top="107" Width="76"></Button>
+			</Contents>
+		</Div>
+		<Image Align="Left" Height="9" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="8" Text="손상부크기" Top="469" Width="182"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_DigDamageInf" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="618" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="132" Id="grd_DigDamageInf" InputPanel="FALSE" Left="8" LineColor="silver" LineType="ExVERT" MinWidth="100" NoDataText="조회내역이&#32;없습니다." OnHeadClick="Grid_OnHeadClick" Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="9" TabStop="true" Top="486" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="200"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="text" text="구분"/>
+						<cell col="1" display="text" text="가로"/>
+						<cell col="2" display="text" text="세로"/>
+						<cell col="3" display="text" text="면적"/>
+						<cell col="4" display="text" text="깊이"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MNG_DIV_CD" combocol="CODE_ITEM" combodataset="ds_MngDiv" combotext="ITEM_KNAME" display="combo" edit="combo"/>
+						<cell align="right" col="1" colid="AREA_WIDTH" display="number" displaymaskchar="#" edit="number" limit="5" LimitDec="1"/>
+						<cell align="right" col="2" colid="AREA_VERTICAL" display="number" edit="number" limit="5" LimitDec="1"/>
+						<cell align="right" col="3" colid="AREA_SQUARE" display="number" edit="number" limit="5" LimitDec="1"/>
+						<cell align="right" col="4" colid="AREA_DEPTH" display="number" edit="number" limit="5" LimitDec="2"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="486" Height="3" Id="Shape0" Left="8" LineWidth="0" Right="1254" TabOrder="10" Top="483" Type="Rectangle" Width="1246"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Add" ImageID="btn_addrow" Left="1102" LeftMargin="15" OnClick="btn_add_OnClick" Style="button" TabOrder="11" Text="추가" Top="462" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Save" ImageID="btn_2" Left="1155" LeftMargin="15" OnClick="btn_Save_OnClick" Style="button" TabOrder="13" TabStop="FALSE" Text="저장" Top="462" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Del" ImageID="btn_deleterow" Left="1206" LeftMargin="15" OnClick="btn_Del_OnClick" Style="button" TabOrder="12" Text="삭제" Top="462" Width="48"></Button>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1903010010F_T07.xml
+* Form 설명  : 굴착보수
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 최재영 
+* 작성일     : 2013-04-08
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+#include "JS::COMMONB30001.js";
+
+
+var nCount           = 0  ;
+var nCount1          = 0  ;
+var iGridPos = '';	
+var arryKey = array();
+var sGrdPosExpr;
+var sOnloadNm;
+
+
+function D1903010010F_T07_OnLoadCompleted(obj)
+{	
+	gfn_LoadForm(obj);
+	
+	//init에 들어가면 조회버튼 클릭시마다 재조회됨
+	gfn_SetComboBox_Comcode("D10034","ds_Press");	// 압력구분
+	gfn_SetComboBox_Comcode("D10080","ds_DamagePos");	// 손상위치
+	gfn_SetComboBox_Comcode("D10081","ds_CoatState");	// 피복상태
+	gfn_SetComboBox_Comcode("D10082","ds_DamageCause");	// 손상원인
+	gfn_SetComboBox_Comcode("D10083","ds_DamageDetailCause");	// 손상상세원인
+	gfn_SetComboBox_Comcode("D10085","ds_RepairFlag");	// 보수여부
+	gfn_SetComboBox_Comcode("D10086","ds_MngDiv");	// 손상관리구분코드
+
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  굴착보수조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	ds_EcdaRst.ClearData();
+	ds_EcdaRstCard.ClearData();
+	ds_DigInfo.ClearData();
+	
+	ds_Search.ClearData();
+	var nRow = ds_Search.AddRow();
+	//Search Parameter Setting
+	ds_Search.SetColumn(nRow, "BASE_YEAR", sp_Year.Value);
+	ds_Search.SetColumn(nRow, "MPIPE_ID", trim(edt_MpipeSearch.Text));
+	
+    var strSvcID        = "view_Dig";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_EcdaRst=ds_EcdaRst";
+	var strArgument     = "view_Dig";
+	 
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find2()
+//   설명  :  굴착보수상세
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find2(sBaseYear,sMpipeID,sSeq)
+{	
+	ds_EcdaRstCard.ClearData();
+	ds_DigInfo.ClearData();
+	ds_DigDamageInf.ClearData();
+	
+	ds_Search.ClearData();
+	var nRow = ds_Search.AddRow();
+	//Search Parameter Setting
+	ds_Search.SetColumn(nRow, "BASE_YEAR",sBaseYear);
+	ds_Search.SetColumn(nRow, "MPIPE_ID",sMpipeID);
+	ds_Search.SetColumn(nRow, "EXPLOR_RSLT_SEQ",sSeq);
+	
+    var strSvcID        = "view_DigDetail";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_EcdaRstCard=ds_EcdaRstCard ds_DigInfo=ds_DigInfo ds_DigDamageInf=ds_DigDamageInf";
+	var strArgument     = "view_DigDetail";
+	 
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ds_DigInfo.rowcount < 1) ds_DigInfo.AddRow();
+
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find3()
+//   설명  :  손상부크기 단독조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find3(sBaseYear,sMpipeID,sSeq)
+{	
+
+	ds_DigDamageInf.ClearData();
+	
+	ds_Search.ClearData();
+	var nRow = ds_Search.AddRow();
+	//Search Parameter Setting
+	ds_Search.SetColumn(nRow, "BASE_YEAR",sBaseYear);
+	ds_Search.SetColumn(nRow, "MPIPE_ID",sMpipeID);
+	ds_Search.SetColumn(nRow, "EXPLOR_RSLT_SEQ",sSeq);
+	
+    var strSvcID        = "view_DigDetail2";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_DigDamageInf=ds_DigDamageInf";
+	var strArgument     = "view_DigDetail2";
+	 
+	
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	//trace(ds_DigDamageInf.SaveXML());
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_SAVE
+//   설명  : 구간 실적 등록된 내용을 저장한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------
+//  Transition   : Service id
+//  ServicePart   : Service part
+//  Url          : Server url
+//  InputDsList   : Input Dataset List
+//  OutputDsList   : Output Dataset List
+//  Argument   :  Argument
+//-------------------------------------------------------------------------------
+function fn_D1_save(bFileFlag)
+{	
+	
+	if (!ds_DigInfo.GetUpdate() && !bFileFlag)
+	{
+		alert("변경된 내용이 없습니다.");
+		return;
+	}
+	
+	if(!gfn_B3_CheckRequired(div_info, 1, 10)) return;
+	if(!gfn_B3_CheckRequired(div_info, 12, 12)) return;
+	
+	
+	var sBaseYear 	= ds_EcdaRst.GetColumn(ds_EcdaRst.row,"BASE_YEAR");
+	var sMpipeTd 	= ds_EcdaRst.GetColumn(ds_EcdaRst.row,"MPIPE_ID");
+	var sSeq 		= ds_EcdaRst.GetColumn(ds_EcdaRst.row,"EXPLOR_RSLT_SEQ");
+	
+	
+	for(var i = 0 ; i < ds_DigInfo.rowcount ; i++){
+		
+		if(ds_DigInfo.GetRowType(i) == "update"){
+		
+			ds_DigInfo.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_DigInfo.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP		
+
+		}
+		else if(ds_DigInfo.GetRowType(i) == "insert"){
+			
+			ds_DigInfo.SetColumn(i, "BASE_YEAR", sBaseYear);	
+			ds_DigInfo.SetColumn(i, "MPIPE_ID", sMpipeTd);		
+			ds_DigInfo.SetColumn(i, "EXPLOR_RSLT_SEQ", sSeq);	
+			ds_DigInfo.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_DigInfo.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//수정자 IP		
+			ds_DigInfo.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+			ds_DigInfo.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//등록자 IP			
+		}
+	}
+	
+	var strSvcID         = "save_DigInfo";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service" ;	
+	var strInDatasets    = "ds_DigInfo=ds_DigInfo:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_DigInfo";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}			   
+
+	alert("저장/수정이 되었습니다.");
+	
+	fn_D1_find2(sBaseYear,sMpipeTd,sSeq);
+}
+
+function fn_D1_Excel(){
+
+	var SearchCondition= "";
+
+    SearchCondition = SearchCondition + "기준년도 : " + RPad(sp_Year.Value," ",20);
+	SearchCondition = SearchCondition + "배관번호 : " + RPad(edt_MpipeSearch.Text," ",20);
+        
+    gfn_ExportExcel("배관진단실적등록_굴착보수", 5, SearchCondition, "Grid");            
+}
+
+function fn_D1_Print(){
+	PrintScreen();
+}
+
+
+function Grid_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+		//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+
+
+function ds_EcdaRst_OnRowPosChanged(obj,nOldRow,nRow)
+{	
+	
+	if(obj.rowcount < 1) return;
+
+	var sBaseYear 	= obj.GetColumn(nRow , "BASE_YEAR");
+	var sMpipeID  	= obj.GetColumn(nRow , "MPIPE_ID");
+	var sSeq  		= obj.GetColumn(nRow , "EXPLOR_RSLT_SEQ");
+	
+	 fn_D1_find2(sBaseYear,sMpipeID,sSeq);
+	 fn_FilterDamageDetailCause();
+}
+
+
+//굴착업체조회
+function div_Info_btn_DigFirmCd_OnClick(obj)
+{
+	var args =  "BRANCH_CD=" + quote(ds_EcdaRst.GetColumn(ds_EcdaRst.row,"BRANCH_CD"));
+
+	var strResult = gfn_Dialog("D10","D1601010018U",args,-1,-1,true,-1,-1);
+
+	if( length(strResult) > 0 )
+	{
+		
+		ds_DigInfo.SetColumn(ds_DigInfo.row,"DIG_FIRM_CD",strResult[0]);  // 업체코드
+		ds_DigInfo.SetColumn(ds_DigInfo.row,"DIG_FIRM_NM",strResult[1]);  // 업체명
+	}
+}
+
+//손상부크기 추가
+function Btn_Add_OnClick(obj)
+{
+	
+	if(ds_EcdaRst.rowcount < 1) return;
+	
+	var nAddRow = ds_DigDamageInf.AddRow();
+	
+	ds_DigDamageInf.SetColumn(nAddRow,"BASE_YEAR",ds_EcdaRst.GetColumn(ds_EcdaRst.row,"BASE_YEAR"));
+	ds_DigDamageInf.SetColumn(nAddRow,"MPIPE_ID",ds_EcdaRst.GetColumn(ds_EcdaRst.row,"MPIPE_ID"));
+	ds_DigDamageInf.SetColumn(nAddRow,"EXPLOR_RSLT_SEQ",ds_EcdaRst.GetColumn(ds_EcdaRst.row,"EXPLOR_RSLT_SEQ"));
+	
+}
+
+//손상부 크기저장
+function btn_Save_OnClick(obj)
+{
+	if (!ds_DigDamageInf.GetUpdate())
+	{
+		alert("변경된 내용이 없습니다.");
+		return;
+	}
+	
+	var arryCheck = gfn_CheckGridNotNullColumn(grd_DigDamageInf);
+	
+	if(arryCheck.length > 0){
+		
+		alert("구분을 입력해주세요.");
+		ds_DigDamageInf.row = arryCheck[0];
+		grd_DigDamageInf.SetCellPos(arryCheck[1]);
+		grd_DigDamageInf.ShowEditor(true);
+		return;
+	} 
+	
+	var sBaseYear 	= ds_EcdaRst.GetColumn(ds_EcdaRst.row,"BASE_YEAR");
+	var sMpipeTd 	= ds_EcdaRst.GetColumn(ds_EcdaRst.row,"MPIPE_ID");
+	var sSeq 		= ds_EcdaRst.GetColumn(ds_EcdaRst.row,"EXPLOR_RSLT_SEQ");
+	
+	
+	for(var i = 0 ; i < ds_DigDamageInf.rowcount ; i++){
+		
+		if(ds_DigDamageInf.GetRowType(i) == "update"){
+		
+			ds_DigDamageInf.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_DigDamageInf.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP		
+
+		}
+		else if(ds_DigDamageInf.GetRowType(i) == "insert"){
+			
+			ds_DigDamageInf.SetColumn(i, "BASE_YEAR", sBaseYear);	
+			ds_DigDamageInf.SetColumn(i, "MPIPE_ID", sMpipeTd);		
+			ds_DigDamageInf.SetColumn(i, "EXPLOR_RSLT_SEQ", sSeq);	
+			ds_DigDamageInf.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_DigDamageInf.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//수정자 IP		
+			ds_DigDamageInf.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+			ds_DigDamageInf.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//등록자 IP			
+		}
+	}
+
+	// arryKey[0] = "BASE_YEAR";
+	// arryKey[1] = "MPIPE_ID";
+	// arryKey[2] = "EXPLOR_RSLT_SEQ";
+	// arryKey[3] = "DAMAGE_SEQ";
+	
+	fn_GetGridPosExpr(ds_DigDamageInf);
+	
+	var strSvcID         = "save_DigDamageInf";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service" ;	
+	var strInDatasets    = "ds_DigDamageInf=ds_DigDamageInf:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_DigDamageInf";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}			   
+
+	alert("저장/수정이 되었습니다.");
+	
+	fn_D1_find3(sBaseYear,sMpipeTd,sSeq);
+}
+
+//손상부 크기 삭제
+function btn_Del_OnClick(obj)
+{
+	
+	if(ds_EcdaRst.rowcount < 1) return;
+	
+	if(ds_DigDamageInf.rowcount < 1) return;
+	
+	if(!Confirm("삭제하시겠습니까?")) return;
+	
+	ds_DigDamageInf.DeleteRow(ds_DigDamageInf.row);
+	
+		
+	var strSvcID         = "save_DigDamageInf";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service" ;	
+	var strInDatasets    = "ds_DigDamageInf=ds_DigDamageInf:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_DigDamageInf";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}			   
+
+	alert("저장/수정이 되었습니다.");
+	
+	
+	var sBaseYear 	= ds_EcdaRst.GetColumn(ds_EcdaRst.row,"BASE_YEAR");
+	var sMpipeTd 	= ds_EcdaRst.GetColumn(ds_EcdaRst.row,"MPIPE_ID");
+	var sSeq 		= ds_EcdaRst.GetColumn(ds_EcdaRst.row,"EXPLOR_RSLT_SEQ");
+	
+	fn_D1_find3(sBaseYear,sMpipeTd,sSeq);
+}
+
+//파일업로드
+function bt_d1_FileUpload(obj)
+{	
+	if(ds_EcdaRst.rowcount < 1) return;
+		
+	var nFileSeq = right(obj.id,1);
+	var objEdtNm = object("div_info.edt_AttachFileNm"+nFileSeq);
+	
+	var arg = "fa_Url=handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service& fa_Part=D10 strSequence="+quote(nFileSeq);
+	var arrList = gfn_Dialog("D10","D1903010010U_1",arg,450,280,false,-1,-1);
+	
+	//마스터가 생성되지 않은 insert행인 경우에도 파일만 따로 먼저 저장한다...........	
+	if(arrList.length > 0 ){
+		
+		objEdtNm.text = "";
+		objEdtNm.text = arrList[0];
+	
+	}
+	else{
+
+		objEdtNm.text = "";
+	}
+	
+}
+
+function fn_GetGridPosExpr(objDs){
+	
+	var nRow = objDs.row;
+	if(nRow == -1) return 0;
+
+	var sSeqColNm;
+	var nCurrMaxSeq;
+
+	if(arryKey.length < 1){
+
+		for(var i = 0 ; i < objDs.colcount ; i++){
+			
+			var sColId = objDs.GetColID(objDs.GetColIDXbyorder(i));
+			var sMapValue = objDs.GetColMapValue(sColId);
+
+			if(toUpper(sMapValue) != "KEY") continue;
+
+			arryKey[arryKey.length] = sColId;
+		}
+		
+	}
+	
+	sGrdPosExpr = "1==1";
+	
+	for(var i = 0 ; i < arryKey.length ; i++){
+		
+		var sKeyValue = objDs.GetColumn(nRow,arryKey[i]);
+		
+		if(!gfn_isNull(sKeyValue)){
+			
+			sGrdPosExpr += " AND ";
+			sGrdPosExpr += arryKey[i]+"=="+quote(sKeyValue);
+		}
+		else{
+		
+			sSeqColNm = arryKey[i];
+			
+			//null이 있으면 Max값이 반환되지 않는다.  
+			var nInsertRow = -1;
+			for(var j = 0 ; j < objDs.rowcount ; j++){
+				
+				nInsertRow = objDs.SearchRow("ROWTYPE=='insert'",nInsertRow+1);
+				
+				if(nInsertRow == -1) break;
+				
+				objDs.SetColumn(nInsertRow,sSeqColNm,0);	
+			}
+			
+		}
+	}
+	
+	if(!gfn_isNull(sSeqColNm)){	
+		
+		nCurrMaxSeq = objDs.CaseMax(sGrdPosExpr,sSeqColNm);	//데이타셋 해당 필드의 Type은 숫자형이어야 한다
+		sGrdPosExpr += " AND " + sSeqColNm + ">" + nCurrMaxSeq;	//seq는 순차적으로 들어간다고 가정 , 2건이상 동시 인서트시는 정렬순서에 따라 최초에 서치되는 항목을 찾아가겠지..
+		
+	}
+	
+	//이미 존재하는 OnLoadCompleted 함수를 실행하기 위함
+	sOnloadNm = objDs.OnLoadCompleted;
+	objDs.OnLoadCompleted = "fn_SearchRowPos";
+}
+
+function fn_SearchRowPos(obj,nErrorCode,strErrorMsg,nReason)
+{
+	if(nreason == 0) 
+	{	
+		obj.row = iif(gfn_isNull(sGrdPosExpr),0,obj.SearchRow(sGrdPosExpr));
+		sGrdPosExpr = "";
+		
+		if(!gfn_isNull(sOnloadNm) && sOnloadNm != obj.OnLoadCompleted){
+	
+			eval(sOnloadNm+"(obj,nErrorCode,strErrorMsg,nReason)");
+			obj.OnLoadCompleted = sOnloadNm;
+		}
+		
+		sOnloadNm = "";
+	}
+}
+
+//손상원인 -- > 손상상세
+function fn_FilterDamageDetailCause(){
+	
+	var sCauseCode 			= ds_DigInfo.GetColumn(ds_DigInfo.row,"DAMAGE_CAUSE");
+	var sDetailCauseCode 	= ds_DigInfo.GetColumn(ds_DigInfo.row,"DAMAGE_DETAIL_CAUSE");
+	
+	ds_DamageDetailCause.Filter("left(CODE_ITEM,1)=="+quote(sCauseCode));
+	
+	if(ds_DamageDetailCause.GetRowCount() < 1){
+		
+		div_info.cob_DamageDetailCause.Enable = false;
+		div_info.cob_DamageDetailCause.Style = "combo";
+		div_info.Static7.Color = "detail";
+	}
+	else{
+		
+		div_info.cob_DamageDetailCause.Enable = true;
+		div_info.cob_DamageDetailCause.Style = "combo_indis";
+		div_info.Static7.Color = "red";
+	}
+	
+	//필터된 상세원인 코드중 현재데이터와 일치하는 코드가없는경우 현재데이터 초기화
+	if(ds_DamageDetailCause.CaseCount("CODE_ITEM=="+quote(sDetailCauseCode)) < 1){
+		
+		ds_DigInfo.SetColumn(ds_DigInfo.row,"DAMAGE_DETAIL_CAUSE","");
+	}
+}
+
+function div_Info_cob_DamageCause_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	fn_FilterDamageDetailCause();
+}
+]]></Script>
+</Window>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="500" Id="D1602050010U" Left="8" OnLoadCompleted="D1602050010U_OnLoadCompleted" OnUnloadCompleted="D1602050010u_OnUnloadCompleted" PidAttrib="7" Title="시공사&#32;휴일&#32;근무계획&#32;등록&#32;및&#32;조회_D1602050010U" Top="8" Ver="1.0" Width="690" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents>
+					<colinfo id="OFFDAY_WAIT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WAIT_PERS" size="256" summ="default" type="STRING"/>
+					<colinfo id="LABOR_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_ADD_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExcelData">
+				<Contents>
+					<colinfo id="EXCOL0" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL1" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL2" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL3" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL4" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL5" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL6" size="255" summ="default" type="STRING"/>
+					<record>
+						<EXCOL0></EXCOL0>
+						<EXCOL1></EXCOL1>
+						<EXCOL2></EXCOL2>
+						<EXCOL3></EXCOL3>
+						<EXCOL4></EXCOL4>
+						<EXCOL5></EXCOL5>
+						<EXCOL6></EXCOL6>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="685" TabOrder="4" Top="68" Type="Rectangle" Width="680"></Shape>
+		<Edit Border="Flat" Height="18" Id="edt_WorkFirmCd" ImeMode="none" Left="79" Style="edit" TabOrder="14" Top="71" Width="130"></Edit>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="시공회사&#32;휴일&#32;근무계획&#32;등록&#32;및&#32;조회" Transparent="TRUE" Width="690"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="132"></Button>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="680">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user16" Bottom="121" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="685" TabOrder="6" Top="118" Type="Rectangle" Width="680"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Excel" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="495" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="374" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="685" SelColor="MENU" Style="grid_pop" TabOrder="5" TabStop="true" Top="121" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="680">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="70"/>
+						<col width="110"/>
+						<col width="70"/>
+						<col width="110"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="휴일일자"/>
+						<cell col="1" display="text" text="시공회사"/>
+						<cell col="2" display="text" text="담당자"/>
+						<cell col="3" display="text" text="담당자&#32;연락처"/>
+						<cell col="4" display="text" text="현장소장"/>
+						<cell col="5" display="text" text="현장소장&#32;연락처"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="OFFDAY_WAIT_YMD" display="text" edit="normal" expandsize="18" Mask="####-##-##" wordwrap="word"/>
+						<cell col="1" colid="WORK_FIRM_NM" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="TAKER_NM" display="text" edit="normal"/>
+						<cell col="3" colid="TAKER_TEL" display="text" edit="normal"/>
+						<cell col="4" colid="SITE_CHIEF_NM" display="text" edit="normal"/>
+						<cell col="5" colid="SITE_CHIEF_TEL" display="text" edit="normal"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Height="13" Id="C2502030010F" Left="364" Style="static" TabOrder="7" Text="~" Top="74" Width="10"></Static>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_ExcelUproad" ImageID="btn_6_excelup" Left="579" LeftMargin="21" OnClick="btn_ExcelUproad_OnClick" Style="button" TabOrder="8" Text="EXCEL&#32;업로드" Top="97" Width="106"></Button>
+		<MaskEdit AutoSelect="TRUE" Height="18" Id="edt_EndYm" Left="379" Mask="&#32;&#32;####-##" MaxLength="6" OnKillFocus="edt_EndYm_OnKillFocus" Style="edit_Indis" TabOrder="11" Top="71" Type="STRING" Width="75"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Height="18" Id="edt_StrYm" Left="283" Mask="&#32;&#32;####-##" MaxLength="6" OnKillFocus="edt_StrYm_OnKillFocus" Style="edit_Indis" TabOrder="10" Top="71" Type="STRING" Width="75"></MaskEdit>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="12" Text="시공회사" Top="72" Transparent="TRUE" Width="100"></Image>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="223" LeftMargin="12" Style="blt_search_Indis" TabOrder="13" Text="휴일&#32;월" Top="72" Transparent="TRUE" Width="70"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_WorkFirmNm" ImeMode="none" Left="79" Style="edit" TabOrder="9" Top="71" Width="130"></Edit>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+var chk = "";
+var OffDayYmd = "";
+
+function D1602050010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	edt_StrYm.Text = STRYM;											// 휴일내역조회에서 가져오는 조회조건
+	edt_EndYm.Text = ENDYM;
+//	edt_WorkFirmCdNm.Text = Replace(WORK_FRIM_CD_NM, "*", " ");		// 시공사명 공백처리 
+}
+function fn_CommonSearch()
+{
+	fn_D1_FindList();
+}
+/*************************************************************************************
+	공통 조회
+**************************************************************************************/
+function fn_D1_FindList()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_OffDayWaitSpecMgrPopup-service&search=1"
+			   + "&WORK_FIRM_NM	=" +edt_WorkFirmNm.Text
+			   + "&REQ_DAY_START=" +edt_StrYm.Value
+			   + "&REQ_DAY_END=" +edt_EndYm.Value
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Excel=ds_Excel";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	chk = 2;
+
+	grd_List.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");			
+}
+//----------------------------------------------------------------------------------------------
+// 함수명: fn_D10_Save1()
+// 설명:   시공사 근무계획 등록
+// arguments
+// return 내용: 없음
+//----------------------------------------------------------------------------------------------
+function fn_D10_Save1()
+{	
+	for(var i=0; i<ds_Excel.RowCount(); i++)
+	{	
+		ds_Excel.SetColumn(i,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+    	ds_Excel.SetColumn(i,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+		ds_Excel.SetColumn(i,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+		ds_Excel.SetColumn(i,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+	}
+	var strSvcID = "fn_D10_Save1";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_OffDayWaitSpecMgrPopup-service&save1=1"
+				;
+	var strInDatasets  = "ds_Excel=ds_Excel:u";
+	var strOutDatasets  = "";
+	var strArgument  = "";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+	}				  
+}
+//----------------------------------------------------------------------------------------------
+// 함수명: fn_CommonDeleteRow()
+// 설명:   공통 삭제 버튼
+// arguments
+// return 내용: 없음
+//----------------------------------------------------------------------------------------------
+function fn_CommonDeleteRow()
+{
+	if(confirm("조회된 휴일근무계획을 삭제하시겠습니까?")){
+		fn_D1_Delete();
+	}
+	return;
+}
+//----------------------------------------------------------------------------------------------
+// 함수명: fn_D1_Delete()
+// 설명:   등록된 휴일근무계획 삭제
+// arguments
+// return 내용: 없음
+//----------------------------------------------------------------------------------------------
+function fn_D1_Delete()
+{   
+	for(i=0; ds_Excel.GetRowCount()>i; i++)
+	{
+		ds_Excel.UpdateControl = false;
+		ds_Excel.SetRowType(i,"delete");
+		OffDayYmd = ds_Excel.GetColumn(i,"OFFDAY_WAIT_YMD");
+	}
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_OffDayWaitSpecMgrPopup-service&delete=1"
+			   +"&OFFDAY_WAIT_YMD=" + OffDayYmd
+			   ;  
+	var strInDatasets  = "ds_Excel=ds_Excel:u";
+	var strOutDatasets  = "";
+	var strArgument  = "";	
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}else{
+		alert("삭제 되었습니다.");
+		ds_Excel.ClearData();
+		fn_CommonSearch();
+	}
+}
+//----------------------------------------------------------------------------------------------
+// 함수명: fn_CommonSave() 
+// 설명:   공통 저장 버튼
+// arguments
+// return 내용: 없음
+//----------------------------------------------------------------------------------------------
+function fn_CommonSave()
+{
+	for(i=0; ds_Excel.GetRowCount()>i; i++){
+		if(ds_Excel.GetColumn(i,"OFFDAY_WAIT_YMD") == "" || ds_Excel.GetColumn(i,"OFFDAY_WAIT_YMD") == null){
+			alert("미작성 부분이있습니다. 다시추가해주세요.");
+			fn_CommonSearch();
+			return;
+		}else{
+			if(ds_Excel.GetUpdate()==0){
+			alert("1");
+				alert("변경된 내용이 없습니다.");
+				return;
+			}else{
+				fn_D10_Save1();
+				return;
+			}
+		}
+	}
+}
+//-------------------------------------------------------------------------------
+// 함수명   : D1501010010F_OnUnloadCompleted()
+// 설명     : 닫기 버튼 클릭시 실행 
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function D1602050010u_OnUnloadCompleted(obj)
+{	
+	if(ds_Excel.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 값이 있습니다. 종료")))
+		{
+			return false;
+		} 
+	}
+}
+//-------------------------------------------------------------------------------
+// 함수명   : fn_CommonAddRow()
+// 설명     : 공통 추가 
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function fn_CommonAddRow()
+{
+	ds_Excel.InsertRow(grd_List.ClickedRow);
+}
+//----------------------------------------------------------------------------------------------
+// 함수명: fn_D1_CheckList()
+// 설명:   저장 여부 체크
+// arguments
+// return 내용: 없음
+//----------------------------------------------------------------------------------------------
+function fn_D1_CheckList()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_OffDayWaitSpecMgrPopup-service&check=1"
+			   + "&OFFDAY_WAIT_YMD=" +substr(ds_Excel.GetColumn(i,"OFFDAY_WAIT_YMD"),0,6)
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Excel=ds_Excel";
+	var strArgument  = "";
+	gfn_SyncCall( 
+				 strSvcID
+			   , strPart
+			   , strURL
+			   , strInDatasets
+			   , strOutDatasets
+			   , strArgument
+		   );
+}			 
+// function fn_D1_CheckYmd()																// Excel Uproad 후에 휴일일자 중복체크
+// {
+	// for(i=0; ds_Excel.GetRowCount()>i; i++){
+		
+		// var OffdayWayYmd = ds_Excel.GetColumn(ds_Excel.row,"OFFDAY_WAIT_YMD");
+		// if(OffdayWayYmd == ds_Excel.GetColumn(i, "OFFDAY_WAIT_YMD") && i != ds_Excel.row){
+			// alert("중복된 휴일일자가 있습니다. 확인 후 업로드해주세요.");
+			// ds_Excel.ClearData();
+			// return;
+		// }
+	// }
+// }
+//----------------------------------------------------------------------------------------------
+// 함수명: btn_ExcelUproad_OnClick()
+// 설명:   엑셀 업로드 
+// arguments
+// return 내용: 없음
+//----------------------------------------------------------------------------------------------
+function btn_ExcelUproad_OnClick(obj)
+{
+	ds_Excel.ClearData();
+	
+	var strColNms = "OFFDAY_WAIT_YMD,WORK_FIRM_NM,TAKER_NM,TAKER_TEL,SITE_CHIEF_NM,SITE_CHIEF_TEL";
+	gfn_D1_UploadExcelData(ds_Excel, grd_list, strColNms);
+
+	// for(i=0; ds_Excel.GetRowCount()>i; i++){
+		// var ymd = replace(ds_Excel.GetColumn(i,"OFFDAY_WAIT_YMD"),' ','');
+			// ymd = replace(ymd, '월',',');
+			// ymd = replace(ymd, '일','');
+		// var arr = Split(ymd, ",");  
+			// ymd = substr(today(), 0, 4) + lpad(arr[0], 0, 2) +  lpad(arr[1], 0, 2); 
+		// ds_Excel.SetColumn(i,"OFFDAY_WAIT_YMD",ymd);
+	// }
+	
+	chk = 1;
+	//fn_D1_CheckYmd();
+}
+//----------------------------------------------------------------------------------------------
+// 함수명: edt_StrYm_OnKillFocus(obj), edt_EndYm_OnKillFocus(obj)
+// 설명:   조회 from ~ to 체크 
+// arguments
+// return 내용: 없음
+//----------------------------------------------------------------------------------------------
+function edt_StrYm_OnKillFocus(obj)
+{
+	if(edt_StrYm.Value != "" && edt_EndYm.Value != "" && edt_StrYm.Value > edt_EndYm.Value){
+		alert("TO 날짜는 FROM 날짜보다 같거나 큰값을 입력하세요.");
+		edt_StrYm.SetFocus();
+		edt_StrYm.Value = "";
+		edt_EndYm.Value = "";
+		return;
+	}else if(substr(edt_StrYm.Value,4,2) == "00" || substr(edt_StrYm.Value,4,2) > "12"){
+		alert("잘못된 월이 입력되었습니다. 수정해주세요");
+		edt_StrYm.SetFocus();
+		edt_StrYm.Value = "";
+		edt_EndYm.Value = "";
+		return;	
+	}
+}
+
+function edt_EndYm_OnKillFocus(obj)
+{
+	if(edt_StrYm.Value != "" && edt_EndYm.Value != "" && edt_StrYm.Value > edt_EndYm.Value){
+		alert("TO 날짜는 FROM 날짜보다 같거나 큰값을 입력하세요.");
+		edt_StrYm.SetFocus();
+		edt_StrYm.Value = "";
+		edt_EndYm.Value = "";
+		return;
+	}else if(substr(edt_StrYm.Value,4,2) == "00" || substr(edt_StrYm.Value,4,2) > "12"){
+		alert("잘못된 월이 입력되었습니다. 수정해주세요");
+		edt_StrYm.SetFocus();
+		edt_StrYm.Value = "";
+		edt_EndYm.Value = "";
+		return;	
+	}		
+}]]></Script>
+</Window>

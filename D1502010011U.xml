@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="152" Id="D1502010011U" Left="8" OnLoadCompleted="D1502010011U_OnLoadCompleted" PidAttrib="7" Title="가스방출량_D1502010011U" Top="8" Ver="1.0" Width="400" WorkArea="false">
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="16" Style="table" TabOrder="6" Top="104" VAlign="Middle" Width="379" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" OnClick="Image0_OnClick" Style="popup_title" TabOrder="1" Text="가스&#32;방출량" Transparent="TRUE" Width="400"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static38" Left="6" Style="table" TabOrder="2" Top="62" VAlign="Middle" Width="389" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static34" Left="5" Style="table_1" TabOrder="3" Text="관경(m)" Top="62" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="16" Style="table" TabOrder="4" Top="83" VAlign="Middle" Width="379" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="5" Style="table_1" TabOrder="5" Text="연장(m)" Top="83" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static3" Left="5" Style="table_1" TabOrder="7" Text="압력(kg/c㎡)" Top="104" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static4" Left="16" Style="table" TabOrder="8" Top="125" VAlign="Middle" Width="379" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="5" Style="table_1" TabOrder="9" Text="방출량(㎡)" Top="125" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_calculation" ImageID="btn_2_Calcu" Left="283" LeftMargin="21" OnClick="btn_calculation_OnClick" Style="button" TabOrder="10" Text="계산" Top="40" Width="50"></Button>
+		<Button ButtonStyle="TRUE" Height="19" Id="btn_Close" ImageID="btn_popclose" Left="340" LeftMargin="21" OnClick="btn_Close_OnClick" Style="button" TabOrder="11" Text="닫기" Top="40" Width="50"></Button>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" DecimalLen="2" Height="18" Id="edt_D" Left="98" MaxLength="7" Style="edit_Indis" TabOrder="12" Top="64" Width="293"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" DecimalLen="2" Height="18" Id="edt_L" Left="98" MaxLength="7" Style="edit_Indis" TabOrder="13" Top="85" Width="293"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" DecimalLen="2" Height="18" Id="edt_P" Left="98" MaxLength="7" Style="edit_Indis" TabOrder="14" Top="106" Width="293"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" DecimalLen="2" Enable="FALSE" Height="18" Id="edt_Q" Left="98" MaxLength="15" Style="edit_Indis" TabOrder="15" Top="127" Width="293"></MaskEdit>
+	</Form>
+	<Script><![CDATA[
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1502010011U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+}
+      
+//------------------------------------------------------------------------------- 
+//   함수명: Button18_OnClick()
+//   설명  : 관경, 압력, 연장값을 입력시 방출량이 산출된다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function btn_calculation_OnClick(obj)
+{
+	if(edt_D.Value == ''){
+		alert("관경 정보를 입력하세요. ");
+		return;
+	}
+	
+	if(edt_P.Value == ''){
+		alert("압력 정보를 입력하세요. ");
+		return;
+	}
+	
+	if(edt_L.Value == ''){
+		alert("연장 정보를 입력하세요. ");
+		return;
+	}
+		
+	var PI = 3.14159265358979;
+	
+	edt_Q.Value = (PI * Pow(parseFloat(edt_D.Value),2))/4 * parseFloat(edt_L.Value) * ((parseFloat(edt_P.Value)+1.0332)/1.0332);
+	
+	edt_Q.Value = parseFloat(edt_Q.Value);	
+} 
+function btn_Close_OnClick(obj)
+{
+
+	var arrList = array();
+	arrList[0] = edt_D.Value; // 관경
+	arrList[1] = edt_L.Value; // 연장
+	arrList[2] = edt_P.Value; // 압력
+	arrList[3] = edt_Q.Value; // 방출량
+	Close(arrList);	
+   
+}     
+
+
+
+]]></Script>
+</Window>

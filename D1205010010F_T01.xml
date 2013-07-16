@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="744" Id="D1205010010F_T01" Left="8" OnLoadCompleted="D1205010010F_T01_OnLoadCompleted" PidAttrib="7" Title="밸브&#32;순찰실적" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_vb"></Dataset>
+		</Datasets>
+		<Shape BKColor="user15" Bottom="5" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1254" TabOrder="2" Top="2" Type="Rectangle" Width="1249"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button15" ImageID="btn_addrow" Left="1104" LeftMargin="15" OnClick="Btn_Rst_OnClick" Style="button" TabOrder="3" Text="추가" Top="403" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button231" ImageID="btn_8_Search" Left="1122" LeftMargin="21" OnClick="Button231_OnClick" Style="button" TabOrder="4" Text="DCVG탐사이력조회" Top="209" Width="132"></Button>
+		<Grid AutoEnter="TRUE" BindDataset="ds_vb" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="735" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="731" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="silver" LineType="ExVERT" OnHeadClick="Grid1_OnHeadClick" Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="0" TabStop="true" Top="4" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="58"/>
+						<col width="82"/>
+						<col width="78"/>
+						<col width="58"/>
+						<col width="74"/>
+						<col width="120"/>
+						<col width="135"/>
+						<col width="86"/>
+						<col width="66"/>
+						<col width="75"/>
+						<col width="83"/>
+						<col width="56"/>
+						<col width="61"/>
+						<col width="81"/>
+						<col width="58"/>
+						<col width="58"/>
+						<col width="60"/>
+						<col width="56"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="No"/>
+						<cell col="1" display="text" text="밸브박스번호"/>
+						<cell col="2" display="text" text="점검일자"/>
+						<cell col="3" display="text" text="밸브번호"/>
+						<cell col="4" display="text" text="지사"/>
+						<cell col="5" display="text" text="시/구"/>
+						<cell col="6" display="text" text="팀"/>
+						<cell col="7" display="text" text="관경"/>
+						<cell col="8" display="text" text="압력"/>
+						<cell col="9" display="text" text="밸브재질"/>
+						<cell col="10" display="text" text="밸브종류"/>
+						<cell col="11" display="text" text="인입여부"/>
+						<cell col="12" display="text" text="노출여부"/>
+						<cell col="13" display="text" text="절연방법"/>
+						<cell col="14" display="text" text="측정대상"/>
+						<cell col="15" display="text" text="전단전위"/>
+						<cell col="16" display="text" text="후단전위"/>
+						<cell col="17" display="text" text="본딩전위"/>
+					</head>
+					<body>
+						<cell align="right" col="0" colid="GNUM" display="text" suppress="1"/>
+						<cell align="center" col="1" colid="FACI_NUM" display="normal" suppress="1"/>
+						<cell align="center" col="2" colid="PATROL_YMD" display="date"/>
+						<cell align="center" col="3" colid="VALVE_NUM" display="text"/>
+						<cell align="center" col="4" colid="BRANCH_NM" display="text"/>
+						<cell col="5" colid="ADDR_NM" display="text" suppress="1"/>
+						<cell align="center" col="6" colid="TEAM_NM" display="text"/>
+						<cell align="center" col="7" colid="STD" display="text"/>
+						<cell align="center" col="8" colid="PRESS_FLAG" display="text"/>
+						<cell align="center" col="9" colid="VALVE_MATER_FLAG" display="text"/>
+						<cell align="center" col="10" colid="VALVE_KIND" display="text"/>
+						<cell align="center" col="11" colid="IN_VALVE_YN" display="text"/>
+						<cell align="center" col="12" colid="VBOX_EXPOS_FLAG" display="normal"/>
+						<cell align="center" col="13" colid="ISOLATION_METHOD_CD" display="normal"/>
+						<cell align="center" col="14" colid="ELECT_POT_MEAS_OBJ_YN" display="normal"/>
+						<cell align="right" col="15" colid="PREVI_ELECT" display="number"/>
+						<cell align="right" col="16" colid="LATER_ELEC_POT" display="number"/>
+						<cell align="right" col="17" colid="BONDING" display="number"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1605030011F.xml
+* Form 설명  : DCVG탐사 계획/구간/결과 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-23
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+ 
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+function D1205010010F_T01_OnLoadCompleted(obj)
+{	
+	gfn_SetGrdComboBox_Comcode ("Grid1",7,"B30007");   /*규격/관경*/
+	gfn_SetGrdComboBox_Comcode ("Grid1",8,"D10034");   /*압력*/
+	gfn_SetGrdComboBox_Comcode ("Grid1",9,"D10046");   /*밸브재질*/
+	gfn_SetGrdComboBox_Comcode ("Grid1",10,"D10042");   /*밸브종류*/
+	gfn_SetGrdComboBox_Comcode ("Grid1",13,"D10044");   /*절연방법*/
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_addRow()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	
+	ds_Search.ClearData();
+	var row = ds_Search.AddRow();
+	ds_Search.SetColumn(row,"BRANCH_CD",cob_branch.Value);
+	ds_Search.SetColumn(row,"TEAM_CD",cob_TeamCdSearch.Value);
+	ds_Search.SetColumn(row,"PATROL_STR_YMD",cal_Ymd_From.Value);
+	ds_Search.SetColumn(row,"PATROL_END_YMD",cal_Ymd_To.Value);
+	ds_Search.SetColumn(row,"PRESS_FLAG",cob_Press.Value);
+	
+	ds_vb.ClearData();
+	
+    var strSvcID        = "Search_VB";
+	var strPart         = "D10";	             
+	var strURL          = "handle.do?ServiceName=D1205010010F-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_vb=ds_list";
+	var strArgument     = "Search_VB=1";
+	
+	
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );		 
+}
+
+function fn_D1_Excel()
+{
+	var SearchCondition= "";
+   
+    SearchCondition = SearchCondition + "지사 : " +     RPad(cob_branch.Text," ",20);
+    SearchCondition = SearchCondition + "팀 : "   +    RPad(cob_TeamCdSearch.Text," ",20);
+    SearchCondition = SearchCondition + "순찰일자 : " + RPad(substr(today(),0,4) + '0101' + ' ~ ' + today()," ",40);
+    
+    gfn_ExportExcel("밸브순찰실적", 3, SearchCondition, "Grid1");
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명  : 탐사일지 장표를 출력한다. 
+// arguments 없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_D1_Print()
+{
+	PrintScreen();
+}
+
+function Grid1_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+]]></Script>
+</Window>

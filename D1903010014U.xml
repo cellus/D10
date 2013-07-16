@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="408" Id="D1903010014U" Left="8" OnLoadCompleted="D1903010014U_OnLoadCompleted" PidAttrib="7" Title="D1903010014U_섹타별&#32;조사결과&#32;첨부" Top="8" Ver="1.0" Width="808" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_SearchSector">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECTOR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_FLAG" size="256" summ="default" type="STRING"/>
+					<record>
+						<ATTACH_FILE_FLAG></ATTACH_FILE_FLAG>
+						<BASE_YEAR></BASE_YEAR>
+						<BLOCK_NUM></BLOCK_NUM>
+						<SECTOR_NUM></SECTOR_NUM>
+						<ZIP_NO1></ZIP_NO1>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SectorFileData" OnColumnChanged="ds_SectorFileData_OnColumnChanged">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECTOR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORIG_ATTACH_FILE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_PATH" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_SIZE" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="USE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="FILE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK" size="256" summ="default" type="STRING"/>
+					<colinfo id="IS_LOCAL" size="256" summ="default" type="STRING"/>
+					<colinfo id="FILE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORG_FILE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="FILE_PATH" size="256" summ="default" type="STRING"/>
+					<colinfo id="FILE_SIZE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" OnClick="Image0_OnClick" Style="popup_title" TabOrder="1" TabStop="FALSE" Text="섹타별&#32;조사결과&#32;첨부" Transparent="TRUE" Width="808"></Image>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="2" TabStop="FALSE" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="801">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user16" Bottom="72" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="800" TabOrder="4" Top="69" Type="Rectangle" Width="795"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_SectorFileData" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="378" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="306" Id="grd_Main" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" OnCellClick="grd_Main_OnCellClick" Right="800" SelColor="MENU" Style="grid_pop" TabOrder="3" TabStop="true" Top="72" UseDBuff="true" UsePopupMenu="true" UseSelColor="FALSE" Visible="true" VLineColor="default" WheelScrollRow="1" Width="795">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="27"/>
+						<col width="251"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="205"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="선택"/>
+						<cell col="1" display="text" text="파일명"/>
+						<cell col="2" color="blue" display="text" text="파일사이즈"/>
+						<cell col="3" display="text" text="관리번호"/>
+						<cell col="4" display="text"/>
+						<cell col="5" display="text" text="PC경로"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CHK" display="checkbox" edit="checkbox" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="ATTACH_FILE_NM" combodisplayrowcnt="20" display="text"/>
+						<cell col="2" colid="FILE_SIZE" display="number"/>
+						<cell col="3" colid="FILE_ID" display="text"/>
+						<cell align="center" col="4" combodisplayrowcnt="20" cursor="hand" display="button" edit="button" text="다운로드"/>
+						<cell col="5" colid="ATTACH_FILE_PATH" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Color="blue" Font="돋움,8" Height="12" Id="Static1" Left="5" Style="static" TabOrder="5" Text="▶&#32;파일&#32;업로드시&#32;(파일사이즈가&#32;0&#32;일경우)&#32;업로드&#32;실패한것으로&#32;간주됩니다.&#32;해당파일&#32;삭제후&#32;다시&#32;저장바랍니다." Top="386" Width="566"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1903010014U.xml
+* Form 설명  : EPR 용지 첨부 팝업
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 송석환
+* 작성일     : 2013-03-19
+* 변경내용   : 
+*/
+#include "JS::COMMONA10001.js"
+#include "JS::COMMONA10002.js"
+#include "JS::COMMONA10005.js" 
+
+var checkAdd = true;
+
+function D1903010014U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_SetButton("11100001");	
+	fn_CommonSearch();
+}
+
+function fn_CommonSearch()
+{
+  
+  
+  
+	ds_SearchSector.SetColumn(0,"BASE_YEAR",  BASE_YEAR);
+	ds_SearchSector.SetColumn(0,"ZIP_NO1",ZIP_NO1);
+	ds_SearchSector.SetColumn(0,"SECTOR_NUM",SECTOR_NUM);
+	ds_SearchSector.SetColumn(0,"BLOCK_NUM",BLOCK_NUM);
+	ds_SearchSector.SetColumn(0,"ATTACH_FILE_FLAG",ATTACH_FILE_FLAG);
+	ds_SectorFileData.ClearData();
+	
+	var strSvcID = "view_SectorFileList";
+	var strPart = "D10";
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	//var strURL = "handle.do?ServiceName=D1903010014U-service&search=1";
+	var strInDatasets  = "ds_SearchSector=ds_SearchSector";
+	var strOutDatasets  = "ds_SectorFileData=ds_SectorFileData";
+	var strArgument  = "view_SectorFileList";
+	
+
+	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument);		
+				      
+
+	
+	trace(ds_SectorFileData.SaveXML());
+	
+}
+
+function fn_CommonAddRow()
+{
+	if(checkAdd){
+			// 하단에 행 추가 
+		var arrFile = gfn_OpenFile("","","");
+		if(length(arrFile) > 0 )
+		{
+			ds_SectorFileData.FireEvent = false;
+			var nRow = ds_SectorFileData.AddRow();
+			
+			ds_SectorFileData.SetColumn(nRow, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_SectorFileData.SetColumn(nRow, "CRT_IP", gfn_GetLocalIpAddress());
+			ds_SectorFileData.SetColumn(nRow, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_SectorFileData.SetColumn(nRow, "UPD_IP", gfn_GetLocalIpAddress());
+			
+			ds_SectorFileData.SetColumn(nRow,"FILE_PATH",     arrFile[0]); // 파일경로
+			ds_SectorFileData.SetColumn(nRow,"ATTACH_FILE_PATH",     arrFile[0]); 
+			
+			ds_SectorFileData.SetColumn(nRow,"ORG_FILE_NAME", arrFile[1]); // 파일명칭
+			ds_SectorFileData.SetColumn(nRow,"ATTACH_FILE_NM", arrFile[1]); // 파일명칭
+			ds_SectorFileData.SetColumn(nRow,"IS_LOCAL", 1         ); // 업로드 체크	
+				
+			ds_SectorFileData.FireEvent = true;	
+			
+			checkAdd=false;
+		}
+	}else{
+		alert("첨부파일은 한개씩 추가 가능 합니다. 저장버튼을 먼저 눌러주세요");
+	}
+	
+}
+
+function fn_CommonDeleteRow()
+{
+	var check = ds_SectorFileData.GetColumn(ds_SectorFileData.Row,"CHK");
+
+	if(check == 1) {
+	
+		ds_SectorFileData.DeleteRow(ds_SectorFileData.Row);
+	
+	}else{
+		// 먼저 선택란을 체크한후 삭제를 클릭하세요
+		alert(gfn_GetMessage("M000020","%AAA%","먼저 선택란을 체크","%BBB%","삭제를 클릭"));
+		return;
+	}
+}
+
+function fn_CommonSave()
+{
+
+	for(var i=0;i<ds_SectorFileData.RowCount();i++)
+	{
+		ds_SectorFileData.SetColumn(i,"CHK", "0");
+	}
+
+	if( ! ds_SectorFileData.GetUpdate() )
+	{
+		//변경된 내용이 없습니다.
+		alert(gfn_GetMessage("M000008", "%AAA%", "변경된 내용이"));		
+		return;
+	}
+	
+	for(var i=0; i<ds_SectorFileData.RowCount(); i++)
+	{
+		ds_SectorFileData.SetColumn(i, "BASE_YEAR", BASE_YEAR);
+		ds_SectorFileData.SetColumn(i, "ZIP_NO1", ZIP_NO1);
+		ds_SectorFileData.SetColumn(i, "SECTOR_NUM", SECTOR_NUM);
+		ds_SectorFileData.SetColumn(i, "BLOCK_NUM", BLOCK_NUM);
+		ds_SectorFileData.SetColumn(i, "ATTACH_FILE_FLAG", ATTACH_FILE_FLAG);
+		ds_SectorFileData.SetColumn(i, "ATTACH_FILE_SIZE", 1);
+		
+	
+		if (ds_SectorFileData.GetRowType(i) == "update")
+		{
+
+			ds_SectorFileData.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_SectorFileData.SetColumn(i, "UPD_IP", gfn_GetLocalIpAddress());
+		
+		}	// update end	
+	}
+
+	var strSvcID = "save_SectorFile";
+	var strPart = "D10";
+	//var strURL = "handle.do?ServiceName=D1903010014U-service&save=1";
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	var strInDatasets  = "ds_SectorFileData=ds_SectorFileData:U";
+	var strOutDatasets  = "";
+	var strArgument  = "save_SectorFile";
+	var strCallbackFunc = "fn_D1_CallBack";
+	
+	
+	// 첨부화일이 있으면
+	if( ds_SectorFileData.SearchRow("IS_LOCAL=1") != -1)
+	{
+		
+		// 서버 [테스트시]
+		//G_ISLOCAL = "N";
+		
+		//alert(ds_SectorFileData.SaveXML());
+		
+			
+		var arrList = array();
+		
+		arrList = gfn_FileUploadMulti("D10",ds_SectorFileData,"FILE_ID","ORG_FILE_NAME");
+		if(arrList[0] == "SUCC")
+		{
+			// 로컬 [테스트시]
+			//G_ISLOCAL = "Y";
+	
+			gfn_AsyncCall( 
+							 strSvcID
+						   , strPart
+						   , strURL
+						   , strInDatasets
+						   , strOutDatasets
+						   , strArgument
+						   , strCallbackFunc
+					   );
+				
+		}
+		else
+		{
+			alert('File Upload 오류 발생하였습니다. File Upload 최대 용량은 20MB가 입니다.\n첨부 파일 용량 확인 후 관리자에게 문의 바랍니다.');
+		}
+	}
+	else
+	{
+			// 첨부화일이 없으면서 데이터만 수정시
+			gfn_AsyncCall( 
+							 strSvcID
+						   , strPart
+						   , strURL
+						   , strInDatasets
+						   , strOutDatasets
+						   , strArgument
+						   , strCallbackFunc
+					   );
+					   
+	}
+checkAdd = true;
+}
+
+function ds_TopData_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+
+
+
+   if(ds_SectorFileData.getColumn(nRow,"CHK") == "1")
+	{
+		for(var i=0;i<ds_SectorFileData.RowCount();i++)
+		{
+			if (nRow != i)
+				ds_SectorFileData.SetColumn(i,"CHK", "0");
+		}
+	}	
+	
+}
+
+function grd_Main_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex) 
+{
+	var str_Col = grd_Main.GetCellProp("body",,"ColId");
+	
+	
+	if(nCell == "4") // 다운로드
+	{
+	
+
+		gfn_FileDownloadExec(ds_SectorFileData.GetColumn(nRow,"FILE_ID"),ds_SectorFileData.GetColumn(nRow,"ATTACH_FILE_NM"));
+	}
+}
+
+function fn_D1_CallBack(SrvID,ErrorCode,ErrorMsg)
+{
+
+	if(ErrorCode < 0) {
+	
+		alert(ErrorMsg);
+		return;
+	}
+	
+    switch(SrvID){
+    
+        case "save_SectorFile":
+			alert(gfn_GetMessage("M000009", "%AAA%", "저장을"));
+			fn_CommonSearch();
+			break;
+			
+        default:
+    }
+}
+
+
+function ds_SectorFileData_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	
+   if(ds_SectorFileData.getColumn(nRow,"CHK") == "1")
+	{
+		for(var i=0;i<ds_SectorFileData.RowCount();i++)
+		{
+			if (nRow != i)
+				ds_SectorFileData.SetColumn(i,"CHK", "0");
+		}
+	}	
+}
+]]></Script>
+</Window>

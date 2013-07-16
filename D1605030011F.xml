@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1605030011F" Left="8" OnLoadCompleted="D1605030011F_OnLoadCompleted" PidAttrib="7" Title="정비보수정산현황" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Req">
+				<Contents>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_L_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_M_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADJ_TYPE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_BILL_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="IND_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIR_BILL_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIR_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="IND_BILL_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_TYPE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search_Req">
+				<Contents>
+					<colinfo id="STR_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search_Acc">
+				<Contents>
+					<colinfo id="STR_ASSENT_YMD_WORK" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ASSENT_YMD_WORK" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ASSENT_YMD_DIR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ASSENT_YMD_DIR" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ASSENT_YMD_IND" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ASSENT_YMD_IND" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Req_amt"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Acc_amt"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search_amt">
+				<Contents>
+					<colinfo id="REQ_YMD_START" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_YMD_END" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Acc">
+				<Contents>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADJ_TYPE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_BILL_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="IND_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIR_BILL_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIR_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="IND_BILL_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_L_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_M_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_DESC" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team">
+				<Contents>
+					<colinfo id="KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape3" Left="8" LineColor="user7" Right="1271" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="30" Type="RoundRect" Width="1263"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape0" Left="13" LineWidth="0" Right="1266" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="0" Top="35" Type="Rectangle" Width="1253"></Shape>
+		<Shape BKColor="user6" Bottom="-1" Height="39" Id="Shape1" Left="-88" LineColor="user7" Right="907" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="2" Top="-40" Type="RoundRect" Width="995"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image3" ImageID="blt" Left="18" LeftMargin="12" Style="blt_search" TabOrder="2" TabStop="FALSE" Text="지사" Top="41" Width="119"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_branch" Left="58" OnChanged="cob_Branch_OnChanged" Style="edit_Indis" TabOrder="1" Top="41" Width="127"></Combo>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="6" TabStop="FALSE" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1274">
+			<Contents></Contents>
+		</Div>
+		<Tab Border="Flat" FixedImage="FALSE" Height="768" Id="tab_FaciReg" Left="8" OnChanged="tab_FaciReg_OnChanged" Style="tab" TabOrder="7" TabStop="FALSE" Top="72" Width="1263">
+			<Contents>
+				<TabPage Height="738" Id="tab10" ImageID="tab" Left="2" TabOrder="1" Text="의뢰일별정산내역" Top="28" Url="D10::D1605030011F_T01.xml" Width="1259"></TabPage>
+				<TabPage Height="738" Id="tab11" ImageID="tab" Left="2" TabOrder="1" Text="승인일별정산내역" Top="28" Url="D10::D1605030011F_T02.xml" Width="1259"></TabPage>
+				<TabPage Height="738" Id="tab12" ImageID="tab" Left="2" TabOrder="1" Text="업체별공사비집계" Top="28" Url="D10::D1605030011F_T03.xml" Width="1259"></TabPage>
+			</Contents>
+		</Tab>
+		<Image Align="Left" Color="blue" Height="18" Id="Image1" ImageID="blt" Left="359" LeftMargin="12" Style="blt_search_1" TabOrder="9" Text="시/구" Top="41" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" ImeMode="none" Left="403" Style="combo_indis" TabOrder="8" Top="41" Width="114"></Combo>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="835" LeftMargin="12" Style="blt_search" TabOrder="11" TabStop="FALSE" Text="정비의뢰일자" Top="41" Width="119"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Ymd_From" Left="928" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="10" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Ymd_To" Left="1032" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="12" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="18" Id="Image12" ImageID="blt" Left="522" LeftMargin="12" Style="blt_search" TabOrder="13" Text="시공사" Top="42" Width="61"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_WorkFirmCd" ImeMode="none" Left="575" OnChanged="edt_WorkFirmCd_OnChanged" OnChar="edt_WorkFirmCd_OnChar" Style="edit" TabOrder="14" Top="42" Width="85"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_WorkFirmNm" ImeMode="none" Left="661" Style="edit" TabOrder="15" Top="42" Width="150"></Edit>
+		<Button Cursor="HAND" Height="18" Id="btn_WorkFirmCdSearch" ImageID="search" Left="812" OnClick="btn_WorkFirmCdSearch_OnClick" TabOrder="16" Text="Button8" Top="42" Width="18"></Button>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="188" LeftMargin="12" Style="blt_search" TabOrder="18" Text="팀" Top="41" Width="61"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_TeamCdSearch" InnerDataset="ds_Team" Left="216" Style="combo_indis" TabOrder="17" Top="40" Width="140"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1605030011F.xml
+* Form 설명  : 정비보수정산 내역
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 권기철
+* 작성일     : 2010-03-30
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+var fv_COM_ID = "";
+var fv_COOP_YN = false;  // 협력사여부
+
+function D1605030011F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	
+	// fv_COM_ID = gfn_GetGlobalValue("G_COM_ID");
+	// fv_COM_ID = "92";
+	// fv_DEAL_CD = '1178118618';
+	// fv_DEAL_NM = '삼기에너지(주)';
+	if(fv_COM_ID == "92") // 시공사-협력사 여부
+	{
+		fv_COOP_YN = true;
+	}	
+	
+ 	// 시공사이면
+ 	if( fv_COOP_YN )
+ 	{
+		// 버튼 셋팅
+ 	
+		// 지사설정
+		cob_Branch.Enable = true;
+		cob_Branch.Value = "";
+		cob_Branch_OnChanged();
+		
+		// 시공사 설정
+		edt_WorkFirmCd.Text = fv_DEAL_CD;
+		edt_WorkFirmNm.Text = fv_DEAL_NM;
+
+ 	}
+ 	else
+ 	{
+		// 버튼 셋팅 	
+ 	
+ 		// SCG이면
+		
+		//-----------------------------------------
+		//  지사,팀 콤보박스의 초기 설정
+		//-----------------------------------------	
+		if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") 
+		{
+			// 지사설정
+			cob_Branch.Enable = true;
+			cob_Branch.Value = "";
+			cob_Branch_OnChanged();
+		
+		} 
+		else 
+		{
+			// 지사설정
+			cob_Branch.Enable = false;
+			cob_Branch.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+			cob_Branch_OnChanged();
+			
+		}			
+	}
+	cob_Branch_OnChanged();
+	
+}
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{	
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branch"));		//지사코드
+	cal_Ymd_From.Value = substr(AddMonth(today(),-1),0,6) + '01';
+	cal_Ymd_To.Value = today();
+	cob_branch_OnChanged();
+}
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonAddRow()
+// 설명: 구간등록 행을 추가한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonAddRow()
+{
+}
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonDeleteRow()
+// 설명: 구간등록 행을 삭제한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+
+function fn_CommonDeleteRow(){
+
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonSave()
+// 설명: 등록된 내용을 저장한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSave()
+{		
+
+}
+
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_find();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{	
+   tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_Excel();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명: 출력 button 실행, 데이터를 출력 한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonPrint(){
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_Print();
+}
+
+function tab_FaciReg_OnChanged(obj,nOldIndex,nNewindex)
+{
+	Image8.Visible = true;
+	cob_TeamCdSearch.Visible = true;
+	Image1.Visible = true;
+	cob_CountyFlag.Visible = true;
+		
+	if(nNewindex == 0)
+	{
+		Image4.text = '정비의뢰일자';
+	}		
+	else if (nNewindex == 1)
+	{
+		Image4.text = '정산승인일자';
+	}	
+	else if (nNewindex == 2)
+	{
+		Image4.text = '의뢰/승인일자';
+		Image8.Visible = false;
+		cob_TeamCdSearch.Visible = false;		
+		Image1.Visible = false;
+		cob_CountyFlag.Visible = false;
+	}		
+}
+
+
+// 정비보수업체 팝업 
+function btn_WorkFirmCdSearch_OnClick(obj)
+{
+	if (fv_COOP_YN)
+	{
+		return;
+	}
+		
+	var args =  "BRANCH_CD=" + quote(cob_Branch.Value);
+
+	var strResult = gfn_Dialog("D10","D1601010018U",args,-1,-1,true,-1,-1);
+	
+	if( length(strResult) > 0 )
+	{
+		edt_WorkFirmCd.Text = strResult[0];  // 업체코드
+		edt_WorkFirmNm.Text = strResult[1]; // 업체명
+	}
+	
+}
+
+function edt_WorkFirmCd_OnChar(obj,strPreText,nChar,strPostText,LLParam,HLParam)
+{
+	if( nChar == '8' || nChar == '46')
+	{
+		edt_WorkFirmCd.Text = "";
+		edt_WorkFirmNm.Text = "";
+	}
+}
+
+function cob_Branch_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) 
+{
+
+    fn_SetComboBox_Comcode("1", cob_Branch.value, fn_setDsObject_Comcode("1", "cob_CountyFlag"));
+    cob_CountyFlag.Value = "";    
+    gfn_D1_SetComboBox_Teamcd("ds_Team",cob_branch);
+    cob_TeamCdSearch.Value = "";
+}
+]]></Script>
+</Window>

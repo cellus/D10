@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1603010010F" Left="8" OnLoadCompleted="D1603010010F_OnLoadCompleted" PidAttrib="7" Title="GIS&#32;데이타&#32;수정의뢰서_D1603010010F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Shape BKColor="user6" Bottom="70" Height="39" Id="Shape1" Left="6" LineColor="user7" Right="1001" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="31" Type="RoundRect" Width="995"></Shape>
+		<Shape BKColor="user8" Bottom="65" Height="29" Id="Shape2" Left="11" LineWidth="0" Right="996" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="6" Top="36" Type="Rectangle" Width="985"></Shape>
+		<Image Align="Left" Height="6" Id="Image10" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="1" Text="지사" Top="46" Width="109"></Image>
+		<Combo Border="Flat" Height="18" Id="Combo1" Left="54" Style="edit" TabOrder="2" Top="40" Width="127"></Combo>
+		<Shape BKColor="#6cbae1" Bottom="96" Height="3" Id="Shape0" Left="6" LineWidth="0" Right="1001" TabOrder="3" Top="93" Type="Rectangle" Width="995"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_test" BkColor2="#f8f8f8" BkSelColor="skyblue" BoldHead="FALSE" Border="Flat" Bottom="202" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="106" Id="Grid1" InputPanel="FALSE" Left="6" LineColor="silver" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1001" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="4" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="84"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" edit="normal" text="NO"/>
+						<cell col="1" display="text" text="의뢰일자"/>
+						<cell col="2" display="text" text="의뢰내용"/>
+						<cell col="3" display="text" text="의뢰자"/>
+						<cell col="4" display="text" text="요청일자"/>
+						<cell col="5" display="text" text="공사구분"/>
+						<cell col="6" display="text" text="시설구분"/>
+						<cell col="7" display="text" text="위험대상"/>
+					</head>
+					<body>
+						<cell col="0" display="text" edit="checkbox"/>
+						<cell col="1" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text"/>
+						<cell col="3" display="text"/>
+						<cell col="4" display="text"/>
+						<cell col="5" display="text"/>
+						<cell col="6" display="text"/>
+						<cell col="7" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="6" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="7" Text="Div0" Top="1" Url="globals::ComHead.xml" Visible="FALSE" Width="995">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="6" Id="Image0" ImageID="blt" Left="191" LeftMargin="12" Style="blt_search" TabOrder="8" Text="구" Top="46" Width="119"></Image>
+		<Combo Border="Flat" Height="18" Id="Combo0" Left="219" Style="edit" TabOrder="9" Top="40" Width="127"></Combo>
+		<Image Align="Left" Height="6" Id="Image1" ImageID="blt" Left="356" LeftMargin="12" Style="blt_search" TabOrder="10" Text="공사구분" Top="46" Width="119"></Image>
+		<Combo Border="Flat" Height="18" Id="Combo2" Left="419" Style="edit" TabOrder="11" Top="40" Width="127"></Combo>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="12" Text="정비보수&#32;의뢰내역" Top="77" Width="127"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button196" ImageID="btn_2_San" Left="950" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="13" Text="결재" Top="207" Width="50"></Button>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static30" Left="110" Style="table" TabOrder="16" Top="228" VAlign="Middle" Width="890" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static37" Left="670" Style="table" TabOrder="20" Text="입회자" Top="228" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static32" Left="110" Style="table" TabOrder="18" Top="249" VAlign="Middle" Width="890" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static1" Left="5" Style="table" TabOrder="14" Text="구분" Top="270" VAlign="Middle" Width="166" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static31" Left="5" Style="table" TabOrder="15" Text="확인일자" Top="228" VAlign="Middle" Width="166" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static33" Left="5" Style="table" TabOrder="17" Text="위치" Top="249" VAlign="Middle" Width="166" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static36" Left="335" Style="table" TabOrder="19" Text="확인방법" Top="228" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="670" Style="table" TabOrder="21" Text="배관번호" Top="249" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="Edit2" ImeMode="none" Left="173" Style="edit" TabOrder="22" Top="251" Width="494"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit9" ImeMode="none" Left="798" Style="edit" TabOrder="23" Top="251" Width="198"></Edit>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar0" Left="173" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="24" Top="230" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static0" Left="170" Style="table" TabOrder="25" Text="기존현황(도면)" Top="270" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static5" Left="670" Style="table" TabOrder="27" Text="특이사항" Top="270" VAlign="Middle" Width="330" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static6" Left="420" Style="table" TabOrder="26" Text="실제현황(현장)" Top="270" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="127" Id="Static2" Left="5" Style="table" TabOrder="28" Text="시설내역" Top="291" VAlign="Middle" Width="77" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static3" Left="81" Style="table" TabOrder="29" Text="압력" Top="291" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static7" Left="81" Style="table" TabOrder="30" Text="노출연장" Top="312" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static8" Left="81" Style="table" TabOrder="32" Text="이격거리" Top="354" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static9" Left="81" Style="table" TabOrder="31" Text="재질" Top="333" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static10" Left="81" Style="table" TabOrder="34" Text="코팅상태" Top="396" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static11" Left="81" Style="table" TabOrder="33" Text="심도" Top="375" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static12" Left="170" Style="table" TabOrder="35" Top="291" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static13" Left="420" Style="table" TabOrder="36" Top="291" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="127" Id="Static14" Left="670" Style="table" TabOrder="37" Top="291" VAlign="Middle" Width="330" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static15" Left="170" Style="table" TabOrder="38" Top="312" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static16" Left="420" Style="table" TabOrder="39" Top="312" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static18" Left="170" Style="table" TabOrder="42" Top="354" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static19" Left="420" Style="table" TabOrder="43" Top="354" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static21" Left="170" Style="table" TabOrder="40" Top="333" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static22" Left="420" Style="table" TabOrder="41" Top="333" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static24" Left="170" Style="table" TabOrder="46" Top="396" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static25" Left="420" Style="table" TabOrder="47" Top="396" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static27" Left="170" Style="table" TabOrder="44" Top="375" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static28" Left="420" Style="table" TabOrder="45" Top="375" VAlign="Middle" Width="251" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="34" Id="Static35" Left="110" Style="table" TabOrder="49" Top="417" VAlign="Middle" Width="890" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="34" Id="Static34" Left="5" Style="table" TabOrder="48" Text="기타(정비내용&#32;등)" Top="417" VAlign="Middle" Width="166" WordWrap="TRUE"></Static>
+		<TextArea Border="Flat" Height="30" Id="TextArea0" Left="174" Style="textarea" TabOrder="50" Text="TextArea0" Top="419" VScroll="TRUE" Width="822"></TextArea>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static38" Left="81" Style="table" TabOrder="51" Text="내용" Top="450" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static39" Left="170" Style="table" TabOrder="52" Text="관경" Top="450" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static40" Left="406" Style="table" TabOrder="54" Text="년도" Top="450" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static41" Left="288" Style="table" TabOrder="53" Text="재질" Top="450" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="106" Id="Static42" Left="5" Style="table" TabOrder="55" Text="정비작업현황" Top="450" VAlign="Middle" Width="77" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static43" Left="81" Style="table" TabOrder="56" Text="작업전" Top="471" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static44" Left="81" Style="table" TabOrder="57" Text="작업후" Top="492" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static45" Left="81" Style="table" TabOrder="59" Text="작업후" Top="534" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static46" Left="81" Style="table" TabOrder="58" Text="작업전" Top="513" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static48" Left="110" Style="table" TabOrder="61" Top="555" VAlign="Middle" Width="890" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static47" Left="5" Style="table" TabOrder="60" Text="도면캡쳐첨부" Top="555" VAlign="Middle" Width="166" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static61" Left="761" Style="table" TabOrder="64" Text="수취기" Top="450" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static62" Left="642" Style="table" TabOrder="63" Text="T/B" Top="450" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static63" Left="524" Style="table" TabOrder="62" Text="밸브" Top="450" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static64" Left="880" Style="table" TabOrder="65" Text="기타" Top="450" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static49" Left="170" Style="table" TabOrder="66" Top="471" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static50" Left="406" Style="table" TabOrder="68" Top="471" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static51" Left="288" Style="table" TabOrder="67" Top="471" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static52" Left="761" Style="table" TabOrder="71" Top="471" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static53" Left="642" Style="table" TabOrder="70" Top="471" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static54" Left="524" Style="table" TabOrder="69" Top="471" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static55" Left="880" Style="table" TabOrder="72" Top="471" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static56" Left="170" Style="table" TabOrder="73" Top="492" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static57" Left="406" Style="table" TabOrder="75" Top="492" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static58" Left="288" Style="table" TabOrder="74" Top="492" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static59" Left="761" Style="table" TabOrder="78" Top="492" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static60" Left="642" Style="table" TabOrder="77" Top="492" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static65" Left="524" Style="table" TabOrder="76" Top="492" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static66" Left="880" Style="table" TabOrder="79" Top="492" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static67" Left="170" Style="table" TabOrder="80" Top="513" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static68" Left="406" Style="table" TabOrder="82" Top="513" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static69" Left="288" Style="table" TabOrder="81" Top="513" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static70" Left="761" Style="table" TabOrder="85" Top="513" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static71" Left="642" Style="table" TabOrder="84" Top="513" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static72" Left="524" Style="table" TabOrder="83" Top="513" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static73" Left="170" Style="table" TabOrder="87" Top="534" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static74" Left="406" Style="table" TabOrder="89" Top="534" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static75" Left="288" Style="table" TabOrder="88" Top="534" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static76" Left="761" Style="table" TabOrder="92" Top="534" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static77" Left="642" Style="table" TabOrder="91" Top="534" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static78" Left="524" Style="table" TabOrder="90" Top="534" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static79" Left="880" Style="table" TabOrder="93" Top="534" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static80" Left="880" Style="table" TabOrder="86" Top="513" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="Edit0" ImeMode="none" Left="798" Style="edit" TabOrder="94" Top="230" Width="198"></Edit>
+		<Combo Border="Flat" Height="18" Id="Combo3" Left="462" Style="edit" TabOrder="95" Top="229" Width="206"></Combo>
+		<Edit Border="Flat" Height="123" Id="Edit1" ImeMode="none" Left="674" Style="edit" TabOrder="96" Top="293" Width="322"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit3" ImeMode="none" Left="174" Style="edit" TabOrder="97" Top="293" Width="243"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit4" ImeMode="none" Left="174" Style="edit" TabOrder="98" Top="314" Width="243"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit5" ImeMode="none" Left="174" Style="edit" TabOrder="100" Top="356" Width="243"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit6" ImeMode="none" Left="174" Style="edit" TabOrder="99" Top="335" Width="243"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit7" ImeMode="none" Left="174" Style="edit" TabOrder="102" Top="398" Width="243"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit8" ImeMode="none" Left="174" Style="edit" TabOrder="101" Top="377" Width="243"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit10" ImeMode="none" Left="424" Style="edit" TabOrder="108" Top="398" Width="243"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit11" ImeMode="none" Left="424" Style="edit" TabOrder="107" Top="377" Width="243"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit12" ImeMode="none" Left="424" Style="edit" TabOrder="106" Top="356" Width="243"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit13" ImeMode="none" Left="424" Style="edit" TabOrder="105" Top="335" Width="243"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit14" ImeMode="none" Left="424" Style="edit" TabOrder="104" Top="314" Width="243"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit15" ImeMode="none" Left="424" Style="edit" TabOrder="103" Top="293" Width="243"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit16" ImeMode="none" Left="174" Style="edit" TabOrder="109" Top="557" Width="822"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit17" ImeMode="none" Left="174" Style="edit" TabOrder="110" Top="473" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit18" ImeMode="none" Left="174" Style="edit" TabOrder="111" Top="494" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit19" ImeMode="none" Left="174" Style="edit" TabOrder="113" Top="536" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit20" ImeMode="none" Left="174" Style="edit" TabOrder="112" Top="515" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit21" ImeMode="none" Left="292" Style="edit" TabOrder="117" Top="536" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit22" ImeMode="none" Left="292" Style="edit" TabOrder="116" Top="515" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit23" ImeMode="none" Left="292" Style="edit" TabOrder="115" Top="494" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit24" ImeMode="none" Left="292" Style="edit" TabOrder="114" Top="473" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit25" ImeMode="none" Left="410" Style="edit" TabOrder="121" Top="536" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit26" ImeMode="none" Left="410" Style="edit" TabOrder="120" Top="515" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit27" ImeMode="none" Left="410" Style="edit" TabOrder="119" Top="494" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit28" ImeMode="none" Left="410" Style="edit" TabOrder="118" Top="473" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit29" ImeMode="none" Left="765" Style="edit" TabOrder="133" Top="536" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit30" ImeMode="none" Left="765" Style="edit" TabOrder="132" Top="515" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit31" ImeMode="none" Left="765" Style="edit" TabOrder="131" Top="494" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit32" ImeMode="none" Left="765" Style="edit" TabOrder="130" Top="473" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit33" ImeMode="none" Left="646" Style="edit" TabOrder="126" Top="473" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit34" ImeMode="none" Left="646" Style="edit" TabOrder="127" Top="494" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit35" ImeMode="none" Left="646" Style="edit" TabOrder="128" Top="515" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit36" ImeMode="none" Left="646" Style="edit" TabOrder="129" Top="536" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit37" ImeMode="none" Left="528" Style="edit" TabOrder="125" Top="536" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit38" ImeMode="none" Left="528" Style="edit" TabOrder="124" Top="515" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit39" ImeMode="none" Left="528" Style="edit" TabOrder="123" Top="494" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit40" ImeMode="none" Left="528" Style="edit" TabOrder="122" Top="473" Width="111"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit41" ImeMode="none" Left="884" Style="edit" TabOrder="137" Top="536" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit42" ImeMode="none" Left="884" Style="edit" TabOrder="136" Top="515" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit43" ImeMode="none" Left="884" Style="edit" TabOrder="135" Top="494" Width="112"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit44" ImeMode="none" Left="884" Style="edit" TabOrder="134" Top="473" Width="112"></Edit>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+function D1603010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+}]]></Script>
+</Window>

@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="544" Id="D1402020010F" Left="8" OnLoadCompleted="D1402020010F_OnLoadCompleted" OnUnloadCompleted="D1402020010F_OnUnloadCompleted" PidAttrib="7" Title="굴착공사영향평가의견서" Top="8" Ver="1.0" Width="1005" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_List">
+				<Contents>
+					<colinfo id="EOCS_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_DOCU_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_SEND_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEND_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_WRITE_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_SEND_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_multiIn">
+				<Contents>
+					<colinfo id="EOCS_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_DOCU_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_multiOut">
+				<Contents>
+					<colinfo id="EOCS_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_SEND_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEND_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_WRITE_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_SEND_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_WRITE_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FileList"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FileList2"></Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="72" Height="39" Id="Shape3" Left="6" LineColor="user7" Right="1000" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="15" Top="33" Type="RoundRect" Width="994"></Shape>
+		<Shape BKColor="user8" Bottom="68" Height="32" Id="Shape2" Left="10" LineWidth="0" Right="995" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="16" Top="36" Type="Rectangle" Width="985"></Shape>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static8" Left="5" Style="table" TabOrder="1" Top="448" VAlign="Middle" Width="995" WordWrap="TRUE"></Static>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="2" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="995">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="10" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="5" Text="대상&#32;현황(영향평가)" Top="87" Width="210"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_List" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="296" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="189" Id="grd_list" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="fn_D10_OnCellClick" Right="1000" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="107" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="43"/>
+						<col width="275"/>
+						<col width="92"/>
+						<col width="128"/>
+						<col width="203"/>
+						<col width="100"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="순서"/>
+						<cell col="1" display="text" text="공사명"/>
+						<cell col="2" display="text" text="접수일자"/>
+						<cell col="3" display="text" text="회사명"/>
+						<cell col="4" display="text" text="의뢰내용"/>
+						<cell col="5" display="text" text="회신일"/>
+						<cell col="6" display="text" text="회신내용"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="RECEIVE_DOCU_NUM" display="text" expandsize="18" expr="rowindex&#32;+1" wordwrap="word"/>
+						<cell col="1" colid="DIG_WORK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="RECEIVE_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="DIG_FIRM_NM" display="text"/>
+						<cell align="center" col="4" colid="RECEIVE_NM" display="text"/>
+						<cell col="5" colid="SEND_YMD" display="date"/>
+						<cell col="6" colid="DOCU_SEND_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="#6cbae1" Bottom="107" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1000" TabOrder="4" Top="104" Type="Rectangle" Width="995"></Shape>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static15" Left="5" Style="table" TabOrder="6" Top="320" VAlign="Middle" Width="995" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="6" Id="Image5" ImageID="blt" Left="19" LeftMargin="12" Style="blt_search_Indis" TabOrder="7" Text="지사" Top="49" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="152" LeftMargin="12" Style="blt_search_Indis" TabOrder="8" Text="시/구" Top="49" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="62" OnChanged="cob_BranchCd_OnChanged" Search="FILTERED" Style="combo_indis" TabOrder="9" Top="43" Width="84"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_ZipCd1" ImeMode="none" Left="198" Style="combo_indis" TabOrder="10" Top="43" Width="84"></Combo>
+		<Image Align="Left" Height="6" Id="Image6" ImageID="blt" Left="287" LeftMargin="12" Style="blt_search_1" TabOrder="11" Text="접수일자" Top="50" Width="61"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ReceiveYmd1" Left="352" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="12" Top="43" WeeksFont="Default,-1" Width="83"></Calendar>
+		<Static Height="13" Id="Static2" Left="436" Style="static" TabOrder="13" Text="~" Top="46" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ReceiveYmd2" Left="446" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="14" Top="43" WeeksFont="Default,-1" Width="83"></Calendar>
+		<Image Align="Left" Height="10" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="17" Text="접수등록" Top="303" Width="210"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static3" Left="5" Style="table" TabOrder="18" Top="341" VAlign="Middle" Width="995" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="5" Style="table" TabOrder="19" Text="문서번호" Top="320" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_multiIn" Border="Flat" Column="RECEIVE_DOCU_NUM" Height="18" Id="edt_ReceiveDocuNum" Left="118" Style="edit" TabOrder="20" Top="322" Width="149"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="269" Style="table" TabOrder="21" Text="접수일자" Top="320" VAlign="Middle" Width="78" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_multiIn" Border="Flat" Column="RECEIVE_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar0" Left="349" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="22" Top="322" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static9" Left="5" Style="table" TabOrder="23" Top="362" VAlign="Middle" Width="995" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static11" Left="5" Style="table" TabOrder="24" Top="383" VAlign="Middle" Width="995" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static16" Left="5" Style="table" TabOrder="25" Text="담당자명" Top="341" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_multiIn" Border="Flat" Column="TAKER_NM" Height="18" Id="Edit5" Left="118" Style="edit" TabOrder="26" Top="343" Width="149"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static17" Left="269" Style="table" TabOrder="27" Text="연락처" Top="341" VAlign="Middle" Width="78" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_multiIn" Border="Flat" Column="TEL_DDD" Height="18" Id="cob_LargeTaker1TelDdd" Left="348" Style="combo" TabOrder="29" Top="342" Width="56"></Combo>
+		<Static Height="13" Id="Static18" Left="404" Style="static" TabOrder="28" Text="-" Top="345" Width="10"></Static>
+		<Edit BindDataset="ds_multiIn" Border="Flat" Column="TEL_EXN" Height="18" Id="Edit6" ImeMode="none" Left="412" MaxLength="4" Number="TRUE" Style="edit" TabOrder="30" Top="343" Width="44"></Edit>
+		<Static Height="13" Id="Static19" Left="457" Style="static" TabOrder="31" Text="-" Top="345" Width="10"></Static>
+		<Edit BindDataset="ds_multiIn" Border="Flat" Column="TEL_NUM" Height="18" Id="Edit8" ImeMode="none" Left="466" MaxLength="4" Number="TRUE" Style="edit" TabOrder="32" Top="343" Width="45"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static20" Left="5" Style="table" TabOrder="33" Text="의뢰내용" Top="362" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static21" Left="5" Style="table" TabOrder="34" Text="비고" Top="383" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_multiIn" Border="Flat" Column="RECEIVE_NM" Height="18" Id="Edit10" Left="118" Style="edit" TabOrder="35" Top="364" Width="879"></Edit>
+		<Edit BindDataset="ds_multiIn" Border="Flat" Column="RMK" Height="18" Id="Edit11" Left="118" Style="edit" TabOrder="36" Top="385" Width="879"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static25" Left="114" Style="table" TabOrder="38" Top="404" VAlign="Middle" Width="886" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edtFileList" Left="118" LowerOnly="TRUE" Style="edit" TabOrder="39" Top="406" Width="802"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="18" Id="Button3" ImageID="btn_4_fileadd" Left="921" LeftMargin="21" OnClick="bt_d1_FileUpload" Style="button" TabOrder="40" Text="파일첨부&#32;" Top="406" Width="75"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static27" Left="5" Style="table" TabOrder="37" Text="문서첨부" Top="404" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="10" Id="Image2" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image2_OnClick" Style="text_title" TabOrder="41" Text="공문발송&#32;등록" Top="434" Width="210"></Image>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static28" Left="5" Style="table" TabOrder="42" Text="문서번호" Top="448" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static29" Left="269" Style="table" TabOrder="43" Text="발송일자" Top="448" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static31" Left="5" Style="table" TabOrder="44" Top="469" VAlign="Middle" Width="995" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static32" Left="5" Style="table" TabOrder="45" Top="490" VAlign="Middle" Width="995" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static33" Left="5" Style="table" TabOrder="46" Text="회신내용" Top="469" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static34" Left="5" Style="table" TabOrder="47" Text="비고" Top="490" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_multiOut" Border="Flat" Column="DOCU_SEND_NM" Height="18" Id="Edit13" Left="118" Style="edit" TabOrder="48" Top="471" Width="879"></Edit>
+		<Edit BindDataset="ds_multiOut" Border="Flat" Column="RMK" Height="18" Id="Edit14" Left="118" Style="edit" TabOrder="49" Top="492" Width="879"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static35" Left="114" Style="table" TabOrder="51" Top="511" VAlign="Middle" Width="886" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edtFileList2" Left="118" LowerOnly="TRUE" Style="edit" TabOrder="52" Top="513" Width="802"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="18" Id="Button4" ImageID="btn_4_fileadd" Left="921" LeftMargin="21" OnClick="bt_d1_FileUpload2" Style="button" TabOrder="53" Text="파일첨부&#32;" Top="513" Width="75"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static36" Left="5" Style="table" TabOrder="50" Text="문서첨부" Top="511" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_multiOut" Border="Flat" Column="DOCU_SEND_NUM" Height="18" Id="edt_DocuSendNum" Left="118" Style="edit" TabOrder="54" Top="450" Width="149"></Edit>
+		<Calendar BindDataset="ds_multiOut" Border="Flat" Column="SEND_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar1" Left="381" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="55" Top="450" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static37" Left="472" Style="table" TabOrder="56" Text="발송자" Top="448" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_multiOut" Border="Flat" Column="DOCU_WRITE_EMPID_NM" Height="18" Id="edt_WriteEmpid" Left="560" Style="edit" TabOrder="57" Top="450" Width="149"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button5" ImageID="search" Left="711" OnClick="btn_CardUserEmpNm" TabOrder="58" Text="Button8" ToolTipText="업무그룹별&#32;조회" Top="450" Width="17"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static0" Left="439" Style="table" TabOrder="59" Text="회사명" Top="320" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_multiIn" Border="Flat" Column="DIG_FIRM_NM" Height="18" Id="Edit0" Left="550" Style="edit" TabOrder="60" Top="322" Width="447"></Edit>
+	</Form>
+	<Script><![CDATA[/*******************************************************************************
+* FormID     : D1402020010F.xml
+* Form 설명  : 굴착공사영향평가의견내역을 저장 조회한다.
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 문달호
+* 작성일     : 2009-02-04
+* 변경내용   : 
+*******************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+var eocsNum="";
+var digWorkFlag="";
+function D1402020010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//------------------------------------------------
+// 초기 설정 
+//--------------------------------------------------
+
+function fn_Init()
+
+{
+    eocsNum=EOCS_NUM;
+    digWorkFlag=DIG_WORK_PATH_FLAG;
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	fn_SetComboBox_Comcode("1", cob_BranchCd.Value, fn_setDsObject_Comcode("1", "cob_ZipCd1"));
+	gfn_SetComboBox_Comcode("A10110",gfn_setDsObject_Comcode("cob_LargeTaker1TelDdd"));
+	//gfn_SetComboBox_Comcode("B10004",gfn_setDsObject_Comcode("cob_ZipCd1")); //작업종류
+	
+	
+	fn_D10_SearchList();
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 행추가
+//---------------------------------------------------------
+function fn_CommonAddRow()
+{
+	if(ds_multiIn.GetRowCount()>0 && ds_multiOut.GetRowCount()>0)
+	{
+		ds_multiIn.AddRow();
+		ds_multiOut.AddRow();
+		edt_ReceiveDocuNum.Enable=true;
+		edt_DocuSendNum.Enable=true;
+	}
+	if(ds_multiIn.GetRowCount()<1)
+	{
+		ds_multiIn.AddRow();
+		edt_ReceiveDocuNum.Enable=true;
+	}
+	if(ds_multiOut.GetRowCount()<1)
+	{
+		ds_multiOut.AddRow();
+		edt_DocuSendNum.Enable=true;
+	}
+}
+
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonExcelExport()
+//   설명  :  엑셀다운 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 :" + RPad(cob_BranchCd.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipCd1.Text," ",20);
+    SearchCondition = SearchCondition + "접수일자 :" + RPad(cal_ReceiveYmd1.Text +" ~ "+ cal_ReceiveYmd2.Text," ",20);
+    gfn_ExportExcel("굴착공사영향평가의견서내역", 5, SearchCondition, "grd_list"); 
+	
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonSave()
+//   설명  :  저장 버튼 클릭시 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+
+function fn_CommonSave()
+{
+		
+		if(ds_multiIn.GetUpdate()==0 && ds_multiOut.GetUpdate()==0)
+		{
+			alert(gfn_GetMessage("M000008","%AAA%","변경된 값이"));
+		}
+		
+		if(edt_ReceiveDocuNum.Text != "")
+		{
+			if(ds_multiIn.GetUpdate()!=0)
+			{
+				//alert(ds_multiIn.GetUpdate());
+				fn_D10_saveIn();
+			}
+		}	
+		if(edt_DocuSendNum.Text != "")
+		{
+			if(ds_multiOut.GetUpdate()!=0)
+			{
+				//alert(ds_multiOut.GetUpdate());
+				fn_D10_saveOut();
+			}
+		}	
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonSearch()
+//   설명  :  조회 클릭시 굴착공사 조회 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_CommonSearch()
+{
+	
+	fn_D10_SearchList();
+}
+
+
+//-----------------------------------------
+//  함수명 : fn_D10_SearchList()
+//  내 용  : 대상현황(영향평가 대상) 
+//  args   :
+// return  : 
+//-----------------------------------------
+
+function fn_D10_SearchList()
+{
+	var brcd= cob_BranchCd.VALUE;
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkValuaOpiniMgr-service&list=1"
+				+ "&EOCS_NUM="  + eocsNum
+				+ "&DIG_WORK_PATH_FLAG="+ digWorkFlag
+	            + "&BRANCH_CD="+ brcd
+	            + "&STR_ZIP_NO1="+ cob_ZipCd1.Value
+	            + "&RECEIVE_YMD1="+ cal_ReceiveYmd1.Value
+	            + "&RECEIVE_YMD2="+ cal_ReceiveYmd2.Value
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_List=ds_List";
+	var strArgument     = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+
+}
+
+//-----------------------------------------------------------
+// 함수명 : fn_D10_OnCellClick1()
+// 내 용  : 세부 조회
+// args   : 
+// return : 
+//-----------------------------------------------------------
+
+function fn_D10_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fn_D10_Serach_In(nRow);
+	fn_D10_Serach_Out(nRow);
+}
+
+//-----------------------------------------
+//   fn_D10_Serach_In()
+//  접수등록  리스트 
+//-----------------------------------------
+
+function fn_D10_Serach_In(nRow)
+{
+   
+
+    var veocs_num    = ds_List.GetColumn(nRow,"EOCS_NUM");
+    var vdig_flag    = ds_List.GetColumn(nRow,"DIG_WORK_PATH_FLAG");
+    var vreceive_docu= ds_List.GetColumn(nRow,"RECEIVE_DOCU_NUM");
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkValuaOpiniMgr-service&searchIn=1"
+		        + "&EOCS_NUM="+ veocs_num
+	            + "&DIG_WORK_PATH_FLAG="+ vdig_flag
+	            + "&RECEIVE_DOCU_NUM=" + vreceive_docu
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_multiIn=ds_multiIn";
+	var strArgument     = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	edt_ReceiveDocuNum.Enable=false;
+	fn_d1_FileSearch1();
+}
+
+
+//-----------------------------------------
+//   fn_D10_Serach_Out()
+// 발송등록 조회 
+//-----------------------------------------
+
+function fn_D10_Serach_Out(nRow)
+{
+
+    var veocs_num = ds_List.GetColumn(nRow,"EOCS_NUM");
+    var vdig_flag = ds_List.GetColumn(nRow,"DIG_WORK_PATH_FLAG");
+    var vsend_docu= ds_List.GetColumn(nRow,"DOCU_SEND_NUM");
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkValuaOpiniMgr-service&searchOut=1"
+			    + "&EOCS_NUM="+ veocs_num
+	            + "&DIG_WORK_PATH_FLAG="+ vdig_flag
+	            + "&DOCU_SEND_NUM=" + vsend_docu
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_multiOut=ds_multiOut";
+	var strArgument     = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	edt_DocuSendNum.Enable=false;
+	fn_d1_FileSearch2();
+}
+
+
+//-----------------------------------------
+//   접수공문 저장 수정
+//-----------------------------------------
+
+function fn_D10_saveIn()
+{
+    
+	//ds_multiIn.SetColumn(0,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_multiIn.SetColumn(0,"UPD_IP","128.0.0.1");
+	ds_multiIn.SetColumn(0,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+	//ds_multiIn.SetColumn(0,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_multiIn.SetColumn(0,"CRT_IP","128.0.0.1");
+	ds_multiIn.SetColumn(0,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+	ds_multiIn.SetColumn(0,"EOCS_NUM",eocsNum);
+	ds_multiIn.SetColumn(0,"DIG_WORK_PATH_FLAG",digWorkFlag);
+	
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkValuaOpiniMgr-service&insert1=1";
+	var strInDatasets   = "ds_multiIn=ds_multiIn:u";
+	var strOutDatasets  = "";
+	var strArgument     = "";
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+
+}
+
+//-----------------------------------------
+//   공문발송
+//-----------------------------------------
+
+function fn_D10_saveOut()
+{
+    
+   // ds_multiOut.SetColumn(0,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+    ds_multiOut.SetColumn(0,"UPD_IP","120.0.0.1");
+	ds_multiOut.SetColumn(0,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+	//ds_multiOut.SetColumn(0,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_multiOut.SetColumn(0,"CRT_IP","120.0.0.1");
+	ds_multiOut.SetColumn(0,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+	ds_multiOut.SetColumn(0,"EOCS_NUM",eocsNum);
+	ds_multiOut.SetColumn(0,"DIG_WORK_PATH_FLAG",digWorkFlag);
+	ds_multiOut.SetColumn(0,"RECEIVE_DOCU_NUM",ds_multiIn.GetColumn(0,"RECEIVE_DOCU_NUM"));
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkValuaOpiniMgr-service&insert2=1";
+	var strInDatasets   = "ds_multiOut=ds_multiOut:u";
+	var strOutDatasets  = "";
+	var strArgument     = "";
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+
+}
+
+
+
+function btn_CardUserEmpNm(obj)
+{
+	var retValue = gfn_E2_SearchEmplDialog(edt_WriteEmpid.Text); //사용자코드(조회조건용)
+	ds_multiOut.SetColumn(0,"DOCU_WRITE_EMPID",retValue[0]);
+
+	edt_WriteEmpid.Text=retValue[1];
+}
+
+function D1402020010F_OnUnloadCompleted(obj)
+{
+	if(ds_MultiIn.GetUpdate()||ds_MultiOut.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 값이 있습니다. 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+
+//--------------------------------------------------------------------------
+//  함수명 : bt_d1_FileUpload()
+//  내용   : 접수등록 파일 업로드 
+//  args   :
+//  rerurn :
+//---------------------------------------------------------------------------
+
+function bt_d1_FileUpload(obj)
+{
+    if(edt_ReceiveDocuNum.Text=="")
+    {
+		alert(gfn_GetMessage("M000004","%AAA%","문서번호 입력을 "));
+		return;
+    }
+	var arg = "fa_Url=handle.do?ServiceName=D1_DiggingWorkValuaOpiniMgr-service&EOCS_NUM="+ eocsNum  +"&DIG_WORK_PATH_FLAG="+ digWorkFlag +"&DOCU_NUM="+edt_ReceiveDocuNum.Text +" fa_Part=D10";
+	var arrList = gfn_Dialog("D10","D1101010018U",arg,450,280,true,-1,-1);
+	edtFileList.text = "";
+	for(var i=0; i<arrList.length; i++)
+	{
+		edtFileList.text += arrList[i];
+		if(arrList.length-1 != i) edtFileList.text += "/";
+	}
+
+}
+//--------------------------------------------------------------------------
+//  함수명 : bt_d1_FileUpload2()
+//  내용   : 공문발송 파일 업로드 
+//  args   :
+//  rerurn :
+//---------------------------------------------------------------------------
+function bt_d1_FileUpload2(obj)
+{
+    if(edt_DocuSendNum.Text=="")
+    {
+		alert(gfn_GetMessage("M000004","%AAA%","문서번호 입력을 "));
+		return;
+    }
+	var arg = "fa_Url=handle.do?ServiceName=D1_DiggingWorkValuaOpiniMgr-service&EOCS_NUM="+ eocsNum  +"&DIG_WORK_PATH_FLAG="+ digWorkFlag +"&DOCU_NUM="+edt_DocuSendNum.Text +" fa_Part=D10";
+	var arrList = gfn_Dialog("D10","D1101010018U",arg,450,280,true,-1,-1);
+	edtFileList2.text = "";
+	for(var i=0; i<arrList.length; i++)
+	{
+		edtFileList2.text += arrList[i];
+		if(arrList.length-1 != i) edtFileList2.text += "/";
+	}
+
+}
+
+//---------------------
+// 첨부파일 조회 
+//---------------------
+
+function fn_d1_FileSearch1()
+{
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DiggingWorkValuaOpiniMgr-service&findFile=1"
+	           + "&EOCS_NUM="+eocsNum
+	           + "&DIG_WORK_PATH_FLAG="+digWorkFlag
+	           + "&DOCU_NUM="+ds_multiIn.GetColumn(0,"RECEIVE_DOCU_NUM")
+	           ;
+	var strInDatasets  = "";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_FileList=ds_FileList";
+	var strArgument  = "";
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		alert(ErrorMsg);
+		return;
+	}
+	edtFileList.text = "";
+	for(var i=0; i<ds_FileList.RowCount(); i++)
+	{
+		edtFileList.text += ds_FileList.GetColumn(i,"ATTACH_FILE_NM");
+		if(ds_FileList.RowCount()-1 != i) edtFileList.text += "/";
+		}
+	
+}
+
+function fn_d1_FileSearch2()
+{
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DiggingWorkValuaOpiniMgr-service&findFile=1"
+	           + "&EOCS_NUM="+eocsNum
+	           + "&DIG_WORK_PATH_FLAG="+digWorkFlag
+	           + "&DOCU_NUM="+ds_multiOut.GetColumn(0,"DOCU_SEND_NUM")
+	           ;
+	var strInDatasets  = "";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_FileList=ds_FileList";
+	var strArgument  = "";
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		alert(ErrorMsg);
+		return;
+	}
+	edtFileList2.text = "";
+	for(var i=0; i<ds_FileList.RowCount(); i++)
+	{
+		edtFileList2.text += ds_FileList.GetColumn(i,"ATTACH_FILE_NM");
+		if(ds_FileList.RowCount()-1 != i) edtFileList2.text += "/";
+		}
+	
+}
+
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	fn_SetComboBox_Comcode("1", cob_BranchCd.Value, fn_setDsObject_Comcode("1", "cob_ZipCd1"));
+}
+]]></Script>
+</Window>

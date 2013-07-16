@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="350" Id="D1203010011U" Left="8" OnLoadCompleted="D1203010011U_OnLoadCompleted" PidAttrib="7" Title="T/B&#32;그래프_D1203010011U" Top="8" Ver="1.0" Width="600" WorkArea="true">
+		<Image Align="Left" Height="39" Id="Image3" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="순찰점검실적&#32;-&#32;T/B" Transparent="TRUE" Width="598"></Image>
+		<Div Height="29" Id="Div0" TabOrder="2" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="593">
+			<Contents></Contents>
+		</Div>
+		<Static Align="Center" Border="Flat" Height="43" Id="Static0" Left="-1" Style="table_1" TabOrder="3" Text="본관" Top="72" VAlign="Middle" Width="300" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="43" Id="Static1" Left="299" Style="table_1" TabOrder="4" Text="공급관" Top="72" VAlign="Middle" Width="300" WordWrap="TRUE"></Static>
+		<XChart Bottom="349" Height="234" Id="ct01" Left="-1" NSeries="2" NValues="5" Right="299" Top="115" Visible="FALSE" Width="300">
+			<_PersistData>&#13;&#10;/6yI0uf230NGWDYA8vJNQ/9oYXJ0RlgsIP9WZXJzaW9uPf82LjIuMTM0Mv8uMCwgQ3VsdP91cmU9bmV1dP9yYWwsIFB1Yv9saWNL&#13;&#10;ZXlUb/9rZW49YTE4N/84ZTIwNTJjMP84ZGNlElNvZv90d2FyZUZYLlr59B/y8wAj8vAgXgR6aw0E8vABAf7/gQUqawUBawUCawYG&#13;&#10;pQSRBdUy8vAQ8vAD8vD7/4d/f4JlAXwCvwKRBQG/BUFyaWFs8vBBpG8P8vIFjgWsBQBGD1h/Ei5IaWdobCkQ/3RTZXR0aW5nZ3MQ&#13;&#10;CZMIRR8AB3YFzwEBAAgCHRMfWAWfLkF4aXOVAX0CAPECOhDy82UWKDjgAAUKRxULRxmeB88f3BmVAcCeA4UNbQ9/A40OjwUCDASb&#13;&#10;H60QDbEfYi90L+cf+R8oCy+dL8UlDloYD44FvAH68vFS+fQuQmFzZZAADxIPJA82DRd3H/wiDf8uSUdhbGxlcl95VHlwZZUBFDIl&#13;&#10;URH6DIk/lTgSlTUTjQdHCABLvwBxM/LwFeQt/Ec/+yMJLkxpbmUPSW5mb9sCvSzTAzohSUKVP5cIAbgagQEWI0V9F4UnD0RlZmEY&#13;&#10;MP8uV2luZG93cw==&#13;&#10;</_PersistData>
+		</XChart>
+		<XChart Bottom="349" Height="234" Id="ct02" Left="299" NSeries="2" NValues="5" Right="599" Top="115" Visible="FALSE" Width="300">
+			<_PersistData>&#13;&#10;/6yI0uf230NGWDYA8vJNQ/9oYXJ0RlgsIP9WZXJzaW9uPf82LjIuMTM0Mv8uMCwgQ3VsdP91cmU9bmV1dP9yYWwsIFB1Yv9saWNL&#13;&#10;ZXlUb/9rZW49YTE4N/84ZTIwNTJjMP84ZGNlElNvZv90d2FyZUZYLlr59B/y8wAj8vAgXgR6aw0E8vABAf7/gQUqawUBawUCawYG&#13;&#10;pQSRBdUy8vAQ8vAD8vD7/4d/f4JlAXwCvwKRBQG/BUFyaWFs8vBBpG8P8vIFjgWsBQBGD1h/Ei5IaWdobCkQ/3RTZXR0aW5nZ3MQ&#13;&#10;CZMIRR8AB3YFzwEBAAgCHRMfWAWfLkF4aXOVAX0CAPECOhDy82UWKDjgAAUKRxULRxmeB88f3BmVAcCeA4UNbQ9/A40OjwUCDASb&#13;&#10;H60QDbEfYi90L+cf+R8oCy+dL8UlDloYD44FvAH68vFS+fQuQmFzZZAADxIPJA82DRd3H/wiDf8uSUdhbGxlcl95VHlwZZUBFDIl&#13;&#10;URH6DIk/lTgSlTUTjQdHCABLvwBxM/LwFeQt/Ec/+yMJLkxpbmUPSW5mb9sCvSzTAzohSUKVP5cIAbgagQEWI0V9F4UnD0RlZmEY&#13;&#10;MP8uV2luZG93cw==&#13;&#10;</_PersistData>
+		</XChart>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID      : D1203010011U.xml
+* Form 설명   : T/B 그래프(POPUP)
+* 시스템 명   : 안전공급(D1)
+* 작성자      : 노준배
+* 작성일      : 2008-03-05
+* 변경내용    : 변경내용없음
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+
+//---------------------------------------------------------
+//	화면 OnLoadCompleted 이벤트처리 발생하는 함수( 화면ID_OnLoadCompleted )
+//---------------------------------------------------------
+function D1203010011U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_initData();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_initData() {
+
+	ct01.ClearData("COD_Values");
+	ct01.ClearData("COD_Colors");
+	ct01.BackColor="#e5eaeb";
+	
+	ct02.ClearData("COD_Values");
+	ct02.ClearData("COD_Colors");
+	ct02.BackColor="#e5eaeb";
+	
+	fn_Chart_Display();	
+}
+
+function fn_Chart_Display() {
+
+    // 본관
+	ct01.OpenData("COD_Values", 2, 2); // 데이타를 Chart에 뿌려주는 메소드 
+	ct01.OpenData("COD_Colors", 2, 2); // 데이타를 Chart에 뿌려주는 메소드
+	//ct01.AxisY.Grid = 1;		//가로 그리드선 보여줄지 여부 (1, 0)
+	
+	ct01.AxisY.LabelsFormat.Decimals = 0; // 소수점이하 자리수 표시 1: 첫째자리, 2: 둘째자리 3: 셋째자리	
+	ct01.AxisY.LabelsFormat.Format = "AxisFormat_Number";
+	
+	ct01.AxisY2.LabelsFormat.Decimals = 1;
+	ct01.AxisY2.LabelsFormat.Format = "AxisFormat_Number";
+	ct01.SerLegBoxObj.Docked = "Docked_Top"; // 범례위치 고정
+        
+	ct01.Series[0].Gallery = "Gallery_Bar"; // 1: Line Chart, 2:  Bar Chart 
+	ct01.Series[0].cylsides = 30;
+	ct01.Volume = 50; // 그래프의 넓이
+    
+	ct01.Series[0].Stacked = "Stacked_Normal";
+	ct01.Series[1].Stacked = "Stacked_Normal";
+
+	ct01.Series[0].Stacked = true;
+	ct01.Series[1].Stacked = true;
+	
+	
+	// 데이터및 라벨 표시 
+	ct01.Axis[2].Label(0) = "계획누계";
+	//ct01.Axis[2].Label(1) = "계획";
+	ct01.Axis[2].Label(1) = "누계실적";
+
+	//ct01.Value(0, 0) = TB1;
+	ct01.Value(0, 0) = TB2;
+	ct01.Value(0, 1) = TB3;
+		
+		ct01.Series[3].YAxis = true;
+	
+	// CloseData
+	ct01.CloseData("COD_Values");
+	ct01.CloseData("COD_Colors");
+	
+	// 공급관
+	ct02.OpenData("COD_Values", 2, 2); // 데이타를 Chart에 뿌려주는 메소드 
+	ct02.OpenData("COD_Colors", 2, 2); // 데이타를 Chart에 뿌려주는 메소드
+	//ct01.AxisY.Grid = 1;		//가로 그리드선 보여줄지 여부 (1, 0)
+	
+	ct02.AxisY.LabelsFormat.Decimals = 0; // 소수점이하 자리수 표시 1: 첫째자리, 2: 둘째자리 3: 셋째자리	
+	ct02.AxisY.LabelsFormat.Format = "AxisFormat_Number";
+	
+	ct02.AxisY2.LabelsFormat.Decimals = 1;
+	ct02.AxisY2.LabelsFormat.Format = "AxisFormat_Number";
+	ct02.SerLegBoxObj.Docked = "Docked_Top"; // 범례위치 고정
+        
+	ct02.Series[0].Gallery = "Gallery_Bar"; // 1: Line Chart, 2:  Bar Chart 
+	ct02.Series[0].cylsides = 30;
+	ct02.Volume = 50; // 그래프의 넓이
+    
+	ct02.Series[0].Stacked = "Stacked_Normal";
+	ct02.Series[1].Stacked = "Stacked_Normal";
+
+	ct02.Series[0].Stacked = true;
+	ct02.Series[1].Stacked = true;
+	
+	
+	// 데이터및 라벨 표시 
+	//ct02.Axis[2].Label(0) = "계획";
+	ct02.Axis[2].Label(0) = "계획누계";
+	ct02.Axis[2].Label(1) = "누계실적";
+
+	//ct02.Value(0, 0) = TB4;
+	ct02.Value(0, 0) = TB5;
+	ct02.Value(0, 1) = TB6;
+		
+	ct02.Series[3].YAxis = true;
+	
+	// CloseData
+	ct02.CloseData("COD_Values");
+	ct02.CloseData("COD_Colors");
+	
+	ct01.Visible = true;
+	ct02.Visible = true;
+}]]></Script>
+</Window>

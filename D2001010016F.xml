@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D2001010016F" Left="8" OnLoadCompleted="D2001010016F_OnLoadCompleted" PidAttrib="7" Title="D2001010016F_준공도&#32;진행내역&#32;조회" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DATE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="YMD_FR" size="256" summ="default" type="STRING"/>
+					<colinfo id="YMD_TO" size="256" summ="default" type="STRING"/>
+					<record>
+						<BRANCH_CD></BRANCH_CD>
+						<DATE_FLAG></DATE_FLAG>
+						<DEAL_CD></DEAL_CD>
+						<DEAL_NM></DEAL_NM>
+						<WORK_FLAG></WORK_FLAG>
+						<WORK_NM></WORK_NM>
+						<WORK_NUM></WORK_NUM>
+						<YMD_FR></YMD_FR>
+						<YMD_TO></YMD_TO>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchB10037">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchD10200">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Combo">
+				<Contents>
+					<colinfo id="CODE_ID" size="6" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="6" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_ENAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="SORT_ORDER" size="256" summ="default" type="INT"/>
+					<record>
+						<CODE_ID></CODE_ID>
+						<CODE_ITEM>10</CODE_ITEM>
+						<ITEM_ENAME>공사감독&#32;접수일</ITEM_ENAME>
+						<ITEM_KNAME>공사감독&#32;접수일</ITEM_KNAME>
+						<RMK></RMK>
+						<SORT_ORDER>1</SORT_ORDER>
+					</record>
+					<record>
+						<CODE_ID></CODE_ID>
+						<CODE_ITEM>20</CODE_ITEM>
+						<ITEM_ENAME>GIS&#32;접수일</ITEM_ENAME>
+						<ITEM_KNAME>GIS&#32;접수일</ITEM_KNAME>
+						<RMK></RMK>
+						<SORT_ORDER>2</SORT_ORDER>
+					</record>
+					<record>
+						<CODE_ID></CODE_ID>
+						<CODE_ITEM>30</CODE_ITEM>
+						<ITEM_ENAME>팀장승인</ITEM_ENAME>
+						<ITEM_KNAME>팀장승인</ITEM_KNAME>
+						<RMK></RMK>
+						<SORT_ORDER>3</SORT_ORDER>
+					</record>
+					<record>
+						<CODE_ID></CODE_ID>
+						<CODE_ITEM>40</CODE_ITEM>
+						<ITEM_ENAME>정상승인일자</ITEM_ENAME>
+						<ITEM_KNAME>정산승인일자</ITEM_KNAME>
+						<RMK></RMK>
+						<SORT_ORDER>4</SORT_ORDER>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="89" Height="59" Id="Shape1" Left="5" LineColor="user7" Right="1265" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="2" Top="30" Type="RoundRect" Width="1260"></Shape>
+		<Shape BKColor="user8" Bottom="84" Height="49" Id="Shape2" Left="10" LineWidth="0" Right="1260" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="3" Top="35" Type="Rectangle" Width="1250"></Shape>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search" TabOrder="1" Text="지사구분" Top="40" Width="84"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="4" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1260">
+			<Contents></Contents>
+		</Div>
+		<Combo BindDataset="ds_Search" Border="Flat" CodeColumn="CODE_ITEM" Column="BRANCH_CD" DataColumn="ITEM_KNAME" Height="18" Id="cob_SBRANCH_CD" ImeMode="none" InnerDataset="ds_SearchB10037" Left="80" Style="combo" TabOrder="5" Top="40" Value="&#32;" Width="80"></Combo>
+		<Combo BindDataset="ds_Search" Border="Flat" CodeColumn="CODE_ITEM" Column="DATE_FLAG" DataColumn="ITEM_KNAME" Height="18" Id="cob_DATE_FLAG" InnerDataset="ds_Combo" Left="80" Style="combo" TabOrder="6" Top="63" Width="120"></Combo>
+		<Calendar BindDataset="ds_Search" Border="Flat" Column="YMD_FR" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_YmnFr" Left="204" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="7" Top="64" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar BindDataset="ds_Search" Border="Flat" Column="YMD_TO" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_YmnTo" Left="303" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="8" Top="64" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Button Cursor="HAND" Height="17" Id="btn_WORK_FIRM_CD" ImageID="search" Left="966" OnClick="btn_WORK_FIRM_CD_OnClick" TabOrder="9" Text="Button8" Top="40" Width="17"></Button>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="DEAL_CD" Height="18" Id="edt_SWORK_FIRM_CD" Left="703" Style="edit" TabOrder="10" Top="40" Width="75"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_WORK_NUM" ImageID="search" Left="476" OnClick="btn_WORK_NUM_OnClick" TabOrder="11" Text="Button8" Top="40" Width="17"></Button>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="WORK_NM" Enable="FALSE" Height="18" Id="edt_SWORK_NM" ImeMode="none" Left="305" Style="edit" TabOrder="12" Top="40" Width="170"></Edit>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="WORK_NUM" Height="18" Id="edt_SWORK_NUM" Left="229" Style="edit" TabOrder="13" Top="40" Width="75"></Edit>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search" TabOrder="14" Text="일자구분" Top="66" Width="84"></Image>
+		<Static Height="13" Id="C2502030010F" Left="293" Style="static" TabOrder="15" Text="~" Top="67" Width="10"></Static>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="DEAL_NM" Enable="FALSE" Height="18" Id="edt_SWORK_FIRM_NM" Left="779" Style="edit" TabOrder="16" Top="40" Width="186"></Edit>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="652" LeftMargin="12" Style="blt_search" TabOrder="17" Text="시공사" Top="40" Width="84"></Image>
+		<Image Align="Left" Height="18" Id="Image10" ImageID="blt" Left="504" LeftMargin="12" Style="blt_search" TabOrder="18" Text="공사구분" Top="40" Width="84"></Image>
+		<Combo BindDataset="ds_Search" Border="Flat" CodeColumn="CODE_ITEM" Column="WORK_FLAG" DataColumn="ITEM_KNAME" Height="18" Id="cob_SWORK_FLAG" InnerDataset="ds_SearchD10200" Left="563" Style="combo" TabOrder="19" Top="39" Width="79"></Combo>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="166" LeftMargin="12" Style="blt_search" TabOrder="20" Text="공사번호" Top="40" Width="75"></Image>
+		<Tab Border="Flat" FixedImage="FALSE" Height="754" Id="tab_FaciReg" Left="2" OnChanged="tab_FaciReg_OnChanged" Style="tab" TabOrder="21" TabStop="FALSE" Top="94" Width="1263">
+			<Contents>
+				<TabPage Height="724" Id="tab10" ImageID="tab" Left="2" TabOrder="1" Text="기본현황" Top="28" Url="D10::D2001010016F_T01.xml" Width="1259"></TabPage>
+				<TabPage Height="724" Id="tab11" ImageID="tab" Left="2" TabOrder="1" Text="전체현황" Top="28" Url="D10::D2001010016F_T02.xml" Width="1259"></TabPage>
+			</Contents>
+		</Tab>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D2001010016F.xml
+* Form 설명  : 준공도 진행내역 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 이건민
+* 작성일     : 2012-01-12
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONA10005.js";
+
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D2001010016F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+/*===============================================================================
+ * 콤보리스트 관련 이벤트
+===============================================================================*/
+function fn_Init()
+{
+	gfn_SetComboBox_Comcode("B10037", "ds_SearchB10037");			// 지사구분
+	gfn_SetComboBox_Comcode("D10200", "ds_SearchD10200");			// 공사구분
+	
+	// 검색조건에 전체 추가
+	gfn_MakeComboAll("cob_SBRANCH_CD" , "CODE_ITEM", "ITEM_KNAME");	// 지사구분
+	gfn_MakeComboAll("cob_SWORK_FLAG" , "CODE_ITEM", "ITEM_KNAME");	// 공사구분
+	
+	
+	// 검색조건 '전체' 선택
+	cob_SBRANCH_CD.Value = "";
+	cob_SWORK_FLAG.Value = "";
+	
+	// 검색조건 '공사갑독 접수일' 선택
+	cob_DATE_FLAG.Value = "10"; // 일자구분 - 10 공사감독 접수일
+	
+	// 일자구분 기본 한달 입력
+	cal_YmnFr.Value=substr(addmonth(today(), -1),0,6) + '16';
+	cal_YmnTo.Value=today();
+	
+	// 공사번호 기본년도 셋팅
+	edt_SWORK_NUM.Text = substr(today(),0,4);
+}
+
+//--------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//--------------------------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	// 날짜 NULL 체크
+	if( cal_YmnFr.Value == "" )
+	{
+		alert("검색 시작 날짜를 입력해주십시오.");
+		return;
+	}
+	else if( cal_YmnTo.Value == "" )
+ 	{
+		alert("검색 마지막 날짜를 입력해주십시오.");
+		return;
+ 	}
+ 	else 
+ 	{
+		tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_find();
+ 	}
+}
+
+//--------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 엑셀
+//--------------------------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_Excel();
+}
+
+//--------------------------------------------------------------------------------------------------
+// (팝업)공사번호 검색
+//--------------------------------------------------------------------------------------------------
+function btn_WORK_NUM_OnClick(obj)
+{		
+	var Result = gfn_Dialog("B20", "B2202010012U", "");
+	
+	if( Result.length > 0 )
+	{
+		edt_SWORK_NUM.Text = Result[0]; // 공사번호
+		edt_SWORK_NM.Text = Result[1];  // 공사명
+	}
+}
+
+function btn_WORK_FIRM_CD_OnClick(obj)
+{
+	var Result = gfn_Dialog("B20", "B2203050011U", "");
+	
+	if( Result.length > 0 )
+	{
+		edt_SWORK_FIRM_CD.Text = Result[0]; // 거래처코드
+		edt_SWORK_FIRM_NM.Text = Result[1]; // 거래처명
+	}
+}
+]]></Script>
+</Window>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="426" Id="D1101010012U" Left="8" OnLoadCompleted="D1101010012U_OnLoadCompleted" PidAttrib="7" Title="원방MOV&#32;정보조회_밸브,밸브박스_D1101010012U" Top="8" Ver="1.0" Width="990" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Mov">
+				<Contents>
+					<colinfo id="FACI_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="MOV_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="ACTUATER_MODEL" size="255" summ="default" type="STRING"/>
+					<colinfo id="ACTUATER_MAKER" size="255" summ="default" type="STRING"/>
+					<colinfo id="LEVEL_SENSE" size="255" summ="default" type="STRING"/>
+					<colinfo id="LEVEL_MAKER" size="255" summ="default" type="STRING"/>
+					<colinfo id="MOV_INST_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALARM_INST_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALARM_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALARM_SN" size="255" summ="default" type="STRING"/>
+					<colinfo id="DETECT_SN" size="255" summ="default" type="STRING"/>
+					<colinfo id="PRESS_TRANS_PRESS_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="PRESS_TRANS_INST_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PRESS_TRANS_MODEL_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="PRESS_TRANS_SN" size="255" summ="default" type="STRING"/>
+					<colinfo id="CUST_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="POWER_METER_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="ELECT_CUST_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="POWER_METER_KIND" size="255" summ="default" type="STRING"/>
+					<colinfo id="OHM_VALUE" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="ELECT_FIRM_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="SERGE_PROTECT" size="255" summ="default" type="STRING"/>
+					<colinfo id="SERGE_PROTECT_MODEL" size="255" summ="default" type="STRING"/>
+					<colinfo id="CALL_SIGN" size="255" summ="default" type="STRING"/>
+					<colinfo id="WIRE_TEL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="FREQUENCY_BAND" size="255" summ="default" type="STRING"/>
+					<colinfo id="WIRE_TEL_ADMIT_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="WIRE_TEL_KIND" size="255" summ="default" type="STRING"/>
+					<colinfo id="FIX_INSPECT_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="AIR_LINE_FORM" size="255" summ="default" type="STRING"/>
+					<colinfo id="ADMIT_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="REMOVE_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="WIRE_WORK_FIRM" size="255" summ="default" type="STRING"/>
+					<colinfo id="WIRE_ARREST_MODEL" size="255" summ="default" type="STRING"/>
+					<colinfo id="WIRE_ARREST" size="255" summ="default" type="STRING"/>
+					<colinfo id="REMOVE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="WIRE_TEL_ADDRESS" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="원방MOV&#32;정보조회_밸브박스" Transparent="TRUE" Width="990"></Image>
+		<Image Align="Left" Height="13" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="2" Text="원방MOV정보" Top="64" Width="197"></Image>
+		<Div Height="29" Id="Div0" Left="411" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="574">
+			<Contents></Contents>
+		</Div>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static5" Left="109" Style="table" TabOrder="55" Top="357" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static1" Left="109" Style="table" TabOrder="6" Top="219" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="5" Style="table" TabOrder="4" Text="압력구분" Top="219" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static3" Left="5" Style="table_1" TabOrder="5" Text="원방압력계" Top="198" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static8" Left="250" Style="table" TabOrder="7" Text="설치일자" Top="219" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static11" Left="495" Style="table" TabOrder="8" Text="압력기종" Top="219" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static13" Left="740" Style="table" TabOrder="9" Text="S/N" Top="219" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static17" Left="109" Style="table" TabOrder="12" Top="171" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static19" Left="5" Style="table" TabOrder="10" Text="경보기설치일" Top="171" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static20" Left="5" Style="table_1" TabOrder="11" Text="가스경보기" Top="150" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static21" Left="496" Style="table" TabOrder="13" Text="수신부S/N" Top="171" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static22" Left="251" Style="table" TabOrder="14" Text="경보기기종" Top="171" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static23" Left="740" Style="table" TabOrder="15" Text="탐지부S/N" Top="171" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static24" Left="109" Style="table" TabOrder="18" Top="102" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static26" Left="250" Style="table" TabOrder="19" Text="밸브박스번호" Top="102" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static27" Left="495" Style="table" TabOrder="20" Text="엑추에이터모델" Top="102" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static28" Left="740" Style="table" TabOrder="21" Text="엑추에이터제조사" Top="102" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static29" Left="5" Style="table_1" TabOrder="17" Text="MOV" Top="81" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static30" Left="5" Style="table" TabOrder="16" Text="MOV명" Top="102" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static31" Left="109" Style="table" TabOrder="23" Top="123" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static32" Left="250" Style="table" TabOrder="24" Text="수위레벨제작사" Top="123" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static33" Left="495" Style="table" TabOrder="25" Text="설치년월일" Top="123" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static35" Left="5" Style="table" TabOrder="22" Text="수위레벨센서" Top="123" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="ALARM_SN" Enable="FALSE" Height="18" Id="edt_AlarmSn" Left="619" MaxLength="3" Style="edit" TabOrder="26" Top="173" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="DETECT_SN" Enable="FALSE" Height="18" Id="edt_DetactionSn" Left="863" MaxLength="3" Style="edit" TabOrder="27" Top="173" Width="118"></Edit>
+		<Calendar BindDataset="ds_Mov" Border="Flat" Column="ALARM_INST_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_AlarmInstallYmd" Left="128" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="28" Top="173" WeeksFont="Default,-1" Width="120"></Calendar>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static16" Left="109" Style="table" TabOrder="33" Top="267" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static36" Left="109" Style="table" TabOrder="30" Top="288" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static38" Left="5" Style="table" TabOrder="29" Text="접지저항(Ω)" Top="288" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static39" Left="5" Style="table" TabOrder="31" Text="고객번호" Top="267" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static40" Left="5" Style="table_1" TabOrder="32" Text="전기설비" Top="246" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static41" Left="250" Style="table" TabOrder="34" Text="전기공사업체" Top="288" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static42" Left="495" Style="table" TabOrder="35" Text="서지프로텍트모델" Top="288" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static43" Left="740" Style="table" TabOrder="36" Text="서지프로텍트" Top="288" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static44" Left="250" Style="table" TabOrder="37" Text="전력량계번호" Top="267" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static45" Left="495" Style="table" TabOrder="38" Text="전기수용처" Top="267" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static46" Left="740" Style="table" TabOrder="39" Text="전력량계기종" Top="267" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="CUST_NUM" Enable="FALSE" Height="18" Id="edt_CustNum" Left="128" MaxLength="3" Style="edit" TabOrder="40" Top="269" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="POWER_METER_NUM" Enable="FALSE" Height="18" Id="edt_PowerMeterNum" Left="373" MaxLength="3" Style="edit" TabOrder="41" Top="269" Width="119"></Edit>
+		<Calendar BindDataset="ds_Mov" Border="Flat" Column="FIX_INSPECT_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_FixInspectYmd" Left="864" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="42" Top="360" WeeksFont="Default,-1" Width="118"></Calendar>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="MOV_NM" Enable="FALSE" Height="18" Id="edt_MovNm" Left="128" MaxLength="3" Style="edit" TabOrder="43" Top="104" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="LEVEL_SENSE" Enable="FALSE" Height="18" Id="edt_LevelSense" Left="128" MaxLength="3" Style="edit" TabOrder="44" Top="125" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="FACI_NUM" Enable="FALSE" Height="18" Id="edt_FaciNum" Left="373" MaxLength="3" Style="edit" TabOrder="45" Top="104" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="LEVEL_MAKER" Enable="FALSE" Height="18" Id="edt_LevelMaker" Left="373" MaxLength="3" Style="edit" TabOrder="46" Top="125" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="ACTUATER_MODEL" Enable="FALSE" Height="18" Id="edt_ActuaterModel" Left="618" MaxLength="3" Style="edit" TabOrder="47" Top="104" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="ACTUATER_MAKER" Enable="FALSE" Height="18" Id="edt_ActuaterMaker" Left="864" MaxLength="3" Style="edit" TabOrder="48" Top="104" Width="118"></Edit>
+		<Calendar BindDataset="ds_Mov" Border="Flat" Column="PRESS_TRANS_INST_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_PressPtInstYmd" Left="373" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="49" Top="221" WeeksFont="Default,-1" Width="120"></Calendar>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="PRESS_TRANS_SN" Enable="FALSE" Height="18" Id="edt_PressSn" Left="863" MaxLength="3" Style="edit" TabOrder="50" Top="221" Width="118"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="ELECT_FIRM_NM" Enable="FALSE" Height="18" Id="edt_ElectFirmNm" Left="373" MaxLength="3" Style="edit" TabOrder="51" Top="290" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="SERGE_PROTECT_MODEL" Enable="FALSE" Height="18" Id="edt_SergeProtectModel" Left="618" MaxLength="3" Style="edit" TabOrder="52" Top="290" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="SERGE_PROTECT" Enable="FALSE" Height="18" Id="edt_SergeProtect" Left="863" MaxLength="3" Style="edit" TabOrder="53" Top="290" Width="119"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="109" Style="table" TabOrder="58" Top="336" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static7" Left="5" Style="table" TabOrder="54" Text="주파수" Top="357" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static9" Left="5" Style="table" TabOrder="56" Text="무선국주소" Top="336" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static10" Left="5" Style="table_1" TabOrder="57" Text="무선국&#32;관련" Top="315" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static12" Left="250" Style="table" TabOrder="59" Text="무전기허가번호" Top="357" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static14" Left="495" Style="table" TabOrder="60" Text="무전기종" Top="357" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static15" Left="740" Style="table" TabOrder="61" Text="정기검사일" Top="357" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static47" Left="495" Style="table" TabOrder="62" Text="호출부호" Top="336" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static48" Left="740" Style="table" TabOrder="63" Text="무전기일련번호" Top="336" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="WIRE_TEL_ADDRESS" Enable="FALSE" Height="18" Id="Edit7" Left="128" MaxLength="3" Style="edit" TabOrder="64" Top="338" Width="364"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="WIRE_TEL_ADMIT_NUM" Enable="FALSE" Height="18" Id="edt_WireTelAdmitNum" Left="373" MaxLength="3" Style="edit" TabOrder="65" Top="359" Width="119"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static34" Left="109" Style="table" TabOrder="67" Top="378" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static50" Left="5" Style="table" TabOrder="66" Text="공중선형식" Top="378" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static51" Left="250" Style="table" TabOrder="68" Text="허가일자" Top="378" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static55" Left="112" Style="table" TabOrder="70" Top="400" VAlign="Middle" Width="139" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static56" Left="5" Style="table" TabOrder="69" Text="무선국공사업체&#32;" Top="399" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static58" Left="495" Style="table" TabOrder="71" Text="어레스트모델" Top="378" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static59" Left="740" Style="table" TabOrder="72" Text="어레스트" Top="378" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="WIRE_ARREST_MODEL" Enable="FALSE" Height="18" Id="edt_WirelArrestModel" Left="618" MaxLength="3" Style="edit" TabOrder="73" Top="380" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="WIRE_ARREST" Enable="FALSE" Height="18" Id="edt_WirelArrest" Left="863" MaxLength="3" Style="edit" TabOrder="74" Top="380" Width="118"></Edit>
+		<Calendar BindDataset="ds_Mov" Border="Flat" Column="ADMIT_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_AdmitYmd" Left="373" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="75" Top="380" WeeksFont="Default,-1" Width="120"></Calendar>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="FREQUENCY_BAND" Enable="FALSE" Height="18" Id="edt_FrequencyBand" Left="128" MaxLength="3" Style="edit" TabOrder="76" Top="359" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="WIRE_TEL_SEQ" Enable="FALSE" Height="18" Id="edt_WireTelSeq" Left="863" MaxLength="3" Style="edit" TabOrder="77" Top="338" Width="118"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="WIRE_WORK_FIRM" Enable="FALSE" Height="18" Id="edt_WirelWorkFirmNm" Left="128" MaxLength="3" Style="edit" TabOrder="78" Top="402" Width="119"></Edit>
+		<Calendar BindDataset="ds_Mov" Border="Flat" Column="MOV_INST_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_MovInstYmd" Left="618" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="79" Top="125" WeeksFont="Default,-1" Width="120"></Calendar>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="OHM_VALUE" Enable="FALSE" Height="18" Id="edt_EarthResis" Left="128" MaxLength="3" Style="edit" TabOrder="80" Top="290" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="AIR_LINE_FORM" Enable="FALSE" Height="18" Id="edt_AirLineType" Left="128" MaxLength="3" Style="edit" TabOrder="81" Top="380" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="PRESS_TRANS_PRESS_FLAG" Enable="FALSE" Height="18" Id="edt_PressPt" Left="128" MaxLength="3" Style="edit" TabOrder="82" Top="221" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="ELECT_CUST_NM" Enable="FALSE" Height="18" Id="Edit23" Left="618" MaxLength="3" Style="edit" TabOrder="83" Top="269" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="PRESS_TRANS_MODEL_NM" Enable="FALSE" Height="18" Id="edt_PressPtModelNm" Left="618" MaxLength="3" Style="edit" TabOrder="84" Top="221" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="ALARM_CD" Enable="FALSE" Height="18" Id="edt_AlarmCd" Left="374" MaxLength="3" Style="edit" TabOrder="85" Top="173" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="WIRE_TEL_KIND" Enable="FALSE" Height="18" Id="edt_WireTelKind" Left="618" MaxLength="3" Style="edit" TabOrder="86" Top="359" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="CALL_SIGN" Enable="FALSE" Height="18" Id="edt_CallSign" Left="618" MaxLength="3" Style="edit" TabOrder="87" Top="338" Width="119"></Edit>
+		<Edit BindDataset="ds_Mov" Border="Flat" Column="POWER_METER_KIND" Enable="FALSE" Height="18" Id="edt_PowerMeterKind" Left="863" MaxLength="3" Style="edit" TabOrder="88" Top="269" Width="119"></Edit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101010012U.xml
+* Form 설명  : 밸브박스_밸브_원방정보(조회)
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2008-11-12
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMOND10001.js";
+
+var strFaci = "";
+
+//------------------------------------------------------------------------------- 
+// 함수명: D1101010012U_OnLoadCompleted()
+//   설명: 화면 로드 후 기본 셋팅
+// arguments  
+//			obj: form object: 설명
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1101010012U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	// 넘어온 파라메터가 있으면
+	if(IsExistVar("FACI_NUM"))
+	{
+		strFaci = FACI_NUM;
+	}
+		
+	fn_D1_Find();
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Find()
+//   설명:  밸브박스_밸브_원방정보를 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{	
+	var strSvcID = "fn_D1_Find";
+	var strPart = "D10";		
+	var strURL = "handle.do?ServiceName=D1_ScadaInfoValveMgr-service&FACI_NUM="+strFaci;
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Mov=ds_Mov";
+	var strArgument  = "find";
+	var strCallbackFunc = "fn_CallBack";
+	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallbackFunc
+			   );
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CallBack()
+//   설명:  비동기 트랜잭션 후 실행할 함수
+// arguments
+//			svcid : 서비스 아이디
+//			errcd : 에러 코드
+//			errmsg : 에러 메세지
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CallBack(svcid, errcd, errmsg)
+{
+	Trace("callback");
+
+	switch(svcid)
+	{	
+		case "fn_D1_Find": 
+			
+			if(ErrorCode<0){
+				
+				return false;
+			}
+			break;	
+	}
+}
+
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+]]></Script>
+</Window>

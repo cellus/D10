@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="175" Id="D1501010011U" Left="8" PidAttrib="7" Title="D1501010011U_취소요청&#32;입력" Top="8" Ver="1.0" Width="500" WorkArea="true">
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="취소요청&#32;입력" Transparent="TRUE" Width="500"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="92"></Button>
+		<Div Height="24" Id="Div0" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="495">
+			<Contents></Contents>
+		</Div>
+		<Static BKColor="white" Border="Flat" Height="91" Id="Static62" Left="62" Style="table" TabOrder="5" Top="79" VAlign="Middle" Width="433" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="91" Id="Static66" Left="5" LineSpacing="10" Style="table_1" TabOrder="4" Text="취소사유" Top="79" VAlign="Middle" Width="95" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="6" Text="취소사유&#32;입력" Top="64" Width="117"></Image>
+		<TextArea Border="Flat" Height="87" Id="TextArea0" Left="103" Style="textarea" TabOrder="7" Text="TextArea0" Top="81" VScroll="TRUE" Width="388"></TextArea>
+	</Form>
+	<Script><![CDATA[
+#include "JS::COMMONA10001.js";
+
+function D1101010014U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	gfn_SetButton("0001111");
+	
+}]]></Script>
+</Window>

@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="729" Id="D1302050010F" Left="8" OnLoadCompleted="D1302050010F_OnLoadCompleted" OnUnloadCompleted="D1302050010F_OnUnloadCompleted" PidAttrib="7" Top="8" Ver="1.0" Width="1260" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_GovList">
+				<Contents>
+					<colinfo id="ZIP_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_ROOM_MATER_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_ROOM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_MODEL_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="HILL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_S" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECOND_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLD_DONG" size="256" summ="default" type="STRING"/>
+					<colinfo id="HOSU" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GovResult">
+				<Contents>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_RSLT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NOT_PASS_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="SELF_INSPECT_REG" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPNM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="DRAFTER_EMPNM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GovRegFlag">
+				<Contents>
+					<colinfo id="CODE" size="256" type="STRING"/>
+					<colinfo id="ITEM" size="256" type="STRING"/>
+					<record>
+						<CODE>10</CODE>
+						<ITEM>등록</ITEM>
+					</record>
+					<record>
+						<CODE>20</CODE>
+						<ITEM>미등록</ITEM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GovRstFlag"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GovListExcel">
+				<Contents>
+					<colinfo id="ZIP_NO1" size="256" type="STRING"/>
+					<colinfo id="GOV_ROOM_MATER_FLAG" size="256" type="STRING"/>
+					<colinfo id="INST_LOC" size="256" type="STRING"/>
+					<colinfo id="GOV_ROOM_NM" size="256" type="STRING"/>
+					<colinfo id="GOV_NUM" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" type="STRING"/>
+					<colinfo id="GOV_MODEL_NM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GovResultD">
+				<Contents>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_RSLT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NOT_PASS_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="SELF_INSPECT_REG" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPNM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="DRAFTER_EMPNM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GovRstFlag1"></Dataset>
+		</Datasets>
+		<Shape BKColor="#6cbae1" Bottom="29" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1243" TabOrder="2" Top="26" Type="Rectangle" Width="1238"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_GovList" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="541" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="512" Id="grd_GovList" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_GovList_OnCellClick" Right="1243" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="29" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1238">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="130"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="108"/>
+						<col width="150"/>
+						<col width="300"/>
+						<col width="150"/>
+						<col width="130"/>
+						<col width="100"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="시/구"/>
+						<cell col="2" display="text" text="팀"/>
+						<cell col="3" display="text" text="구간"/>
+						<cell col="4" display="text" text="정압실번호"/>
+						<cell col="5" display="text" text="정압실명"/>
+						<cell col="6" display="text" text="주소"/>
+						<cell col="7" display="text" text="시설위치"/>
+						<cell col="8" display="text" text="재질"/>
+						<cell col="9" display="text" text="시공감리일자"/>
+						<cell align="center" col="10" display="text" text="결재일자"/>
+					</head>
+					<body>
+						<cell align="right" col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="1" colid="ZIP_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="TEAM_NM" display="text"/>
+						<cell align="center" col="3" colid="BLOCK_NM" display="text"/>
+						<cell align="center" col="4" colid="FACI_NM" display="text"/>
+						<cell align="left" col="5" colid="GOV_ROOM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="6" colid="LOT_NUM_UNION" display="text"/>
+						<cell align="left" col="7" colid="INST_LOC" display="text"/>
+						<cell align="left" col="8" colid="GOV_ROOM_MATER_FLAG" display="text"/>
+						<cell align="center" col="9" colid="INST_YMD" display="date"/>
+						<cell align="center" col="10" colid="DECIDE_YMD" display="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image0" ImageID="blt_8" Left="4" LeftMargin="12" OnClick="Image0_OnClick" Style="text_title" TabOrder="5" Text="자율검사결과&#32;등록" Top="548" Width="210"></Image>
+		<Shape BKColor="#6cbae1" Bottom="571" Height="3" Id="Shape3" Left="5" LineWidth="0" Right="1243" TabOrder="4" Top="568" Type="Rectangle" Width="1238"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_GovResult" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="720" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="149" Id="grd_GovRst" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnExpandEdit="grd_GovRst_OnCellClick" Right="1243" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="571" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1238">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="50"/>
+						<col width="105"/>
+						<col width="105"/>
+						<col width="105"/>
+						<col width="112"/>
+						<col width="105"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="276"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="normal" text="시/구"/>
+						<cell col="2" display="text" text="정압실명"/>
+						<cell col="3" display="text" text="검사일자"/>
+						<cell col="4" display="text" text="자율검사서"/>
+						<cell col="5" display="text" text="검사결과"/>
+						<cell col="6" display="text" text="결재일자"/>
+						<cell col="7" display="text" text="결재자"/>
+						<cell col="8" display="text" text="부적합사유"/>
+						<cell col="9" display="text" text="검자사&#32;1"/>
+						<cell col="10" display="text" text="검사자&#32;2"/>
+						<cell col="11" display="text" text="정비보수번호"/>
+					</head>
+					<body>
+						<cell align="right" col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="1" colid="ZIP_NO1" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="2" colid="FACI_NM" display="text"/>
+						<cell align="center" col="3" colid="INSPECT_YMD" display="date" expandimage="calendar" expandshow="true"/>
+						<cell align="center" col="4" colid="SELF_INSPECT_REG" combocol="CODE" combodataset="ds_GovRegFlag" combotext="ITEM" display="combo" expandimage="search" expandshow="true"/>
+						<cell align="center" col="5" colid="INSPECT_RSLT_CD" display="combo"/>
+						<cell align="center" col="6" colid="DECIDE_YMD" display="date"/>
+						<cell align="center" col="7" colid="DRAFTER_EMPNM" display="text"/>
+						<cell align="left" col="8" colid="NOT_PASS_WHY" display="text" edit="expr:iif((DECIDE_YMD&#32;==&#32;&apos;&apos;&#32;||&#32;DECIDE_YMD&#32;==&#32;null)&#32;&amp;&amp;&#32;INSPECT_RSLT_CD&#32;==&#32;&apos;20&apos;,&#32;&apos;normal&apos;,&#32;&apos;none&apos;)" limit="30"/>
+						<cell align="center" col="9" colid="INSPECT_NM_1" display="text"/>
+						<cell align="center" col="10" colid="INSPECT_NM_2" display="text"/>
+						<cell align="center" col="11" colid="MAINTER_NUM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" BindDataset="ds_Multi" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="grd_list" ImageID="btn_6_reg" Left="1143" LeftMargin="21" OnClick="fn_Maint_Repai_Reque" Style="button" TabOrder="6" Text="정비보수의뢰" Top="546" Width="100"></Button>
+		<Image Align="Left" Height="10" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="7" Text="자율검사대상(정압기)" Top="5" Width="202"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_GovListExcel" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="832" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="93" Id="grd_Excel" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnCellClick="grd_GovRst_OnCellClick" Right="1512" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="8" TabStop="true" Top="739" UseDBuff="true" UsePopupMenu="true" UseSelColor="FALSE" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1507">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="130"/>
+						<col width="150"/>
+						<col width="300"/>
+						<col width="150"/>
+						<col width="130"/>
+						<col width="100"/>
+						<col width="149"/>
+						<col width="127"/>
+						<col width="112"/>
+						<col width="105"/>
+						<col width="200"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="팀"/>
+						<cell col="1" display="text" text="구간"/>
+						<cell col="2" display="text" text="정압실번호"/>
+						<cell col="3" display="text" text="정압기번호"/>
+						<cell col="4" display="text" text="시/구"/>
+						<cell col="5" display="text" text="정압실명"/>
+						<cell col="6" display="text" text="주소"/>
+						<cell col="7" display="text" text="시설위치"/>
+						<cell col="8" display="text" text="재질"/>
+						<cell col="9" display="text" text="설치년월일"/>
+						<cell col="10" display="text" text="자율계획일자"/>
+						<cell col="11" display="text" text="검사일자"/>
+						<cell col="12" display="text" text="자율검사서등록여부"/>
+						<cell col="13" display="text" text="검사결과"/>
+						<cell col="14" display="text" text="부적합사유"/>
+						<cell col="15" display="text" text="검자사&#32;1"/>
+						<cell col="16" display="text" text="검사자&#32;2"/>
+						<cell col="17" display="text" text="정비보수번호"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="TEAM_NM" display="text"/>
+						<cell align="center" col="1" colid="BLOCK_NM" display="text"/>
+						<cell align="center" col="2" colid="FACI_NUM" display="text"/>
+						<cell align="center" col="3" colid="GOV_NUM" display="text"/>
+						<cell align="center" col="4" colid="ZIP_NO1" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="5" colid="GOV_ROOM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="6" colid="LOT_NUM_UNION" display="text"/>
+						<cell align="left" col="7" colid="INST_LOC" display="text"/>
+						<cell align="left" col="8" colid="GOV_ROOM_MATER_FLAG" display="text"/>
+						<cell align="center" col="9" colid="INST_YMD" display="date"/>
+						<cell align="center" col="10" colid="SELF_INSPECT_PLAN_YMD" display="date" expandimage="Calendar" expandshow="true"/>
+						<cell align="center" col="11" colid="INSPECT_YMD" display="date" expandimage="calendar" expandshow="true"/>
+						<cell align="center" col="12" colid="SELF_INSPECT_REG" display="combo" expandimage="search" expandshow="true"/>
+						<cell align="center" col="13" colid="INSPECT_RSLT_CD" display="combo"/>
+						<cell align="left" col="14" colid="NOT_PASS_WHY" display="text"/>
+						<cell align="center" col="15" colid="INSPECT_NM_1" display="text"/>
+						<cell align="center" col="16" colid="INSPECT_NM_2" display="text"/>
+						<cell align="center" col="17" colid="MAINTER_NUM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1302050010F.xml
+* Form 설명  : 자율 검사 정압기 결과를 조회 , 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2009-01-06
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+//자율검사대상 시설에서 선택한 정압기에 대한 기본 정보
+var StrInspectYear 	  = "";
+var strFaciNum 		  = "";
+var strGovNum 		  = "";
+var strZipNo1 		  = "";
+var strFaciNm 		  = "";
+var strInspectYmdPri1 = "";
+var strLotNumUnion    = "";
+var strInstYmd        = "";
+var strGovRoomNm      = "";
+var strGovModelNm     = "";
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_Maint_Repai_Reque()
+//   설명:  정비보수의뢰 팝업을 오픈 한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_Maint_Repai_Reque(obj)
+{
+	var str_MAINTER_NUM  = trim(ds_GovResult.GetColumn(ds_GovResult.row,"MAINTER_NUM")) ;
+	
+	var str_INSPECT_YEAR  = ds_GovResult.GetColumn(ds_GovResult.row, "INSPECT_YEAR");
+	var str_FACI_NUM	  = ds_GovResult.GetColumn(ds_GovResult.row, "FACI_NUM"	   );
+	var str_GOV_NUM		  = ds_GovResult.GetColumn(ds_GovResult.row, "GOV_NUM"	   );
+	var str_INSPECT_FLAG  = '20';
+	var str_INSPECT_YMD   = ds_GovResult.GetColumn(ds_GovResult.row, "INSPECT_YMD" );	          
+	
+	var str_BRANCH_CD     = ds_GovList.GetColumn(ds_GovList.row, "BRANCH_CD"   	   );	
+	var str_TEAM_CD       = ds_GovList.GetColumn(ds_GovList.row, "TEAM_CD"     	   );
+	var str_WORK_FIRM_CD  = ds_GovList.GetColumn(ds_GovList.row, "WORK_FIRM_CD"	   );
+	var str_FACI_NUM 	  = ds_GovList.GetColumn(ds_GovList.row, "FACI_NUM"    	   );
+	var str_FACI_NM  	  = ds_GovList.GetColumn(ds_GovList.row, "GOV_ROOM_NM"     );
+	
+	var str_ZIP_SEQ		  = ds_GovList.GetColumn(ds_GovList.row, "ZIP_SEQ"     	   );
+	var str_ZIP_NO1       = ds_GovList.GetColumn(ds_GovList.row, "ZIP_NO1"     	   );
+	var str_ZIP_NO2		  = ds_GovList.GetColumn(ds_GovList.row, "ZIP_NO2"	   	   );
+	var str_HILL		  = ds_GovList.GetColumn(ds_GovList.row, "HILL"			   );
+	var str_ADDR_M		  = ds_GovList.GetColumn(ds_GovList.row, "ADDR_M"		   );
+	var str_ADDR_S   	  = ds_GovList.GetColumn(ds_GovList.row, "ADDR_S"		   );
+	var str_SECOND_ADDR   = ds_GovList.GetColumn(ds_GovList.row, "SECOND_ADDR"	   );
+	var str_BLD_DONG	  = ds_GovList.GetColumn(ds_GovList.row, "BLD_DONG"		   );
+	var str_HOSU		  = ds_GovList.GetColumn(ds_GovList.row, "HOSU"			   );
+	var str_LOT_NUM_UNION = ds_GovList.GetColumn(ds_GovList.row, "LOT_NUM_UNION"   );
+	
+	// ##############################################
+	// 정비보수 화면 연계
+	// ##############################################	
+	
+	var objDsName = gfn_D10_setDsObject_D1601010010F();
+	
+	eval(objDsName).SetColumn(0,"OPEN_FLAG"         ,"D1302050010F" 	); // 01. 구분 (지정된 화면)  
+	eval(objDsName).SetColumn(0,"MAINTER_NUM"       ,str_MAINTER_NUM	); // 02. 정비보수번호        
+	eval(objDsName).SetColumn(0,"BRANCH_CD"         ,str_BRANCH_CD  	); // 03. 지사코드            
+
+	eval(objDsName).SetColumn(0,"TEAM_CD"           ,str_TEAM_CD      	); // 05. 팀코드              
+	eval(objDsName).SetColumn(0,"WORK_FIRM_CD"      ,str_WORK_FIRM_CD	); // 06. 시공사코드
+	eval(objDsName).SetColumn(0,"FACI_NUM"          ,str_FACI_NUM	 	); // 07. 시설물코드          
+	eval(objDsName).SetColumn(0,"FACI_NM"           ,str_FACI_NM		); // 08. 시설물명            
+	
+	eval(objDsName).SetColumn(0,"ZIP_SEQ"           ,str_ZIP_SEQ		); // 09. 우편일련번호        
+	eval(objDsName).SetColumn(0,"ZIP_NO1"           ,str_ZIP_NO1		); // 10. 우편번호1           
+	eval(objDsName).SetColumn(0,"ZIP_NO2"           ,str_ZIP_NO2		); // 11. 우편번호2           
+	eval(objDsName).SetColumn(0,"HILL"              ,str_HILL			); // 12. 산번지              
+	eval(objDsName).SetColumn(0,"ADDR_M"            ,str_ADDR_M			); // 13. 본번                
+	eval(objDsName).SetColumn(0,"ADDR_S"            ,str_ADDR_S			); // 14. 부번                
+	eval(objDsName).SetColumn(0,"SECOND_ADDR"       ,str_SECOND_ADDR	); // 15. 보조주소            
+	eval(objDsName).SetColumn(0,"BLD_DONG"          ,str_BLD_DONG		); // 16. 건물동              
+	eval(objDsName).SetColumn(0,"HOSU"              ,str_HOSU			); // 17. 호수                
+	eval(objDsName).SetColumn(0,"LOT_NUM_UNION"     ,str_LOT_NUM_UNION	); // 18. 지번주소조합        
+	
+	eval(objDsName).SetColumn(0,"PAVEMENT_KIND"     ,""					); // 19. 포장종류코드        
+	eval(objDsName).SetColumn(0,"WORK_REQ_EMPID"    ,""					); // 20. 의뢰자ID            
+	eval(objDsName).SetColumn(0,"WORK_REQ_EMPID_NM" ,""					); // 21. 의뢰자명  
+	eval(objDsName).SetColumn(0,"KEY1"              ,str_INSPECT_YEAR	); // 22. PK1                 
+	eval(objDsName).SetColumn(0,"KEY2"              ,str_FACI_NUM	 	); // 23. PK2                 
+	eval(objDsName).SetColumn(0,"KEY3"              ,str_GOV_NUM	 	); // 24. PK3                 
+	eval(objDsName).SetColumn(0,"KEY4"              ,str_INSPECT_FLAG	); // 25. PK4                 
+	eval(objDsName).SetColumn(0,"KEY5"              ,str_INSPECT_YMD 	); // 26. PK5	
+				
+	// 화면 OPEN
+	gfn_Form_D1601010010F(objDsName);
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SearchPlan()
+//   설명:  자율 검사 대상 정압기을 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SearchPlan()
+{	
+	var strSvcID 	   = "fn_D1_Find";
+	var strPart        = "D10";
+	var strURL 		   = "handle.do?ServiceName=D1_SelfTestRsltRegisGoveMgr-service"
+					   + "&BRANCH_CD="    + cob_Branch.Value
+					   + "&ZIP_NO1="      + cob_ZipNo.Value
+					   + "&INSPECT_YEAR=" + sp_Year.Value
+					   + "&TEAM_CD="      + cob_Team.Value
+					   + "&BLOCK_CD="	  + cob_PBlockCd.Value
+					   ;
+					   
+	var strInDatasets  = "";
+	var strOutDatasets = "ds_GovList=ds_GovList ds_GovListExcel=ds_GovListExcel";
+	var strArgument    = "findGov";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );	
+	
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	StrInspectYear 	  = "";
+	strFaciNum 		  = "";
+	strGovNum 		  = "";
+	strZipNo1 	      = "";
+	strFaciNm         = "";
+	strInspectYmdPri1 = "";
+	strLotNumUnion    = "";
+	strInstYmd 		  = "";
+	strGovRoomNm 	  = "";
+	strGovModelNm 	  = "";
+	
+	ds_GovResult.ClearData();
+	
+	if(ds_GovList.GetRowCount()==0)
+	{
+        grd_GovList.NoDataText="조회결과가 없습니다.";
+        return;
+    }
+    
+    grd_GovList_OnCellClick("",0,"","","","");
+}
+
+/*===============================================================================
+ * 함수명: fn_D1_DeleteRow()
+   설명: 정기검사 결과등록 레코드 한줄을 삭제한다.
+   return 내용: 없음
+===============================================================================*/ 
+function fn_D1_DeleteRow()
+{	
+	if(ds_GovResult.GetRowCount() == 0){
+		alert("삭제할 대상이 없습니다. ");
+		return;
+	}
+
+	if(!gfn_IsNull(ds_GovResult.GetColumn(ds_GovResult.row, "DECIDE_YMD"))){
+		alert("결재처리된 데이터는 삭제가 불가능합니다. ");
+		return;
+	}
+	
+	var result = Confirm("데이터를 삭제하시겠습니까? ");
+				
+	if(result == '0'){
+			return;
+	}
+	
+	fn_D1_Delete();
+	
+	StrInspectYear 	  = ds_GovList.GetColumn(ds_GovList.row,"INSPECT_YEAR"	);
+	strFaciNum 	   	  = ds_GovList.GetColumn(ds_GovList.row,"FACI_NUM"		);
+	strGovNum 	   	  = ds_GovList.GetColumn(ds_GovList.row,"GOV_NUM"		);
+	strZipNo1 	   	  = ds_GovList.GetColumn(ds_GovList.row,"ZIP_NM"		);
+	strFaciNm 	   	  = ds_GovList.GetColumn(ds_GovList.row,"GOV_ROOM_NM"	);
+	
+	fn_D1_ResultSearch(StrInspectYear, strFaciNum, strGovNum, strZipNo1, strFaciNm);	
+}
+
+function fn_D1_Delete(){
+
+	ds_GovResultD.ClearData();
+	
+	ds_GovResultD.AddRow();
+	
+	ds_GovResultD.CopyRow(0, "ds_GovResult", ds_GovResult.row, "");	
+	ds_GovResult.DeleteRow(ds_GovResult.row);
+			
+	ds_GovResultD.UpdateControl = false;
+	ds_GovResultD.SetRowType(0, "delete");
+			
+	var strSvcID       = "saveGov";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName=D1_SelfTestRsltRegisGoveMgr-service";
+	var strInDatasets  = "ds_GovResult=ds_GovResultD:u";
+	var strOutDatasets = "";
+	var strArgument    = "savaGovRst";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	alert(gfn_GetMessage("M000009","%AAA%","정상적으로 삭제를"),"black",true);
+}
+
+function fn_D1_Delete1(){
+
+	ds_GovResultD.ClearData();
+	
+	var nCnt = ds_GovResult.GetRowCount();
+	
+	for(var i=0; i<nCnt; i++){
+		if(ds_GovResult.GetRowType(i) == 'insert'){
+			var nRow = ds_GovResultD.AddRow();
+			ds_GovResultD.CopyRow(nRow, "ds_GovResult", , "");
+			
+			ds_GovResultD.UpdateControl = false;
+			ds_GovResultD.SetRowType(0, "delete");
+		}
+	}	
+		
+	var strSvcID 	   = "saveGov";
+	var strPart  	   = "D10";
+	var strURL   	   = "handle.do?ServiceName=D1_SelfTestRsltRegisGoveMgr-service";
+	var strInDatasets  = "ds_GovResult=ds_GovResultD:u";
+	var strOutDatasets = "";
+	var strArgument    = "savaGovRst";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+}
+
+function grd_GovList_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	/*
+	var nRowType = ds_GovResult.GetRowType(ds_GovResult.row);
+	
+	if(nRowType == 'insert'){
+		
+		var str_FACI_NUM     = ds_GovResult.GetColumn(nRow, "FACI_NUM"    );
+		var str_GOV_NUM		 = ds_GovResult.GetColumn(nRow, "GOV_NUM"     );
+		var str_INSPECT_YEAR = ds_GovResult.GetColumn(nRow, "INSPECT_YEAR");
+		var str_INSPECT_YMD  = ds_GovResult.GetColumn(nRow, "INSPECT_YMD" );
+				
+		var strChkFlag = fn_D1_CheckReg(str_INSPECT_YEAR, str_INSPECT_YMD, str_FACI_NUM, str_GOV_NUM);
+				
+		if(!strChkFlag){
+			return;
+		}
+		
+		fn_D1_Delete1();
+	}*/
+
+	gfn_SetGrdComboBox_Comcode("grd_GovRst",5,"D10176");
+	
+	grd_GovRst.SetCellProp("body",5,"Edit","none");
+	
+	StrInspectYear 	  = ds_GovList.GetColumn(nRow,"INSPECT_YEAR"	);
+	strFaciNum 	   	  = ds_GovList.GetColumn(nRow,"FACI_NUM"		);
+	strGovNum 	   	  = ds_GovList.GetColumn(nRow,"GOV_NUM"			);
+	strZipNo1 	   	  = ds_GovList.GetColumn(nRow,"ZIP_NM"			);
+	strFaciNm 	   	  = ds_GovList.GetColumn(nRow,"GOV_ROOM_NM"		);
+	strInspectYmdPri1 = ds_GovList.GetColumn(nRow,"INSPECT_YMD_PRI1");
+	strLotNumUnion 	  = ds_GovList.GetColumn(nRow,"LOT_NUM_UNION"	);
+	strInstYmd 		  = ds_GovList.GetColumn(nRow,"INST_YMD"		);
+	strGovRoomNm 	  = ds_GovList.GetColumn(nRow,"GOV_ROOM_NM"		);
+	strGovModelNm 	  = ds_GovList.GetColumn(nRow,"GOV_MODEL_NM"	);
+	
+	fn_D1_ResultSearch(StrInspectYear, strFaciNum, strGovNum,strZipNo1,strFaciNm);
+	
+	strRowType = "search";
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_ResultSearch(StrInspectYear, strFaciNum, strGovNum,strZipNo1,strFaciNm)
+//   설명: 자율검사 결과등록을 조회 하는 함수
+// arguments   
+//          StrInspectYear: 검사년도
+//          strFaciNum: 정압실번호
+//          strGovNum: 정압기번호
+//          strGovNum: 구
+//          strGovNum: 시설물명
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_ResultSearch(StrInspectYear, strFaciNum, strGovNum,strZipNo1,strFaciNm)
+{	
+	ds_GovResult.ClearData();
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+    var strSvcID      = "fn_D1_ResultSearch";
+    var strPart       = "D10";
+    var strURL        = "handle.do?ServiceName=D1_SelfTestRsltRegisGoveMgr-service&FACI_NUM="+strFaciNum+"&GOV_NUM="+strGovNum+"&INSPECT_YEAR="+StrInspectYear+"&ZIP_NO1="+strZipNo1+"&FACI_NM="+strFaciNm;
+    var strInDatasets = "";
+    var strOutDatasets= "ds_GovResult=ds_GovResult";
+    var strArgument   = "findResult";   
+    
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		return;
+	}		   
+		   
+	if(ds_GovResult.GetRowCount()==0)
+	{
+        grd_GovRst.NoDataText="조회결과가 없습니다.";
+        return;
+    }
+}
+
+/*===============================================================================
+ * 함수명: fn_D1_AddRow()
+   설명: 자율검사 결과등록 레코드 한줄을 추가한다.
+   return 내용: 없음
+===============================================================================*/ 
+function fn_D1_AddRow()
+{
+	if(strFaciNum != "")
+	{
+		gfn_SetGrdComboBox_Comcode("grd_GovRst",5,"D10176");
+		grd_GovRst.SetCellProp("body",5,"Edit","none");
+		ds_GovResult.InsertRow(0);
+		ds_GovResult.SetColumn(0,"FACI_NUM"	  	   ,strFaciNum	  );
+		ds_GovResult.SetColumn(0,"GOV_NUM"		   ,strGovNum 	  );
+		ds_GovResult.SetColumn(0,"ZIP_NO1"		   ,strZipNo1 	  );
+		ds_GovResult.SetColumn(0,"FACI_NM"         ,strFaciNm 	  );
+		ds_GovResult.SetColumn(0,"INSPECT_YEAR"    ,StrInspectYear);
+		ds_GovResult.SetColumn(0,"SELF_INSPECT_REG","20");
+		strRowType = "insert";
+    }else{
+		alert('자율검사대상을 선택해주세요');
+    }
+}
+
+//---------------------------------------------------------
+// 달력 팝업 및 팝업창 열기
+//---------------------------------------------------------
+function grd_GovRst_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	var str_FACI_NUM     = ds_GovResult.GetColumn(nRow, "FACI_NUM"    );
+	var str_GOV_NUM		 = ds_GovResult.GetColumn(nRow, "GOV_NUM"     );
+	var str_INSPECT_YEAR = ds_GovResult.GetColumn(nRow, "INSPECT_YEAR");
+	var str_INSPECT_YMD  = ds_GovResult.GetColumn(nRow, "INSPECT_YMD" );
+	var strZipNo1 	   	 = ds_GovList.GetColumn(ds_GovList.row,"ZIP_NM"		);
+	var strFaciNm 	   	 = ds_GovList.GetColumn(ds_GovList.row,"GOV_ROOM_NM"	);
+	
+	var nRowtType = ds_GovResult.GetRowType(nRow);
+	
+	if("INSPECT_YMD" == grd_GovRst.GetCellProp("body",nCell,"ColId"))
+	{
+		if(ds_GovResult.GetColumn(nRow, "SELF_INSPECT_REG") == 20 && ds_GovResult.GetRowType(nRow) == 'insert'){
+			gfn_SetCalendar(obj, nRow, nCell);
+		}	
+				
+	}else if("SELF_INSPECT_REG" == grd_GovRst.GetCellProp("body",nCell,"ColId"))
+	{
+		if(ds_GovResult.GetColumn(nRow,"INSPECT_YMD") == null)
+		{
+			alert('검사일자를 먼저 등록해 주세요');
+			return;
+		} else if(!fn_DateCheckTodayGrid(ds_GovResult.GetColumn(nRow,"INSPECT_YMD"),"검사일자"))
+		{
+			return;
+		} else if(nRowtType == "insert")
+		{
+			var temp_1;
+			var temp_2;
+				
+			for(var i=0; i<ds_GovResult.GetRowCount(); i++){
+		
+				temp_1 = trim(ds_GovResult.GetColumn(i,"INSPECT_YMD"));	
+			
+				if(temp_1 != '' && temp_1 != null){
+			
+					for(var j=0; j<=i; j++){
+										
+						if(i != j){				
+							
+							temp_2 = trim(ds_GovResult.GetColumn(j,"INSPECT_YMD"));
+							
+							if(temp_2 != '' && temp_2 != null){			
+											
+								if(temp_1 == temp_2){
+									alert("검사일자가 동일한 경우에는 등록하실 수 없습니다. 검사일자가 중복되지 않도록 선택해 주십시오. ");
+									return;
+								}							
+							}
+						}
+					}
+				}
+			}
+				
+			/*
+			var nCnt = 0;
+			var nRowCount = ds_GovResult.GetRowCount();
+			
+			for(var i=0; i<nRowCount; i++){
+				if(ds_GovResult.GetRowType(i) == 'insert'){
+					nCnt = toNumber(nCnt) + 1;
+				}
+			}
+			
+			if(nCnt > 0){
+				alert("자율검사결과 정보를 먼저 등록하신 후 자율검사서를 작성하십시오. ");
+				return;
+			}		
+				
+			var strChkFlag = fn_D1_CheckReg(str_INSPECT_YEAR, str_INSPECT_YMD, str_FACI_NUM, str_GOV_NUM);
+			
+			if(!strChkFlag) 
+			{
+				var str_CRTDTM = ds_GovRstFlag.GetColumn(0, "CRT_TIME" );
+				var str_CRTNM  = ds_GovRstFlag.GetColumn(0, "CRT_EMPNM");
+			
+				var str_INSPECT_YMD1  = substr(ds_GovResult.GetColumn(i,"INSPECT_YMD"), 0, 4);
+					str_INSPECT_YMD1 += "년 ";
+					str_INSPECT_YMD1 += substr(ds_GovResult.GetColumn(i,"INSPECT_YMD"), 4, 2);
+					str_INSPECT_YMD1 += "월 ";
+					str_INSPECT_YMD1 += substr(ds_GovResult.GetColumn(i,"INSPECT_YMD"), 6, 2);
+					str_INSPECT_YMD1 += "일";
+			
+					alert("검사일자 " + str_INSPECT_YMD1 + "에 대한 결과 데이터는 \n" + str_CRTNM + "님께서 " + str_CRTDTM + "에 이미 등록하신 데이터입니다. \n데이터를 조회해 주십시오. ");
+					return;
+			}	
+			*/
+		}
+		
+		fn_D1_SaveGovRst('popup');
+				
+		fn_D1_CheckReg1(str_INSPECT_YEAR, str_INSPECT_YMD, str_FACI_NUM, str_GOV_NUM);
+		
+		var str_CrtTime = ds_GovRstFlag1.GetColumn(0, "CRT_TIME" );
+		var str_CrtNm   = ds_GovRstFlag1.GetColumn(0, "CRT_EMPNM");
+
+		var strRowType = '';
+		
+		if(ds_GovRstFlag1.GetRowCount() == 0)
+		{
+			strRowType = "insert";		
+			//진행상태가 승인이거나 결제중은 수정이 안되므로 search로 넘기고 나머지는 수정할수 있도록 update로넘김
+		}else if(ds_GovResult.GetColumn(ds_GovResult.row,"DECIDE_PROC") == "0" || ds_GovResult.GetColumn(ds_GovResult.row,"DECIDE_PROC") == "2" ){	
+			strRowType = "search";
+		}else{
+			strRowType = "update";
+		}	
+				
+		var retValue = 
+				parent.fn_Maint_Repai_Reque1(
+						ds_GovResult.GetColumn(nRow,"INSPECT_YMD")
+					   ,strInspectYmdPri1
+					   ,strInstYmd
+					   ,strGovRoomNm
+					   ,strGovModelNm
+					   ,Replace(strLotNumUnion," ","&")
+					   ,strGovNum
+					   ,strFaciNum
+					   ,StrInspectYear
+					   ,strRowType
+					   ,str_CrtTime
+					   ,str_CrtNm
+					   ,ds_GovResult.GetColumn(nRow,"DECIDE_YMD")
+					   ,ds_GovResult.GetColumn(nRow,"DECIDE_PROC_STS")
+				   );
+		
+		if(retValue == null || retValue == 0)
+		{
+			//자율검사서 등록후 재조회 한다
+			fn_D1_ResultSearch(StrInspectYear, strFaciNum, strGovNum,strZipNo1,strFaciNm);
+			return;
+		}
+		
+		if(retValue[2] == "savePass")
+		{
+			ds_GovResult.SetColumn(nRow,"SELF_INSPECT_REG","10"       );
+			ds_GovResult.SetColumn(nRow,"INSPECT_RSLT_CD" ,"10"		  );
+			ds_GovResult.SetColumn(nRow,"INSPECT_NM_1"	  ,retValue[0]);
+			ds_GovResult.SetColumn(nRow,"INSPECT_NM_2"	  ,retValue[1]);
+			ds_GovResult.SetColumn(nRow,"NOT_PASS_WHY"	  ,""	  	  );
+			
+		}else if(retValue[2] == "saveNotPass")
+		{
+			ds_GovResult.SetColumn(nRow,"SELF_INSPECT_REG","10"	      );
+			ds_GovResult.SetColumn(nRow,"INSPECT_RSLT_CD" ,"20"	      );
+			ds_GovResult.SetColumn(nRow,"INSPECT_NM_1"    ,retValue[0]);
+			ds_GovResult.SetColumn(nRow,"INSPECT_NM_2"    ,retValue[1]);
+		}else{
+			ds_GovResult.SetColumn(nRow,"SELF_INSPECT_REG","20"		  );
+			ds_GovResult.SetColumn(nRow,"INSPECT_RSLT_CD" ,""  	      );
+		}
+		
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SaveReg()
+//   설명: 자율검사 결과등록하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SaveReg()
+{
+	fn_D1_SaveGovRst('btn');
+	fn_D1_ResultSearch(StrInspectYear, strFaciNum, strGovNum,strZipNo1,strFaciNm);
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SaveGovRst()
+//   설명: 자율검사계획 결과등록 내용을 등록 및 수정한다.
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SaveGovRst(flag)
+{
+	if(strFaciNum != "")
+	{
+		var temp_1;
+		var temp_2;
+			
+		for(var i=0; i<ds_GovResult.GetRowCount(); i++){
+	
+			temp_1 = trim(ds_GovResult.GetColumn(i,"INSPECT_YMD"));	
+		
+			if(temp_1 != '' && temp_1 != null){
+		
+				for(var j=0; j<=i; j++){
+									
+					if(i != j){				
+						
+						temp_2 = trim(ds_GovResult.GetColumn(j,"INSPECT_YMD"));
+						
+						if(temp_2 != '' && temp_2 != null){							
+							if(temp_1 == temp_2){
+								alert("검사일자가 동일한 경우에는 등록하실 수 없습니다. 검사일자가 중복되지 않도록 선택해 주십시오. ");
+								return;
+							}							
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	var saveFlag = 0;
+	
+	if(strFaciNum != "")
+	{	
+		for(var i=0; i<ds_GovResult.RowCount(); i++)
+		{
+			if(ds_GovResult.GetRowType(i) == "insert"){
+			
+				var str_FACI_NUM     = ds_GovResult.GetColumn(i, "FACI_NUM"    );
+				var str_GOV_NUM		 = ds_GovResult.GetColumn(i, "GOV_NUM"     );
+				var str_INSPECT_YEAR = ds_GovResult.GetColumn(i, "INSPECT_YEAR");
+				var str_INSPECT_YMD  = ds_GovResult.GetColumn(i, "INSPECT_YMD" );
+				
+				var strChkFlag = fn_D1_CheckReg(str_INSPECT_YEAR, str_INSPECT_YMD, str_FACI_NUM, str_GOV_NUM);
+				
+				if(!strChkFlag) 
+				{
+					var str_CRTDTM = ds_GovRstFlag.GetColumn(0, "CRT_TIME" );
+					var str_CRTNM  = ds_GovRstFlag.GetColumn(0, "CRT_EMPNM");
+				
+					var str_INSPECT_YMD  = substr(ds_GovResult.GetColumn(i,"INSPECT_YMD"), 0, 4);
+						str_INSPECT_YMD	+= "년 ";
+						str_INSPECT_YMD	+= substr(ds_GovResult.GetColumn(i,"INSPECT_YMD"), 4, 2);
+						str_INSPECT_YMD	+= "월 ";
+						str_INSPECT_YMD	+= substr(ds_GovResult.GetColumn(i,"INSPECT_YMD"), 6, 2);
+						str_INSPECT_YMD	+= "일";
+				
+					alert("검사일자 " + str_INSPECT_YMD + "에 대한 결과 데이터는 \n" + str_CRTNM + "님께서 " + str_CRTDTM + "에 이미 등록하신 데이터입니다. \n데이터를 조회해 주십시오. ");
+					return;
+				}
+				
+				if(ds_GovResult.GetColumn(i,"INSPECT_YMD") == "" || ds_GovResult.GetColumn(i,"INSPECT_YMD") == null)
+				{
+					alert(gfn_GetMessage("M000011","%AAA%","검사일자를"));
+					return;
+				}
+				
+				if(!fn_DateCheckTodayGrid(ds_GovResult.GetColumn(i,"INSPECT_YMD"),"검사일자"))
+				{
+					return;
+				}
+				
+				//수정 등록시 셋팅할 사용자 정보
+				ds_GovResult.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+				ds_GovResult.SetColumn(i, "UPD_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));
+				ds_GovResult.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+				ds_GovResult.SetColumn(i, "CRT_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));
+				
+				saveFlag = 1;		
+						
+			}else if(ds_GovResult.GetRowType(i) == "update")
+			{
+				//수정 등록시 셋팅할 사용자 정보
+				ds_GovResult.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+				ds_GovResult.SetColumn(i, "UPD_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));
+				
+				saveFlag = 1;
+			}
+		}
+	}else{
+		return;
+	}
+	
+	var strSvcID 	    = "saveGov";
+	var strPart 		= "D10";
+	var strURL     	    = "handle.do?ServiceName=D1_SelfTestRsltRegisGoveMgr-service";
+	var strInDatasets   = "ds_GovResult=ds_GovResult:u";
+	var strOutDatasets  = "";
+	var strArgument     = "savaGovRst";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	if(ds_GovResult.RowCount() == 0)
+	{
+		return;
+	}
+	
+	if(saveFlag == 0)
+	{
+		return;
+	}
+	
+	if(flag == 'btn'){
+		alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true);
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_CheckReg()
+//   설명: 자율검사 결과등록을 하기 전 기 등록 여부 확인
+// arguments   
+//          index: 선택된 행
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_CheckReg(str_INSPECT_YEAR, str_INSPECT_YMD, str_FACI_NUM, str_GOV_NUM)
+{	
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+	ds_GovRstFlag.ClearData();
+	
+    var strSvcID = "fn_D1_CheckReg";
+    var strPart  = "D10";
+    var strURL   = "handle.do?ServiceName=D1_SelfTestRsltRegisGoveMgr-service";
+		strURL	+= "&FACI_NUM="    + str_FACI_NUM    ;
+		strURL	+= "&GOV_NUM="     + str_GOV_NUM	 ;
+		strURL	+= "&INSPECT_YEAR="+ str_INSPECT_YEAR;
+		strURL	+= "&INSPECT_YMD=" + str_INSPECT_YMD ;
+					   
+    var strInDatasets  = "";
+    var strOutDatasets = "ds_GovRstFlag=ds_GovRstFlag";
+    var strArgument    = "findRstFlag";   
+    
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+	if(ds_GovRstFlag.RowCount() != 0) return false;
+	return true;
+}
+
+//------------------------------------------------------------------------------- 
+//  함수명: fn_D1_CheckReg1()
+//  설명: 자율검사 결과등록을 하기 전 장표 등록 여부 확인
+//  arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_CheckReg1(str_INSPECT_YEAR, str_INSPECT_YMD, str_FACI_NUM, str_GOV_NUM)
+{	
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+    var strSvcID = "fn_D1_CheckReg1";
+    var strPart  = "D10";
+    var strURL   = "handle.do?ServiceName=D1_SelfTestRsltRegisGoveMgr-service";
+		strURL	+= "&FACI_NUM="    + str_FACI_NUM    ;
+		strURL	+= "&GOV_NUM="     + str_GOV_NUM	 ;
+		strURL	+= "&INSPECT_YEAR="+ str_INSPECT_YEAR;
+		strURL	+= "&INSPECT_YMD=" + str_INSPECT_YMD ;
+					  
+    var strInDatasets  = "";
+    var strOutDatasets = "ds_GovRstFlag1=ds_GovRstFlag1";
+    var strArgument      = "findRstFlag1";   
+    
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ds_GovRstFlag1.RowCount() != 0) return false;
+	
+	return true;
+}
+
+function D1302050010F_OnUnloadCompleted(obj)
+{
+	if(ds_GovResult.GetUpdate()){
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 내용이 있습니다. 종료")))
+		{			
+			return false;
+		}else{
+			//fn_D1_Delete();
+		}
+	}
+}
+
+function fn_D1_ExcelExport()
+{
+	var SearchCondition= "";
+
+    SearchCondition = SearchCondition + "지사 :" + RPad(cob_Branch.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo.Text," ",20);
+    SearchCondition = SearchCondition + "년도 :" + RPad(sp_Year.Text," ",20);
+	gfn_ExportExcel("자율검사결과조회 정압기 ", 5, SearchCondition, "grd_Excel"); 
+}
+function D1302050010F_OnLoadCompleted(obj)
+{
+	gfn_D1_SetGrid_Sort(grd_GovList);
+	gfn_D1_SetGrid_Sort(grd_GovRst);
+	
+	// 포틀릿
+	if (IsExistVar("PORTLET_FLAG", true)) {
+		if (PORTLET_FLAG == "p") {
+			fn_D1_SearchPlanPortlet(INSPECT_YEAR, BRANCH_CD, ZIP_NO1);
+		}
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SearchPlanPortlet()
+//   설명:  포틀릿을 자율 검사 대상 정압기을 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SearchPlanPortlet(strYear, strBranchCd, strZipNo)
+{	
+	var strFaciNum = "";
+	var strGovNum = "";
+	
+	if(IsExistVar("FACI_NUM",true)){
+		strFaciNum = FACI_NUM;
+	}
+	if(IsExistVar("GOV_NUM",true)){
+		strGovNum = GOV_NUM;
+	}
+	var strSvcID = "fn_D1_FindPortlet";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_SelfTestRsltRegisGoveMgr-service&BRANCH_CD="+strBranchCd+"&ZIP_NO1="+strZipNo+"&INSPECT_YEAR="+strYear+"&FACI_NUM="+strFaciNum+"&GOV_NUM="+strGovNum;
+	
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_GovList=ds_GovList ds_GovListExcel=ds_GovListExcel";
+	var strArgument  = "findGov";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	StrInspectYear = "";
+	strFaciNum = "";
+	strGovNum = "";
+	strZipNo1 = "";
+	strFaciNm = "";
+	strInspectYmdPri1 = "";
+	strLotNumUnion = "";
+	strInstYmd = "";
+	strGovRoomNm = "";
+	strGovModelNm = "";
+	
+	ds_GovResult.ClearData();
+	
+	if(ds_GovList.GetRowCount()==0)
+	{
+        grd_GovList.NoDataText="조회결과가 없습니다.";
+        return;
+    }
+    
+    grd_GovList_OnCellClick("",0,"","","","");
+}]]></Script>
+</Window>

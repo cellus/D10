@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="560" Id="D1903010012U" Left="8" OnLoadCompleted="D1903010012U_OnLoadCompleted" PidAttrib="7" Title="DCVG분석표_D1903010012U" Top="8" Ver="1.0" Width="1000" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DCVG_ANAL_SEQ" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExcelData">
+				<Contents>
+					<colinfo id="EXCOL0" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL1" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL2" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL3" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL4" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL5" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL6" size="255" summ="default" type="STRING"/>
+					<record>
+						<EXCOL0></EXCOL0>
+						<EXCOL1></EXCOL1>
+						<EXCOL2></EXCOL2>
+						<EXCOL3></EXCOL3>
+						<EXCOL4></EXCOL4>
+						<EXCOL5></EXCOL5>
+						<EXCOL6></EXCOL6>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExcelSAMPLE">
+				<Contents>
+					<colinfo id="X_AXIS" size="255" summ="default" type="STRING"/>
+					<colinfo id="Y_AXIS_I" size="255" summ="default" type="STRING"/>
+					<colinfo id="Y_AXIS_R" size="255" summ="default" type="STRING"/>
+					<record>
+						<X_AXIS>-11.5</X_AXIS>
+						<Y_AXIS_I>20</Y_AXIS_I>
+						<Y_AXIS_R>50</Y_AXIS_R>
+					</record>
+					<record>
+						<X_AXIS>-20.5</X_AXIS>
+						<Y_AXIS_I>30</Y_AXIS_I>
+						<Y_AXIS_R>80</Y_AXIS_R>
+					</record>
+					<record>
+						<X_AXIS>-356.5</X_AXIS>
+						<Y_AXIS_I>40</Y_AXIS_I>
+						<Y_AXIS_R>510</Y_AXIS_R>
+					</record>
+					<record>
+						<X_AXIS>-220</X_AXIS>
+						<Y_AXIS_I>50</Y_AXIS_I>
+						<Y_AXIS_R>320</Y_AXIS_R>
+					</record>
+					<record>
+						<X_AXIS>-0.9</X_AXIS>
+						<Y_AXIS_I>60</Y_AXIS_I>
+						<Y_AXIS_R>1115</Y_AXIS_R>
+					</record>
+					<record>
+						<X_AXIS>-111</X_AXIS>
+						<Y_AXIS_I>70</Y_AXIS_I>
+						<Y_AXIS_R>320</Y_AXIS_R>
+					</record>
+					<record>
+						<X_AXIS>-222</X_AXIS>
+						<Y_AXIS_I>80</Y_AXIS_I>
+						<Y_AXIS_R>12</Y_AXIS_R>
+					</record>
+					<record>
+						<X_AXIS>-333</X_AXIS>
+						<Y_AXIS_I>90</Y_AXIS_I>
+						<Y_AXIS_R>35</Y_AXIS_R>
+					</record>
+					<record>
+						<X_AXIS>-10</X_AXIS>
+						<Y_AXIS_I>200</Y_AXIS_I>
+						<Y_AXIS_R>45</Y_AXIS_R>
+					</record>
+					<record>
+						<X_AXIS>-50</X_AXIS>
+						<Y_AXIS_I>100</Y_AXIS_I>
+						<Y_AXIS_R>55</Y_AXIS_R>
+					</record>
+					<record>
+						<X_AXIS>-81</X_AXIS>
+						<Y_AXIS_I>50</Y_AXIS_I>
+						<Y_AXIS_R>65</Y_AXIS_R>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Editable="True" Id="ds_DCVG_ANAL" OnColumnChanged="ds_DCVG_ANAL_OnColumnChanged">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DCVG_ANAL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="X_AXIS" size="256" summ="default" type="STRING"/>
+					<colinfo id="Y_AXIS_I" size="256" summ="default" type="STRING"/>
+					<colinfo id="Y_AXIS_R" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Div DisableBKColor="white" Height="29" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="997">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="2" Text="DCVG분석표" Transparent="TRUE" Width="998"></Image>
+		<Grid AreaSelect="TRUE" AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_DCVG_ANAL" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="553" ColSelect="TRUE" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" Font="돋움,9" HeadBorder="Flat" HeadHeight="20" Height="400" Id="grd_List" InputPanel="true" Left="7" LineColor="default" LineType="ExVERT" MinWidth="100" OnHeadClick="grd_List_OnHeadClick" Right="448" SelColor="MENU" Style="grid_pop" TabOrder="1" TabStop="true" Top="153" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="441">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="80"/>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="120"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="순번"/>
+						<cell bkcolor="user11" col="1" display="text" text="X축(mV)"/>
+						<cell bkcolor="user11" col="2" display="text" text="Y축-I(mV)"/>
+						<cell bkcolor="user11" col="3" display="text" text="Y축-R(mV)"/>
+					</head>
+					<body>
+						<cell align="center" bkcolor="expr:iif(&#32;currow&#32;==&#32;5&#32;,&#32;&apos;#ffff00&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="0" display="text" expandsize="18" expr="currow+1" wordwrap="word"/>
+						<cell bkcolor="expr:iif(&#32;currow&#32;==&#32;5&#32;,&#32;&apos;#ffff00&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="1" colid="X_AXIS" display="number" edit="number" expandsize="18" limit="4" LimitDec="1" Mask="#,##0.0" wordwrap="word"/>
+						<cell col="2" colid="Y_AXIS_I" display="number" edit="regexpr" expandsize="18" limit="4" LimitDec="1" Mask="#,##0.0" RegExprFilter="[0-9.]" wordwrap="word"/>
+						<cell col="3" colid="Y_AXIS_R" display="number" edit="regexpr" limit="4" LimitDec="1" Mask="#,##0.0" RegExprFilter="[0-9.]"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="153" Height="3" Id="Shape0" Left="7" LineWidth="0" Right="988" TabOrder="4" Top="150" Type="Rectangle" Width="981"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_ExcelUproad" ImageID="btn_6_excelup" Left="884" LeftMargin="21" OnClick="btn_ExcelUproad_OnClick" Style="button" TabOrder="5" Text="EXCEL&#32;업로드" Top="122" Width="106"></Button>
+		<XChart Bottom="553" Gallery="Gallery_Lines" Grid="ChartGrid_Horz" Height="400" Id="ct01" Left="446" NSeries="1" NValues="1" PointLabelAlign="LabelAlign_Bottom" PointLabels="true" Right="988" SerLegBox="true" ToolBar="true" Top="153" Visible="FALSE" Width="542">
+			<_PersistData>&#13;&#10;/6z7Wywk30NGWDYA8vJNQ/9oYXJ0RlgsIP9WZXJzaW9uPf82LjIuMTM0Mv8uMCwgQ3VsdP91cmU9bmV1dP9yYWwsIFB1Yv9saWNL&#13;&#10;ZXlUb/9rZW49YTE4N/84ZTIwNTJjMP84ZGNlElNvZv90d2FyZUZYLlr59B/y8wAj8vAgXgR6aw0E8vABAf7/gQUqawUBawUCawYG&#13;&#10;pQSRBdUy8vAQ8vAD8vD7/4d/f4JlAXwCvwKRBQG/BUFyaWFs8vBBpG8P8vIFjgWsBQBGD1h/Ei5IaWdobCkQ/3RTZXR0aW5nZ3MQ&#13;&#10;CZMIRR8AB3YFzwEBAAgCHRMfWAWfLkF4aXOVAX0CAPECOhDy82UWKDjgAAUKRxULRxmeB88f3BmVAYKeAQGABtwfdwuNDo8FAgkM&#13;&#10;mx+tEA2xH2IvdC/nHLB/B3wvEi/DLwAOWhgP6I4FvAHy8VL59C5CYUNzZQAPEg8kDzYNF3cf/vwiDS5JR2FsbH9lcnlUeXBllQFF&#13;&#10;FJQTEfoMhz+VOhKVNT0TjQYEKEBLvwBxMeLy8hXkLUc/+yMJLkx/aW5lSW5mb9sCCL0s0wM6IUCVP9QJuBqBAfUWI0UX5RcPRGVm&#13;&#10;/WEYMC5XaW5kbwN3cw==&#13;&#10;</_PersistData>
+		</XChart>
+		<Shape BKColor="user16" Bottom="556" Height="3" Id="Shape1" Left="7" LineWidth="0" Right="988" TabOrder="7" Top="553" Type="Rectangle" Width="981"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_ExcelSample" ImageID="btn_6_excel" Left="771" LeftMargin="21" OnClick="btn_ExcelSample_OnClick" Style="button" TabOrder="8" Text="EXCEL&#32;샘플" Top="122" Width="106"></Button>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_ExcelSAMPLE" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="466" ColSelect="TRUE" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" Font="돋움,9" HeadBorder="Flat" HeadHeight="20" Height="264" Id="Grid_XLS_SAMPLE" InputPanel="true" Left="584" LineColor="default" LineType="ExVERT" MinWidth="100" OnHeadClick="grd_List_OnHeadClick" Right="923" SelColor="MENU" Style="grid_pop" TabOrder="9" TabStop="true" Top="202" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="339">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="110"/>
+						<col width="110"/>
+						<col width="110"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="X_AXIS"/>
+						<cell col="1" display="text" text="Y_AXIS_I"/>
+						<cell col="2" display="text" text="Y_AXIS_R"/>
+					</head>
+					<body>
+						<cell col="0" colid="X_AXIS" display="number" expandsize="18" Mask="#,###.0" wordwrap="word"/>
+						<cell col="1" colid="Y_AXIS_I" display="number" expandsize="18" Mask="#,###.0" wordwrap="word"/>
+						<cell col="2" colid="Y_AXIS_R" display="number" Mask="#,###.0"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user6" Bottom="114" Height="39" Id="Shape3" Left="7" LineColor="user7" Right="989" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="11" Top="75" Type="RoundRect" Width="982"></Shape>
+		<Shape BKColor="user8" Bottom="110" Height="29" Id="Shape4" Left="13" LineWidth="0" Right="985" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="10" Top="81" Type="Rectangle" Width="972"></Shape>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="14" LeftMargin="12" Style="table_1" TabOrder="12" Text="DCVG분석표&#32;관리" Top="86" Transparent="TRUE" Width="113"></Image>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1903010012U.xml
+* Form 설명  : DCVG분석
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : kimkk 
+* 작성일     : 2013-04-09
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONB10001.js"; 
+#include "JS::COMMONB30001.js"; 
+#include "JS::COMMOND10001.js";  
+
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+//전달받을 값
+var fa_base_year      ;
+var fa_mpipe_id       ;
+var fa_explor_rslt_seq;
+
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1903010012U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj); 
+	
+	gfn_SetForceButton("00110101");	//처음부터 ( 추가,삭제,저장,조회,선택,엑셀,인쇄,닫기 )  
+	
+	fn_init( );
+	
+	grd_List.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");		
+
+}
+
+//--------------------------------------------------------------------------------------------------
+//	fn_init()   
+//--------------------------------------------------------------------------------------------------
+function fn_init( )
+{  
+	ds_Search.AddRow();
+	ds_Search.SetColumn( ds_Search.row , 'BASE_YEAR'       , fa_base_year );
+	ds_Search.SetColumn( ds_Search.row , 'MPIPE_ID'        , fa_mpipe_id  );
+	ds_Search.SetColumn( ds_Search.row , 'EXPLOR_RSLT_SEQ' , fa_explor_rslt_seq ); 
+	
+	fn_CommonSearch();
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{ 
+	ds_DCVG_ANAL.ClearData();
+	
+	var strSvcID = "find";
+	var strPart  = "D10";	
+	var strURL   = "handle.do?ServiceName=D1903010012U-service";  
+	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets = "ds_DCVG_ANAL=ds_DCVG_ANAL";
+	var strArgument    = "find=1"; 
+    var CallBack       = "fn_D1_CallBack"; 
+    	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+		           , CallBack);
+}
+
+//---------------------------------------------------------
+//	공통 버튼 - 저장
+//--------------------------------------------------------- 
+function fn_CommonSave()  
+{   
+	//if(!gfn_B3_CheckGridColumn(grd_List)) return false;
+
+	for( i = 0 ; i < ds_DCVG_ANAL.GetRowCount() ; i++){
+		ds_DCVG_ANAL.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_DCVG_ANAL.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_DCVG_ANAL.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_DCVG_ANAL.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+    }
+	
+	var strSvcID = "save";
+	var strPart  = "D10";	
+	var strURL   = "handle.do?ServiceName=D1903010012U-service";  
+	var strInDatasets  = "ds_DCVG_ANAL=ds_DCVG_ANAL:U";
+	var strOutDatasets = "";
+	var strArgument    = "save=1"; 
+    var CallBack       = "fn_D1_CallBack"; 
+    	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+		           , CallBack );
+}
+ 
+//---------------------------------------------------------
+//	공통 버튼 - 행추가
+//--------------------------------------------------------- 
+function fn_CommonAddRow()  
+{   
+	alert("행을 임의로 추가하실수 없습니다.");
+	/*  
+    //11개 행으로 무조건 나열되기 때문에 별도의 로우추가는 필요없다.
+	ds_DCVG_ANAL.AddRow();
+	ds_DCVG_ANAL.SetColumn( ds_DCVG_ANAL.row , 'BASE_YEAR' , fa_base_year  );
+	ds_DCVG_ANAL.SetColumn( ds_DCVG_ANAL.row , 'MPIPE_ID'  , fa_mpipe_id  );
+	ds_DCVG_ANAL.SetColumn( ds_DCVG_ANAL.row , 'EXPLOR_RSLT_SEQ' , fa_explor_rslt_seq ); 
+	*/
+}
+
+//---------------------------------------------------------
+//	공통 버튼 - 행삭제
+//--------------------------------------------------------- 
+function fn_CommonDeleteRow()  
+{  
+	//ds_DCVG_ANAL.DeleteRow( ds_DCVG_ANAL.row ); 
+	ds_DCVG_ANAL.SetColumn( ds_DCVG_ANAL.row , 'X_AXIS'   , 0 );
+	ds_DCVG_ANAL.SetColumn( ds_DCVG_ANAL.row , 'Y_AXIS_I' , 0 );
+	ds_DCVG_ANAL.SetColumn( ds_DCVG_ANAL.row , 'Y_AXIS_R' , 0 ); 
+		
+	fn_Chart_Display();
+} 
+
+//--------------------------------------------------------------------------------------------------
+//	서비스 CallBack
+//--------------------------------------------------------------------------------------------------
+function fn_D1_CallBack(SrvID,ErrorCode,ErrorMsg)
+{
+
+	if(ErrorCode < 0) 
+	{
+		alert(ErrorMsg);
+		return;
+	}
+	
+    switch(SrvID)
+    {         	 
+    	case "find":
+			fn_Chart_Display() ;
+        	break;
+		case "save":
+			alert('저장되었습니다.');
+			fn_CommonSearch();
+        	break;	
+        default:
+
+    }
+}
+//------------------------------------------------------------------------------- 
+// 기      능   :  공통 Excel
+//------------------------------------------------------------------------------- 
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    //SearchCondition = SearchCondition + "업체명 :" + RPad(edt_DealNm.Text," ",20); 
+    SearchCondition = SearchCondition + "기준년도 :" + RPad( fa_base_year ," ",20); 
+    SearchCondition = SearchCondition + "공급관ID :" + RPad( fa_mpipe_id ," ",20);   
+    SearchCondition = SearchCondition + "탐사결과일련번호 :" + RPad( fa_explor_rslt_seq ," ",20);    
+
+    gfn_ExportExcel("DCVG분석표", 5, SearchCondition, "grd_List"); 	
+}
+
+//-------------------------------------------------------------------------------
+//	sorting - Master Grid
+//-------------------------------------------------------------------------------
+function grd_List_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	if( obj.getRowCount() > 0 )
+	{
+		if(nCell == 0 || nCell == 1 || nCell == 2 || nCell == 3) {
+			gfn_SetGridSort(obj, nCell);
+		}	
+	} 
+}
+
+function btn_ExcelUproad_OnClick(obj)
+{
+	//ds_Excel.ClearData();
+	ds_DCVG_ANAL.ClearData();
+	var strColNms = "X_AXIS,Y_AXIS_I,Y_AXIS_R";
+	gfn_D1_UploadExcelData( ds_DCVG_ANAL, grd_List , strColNms);
+	for( var i = 0; i < ds_DCVG_ANAL.rowcount ; i ++ ){ 
+		ds_DCVG_ANAL.SetColumn( i , 'BASE_YEAR'       , fa_base_year );
+		ds_DCVG_ANAL.SetColumn( i , 'MPIPE_ID'        , fa_mpipe_id  );
+		ds_DCVG_ANAL.SetColumn( i , 'EXPLOR_RSLT_SEQ' , fa_explor_rslt_seq );  
+		ds_DCVG_ANAL.SetColumn( i , 'DCVG_ANAL_SEQ'   , i + 1 ); 
+	}
+	//trace( ds_ExcelData.saveXml() ); 
+}
+
+
+function fn_Chart_Display() { 
+	//데이터가 미존재로 변동시  초기화 시킨다.
+	if( ds_DCVG_ANAL.GetRowCount() < 1 ) ct01.ClearData(true);  
+	
+	ct01.OpenData("COD_Values", 1, ds_DCVG_ANAL.GetRowCount()); // 데이타를 Chart에 뿌려주는 메소드 
+	ct01.OpenData("COD_Colors", 1, ds_DCVG_ANAL.GetRowCount()); // 데이타를 Chart에 뿌려주는 메소드 
+	
+	ct01.AxisY.LabelsFormat.Decimals = 1; // 소수점이하 자리수 표시 1: 첫째자리, 2: 둘째자리 3: 셋째자리	
+	ct01.AxisY.LabelsFormat.Format   = "AxisFormat_Number"; 
+	// 데이터및 라벨 표시 
+	for(i = 0 ; i < ds_DCVG_ANAL.GetRowCount(); i++) { 
+		ct01.Axis[1].Label(i) =  i + 1;
+		ct01.Value(0, i) = ds_DCVG_ANAL.GetColumn( i, "X_AXIS");  
+		//ct01.Value(1, i) = ds_DCVG_ANAL.GetColumn( i, "Y_AXIS_I"); 
+		//ct01.Value(2, i) = ds_DCVG_ANAL.GetColumn( i, "Y_AXIS_R");    
+		//ct01.Series[3].YAxis = true;
+	}
+	
+	ct01.SerLeg(0) = "X축";
+	ct01.AxisX.Title.Text = "DCVG X축분석";  
+	ct01.AxisY.Title.Text = "mV";   
+	
+	// CloseData
+	ct01.CloseData("COD_Values");
+	ct01.CloseData("COD_Colors"); 
+	
+	ct01.Visible = true;
+}
+
+//------------------------------------------------------------------------------- 
+// 기      능   :  데이터 값이 변경되면 차트의 그래프값이 변경되게한다.
+//------------------------------------------------------------------------------- 
+function ds_DCVG_ANAL_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	fn_Chart_Display() ;
+}
+
+function btn_ExcelSample_OnClick(obj)
+{
+	gfn_ExportExcelSample( "Grid_XLS_SAMPLE" );
+}
+]]></Script>
+</Window>

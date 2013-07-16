@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1604010010F" Left="8" OnLoadCompleted="D1604010010F_OnLoadCompleted" PidAttrib="7" Title="정비보수작업결과등록_D1604010010F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="MAINTER_NUM" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="FACI_FLAG" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD_1" size="256" type="STRING"/>
+					<colinfo id="WORK_REQ_EMPID" size="256" type="STRING"/>
+					<colinfo id="WORK_REQ_DESC" size="256" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD" size="256" type="STRING"/>
+					<colinfo id="WORK_FLAG" size="256" type="STRING"/>
+					<colinfo id="WORK_TYPE" size="256" type="STRING"/>
+					<colinfo id="DANGER_APPRO_OBJ_YN" size="256" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" type="STRING"/>
+					<colinfo id="MAP_UPD_OBJ_YN" size="256" type="STRING"/>
+					<colinfo id="MIS_UPD_OBJ_YN" size="256" type="STRING"/>
+					<colinfo id="EXPECT_JOB_YMD" size="256" type="STRING"/>
+					<colinfo id="DIG_APPRO_FROM" size="256" type="STRING"/>
+					<colinfo id="DIG_APPRO_TO" size="256" type="STRING"/>
+					<colinfo id="DIG_OBJ_YN" size="256" type="STRING"/>
+					<colinfo id="DIG_SCALE" size="256" type="STRING"/>
+					<colinfo id="DIG_ADMIT_NUM" size="256" type="STRING"/>
+					<colinfo id="ADJ_TYPE" size="256" type="STRING"/>
+					<colinfo id="RECEIVE_YN" size="256" type="STRING"/>
+					<colinfo id="RMK2" size="256" type="STRING"/>
+					<colinfo id="WORK_L_FLAG" size="256" type="STRING"/>
+					<colinfo id="WORK_M_FLAG" size="256" type="STRING"/>
+					<colinfo id="WORK_S_FLAG" size="256" type="STRING"/>
+					<colinfo id="ACT_STR_TIME" size="256" type="STRING"/>
+					<colinfo id="ACT_END_TIME" size="256" type="STRING"/>
+					<colinfo id="ACT_YMD" size="256" type="STRING"/>
+					<colinfo id="ACT_NM" size="256" type="STRING"/>
+					<colinfo id="GIS_PAS_DU_YMD" size="256" type="STRING"/>
+					<colinfo id="WORK_AMT_UNIT_PRC" size="256" type="STRING"/>
+					<colinfo id="WORK_AMT_REAL_COST" size="256" type="STRING"/>
+					<colinfo id="IND_RC_AMT" size="256" type="STRING"/>
+					<colinfo id="DIR_RC_AMT" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list">
+				<Contents>
+					<colinfo id="MAX" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Re">
+				<Contents>
+					<colinfo id="MAINTER_NUM" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="FACI_FLAG" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD_1" size="256" type="STRING"/>
+					<colinfo id="WORK_REQ_EMPID" size="256" type="STRING"/>
+					<colinfo id="WORK_REQ_DESC" size="256" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD" size="256" type="STRING"/>
+					<colinfo id="WORK_FLAG" size="256" type="STRING"/>
+					<colinfo id="WORK_TYPE" size="256" type="STRING"/>
+					<colinfo id="DANGER_APPRO_OBJ_YN" size="256" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" type="STRING"/>
+					<colinfo id="MAP_UPD_OBJ_YN" size="256" type="STRING"/>
+					<colinfo id="MIS_UPD_OBJ_YN" size="256" type="STRING"/>
+					<colinfo id="EXPECT_JOB_YMD" size="256" type="STRING"/>
+					<colinfo id="DIG_APPRO_FROM" size="256" type="STRING"/>
+					<colinfo id="DIG_APPRO_TO" size="256" type="STRING"/>
+					<colinfo id="DIG_OBJ_YN" size="256" type="STRING"/>
+					<colinfo id="DIG_SCALE" size="256" type="STRING"/>
+					<colinfo id="DIG_ADMIT_NUM" size="256" type="STRING"/>
+					<colinfo id="ADJ_TYPE" size="256" type="STRING"/>
+					<colinfo id="RECEIVE_YN" size="256" type="STRING"/>
+					<colinfo id="RMK2" size="256" type="STRING"/>
+					<colinfo id="WORK_L_FLAG" size="256" type="STRING"/>
+					<colinfo id="WORK_M_FLAG" size="256" type="STRING"/>
+					<colinfo id="WORK_S_FLAG" size="256" type="STRING"/>
+					<colinfo id="ACT_STR_TIME" size="256" type="STRING"/>
+					<colinfo id="ACT_END_TIME" size="256" type="STRING"/>
+					<colinfo id="ACT_YMD" size="256" type="STRING"/>
+					<colinfo id="ACT_NM" size="256" type="STRING"/>
+					<colinfo id="GIS_PAS_DU_YMD" size="256" type="STRING"/>
+					<colinfo id="WORK_AMT_UNIT_PRC" size="256" type="STRING"/>
+					<colinfo id="WORK_AMT_REAL_COST" size="256" type="STRING"/>
+					<colinfo id="IND_RC_AMT" size="256" type="STRING"/>
+					<colinfo id="DIR_RC_AMT" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="985" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="30" Type="RoundRect" Width="980"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="980" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="6" Top="35" Type="Rectangle" Width="970"></Shape>
+		<Image Align="Left" Height="6" Id="Image5" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="1" Text="지사" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="179" LeftMargin="12" Style="blt_search_1" TabOrder="2" Text="구" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image4" ImageID="blt" Left="330" LeftMargin="12" Style="blt_search_1" TabOrder="3" Text="의뢰일자" Top="46" Width="59"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="4" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="980">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="#6cbae1" Bottom="94" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="985" TabOrder="8" Top="91" Type="Rectangle" Width="980"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="222" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="128" Id="grd_list" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_list_OnCellClick" Right="985" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="7" TabStop="true" Top="94" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="980">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="150"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="의뢰일자"/>
+						<cell col="2" display="text" text="의뢰내용"/>
+						<cell col="3" display="text" text="의뢰자"/>
+						<cell col="4" display="text" text="요청일자"/>
+						<cell col="5" display="text" text="공사구분"/>
+						<cell col="6" display="text" text="시설구분"/>
+						<cell col="7" display="text" text="위험대상"/>
+						<cell col="8" display="text" text="처리구분"/>
+					</head>
+					<body>
+						<cell col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell col="1" colid="WORK_REQ_YMD_1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="WORK_REQ_DESC" display="text"/>
+						<cell col="3" colid="WORK_REQ_EMPID" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="WORK_REQ_YMD" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" colid="WORK_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="6" colid="FACI_FLAG" display="text"/>
+						<cell col="7" colid="DANGER_APPRO_OBJ_YN" display="text"/>
+						<cell col="8" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Combo Border="Flat" Height="18" Id="branch_cd" Left="53" Style="combo_indis" TabOrder="9" Top="39" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="zip_no1" Left="206" Style="combo_indis" TabOrder="10" Top="39" Width="114"></Combo>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="req_ymd_start" Left="395" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="11" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static10" Left="484" Style="static" TabOrder="12" Text="~" Top="43" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="req_ymd_end" Left="494" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="13" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="14" Text="정비보수&#32;의뢰내역" Top="75" Width="127"></Image>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static30" Left="110" Style="table" TabOrder="25" Top="246" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static37" Left="665" Style="table" TabOrder="30" Text="공사요청일자" Top="246" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static32" Left="110" Style="table" TabOrder="27" Top="267" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static18" Left="110" Style="table" TabOrder="16" Top="330" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static21" Left="5" Style="table" TabOrder="15" Text="굴착대상" Top="330" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static0" Left="110" Style="table" TabOrder="18" Top="288" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="5" Style="table" TabOrder="17" Text="공사의뢰내용" Top="288" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static2" Left="110" Style="table" TabOrder="20" Top="309" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static3" Left="5" Style="table" TabOrder="19" Text="위험승인대상" Top="309" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static7" Left="335" Style="table" TabOrder="21" Text="원이자&#32;이설/보수코드" Top="309" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static8" Left="335" Style="table" TabOrder="22" Text="굴착허가" Top="330" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static20" Left="665" Style="table" TabOrder="23" Text="도면수정대상" Top="309" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static31" Left="5" Style="table" TabOrder="24" Text="공사의뢰일자" Top="246" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static33" Left="5" Style="table" TabOrder="26" Text="공사의뢰회사" Top="267" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static35" Left="335" Style="table" TabOrder="28" Text="공사구분" Top="267" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static36" Left="335" Style="table" TabOrder="29" Text="공사의뢰자" Top="246" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="MAP_UPD_OBJ_YN" Height="18" Id="map_chg_obj_yn" ImeMode="none" Left="793" Style="edit_Indis" TabOrder="31" Top="311" Width="188"></Edit>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static4" Left="665" Style="table" TabOrder="32" Text="공사유형" Top="267" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_REQ_DESC" Height="18" Id="work_req_desc" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="33" Top="290" Width="848"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="DANGER_APPRO_OBJ_YN" Height="18" Id="danger_appro_obj_yn" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="34" Top="311" Width="199"></Edit>
+		<Image Align="Left" Height="9" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="35" Text="정비보수&#32;의뢰내역" Top="227" Width="157"></Image>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_FIRM_CD" Height="18" Id="working_firm_cd" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="36" Top="269" Width="199"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_REQ_EMPID" Height="18" Id="work_req_empid" ImeMode="none" Left="463" Style="edit_Indis" TabOrder="37" Top="248" Width="199"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="MOVE_REPAIR_NUM" Height="18" Id="move_repair_num" ImeMode="none" Left="463" Style="edit_Indis" TabOrder="38" Top="311" Width="199"></Edit>
+		<Image Align="Left" Height="9" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="39" Text="정비보수작업&#32;결과등록" Top="400" Width="157"></Image>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static5" Left="110" Style="table" TabOrder="41" Top="372" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="5" Style="table" TabOrder="40" Text="첨부" Top="372" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static9" Left="110" Style="table" TabOrder="43" Top="351" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static11" Left="5" Style="table" TabOrder="42" Text="예상작업일자" Top="351" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static12" Left="335" Style="table" TabOrder="44" Text="굴착승인기간" Top="351" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static14" Left="665" Style="table" TabOrder="45" Text="정산유형" Top="351" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Enable="FALSE" Height="18" Id="Edit13" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="46" Top="374" Width="529"></Edit>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static13" Left="665" Style="table" TabOrder="47" Text="굴착규모" Top="330" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static15" Left="665" Style="table" TabOrder="48" Text="MIS수정대상" Top="372" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="MIS_UPD_OBJ_YN" Height="18" Id="mis_change_obj_yn" ImeMode="none" Left="793" Style="edit_Indis" TabOrder="49" Top="374" Width="188"></Edit>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static16" Left="110" Style="table" TabOrder="50" Top="437" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static19" Left="110" Style="table" TabOrder="52" Top="416" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static23" Left="397" Style="table" TabOrder="53" Text="출동구분" Top="416" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static24" Left="397" Style="table" TabOrder="54" Text="조치자" Top="437" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static25" Left="665" Style="table" TabOrder="55" Text="조치일자" Top="416" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static26" Left="110" Style="table" TabOrder="57" Top="479" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static27" Left="5" Style="table" TabOrder="56" Text="첨부" Top="479" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BindDataset="ds_Multi_Re" BKColor="white" Border="Flat" Height="22" Id="Static28" Left="110" Style="table" TabOrder="58" Top="458" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static34" Left="397" Style="table" TabOrder="59" Text="도면수정의뢰일자" Top="458" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Enable="FALSE" Height="18" Id="Edit25" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="60" Top="481" Width="848"></Edit>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static39" Left="665" Style="table" TabOrder="61" Text="조치시간" Top="437" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="64" Id="Static22" Left="5" Style="table" TabOrder="51" Text="위험승인대상" Top="416" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static17" Left="129" Style="table" TabOrder="62" Text="대분류" Top="416" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static29" Left="129" Style="table" TabOrder="63" Text="중분류" Top="437" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Right" BindDataset="ds_Multi_Re" Border="Flat" Height="22" Id="Static41" Left="129" Style="table" TabOrder="64" Text="소분류" Top="458" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_L_FLAG" Enable="FALSE" Height="18" Id="Combo2" Left="231" Style="combo_indis" TabOrder="65" Top="417" Width="164"></Combo>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_M_FLAG" Enable="FALSE" Height="18" Id="Combo3" Left="231" Style="combo_indis" TabOrder="66" Top="438" Width="164"></Combo>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_S_FLAG" Enable="FALSE" Height="18" Id="Combo4" Left="231" Style="combo_indis" TabOrder="67" Top="459" Width="164"></Combo>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Enable="FALSE" Height="18" Id="Combo5" Left="499" Style="combo_indis" TabOrder="68" Top="417" Width="164"></Combo>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar0" Left="500" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="69" Top="460" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="ACT_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar3" Left="768" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="70" Top="418" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static BindDataset="ds_Multi_Re" Height="13" Id="Static38" Left="876" Style="static" TabOrder="71" Text="~" Top="442" Width="10"></Static>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="ACT_STR_TIME" Height="18" Id="Edit18" ImeMode="none" Left="768" Style="edit_Indis" TabOrder="72" Top="439" Width="103"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="ACT_END_TIME" Height="18" Id="Edit19" ImeMode="none" Left="889" Style="edit_Indis" TabOrder="73" Top="439" Width="92"></Edit>
+		<Image Align="Left" Height="9" Id="Image2" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="76" Text="기&#32;지급&#32;자재내역" Top="507" Width="127"></Image>
+		<Shape BKColor="#6cbae1" Bottom="525" Height="3" Id="Shape3" Left="5" LineWidth="0" Right="985" TabOrder="75" Top="522" Type="Rectangle" Width="980"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="653" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="128" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="985" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="74" TabStop="true" Top="525" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="980">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="text" text="자재코드"/>
+						<cell bkcolor="user11" col="1" display="text" text="자재명"/>
+						<cell bkcolor="user11" col="2" display="text" text="규격"/>
+						<cell bkcolor="user11" col="3" display="text" text="출고량"/>
+					</head>
+					<body>
+						<cell col="0" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text"/>
+						<cell col="2" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static40" Left="110" Style="table" TabOrder="86" Top="679" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static43" Left="110" Style="table" TabOrder="88" Top="700" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static44" Left="110" Style="table" TabOrder="78" Top="763" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static45" Left="5" Style="table" TabOrder="77" Text="요청일자" Top="763" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static46" Left="110" Style="table" TabOrder="80" Top="721" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static47" Left="5" Style="table" TabOrder="79" Text="공사금액(단가)" Top="721" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static48" Left="110" Style="table" TabOrder="82" Top="742" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static49" Left="5" Style="table" TabOrder="81" Text="공사금액(설비)" Top="742" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static50" Left="335" Style="table" TabOrder="83" Text="요청일자" Top="742" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static52" Left="665" Style="table" TabOrder="84" Text="직접복구비" Top="721" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static53" Left="5" Style="table" TabOrder="85" Text="GIS이관일자" Top="679" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static54" Left="5" Style="table" TabOrder="87" Text="공사비" Top="700" VAlign="Middle" Width="331" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static55" Left="335" Style="table" TabOrder="89" Text="간접복구비" Top="700" VAlign="Middle" Width="331" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static56" Left="335" Style="table" TabOrder="90" Text="정산구분" Top="679" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="GIS_PAS_DU_YMD" Height="18" Id="gis_pas_du_ymd" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="91" Top="681" Width="199"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="DIR_RC_AMT" Height="18" Id="Edit21" ImeMode="none" Left="793" Style="edit_Indis" TabOrder="92" Top="723" Width="188"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static57" Left="665" Style="table" TabOrder="93" Text="직접복구비" Top="700" VAlign="Middle" Width="320" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_AMT_UNIT_PRC" Height="18" Id="Edit23" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="94" Top="723" Width="199"></Edit>
+		<Image Align="Left" Height="9" Id="Image6" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="95" Text="정비보수작업&#32;정산내역등록" Top="659" Width="182"></Image>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="IND_RC_AMT" Height="18" Id="Edit29" ImeMode="none" Left="463" Style="edit_Indis" TabOrder="96" Top="723" Width="199"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static58" Left="665" Style="table" TabOrder="97" Text="요청일자" Top="742" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static59" Left="335" Style="table" TabOrder="98" Text="간접복구비" Top="721" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Combo Border="Flat" Enable="FALSE" Height="18" Id="Combo7" Left="462" Style="combo_indis" TabOrder="99" Top="680" Width="201"></Combo>
+		<Button Cursor="HAND" Height="17" Id="Button54" ImageID="search" Left="315" OnClick="Button8_OnClick" TabOrder="100" Text="Button8" Top="745" Width="17"></Button>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_AMT_REAL_COST" Height="18" Id="Edit22" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="101" Top="744" Width="181"></Edit>
+		<Calendar Border="Flat" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar4" Left="133" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="102" Top="765" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar Border="Flat" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar5" Left="463" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="103" Top="744" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar Border="Flat" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar6" Left="793" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="104" Top="744" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_REQ_YMD_1" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="work_req_ymd_1" Left="133" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="105" Top="248" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_REQ_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="work_req_ymd" Left="793" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="106" Top="248" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="EXPECT_JOB_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="expect_job_ymd" Left="133" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="107" Top="353" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static51" Left="110" Style="table" TabOrder="109" Top="784" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static61" Left="110" Style="table" TabOrder="111" Top="805" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static60" Left="5" Style="table" TabOrder="110" Text="첨부문서" Top="805" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static42" Left="5" Style="table" TabOrder="108" Text="첨부파일" Top="784" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit5" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="112" Top="807" Width="848"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit10" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="113" Top="786" Width="772"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="18" Id="Button23" ImageID="btn_4_fileadd" Left="906" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="114" Text="파일첨부&#32;" Top="786" Width="75"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button125" ImageID="btn_8_Inquiry" Left="859" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="115" Text="정비보수&#32;단가조회" Top="658" Width="127"></Button>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="DIG_APPRO_FROM" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="dig_appro_from" Left="463" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="116" Top="354" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static62" Left="552" Style="static" TabOrder="117" Text="~" Top="357" Width="10"></Static>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="DIG_APPRO_TO" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="dig_appro_to" Left="562" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="118" Top="354" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="ADJ_TYPE" Height="18" Id="adj_type" INDEX="0" Left="792" Style="combo_indis" TabOrder="119" Top="352" Width="190"></Combo>
+		<Combo Border="Flat" Enable="FALSE" Height="18" Id="dig_obj_yn" Left="132" Style="combo_indis" TabOrder="120" Top="331" Width="201"></Combo>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="DIG_ADMIT_NUM" Height="18" Id="dig_admit_num" Left="462" Style="combo_indis" TabOrder="121" Top="331" Width="201"></Combo>
+		<Combo Border="Flat" Enable="FALSE" Height="18" Id="dig_scale" Left="792" Style="combo_indis" TabOrder="122" Top="331" Width="190"></Combo>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_FLAG" Height="18" Id="work_flag" Left="462" Style="combo_indis" TabOrder="123" Top="268" Width="201"></Combo>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_TYPE" Height="18" Id="work_type" Left="792" Style="combo_indis" TabOrder="124" Top="268" Width="190"></Combo>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="ACT_NM" Height="18" Id="Edit0" ImeMode="none" Left="501" Style="edit_Indis" TabOrder="125" Top="439" Width="160"></Edit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1604010010F.xml
+* Form 설명  : 정비보수 작업결과 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2008-12-24
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+  추가 fn_CommonAddRow
+  삭제 fn_CommonDeleteRow
+  저장 fn_CommonSave
+  조회 fn_CommonSearch
+  엑셀 fn_CommonExcelExport
+  인쇄 fn_CommonPrint
+  닫기 공통에서 처리
+===============================================================================*/ 
+
+var mainter_num = "";
+
+function D1604010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	//	fn_max();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_max()
+//   설명: Insert 하기전 정비보수번호 자동부여
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+// function fn_max()
+// {
+    
+	// var strSvcID = "";
+	// var strPart = "D10";	
+	// var strURL = "handle.do?ServiceName=D1_MaintRepaiWorkReceipMgr-service&search2=1";  
+	// var strInDatasets  = "";
+	// var strOutDatasets  = "ds_list=ds_list";
+	// var strArgument  = "";
+	
+	// gfn_SyncCall( 
+					 // strSvcID
+				   // , strPart
+				   // , strURL
+				   // , strInDatasets
+				   // , strOutDatasets
+				   // , strArgument
+			   // );
+// }
+
+function fn_Init()
+{
+	gfn_SetButton("0011011");
+	gfn_SetComboBox_Comcode("B10037",gfn_setDsObject_Comcode("branch_cd"));
+	gfn_SetComboBox_Comcode("B10004",gfn_setDsObject_Comcode("zip_no1"));
+	gfn_SetComboBox_Comcode("D10105",gfn_setDsObject_Comcode("adj_type"));
+	gfn_SetComboBox_Comcode("B10010",gfn_setDsObject_Comcode("work_flag")); 
+	gfn_SetComboBox_Comcode("B10034",gfn_setDsObject_Comcode("work_type"));
+	gfn_SetComboBox_Comcode("D10183",gfn_setDsObject_Comcode("dig_admit_num"));
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+		fn_D1_FindList();
+		ds_Multi_Re.ClearData();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FindList()
+//   설명:  정비보수 작업결과를 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FindList()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiWorkResultMgr-service&search=1"
+			   + "&BRANCH_CD     =" +branch_cd.Value
+			   + "&ZIP_NO1 	     =" +zip_no1.Value
+			   + "&REQ_YMD_START =" +req_ymd_start.Value
+			   + "&REQ_YMD_END   =" +req_ymd_end.Value
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ds_Multi.GetRowCount()==0) trace("조회결과가 없습니다.");
+	trace(ds_Multi.SaveXML());
+}
+
+
+// 다시한번 의뢰상세내역에 관한 리스트 가져온다 
+function grd_list_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{  
+	mainter_num = ds_Multi.GetColumn(nRow, "MAINTER_NUM");
+	fn_Re_Findlist();
+}
+	
+function fn_Re_Findlist()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiWorkResultMgr-service&search1=1"
+			   + "&MAINTER_NUM=" +mainter_num
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi_Re=ds_Multi_Re";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ds_Multi_Re.GetRowCount()==0) trace("조회결과가 없습니다.");
+	trace(ds_Multi_Re.SaveXML());
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Save()
+//   설명:  정비보수 작업결과를 수정한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSave()
+{
+	fn_D1_Save();
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Update()
+//   설명: 저장 버튼 클릭시 실행 됨 
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_D1_Save()
+{      
+	// update 인지 insert 인지 확인하기 (정비보수번호 자동부여)
+	// if(ds_Multi_Re.GetRowType(0) == "insert")
+	// {
+		// var max = substr(ds_list.GetColumn(0, "MAX"), 5, 6);
+		// var seq = Lpad(parseInt(max) + 1, "0", 6);
+		// var flag = "A" + substr(today(), 0, 4) + seq;
+		
+		// ds_Multi_Re.SetColumn(0, "MAINTER_NUM", flag);
+	// }
+	var strSvcID = "fn_D1_Save";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiWorkResultMgr-service&save=1"
+				+"&MAINTER_NUM=" +mainter_num
+				;
+	var strInDatasets  = "ds_Multi_Re=ds_Multi_Re:u";
+	var strOutDatasets  = "ds_Multi_Re=ds_Multi_Re";
+	var strArgument  = "";	
+	var strCallbackFunc = "fn_CallBack";
+	
+	gfn_AsyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallbackFunc
+				  );
+}
+
+/*===============================================================================
+ * callback
+===============================================================================*/
+function fn_CallBack(svcId, ErrorCode, ErrorMsg)
+{
+	if ( ErrorCode <0 )
+	{
+		var tr_name;
+		var tr_kname;
+		switch(svcId){
+			case "fn_D1_Save": 
+			//수정 실패시 
+				tr_name="find";
+				tr_kname="수정";
+			break;
+		}
+		return;
+	}
+
+	 switch(svcid)
+	 {
+		case "fn_D1_Save":
+			trace("fn_D1_Save callback");
+			//업데이트 완료후
+				fn_D1_FindList();
+				alert('정상 수정 및 등록 후 조회를 완료하였습니다.');
+		break;
+	}
+}
+
+
+function Button8_OnClick(obj)
+{
+	gfn_Dialog("D10","D1604010010U","",450,400,true,-1,-1);
+}
+
+
+]]></Script>
+</Window>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1605020010U" Left="8" OnLoadCompleted="D1605020010U_OnLoadCompleted" PidAttrib="7" Title="정비보수작업결과상세정보_D1605020010U" Top="8" Ver="1.0" Width="660" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="WORK_FLAG" size="256" type="STRING"/>
+					<colinfo id="ACT_YMD" size="256" type="STRING"/>
+					<colinfo id="ACT_NM" size="256" type="STRING"/>
+					<colinfo id="ACT_DESC" size="256" type="STRING"/>
+					<colinfo id="ACT_STR_TIME" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="정비보수작업결과&#32;상세정보" Transparent="TRUE" Width="660"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="396" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="324" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="655" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="72" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="650">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="91"/>
+						<col width="90"/>
+						<col width="98"/>
+						<col width="85"/>
+						<col width="85"/>
+						<col width="346"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="text" text="공사구분"/>
+						<cell bkcolor="user11" col="1" display="text" text="출동구분"/>
+						<cell bkcolor="user11" col="2" display="text" text="조치일자"/>
+						<cell bkcolor="user11" col="3" display="text" text="조치자" TrimType="Left"/>
+						<cell bkcolor="user11" col="4" display="text" text="조치시간" TrimType="Left"/>
+						<cell bkcolor="user11" col="5" display="text" text="조치내용" TrimType="Left"/>
+					</head>
+					<body>
+						<cell col="0" colid="WORK_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="ACT_YMD" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="ACT_NM" display="text"/>
+						<cell col="4" colid="ACT_STR_TIME" display="text"/>
+						<cell col="5" colid="ACT_DESC" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="66" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="655" TabOrder="3" Top="63" Type="Rectangle" Width="650"></Shape>
+		<Div Height="29" Id="Div0" Left="1" TabOrder="4" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="656">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1601010012U.xml
+* Form 설명  : 정비보수 작업결과 상세정보
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2008-12-16
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+//---------------------------------------------------------
+function D1605020010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+}
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+		fn_D1_FindList();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명     : fn_D1_FindList()
+// 설명       :  정비보수 작업결과 상세정보를 조회한다.
+// arguments
+// return 내용: 
+//------------------------------------------------------------------------------- 
+function fn_D1_FindList()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiApproListMgr-service"
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "findGo";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ds_Multi.GetRowCount()==0) trace("조회결과가 없습니다.");
+	trace(ds_Multi.SaveXML());
+}
+]]></Script>
+</Window>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1605020010F" Left="8" OnLoadCompleted="D1605020010F_OnLoadCompleted" PidAttrib="7" Title="정비보수작업정산결재&#32;팀장_D1605020010F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1000" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="30" Type="RoundRect" Width="995"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="995" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="6" Top="35" Type="Rectangle" Width="985"></Shape>
+		<Image Align="Left" Height="6" Id="Image5" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="1" Text="지사" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="179" LeftMargin="12" Style="blt_search_1" TabOrder="2" Text="구" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image4" ImageID="blt" Left="515" LeftMargin="12" Style="blt_search_1" TabOrder="3" Text="승인일자" Top="46" Width="59"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="4" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="995">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="#6cbae1" Bottom="99" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1000" TabOrder="8" Top="96" Type="Rectangle" Width="995"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_suppress" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="577" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="478" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1000" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="7" TabStop="true" Top="99" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="30"/>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="150"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="83"/>
+						<col width="83"/>
+						<col width="83"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="checkbox"/>
+						<cell bkcolor="user11" col="1" display="text" text="처리구분"/>
+						<cell bkcolor="user11" col="2" display="text" text="의뢰내역"/>
+						<cell bkcolor="user11" col="3" display="text" text="조치결과"/>
+						<cell bkcolor="user11" col="4" display="text" text="공사비용"/>
+						<cell bkcolor="user11" col="5" display="text" text="간접비"/>
+						<cell bkcolor="user11" col="6" display="text" text="직접비"/>
+						<cell bkcolor="user11" col="7" display="text" text="비용합계"/>
+						<cell bkcolor="user11" col="8" display="text" text="승인일자"/>
+						<cell bkcolor="user11" col="9" display="text" text="검토일자"/>
+						<cell bkcolor="user11" col="10" display="text" text="검토자"/>
+					</head>
+					<body>
+						<cell col="0" display="normal" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text"/>
+						<cell col="3" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="6" display="text"/>
+						<cell col="7" display="text"/>
+						<cell col="8" display="text"/>
+						<cell col="9" display="text"/>
+						<cell col="10" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Combo Border="Flat" Height="18" Id="Combo0" Left="53" Style="combo_indis" TabOrder="9" Top="39" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo1" Left="206" Style="combo_indis" TabOrder="10" Top="39" Width="114"></Combo>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar1" Left="580" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="11" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static10" Left="669" Style="static" TabOrder="12" Text="~" Top="43" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar2" Left="679" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="13" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="6" Id="Image8" ImageID="blt" Left="329" LeftMargin="12" Style="blt_search_1" TabOrder="14" Text="공사구분" Top="46" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="Combo8" Left="392" Style="combo_indis" TabOrder="15" Top="39" Width="114"></Combo>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="21" Id="Button14" ImageID="btn_appro" Left="950" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="16" Text="승인" Top="75" Width="50"></Button>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+function D1605020010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+}]]></Script>
+</Window>

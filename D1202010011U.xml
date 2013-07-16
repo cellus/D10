@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="545" Id="D1202010011U" Left="8" OnLoadCompleted="D1101010010U_OnLoadCompleted" PidAttrib="7" Title="정압기&#32;점검표_D1202010011U" Top="8" Ver="1.0" Width="1050" WorkArea="false">
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="정압기&#32;점검표" Transparent="TRUE" Width="1050"></Image>
+		<Div Height="29" Id="Div0" Left="411" TabOrder="2" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="634">
+			<Contents></Contents>
+		</Div>
+		<Static Height="13" Id="Static0" Left="5" Style="static" TabOrder="3" Text="1.&#32;점검일자&#32;:" Top="68" Width="70"></Static>
+		<Static Height="13" Id="Static1" Left="78" Style="static" TabOrder="4" Text="style&#32;:static&#32;적용" Top="68" Width="290"></Static>
+		<Static Height="13" Id="Static2" Left="5" Style="static" TabOrder="5" Text="2.&#32;점&#32;검&#32;원&#32;&#32;:&#32;" Top="90" Width="70"></Static>
+		<Static Height="13" Id="Static3" Left="78" Style="static" TabOrder="6" Text="style&#32;:static&#32;적용" Top="90" Width="290"></Static>
+		<Static Height="13" Id="Static4" Left="5" Style="static" TabOrder="7" Text="3.&#32;점검내역&#32;:" Top="112" Width="70"></Static>
+		<Static Height="13" Id="Static5" Left="78" Style="static" TabOrder="8" Text="style&#32;:static&#32;적용" Top="112" Width="290"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static28" Left="792" Style="table" TabOrder="10" Text="담당" Top="68" VAlign="Middle" Width="85" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="36" Id="Static24" Left="792" Style="table" TabOrder="9" Top="89" VAlign="Middle" Width="85" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="57" Id="Static6" Left="738" Style="table" TabOrder="11" Text="결재" Top="68" VAlign="Middle" Width="55" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static7" Left="876" Style="table" TabOrder="13" Text="팀장" Top="68" VAlign="Middle" Width="169" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="36" Id="Static8" Left="876" Style="table" TabOrder="12" Top="89" VAlign="Middle" Width="85" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="36" Id="Static10" Left="960" Style="table" TabOrder="14" Top="89" VAlign="Middle" Width="85" WordWrap="TRUE"></Static>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="Dataset0" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="481" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="349" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="1045" SelColor="MENU" Style="grid_pop" TabOrder="15" TabStop="true" Top="132" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1040">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="40"/>
+						<col width="90"/>
+						<col width="85"/>
+						<col width="85"/>
+						<col width="95"/>
+						<col width="95"/>
+						<col width="105"/>
+						<col width="100"/>
+						<col width="95"/>
+						<col width="95"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" rowspan="2" text="NO"/>
+						<cell col="1" display="text" rowspan="2" text="정압기명"/>
+						<cell col="2" colspan="2" display="text" text="가동압력"/>
+						<cell col="4" colspan="7" display="text" text="점검결과"/>
+						<cell col="7" display="text" row="1" text="경보기&#32;작동상태"/>
+						<cell col="8" display="text" row="1" text="SSV차단여부"/>
+						<cell col="2" display="text" row="1" text="1차"/>
+						<cell col="3" display="text" row="1" text="2차"/>
+						<cell col="4" display="text" row="1" text="가스누설여부"/>
+						<cell col="5" display="text" row="1" text="정압기&#32;작동상태"/>
+						<cell col="6" display="text" row="1" text="FILTER차압계확인"/>
+						<cell col="9" display="text" row="1" text="SV작동상태"/>
+						<cell col="10" display="text" row="1" text="기타"/>
+					</head>
+					<body>
+						<cell col="0" display="date" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" display="text"/>
+						<cell col="5" display="text"/>
+						<cell col="6" display="text"/>
+						<cell col="7" display="text"/>
+						<cell col="8" display="text"/>
+						<cell col="9" display="text"/>
+						<cell col="10" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="132" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="1045" TabOrder="16" Top="129" Type="Rectangle" Width="1040"></Shape>
+		<Static BKColor="white" Border="Flat" Height="57" Id="Static11" Left="40" Style="table" TabOrder="17" Top="483" VAlign="Middle" Width="1005" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="57" Id="Static12" Left="5" Style="pop_table" TabOrder="18" Text="특기사항" Top="483" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<TextArea Border="Flat" Height="53" Id="TextArea0" Left="143" Style="textarea" TabOrder="19" Text="TextArea0" Top="485" VScroll="TRUE" Width="898"></TextArea>
+	</Form>
+	<Script><![CDATA[
+#include "JS::COMMONA10001.js";
+
+function D1101010010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	gfn_SetButton("0001111");
+	
+}]]></Script>
+</Window>

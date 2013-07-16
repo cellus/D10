@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="624" Id="D1903010010U" Left="8" OnLoadCompleted="D1903010010U_OnLoadCompleted" OnUnloadCompleted="D1903010010U_OnUnloadCompleted" PidAttrib="7" Title="ECDA분석카드_D1903010010U" Top="8" Ver="1.0" Width="1245" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Press">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Pipe">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Pavement">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaRst" UseClientLayout="1">
+				<Contents>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORIGINAL_INPUT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_GR_CONN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ANODE_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ISOLATION" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAGE" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAIC" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAIC_MACHINE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR_POTENTIAL" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_END_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_END_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="POTENTIAL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXIST_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaRstI" UseClientLayout="1">
+				<Contents>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORIGINAL_INPUT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_GR_CONN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ANODE_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ISOLATION" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAGE" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAIC" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAIC_MACHINE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR_POTENTIAL" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_END_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_END_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="POTENTIAL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXIST_YN" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Ir" UseClientLayout="1">
+				<Contents>
+					<colinfo id="CAL_IR_LEFT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="CAL_IR_RIGHT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="CAL_IR_VIEW" size="256" summ="default" type="DECIMAL"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Cips" OnColumnChanged="ds_Cips_OnColumnChanged" UseClientLayout="1">
+				<Contents>
+					<colinfo id="ON_ELECT_1" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="ON_ELECT_2" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="ON_ELECT_DAMAGE" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="ON_ELECT_3" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="ON_ELECT_4" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="OFF_ELECT_1" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="OFF_ELECT_2" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="OFF_ELECT_DAMAGE" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="OFF_ELECT_3" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="OFF_ELECT_4" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="SPACE" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="ON_ELECT_DAMAGE0" size="256" summ="default" type="INT"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR_POTENTIAL" size="256" summ="default" type="DECIMAL"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExcelData">
+				<Contents>
+					<colinfo id="EXCOL0" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL1" size="255" summ="default" type="STRING"/>
+					<record>
+						<EXCOL0></EXCOL0>
+						<EXCOL1></EXCOL1>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_CipsExcel" UseClientLayout="1">
+				<Contents>
+					<colinfo id="ON_ELECT" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="OFF_ELECT" size="256" summ="default" type="DECIMAL"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExcelSAMPLE">
+				<Contents>
+					<colinfo id="ON_ELECT" size="255" summ="default" type="STRING"/>
+					<colinfo id="OFF_ELECT" size="255" summ="default" type="STRING"/>
+					<record>
+						<OFF_ELECT>3</OFF_ELECT>
+						<ON_ELECT>11</ON_ELECT>
+					</record>
+					<record>
+						<OFF_ELECT>6.4</OFF_ELECT>
+						<ON_ELECT>9</ON_ELECT>
+					</record>
+					<record>
+						<OFF_ELECT>7</OFF_ELECT>
+						<ON_ELECT>1.5</ON_ELECT>
+					</record>
+					<record>
+						<OFF_ELECT>1</OFF_ELECT>
+						<ON_ELECT>3.7</ON_ELECT>
+					</record>
+					<record>
+						<OFF_ELECT>13.3</OFF_ELECT>
+						<ON_ELECT>33</ON_ELECT>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="289" Height="39" Id="Shape0" Left="6" LineColor="user7" Right="1235" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="6" Top="250" Type="RoundRect" Width="1229"></Shape>
+		<Shape BKColor="user8" Bottom="285" Height="29" Id="Shape1" Left="12" LineWidth="0" Right="1231" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="256" Type="Rectangle" Width="1219"></Shape>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="1" Text="ECDA분석카드" Top="60" Width="117"></Image>
+		<Image Align="Left" Height="39" Id="Image10" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="2" TabStop="FALSE" Text="ECDA분석카드" Transparent="TRUE" Width="1243"></Image>
+		<Edit Align="RIGHT" Border="None" Height="18" Id="st_totalcnt" ImeMode="none" Left="1202" Number="TRUE" Readonly="TRUE" Style="edit" TabOrder="3" TabStop="FALSE" Top="119" Width="31"></Edit>
+		<Div Height="136" Id="divMain" Left="7" TabOrder="4" Text="Div0" Top="73" Width="1233">
+			<Contents>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static10" Left="-1" Style="table" TabOrder="32" Top="42" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static14" Left="-1" Style="table" TabOrder="35" Top="105" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static13" Left="-1" Style="table" TabOrder="34" Top="84" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static12" Left="-1" Style="table" TabOrder="33" Top="63" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="-1" Style="table" TabOrder="24" Top="21" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="-1" Style="table" TabOrder="20" VAlign="Middle" Width="1230" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static1" Style="table" TabOrder="17" Text="관리번호" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static3" Style="table" TabOrder="18" Text="주소" Top="21" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static23" Style="table" TabOrder="15" Text="배관접지" Top="42" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static29" Style="table" TabOrder="16" Text="배관절연" Top="63" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="43" Id="Static11" Style="table" TabOrder="19" Text="정류기출력" Top="84" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRst" Border="Flat" Column="MANAGE_NUM" Enable="FALSE" Height="18" Id="edt_ManageNum" ImeMode="none" Left="136" Style="edit" TabOrder="11" TabStop="FALSE" Top="2" Width="170"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static2" Left="307" Style="table" TabOrder="21" Text="탐사일자" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRst" Border="Flat" Column="EXPLOR_YMD_NM" Enable="FALSE" Height="18" Id="edt_EcdaExplorYmd" ImeMode="none" Left="443" Style="edit" TabOrder="12" TabStop="FALSE" Top="2" Width="170"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static4" Left="614" Style="table" TabOrder="22" Text="배관ID" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRst" Border="Flat" Column="MPIPE_ID" Enable="FALSE" Height="18" Id="edt_MpipeId" ImeMode="none" Left="750" Style="edit" TabOrder="13" TabStop="FALSE" Top="2" Width="170"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static5" Left="921" Style="table" TabOrder="14" Text="초기입력ID" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRst" Border="Flat" Column="ORIGINAL_INPUT_ID" Enable="FALSE" Height="18" Id="edt_OriginakInputId" ImeMode="none" Left="1057" Style="edit" TabOrder="14" TabStop="FALSE" Top="2" Width="170"></Edit>
+				<Edit BindDataset="ds_EcdaRst" BKColor="#f2f2f2" Border="Flat" Column="DAMAGE_ADDR" Height="18" Id="edt_DamageAddr" ImeMode="none" Left="136" Readonly="TRUE" Style="edit" TabOrder="15" TabStop="FALSE" Top="23" Width="355"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static7" Left="492" Style="table" TabOrder="26" Text="매설년도" Top="21" VAlign="Middle" Width="55" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRst" Border="Flat" Column="COMPL_YEAR" Enable="FALSE" Height="18" Id="edit_ComplYear" ImeMode="none" Left="548" Style="edit" TabOrder="16" TabStop="FALSE" Top="23" Width="65"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static8" Left="614" Style="table" TabOrder="28" Text="관경" Top="21" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRst" Border="Flat" Column="PIPE_DIAM_NM" Enable="FALSE" Height="18" Id="Edit4" ImeMode="none" Left="750" Style="edit" TabOrder="17" TabStop="FALSE" Top="23" Width="170"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static9" Left="921" Style="table" TabOrder="30" Text="포종" Top="21" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit Align="CENTER" BindDataset="ds_EcdaRst" Border="Flat" Column="PAVEMENT_KIND_NM" Enable="FALSE" Height="18" Id="Edit5" ImeMode="none" Left="1057" Style="edit" TabOrder="18" TabStop="FALSE" Top="23" Width="170"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static15" Left="614" Style="table" TabOrder="36" Text="양극점" Top="42" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+				<Edit BindDataset="ds_EcdaRst" Border="Flat" Column="ANODE_POINT" Height="18" Id="edt_AnodePoint" ImeMode="none" Left="750" MaxLength="200" Style="edit" TabOrder="2" Top="44" Width="477"></Edit>
+				<Edit BindDataset="ds_EcdaRst" Border="Flat" Column="PIPE_ISOLATION" Height="17" Id="edt_PipeIsolation" ImeMode="none" Left="137" MaxLength="400" Style="edit" TabOrder="3" Top="66" Width="1091"></Edit>
+				<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static16" Left="134" Style="table" TabOrder="37" Text="전압(V)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static17" Left="283" Style="table" TabOrder="38" Text="전류(A)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static18" Left="432" Style="table" TabOrder="39" Text="전류계(mA)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static19" Left="581" Style="table" TabOrder="40" Text="손상부전위차(mV)" Top="84" VAlign="Middle" Width="201" WordWrap="TRUE"></Static>
+				<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static20" Left="781" Style="table" TabOrder="41" Text="관말&#32;On(mV)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static21" Left="930" Style="table" TabOrder="42" Text="관말&#32;Off(mV)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static22" Left="1079" Style="table" TabOrder="43" Text="전위차△V(mV)" Top="84" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+				<MaskEdit BindDataset="ds_EcdaRst" Border="Flat" Column="VOLTAGE" DecimalLen="1" DigitLen="4" Height="18" Id="msk_Voltage" Left="136" OnKeyDown="plus_total_OnKeyDown" Style="edit" TabOrder="4" Top="107" Value="MaskEdit0" Width="147"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRst" Border="Flat" Column="Voltaic" DecimalLen="2" DigitLen="4" Height="18" Id="msk_Voltaic" Left="285" OnKeyDown="plus_total_OnKeyDown" Style="edit" TabOrder="5" Top="107" Width="147"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRst" Border="Flat" Column="VOLTAIC_MACHINE" DecimalLen="1" DigitLen="5" Height="18" Id="msk_VoltaicMachine" Left="434" OnKeyDown="plus_total_OnKeyDown" Style="edit" TabOrder="6" Top="107" Value="MaskEdit0" Width="147"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRst" Border="Flat" Column="DAMAGE_ADDR_POTENTIAL" DecimalLen="1" DigitLen="4" Height="18" Id="msk_DamageAddrPotential" Left="582" Readonly="TRUE" Style="edit" TabOrder="7" Top="107" Value="MaskEdit0" Width="198"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRst" Border="Flat" Column="PIPE_END_ON" DecimalLen="1" DigitLen="4" Height="18" Id="msk_PipeEndOn" Left="782" OnKillFocus="fn_minus_OnKeyDown" OnMouseOut="fn_minus_OnKeyDown" Style="edit" TabOrder="8" Top="107" Value="MaskEdit0" Width="147"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRst" Border="Flat" Column="PIPE_END_OFF" DecimalLen="1" DigitLen="4" Height="18" Id="msk_PipeEndOff" Left="931" OnKillFocus="fn_minus_OnKeyDown" OnMouseOut="fn_minus_OnKeyDown" Style="edit" TabOrder="9" Top="107" Value="MaskEdit0" Width="147"></MaskEdit>
+				<MaskEdit BindDataset="ds_EcdaRst" Border="Flat" Column="POTENTIAL" DecimalLen="1" DigitLen="4" Height="18" Id="msk_Potential" Left="1079" OnKeyDown="plus_total_OnKeyDown" Style="edit" TabOrder="10" Top="107" Value="MaskEdit0" Width="147"></MaskEdit>
+				<Edit BindDataset="ds_EcdaRst" Border="Flat" Column="PIPE_GR_CONN" Height="18" Id="edt_Pipegrconn" ImeMode="none" Left="136" MaxLength="200" Style="edit" TabOrder="1" Top="44" Width="477"></Edit>
+			</Contents>
+		</Div>
+		<Static Height="14" Id="Static0" Left="676" Style="blt_search" TabOrder="7" Text="m)" Top="264" Width="54"></Static>
+		<Static Height="14" Id="Static1" Left="519" Style="blt_search" TabOrder="8" Text="CIPS(간격&#32;:" Top="264" Width="70"></Static>
+		<MaskEdit BindDataset="ds_Cips" Border="Flat" Column="SPACE" DecimalLen="1" DigitLen="2" Height="18" Id="msk_Space" Left="587" Style="edit" TabOrder="9" Top="260" Value="MaskEdit0" Width="87"></MaskEdit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Pop1" ImageID="btn_6_search" Left="928" LeftMargin="21" OnClick="btn_Pop1_OnClick" Style="button" TabOrder="10" Text="%&#32;IR" Top="204" Width="99"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Pop2" ImageID="btn_6_search" Left="1032" LeftMargin="21" OnClick="btn_Pop2_OnClick" Style="button" TabOrder="11" Text="DCGV분석표" Top="204" Width="99"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Pop3" ImageID="btn_6_search" Left="1136" LeftMargin="21" OnClick="btn_Pop3_OnClick" Style="button" TabOrder="12" Text="판정표" Top="204" Width="99"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_ExcelUp" ImageID="btn_6_excelup" Left="1130" LeftMargin="21" OnClick="btn_ExcelUp_OnClick" Style="button" TabOrder="13" Text="EXCEL업로드" Top="228" Width="107"></Button>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Cips" BkColor2="default" BkSelColor="white" BoldHead="FALSE" Border="Flat" Bottom="576" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="288" Id="Grid" InputPanel="FALSE" Left="6" LineColor="silver" LineType="ExVERT" MinWidth="100" Right="378" ScrollCell="true" SelColor="user0" Style="grid" TabOrder="14" TabStop="true" Top="288" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="372">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="150"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="구분"/>
+						<cell col="1" display="text" text="On전위"/>
+						<cell col="2" display="text" text="Off전위"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expr="1" text="1"/>
+						<cell align="right" col="1" colid="ON_ELECT_1" display="number" edit="number" limit="5" LimitDec="1" Mask="##,##0"/>
+						<cell align="right" col="2" colid="OFF_ELECT_1" display="number" edit="number" limit="5" LimitDec="1" Mask="##,##0"/>
+						<cell align="center" col="0" display="text" expr="2" row="1" text="2"/>
+						<cell align="right" col="1" colid="ON_ELECT_2" display="number" edit="number" limit="5" LimitDec="1" Mask="##,##0" row="1"/>
+						<cell align="right" col="2" colid="OFF_ELECT_2" display="number" edit="number" limit="5" LimitDec="1" Mask="##,##0" row="1"/>
+						<cell align="center" col="0" display="text" expr="&apos;손상부&apos;" row="2" text="손상부"/>
+						<cell align="right" col="1" colid="ON_ELECT_DAMAGE" display="number" edit="number" limit="5" LimitDec="1" Mask="##,##0" row="2"/>
+						<cell align="right" col="2" colid="OFF_ELECT_DAMAGE" display="number" edit="number" limit="5" LimitDec="1" Mask="##,##0" row="2"/>
+						<cell align="center" col="0" display="text" expr="3" row="3" text="3"/>
+						<cell align="right" col="1" colid="ON_ELECT_3" display="number" edit="number" limit="5" LimitDec="1" Mask="##,##0" row="3"/>
+						<cell align="right" col="2" colid="OFF_ELECT_3" display="number" edit="number" limit="5" LimitDec="1" Mask="##,##0" row="3"/>
+						<cell align="center" col="0" display="text" expr="4" row="4" text="4"/>
+						<cell align="right" col="1" colid="ON_ELECT_4" display="number" edit="number" limit="5" LimitDec="1" Mask="##,##0" row="4"/>
+						<cell align="right" col="2" colid="OFF_ELECT_4" display="number" edit="number" limit="5" LimitDec="1" Mask="##,##0" row="4"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static16" Left="566" Style="table" TabOrder="15" Text="%&#32;IR" Top="592" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+		<MaskEdit BindDataset="ds_Ir" Border="Flat" Column="CAL_IR_VIEW" Height="22" Id="msk_CalIrView" Left="715" Readonly="TRUE" Style="edit" TabOrder="16" Top="592" Value="MaskEdit0" Width="147"></MaskEdit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_save" ImageID="btn_2" Left="1029" LeftMargin="15" OnClick="fn_D1_save" Style="button" TabOrder="17" Text="저장" Top="41" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_close" ImageID="btn_c" Left="1187" LeftMargin="15" OnClick="fn_close" Style="button" TabOrder="18" Text="닫기" Top="41" Width="48"></Button>
+		<XChart Bottom="576" Gallery="Gallery_Lines" Grid="ChartGrid_Horz" Height="287" Id="ct01" Left="377" NSeries="2" NValues="5" PointLabelAlign="LabelAlign_Top" PointLabels="true" Right="1234" SerLegBox="true" ToolBar="true" Top="289" Width="857">
+			<_PersistData>&#13;&#10;/6yg6EeP30NGWDYA8vJNQ/9oYXJ0RlgsIP9WZXJzaW9uPf82LjIuMTM0Mv8uMCwgQ3VsdP91cmU9bmV1dP9yYWwsIFB1Yv9saWNL&#13;&#10;ZXlUb/9rZW49YTE4N/84ZTIwNTJjMP84ZGNlElNvZv90d2FyZUZYLlr59B/y8wAj8vAgXgT6aw0E8vABAf///3/j4+MBAf7/iQEq&#13;&#10;awUBawUCawYGqQSVBdUy8vAQ8vAD8vD7/4d/f4JlAXwCwwKVBQG/BUFyaWFs8vBBpG8P8vIFkgWwBQBGD1h/Ei5IaWdobC0Q/3RT&#13;&#10;ZXR0aW5nZ3MQCZcISR8AB3YFzwEBAAgGHRcfWAWfLkF4aXOZAX0CAPECPhDy82kWKDjgAAUKSxULSxmiB9Mf4BmZAQKiAQGAAIsL&#13;&#10;bQ9/AY8PkgYTAgyfH7EQDbUfZi94L0DrHB4jAC8SL6ov8vIOXhjRD5IFwAHy8VL59C5Ch2FzZQAPEg8kDzYNF/x7HwAyDS5JR2Fs&#13;&#10;/2xlcnlUeXBlipkBFJgTEf4Miz+ZOhJ6mTUTkQYEKEBLwwDEdTHy8hXoLUs//yMJLv9MaW5lSW5mbxzfAoIBqKiomTnXAz4hoPAl&#13;&#10;Kk/fArwaiQEWK0UXvukXD0RlZmEcMC5/V2luZG93cw==&#13;&#10;</_PersistData>
+		</XChart>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_ExcelForm" ImageID="btn_6_excel" Left="1019" LeftMargin="21" OnClick="btn_ExcelForm_OnClick" Style="button" TabOrder="20" Text="EXCEL&#32;샘플" Top="228" Width="107"></Button>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_ExcelSAMPLE" BkColor2="default" BkSelColor="white" BoldHead="FALSE" Border="Flat" Bottom="824" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="192" Id="grd_ExcelForm" InputPanel="FALSE" Left="2" LineColor="silver" LineType="ExVERT" MinWidth="100" Right="224" ScrollCell="true" SelColor="user0" Style="grid" TabOrder="21" TabStop="true" Top="632" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="222">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="150"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="On전위"/>
+						<cell col="1" display="text" text="Off전위"/>
+					</head>
+					<body>
+						<cell align="right" col="0" colid="ON_ELECT" display="number" edit="number" limit="2" LimitDec="1"/>
+						<cell align="right" col="1" colid="OFF_ELECT" display="number" edit="number" limit="2" LimitDec="1"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Search" ImageID="btn_2" Left="1082" LeftMargin="15" OnClick="fn_D1_find" Style="button" TabOrder="22" Text="조회" Top="41" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Excel" ImageID="btn_2" Left="1135" LeftMargin="15" OnClick="fn_D1_Excel" Style="button" TabOrder="23" Text="엑셀" Top="41" Width="48"></Button>
+	</Form>
+	<Script><![CDATA[/*******************************************************************************
+* FormID     : D1903010010U.xml
+* Form 설명  : 굴착공사 인수인계 내역을 저장 조회한다.
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 문달호
+* 작성일     : 2009-01-30
+* 변경내용   : 
+*******************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+
+var cnt =0;
+
+function D1903010010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+
+	fn_Init();
+
+}
+
+
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+
+function fn_Init()
+{
+	//  콤보박스의 내용을 셋팅한다.	
+	gfn_SetComboBox_Comcode("D10034","ds_Press");		// 압력구분
+	gfn_SetComboBox_Comcode("B30007","ds_Pipe");		// 관경구분
+	gfn_SetComboBox_Comcode("D10040","ds_Pavement");	// 포장구분
+
+	fn_D1_find();
+}
+
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonExcelExport()
+//   설명  :  엑셀다운 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonExcelExport()
+{
+	
+}
+
+//------------------------
+// 함수명 :fn_CommonPrint()
+// 설명   : 인쇄 
+//
+//-------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+// 화면 종료시 이벤트 
+function D1903010010U_OnUnloadCompleted(obj)
+{	
+	return;
+	if(ds_list.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 값이 있습니다. 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  ECDA카드 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	ds_EcdaRst.ClearData();
+	
+	ds_Search.ClearData();
+	var nRow = ds_Search.AddRow();
+	//Search Parameter Setting
+	ds_Search.SetColumn(nRow, "BASE_YEAR", F_BASE_YEAR);
+	ds_Search.SetColumn(nRow, "MPIPE_ID", F_MPIPE_ID);
+	ds_Search.SetColumn(nRow, "EXPLOR_RSLT_SEQ", F_EXPLOR_RSLT_SEQ);
+	
+    var strSvcID        = "view_EcdaRstCard";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_EcdaRst=ds_EcdaRst";
+	var strArgument     = "view_EcdaRstCard";
+	 
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+		
+	fn_D1_find2();
+}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find2()
+//   설명  :  IR조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find2()
+{	
+	ds_Ir.ClearData();
+	
+	ds_Search.ClearData();
+	var nRow = ds_Search.AddRow();
+	//Search Parameter Setting
+	ds_Search.SetColumn(nRow, "BASE_YEAR", ds_EcdaRst.GetColumn(ds_EcdaRst.row,"BASE_YEAR"));
+	ds_Search.SetColumn(nRow, "MPIPE_ID", ds_EcdaRst.GetColumn(ds_EcdaRst.row,"MPIPE_ID"));
+	ds_Search.SetColumn(nRow, "EXPLOR_RSLT_SEQ", ds_EcdaRst.GetColumn(ds_EcdaRst.row,"EXPLOR_RSLT_SEQ"));
+	ds_Search.SetColumn(nRow, "DAMAGE_ADDR_POTENTIAL", ds_EcdaRst.GetColumn(ds_EcdaRst.row,"DAMAGE_ADDR_POTENTIAL"));
+	
+    var strSvcID        = "view_CardDetail";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Ir=ds_Ir ds_Cips=ds_Cips";
+	var strArgument     = "view_CardDetail";
+	 
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	divMain.edt_Pipegrconn.SetFocus();
+	
+	if(ds_Cips.rowcount < 1) ds_Cips.AddRow();
+	
+	fn_Chart_Display();
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_SAVE
+//   설명  : 구간 실적 등록된 내용을 저장한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------
+//  Transition   : Service id
+//  ServicePart   : Service part
+//  Url          : Server url
+//  InputDsList   : Input Dataset List
+//  OutputDsList   : Output Dataset List
+//  Argument   :  Argument
+//-------------------------------------------------------------------------------
+function fn_D1_save()
+{		
+
+	if (ds_EcdaRst.GetUpdate())
+	{		
+		var bExistYn = ds_EcdaRst.GetColumn(ds_EcdaRst.row,"EXIST_YN");
+		
+		if(bExistYn){
+			
+			ds_EcdaRst.SetColumn(ds_EcdaRst.row, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_EcdaRst.SetColumn(ds_EcdaRst.row, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+			
+		}else{
+	
+			ds_EcdaRst.SetColumn(ds_EcdaRst.row, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_EcdaRst.SetColumn(ds_EcdaRst.row, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+			ds_EcdaRst.SetColumn(ds_EcdaRst.row,"CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+			ds_EcdaRst.SetColumn(ds_EcdaRst.row,"CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP
+							
+			var nInsertRow = ds_EcdaRstI.AddRow();
+			ds_EcdaRstI.CopyRow(nInsertRow,ds_EcdaRst,ds_EcdaRst.row);
+		}
+	}
+	
+	if(ds_Cips.GetRowType(ds_Cips.row) == "insert"){
+	
+		ds_Cips.SetColumn(ds_Cips.row, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+		ds_Cips.SetColumn(ds_Cips.row, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+		ds_Cips.SetColumn(ds_Cips.row,"CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+		ds_Cips.SetColumn(ds_Cips.row,"CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP
+		
+		ds_Cips.SetColumn(ds_Cips.row,"BASE_YEAR", ds_EcdaRst.GetColumn(ds_EcdaRst.row,"BASE_YEAR"));		
+		ds_Cips.SetColumn(ds_Cips.row,"MPIPE_ID", ds_EcdaRst.GetColumn(ds_EcdaRst.row,"MPIPE_ID"));	
+		ds_Cips.SetColumn(ds_Cips.row,"EXPLOR_RSLT_SEQ", ds_EcdaRst.GetColumn(ds_EcdaRst.row,"EXPLOR_RSLT_SEQ"));	
+
+	}
+	else if(ds_Cips.GetRowType(ds_Cips.row) == "update"){
+
+		ds_Cips.SetColumn(ds_Cips.row, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+		ds_Cips.SetColumn(ds_Cips.row, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+		
+	}
+		
+	var strSvcID         = "save_EcdaRstCard";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service" ;	
+	var strInDatasets    = "ds_EcdaRst=ds_EcdaRst:u ds_EcdaRstI=ds_EcdaRstI:u ds_Cips=ds_Cips:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_EcdaRstCard";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}
+
+
+	alert("저장/수정이 되었습니다.");
+	
+	fn_D1_find();
+	
+}
+
+
+function fn_close(obj)
+{
+	this.Close();
+}
+
+
+function fn_Chart_Display() {
+	
+	ct01.OpenData("COD_Values", 2, 5); // 데이타를 Chart에 뿌려주는 메소드 
+	ct01.OpenData("COD_Colors", 2, 5); // 데이타를 Chart에 뿌려주는 메소드
+	ct01.AxisY.Grid = 1;		//가로 그리드선 보여줄지 여부 (1, 0)
+	
+	ct01.AxisY.LabelsFormat.Decimals = 1; // 소수점이하 자리수 표시 1: 첫째자리, 2: 둘째자리 3: 셋째자리	
+	ct01.AxisY.LabelsFormat.Format = "AxisFormat_Number";
+	
+	ct01.SerLegBoxObj.Docked = "Docked_Right"; // 범례위치 고정
+	
+	ct01.SerLeg(0) = "ON전위";
+	ct01.SerLeg(1) = "OFF전위"; 
+        
+	ct01.Series[0].Gallery = "Gallery_Lines"; // 1: Line Chart, 2:  Bar Chart 
+	ct01.Series[0].cylsides = 30; 
+   
+	ct01.Series[1].Gallery = "Gallery_Lines"; // 1: Line Chart, 2:  Bar Chart 
+	ct01.Series[1].MarkerShape = "MarkerShape_Circle"; 
+	ct01.series[1].Color = "red";
+	
+    ct01.Volume = 35; // 그래프의 넓이
+    
+	
+	ct01.Series[0].Stacked = "Stacked_Normal";
+	ct01.Series[1].Stacked = "Stacked_Normal";
+
+	ct01.Series[0].Stacked = true;
+	ct01.Series[1].Stacked = true;
+	
+	
+	ct01.Axis[2].Label(0) = "1";
+	ct01.Axis[2].Label(1) = "2";
+	ct01.Axis[2].Label(2) = "손상부";
+	ct01.Axis[2].Label(3) = "3";
+	ct01.Axis[2].Label(4) = "4";
+	
+	var max = 9999;
+	var min = 9999;
+	
+	for(var i = 0 ; i < 5 ; i++){
+		
+		var sColumnNm = "_";
+		
+		if(i==0){
+			sColumnNm += "1";
+		}
+		else if(i==1){
+			sColumnNm += "2";
+		}
+		else if(i==2){
+			sColumnNm += "DAMAGE";
+		}
+		else if(i==3){
+			sColumnNm += "3";
+		}
+		else{
+			sColumnNm += "4";
+		}
+		
+		ct01.Value(0, i) = ds_Cips.GetColumn( ds_Cips.row, "ON_ELECT"+sColumnNm);
+		ct01.Value(1, i) = ds_Cips.GetColumn( ds_Cips.row, "OFF_ELECT"+sColumnNm);
+
+		if(max == 9999){
+			max = ds_Cips.GetColumn( ds_Cips.row, "ON_ELECT"+sColumnNm);
+		}
+		if(min == 9999){
+			min = ds_Cips.GetColumn( ds_Cips.row, "ON_ELECT"+sColumnNm);
+		}
+		
+		if(max  < ds_Cips.GetColumn(ds_Cips.row, "ON_ELECT"+sColumnNm)){
+			max = ds_Cips.GetColumn(ds_Cips.row, "ON_ELECT"+sColumnNm);
+		}
+		if(max < ds_Cips.GetColumn(ds_Cips.row, "OFF_ELECT"+sColumnNm)){
+			max = ds_Cips.GetColumn(ds_Cips.row, "OFF_ELECT"+sColumnNm);
+		}
+		
+		if(min  > ds_Cips.GetColumn(ds_Cips.row, "ON_ELECT"+sColumnNm)){
+			min = ds_Cips.GetColumn(ds_Cips.row, "ON_ELECT"+sColumnNm);
+		}
+		if(min > ds_Cips.GetColumn(ds_Cips.row, "OFF_ELECT"+sColumnNm)){
+			min = ds_Cips.GetColumn(ds_Cips.row, "OFF_ELECT"+sColumnNm);
+		}
+	
+		//ct01.Series[3].YAxis = true;
+	}
+	
+	ct01.AxisY.Max = max;
+	ct01.AxisY.Min = min;
+	
+	ct01.AxisX.Title.Text = "";  
+	ct01.AxisY.Title.Text = ""; 
+
+	// CloseData
+	ct01.CloseData("COD_Values");
+	ct01.CloseData("COD_Colors");
+	
+	ct01.Visible = true; 
+	ds_EcdaRst.SetColumn(0,"DAMAGE_ADDR_POTENTIAL",abs(ds_Cips.GetColumn(0, "ON_ELECT_DAMAGE")-ds_Cips.GetColumn(0, "OFF_ELECT_DAMAGE")));
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_ExcelUp_OnClick
+// 설명: 엑셀 업로드 
+// arguments
+// 			없음
+// return: 없음
+//------------------------------------------------------------------------------- 
+function btn_ExcelUp_OnClick(obj)
+{
+	var strColNms = "ON_ELECT,,OFF_ELECT";
+	
+	gfn_D1_UploadExcelData(ds_CipsExcel, grd_ExcelForm ,strColNms);
+	
+	fn_setCipsExcelData();
+
+}
+
+
+function fn_setCipsExcelData(){
+	
+	for(var i = 0 ; i < 5 ; i++){
+		
+		var nOnElect = ds_CipsExcel.GetColumn(i,"ON_ELECT");
+		var nOffElect = ds_CipsExcel.GetColumn(i,"OFF_ELECT");
+		
+		var sColumnNm = "_";
+		
+		if(i==0){
+			sColumnNm += "1";
+		}
+		else if(i==1){
+			sColumnNm += "2";
+		}
+		else if(i==2){
+			sColumnNm += "DAMAGE";
+		}
+		else if(i==3){
+			sColumnNm += "3";
+		}
+		else{
+			sColumnNm += "4";
+		}
+		
+		ds_Cips.SetColumn(ds_Cips.row , "ON_ELECT"+sColumnNm , nOnElect);
+		ds_Cips.SetColumn(ds_Cips.row , "OFF_ELECT"+sColumnNm , nOffElect);
+	}
+	
+	ds_Cips.SetColumn(ds_Cips.row, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+	ds_Cips.SetColumn(ds_Cips.row, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+	ds_Cips.SetColumn(ds_Cips.row,"CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+	ds_Cips.SetColumn(ds_Cips.row,"CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//등록자 IP
+	
+	ds_Cips.SetColumn(ds_Cips.row,"BASE_YEAR", ds_EcdaRst.GetColumn(ds_EcdaRst.row,"BASE_YEAR"));		
+	ds_Cips.SetColumn(ds_Cips.row,"MPIPE_ID", ds_EcdaRst.GetColumn(ds_EcdaRst.row,"MPIPE_ID"));	
+	ds_Cips.SetColumn(ds_Cips.row,"EXPLOR_RSLT_SEQ", ds_EcdaRst.GetColumn(ds_EcdaRst.row,"EXPLOR_RSLT_SEQ"));	
+		
+	var strSvcID         = "save_CipsExcel";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service" ;	
+	var strInDatasets    = "ds_Cips=ds_Cips:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_CipsExcel";
+	
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}
+	
+	fn_D1_find();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_ExcelUp_OnClick
+// 설명: 엑셀 양식다운로드
+// arguments
+// 			없음
+// return: 없음
+//------------------------------------------------------------------------------- 
+function btn_ExcelForm_OnClick(obj)
+{
+
+    gfn_ExportExcelSample("grd_ExcelForm");          
+
+}
+
+
+function btn_Pop1_OnClick(obj)
+{
+	var strArg  = "" ;
+	strArg    += " fa_base_year=" 		+ quote(ds_EcdaRst.GetColumn(ds_EcdaRst.row, "BASE_YEAR" )); 
+	strArg    += " fa_mpipe_id="  		+ quote(ds_EcdaRst.GetColumn(ds_EcdaRst.row, "MPIPE_ID"));
+	strArg    += " fa_explor_rslt_seq="  + quote(ds_EcdaRst.GetColumn(ds_EcdaRst.row, "EXPLOR_RSLT_SEQ"));
+	
+	var arrList = gfn_Dialog("D10", "D1903010011U", strArg , 1245, 520, false, -1, -1);
+	
+	fn_D1_find2();	//IR이 저장되는 경우에 반영하기 위해 재조회
+	
+	if(arrList == 0){
+		return;
+	}		
+	
+	G_ACTIVEWIN = parent.id;
+}
+
+function btn_Pop2_OnClick(obj)
+{
+	var strArg  = "" ;
+	strArg    += " fa_base_year=" 		+ quote(ds_EcdaRst.GetColumn(ds_EcdaRst.row, "BASE_YEAR" )); 
+	strArg    += " fa_mpipe_id="  		+ quote(ds_EcdaRst.GetColumn(ds_EcdaRst.row, "MPIPE_ID"));
+	strArg    += " fa_explor_rslt_seq="  + quote(ds_EcdaRst.GetColumn(ds_EcdaRst.row, "EXPLOR_RSLT_SEQ"));
+	
+	var arrList = gfn_Dialog("D10", "D1903010012U", strArg , 1245, 520, false, -1, -1);
+	
+	if(arrList == 0){
+		return;
+	}		
+	
+	G_ACTIVEWIN = parent.id;
+}
+
+function btn_Pop3_OnClick(obj)
+{
+	var arrList = gfn_Dialog("D10", "D1903010013U", "" ,605, 650, "Autosize=false Scroll=true", -1, -1);
+	if(arrList == 0){
+		return;
+	}		
+	
+	G_ACTIVEWIN = parent.id;
+}
+
+
+function ds_Cips_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{	
+	if(pos(strColumnID,"ELECT") <> -1){
+		
+		fn_Chart_Display();
+	}
+
+	for(var i=1; i < 5; i++)
+	{
+		var onElect  = obj.getcolumn(nRow, "ON_ELECT_"+i);
+		var offElect = obj.getcolumn(nRow, "OFF_ELECT_"+i);
+
+		if(indexof(onElect, '-') == -1 && onElect !=0)
+		{
+			obj.setColumn(nRow, "ON_ELECT_"+i, "-" + onElect);  				
+		}				
+
+		if(indexof(offElect, '-') == -1 && offElect !=0)
+		{
+			obj.setColumn(nRow, "OFF_ELECT_"+i, "-" + offElect);  				
+		}						
+	}
+
+		var onElectDam  = obj.getcolumn(nRow, "ON_ELECT_DAMAGE");
+		var offElectDam = obj.getcolumn(nRow, "OFF_ELECT_DAMAGE");
+
+		if(indexof(onElectDam, '-') == -1 && onElectDam !=0)
+		{
+			obj.setColumn(nRow, "ON_ELECT_DAMAGE", "-" + onElectDam);  				
+		}				
+
+		if(indexof(offElectDam, '-') == -1 && offElectDam !=0)
+		{
+			obj.setColumn(nRow, "OFF_ELECT_DAMAGE", "-" + offElectDam);  				
+		}						
+}
+
+function fn_D1_Excel(){
+
+	var SearchCondition= "";
+        
+    gfn_ExportExcel("ECDA분석카드", 5, SearchCondition, "Grid");            
+}
+
+function plus_total_OnKeyDown(obj,nChar,bShift,bCtrl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == 109){        alert("양수만 입력가능합니다.");			obj.Text = substr(obj.text, 1);       }    }
+}
+
+
+// 2013-06-21  형식 수정 
+function fn_minus_OnKeyDown(obj,nChar,bShift,bCtrl,bAlt,nLLParam,nHLParam)
+{
+    var val =  obj.value;
+    
+	if(currency(obj.Value) > 0)  
+	{
+		obj.Value = '-' + obj.Value;  	
+	}
+	   
+}
+]]></Script>
+</Window>

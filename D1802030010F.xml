@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="720" Id="D1802030010F" Left="8" OnLoadCompleted="D1802030010F_OnLoadCompleted" PidAttrib="7" Title="도로상&#32;점용&#32;배관,&#32;밸브&#32;상세&#32;조회" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PipeValve">
+				<Contents>
+					<colinfo id="OLD_NEW_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="OLD_NEW_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_FACI_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_FACI_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RNUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="IMSI" size="256" summ="default" type="STRING"/>
+					<colinfo id="IMSI1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG_B" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIFF_LENG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Combo">
+				<Contents>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<NAME>정기</NAME>
+						<VALUE>20</VALUE>
+					</record>
+					<record>
+						<NAME>수시</NAME>
+						<VALUE>10</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Combo1">
+				<Contents>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<NAME>배관</NAME>
+						<VALUE>10</VALUE>
+					</record>
+					<record>
+						<NAME>밸브</NAME>
+						<VALUE>20</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Combo2">
+				<Contents>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<NAME>전년동일</NAME>
+						<VALUE>10</VALUE>
+					</record>
+					<record>
+						<NAME>연장차</NAME>
+						<VALUE>20</VALUE>
+					</record>
+					<record>
+						<NAME>전체</NAME>
+						<VALUE></VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Single">
+				<Contents>
+					<colinfo id="rowDisp" size="256" summ="default" type="STRING"/>
+					<colinfo id="currPage" size="256" summ="default" type="STRING"/>
+					<colinfo id="nextPage" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeValve_tr">
+				<Contents>
+					<colinfo id="OLD_NEW_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="OLD_NEW_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_FACI_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_FACI_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RNUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="IMSI" size="256" summ="default" type="STRING"/>
+					<colinfo id="IMSI1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG_B" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIFF_LENG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1272" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="11" Top="30" Type="RoundRect" Width="1267"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1267" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="10" Top="35" Type="Rectangle" Width="1257"></Shape>
+		<Grid AreaSelect="true" AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_PipeValve" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="713" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="618" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" NoDataText="조회를&#32;완료하였습니다." OnScrollLast="Grid0_OnScrollLast" OnTrackLast="Grid0_OnScrollLast" Right="1269" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="95" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1264">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="40"/>
+						<col width="57"/>
+						<col width="66"/>
+						<col width="75"/>
+						<col width="70"/>
+						<col width="293"/>
+						<col width="292"/>
+						<col width="65"/>
+						<col width="65"/>
+						<col width="65"/>
+						<col width="90"/>
+						<col width="90"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="순번"/>
+						<cell col="1" display="text" text="구분"/>
+						<cell col="2" display="text" text="GIS_ID"/>
+						<cell col="3" display="text" text="준공일자"/>
+						<cell col="4" display="text" text="지역"/>
+						<cell col="5" display="text" text="시점"/>
+						<cell col="6" display="text" text="종점"/>
+						<cell col="7" display="text" text="관경(A)"/>
+						<cell col="8" display="text" text="연장(m)"/>
+						<cell col="9" display="text" text="연장차이"/>
+						<cell col="10" display="text" text="GIS입력일자"/>
+						<cell col="11" display="text" text="GIS수정일자"/>
+					</head>
+					<body>
+						<cell align="right" col="0" colid="RNUM" display="normal" expandsize="18" expr="rowindex+1" text="0" wordwrap="word"/>
+						<cell align="center" col="1" colid="OLD_NEW_NM" display="text" expandsize="18" text="0" wordwrap="word"/>
+						<cell align="right" col="2" colid="ID" display="text" expandsize="18" text="0" wordwrap="word"/>
+						<cell align="center" col="3" colid="COMPL_DATE" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="GU_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="5" colid="STR_ADDR" display="text"/>
+						<cell align="left" col="6" colid="END_ADDR" display="text"/>
+						<cell align="right" col="7" colid="PIPE_DIAM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="8" colid="LENG" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="9" colid="DIFF_LENG" display="text"/>
+						<cell align="center" col="10" colid="CRT_DTM" display="normal"/>
+						<cell align="center" col="11" colid="UPD_DTM" display="normal"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="2" Text="배관,&#32;밸브&#32;도로상&#32;점용&#32;상세내역" Top="75" Width="270"></Image>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear" Left="85" Min="0" Style="spin_indis" TabOrder="3" Text="2008" Top="39" Width="54"></Spin>
+		<Combo Border="Flat" CodeColumn="VALUE" DataColumn="NAME" Height="18" Id="cob_LeaseFaciFlag" InnerDataset="ds_Combo1" Left="651" OnChanged="cob_LeaseFaciFlag_OnChanged" Style="combo_indis" TabOrder="4" Top="40" Width="100"></Combo>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="5" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1273">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="18" Id="Image10" ImageID="blt" Left="588" LeftMargin="12" Style="blt_search" TabOrder="6" Text="점용시설" Top="40" Width="84"></Image>
+		<Combo Border="Flat" CodeColumn="VALUE" DataColumn="NAME" Height="18" Id="cob_ObjectFlag" InnerDataset="ds_Combo" Left="481" Style="combo_indis" TabOrder="7" Top="40" Width="100"></Combo>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="416" LeftMargin="12" Style="blt_search" TabOrder="8" Text="대상구분" Top="40" Width="95"></Image>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search" TabOrder="9" Text="기준년도" Top="40" Width="84"></Image>
+		<Shape BKColor="#6cbae1" Bottom="95" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1269" TabOrder="12" Top="92" Type="Rectangle" Width="1264"></Shape>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="145" LeftMargin="12" Style="blt_search" TabOrder="13" Text="지사" Top="40" Width="84"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag1" Left="184" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="16" Top="40" Width="92"></Combo>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="280" LeftMargin="12" Style="blt_search" TabOrder="14" Text="시/구" Top="40" Width="95"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" Left="326" Style="combo_indis" TabOrder="15" Top="40" Width="84"></Combo>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="756" LeftMargin="12" Style="blt_search" TabOrder="18" Text="점용구분" Top="40" Width="84"></Image>
+		<Combo Border="Flat" CodeColumn="VALUE" DataColumn="NAME" Height="18" Id="Combo0" InnerDataset="ds_Combo2" Left="819" Style="combo_indis" TabOrder="17" Top="40" Width="100"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802030010F.xml
+* Form 설명  : 도로상 점용 배관, 밸브 상세 조회
+* 시스템 명  : 안전공급 (D10)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-11
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONA10005.js";
+
+
+function D1802030010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+} 
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+		//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	// 지사코드, 영업구코드
+	//-----------------------------------------
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag1"));  // 조회
+	//gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag1"));
+		
+	//-----------------------------------------
+	//  콤보박스의 초기 설정 : 기준년도, 대상구분, 점용시설 순서
+	//----------------------------------------
+	cob_ObjectFlag.Index  = 1;		
+	cob_ObjectFlag1.Index = 0;		
+	cob_BranchCd_OnChanged();
+	cob_LeaseFaciFlag_OnChanged();
+	
+	//-----------------------------------------
+	//  콤보박스의 초기 설정 : 기준년도
+	//-----------------------------------------
+	cob_BaseYear.Value      = toString(parseInt(Substr(Today(),0,4))-1);
+	cob_LeaseFaciFlag.Index = 0;
+	Combo0.Index            = 3;
+	
+	cob_LeaseFaciFlag_OnChanged();
+}
+
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    fn_SetComboBox_Comcode("1", cob_ObjectFlag1.Value, fn_setDsObject_Comcode("1", "cob_CountyFlag"));
+    cob_CountyFlag.Index = 5;
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{	
+	if(cob_ObjectFlag.Index == -1){	
+		return alert(gfn_GetMessage("M000040","%AAA%","대상구분을"));
+	}
+	
+	if(cob_LeaseFaciFlag.Index == -1){
+		return alert(gfn_GetMessage("M000040","%AAA%","점용구분을"));
+	}
+	
+	ds_PipeValve.ClearData();	
+	ds_PipeValve_tr.ClearData();
+	ds_Single.ClearData();
+	
+	//페이지 데이터셋 초기화
+	ds_Single.AddColumn("rowDisp");
+	ds_Single.AddColumn("currPage");
+	ds_Single.AddColumn("nextPage");
+	
+	ds_Single.AddRow();
+	
+	ds_Single.SetColumn(0,"rowDisp" ,40);
+	ds_Single.SetColumn(0,"currPage",1);
+	ds_Single.SetColumn(0,"nextPage",1);
+	
+	fn_D10_Find();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D10_Find()
+//   설명  : 도로상 점용 배관 밸브에 대한 정보를 조회한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D10_Find()
+{	
+	// nextPage 가 1인 경우 첫번째 조회임
+	var nextPage=(parseInt(ds_Single.GetColumn(0,"nextPage")));
+	
+	if(nextPage==1){
+		ds_PipeValve.ClearData(); // 데이터셋을 클리어 
+	}else{
+		//마지막 로우를 rowPosition 으로 잡는다 (포커스 이동방지 )
+		ds_PipeValve.rowposition=ds_PipeValve.lastrow; 
+	}
+	
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "";
+	
+	if(cob_LeaseFaciFlag.Value == '10'){          
+	     strURL     = "handle.do?ServiceName=D1_RoadLeaseDetaSearMgr-service"
+				 	+ "&BASE_YEAR="        + cob_BaseYear.Value 
+				    + "&BRANCH_NM="        + cob_ObjectFlag1.Text
+				    + "&GU_NM="			   + decode(cob_CountyFlag.Text, '전체', '', cob_CountyFlag.Text)
+					+ "&OLD_NEW_FLAG="     + cob_ObjectFlag.Value 
+					+ "&DIFF_FLAG="		   + Combo0.Value
+					;
+	}else if(cob_LeaseFaciFlag.Value == '20'){
+		   strURL   = "handle.do?ServiceName=D1_RoadLeaseDetaSearMgr-service"
+				 	+ "&BASE_YEAR="        + cob_BaseYear.Value 
+				    + "&BRANCH_NM="        + cob_ObjectFlag1.Text
+				    + "&GU_NM="			   + decode(cob_CountyFlag.Text, '전체', '', cob_CountyFlag.Text)
+					+ "&OLD_NEW_FLAG="     + cob_ObjectFlag.Value
+					;
+	}
+	
+	var strInDatasets   = "ds_Single=ds_Single:u";
+	var strOutDatasets  = "ds_PipeValve_tr=ds_PipeValve ds_Single=ds_Single";
+	var strArgument     = "";
+		
+	if(cob_LeaseFaciFlag.Value == '10'      ){
+		strArgument  = "find";
+	}else if(cob_LeaseFaciFlag.Value == '20'){
+		strArgument  = "find1";
+	}
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	 if(nextPage==1){ 
+	    ds_PipeValve.ClearData();
+		ds_PipeValve.Copy(ds_PipeValve_tr);
+	 } else {
+		 ds_PipeValve.AppendDataSet("ds_PipeValve_tr");
+	 }
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+	SearchCondition = SearchCondition + "기준년도 : "     + RPad(cob_BaseYear.Text     ," ",20);
+	SearchCondition = SearchCondition + "대상구분 : "     + RPad(cob_ObjectFlag.Text   ," ",20);
+	SearchCondition = SearchCondition + "점용시설 : "     + RPad(cob_LeaseFaciFlag.Text," ",20);
+        
+    gfn_ExportExcel("도로상 점용 배관, 밸브 상세 조회", 5, SearchCondition, "Grid0");
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명: 출력 button 실행, 데이터를 출력 한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonPrint(){
+	PrintScreen();
+}
+
+
+function Grid0_OnScrollLast(obj)
+{
+	var currPage=(parseInt(ds_Single.GetColumn(0,"currPage")));
+	var nextPage=(parseInt(ds_Single.GetColumn(0,"nextPage")));
+	if(nextPage!=1&&currPage<nextPage){
+		ds_Single.SetColumn(0,"currPage",nextPage);
+		fn_D10_Find();
+	}
+}
+
+function cob_LeaseFaciFlag_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	// 밸브는 제외
+	if(cob_LeaseFaciFlag.Value == '20'){
+		Combo0.Visible = false;
+		Image2.Visible = false;
+	}else{
+		Combo0.Visible = true;
+		Image2.Visible = true;
+	}	
+}
+]]></Script>
+</Window>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="744" Id="D2001010016F_T01" Left="8" PidAttrib="7" Title="준공도&#32;진행내역&#32;기본현황" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_JunList">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RETURN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RETURN_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_TREAT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPRO_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SERIAL_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user15" Bottom="5" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1254" TabOrder="2" Top="2" Type="Rectangle" Width="1249"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button15" ImageID="btn_addrow" Left="1104" LeftMargin="15" OnClick="Btn_Rst_OnClick" Style="button" TabOrder="3" Text="추가" Top="403" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button231" ImageID="btn_8_Search" Left="1122" LeftMargin="21" OnClick="Button231_OnClick" Style="button" TabOrder="4" Text="DCVG탐사이력조회" Top="209" Width="132"></Button>
+		<Grid AutoEnter="TRUE" BindDataset="ds_JunList" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="720" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="715" Id="grd_JunList" InputPanel="FALSE" Left="5" LineColor="silver" LineType="ExVERT" OnHeadClick="Grid1_OnHeadClick" Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="0" TabStop="true" Top="5" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="40"/>
+						<col width="66"/>
+						<col width="90"/>
+						<col width="40"/>
+						<col width="66"/>
+						<col width="270"/>
+						<col width="135"/>
+						<col width="100"/>
+						<col width="335"/>
+						<col width="105"/>
+						<col width="105"/>
+						<col width="0"/>
+						<col width="105"/>
+						<col width="105"/>
+						<col width="105"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="번호"/>
+						<cell col="1" display="text" rowspan="2" text="지사구분"/>
+						<cell col="2" display="text" rowspan="2" text="공사번호"/>
+						<cell col="3" display="text" rowspan="2" text="차수"/>
+						<cell col="4" display="text" rowspan="2" text="공사구분"/>
+						<cell col="5" display="text" rowspan="2" text="공사명"/>
+						<cell col="6" display="text" rowspan="2" text="시공사"/>
+						<cell col="7" display="text" rowspan="2" text="구청"/>
+						<cell col="8" display="text" rowspan="2" text="주소"/>
+						<cell col="9" display="text" rowspan="2" text="공사감독일&#32;접수일"/>
+						<cell col="10" display="text" rowspan="2" text="공사감독&#32;반려일자"/>
+						<cell col="11" display="text" rowspan="2" text="GIS접수"/>
+						<cell col="12" display="text" rowspan="2" text="GIS오류통보"/>
+						<cell col="13" display="text" rowspan="2" text="GIS입력일자"/>
+						<cell col="14" display="text" rowspan="2" text="팀장승인"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MAINTER_NUM" display="text" expr="rowindex+1"/>
+						<cell align="center" col="1" colid="BRANCH_CD" combocol="BRANCH_CD" combodataset="ds_JunList" combotext="BRANCH_CD" display="text"/>
+						<cell align="center" col="2" colid="WORK_NUM" combocol="WORK_NUM" combodataset="ds_JunList" combotext="WORK_NUM" display="text"/>
+						<cell align="center" col="3" colid="SERIAL_NUM" combocol="SERIAL_NUM" combodataset="ds_JunList" combotext="SERIAL_NUM" display="text"/>
+						<cell align="center" col="4" colid="WORK_FLAG" display="text"/>
+						<cell align="left" col="5" colid="WORK_NM" display="text"/>
+						<cell align="left" col="6" colid="DEAL_NM" display="text"/>
+						<cell align="center" col="7" display="text"/>
+						<cell align="left" col="8" colid="LOT_NUM_UNION" display="text"/>
+						<cell align="center" col="9" colid="RECEIVE_YMD" display="date"/>
+						<cell align="center" col="10" colid="RETURN_YMD" display="date"/>
+						<cell align="center" col="11" colid="GIS_RECEIVE_YMD" display="date"/>
+						<cell align="center" col="12" colid="GIS_RETURN_YMD" display="date"/>
+						<cell align="center" col="13" colid="GIS_TREAT_YMD" display="date"/>
+						<cell align="center" col="14" colid="APPRO_YMD" display="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D2001010016f_T02.xml
+* Form 설명  : 준공도 진행내역 전체현황 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 이건민 
+* 작성일     : 2012-01-16
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONA10005.js";
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+===============================================================================*/ 
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_find()
+//   설명  :  조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{
+    var strSvcID        = "searchAllList";
+	var strPart         = "D10";
+	var strURL          = "handle.do?ServiceName=D2001010016F-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_JunList=ds_JunList";
+	var strArgument     = "searchAllList";
+
+	gfn_syncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if( ErrorCode < 0 )
+	{
+		return;
+	}
+	
+	if( ds_JunList.GetRowCount() == 0 )
+	{
+        grd_JunList.NoDataText = "조회결과가 없습니다.";
+        return;
+    }
+    
+}
+
+function fn_D1_Excel(){
+	grd_JunList.ExportExcelEx("Sheet1");
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명  : 탐사일지 장표를 출력한다. 
+// arguments 없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_D1_Print()
+{
+	PrintScreen();
+}
+
+function Grid1_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+]]></Script>
+</Window>

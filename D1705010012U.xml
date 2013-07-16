@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="520" Id="D1705010012U" Left="8" OnLoadCompleted="D1705010012U_OnLoadCompleted" PidAttrib="7" Title="잔존가&#32;폐관비용&#32;접수&#32;내역&#32;조회" Top="8" Ver="1.0" Width="742" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Radio">
+				<Contents>
+					<colinfo id="name" size="256" type="STRING"/>
+					<colinfo id="value" size="256" type="STRING"/>
+					<record>
+						<name>원인자이설보수코드</name>
+						<value>0</value>
+					</record>
+					<record>
+						<name>원인자이설보수명</name>
+						<value>1</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_MoveDocu">
+				<Contents>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REASON_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_TYPE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDRESS" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STS_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Close_Cost_h_List">
+				<Contents>
+					<colinfo id="CLOSE_COST_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CALCU_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLOSE_PIPE_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_DESIGN_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_DEPRE_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_CLOSE_PIPE_REQ_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Close_Cost_h">
+				<Contents>
+					<colinfo id="CLOSE_COST_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CALCU_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLOSE_PIPE_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_DESIGN_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_DEPRE_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_CLOSE_PIPE_REQ_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_AMT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static19" Left="88" Style="table" TabOrder="26" Top="487" VAlign="Middle" Width="647" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="88" Style="table" TabOrder="29" Top="488" VAlign="Middle" Width="647" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="잔존가&#32;폐관비용&#32;접수&#32;내역&#32;조회" Transparent="TRUE" Width="740"></Image>
+		<Image Align="Left" Height="13" Id="Image1" ImageID="blt_8" Left="7" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="3" Text="잔존가&#32;폐관비용&#32;산정&#32;상세내역" Top="407" Width="211"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Close_Cost_h_List" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="399" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="130" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" NoDataText="검색조건에&#32;대한&#32;조회결과가&#32;없습니다." OnCellClick="Grid1_OnCellClick" Right="736" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="4" TabStop="true" Top="269" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="731">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="128"/>
+						<col width="114"/>
+						<col width="114"/>
+						<col width="116"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="70"/>
+						<col width="81"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="폐관비용관리번호"/>
+						<cell col="1" display="text"/>
+						<cell col="2" display="text" text="설계금액(원)"/>
+						<cell col="3" display="text" text="상각금액(원)"/>
+						<cell col="4" display="text" text="잔존금액(원)"/>
+						<cell col="5" display="text" text="지사"/>
+						<cell col="6" display="text" text="시/구"/>
+						<cell col="7" display="text" text="담당자"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CLOSE_COST_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="MOVE_REPAIR_NUM" display="text"/>
+						<cell col="2" colid="TOT_DESIGN_AMT" display="number" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="TOT_DEPRE_AMT" display="number"/>
+						<cell col="4" colid="TOT_CLOSE_PIPE_REQ_AMT" display="number"/>
+						<cell align="center" col="5" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="6" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="center" col="7" colid="TAKER_NAME" display="text"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" display="text" text="소계"/>
+						<cell col="1" display="text"/>
+						<cell align="right" col="2" display="number" expr='SumNF(&quot;TOT_DESIGN_AMT&quot;)'/>
+						<cell align="right" col="3" display="number" expr='SumNF(&quot;TOT_DEPRE_AMT&quot;)'/>
+						<cell align="right" col="4" display="number" expr='SumNF(&quot;TOT_CLOSE_PIPE_REQ_AMT&quot;)'/>
+						<cell col="5" display="text"/>
+						<cell col="6" display="text"/>
+						<cell col="7" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="13" Id="Image9" ImageID="blt_8" Left="7" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="2" Text="이설보수&#32;잔존가&#32;폐관비용&#32;접수내역&#32;조회" Top="99" Width="347"></Image>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape2" Left="5" LineColor="user10" Right="736" TabOrder="5" Top="68" Type="Rectangle" Width="731"></Shape>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" Left="54" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="6" Top="70" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" Left="223" Style="edit_Indis" TabOrder="7" Top="70" Width="114"></Combo>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="16" LeftMargin="12" Style="blt_search" TabOrder="8" Text="지사" Top="71" Transparent="TRUE" Width="81"></Image>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="179" LeftMargin="12" Style="blt_search" TabOrder="9" Text="시/구" Top="71" Transparent="TRUE" Width="81"></Image>
+		<Image Align="Left" Height="13" Id="Image2" ImageID="blt_8" Left="7" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="10" Text="잔존가&#32;폐관비용내역" Top="251" Width="163"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_MoveDocu" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="245" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="130" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" NoDataText="검색조건에&#32;대한&#32;조회결과가&#32;없습니다." OnCellClick="Grid0_OnCellClick" Right="736" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="11" TabStop="true" Top="115" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="731">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="100"/>
+						<col fix="left" width="122"/>
+						<col fix="left" width="80"/>
+						<col fix="left" width="80"/>
+						<col width="198"/>
+						<col width="80"/>
+						<col width="334"/>
+						<col width="300"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="접수일자"/>
+						<cell col="1" display="text" text="이설보수번호"/>
+						<cell col="2" display="text" text="지사"/>
+						<cell col="3" display="text" text="시/구"/>
+						<cell col="4" display="text" text="의뢰자"/>
+						<cell col="5" display="text" text="담당자"/>
+						<cell col="6" display="text" text="이설위치"/>
+						<cell col="7" display="text" text="요청사항"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="RECEIVE_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="MOVE_REPAIR_NUM" display="text"/>
+						<cell align="center" col="2" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="3" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="center" col="4" colid="REASON_NM" display="text"/>
+						<cell align="center" col="5" colid="TAKER_NAME" display="text"/>
+						<cell col="6" colid="ADDRESS" display="text"/>
+						<cell col="7" colid="MOVE_REPAIR_DESC" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static14" Left="87" Style="table" TabOrder="25" Top="467" VAlign="Middle" Width="648" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static13" Left="88" Style="table" TabOrder="24" Top="446" VAlign="Middle" Width="647" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static4" Left="88" Style="table" TabOrder="15" Top="425" VAlign="Middle" Width="647" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static23" Left="5" Style="table" TabOrder="12" Text="설계금액(원)" Top="467" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static0" Left="5" Style="table" TabOrder="13" Text="산출일자" Top="425" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="184" Style="table" TabOrder="14" Text="공사명" Top="425" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="363" Style="table" TabOrder="16" Text="지사" Top="446" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="184" Style="table" TabOrder="17" Text="상각금액(원)" Top="467" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static7" Left="5" Style="table" TabOrder="18" Text="의뢰자명" Top="446" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static8" Left="542" Style="table" TabOrder="19" Text="시/구" Top="446" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Close_Cost_h" Border="Flat" Column="CALCU_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar0" Left="93" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="20" Top="427" WeeksFont="Default,-1" Width="89"></Calendar>
+		<Edit BindDataset="ds_Close_Cost_h" Border="Flat" Column="WORK_NM" Enable="FALSE" Height="18" Id="edt_Reason" ImeMode="none" Left="272" Style="edit" TabOrder="21" Top="427" Width="460"></Edit>
+		<Edit BindDataset="ds_Close_Cost_h" Border="Flat" Column="WORK_FIRM_NM" Enable="FALSE" Height="18" Id="Edit2" ImeMode="none" Left="93" Style="edit" TabOrder="22" Top="448" Width="89"></Edit>
+		<Static Align="Right" Border="Flat" Color="user1" Height="22" Id="Static11" Left="363" Style="table" TabOrder="23" Text="잔존금액(원)" Top="467" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static21" Left="5" Style="table" TabOrder="27" Text="첨부문서" Top="488" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edtFileList" ImeMode="none" Left="93" Style="edit" TabOrder="28" Top="490" Width="639"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static9" Left="184" Style="table" TabOrder="30" Text="담당자" Top="446" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Close_Cost_h" Border="Flat" Column="TAKER_NAME" Enable="FALSE" Height="18" Id="edt_TakerName" ImeMode="none" Left="272" OnChanged="Edit3_OnChanged" Style="edit_Indis" TabOrder="31" Top="448" Width="89"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static3" Left="542" Style="table" TabOrder="32" Text="폐관요청일" Top="467" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Close_Cost_h" Border="Flat" Column="CLOSE_PIPE_REQ_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar1" Left="630" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="33" Top="469" WeeksFont="Default,-1" Width="86"></Calendar>
+		<Edit BindDataset="ds_Close_Cost_h" Border="Flat" Column="BRANCH_NM" Enable="FALSE" Height="18" Id="Edit3" ImeMode="none" Left="451" OnChanged="Edit3_OnChanged" Style="edit_Indis" TabOrder="34" Top="448" Width="89"></Edit>
+		<Edit BindDataset="ds_Close_Cost_h" Border="Flat" Column="ZIP_NO1_NM" Enable="FALSE" Height="18" Id="Edit4" ImeMode="none" Left="630" OnChanged="Edit3_OnChanged" Style="edit_Indis" TabOrder="35" Top="448" Width="89"></Edit>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="3" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="36" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="737">
+			<Contents></Contents>
+		</Div>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Close_Cost_h" Border="Flat" Column="TOT_DESIGN_AMT" DisableBKColor="user20" DisableColor="user0" Enable="FALSE" Height="18" Id="MaskEdit0" Left="93" Mask="#,###" TabOrder="37" Top="469" Value="MaskEdit0" Width="89"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Close_Cost_h" Border="Flat" Column="TOT_DEPRE_AMT" DisableBKColor="user20" DisableColor="user0" Enable="FALSE" Height="18" Id="MaskEdit1" Left="272" Mask="#,###" TabOrder="38" Top="469" Value="MaskEdit1" Width="89"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Close_Cost_h" Border="Flat" Column="TOT_CLOSE_PIPE_REQ_AMT" DisableBKColor="user20" DisableColor="user0" Enable="FALSE" Height="18" Id="MaskEdit2" Left="451" Mask="#,###" TabOrder="39" Top="469" Value="MaskEdit2" Width="89"></MaskEdit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1705010011U.xml
+* Form 설명  : 잔존가 접수내역 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2009-04-20
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10005.js";
+
+function D1705010012U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	fn_D1_find();
+}
+ 
+function fn_Init()
+{
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	//gfn_SetButton("1111011");
+	// alert(MOVE_REPAIR_NUM);
+	// alert(BRANCH_CD);
+	// alert(ZIP_NO1);
+		//-----------------------------------------
+	//  콤보박스의 초기 설정 : 지사, 구
+	//-----------------------------------------
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));
+	if (IsExistVar("BRANCH_CD", true)) {	
+			cob_ObjectFlag.value = replace(BRANCH_CD, "%$", "");
+	}else{
+		    cob_ObjectFlag.Index = 0;
+	}
+	
+	cob_BranchCd_OnChanged();
+	fn_D1_Sequence(subStr(cal_ReceiveYmd.Value, 0, 6));
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_ObjectFlag.value , fn_setDsObject_Comcode("1", "cob_CountyFlag" ));    
+    
+    if (IsExistVar("ZIP_NO1", true)) {
+			cob_CountyFlag.Value = replace(ZIP_NO1, "%$", "");
+	}else{
+		    cob_CountyFlag.Index  = 0;
+	}    
+}
+
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+	fn_D1_find();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport(){
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  잔존가 접수 상세내역 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+    var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_MoveingRepairSpecMgr-service"
+						+ "&MOVE_REPAIR_NUM="    + replace(MOVE_REPAIR_NUM, "%$", "")
+						+ "&MOVE_REPAIR_TYPE="   + '30'
+						+ "&BRANCH_CD="          + cob_ObjectFlag.Value
+						+ "&ZIP_NO1="            + cob_CountyFlag.Value					
+						;
+						
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_MoveDocu=ds_MoveDocuV";
+	var strArgument     = "view";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_MoveDocu.GetRowCount()==0) {
+		Grid0.NoDataText = gfn_GetMessage("M000009","%AAA%","조회를");
+	}
+	
+	Grid0_OnCellClick();
+}
+
+// CellClick 하였을 경우 해당이설보수 번호에 따른 폐관산정 내역 조회
+function Grid0_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	var strSvcID        = "search1";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service"
+						+ "&MOVE_REPAIR_NUM="  + ds_MoveDocu.GetColumn(ds_MoveDocu.row, "MOVE_REPAIR_NUM")
+						;
+						
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Close_Cost_h_List=ds_Close_Cost_h_List";
+	var strArgument     = "search1=1";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	Grid1_OnCellClick();
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_view()
+//   설명  :  이설보수폐관 비용 H 상세 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Grid1_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service"
+						+ "&CLOSE_COST_NUM="  + ds_Close_Cost_h_List.GetColumn(nRow, "CLOSE_COST_NUM")
+						;
+	
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Close_Cost_h=ds_Close_Cost_h";
+	var strArgument     = "view";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_Close_Cost_h.GetRowCount()==0) {
+		Grid1.NoDataText = gfn_GetMessage("M000009","%AAA%","조회를");
+	}
+			   
+	if(ds_Close_Cost_h.GetRowCount() > 0){
+		Edit1.Value = truncate(parseInt(ds_Close_Cost_h.GetColumn(0, "TOT_AMT")) * 0.1);		
+	}
+}
+]]></Script>
+</Window>

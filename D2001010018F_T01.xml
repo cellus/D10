@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="720" Id="D2001010018F_T01" Left="8" OnLoadCompleted="D2001010018F_T01_OnLoadCompleted" PidAttrib="7" Title="D2001010018F_T01_전자결재&#32;준공도&#32;기본내역" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Grid BindDataset="ds_InfoSummary" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="720" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" Height="720" Id="grd_InfoSummary" InputPanel="FALSE" LineColor="default" LineType="ExVERT" Right="1256" ScrollCell="true" Style="grid" TabOrder="1" TabStop="true" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1256">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="40"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="200"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="200"/>
+						<col width="70"/>
+						<col width="100"/>
+						<col width="60"/>
+						<col width="60"/>
+						<col width="60"/>
+						<col width="60"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="81"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="NO"/>
+						<cell col="1" display="text" rowspan="2" text="지사구분"/>
+						<cell col="2" display="text" expr='&quot;공사번호/\n관리번호&quot;' rowspan="2"/>
+						<cell col="3" colspan="7" display="text" text="공사정보"/>
+						<cell col="10" colspan="4" display="text" text="처리기한"/>
+						<cell col="14" colspan="2" display="text" text="협력사"/>
+						<cell col="16" colspan="5" display="text" text="공사담당"/>
+						<cell col="21" colspan="6" display="text" text="GIS"/>
+						<cell col="3" display="text" row="1" text="공사구분"/>
+						<cell col="4" display="text" row="1" text="공사명"/>
+						<cell col="5" display="text" row="1" text="협력사"/>
+						<cell col="6" display="text" row="1" text="시/구청"/>
+						<cell col="7" display="text" row="1" text="주소"/>
+						<cell col="8" display="text" row="1" text="준공일자"/>
+						<cell col="9" display="text" row="1" text="진행상태"/>
+						<cell col="10" display="text" row="1" text="제출초과"/>
+						<cell col="11" display="text" row="1" text="검수초과"/>
+						<cell col="12" display="text" row="1" text="입력초과"/>
+						<cell col="13" display="text" row="1" text="전체초과"/>
+						<cell col="14" display="text" row="1" text="등록일자"/>
+						<cell col="15" display="text" row="1" text="담당자"/>
+						<cell col="16" display="text" row="1" text="접수일자"/>
+						<cell col="17" display="text" row="1" text="접수자"/>
+						<cell col="18" display="text" row="1" text="검수일자"/>
+						<cell col="19" display="text" row="1" text="검수자"/>
+						<cell col="20" display="text" row="1" text="반려일자"/>
+						<cell col="21" display="text" row="1" text="접수일자"/>
+						<cell col="22" display="text" row="1" text="접수자"/>
+						<cell col="23" display="text" row="1" text="오류통보일자"/>
+						<cell col="24" display="text" row="1" text="입력일자"/>
+						<cell col="25" display="text" row="1" text="입력자"/>
+						<cell col="26" display="text" row="1" text="팀장승인"/>
+					</head>
+					<body>
+						<cell align="right" col="0" display="text" expr="currow+1"/>
+						<cell align="center" col="1" colid="BRANCH_CD" combocol="BRANCH_CD" combodataset="ds_SearchBRANCH_CD" combotext="BRANCH_NM" display="combo"/>
+						<cell align="center" col="2" colid="WORK_NUM" display="text"/>
+						<cell align="center" col="3" colid="WORK_FLAG" combocol="CODE_ITEM" combodataset="ds_SearchD10200" combotext="ITEM_KNAME" display="combo"/>
+						<cell col="4" colid="WORK_NM" display="text"/>
+						<cell col="5" colid="WORK_FIRM_NM" display="text"/>
+						<cell col="6" colid="OFFICE_NAME" display="combo"/>
+						<cell col="7" colid="LOT_NUM_UNION" display="text"/>
+						<cell col="8" colid="COMPL_YMD" display="date"/>
+						<cell col="9" colid="PROC_STS" combocol="CODE_ITEM" combodataset="ds_SearchD10196" combotext="ITEM_KNAME" display="combo"/>
+						<cell align="right" col="10" colid="REG_DELAY" display="text"/>
+						<cell align="right" col="11" colid="REVIEW_DELAY" display="text"/>
+						<cell align="right" col="12" colid="GIS_TREAT_DELAY" display="text"/>
+						<cell align="right" col="13" colid="TOT_DELAY" display="text"/>
+						<cell align="center" col="14" colid="REG_YMD" display="expr:iif(trim(REG_YMD)==&apos;&apos;,&apos;text&apos;,&apos;date&apos;)"/>
+						<cell align="center" col="15" colid="REG_EMP_NAME" display="text"/>
+						<cell align="center" col="16" colid="RECEIVE_YMD" display="expr:iif(trim(RECEIVE_YMD)==&apos;&apos;,&apos;text&apos;,&apos;date&apos;)"/>
+						<cell align="center" col="17" colid="RECEIVE_EMP_NAME" display="text"/>
+						<cell align="center" col="18" colid="REVIEW_YMD" display="expr:iif(trim(REVIEW_YMD)==&apos;&apos;,&apos;text&apos;,&apos;date&apos;)"/>
+						<cell align="center" col="19" colid="REVIEW_EMP_NAME" display="text"/>
+						<cell align="center" col="20" colid="RETURN_YMD" display="expr:iif(trim(RETURN_YMD)==&apos;&apos;,&apos;text&apos;,&apos;date&apos;)"/>
+						<cell align="center" col="21" colid="GIS_RECEIVE_YMD" display="expr:iif(trim(GIS_RECEIVE_YMD)==&apos;&apos;,&apos;text&apos;,&apos;date&apos;)"/>
+						<cell align="center" col="22" colid="GIS_RECEIVE_EMP_NAME" display="text"/>
+						<cell align="center" col="23" colid="GIS_RETURN_YMD" display="expr:iif(trim(GIS_RETURN_YMD)==&apos;&apos;,&apos;text&apos;,&apos;date&apos;)"/>
+						<cell align="center" col="24" colid="GIS_TREAT_YMD" display="expr:iif(trim(GIS_TREAT_YMD)==&apos;&apos;,&apos;text&apos;,&apos;date&apos;)"/>
+						<cell align="center" col="25" colid="GIS_TREAT_EMP_NAME" display="text"/>
+						<cell align="center" col="26" colid="APPRO_YMD" display="text" expr="iif(TRIM(APPRO_YMD)&#32;!=&#32;null,&#32;&apos;승인&apos;,&apos;&apos;)"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[function searchTab1()
+{
+	var strSvcID       = "searchTab";
+	var strPart        = "D10";	
+	var strURL         = "handle.do?ServiceName=D2001010018F-service";
+	var strInDatasets  = "ds_Search1=ds_Search1";
+	var strOutDatasets = "ds_InfoSummary=ds_InfoSummary";
+	var strArgument    = "searchTab1_"+ds_Search1.GetColumn(0, "SEARCH_FG");
+    var strCallBack    = "fn_D1_CallBack";	
+    
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallBack
+			   );
+    
+}]]></Script>
+</Window>

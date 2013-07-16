@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1101020014U" Left="8" OnLoadCompleted="D1101020014U_OnLoadCompleted" PidAttrib="7" Title="사원검색_D1101020014U" Top="8" Ver="1.0" Width="700" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_list"></Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" Left="-2" LeftMargin="33" Style="popup_title" TabOrder="1" Text="사원검색" Transparent="TRUE" Width="701"></Image>
+		<Shape BKColor="user16" Bottom="129" Height="3" Id="Shape2" Left="-2" LineWidth="0" Right="697" TabOrder="3" Top="126" Type="Rectangle" Width="699"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_list" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="395" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="299" Id="EmpGrid" InputPanel="FALSE" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellClick="EmpGrid_OnCellClick" OnCellDBLClick="grd_E2_RtnGridDblCk" Right="699" ScrollCell="true" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="699">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="30"/>
+						<col width="70"/>
+						<col width="80"/>
+						<col width="110"/>
+						<col width="150"/>
+						<col width="70"/>
+						<col width="70"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="선택"/>
+						<cell col="1" display="text" text="성명"/>
+						<cell col="2" display="text" text="지사"/>
+						<cell col="3" display="text" text="소속부서"/>
+						<cell col="4" display="text" text="조"/>
+						<cell col="5" display="text" text="직급"/>
+						<cell col="6" display="text" text="직위"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CHK" cursor="hand" display="checkbox" edit="checkbox"/>
+						<cell col="1" colid="NM_KOR" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="BRANCH_NM" display="text"/>
+						<cell col="3" colid="DEPART_DPT_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="SHIFT_WORK_NM" display="text"/>
+						<cell col="5" colid="POS_CLS_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="6" colid="POS_RNK_NM" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Div DisableBKColor="white" Height="31" Id="div_ComHead" Left="-1" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="4" Text="Div0" Top="37" Url="globals::ComButton.xml" Visible="FALSE" Width="699">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="605" LeftMargin="12" Style="blt_search" TabOrder="5" TabStop="FALSE" Text="건수&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;건" Top="74" Width="83"></Image>
+		<Static Align="Right" Height="13" Id="st_Reg" Left="650" Style="static" TabOrder="6" Text="0" Top="77" Width="24"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101020014U.xml
+* Form 설명  : 구간별조등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 노준배 
+* 작성일     : 2009-06-29
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONE30001.js";
+
+var G_BRANCH_CD = "";
+var G_TEAM_CD = "";
+var G_SHIFT_WORK_CD = "";
+var G_SFALG         ="";
+// ===============================================================================
+// 함수명: D1101020014U_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1101020014U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	fn_CommonSearch();
+}
+
+function fn_Init() 
+{
+  G_SFALG=SFALG;
+  gfn_D1_SetGrid_Sort(EmpGrid);
+}
+
+function fn_CommonSearch() {
+
+    var ServiceId = "";
+	var ServicePart = "D10";
+	var Url = "handle.do?ServiceName=D1101020014U-service"
+	        + "&BRANCH_CD=" + BRANCH_CD
+	        //관리팀 인원 탐사조 배정에 따른 팀ㄱ조건 해제 2010.4.29 경기지사 유원범과장
+            //+ "&TEAM_CD=" + TEAM_CD
+            ;
+	var InputDsList  = "";
+	var OutputDsList  = "ds_list=ds_list";
+	var Argument  = "find";
+	
+	gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+	
+	if (ErrorCode < 0) {
+        
+		return;
+	}		   
+	
+	st_Reg.Text = ds_list.GetRowCount();
+}
+
+function fn_CommonSelect() 
+{
+    if(G_SFALG==""||G_SFALG==NULL)
+    {
+		var cnt = parent.ds_Empid.GetRowCount();
+		
+		for (var i = 0; i < ds_list.RowCount(); i++) 
+		{   
+			if (ds_list.GetColumn(i, "CHK") == "1") 
+			{
+				parent.ds_empid.addrow();
+				parent.ds_empid.SetColumn(cnt, "SHIFT_WORKER_CD", ds_list.GetColumn(i,"EMPLOYEE_ID"));
+				parent.ds_empid.SetColumn(cnt, "NM_KOR", ds_list.GetColumn(i,"NM_KOR"));
+				parent.ds_empid.SetColumn(cnt, "POS_CLS_NM", ds_list.GetColumn(i,"POS_CLS_NM"));
+				
+				cnt = cnt + 1;
+			}
+		}
+	}else if(G_SFALG=="D2603010011F"){
+		/* 20090904  jeong ju hye */
+		var temp = 0;
+		
+		for (var i = 0; i < ds_list.RowCount(); i++) 
+		{   
+			if (ds_list.GetColumn(i, "CHK") == "1") 
+			{
+				temp = temp + 1;
+			}
+		}
+		
+		if(temp > 1){
+			alert("하나의 사원 정보만 선택하세요. ");
+			return;
+		}
+			
+		var arrList = array();
+		arrList[0] = ds_list.GetColumn(EmpGrid.ClickedRow,"EMPLOYEE_ID");
+		arrList[1] = ds_list.GetColumn(EmpGrid.ClickedRow,"NM_KOR");
+		Close(arrList);	
+	}
+	else
+	{			
+		var arrList = array();
+		arrList[0] = ds_list.GetColumn(EmpGrid.ClickedRow,"EMPLOYEE_ID");
+		arrList[1] = ds_list.GetColumn(EmpGrid.ClickedRow,"NM_KOR");
+		Close(arrList);	
+	}
+	Close();
+}
+
+
+function EmpGrid_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{   
+	if(nCell=="0")
+	{ 
+	    if(G_SFALG==""||G_SFALG==NULL)
+	    {
+			if(ds_list.GetColumn(nRow,"SHIFT_WORK_NM")==""||ds_list.GetColumn(nRow,"SHIFT_WORK_NM")==null)
+			{
+				EmpGrid.SetCellProp("body",0,"Edit","checkbox");
+			}
+			else
+			{
+				alert(ds_list.GetColumn(nRow,"NM_KOR")+"님은 조를 갖고 있습니다.");
+				EmpGrid.SetCellProp("body",0,"Edit","none");
+			}
+		}
+	}
+}
+
+function grd_E2_RtnGridDblCk(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	
+}
+]]></Script>
+</Window>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="616" Id="D1202010037U" Left="8" OnLoadCompleted="D1202010037U_OnLoadCompleted" PidAttrib="7" Title="전기방식&#32;조사서_D1202010037U" Top="8" Ver="1.0" Width="712" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="PREVI_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LATER_ELEC_POT" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAIC" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_RESULT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK2" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_POT_MEAS" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_JOB_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="266" Id="Static11" Left="88" Style="table" TabOrder="21" Top="152" VAlign="Middle" Width="617" WordWrap="TRUE"></Static>
+		<TextArea BindDataset="ds_Multi" Border="Flat" BorderColor="user2" Column="MEAS_DESC" Height="259" Id="ta_MeasDesc" Left="91" MaxLength="500" Style="textarea" TabOrder="36" Top="156" Width="611"></TextArea>
+		<Div DisableBKColor="white" Height="24" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="3" TabStop="FALSE" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="710">
+			<Contents></Contents>
+		</Div>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static13" Left="88" Style="table" TabOrder="44" Top="417" VAlign="Middle" Width="617" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="66" Id="Static20" Left="88" Style="table" TabOrder="25" Top="545" VAlign="Middle" Width="617" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="66" Id="Static19" Left="1" Style="pop_table" TabOrder="26" Text="특이사항" Top="545" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static25" Left="169" Style="table" TabOrder="10" Top="131" VAlign="Middle" Width="536" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static22" Left="169" Style="table" TabOrder="8" Top="110" VAlign="Middle" Width="536" WordWrap="TRUE"></Static>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" TabStop="FALSE" Text="Button8" Top="-134" Width="2"></Button>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="88" Style="table" TabOrder="7" Top="89" VAlign="Middle" Width="617" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="FACI_NUM" Enable="FALSE" Height="18" Id="Edit2" ImeMode="none" Left="179" Style="edit" TabOrder="4" TabStop="FALSE" Top="91" Width="116"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="88" Style="pop_table" TabOrder="4" Text="시설물번호" Top="89" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="298" Style="pop_table" TabOrder="6" Text="점검일자" Top="89" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static23" Left="88" Style="pop_table" TabOrder="7" Text="주소" Top="110" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="st_LaterElectPot" Left="298" Style="pop_table" TabOrder="9" Text="MG전위" Top="131" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="ZIP_NO1" Enable="FALSE" Height="18" Id="Edit0" ImeMode="none" Left="179" Style="edit" TabOrder="5" TabStop="FALSE" Top="112" Width="38"></Edit>
+		<Static Height="13" Id="C2502030010F" Left="218" Style="static" TabOrder="11" Text="-" Top="115" Width="15"></Static>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="ZIP_NO2" Enable="FALSE" Height="18" Id="Edit1" ImeMode="none" Left="226" Style="edit" TabOrder="6" TabStop="FALSE" Top="112" Width="38"></Edit>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="LOT_NUM_UNION" Enable="FALSE" Height="18" Id="Edit6" ImeMode="none" Left="265" Style="edit" TabOrder="7" TabStop="FALSE" Top="112" Width="435"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="501" Style="pop_table" TabOrder="14" Text="지역담당자" Top="89" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="TAKER_EMPID1_NM" Enable="FALSE" Height="18" Id="edt_EmpNm" ImeMode="none" Left="388" Style="edit" TabOrder="8" TabStop="FALSE" Top="419" Width="92"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="st_Voltaic" Left="501" Style="pop_table" TabOrder="16" Text="전류" Top="131" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="st_PReviElect" Left="88" Style="pop_table" TabOrder="17" Text="측정전위" Top="131" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" BindDataset="ds_Multi" Border="Flat" Column="VOLTAIC" Enable="FALSE" Height="18" Id="edt_Voltaic" ImeMode="none" Left="608" Number="TRUE" Style="edit" TabOrder="9" TabStop="FALSE" Top="133" Width="69"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_Multi" Border="Flat" Column="LATER_ELEC_POT" Enable="FALSE" Height="18" Id="edt_LaterElectPot" ImeMode="none" Left="406" Number="TRUE" Style="edit" TabOrder="10" TabStop="FALSE" Top="133" Width="69"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_Multi" Border="Flat" Column="PREVI_ELECT" Enable="FALSE" Height="18" Id="edt_PReviElect" ImeMode="none" Left="196" Number="TRUE" Style="edit" TabOrder="11" TabStop="FALSE" Top="133" Width="69"></Edit>
+		<Static Align="Right" Border="Flat" Height="287" Id="Static10" Left="1" Style="pop_table" TabOrder="22" Text="조사내용" Top="152" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="66" Id="Static17" Left="88" Style="table" TabOrder="23" Top="459" VAlign="Middle" Width="617" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="87" Id="Static18" Left="1" Style="pop_table" TabOrder="24" Text="조치결과" Top="459" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Sanction" ImageID="btn_5_Amendment" Left="618" LeftMargin="21" OnClick="btn_Sanction_OnClick" Style="button" TabOrder="12" TabStop="FALSE" Text="결재(승인)" Top="67" Width="87"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_OZ" ImageID="btn_2_Connection" Left="564" LeftMargin="20" OnClick="btn_OZ_OnClick" Style="button" TabOrder="13" TabStop="FALSE" Text="장표" Top="67" Width="50"></Button>
+		<Static Height="13" Id="Static29" Left="187" Style="static" TabOrder="31" Text="-" Top="137" Width="15"></Static>
+		<Static Height="13" Id="Static30" Left="269" Style="static" TabOrder="32" Text="mV" Top="137" Width="23"></Static>
+		<Static Height="13" Id="Static8" Left="396" Style="static" TabOrder="33" Text="-" Top="137" Width="15"></Static>
+		<Static Height="13" Id="Static9" Left="597" Style="static" TabOrder="34" Text="-" Top="137" Width="15"></Static>
+		<Calendar BindDataset="ds_Multi" Border="Flat" Column="PATROL_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_PatrolYmd" Left="388" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="13" TabStop="FALSE" Top="91" WeeksFont="Default,-1" Width="112"></Calendar>
+		<TextArea BindDataset="ds_Multi" Border="Flat" BorderColor="user2" Column="MEAS_RESULT" Height="59" Id="ta_MeasResult" Left="91" MaxLength="80" Style="textarea" TabOrder="37" Top="462" VScroll="TRUE" Width="611"></TextArea>
+		<TextArea BindDataset="ds_Multi" Border="Flat" BorderColor="user2" Column="RMK2" Height="60" Id="ta_Rmk2" ImeMode="none" Left="90" MaxLength="80" Style="textarea" TabOrder="38" Top="548" VScroll="TRUE" Width="611"></TextArea>
+		<Static Height="13" Id="Static26" Left="681" Style="static" TabOrder="39" Text="mV" Top="137" Width="23"></Static>
+		<Static Height="13" Id="Static35" Left="479" Style="static" TabOrder="40" Text="mV" Top="137" Width="23"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static32" Left="1" Style="pop_table" TabOrder="41" Text="결재상태" Top="68" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_Multi" Border="None" BorderColor="user0" Color="red" Column="DECIDE_PROC" DisableColor="red" Enable="FALSE" Face3dColor="user8" Height="18" Id="Edit4" ImeMode="none" Left="91" ShadowColor="user8" Style="edit" TabOrder="42" TabStop="FALSE" Top="70" Width="76"></Edit>
+		<Static Align="Right" Border="Flat" Height="64" Id="Static36" Left="1" Style="pop_table" TabOrder="43" Text="점검현황" Top="89" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static2" Left="88" Style="pop_table" TabOrder="45" Text="조사완료일" Top="417" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static3" Left="298" Style="pop_table" TabOrder="46" Text="조사자" Top="417" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="501" Style="pop_table" TabOrder="47" Text="조치방안" Top="417" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static7" Left="1" Style="pop_table" TabOrder="48" Text="정비의뢰" Top="438" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static12" Left="88" Style="table" TabOrder="49" Top="438" VAlign="Middle" Width="617" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static14" Left="88" Style="table" TabOrder="50" Top="524" VAlign="Middle" Width="617" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static15" Left="88" Style="pop_table" TabOrder="51" Text="정비보수번호" Top="438" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="MAINTER_NUM" Height="18" Id="Edit7" ImeMode="none" Left="178" MaxLength="11" Style="edit" TabOrder="52" TabStop="FALSE" Top="441" Width="118"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static16" Left="298" Style="pop_table" TabOrder="53" Text="정비의뢰일" Top="441" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Multi" Border="Flat" Column="WORK_REQ_YMD_1" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar1" Left="388" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="54" TabStop="FALSE" Top="440" WeeksFont="Default,-1" Width="112"></Calendar>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static21" Left="501" Style="pop_table" TabOrder="55" Text="공사일자" Top="438" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Multi" Border="Flat" Column="REAL_JOB_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar2" Left="591" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="56" TabStop="FALSE" Top="440" WeeksFont="Default,-1" Width="112"></Calendar>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static34" Left="88" Style="pop_table" TabOrder="57" Text="조치일자" Top="524" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Multi" Border="Flat" Column="MEAS_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar3" Left="178" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="58" TabStop="FALSE" Top="526" WeeksFont="Default,-1" Width="118"></Calendar>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static40" Left="298" Style="pop_table" TabOrder="59" Text="조치전위" Top="524" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static41" Left="388" Style="static" TabOrder="61" Text="-" Top="530" Width="10"></Static>
+		<Edit Align="RIGHT" BindDataset="ds_Multi" Border="Flat" Column="MEAS_ELECT" Height="18" Id="edt_MeasElect" ImeMode="none" Left="398" MaxLength="5" Number="TRUE" Style="edit" TabOrder="60" Top="527" Width="69"></Edit>
+		<Static Height="13" Id="Static42" Left="472" Style="static" TabOrder="62" Text="mV" Top="528" Width="23"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static43" Left="501" Style="pop_table" TabOrder="63" Text="조치결과" Top="524" VAlign="Middle" Width="88" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Multi" Border="Flat" Column="MEAS_FLAG" Height="18" Id="cob_measFlag" Left="590" Style="combo" TabOrder="64" Top="527" Width="113"></Combo>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="AREA_EMPID_NM" Enable="FALSE" Height="18" Id="Edit8" ImeMode="none" Left="590" Style="edit" TabOrder="65" TabStop="FALSE" Top="91" Width="110"></Edit>
+		<Combo BindDataset="ds_Multi" Border="Flat" Column="ACT_FLAG" Height="18" Id="cob_actFlag" Left="590" Style="combo" TabOrder="66" Top="419" Width="114"></Combo>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" TabStop="FALSE" Text="전기방식&#32;조사서" Transparent="TRUE" Width="710"></Image>
+		<Button Cursor="HAND" Height="17" Id="btn_EmpCd" ImageID="search" Left="482" OnClick="btn_EmpCd_OnClick" TabOrder="67" Text="Button8" Top="419" Width="17"></Button>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="TAKER_EMPID1" Enable="FALSE" Height="20" Id="edt_EmpCd" ImeMode="none" Left="720" TabOrder="68" TabStop="FALSE" Top="416" Width="99"></Edit>
+		<Calendar BindDataset="ds_Multi" Border="Flat" Column="RESECH_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar0" Left="178" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="69" TabStop="FALSE" Top="419" WeeksFont="Default,-1" Width="118"></Calendar>
+	</Form>
+	<Script><![CDATA[/*************************************************************************************************** 
+* FormID     : D1202010037U.xml
+* Form 설명  : 전기방식조사서 순찰점검이력조회(POPUP)
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 임성수 
+* 작성일     : 2009-01-07 
+* 변경내용   : 변경일자, 변경내용,변경자 
+****************************************************************************************************/ 
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONA10008.js";
+#include "JS::COMMONE20001.js";
+//---------------------------------------------------------
+//	화면변수선언 
+//---------------------------------------------------------
+
+function D1202010037U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+			
+	if(substr(FACI_NUM,0,2)=="TB")
+	{
+		st_PReviElect.Text    = "측정전위";
+		st_LaterElectPot.Text = "MG전위";
+		st_Voltaic.Text       = "전류";
+	}
+	else
+	{
+		st_PReviElect.Text    = "전단전위";
+		st_LaterElectPot.Text = "후단전위";
+		st_Voltaic.Text       = "본딩전위";
+	}
+	
+	// 조치방안
+	gfn_SetComboBox_Comcode("D10309",gfn_setDsObject_Comcode("cob_actFlag"));
+	gfn_SetComboBox_Comcode("D10309",gfn_setDsObject_Comcode("cob_measFlag"));
+	
+	fn_CommonSearch();	
+}
+
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//---------------------------------------------------------
+function fn_CommonSave()
+{
+	if(ds_Multi.RowCount() == 0)
+	{
+		return;
+	}
+	
+	if(gfn_GetGlobalValue("G_USER_NO") == '199443297')
+	{
+	
+	}
+    else if(ds_Multi.GetColumn(0,"DECIDE_PROC_STS") == '0' || ds_Multi.GetColumn(0, "DECIDE_PROC_STS") == '1' || ds_Multi.GetColumn(0, "DECIDE_PROC_STS") == '2')
+	{
+		alert("결재상태가 (" + ds_Multi.GetColumn(0, "DECIDE_PROC") +  ")중으로 수정불가합니다..");
+		return;
+	}
+	
+	/*
+	if(ds_Multi.GetColumn(0,"PIPE_STS")==""||ds_Multi.GetColumn(0,"PIPE_STS")==null)
+	{
+		alert("배관현황은 필수항목입니다.");
+		return;
+	}
+	if(ds_Multi.GetColumn(0,"PIPE_ELECT")==""||ds_Multi.GetColumn(0,"PIPE_ELECT")==null)
+	{
+		alert("배관전위는 필수항목입니다.");
+		return;
+	}
+	*/
+	
+	if(ds_Multi.GetColumn(0,"MEAS_DESC")==""||ds_Multi.GetColumn(0,"MEAS_DESC")==null)
+	{
+		alert("조치내용은 필수항목입니다.");
+		return;
+	}
+	if(ds_Multi.GetColumn(0,"MEAS_RESULT")==""||ds_Multi.GetColumn(0,"MEAS_RESULT")==null)
+	{
+		alert("조치결과는 필수항목입니다.");
+		return;
+	}
+	//조치전위 선택 변경
+	// if(ds_Multi.GetColumn(0,"MEAS_ELECT")==""||ds_Multi.GetColumn(0,"MEAS_ELECT")==null)
+	// {
+		// alert("조치전위는 필수항목입니다.");
+		// return;
+	// }
+	//수정 등록시 셋팅할 사용자 정보
+	ds_Multi.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+	ds_Multi.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//수정자 IP
+	
+	ds_Multi.SetColumn(0, "TAKER_EMPID1", edt_EmpCd.Text);	//조사자 사번
+	
+	var strSvcID         = "update";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1202010037U-service";					
+	var strInDatasets    = "ds_Multi=ds_Multi:u";
+	var strOutDatasets   = "ds_Multi=ds_Multi";		
+	var strArgument      = "update=1";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);			   
+
+	if(ErrorCode<0)
+	{
+		return;
+	}
+	
+    fn_CommonSearch();
+    alert("정상 저장 처리되었습니다.");
+}
+
+
+//------------------------------------------------------------------------------- 
+//   설명:  전기방식 조사서를 조회 한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSearch()
+{	
+	var strSvcID = "fn_D1_Find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1202010037U-service"
+	           + "&FACI_NUM=" 		+FACI_NUM					//정압실번호
+	           + "&DETAIL_NUM="     +DETAIL_NUM
+	           + "&PATROL_YMD=" 	+PATROL_YMD				//순찰일자
+	           ;
+
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "search=1";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : btn_Sanction_OnClick(obj)
+// 설명     : 전자결재
+// return 내용 : 없음
+//-------------------------------------------------------------------------------
+function btn_Sanction_OnClick(obj)
+{
+    if(ds_Multi.GetRowCount()==0)
+    {
+		alert("방식조서등록 후 결재 바랍니다...");
+		return;
+	}	
+		
+	if(ds_Multi.GetColumn(0,"DECIDE_PROC_STS") == '0' || ds_Multi.GetColumn(0, "DECIDE_PROC_STS") == '1' || ds_Multi.GetColumn(0, "DECIDE_PROC_STS") == '2')
+	{
+		alert("결재상태가 (" + ds_Multi.GetColumn(0, "DECIDE_PROC") +  ")중 입니다.");
+		return;
+	}
+			
+	gfv_callGWInfo("fmD09","D10","D1202010014P",3,FACI_NUM+","+DETAIL_NUM+","+PATROL_YMD);
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: btn_OZ_OnClick(obj)
+//   설명  :  전기방식 조사서 장표출력 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function btn_OZ_OnClick(obj)
+{
+    if(ds_Multi.GetRowCount()==0)
+    {
+		alert("방식조서등록 후 출력 바랍니다...");
+		return;
+	}	
+
+	// 함수 호출용 파라미터를 설정한다
+	var strTitle ="전기방식 조사서"; 
+	var strPart ="D10";           
+	var strReport="D1202010014P";	
+	var strParameter="FACI_NUM=" 	+quote(ds_Multi.GetColumn(0,"FACI_NUM"))
+					+",DETAIL_NUM=" +quote(ds_Multi.GetColumn(0,"DETAIL_NUM"))
+					+",PATROL_YMD=" +quote(ds_Multi.GetColumn(0,"PATROL_YMD"))
+					;
+	// 공통 레포트 팝업 함수 호출 
+	gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_EmpCd_OnClick
+// 설명: 사원검색 버튼 클릭시 호출되는 함수
+// arguments
+// 없음
+// return: 없음
+//-------------------------------------------------------------------------------
+function btn_EmpCd_OnClick(obj)
+{
+	var arrList = gfn_E2_SearchOutEmplDialog(edt_EmpNm.Text);
+	if(arrList.length() > 0)
+	{
+		edt_EmpCd.Text = arrList[0]; //사원코드
+		edt_EmpNm.Text = arrList[1]; //사원명
+	}
+}
+]]></Script>
+</Window>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="872" Id="D1402010012F" Left="8" OnLoadCompleted="D1402010012F_OnLoadCompleted" PidAttrib="7" Title="굴착공사입회보고서조회" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="STR_JOIN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_JOIN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="EOCS_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAYMENT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_JoinReport">
+				<Contents>
+					<colinfo id="JOIN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOIN_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="EOCS_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_KIND_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOIN_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_OPINI" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_TeamCd">
+				<Contents>
+					<colinfo id="KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Payment">
+				<Contents>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE_ITEM>11</CODE_ITEM>
+						<ITEM_KNAME>미결제</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ITEM>2</CODE_ITEM>
+						<ITEM_KNAME>결재중</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ITEM>0</CODE_ITEM>
+						<ITEM_KNAME>승인</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ITEM>4</CODE_ITEM>
+						<ITEM_KNAME>요청취소</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ITEM>5</CODE_ITEM>
+						<ITEM_KNAME>반려</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ITEM>10</CODE_ITEM>
+						<ITEM_KNAME>전체</ITEM_KNAME>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1265" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="3" Top="30" Type="RoundRect" Width="1260"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape0" Left="10" LineWidth="0" Right="1260" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="35" Type="Rectangle" Width="1250"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image7" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search" TabOrder="1" Text="지사" Top="40" Width="61"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="2" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1261">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="cob_PBranchCd" Left="53" OnChanged="cob_PBranchCd_OnChanged" Style="combo_indis" TabOrder="5" Top="40" Width="85"></Combo>
+		<Shape BKColor="user15" Bottom="77" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="1266" TabOrder="6" Top="74" Type="Rectangle" Width="1261"></Shape>
+		<Image Align="Left" Color="user1" Height="18" Id="Image9" ImageID="blt" Left="483" LeftMargin="12" Style="blt_search" TabOrder="7" Text="입회일자" Top="41" Width="76"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_strjoin" Left="547" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="8" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static10" Left="636" Style="static" TabOrder="9" Text="~" Top="44" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_endjoin" Left="646" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="10" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Grid AutoEnter="TRUE" BindDataset="ds_JoinReport" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="864" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="787" Id="Grid2" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnExpandEdit="Grid2_OnExpandEdit" OnHeadClick="Grid2_OnHeadClick" Right="1266" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="11" TabStop="true" Top="77" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1261">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="39"/>
+						<col fix="left" width="68"/>
+						<col fix="left" width="33"/>
+						<col fix="left" width="80"/>
+						<col fix="left" width="100"/>
+						<col width="229"/>
+						<col width="132"/>
+						<col width="103"/>
+						<col width="62"/>
+						<col width="65"/>
+						<col width="62"/>
+						<col width="64"/>
+						<col width="48"/>
+						<col width="53"/>
+						<col width="119"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell col="1" display="text" text="입회일자"/>
+						<cell col="2" display="text" text="SEQ"/>
+						<cell col="3" display="text" text="입회시간"/>
+						<cell col="4" display="text" text="굴착공사번호"/>
+						<cell col="5" display="text" text="굴착공사명"/>
+						<cell col="6" display="text" text="공사기간"/>
+						<cell col="7" display="text" text="지사(팀)"/>
+						<cell col="8" display="text" text="시/구"/>
+						<cell col="9" display="text" text="굴착종류"/>
+						<cell col="10" display="text" text="입회자"/>
+						<cell col="11" display="text" text="입회보고서"/>
+						<cell col="12" display="text" text="결재"/>
+						<cell col="13" display="text" text="결재상태"/>
+						<cell col="14" display="text" text="결재의견"/>
+					</head>
+					<body>
+						<cell align="right" col="0" display="text" expr="rowindex+1"/>
+						<cell align="center" col="1" colid="JOIN_YMD" display="date" edit="normal"/>
+						<cell align="center" col="2" colid="SEQ" display="text"/>
+						<cell align="center" col="3" colid="JOIN_TIME" display="text" edit="mask" Mask="##:##~##:##"/>
+						<cell align="center" col="4" colid="EOCS_NUM" cursor="hand" display="text" edit="normal" wordwrap="word"/>
+						<cell align="left" col="5" colid="DIG_WORK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="6" colid="DIG_WORK_YMD" display="text" edit="mask" Mask="####/##/##~####/##/##"/>
+						<cell align="center" col="7" colid="TEAM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="8" colid="STR_ZIP_NO1_NM" display="text"/>
+						<cell col="9" colid="DIG_KIND_NM" display="text"/>
+						<cell col="10" colid="JOIN_EMPID_NM" display="text"/>
+						<cell align="center" col="11" display="text" expandimage="search" expandshow="true"/>
+						<cell align="center" col="12" display="text" expandimage="popup" expandshow="true"/>
+						<cell align="center" col="13" colid="DECIDE_PROC_STS_NM" display="text"/>
+						<cell col="14" colid="DECIDE_OPINI" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_PTeamCd" ImeMode="none" InnerDataset="ds_TeamCd" Left="347" Style="combo" TabOrder="12" Top="40" Width="129"></Combo>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="319" LeftMargin="12" Style="blt_search" TabOrder="13" Text="팀" Top="41" Width="36"></Image>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="745" LeftMargin="12" Style="blt_search" TabOrder="15" TabStop="FALSE" Text="굴착공사번호" Top="41" Width="89"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_EocsNumSearch" ImeMode="none" Left="834" MaxLength="13" Style="edit" TabOrder="14" TabStop="FALSE" Top="41" UpperOnly="TRUE" Width="115"></Edit>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="146" LeftMargin="12" Style="blt_search_Indis" TabOrder="17" TabStop="FALSE" Text="시/구" Top="42" Width="60"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_StrZipNo1" ImeMode="none" Left="194" Style="combo_indis" TabOrder="16" Top="40" Width="116"></Combo>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="961" LeftMargin="12" Style="blt_search" TabOrder="18" TabStop="FALSE" Text="결재상태" Top="41" Width="89"></Image>
+		<Combo Border="Flat" CodeColumn="CODE_ITEM" DataColumn="ITEM_KNAME" Height="18" Id="cob_Payment" ImeMode="none" InnerDataset="ds_Payment" Left="1027" Style="combo" TabOrder="19" Top="40" Width="129"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1402010012F.xml
+* Form 설명  : 굴착공사 입회보고서 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 권기철
+* 작성일     : 2010-11-22
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+#include "js::COMMONA10008.js";
+
+function D1402010012F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{	
+	cal_strjoin.Value = AddDate(today(),-20);
+	//cal_ReqYmdEnd.Value = today();
+	// 해당날의 마지막날 구하기
+	cal_endjoin.Value = today();
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	// 지사코드
+	//-----------------------------------------
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_PBranchCd"));		//지사 구분
+	//-----------------------------------------
+	//  콤보박스의 초기 설정
+	//-----------------------------------------
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") 
+	{
+	    cob_PBranchCd.index = 0;
+	} 
+	else 
+	{
+	    cob_PBranchCd.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+	    cob_PBranchCd.Enable = false;
+	}
+    
+    cob_PBranchCd_OnChanged();
+	
+	cob_Payment.index = 5;
+}
+
+
+/********************************************************************************
+* 기      능   :  지사별 팀 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_PBranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	fn_SetComboBox_Comcode("1", cob_PBranchCd.Value, fn_setDsObject_Comcode("1", "cob_StrZipNo1")); // 시/구    
+	cob_StrZipNo1.Value = "";
+    // 지사별 팀 콤보 셋팅 시
+    gfn_D1_SetComboBox_Teamcd("ds_TeamCd",cob_PBranchCd);
+    
+    cob_PTeamCd.value = gfn_GetGlobalValue("G_DEPT_CODE");
+    if(gfn_GetGlobalValue("G_BRANCH_CD") == "999999")
+    {
+		cob_PTeamCd.value = '';
+    }	    
+}
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+    ds_search.ClearData();
+    ds_search.AddRow();
+    
+    ds_search.SetColumn(0, "STR_JOIN_YMD", cal_strjoin.Value);
+    ds_search.SetColumn(0, "END_JOIN_YMD", cal_endjoin.Value);
+    
+    ds_search.SetColumn(0, "BRANCH_CD", cob_PBranchCd.Value);
+    ds_search.SetColumn(0, "TEAM_CD", cob_PTeamCd.Value);
+    ds_search.SetColumn(0, "ZIP_NO1", cob_StrZipNo1.Value);
+     
+    ds_search.SetColumn(0, "EOCS_NUM", trim(edt_EocsNumSearch.Text));
+    ds_search.SetColumn(0, "EOCS_NUM", trim(edt_EocsNumSearch.Text));
+	
+	ds_search.SetColumn(0, "PAYMENT", cob_Payment.Value);
+	
+    var strSvcID = "Search";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1402010012F-service";  
+	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets = "ds_JoinReport=ds_JoinReport";
+	var strArgument    = "Search=1";
+		 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{	
+	var SearchCondition= "";
+    
+//    SearchCondition = SearchCondition + "지사 : "         +     RPad(cob_ObjectFlag.Text," ",20);
+//   SearchCondition = SearchCondition + "팀 : "           +     RPad(cob_Proc_Sts.Text," ",20);
+    SearchCondition = SearchCondition + "접수일자 : "     +     RPad(cal_strjoin.Value + ' ~ ' + cal_endjoin.Value," ",20);
+    
+        
+	gfn_ExportExcel("굴착공사 입회보고서 내역", 5, SearchCondition, "Grid2");        
+    //gfn_ExportExcel("이설보수 진행상태 내역", 5, SearchCondition, "grd_excel");
+}
+
+
+function Grid2_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_D1_SetGrid_Sort(Grid2);
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_Report_OnClick()
+// 설명: 공통 레포트 팝업 함수를 호출한다
+// input parameter: 
+// output parameter: 
+// return 내용: 없음
+//-------------------------------------------------------------------------------
+function btn_Report_OnClick(obj)
+{
+	var strTitle    = "입회내역"+ds_JoinReport.GetColumn(ds_JoinReport.row,"JOIN_YMD") ;               // 출력물 제목
+	var strPart     = "D10" ;                           // 시스템 명 
+	var strReport	= "";
+	if(ds_JoinReport.GetColumn(ds_JoinReport.row,"DIG_KIND") == "10")
+	{
+		strReport   = "D1402010010P" ;	// 출력물 ID
+	}
+	else
+	{
+		strReport   = "D1402010013P" ;	// 출력물 ID
+	}
+	var strParameter= "EOCS_NUM=" + ds_JoinReport.GetColumn(ds_JoinReport.row,"EOCS_NUM")  // 파라미터구문 (단 ',' 로구분할것 ) 
+					 +",DIG_WORK_PATH_FLAG="+ds_JoinReport.GetColumn(ds_JoinReport.row,"DIG_WORK_PATH_FLAG")
+					 +",JOIN_YMD="+ds_JoinReport.GetColumn(ds_JoinReport.row,"JOIN_YMD")
+					 +",SEQ="+ds_JoinReport.GetColumn(ds_JoinReport.row,"SEQ")
+					 ;
+					 
+	gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+}	
+
+function Grid2_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{		
+	if (nCell == 11) {
+		btn_Report_OnClick();
+	}
+	
+	if (nCell == 12) {
+		if(ds_JoinReport.GetColumn(nRow,"DECIDE_PROC_STS") == '0' || ds_JoinReport.GetColumn(nRow,"DECIDE_PROC_STS") == '1' || ds_JoinReport.GetColumn(nRow,"DECIDE_PROC_STS") == '2')
+		{
+			alert("(" + ds_JoinReport.GetColumn(nRow,"DECIDE_PROC_STS_NM") + ") 입니다.");
+			return;
+		}		
+		var eocs_num        	= ds_JoinReport.GetColumn(ds_JoinReport.row,"EOCS_NUM");
+		var eocs_path_flag  	= ds_JoinReport.GetColumn(ds_JoinReport.row,"DIG_WORK_PATH_FLAG");
+		var danger_ymd 			= ds_JoinReport.GetColumn(ds_JoinReport.row,"JOIN_YMD");
+		var seq				 	= ds_JoinReport.GetColumn(ds_JoinReport.row,"SEQ");
+		
+		var strPayment="";
+		
+		if(ds_JoinReport.GetColumn(ds_JoinReport.row,"DIG_KIND")=="10")
+		{
+			strPayment = "D1402010010P" ;
+		}
+		else
+		{
+			strPayment = "D1402010013P" ;
+		}
+		
+		if(ds_JoinReport.GetColumn(ds_JoinReport.row,"DIG_KIND")=="10")
+		{
+			gfv_callGWInfo("fmD13", "d10", strPayment, 4, eocs_num+ ',' +eocs_path_flag+ ',' +danger_ymd+ ',' +seq);
+		}else
+		{
+			gfv_callGWInfo("fmD14", "d10", strPayment, 4, eocs_num+ ',' +eocs_path_flag+ ',' +danger_ymd+ ',' +seq);
+		}
+		
+	}
+}
+]]></Script>
+</Window>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1601010010U" Left="8" OnLoadCompleted="D1601010010U_OnLoadCompleted" PidAttrib="7" Title="정비보수&#32;업체정보_D1601010010U" Top="8" Ver="1.0" Width="660" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="DEAL_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPRE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_EXEC_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMM_TAKER" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Excel">
+				<Contents>
+					<colinfo id="DEAL_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPRE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Gubun">
+				<Contents>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE>200</CODE>
+						<NAME>정비</NAME>
+					</record>
+					<record>
+						<CODE>120</CODE>
+						<NAME>복구</NAME>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="2" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="4" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="656">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user9" Bottom="96" Height="24" Id="Shape2" Left="5" LineColor="user10" Right="655" TabOrder="6" Top="72" Type="Rectangle" Width="650"></Shape>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="3" Text="정비보수&#32;업체정보" Transparent="TRUE" Width="660"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="396" ColSizing="TRUE" Enable="true" EndLineColor="default" Font="돋움,9" HeadBorder="Flat" HeadHeight="20" Height="294" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnHeadClick="grd_List_OnHeadClick" Right="655" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="102" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="650">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="160"/>
+						<col width="80"/>
+						<col width="70"/>
+						<col width="125"/>
+						<col width="450"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="정비보수&#32;업체명"/>
+						<cell col="1" display="text" text="지사"/>
+						<cell col="2" display="text" text="담당자"/>
+						<cell col="3" display="text" text="전화번호"/>
+						<cell col="4" display="text" text="주소"/>
+					</head>
+					<body>
+						<cell align="left" col="0" colid="DEAL_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="BRANCH_CD_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="2" colid="COMM_TAKER" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="TEL" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="4" colid="ADDR" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="103" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="655" TabOrder="5" Top="100" Type="Rectangle" Width="650"></Shape>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="19" LeftMargin="12" Style="blt_search_1" TabOrder="7" Text="업체구분" Top="74" Transparent="TRUE" Width="100"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="NAME" Height="18" Id="cob_Gubun" InnerDataset="ds_Gubun" Left="86" Style="combo" TabOrder="1" Top="73" Width="100"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1601010010U.xml
+* Form 설명  : 정비보수 업체정보
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2008-12-15
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1601010010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+
+	gfn_SetForceButton("00010101");	
+	
+	grd_List.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");		
+
+}
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+
+	ds_Multi.ClearData();
+	
+	var strSvcID = "findList";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepairEnterpriseMgr-service";  
+	var strInDatasets  = "";
+	var strOutDatasets = "ds_Multi=ds_Multi";
+	var strArgument    = "findGo=1";
+	    strArgument   += " WORK_EXEC_FLAG=" + quote(cob_Gubun.Value);
+    var CallBack       = "fn_D1_CallBack";
+    	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+		           , CallBack);
+}
+
+//--------------------------------------------------------------------------------------------------
+//	서비스 CallBack
+//--------------------------------------------------------------------------------------------------
+function fn_D1_CallBack(SrvID,ErrorCode,ErrorMsg)
+{
+
+	if(ErrorCode < 0) 
+	{
+		alert(ErrorMsg);
+		return;
+	}
+	
+    switch(SrvID)
+    {
+        
+        case "findList":
+        	break;	
+        	
+
+        default:
+
+    }
+}
+//------------------------------------------------------------------------------- 
+// 기      능   :  공통 Excel
+//------------------------------------------------------------------------------- 
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    //SearchCondition = SearchCondition + "업체명 :" + RPad(edt_DealNm.Text," ",20);
+   
+    gfn_ExportExcel("정비보수 업체정보 조회", 5, SearchCondition, "grd_List"); 	
+}
+
+//-------------------------------------------------------------------------------
+//	sorting - Master Grid
+//-------------------------------------------------------------------------------
+function grd_List_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	if(nCell == 0 || nCell == 1 || nCell == 2 || nCell == 3) {
+		gfn_SetGridSort(obj, nCell);
+	}	
+}
+]]></Script>
+</Window>

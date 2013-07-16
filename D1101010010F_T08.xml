@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="797" Id="D1101010010F_T08" Left="8" OnLoadCompleted="D1101010010F_T08_OnLoadCompleted" PidAttrib="7" Title="시설물정보등록_중점관리시설&#32;등록" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Radio">
+				<Contents>
+					<colinfo id="mount" size="256" type="STRING"/>
+					<record>
+						<mount>철길통과</mount>
+					</record>
+					<record>
+						<mount>하상통과</mount>
+					</record>
+					<record>
+						<mount>교량첨가</mount>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Align="Right" BKColor="#f2fafe" Border="Flat" Height="30" Id="Static19" Left="5" Style="table" TabOrder="2" Top="5" VAlign="Middle" Width="240" WordWrap="TRUE"></Static>
+		<Radio BKColor="#f2fafe" Border="None" ColumnCount="3" DataColumn="mount" Height="16" Id="Radio2" INDEX="0" InnerDataset="ds_Radio" Left="10" OnClick="pagesearch" Style="radio" TabOrder="1" Top="12" Width="229"></Radio>
+		<Div Height="762" Id="div_import" OnLoadCompleted="D1101010010F_T08_D01_OnLoadCompleted" OnUnloadCompleted="D1101010010F_T08_D01_OnUnloadCompleted" TabOrder="3" Text="Div0" Top="35" Url="D10::D1101010010F_T08_D01.xml" Width="1260">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101010010F_T08.xml
+* Form 설명  : 시설내역등록 중점관리시설
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 왕선모 
+* 작성일     : 2008-11-06
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONB30001.js";
+#include "JS::COMMONA10002.js";
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Search()
+//  설명: 중점관리시설 화면 리스트를 조회 하는 함수
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Search()
+{	
+	div_import.fn_D1_Search();    
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonAddRow()
+//   설명: 중점관리시설 내용를 신규 추가 하는 모드로 변경 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonAddRow()
+{	
+	div_import.fn_CommonAddRow();   
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSave()
+//   설명: 중점관리시설 상세 내용를 저장 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSave()
+{
+	div_import.fn_CommonSave();   
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonDeleteRow()
+//   설명: 중점관리시설를 삭제 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonDeleteRow()
+{
+   div_import.fn_CommonDeleteRow();   
+}
+
+function FACILITY_INFORMATION_SEARCH(obj)
+{
+	// Dialog
+	// param1 	:	prefix
+	// param2 	:	form id
+	// param3 	:	argument
+	// param4 	:	팝업창 width - 정확히 기술
+	// param5 	:	팝업창 height - 정확히 기술
+	// param6 	:	open style
+	// param7 	:	open position nW
+	// param8 	:	open position nH
+	
+	var arrList = gfn_Dialog("D10","D1101010011U","",450,400,true,-1,-1);
+	if(arrList.length() > 0)
+	{
+		edt_comCd.text = arrList[0];			// name
+		edt_comName.text = arrList[1];	// 법인 코드
+	}
+}
+
+
+function WORK_NUM_SEARCH(obj)
+{
+	var arrList = gfn_Dialog("D10","D1101010016U","",450,400,true,-1,-1);
+}
+
+function pagesearch(){
+
+  var pageradio = Radio2.Index;
+  if(pageradio==0){
+  div_import.Url = "D10::D1101010010F_T08_D01.xml";
+  //Go("D10::D1101010010F_T08_D01");
+  }else if(pageradio==1){
+  div_import.Url = "D10::D1101010010F_T08_D02.xml";
+  //Go("D10::D1101010010F_T08_D02");
+  }else if(pageradio==2){
+  div_import.Url = "D10::D1101010010F_T08_D03.xml";
+  //Go("D10::D1101010010F_T08_D03");
+  }
+}
+
+function D1101010010F_T08_OnLoadCompleted(obj)
+{
+	//gfn_LoadForm(obj);
+}
+
+function fn_D1_ExcelExport()
+{	
+	div_import.fn_D1_ExcelExport();
+}]]></Script>
+</Window>

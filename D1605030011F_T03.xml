@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="744" Id="D1605030011F_T02" Left="8" PidAttrib="7" Title="업체별정산내역" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Dummy">
+				<Contents>
+					<colinfo id="ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Flag">
+				<Contents>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME3" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="GAP_DISTANCE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME6" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Dcvg" OnColumnChanged="ds_Dcvg_OnColumnChanged" OnLoadCompleted="ds_Dcvg_OnLoadCompleted" OnRowPosChanged="ds_Dcvg_OnRowPosChanged">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DcvgArRst" OnRowPosChanged="ds_DcvgArRst_OnRowPosChanged">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DcvgRst">
+				<Contents>
+					<colinfo id="PIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="GAP_DISTANCE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Decide">
+				<Contents>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user15" Bottom="29" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1254" TabOrder="1" Top="26" Type="Rectangle" Width="1249"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button231" ImageID="btn_8_Search" Left="1122" LeftMargin="21" OnClick="Button231_OnClick" Style="button" TabOrder="2" Text="DCVG탐사이력조회" Top="209" Width="132"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button15" ImageID="btn_addrow" Left="1102" LeftMargin="15" OnClick="Btn_add_Rst_OnClick" Style="button" TabOrder="3" Text="추가" Top="399" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button0" ImageID="btn_addrow" Left="966" LeftMargin="15" OnClick="Btn_add_ArRst_OnClick" Style="button" TabOrder="5" Text="추가" Top="209" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button1" ImageID="btn_deleterow" Left="1072" LeftMargin="15" OnClick="btn_del_ArRst_OnClick" Style="button" TabOrder="4" Text="삭제" Top="209" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Save" ImageID="btn_2" Left="1155" LeftMargin="15" OnClick="btn_save_Rst_OnClick" Style="button" TabOrder="7" TabStop="FALSE" Text="저장" Top="399" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button2" ImageID="btn_deleterow" Left="1206" LeftMargin="15" OnClick="btn_del_Rst_OnClick" Style="button" TabOrder="6" Text="삭제" Top="399" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button3" ImageID="btn_2" Left="1020" LeftMargin="15" OnClick="btn_save_ArRst_OnClick" Style="button" TabOrder="8" TabStop="FALSE" Text="저장" Top="209" Width="48"></Button>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Req_amt" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="368" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="339" Id="Grid1" InputPanel="FALSE" Left="4" LineColor="silver" LineType="ExVERT" Right="1253" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="9" TabStop="true" Top="29" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="182"/>
+						<col width="75"/>
+						<col width="81"/>
+						<col width="105"/>
+						<col width="79"/>
+						<col width="103"/>
+						<col width="79"/>
+						<col width="100"/>
+						<col width="105"/>
+						<col width="80"/>
+						<col width="96"/>
+						<col width="125"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="시공업체"/>
+						<cell col="1" display="text" text="지사"/>
+						<cell col="2" display="text" text="건수"/>
+						<cell col="3" display="text" text="공사금액"/>
+						<cell col="4" display="text" text="건수"/>
+						<cell col="5" display="text" text="직접복구비"/>
+						<cell col="6" display="text" text="건수"/>
+						<cell col="7" display="text" text="간접복구비"/>
+						<cell col="8" display="text" text="공사비&#32;합계"/>
+						<cell col="9" display="text" text="건수"/>
+						<cell col="10" display="text" text="휴일대기비용"/>
+						<cell col="11" display="text" text="총&#32;합계"/>
+					</head>
+					<body>
+						<cell align="left" col="0" colid="WORK_FIRM_NM" display="text" limit="11"/>
+						<cell align="center" col="1" colid="BRANCH_NM" display="text"/>
+						<cell align="right" col="2" colid="WORK_CNT" display="number"/>
+						<cell align="right" col="3" colid="WORK_AMT" display="number"/>
+						<cell align="right" col="4" colid="DIR_RC_CNT" display="number"/>
+						<cell align="right" col="5" colid="DIR_RC_AMT" display="number"/>
+						<cell align="right" col="6" colid="IND_RC_CNT" display="number"/>
+						<cell align="right" col="7" colid="IND_RC_AMT" display="number"/>
+						<cell align="right" col="8" colid="WORK_AMT_SUM" display="number"/>
+						<cell align="right" col="9" colid="HOLI_CNT" display="number"/>
+						<cell align="right" col="10" colid="HOLI_AMT" display="number"/>
+						<cell align="right" col="11" colid="WORK_AMT_TOT" display="number"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" colspan="2" display="text" text="합&#32;&#32;&#32;계"/>
+						<cell col="2" display="number" expr="SUM(&apos;WORK_CNT&apos;)"/>
+						<cell col="3" display="number" expr="SUM(&apos;WORK_AMT&apos;)"/>
+						<cell col="4" display="number" expr="SUM(&apos;DIR_RC_CNT&apos;)"/>
+						<cell col="5" display="number" expr="SUM(&apos;DIR_RC_AMT&apos;)"/>
+						<cell col="6" display="text" expr="SUM(&apos;IND_RC_CNT&apos;)"/>
+						<cell col="7" display="number" expr="SUM(&apos;IND_RC_AMT&apos;)"/>
+						<cell col="8" display="number" expr="SUM(&apos;WORK_AMT_SUM&apos;)"/>
+						<cell col="9" display="number" expr="SUM(&apos;HOLI_CNT&apos;)"/>
+						<cell col="10" display="number" expr="SUM(&apos;HOLI_AMT&apos;)"/>
+						<cell col="11" display="number" expr="SUM(&apos;WORK_AMT_TOT&apos;)"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="397" Height="3" Id="Shape1" Left="6" LineWidth="0" Right="1255" TabOrder="10" Top="394" Type="Rectangle" Width="1249"></Shape>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="16" LeftMargin="12" OnClick="Image5_OnClick" Style="text_title" TabOrder="11" TabStop="FALSE" Text="의뢰일별집계" Top="7" Width="110"></Image>
+		<Image Align="Left" Height="10" Id="Image0" ImageID="blt_8" Left="16" LeftMargin="12" OnClick="Image5_OnClick" Style="text_title" TabOrder="12" TabStop="FALSE" Text="승인일별집계" Top="376" Width="110"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Acc_amt" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="736" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="339" Id="Grid0" InputPanel="FALSE" Left="4" LineColor="silver" LineType="ExVERT" Right="1253" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="13" TabStop="true" Top="397" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="174"/>
+						<col width="74"/>
+						<col width="81"/>
+						<col width="105"/>
+						<col width="79"/>
+						<col width="103"/>
+						<col width="79"/>
+						<col width="100"/>
+						<col width="105"/>
+						<col width="80"/>
+						<col width="96"/>
+						<col width="125"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="시공업체"/>
+						<cell col="1" display="text" text="지사"/>
+						<cell col="2" display="text" text="건수"/>
+						<cell col="3" display="text" text="공사금액"/>
+						<cell col="4" display="text" text="건수"/>
+						<cell col="5" display="text" text="직접복구비"/>
+						<cell col="6" display="text" text="건수"/>
+						<cell col="7" display="text" text="간접복구비"/>
+						<cell col="8" display="text" text="공사비&#32;합계"/>
+						<cell col="9" display="text" text="건수"/>
+						<cell col="10" display="text" text="휴일대기비용"/>
+						<cell col="11" display="text" text="총&#32;합계"/>
+					</head>
+					<body>
+						<cell align="left" col="0" colid="WORK_FIRM_NM" display="text" limit="11"/>
+						<cell align="center" col="1" colid="BRANCH_NM" display="text"/>
+						<cell align="right" col="2" colid="WORK_CNT" display="number"/>
+						<cell align="right" col="3" colid="WORK_AMT" display="number"/>
+						<cell align="right" col="4" colid="DIR_RC_CNT" display="number"/>
+						<cell align="right" col="5" colid="DIR_RC_AMT" display="number"/>
+						<cell align="right" col="6" colid="IND_RC_CNT" display="number"/>
+						<cell align="right" col="7" colid="IND_RC_AMT" display="number"/>
+						<cell align="right" col="8" colid="WORK_AMT_SUM" display="number"/>
+						<cell align="right" col="9" colid="HOLI_CNT" display="number"/>
+						<cell align="right" col="10" colid="HOLI_AMT" display="number"/>
+						<cell align="right" col="11" colid="WORK_AMT_TOT" display="number"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" colspan="2" display="text" text="합&#32;&#32;&#32;계"/>
+						<cell col="2" display="number" expr="SUM(&apos;WORK_CNT&apos;)"/>
+						<cell col="3" display="number" expr="SUM(&apos;WORK_AMT&apos;)"/>
+						<cell col="4" display="number" expr="SUM(&apos;DIR_RC_CNT&apos;)"/>
+						<cell col="5" display="number" expr="SUM(&apos;DIR_RC_AMT&apos;)"/>
+						<cell col="6" display="text" expr="SUM(&apos;IND_RC_CNT&apos;)"/>
+						<cell col="7" display="number" expr="SUM(&apos;IND_RC_AMT&apos;)"/>
+						<cell col="8" display="number" expr="SUM(&apos;WORK_AMT_SUM&apos;)"/>
+						<cell col="9" display="number" expr="SUM(&apos;HOLI_CNT&apos;)"/>
+						<cell col="10" display="number" expr="SUM(&apos;HOLI_AMT&apos;)"/>
+						<cell col="11" display="number" expr="SUM(&apos;WORK_AMT_TOT&apos;)"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1605030011F.xml
+* Form 설명  : DCVG탐사 계획/구간/결과 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-23
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_addRow()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	ds_Search_amt.ClearData();
+	var row = ds_Search_amt.AddRow();
+	ds_Search_amt.SetColumn(row,"REQ_YMD_START",cal_Ymd_From.Value);
+	ds_Search_amt.SetColumn(row,"REQ_YMD_END",cal_Ymd_To.Value);
+	ds_Search_amt.SetColumn(row,"BRANCH_CD",cob_branch.Value);
+	ds_Search_amt.SetColumn(row,"WORK_FIRM_CD",edt_WorkFirmCd.Text);
+	
+	ds_Req_amt.ClearData();
+	ds_Acc_amt.ClearData();
+	
+    var strSvcID        = "search_amt";
+	var strPart         = "D10";	             
+	var strURL          = "handle.do?ServiceName=D1605030011F-service";
+	var strInDatasets   = "ds_Search_amt=ds_Search_amt";
+	var strOutDatasets  = "ds_Req_amt=ds_Req_amt ds_Acc_amt=ds_Acc_amt";
+	var strArgument     = "search_amt=1";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );			   
+}
+
+function fn_D1_Excel(){
+
+	alert("집계는 엑셀 출력이 안됩니다..인쇄버튼을 이용하세요..");
+
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명  : 탐사일지 장표를 출력한다. 
+// arguments 없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_D1_Print()
+{
+	PrintScreen();
+}
+
+function Grid1_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+		//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+]]></Script>
+</Window>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="440" Id="D1702010013U" Left="8" OnLoadCompleted="D1702010013U_OnLoadCompleted" PidAttrib="7" Title="도관운영비&#32;단가관리" Top="8" Ver="1.0" Width="464" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_IndirCostPer">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="INDIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISAS_EMPL_INSUR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="SAFE_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="GENER_COST" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_UnitPrice">
+				<Contents>
+					<colinfo id="UNIT_PRICE_A" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRICE_B" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRICE_C" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRICE_D" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRICE_E" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRICE_F" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRICE_G" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRICE_H" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRICE_I" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Dummy">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_OPER_AMT_CD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_OPER_AMT_CD2" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRICE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Count">
+				<Contents>
+					<colinfo id="NCOUNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static22" Left="104" Style="table" TabOrder="48" Top="314" VAlign="Middle" Width="353" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static19" Left="104" Style="table" TabOrder="46" Top="293" VAlign="Middle" Width="353" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static15" Left="105" Style="table" TabOrder="41" Top="251" VAlign="Middle" Width="352" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static16" Left="105" Style="table" TabOrder="42" Top="272" VAlign="Middle" Width="352" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static13" Left="105" Style="table" TabOrder="37" Top="409" VAlign="Middle" Width="352" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static12" Left="105" Style="table" TabOrder="36" Top="388" VAlign="Middle" Width="352" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static9" Left="105" Style="table" TabOrder="35" Top="367" VAlign="Middle" Width="352" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static76" Left="105" Style="table" TabOrder="17" Top="146" VAlign="Middle" Width="352" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static0" Left="105" Style="table" TabOrder="18" Top="167" VAlign="Middle" Width="352" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static1" Left="105" Style="table" TabOrder="19" Top="188" VAlign="Middle" Width="352" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static2" Left="105" Style="table" TabOrder="20" Top="209" VAlign="Middle" Width="352" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static3" Left="105" Style="table" TabOrder="21" Top="230" VAlign="Middle" Width="352" WordWrap="TRUE"></Static>
+		<Shape BKColor="user9" Bottom="96" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="458" TabOrder="13" Top="72" Type="Rectangle" Width="453"></Shape>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="11" Text="도관운영비&#32;단가관리" Transparent="TRUE" Width="463"></Image>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear" Left="78" Style="spin_indis" TabOrder="12" Text="2008" Top="75" Width="54"></Spin>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search_1" TabOrder="10" Text="적용년도" Top="75" Transparent="TRUE" Width="81"></Image>
+		<Static Align="Center" Border="Flat" Height="127" Id="Static10" Left="5" Style="table_1" TabOrder="16" Text="노무비" Top="125" VAlign="Middle" Width="101" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static11" Left="5" Style="table_1" TabOrder="14" Text="구분" Top="125" VAlign="Middle" Width="101" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static23" Left="201" Style="table_1" TabOrder="15" Text="단가(원)" Top="125" VAlign="Middle" Width="256" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static29" Left="105" Style="table" TabOrder="26" Text="사원" Top="230" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static26" Left="105" Style="table" TabOrder="25" Text="계장" Top="209" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static27" Left="105" Style="table" TabOrder="24" Text="과장" Top="188" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static25" Left="105" Style="table" TabOrder="23" Text="차장" Top="167" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static24" Left="105" Style="table" TabOrder="22" Text="부장" Top="146" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static14" Left="105" Style="table_1" TabOrder="27" Text="품명" Top="125" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="9" Id="Image2" ImageID="blt_8" Left="11" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="28" Text="단가관리" Top="108" Width="117"></Image>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="5" Style="table_1" TabOrder="29" Text="간접노무비(%)" Top="367" VAlign="Middle" Width="101" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="225" Style="table_1" TabOrder="30" Text="산재고용보험료(%)" Top="367" VAlign="Middle" Width="109" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="5" Style="table_1" TabOrder="31" Text="기타경비(%)" Top="388" VAlign="Middle" Width="101" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static7" Left="225" Style="table_1" TabOrder="32" Text="안전관리비(%)" Top="388" VAlign="Middle" Width="109" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static8" Left="5" Style="table_1" TabOrder="33" Text="일반관리비(%)" Top="409" VAlign="Middle" Width="101" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="9" Id="Image3" ImageID="blt_8" Left="11" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="34" Text="간접비용&#32;비율관리" Top="350" Width="120"></Image>
+		<Static Align="Center" Border="Flat" Height="43" Id="Static38" Left="5" Style="table_1" TabOrder="38" Text="장비비" Top="251" VAlign="Middle" Width="101" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static30" Left="105" Style="table" TabOrder="40" Text="프라이드" Top="272" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static31" Left="105" Style="table" TabOrder="39" Text="스타렉스" Top="251" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="3" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="43" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="459">
+			<Contents></Contents>
+		</Div>
+		<Static Align="Center" Border="Flat" Height="43" Id="Static17" Left="5" Style="table_1" TabOrder="44" Text="방출비" Top="293" VAlign="Middle" Width="101" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static18" Left="105" Style="table" TabOrder="45" Text="서울" Top="293" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static21" Left="105" Style="table" TabOrder="47" Text="경기" Top="314" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_UnitPrice" Border="Flat" BorderColor="user1" Color="user2" Column="UNIT_PRICE_A" Height="18" Id="edt_unitprice_1" Left="208" MaxLength="5" TabOrder="1" Top="148" Value="MaskEdit0" Width="245"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_UnitPrice" Border="Flat" BorderColor="user1" Color="user1" Column="UNIT_PRICE_I" Height="18" Id="edt_unitprice_32" Left="208" MaxLength="5" TabOrder="9" Top="316" Value="MaskEdit0" Width="245"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_UnitPrice" Border="Flat" BorderColor="user1" Color="user1" Column="UNIT_PRICE_B" Height="18" Id="edt_unitprice_2" Left="208" MaxLength="5" TabOrder="2" Top="169" Value="MaskEdit0" Width="245"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_UnitPrice" Border="Flat" BorderColor="user1" Color="user1" Column="UNIT_PRICE_C" Height="18" Id="edt_unitprice_3" Left="208" MaxLength="5" TabOrder="3" Top="190" Value="MaskEdit0" Width="245"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_UnitPrice" Border="Flat" BorderColor="user1" Color="user1" Column="UNIT_PRICE_D" Height="18" Id="edt_unitprice_4" Left="208" MaxLength="5" TabOrder="4" Top="211" Value="MaskEdit0" Width="245"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_UnitPrice" Border="Flat" BorderColor="user1" Color="user1" Column="UNIT_PRICE_E" Height="18" Id="edt_unitprice_5" Left="208" MaxLength="5" TabOrder="5" Top="232" Value="MaskEdit0" Width="245"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_UnitPrice" Border="Flat" BorderColor="user1" Color="user1" Column="UNIT_PRICE_F" Height="18" Id="edt_unitprice_21" Left="208" MaxLength="5" TabOrder="6" Top="253" Value="MaskEdit0" Width="245"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_UnitPrice" Border="Flat" BorderColor="user1" Color="user1" Column="UNIT_PRICE_G" Height="18" Id="edt_unitprice_22" Left="208" MaxLength="5" TabOrder="7" Top="274" Value="MaskEdit0" Width="245"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_UnitPrice" Border="Flat" BorderColor="user1" Color="user1" Column="UNIT_PRICE_H" Height="18" Id="edt_unitprice_31" Left="208" MaxLength="5" TabOrder="8" Top="295" Value="MaskEdit0" Width="245"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_IndirCostPer" Border="Flat" BorderColor="user1" Color="user1" Column="INDIR_COST" DecimalLen="2" Height="18" Id="Edit6" Left="108" MaxLength="5" TabOrder="49" Top="369" Value="MaskEdit0" Width="115"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_IndirCostPer" Border="Flat" BorderColor="user1" Color="user1" Column="ETC_COST" DecimalLen="2" Height="18" Id="Edit7" Left="108" MaxLength="5" TabOrder="50" Top="390" Value="MaskEdit0" Width="115"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_IndirCostPer" Border="Flat" BorderColor="user1" Color="user1" Column="GENER_COST" DecimalLen="2" Height="18" Id="Edit8" Left="108" MaxLength="5" TabOrder="51" Top="411" Value="MaskEdit0" Width="115"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_IndirCostPer" Border="Flat" BorderColor="user1" Color="user1" Column="DISAS_EMPL_INSUR" DecimalLen="2" Height="18" Id="Edit9" Left="336" MaxLength="5" TabOrder="52" Top="369" Value="MaskEdit0" Width="118"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_IndirCostPer" Border="Flat" BorderColor="user1" Color="user1" Column="SAFE_COST" DecimalLen="2" Height="18" Id="Edit10" Left="336" MaxLength="5" TabOrder="53" Top="390" Value="MaskEdit0" Width="118"></MaskEdit>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+/***************************************************************************************************
+* FormID     : D1702010013U.xml
+* Form 설명  : 이설보수 도관운영비 단가 관리
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2009-02-27
+* 변경내용   : 
+****************************************************************************************************/
+
+function D1702010013U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	fn_D1_find();
+}
+
+function fn_Init()
+{
+	cob_BaseYear = BASE_YEAR;
+}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{	
+	fn_D1_find();
+}
+
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//---------------------------------------------------------
+function fn_CommonSave()
+{	
+	fn_D1_save();
+	fn_D1_save1();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Count()
+//   설명  : 도관운영비 산출에 관련된 등록 여부를 한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Count(){
+
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_ConduitOperatingExpensesMgr-service"
+						+ "&BASE_YEAR=" + cob_BaseYear.Value
+						;
+
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Count=ds_Count";
+	var strArgument     = "Count";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	return ds_Count.GetColumn(0, "NCOUNT");
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_find()
+//   설명  : 도관운영비 산출에 관련된 정보를 조회한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find(){
+
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_ConduitOperatingExpensesMgr-service"
+						+ "&BASE_YEAR=" + cob_BaseYear.Value
+						;
+
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_IndirCostPer=ds_IndirCostPer ds_UnitPrice=ds_UnitPrice";
+	var strArgument     = "Search";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_IndirCostPer.GetRowCount()==0 || ds_UnitPrice.GetRowCount() == 0) {
+		
+		alert(gfn_GetMessage("M000009","%AAA%","조회를"));
+		
+		if(ds_IndirCostPer.GetRowCount() <= 0){
+			ds_IndirCostPer.AddRow();
+			
+			for(var i=6; i<=10; i++){
+				eval("Edit" + i).Text = "0";
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_save()
+//   설명  : 도관운영비 산출에 단가정보를 정보를 등록한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------- ------------ 
+function fn_D1_save(){
+	
+	var cnt = fn_D1_Count();
+	
+	var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;   // SESSION ID
+	var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");   // SESSION IP
+	
+	for(var i=0; i<5; i++){
+		
+		var j = ds_Dummy.AddRow();
+		
+		ds_Dummy.SetColumn(j, "BASE_YEAR"          , cob_BaseYear.Value                	 ); 
+		ds_Dummy.SetColumn(j, "PIPE_OPER_AMT_CD1"  , '01'                           	 );
+		ds_Dummy.SetColumn(j, "PIPE_OPER_AMT_CD2"  , '0' + (i+1)                    	 );
+		ds_Dummy.SetColumn(j, "UPD_EMPID"          , USER_ID                        	 );
+		ds_Dummy.SetColumn(j, "UPD_IP"             , USER_IP                        	 );
+		ds_Dummy.SetColumn(j, "CRT_EMPID"          , USER_ID                        	 );
+		ds_Dummy.SetColumn(j, "CRT_IP"             , USER_IP                        	 );
+		ds_Dummy.SetColumn(j, "UNIT_PRICE"         , eval('edt_unitprice_' + (i+1)).Value);						 	 
+	}
+	
+	for(var i=21; i<=22; i++){
+	
+		var j = ds_Dummy.AddRow();
+		
+		ds_Dummy.SetColumn(j, "BASE_YEAR"          , cob_BaseYear.Value              ); 
+		ds_Dummy.SetColumn(j, "PIPE_OPER_AMT_CD1"  , '02'                            );
+		ds_Dummy.SetColumn(j, "PIPE_OPER_AMT_CD2"  , i                               );
+		ds_Dummy.SetColumn(j, "UPD_EMPID"          , USER_ID                         );
+		ds_Dummy.SetColumn(j, "UPD_IP"             , USER_IP                         );
+		ds_Dummy.SetColumn(j, "CRT_EMPID"          , USER_ID                         );
+		ds_Dummy.SetColumn(j, "CRT_IP"             , USER_IP                         );
+		ds_Dummy.SetColumn(j, "UNIT_PRICE"         , eval('edt_unitprice_' + i).Value);					 	 
+	}
+	
+	for(var i=31; i<=32; i++){
+	
+		var j = ds_Dummy.AddRow();
+		
+		ds_Dummy.SetColumn(j, "BASE_YEAR"          , cob_BaseYear.Value              ); 
+		ds_Dummy.SetColumn(j, "PIPE_OPER_AMT_CD1"  , '03'                            );
+		ds_Dummy.SetColumn(j, "PIPE_OPER_AMT_CD2"  , i                               );
+		ds_Dummy.SetColumn(j, "UPD_EMPID"          , USER_ID                         );
+		ds_Dummy.SetColumn(j, "UPD_IP"             , USER_IP                         );
+		ds_Dummy.SetColumn(j, "CRT_EMPID"          , USER_ID                         );
+		ds_Dummy.SetColumn(j, "CRT_IP"             , USER_IP                         );
+		ds_Dummy.SetColumn(j, "UNIT_PRICE"         , eval('edt_unitprice_' + i).Value);					 	 
+	}
+	
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_ConduitOperatingExpensesMgr-service";	
+	var strInDatasets    = "ds_Dummy=ds_Dummy:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "Insert";
+	
+	if(cnt > 0){
+		ds_Dummy.UpdateControl = false;
+		
+		for(var i=0; i<ds_Dummy.GetRowCount(); i++){
+			ds_Dummy.SetRowType(i, "update");
+		}		
+		strArgument = "Modify";
+	}
+		
+	gfn_SyncCall( 
+				 strSvcID
+			   , strPart
+			   , strURL
+			   , strInDatasets
+			   , strOutDatasets
+			   , strArgument
+    );	
+    
+    alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을")); 
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_save1()
+//   설명  : 도관운영비 산출에 간접비용 산출를 정보를 등록한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------- ------------ 
+function fn_D1_save1(){
+
+	var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;   // SESSION ID
+	var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");   // SESSION IP
+	
+	ds_IndirCostPer.SetColumn(0, "BASE_YEAR", cob_BaseYear.Value);
+	ds_IndirCostPer.SetColumn(0, "UPD_EMPID", USER_ID           );
+	ds_IndirCostPer.SetColumn(0, "UPD_IP"   , USER_IP           );
+	ds_IndirCostPer.SetColumn(0, "CRT_EMPID", USER_ID           );
+	ds_IndirCostPer.SetColumn(0, "CRT_IP"   , USER_IP           );
+			
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_ConduitOperatingExpensesMgr-service";	
+	var strInDatasets    = "ds_IndirCostPer=ds_IndirCostPer:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "Save";
+				
+	gfn_SyncCall( 
+				 strSvcID
+			   , strPart
+			   , strURL
+			   , strInDatasets
+			   , strOutDatasets
+			   , strArgument
+    );
+}]]></Script>
+</Window>

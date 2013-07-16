@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="477" Id="D1202010010F_T14" Left="8" PidAttrib="7" Title="차량운행&#32;순찰점검&#32;등록_D1202010010F_T14" Top="8" Ver="1.0" Width="995" WorkArea="true">
+		<Image Align="Left" Height="14" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="21" Text="정비내역&#32;등록" Top="317" Width="117"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="90" Style="table" TabOrder="15" Top="244" VAlign="Middle" Width="897" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="14" Id="Image4" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="19" Text="차량&#32;운행내역" Top="163" Width="167"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="110" Style="table" TabOrder="2" Top="181" VAlign="Middle" Width="877" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="5" Style="table" TabOrder="1" Text="차량번호" Top="181" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="5" Style="table" TabOrder="3" Top="202" VAlign="Middle" Width="982" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static34" Left="335" Style="table" TabOrder="4" Text="차량명" Top="181" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Shape BKColor="user15" Bottom="8" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="987" TabOrder="5" Top="5" Type="Rectangle" Width="982"></Shape>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static7" Left="5" Style="table" TabOrder="6" Top="223" VAlign="Middle" Width="982" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static8" Left="5" Style="table" TabOrder="7" Text="출발시간" Top="223" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_part" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="472" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="135" Id="Grid1" InputPanel="FALSE" Left="4" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="987" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="8" TabStop="true" Top="337" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="983">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="40"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="357"/>
+						<col width="100"/>
+						<col width="110"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="내용년수"/>
+						<cell col="1" display="text" text="NO"/>
+						<cell col="2" display="text" text="순찰일자"/>
+						<cell align="center" col="3" display="text" text="구분"/>
+						<cell col="4" display="text" text="정비내용"/>
+						<cell col="5" display="text" text="금액"/>
+						<cell col="6" display="text" text="업체(장소)"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" display="text" expandsize="18" expr="ROWINDEX+1" wordwrap="word"/>
+						<cell col="2" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" display="text"/>
+						<cell col="4" display="text"/>
+						<cell col="5" display="text"/>
+						<cell col="6" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="337" Height="3" Id="Shape1" Left="4" LineWidth="0" Right="987" TabOrder="9" Top="334" Type="Rectangle" Width="983"></Shape>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="5" Style="table" TabOrder="10" Text="행선지" Top="202" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="665" Style="table" TabOrder="11" Text="동승자" Top="202" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit6" ImeMode="none" Left="458" Style="edit" TabOrder="12" Top="183" Width="204"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit4" ImeMode="none" Left="128" Style="edit" TabOrder="13" Top="183" Width="204"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static9" Left="5" Style="table" TabOrder="14" Text="출발시간" Top="244" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static12" Left="335" Style="table" TabOrder="16" Text="도착시간" Top="244" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static15" Left="90" Style="table" TabOrder="18" Top="286" VAlign="Middle" Width="897" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static16" Left="5" Style="table" TabOrder="17" Text="특기사항" Top="286" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="Edit9" ImeMode="none" Left="458" Style="edit" TabOrder="20" Top="246" Width="204"></Edit>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_part" BkColor2="#f8f8f8" BkSelColor="skyblue" BoldHead="FALSE" Border="Flat" Bottom="158" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="150" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="#cecece" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="987" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="22" TabStop="true" Top="8" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="982">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="50"/>
+						<col width="136"/>
+						<col width="157"/>
+						<col width="162"/>
+						<col width="146"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="내용년수"/>
+						<cell col="1" display="text" text="NO"/>
+						<cell col="2" display="text" text="차량번호"/>
+						<cell col="3" display="text" text="차량명"/>
+						<cell col="4" display="text" text="관리자(정)"/>
+						<cell col="5" display="text" text="관리자(부)"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" display="text"/>
+						<cell col="4" display="text"/>
+						<cell col="5" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static17" Left="335" Style="table" TabOrder="23" Text="운전자" Top="202" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="Edit1" ImeMode="none" Left="128" Style="edit" TabOrder="24" Top="246" Width="204"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit2" ImeMode="none" Left="128" Style="edit" TabOrder="25" Top="288" Width="855"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit3" ImeMode="none" Left="458" Style="edit" TabOrder="26" Top="204" Width="204"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit14" ImeMode="none" Left="788" Style="edit" TabOrder="28" Top="204" Width="97"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit15" ImeMode="none" Left="886" Style="edit" TabOrder="27" Top="204" Width="97"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit0" ImeMode="none" Left="128" Style="edit" TabOrder="29" Top="204" Width="204"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit5" ImeMode="none" Left="128" Style="edit" TabOrder="32" Top="225" Width="204"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static13" Left="335" Style="table" TabOrder="30" Text="도착시간" Top="223" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="Edit13" ImeMode="none" Left="458" Style="edit" TabOrder="31" Top="225" Width="204"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static10" Left="90" Style="table" TabOrder="34" Top="265" VAlign="Middle" Width="897" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static11" Left="5" Style="table" TabOrder="33" Text="주유량" Top="265" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static18" Left="335" Style="table" TabOrder="35" Text="주유장소" Top="265" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="Edit11" ImeMode="none" Left="128" Style="edit" TabOrder="36" Top="267" Width="204"></Edit>
+		<Edit Border="Flat" Height="18" Id="Edit16" ImeMode="none" Left="458" Style="edit" TabOrder="37" Top="267" Width="525"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button103" ImageID="btn_6_Progress&#32;situation" Left="884" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="38" Text="차량이력&#32;보기" Top="313" Width="103"></Button>
+	</Form>
+	<Script></Script>
+</Window>

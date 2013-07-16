@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="729" Id="D1302030010F" Left="8" OnLoadCompleted="D1302030010F_OnLoadCompleted" OnUnloadCompleted="D1302030010F_OnUnloadCompleted" PidAttrib="7" Top="8" Ver="1.0" Width="1260" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_HouseReg">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRI1" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRI2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRI3" size="256" summ="default" type="STRING"/>
+					<colinfo id="CO_LIVE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="BURY_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DONG_QTY" size="256" summ="default" type="STRING"/>
+					<colinfo id="HOUSE_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SELF_INSPECT_PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YMD_PRI1" size="256" summ="default" type="STRING"/>
+					<colinfo id="SELF_INSPECT_PLAN_YMD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="SAFE_OFFICE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MATER_FLAG_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_HousePriYmd">
+				<Contents>
+					<colinfo id="PRI1" size="256" type="STRING"/>
+					<colinfo id="PRI2" size="256" type="STRING"/>
+					<colinfo id="PRI3" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_HouseRegExcel">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRI1" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRI2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRI3" size="256" summ="default" type="STRING"/>
+					<colinfo id="CO_LIVE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="BURY_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DONG_QTY" size="256" summ="default" type="STRING"/>
+					<colinfo id="HOUSE_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SELF_INSPECT_PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YMD_PRI1" size="256" summ="default" type="STRING"/>
+					<colinfo id="SAFE_OFFICE_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_HouseRegFlag">
+				<Contents>
+					<colinfo id="CRT_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPNM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_HouseReg_Copy">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRI1" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRI2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRI3" size="256" summ="default" type="STRING"/>
+					<colinfo id="CO_LIVE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="BURY_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DONG_QTY" size="256" summ="default" type="STRING"/>
+					<colinfo id="HOUSE_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SELF_INSPECT_PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YMD_PRI1" size="256" summ="default" type="STRING"/>
+					<colinfo id="SELF_INSPECT_PLAN_YMD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_TIME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="#6cbae1" Bottom="29" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1243" TabOrder="2" Top="26" Type="Rectangle" Width="1238"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_HouseReg" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="724" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="695" Id="grd_HouseList" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnCellClick="grd_HouseList_OnCellClick" Right="1243" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="29" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1238">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="41"/>
+						<col fix="left" width="40"/>
+						<col fix="left" width="89"/>
+						<col width="100"/>
+						<col width="197"/>
+						<col width="260"/>
+						<col width="70"/>
+						<col width="57"/>
+						<col width="54"/>
+						<col width="54"/>
+						<col width="78"/>
+						<col width="88"/>
+						<col width="117"/>
+					</columns>
+					<head>
+						<cell col="0" display="checkbox"/>
+						<cell col="1" display="normal" text="NO"/>
+						<cell col="2" display="normal" text="번호"/>
+						<cell col="3" display="text" text="시/구"/>
+						<cell col="4" display="text" text="공동주택명"/>
+						<cell col="5" display="text" text="주소"/>
+						<cell col="6" display="text" text="배관연장(m)"/>
+						<cell col="7" display="text" text="재질"/>
+						<cell col="8" display="text" text="동수"/>
+						<cell col="9" display="text" text="세대수"/>
+						<cell col="10" display="text" text="직전검사일"/>
+						<cell col="11" display="text" text="자율계획일자"/>
+						<cell col="12" display="text" text="등록일자"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHK" display="checkbox" edit="checkbox"/>
+						<cell align="right" col="1" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="2" colid="FACI_NUM" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="GU" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="4" colid="CO_LIVE_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="5" colid="LOT_NUM_UNION" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="6" colid="BURY_LENG" display="text"/>
+						<cell align="center" col="7" colid="MATER_FLAG_NM" display="text"/>
+						<cell align="right" col="8" colid="DONG_QTY" display="number"/>
+						<cell align="right" col="9" colid="HOUSE_CNT" display="number"/>
+						<cell align="center" col="10" colid="INSPECT_YMD_PRI1" display="date"/>
+						<cell align="center" col="11" colid="SELF_INSPECT_PLAN_YMD" display="date" expandimage="calendar" expandshow="true"/>
+						<cell align="center" col="12" colid="CRT_TIME" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button236" ImageID="btn_7_App" Left="1130" LeftMargin="21" OnClick="fn_PriYmd_OnClick" Style="button" TabOrder="3" Text="직전검사일&#32;적용" Top="4" Width="114"></Button>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="4" Text="공동주택" Top="5" Width="210"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_HouseRegExcel" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="792" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="51" Id="grd_Excel" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_HouseList_OnCellClick" Right="1251" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="5" TabStop="true" Top="741" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="146"/>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="300"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="98"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="번호"/>
+						<cell col="1" display="text" text="시/구"/>
+						<cell col="2" display="text" text="공동주택명"/>
+						<cell col="3" display="text" text="주소"/>
+						<cell col="4" display="text" text="배관연장(m)"/>
+						<cell col="5" display="text" text="동수"/>
+						<cell col="6" display="text" text="세대수"/>
+						<cell col="7" display="text" text="직전검사일"/>
+						<cell col="8" display="text" text="자율검사일자"/>
+						<cell col="9" display="text" text="안전공사번호"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="FACI_NUM" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="GU" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="2" colid="CO_LIVE_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="3" colid="LOT_NUM_UNION" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="4" colid="BURY_LENG" display="number"/>
+						<cell align="right" col="5" colid="DONG_QTY" display="number"/>
+						<cell align="right" col="6" colid="HOUSE_CNT" display="number"/>
+						<cell align="center" col="7" colid="INSPECT_YMD_PRI1" display="date"/>
+						<cell align="center" col="8" colid="SELF_INSPECT_PLAN_YMD" display="date" expandimage="calendar" expandshow="true"/>
+						<cell align="center" col="9" colid="SAFE_OFFICE_NUM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1302010010F_T03.xml
+* Form 설명  : 자율검사계획등록_공동주택
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2008-12-30
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+
+//---------------------------------------------------------
+// 달력 팝업
+//---------------------------------------------------------
+function grd_HouseList_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(ds_HouseReg.GetColumn(nRow,"CHK") != 0){
+		if("SELF_INSPECT_PLAN_YMD" == grd_HouseList.GetCellProp("body",nCell,"ColId"))
+		{
+			gfn_SetCalendar(obj, nRow, nCell);		
+			
+			var str_HoliDay = gfn_Bank_Holiday(ds_HouseReg.GetColumn(nRow,"SELF_INSPECT_PLAN_YMD"));
+			
+			if(str_HoliDay == 'Y'){
+				alert("휴일 일자는 등록하실 수 없습니다. ");
+				ds_HouseReg.SetColumn(nRow,"SELF_INSPECT_PLAN_YMD", null);
+				return;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SearchPlan()
+//   설명:  자율검사계획 공동주택 중 등록 된 계획을 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SearchPlan()
+{	
+	var strSvcID = "fn_D1_Search";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_SelfTestPlanRegisCoLiveMgr-service&INSPECT_YEAR="+sp_Year.Value+"&BRANCH_CD="+cob_Branch.Value+"&ZIP_NO1="+cob_ZipNo.Value;
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_HouseReg=ds_HouseReg";
+	var strArgument  = "searchHousePlan";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	if(ds_HouseReg.GetRowCount()==0)
+	{
+        grd_HouseList.NoDataText="조회결과가 없습니다.";
+        return;
+    }
+	
+	ds_HouseRegExcel.Copy(ds_HouseReg);
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SaveReg()
+//   설명: 자율검사계획 공동주택을 등록한다.
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SaveReg()
+{
+	var saveFlag = 0;
+	
+	var nChk = 0;
+
+	if(ds_HouseReg.GetRowCount() == 0){
+		alert("데이터를 먼저 조회하세요. ");
+		return;
+	}
+	
+	for(var i=0;i<ds_HouseReg.GetRowCount();i++)
+	{
+		if(ds_HouseReg.GetColumn(i,"CHK") == 1){
+			nChk = toNumber(nChk) + toNumber(1);
+		}
+	}
+	if(nChk <= 0){
+		alert('체크된 항목이 없습니다. \n체크 선택 후 등록, 수정 해주세요');
+		return;
+	}
+	
+	var nCnt = 0;
+	
+	for(var i=0;i<ds_HouseReg.GetRowCount();i++)
+	{
+		if(ds_HouseReg.GetColumn(i,"CHK") == 1){
+			if(gfn_IsNull(trim(ds_HouseReg.GetColumn(i,"SELF_INSPECT_PLAN_YMD")))){
+					nCnt = toNumber(nCnt) + toNumber(1);
+			}
+		}
+	}
+	
+	if(nCnt > 0){
+		alert("자율계획일자는 필수입력사항입니다. ");
+		return;
+	}
+	
+	for(var i=0;i<ds_HouseReg.GetRowCount();i++)
+	{
+		
+		if(ds_HouseReg.GetColumn(i,"CHK") == 1)
+		{	
+			if(ds_HouseReg.GetColumn(i,"INSPECT_YEAR") == null || ds_HouseReg.GetColumn(i,"INSPECT_YEAR") == "")
+			{
+				var str_INSPECT_YEAR = sp_Year.Value;
+				var str_FACI_NUM     = ds_HouseReg.GetColumn(i, "FACI_NUM");
+			
+				fn_D1_CheckReg(str_INSPECT_YEAR, str_FACI_NUM);
+				
+				if (ds_HouseRegFlag.GetRowCount() > 0){
+												
+					var str_CRTDTM = ds_HouseRegFlag.GetColumn(0, "CRT_TIME" );
+					var str_CRTNM  = ds_HouseRegFlag.GetColumn(0, "CRT_EMPNM");
+					
+					var str_CO_LIVE_NM = ds_HouseReg.GetColumn(i,"CO_LIVE_NM");
+											
+					alert(str_INSPECT_YEAR + "년 " + str_CO_LIVE_NM + "에 대한 계획 데이터는\n" + str_CRTNM + "님께서 " + str_CRTDTM + "에 이미 등록하신 데이터입니다.\n데이터를 조회해 주십시오. ");
+					return;
+					
+			    }else{
+					ds_HouseReg.UpdateControl = false;
+					ds_HouseReg.SetRowType(i, "insert");
+					
+					fn_D1_SeachPriYmd(ds_HouseReg.GetColumn(i,"BLOCK_CD"),sp_Year.Value, i);
+					
+					ds_HouseReg.SetColumn(i, "PRI1", ds_HousePriYmd.GetColumn(0,"PRI1"));	
+					ds_HouseReg.SetColumn(i, "PRI2", ds_HousePriYmd.GetColumn(0,"PRI2"));	
+					ds_HouseReg.SetColumn(i, "PRI3", ds_HousePriYmd.GetColumn(0,"PRI3"));	
+					
+					//저장시 사용할 사용자 데이터
+					ds_HouseReg.SetColumn(i, "UPD_EMPID"   , gfn_GetGlobalValue("G_USER_NO"  ));
+					ds_HouseReg.SetColumn(i, "UPD_IP"      , gfn_GetGlobalValue("G_IPADDRESS"));
+					ds_HouseReg.SetColumn(i, "CRT_EMPID"   , gfn_GetGlobalValue("G_USER_NO"  ));
+					ds_HouseReg.SetColumn(i, "CRT_IP"      , gfn_GetGlobalValue("G_IPADDRESS"));
+					ds_HouseReg.SetColumn(i, "INSPECT_YEAR", sp_Year.Value);
+					
+					saveFlag = 1;
+				}
+			}else if(!gfn_IsNull(ds_HouseReg.GetColumn(i,"INSPECT_YEAR"))){
+				if(!fn_DateCheckTodayOver(ds_HouseReg.GetColumn(i,"SELF_INSPECT_PLAN_YMD"),"자율계획일자"))
+				{
+					return;
+				}
+				ds_HouseReg.UpdateControl = false;
+				ds_HouseReg.SetRowType(i, "update");
+				
+				ds_HouseReg.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO" ));
+				ds_HouseReg.SetColumn(i, "UPD_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));				
+				
+				saveFlag = 1;
+			}
+		}
+	}
+
+	
+	var strSvcID = "insert";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_SelfTestPlanRegisCoLiveMgr-service";
+	var strInDatasets  = "ds_HouseReg=ds_HouseReg:u";
+	var strOutDatasets  = "";
+	var strArgument  = "saveHousePlanReg";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	if(ds_HouseReg.RowCount() == 0)
+	{
+		return;
+	}
+	
+	if(saveFlag == 0)
+	{
+		return;
+	}
+	
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","저장을"),"black",true);	//"저장을 완료하였습니다."
+	
+	ds_HouseReg_Copy.Copy(ds_HouseReg);
+	
+	fn_CommonSearch();
+	
+	for(var i=0; i<ds_HouseReg.GetRowCount(); i++){
+		ds_HouseReg.SetColumn(i, "CHK", ds_HouseReg_Copy.GetColumn(i, "CHK"));
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_CheckReg()
+//   설명: 정기검사 결과등록을 하기 전 기 등록 여부 확인
+// arguments   
+//          index: 선택된 행
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_CheckReg(str_INSPECT_YEAR, str_FACI_NUM)
+{	
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+	
+	ds_HouseRegFlag.ClearData();
+	
+    var strSvcID        = "fn_D1_CheckReg";
+    var strPart         = "D10";
+    var strURL          = "handle.do?ServiceName=D1_SelfTestPlanRegisCoLiveMgr-service";
+		strURL		   += "&INSPECT_YEAR="    + str_INSPECT_YEAR    ;
+		strURL		   += "&FACI_NUM="        + str_FACI_NUM        ;
+					   
+    var strInDatasets   = "";
+    var strOutDatasets  = "ds_HouseRegFlag=ds_PipeRegFlag";
+    var strArgument     = "findRegFlag";   
+    
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Delete()
+//   설명  :  정기검사 row 삭제
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Delete()
+{	
+	var nChk = 0;
+	
+	if(ds_HouseReg.GetRowCount() == 0){
+		alert("데이터를 먼저 조회하세요. ");
+		return;
+	}
+	
+	var result = Confirm("데이터를 삭제하시겠습니까? ");
+		
+	if(result == '0'){
+			return;
+	}
+	
+	for(var i=0;i<ds_HouseReg.GetRowCount();i++)
+	{
+		if(ds_HouseReg.GetColumn(i,"CHK") == 1){
+			nChk = toNumber(nChk) + toNumber(1);
+		}
+	}
+	
+	if(nChk <= 0){
+		alert('체크된 항목이 없습니다. \n체크 선택 후 삭제 해주세요');
+		return;
+	}
+	
+	ds_HouseReg.UpdateControl = false;
+	
+	for(var i=0;i<ds_HouseReg.GetRowCount();i++)
+	{
+		if(ds_HouseReg.GetColumn(i,"CHK") == 1)
+		{	
+			ds_HouseReg.SetRowType(i, "delete");
+		}
+	}
+		
+	var strSvcID = "delete";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_SelfTestPlanRegisCoLiveMgr-service";
+	var strInDatasets  = "ds_HouseReg=ds_HouseReg:u";
+	var strOutDatasets  = "";
+	var strArgument  = "saveHousePlanReg";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+	
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 삭제를"),"black",true);
+	
+	ds_HouseReg_Copy.Copy(ds_HouseReg);
+	
+	fn_CommonSearch();
+	
+	for(var i=0; i<ds_HouseReg.GetRowCount(); i++){
+		ds_HouseReg.SetColumn(i, "CHK", ds_HouseReg_Copy.GetColumn(i, "CHK"));
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_PriYmd_OnClick()
+//   설명: 자율검사계획 공동주택 직전검사일자에서 1년 후를 적용한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_PriYmd_OnClick()
+{
+	for(var i =0 ;i<ds_HouseReg.RowCount(); i++)
+	{
+		if(ds_HouseReg.GetColumn(i,"CHK") == 1)
+		{	
+			var strPriYmd = "";
+			var strInspectYmdPri = "";
+			
+			strInspectYmdPri = Trim(ds_HouseReg.GetColumn(i,"INSPECT_YMD_PRI1"));
+
+			strPriYmd = addMonth(strInspectYmdPri,12);
+			ds_HouseReg.SetColumn(i,"SELF_INSPECT_PLAN_YMD", strPriYmd);
+		}
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SeachPriYmd(strFaciNum,strSpYear)
+//   설명: 자율검사계획 공동주택 체크한 내용의 전년도 검사계획일자를 조회한다.
+// arguments
+//          strFaciNum : 공동주택번호
+//          strSpYear : 검사년도
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SeachPriYmd(strFaciNum,strSpYear, strnRow)
+{
+	var strPri1 = ParseInt(strSpYear)-1;
+	var strPri2 = ParseInt(strSpYear)-2;
+	var strPri3 = ParseInt(strSpYear)-3;
+	
+	var strSvcID = "fn_D1_Search";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_SelfTestPlanRegisCoLiveMgr-service&FACI_NUM="+strFaciNum+"&PRIYMD1="+strPri1+"&PRIYMD2="+strPri2+"&PRIYMD3="+strPri3;
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_HousePriYmd=ds_HousePriYmd";
+	var strArgument  = "searchHousePriYmd";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );			   
+}
+
+function D1302030010F_OnUnloadCompleted(obj)
+{
+	if(ds_HouseReg.GetUpdate()){
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 내용이 있습니다.종료")))
+		{
+			return false;
+		}
+	}
+}
+
+function fn_D1_ExcelExport()
+{
+	var SearchCondition= "";
+
+    SearchCondition = SearchCondition + "지사 :" + RPad(cob_Branch.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo.Text," ",20);
+    SearchCondition = SearchCondition + "년도 :" + RPad(sp_Year.Text," ",20);
+	gfn_ExportExcel("자율검사계획 공동주택조회 ", 5, SearchCondition, "grd_Excel"); 
+}
+function D1302030010F_OnLoadCompleted(obj)
+{
+	gfn_D1_SetGrid_Sort(grd_HouseList);
+}
+]]></Script>
+</Window>

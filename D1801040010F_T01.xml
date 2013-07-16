@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="470" Id="D1801040010F_T01" Left="8" OnActivate="D1801040010F_T01_OnActivate" OnLoadCompleted="D1801040010F_T01_OnLoadCompleted" PidAttrib="7" Title="D1801040010F_T01" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_DISCU_YN">
+				<Contents>
+					<colinfo id="name" size="256" summ="default" type="STRING"/>
+					<colinfo id="value" size="256" summ="default" type="STRING"/>
+					<record>
+						<name>사용</name>
+						<value>1</value>
+					</record>
+					<record>
+						<name>미사용</name>
+						<value>0</value>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="109" Style="table" TabOrder="17" Top="21" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static1" Left="104" Style="table" TabOrder="16" Top="42" VAlign="Middle" Width="1151" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static4" Left="104" Style="table" TabOrder="13" Top="63" VAlign="Middle" Width="1151" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="10" Id="img_title" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="4" Text="협의이력정보" Top="160" Width="210"></Image>
+		<Radio BindDataset="ds_DataCont" Border="None" CodeColumn="value" Color="user17" Column="DISCU_YN" ColumnCount="2" DataColumn="name" Height="13" Id="rad_DISCU_YN" INDEX="0" InnerDataset="ds_DISCU_YN" Left="1033" OnClick="rad_DISCU_YN_OnClick" Style="radio" TabOrder="5" Top="26" Width="105">
+			<Contents>
+				<Layout Height="20" left="0" text="명" width="80"/>
+				<Layout Height="20" left="80" text="코드" width="80"/>
+			</Contents>
+		</Radio>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static9" Left="905" Style="table_indis" TabOrder="8" Text="공문여부" Top="21" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="9" Text="협의정보" Top="5" Width="210"></Image>
+		<Calendar BindDataset="ds_DataCont" Border="Flat" Column="DISCU_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="edt_DiscuYmd" Left="128" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="1" Top="23" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Edit BindDataset="ds_DataCont" Border="Flat" Column="DISCU_TAKER_NM" Height="18" Id="edt_DiscuTakerNm" Left="733" MaxLength="30" Style="edit_Indis" TabOrder="3" Top="23" Width="169"></Edit>
+		<Edit BindDataset="ds_DataCont" Border="Flat" Column="DISCU_FIRM_NM" Height="18" Id="edt_DiscuFirmNm" Left="430" MaxLength="30" Style="edit_Indis" TabOrder="2" Top="23" Width="178"></Edit>
+		<Edit BindDataset="ds_DataCont" Border="Flat" Column="DISCU_DESC" Height="18" Id="edt_DiscuDesc" Left="128" MaxLength="50" Style="edit" TabOrder="6" Top="44" Width="1123"></Edit>
+		<Edit BindDataset="ds_DataCont" Border="Flat" Column="DISCU_RSLT" Height="18" Id="edt_DiscuRslt" Left="128" MaxLength="50" Style="edit" TabOrder="7" Top="65" Width="1123"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static8" Left="611" Style="table_indis" TabOrder="10" Text="협의담당자" Top="21" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static6" Left="308" Style="table_indis" TabOrder="11" Text="협의주체" Top="21" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static5" Left="6" Style="table" TabOrder="12" Text="협의결과" Top="63" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static3" Left="6" Style="table" TabOrder="14" Text="협의내용" Top="42" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static2" Left="6" Style="table_indis" TabOrder="15" Text="협의일자" Top="21" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Div Height="71" Id="div_cont" Left="4" TabOrder="19" Text="Div0" Top="87" Width="1272">
+			<Contents>
+				<Static BKColor="white" Border="Flat" Height="22" Id="bar_3" Left="105" Style="table" TabOrder="20" Top="45" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="bar_2" Left="105" Style="table" TabOrder="21" Top="24" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+				<Static BKColor="white" Border="Flat" Height="22" Id="bar_1" Left="105" Style="table" TabOrder="19" Top="3" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_1" Left="2" Style="table_indis" TabOrder="18" Text="접수일자" Top="3" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+				<Calendar BindDataset="ds_DataCont" Border="Flat" Column="DOCU_RECEIVE_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="edt_DocuReceiveYmd" Left="124" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="1" Top="5" WeeksFont="Default,-1" Width="88"></Calendar>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_2" Left="305" Style="table" TabOrder="17" Text="회람일자" Top="3" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+				<Calendar BindDataset="ds_DataCont" Border="Flat" Column="READ_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="edt_ReadYmd" Left="427" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="2" Top="5" WeeksFont="Default,-1" Width="88"></Calendar>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_3" Left="607" Style="table" TabOrder="13" Text="영업담당자" Top="3" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+				<Edit BindDataset="ds_DataCont" Border="Flat" Column="SALES_TAKER_NM" Height="18" Id="edt_SalesTakerNm" ImeMode="none" Left="729" MaxLength="9" Readonly="TRUE" Style="edit" TabOrder="3" Top="5" Width="90"></Edit>
+				<Edit BindDataset="ds_DataCont" Border="Flat" Column="SALES_TAKER_NAME" Enable="FALSE" Height="18" Id="edt_SalesTakerName" ImeMode="none" Left="820" MaxLength="9" Style="edit" TabOrder="4" Top="5" Width="45"></Edit>
+				<Button Cursor="HAND" Height="17" Id="btn_SalesTakerNm" ImageID="search" Left="866" OnClick="div_agree_btn_SalesTakerNm_OnClick" TabOrder="5" Text="Button8" Top="6" Width="17"></Button>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_4" Left="900" Style="table_indis" TabOrder="12" Text="공문담당자" Top="3" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+				<Edit BindDataset="ds_DataCont" Border="Flat" Column="DOCU_TAKER_NM" Height="18" Id="edt_DocuTakerNm" ImeMode="none" Left="1022" MaxLength="9" Readonly="TRUE" Style="edit_Indis" TabOrder="6" Top="5" Width="90"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_5" Left="2" Style="table" TabOrder="16" Text="공문발송처" Top="24" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+				<Edit BindDataset="ds_DataCont" Border="Flat" Column="DOCU_SEND_PLACE" Height="18" Id="edt_DocuSendPlace" Left="124" MaxLength="30" Style="edit" TabOrder="9" Top="26" Width="481"></Edit>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_7" Left="2" Style="table" TabOrder="14" Text="특기사항" Top="45" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+				<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_6" Left="607" Style="table" TabOrder="15" Text="공문수신처" Top="24" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+				<Edit BindDataset="ds_DataCont" Border="Flat" Column="DOCU_TAKER_NAME" Enable="FALSE" Height="18" Id="edt_DocuTakerName" ImeMode="none" Left="1113" MaxLength="9" Style="edit" TabOrder="7" Top="5" Width="45"></Edit>
+				<Button Cursor="HAND" Height="17" Id="btn_DocuTakerNm" ImageID="search" Left="1159" OnClick="div_agree_btn_SalesTakerNm_OnClick" TabOrder="8" Text="Button8" Top="6" Width="17"></Button>
+				<Edit BindDataset="ds_DataCont" Border="Flat" Column="RMK" Height="18" Id="edt_Rmk" Left="124" MaxLength="50" Style="edit" TabOrder="11" Top="47" Width="1123"></Edit>
+				<Edit BindDataset="ds_DataCont" Border="Flat" Column="DOCU_RECEIVE_PLACE" Height="18" Id="edt_DocuReceivePlac" Left="729" MaxLength="30" Style="edit" TabOrder="10" Top="26" Width="518"></Edit>
+			</Contents>
+		</Div>
+		<Grid AutoEnter="TRUE" BindDataset="ds_DataContHis" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="470" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="295" Id="grid_Before" InputPanel="FALSE" Left="6" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" NoDataText="조회된&#32;내용이&#32;없습니다." Right="1255" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="18" TabStop="true" Top="175" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="35"/>
+						<col width="70"/>
+						<col width="180"/>
+						<col width="70"/>
+						<col width="200"/>
+						<col width="200"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="200"/>
+						<col width="200"/>
+						<col width="200"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="순번"/>
+						<cell col="1" display="text" text="협의일자"/>
+						<cell align="center" col="2" display="text" text="협의주체"/>
+						<cell col="3" display="text" text="협의담당자"/>
+						<cell col="4" display="text" text="협의내용"/>
+						<cell col="5" display="text" text="협의결과"/>
+						<cell col="6" display="text" text="접수일자"/>
+						<cell col="7" display="text" text="회람일자"/>
+						<cell col="8" display="text" text="영업담당자"/>
+						<cell col="9" display="text" text="공급담당자"/>
+						<cell col="10" display="text" text="공문발송처"/>
+						<cell col="11" display="text" text="공문수신처"/>
+						<cell col="12" display="text" text="특기사항"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expr="rowIndex+1" text="0"/>
+						<cell col="1" colid="DISCU_YMD" display="date"/>
+						<cell col="2" colid="DISCU_FIRM_NM" display="text"/>
+						<cell align="center" col="3" colid="DISCU_TAKER_NM" display="text"/>
+						<cell col="4" colid="DISCU_DESC" display="text"/>
+						<cell col="5" colid="DISCU_RSLT" display="text"/>
+						<cell col="6" colid="DOCU_RECEIVE_YMD" display="expr:iif(&#32;length(trim(&#32;DOCU_RECEIVE_YMD&#32;))&#32;&lt;&#32;8&#32;,&#32;&apos;normal&apos;,&apos;date&apos;)"/>
+						<cell col="7" colid="READ_YMD" display="expr:iif(&#32;length(trim(&#32;READ_YMD&#32;))&#32;&lt;&#32;8&#32;,&#32;&apos;normal&apos;,&apos;date&apos;)"/>
+						<cell align="center" col="8" colid="SALES_TAKER_NAME" display="text"/>
+						<cell align="center" col="9" colid="DOCU_TAKER_NAME" display="text"/>
+						<cell col="10" colid="DOCU_SEND_PLACE" display="text"/>
+						<cell col="11" colid="DOCU_RECEIVE_PLACE" display="text"/>
+						<cell col="12" colid="RMK" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1801040010F_T01.xml
+* Form 설명  : 사유지배관 점용료_협의사항등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 황재혁 
+* 작성자     : 황재혁
+* 작성일     : 2009-07-17
+* 변경내용   : 변경일자, 변경내용,변경자
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+
+var bool_active = false;
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1801040010F_T01_OnLoadCompleted(obj)
+{
+	//gfn_LoadForm(obj);
+
+	
+} 
+//--------------------------------------------------------------------------------------------------
+//	OnActivate
+//--------------------------------------------------------------------------------------------------
+function D1801040010F_T01_OnActivate(obj)
+{
+	// 활성화될때
+	bool_active = true;
+	//alert("OnActivate");
+	rad_DISCU_YN_OnClick();
+	
+	bool_active = false;
+}
+//--------------------------------------------------------------------------------------------------
+//	공문여부 선택
+//--------------------------------------------------------------------------------------------------
+function rad_DISCU_YN_OnClick(obj)
+{	
+	// 사용
+	if(rad_DISCU_YN.Value == '0')
+	{
+		div_cont.Visible = false;
+		
+		img_title.Top = 96;
+		grid_Before.Top = 111;
+		grid_Before.Height = 360;
+		
+		if(bool_active == false)
+		{
+			div_cont.edt_DocuReceiveYmd.Value = '';
+			div_cont.edt_ReadYmd.Value = '';
+			div_cont.edt_SalesTakerNm.Value = '';
+			div_cont.edt_SalesTakerName.Value = '';
+			div_cont.edt_DocuTakerNm.Value = '';
+			div_cont.edt_DocuTakerName.Value = '';
+			div_cont.edt_DocuSendPlace.Value = '';
+			div_cont.edt_DocuReceivePlac.Value = '';
+			div_cont.edt_Rmk.Value = '';
+		}
+
+	}
+	else
+	{
+		div_cont.Visible = true;
+		img_title.Top = 160;
+		
+		grid_Before.Top = 175;
+		grid_Before.Height = 295;
+		
+	}
+}
+
+//--------------------------------------------------------------------------------------------------
+//	사원검색 팝업
+//--------------------------------------------------------------------------------------------------
+function div_agree_btn_SalesTakerNm_OnClick(obj)
+{
+
+	var retValue = gfn_E2_SearchOutEmplDialog();
+
+	if(length(retValue) > 0)
+	{
+		if(obj = div_cont.btn_SalesTakerNm)
+		{
+			div_cont.edt_SalesTakerNm.Text   = retValue[0];
+			div_cont.edt_SalesTakerName.Text = retValue[1];
+		}
+	
+		if(obj = div_cont.btn_DocuTakerNm)
+		{
+			div_cont.edt_DocuTakerNm.Text   = retValue[0];
+			div_cont.edt_DocuTakerName.Text = retValue[1];
+		}
+	} 
+}
+
+]]></Script>
+</Window>

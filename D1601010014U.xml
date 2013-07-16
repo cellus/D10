@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="432" Id="D1601010014U" Left="8" OnLoadCompleted="D1601010014U_OnLoadCompleted" PidAttrib="7" Title="원인자이설보수번호조회_D1601010014U" Top="8" Ver="1.0" Width="992" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REASON_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_DESC" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchTop">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_WORK_NM" size="256" summ="default" type="STRING"/>
+					<record>
+						<BRANCH_CD></BRANCH_CD>
+						<MOVE_REPAIR_NUM></MOVE_REPAIR_NUM>
+						<MOVE_REPAIR_WORK_NM></MOVE_REPAIR_WORK_NM>
+						<ZIP_NO1></ZIP_NO1>
+						<ZIP_NO2></ZIP_NO2>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="427" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="325" Id="grd_MoveRepairNum" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellDBLClick="grd_MoveRepairNum_OnCellDblClick" OnHeadClick="grd_MoveRepairNum_OnHeadClick" Right="986" ScrollCell="true" SelColor="MENU" Style="grid_pop" TabOrder="7" TabStop="true" Top="102" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="981">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="200"/>
+						<col width="125"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="270"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="접수일자"/>
+						<cell col="1" display="text" text="이설보수번호"/>
+						<cell col="2" display="text" text="이설보수공사명"/>
+						<cell col="3" display="text" text="공사내역"/>
+						<cell col="4" display="text" text="의뢰자"/>
+						<cell col="5" display="text" text="지사"/>
+						<cell col="6" display="text" text="구"/>
+						<cell col="7" display="text" text="주소"/>
+					</head>
+					<body>
+						<cell col="0" colid="RECEIVE_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="MOVE_REPAIR_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="MOVE_REPAIR_WORK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="MOVE_REPAIR_DESC" display="text"/>
+						<cell align="center" col="4" colid="REASON_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="5" colid="BRANCH_CD_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="6" colid="ZIP_NO1_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="7" colid="ADDR" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="8" Text="원인자이설보수번호조회" Transparent="TRUE" Width="992"></Image>
+		<Shape BKColor="user16" Bottom="103" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="986" TabOrder="9" Top="100" Type="Rectangle" Width="981"></Shape>
+		<Shape BKColor="user9" Bottom="96" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="984" TabOrder="10" Top="72" Type="Rectangle" Width="979"></Shape>
+		<Image Align="Left" Height="5" Id="Image1" ImageID="blt" Left="260" LeftMargin="12" Style="blt_search_1" TabOrder="11" Top="73" Transparent="TRUE" Width="30"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_MoveRepair" Left="547" Style="edit" TabOrder="5" Top="75" Width="105"></Edit>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="2" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="12" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="990">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Enable="FALSE" Height="18" Id="cob_Branchcd" Left="49" OnChanged="cob_Branchcd_OnChanged" Style="combo_indis" TabOrder="1" Top="74" Width="80"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo1" Left="176" OnChanged="cob_ZipNo1_OnChanged" Style="combo" TabOrder="2" Top="74" Width="80"></Combo>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="133" LeftMargin="12" Style="blt_search_1" TabOrder="13" Text="시/구" Top="75" Transparent="TRUE" Width="50"></Image>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="11" LeftMargin="12" Style="blt_search_1" TabOrder="14" Text="지사" Top="75" Transparent="TRUE" Width="50"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_MoveRepairNm" Left="761" Style="edit" TabOrder="6" Top="75" Width="217"></Edit>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="461" LeftMargin="12" Style="blt_search_1" TabOrder="15" Text="이설보수번호" Top="75" Transparent="TRUE" Width="90"></Image>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="661" LeftMargin="12" Style="blt_search_1" TabOrder="16" Text="이설보수공사명" Top="75" Transparent="TRUE" Width="99"></Image>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_ZipNo1" Left="335" Style="edit" TabOrder="3" Top="75" Width="50"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_ZipNo2" Left="392" Style="edit" TabOrder="4" Top="75" Width="50"></Edit>
+		<Static Height="13" Id="Static0" Left="385" TabOrder="17" Text="-" Top="79" Width="12"></Static>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="273" LeftMargin="12" Style="blt_search_1" TabOrder="18" Text="우편번호" Top="75" Transparent="TRUE" Width="63"></Image>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1601010014U.xml
+* Form 설명  : 원인자 이설보수 번호조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2008-12-12
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1601010014U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	gfn_SetForceButton("00011101");	
+	
+	grd_MoveRepairNum.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branchcd"));					//지사코드
+	gfn_SetComboBox_Comcode("B10004",gfn_setDsObject_Comcode("cob_ZipNo1"));  					//시/구
+
+	
+	// 파라미터 셋팅
+	if(IsExistVar("BRANCH_CD", true))
+	{
+		cob_Branchcd.Value = BRANCH_CD;
+		cob_Branchcd_OnChanged();
+		
+		cob_ZipNo1.Value = ZIP_NO1;	
+		
+		//edt_ZipNo1.Value = ZIP_NO1;	
+		//edt_ZipNo2.Value = ZIP_NO2;	
+	
+	}
+	
+	fn_CommonSearch();
+}
+
+/********************************************************************************
+* 기      능   :  지사_구 콤보 
+********************************************************************************/
+function cob_Branchcd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    fn_SetComboBox_Comcode("1", cob_Branchcd.value, fn_setDsObject_Comcode("1", "cob_ZipNo1"));
+    cob_ZipNo1.Value = "";
+}
+
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	ds_Multi.ClearData();
+
+    ds_SearchTop.SetColumn(0,"BRANCH_CD"          , cob_Branchcd.Value       );  // 지사
+    ds_SearchTop.SetColumn(0,"ZIP_NO1"            , cob_ZipNo1.Value         );  // 시/구
+    ds_SearchTop.SetColumn(0,"ZIP_NO2"            , edt_ZipNo2.Text          );  // 
+    ds_SearchTop.SetColumn(0,"MOVE_REPAIR_NUM"    , edt_MoveRepair.Text      );  // 이설번호
+    ds_SearchTop.SetColumn(0,"MOVE_REPAIR_WORK_NM", edt_MoveRepairNm.Text    );  // 이설공사사명
+
+	var strSvcID = "find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_CauserMoveRepaiCodeSearMgr-service"; 
+	var strInDatasets  = "ds_SearchTop=ds_SearchTop";
+	var strOutDatasets = "ds_Multi=ds_Multi";
+	var strArgument    = "find=1";
+    var CallBack       = "fn_D1_CallBack";
+    	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+		           , CallBack);
+}
+
+//--------------------------------------------------------------------------------------------------
+//	서비스 CallBack
+//--------------------------------------------------------------------------------------------------
+function fn_D1_CallBack(SrvID,ErrorCode,ErrorMsg)
+{
+
+	if(ErrorCode < 0) 
+	{
+		alert(ErrorMsg);
+		return;
+	}
+	
+    switch(SrvID)
+    {
+        
+        case "find":
+        	break;	
+
+        default:
+
+    }
+}
+
+//------------------------------------------------------------------------------- 
+// 기      능   :  공통 Excel
+//------------------------------------------------------------------------------- 
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    SearchCondition = SearchCondition + "지사코드 :" + RPad(cob_Branchcd.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo1.Text," ",20);
+    SearchCondition = SearchCondition + "원인자이설보수코드 :" + RPad(edt_MoveRepair.Text," ",20);
+    SearchCondition = SearchCondition + "원인자이설보수명 :" + RPad(edt_MoveRepairNm.Text," ",20);
+    
+    gfn_ExportExcel("원인자이설보수번호 조회", 5, SearchCondition, "grd_MoveRepairNum"); 	
+}
+
+//--------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 선택
+//--------------------------------------------------------------------------------------------------
+function fn_CommonSelect()
+{
+	var arrList = array();
+	var nRow = ds_Multi.row;			
+	
+	arrList[0]  = ds_Multi.getcolumn(nRow, "MOVE_REPAIR_NUM"); // 원인자 이설보수 번호
+	arrList[1]  = ds_Multi.getcolumn(nRow, "ZIP_NO1");         // 우편번호1
+	arrList[2]  = ds_Multi.getcolumn(nRow, "ZIP_NO2");         // 우편번호2
+	arrList[3]  = ds_Multi.getcolumn(nRow, "ZIP_SEQ");         // 우편일련번호
+	arrList[4]  = ds_Multi.getcolumn(nRow, "HILL");            // 산번지
+	arrList[5]  = ds_Multi.getcolumn(nRow, "ADDR_M");          // 본번
+	arrList[6]  = ds_Multi.getcolumn(nRow, "ADDR_S");          // 부번
+	arrList[7]  = ds_Multi.getcolumn(nRow, "BLD_DONG");        // 건물동
+	arrList[8]  = ds_Multi.getcolumn(nRow, "HOSU");            // 호수
+	arrList[9]  = ds_Multi.getcolumn(nRow, "SECOND_ADDR");     // 보조주소
+	arrList[10] = ds_Multi.getcolumn(nRow, "LOT_NUM_UNION");   // 지번주소조합		
+	
+	Close(arrList);
+}
+
+//--------------------------------------------------------------------------------------------------
+//	더블 클릭시
+//--------------------------------------------------------------------------------------------------
+function grd_MoveRepairNum_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fn_CommonSelect(nRow);	
+}
+//-------------------------------------------------------------------------------
+//	sorting - Master Grid
+//-------------------------------------------------------------------------------
+function grd_MoveRepairNum_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	if(nCell == 0 || nCell == 1 || nCell == 2 || nCell == 3) {
+		gfn_SetGridSort(obj, nCell);
+	}		
+}
+function cob_ZipNo1_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	edt_ZipNo1.Text = cob_ZipNo1.Value;
+}
+]]></Script>
+</Window>

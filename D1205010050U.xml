@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="395" Id="D1205010050U" Left="8" OnLoadCompleted="D1205010050U_OnLoadCompleted" PidAttrib="7" Title="정배류기명&#32;검색_D1205010050U" Top="8" Ver="1.0" Width="450" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_SelRadio">
+				<Contents>
+					<colinfo id="type" size="256" summ="default" type="STRING"/>
+					<colinfo id="value" size="256" summ="default" type="STRING"/>
+					<record>
+						<type>0</type>
+						<value>정류기명</value>
+					</record>
+					<record>
+						<type>1</type>
+						<value>배류기명</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchResult">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECTIFIER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DRAINAGE_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchTop">
+				<Contents>
+					<colinfo id="RECDRA_NM" size="256" summ="default" type="STRING"/>
+					<record>
+						<RECDRA_NM></RECDRA_NM>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="6" Text="정배류기명&#32;검색" Transparent="TRUE" Width="450"></Image>
+		<Shape BKColor="user9" Bottom="89" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="445" TabOrder="7" Top="65" Type="Rectangle" Width="440"></Shape>
+		<Shape BKColor="user16" Bottom="97" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="445" TabOrder="8" Top="94" Type="Rectangle" Width="440"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_SearchResult" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="386" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="289" Id="grd_WorkFirm" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" OnCellDBLClick="fn_B2_SelgrdDBLClick" OnHeadClick="fn_B2_OnHeadClick" Right="445" SelColor="MENU" Style="grid_pop" TabOrder="3" TabStop="true" Top="97" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="440">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="36"/>
+						<col width="156"/>
+						<col width="245"/>
+						<col width="245"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell col="1" display="text" text="정배류기&#32;번호"/>
+						<cell col="2" display="text" text="정류기명"/>
+						<cell col="3" display="text" text="배류기명"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expandsize="18" expr="currow&#32;+&#32;1" wordwrap="word"/>
+						<cell col="1" colid="FACI_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="RECTIFIER_NM" display="text"/>
+						<cell col="3" colid="DRAINAGE_NM" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Radio BKColor="#eaeaea" Border="None" CodeColumn="type" ColumnCount="2" DataColumn="value" Height="19" Id="rad_RecDraNm" INDEX="0" InnerDataset="ds_SelRadio" Left="9" OnClick="fn_B2_CommonRadioSelect" Style="radio" TabOrder="1" Top="68" Width="140"></Radio>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Close" ImageID="btn_c" Left="395" LeftMargin="15" OnClick="fn_CommonClose" Style="button" TabOrder="5" Text="닫기" Top="68" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_SelCust" ImageID="btn_appro" Left="345" LeftMargin="21" OnClick="fn_B2_SelCust" Style="button" TabOrder="4" Text="선택" Top="68" Width="50"></Button>
+		<Button ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_SearchCust" ImageID="btn_popInquiry" Left="295" LeftMargin="21" OnClick="fn_CommonSearch" Style="button" TabOrder="2" Text="조회" Top="68" Width="50"></Button>
+		<Static Font="돋움,8" Height="13" Id="Static0" Left="5" Style="static" TabOrder="9" Text="정류기명&#32;또는&#32;배류기명을&#32;입력하시면&#32;조회가능합니다." Top="51" Width="305"></Static>
+		<Edit Border="Flat" Height="19" Id="edt_Search" ImeMode="none" Left="163" OnKeyDown="fn_B2_KeyDownEnter" Style="edit" TabOrder="10" Top="68" Width="128"></Edit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1205010050U.xml
+* Form 설명  : 정배류기명찾기 팝업 화면
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 송석환
+* 작성일     : 2013-03-12
+* 변경내용   : 변경일자, 변경내용,변경자
+****************************************************************************************************/
+
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js"
+#include "JS::COMMONB20001.js"
+
+//-------------------------------------------------------------------------------
+// 함수명   : B2203050011U_OnLoadCompleted(obj)
+// 설명     : 화면종료시 편집한 결과를 버릴지 물음.
+// arguments
+// 			obj: Form객체: OnLoadCompleted 이벤트를 발생시킨 폼객체
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function D1205010050U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_CatchComponents(obj);
+	//-----------------------------------------
+	//폼로드시 edt_Search로 포커스지정
+	//-----------------------------------------
+	edt_Search.SetFocus();
+	fn_B2_SetGridColumnSize();
+	
+}
+
+
+function fn_CommonSearch(obj)
+{	
+	ds_SearchResult.ClearData();
+	ds_SearchTop.ClearData();
+	ds_SearchTop.AddRow();
+	
+	ds_SearchTop.SetColumn(0,"RECDRA_NM"           , edt_Search.Text          );  
+	
+    var strSvcID = "find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_PipeCoatingResisMgr-service";
+ 	var strInDatasets  = "ds_SearchTop=ds_SearchTop";
+	var strOutDatasets = "ds_SearchResult=ds_SearchResult";
+	var strArgument = "";
+		
+	if (rad_RecDraNm.Value == "0") //정류기명
+	{
+		strArgument  = "searchRecNm";
+	}
+	else //배류기명
+	{
+		strArgument  = "searchDraNm";
+	}		
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+    if(ErrorCode<0)
+    {
+		alert(gfn_GetMessage("M000014","%AAA%","조회"));	//"조회 중 오류가 발생했습니다."
+		return false;
+	}
+	
+	if(ds_SearchResult.GetRowCount()==0)
+	{
+		grd_WorkFirm.NoDataText=gfn_GetMessage("M000008","%AAA%", "정배류기가"); //"업체정보가 없습니다."
+	}
+	
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","조회를"),"black",true);	//"조회를 완료하였습니다."
+}
+
+
+function fn_CommonClose(obj)
+{
+	close("");
+}
+
+
+function fn_B2_SetResult()
+{
+	var Result = Array();
+	var Row  = ds_SearchResult.row;
+	var i = 0;
+	Result[i++] = ds_SearchResult.GetColumn(Row, "FACI_NUM");				
+	Result[i++] = ds_SearchResult.GetColumn(Row, "RECTIFIER_NM");				
+	Result[i++] = ds_SearchResult.GetColumn(Row, "DRAINAGE_NM");				
+	return Result;
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_B2_SelCust(obj)
+// 설명     : 선택버튼 클릭시 팝업창이 닫히면서 fn_B2_SetResult(obj)호출
+// arguments
+// 			Obj: 객체: 이벤트를 발생한 객체
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_B2_SelCust(obj)
+{
+	Close(fn_B2_SetResult());
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_B2_SelgrdDBLClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+// 설명     : 셀을 더블클릭시 팝업창이 닫히면서 fn_B2_SetResult(obj)호출
+// arguments
+// 			obj: Form객체: OnLoadCompleted 이벤트를 발생시킨 폼객체
+//			nRow: Cell의 Row Index
+//			nCell: Cell의 Column Index 
+//			nX: Grid내에서 Click된 마우스 포인트의 X 좌표
+//			nY: Grid내에서 Click된 마우스 포인트의 Y 좌표
+//			nPivotIndex: 피봇테이블의 피봇인덱스값
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function fn_B2_SelgrdDBLClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	Close(fn_B2_SetResult());
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_B2_KeyDownEnter(obj,nChar,bShift,bCtrl, bAlt,LLParam,HLParam)
+// 설명     : 입력후 Enter키 눌렀을시 팝업창Open
+// arguments
+// 			Obj: 객체: 이벤트를 발생한 객체
+//			nChar: 눌러진 Key의 Code 값
+//			bShift: Shift 키의 눌림 여부
+//			bCtrl: Ctrl 키의 눌림 여부
+//			bAlt: Alt 키의 눌림 여부
+//			LLParam: 해당 Key의 반복입력 횟수
+//			HLParam: 해당 Key의 Scan Code와 각종 Flag 값
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function fn_B2_KeyDownEnter(obj,nChar,bShift,bCtrl, bAlt,LLParam,HLParam)
+{
+	//---------------------------------------------------------------------------
+	//Enter키 눌렀을 경우 btn_SearchWorkNum로 포커스 지정후 fn_CommonSearch()실행
+	//---------------------------------------------------------------------------
+	if (nChar == "13") 
+	{				
+		btn_SearchCust.SetFocus();
+		fn_CommonSearch();
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_B2_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+// 설명     : 그리드HeadClick시 그리드 정렬
+// arguments
+// 			obj: Form객체: OnLoadCompleted 이벤트를 발생시킨 폼객체
+//			nCell: Cell의 Column Index 
+//			nX: Grid내에서 Click된 마우스 포인트의 X 좌표
+//			nY: Grid내에서 Click된 마우스 포인트의 Y 좌표
+//			nPivotIndex: 피봇테이블의 피봇인덱스값
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function fn_B2_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	if( (obj.GetType()=="Grid") && nCell>0 )
+	{
+		gfn_SetGridSort(obj, nCell);
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_B2_CommonRadioSelect(obj)
+// 설명     : 선택
+// arguments
+// 			obj: Form객체: OnLoadCompleted 이벤트를 발생시킨 폼객체
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function fn_B2_CommonRadioSelect(obj)
+{
+	//----------------------------------------------
+	//선택변경시 edt_Search값 공백처리 후 포커스지정
+	//----------------------------------------------
+	edt_Search.Text = "";
+	edt_Search.SetFocus();
+	
+	fn_B2_SetGridColumnSize();
+	
+}
+
+function fn_B2_SetGridColumnSize(){
+
+	if (rad_RecDraNm.Value == "0")
+	{
+		grd_WorkFirm.SetColProp(3,"width",0);
+		grd_WorkFirm.SetColProp(2,"width",245);
+		ds_SearchResult.ClearData();
+	}
+	else if (rad_RecDraNm.Value == "1")
+	{
+		grd_WorkFirm.SetColProp(2,"width",0);
+		grd_WorkFirm.SetColProp(3,"width",245);
+		ds_SearchResult.ClearData();
+	}	 
+}]]></Script>
+</Window>

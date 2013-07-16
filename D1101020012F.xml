@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1101020012F" Left="8" OnLoadCompleted="D1101020012F_OnLoadCompleted" PidAttrib="7" Title="조원등록_D1101020012F" Top="8" Ver="1.0" Width="1288" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Empid">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORKER_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="NM_KOR" size="256" summ="default" type="STRING"/>
+					<colinfo id="POS_CLS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_SEQ" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Org" OnLoadCompleted="ds_Org_OnLoadCompleted" OnRowPosChanged="ds_Org_OnRowPosChanged">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CAR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TABLET_MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TRS_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CAR_MANAGE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Max"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Block">
+				<Contents>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team">
+				<Contents>
+					<colinfo id="KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Arfaci">
+				<Contents>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_bchk"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search_max">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user8" Bottom="560" Height="487" Id="Shape4" Left="35" LineColor="user7" Right="787" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="27" Top="73" Type="RoundRect" Width="752"></Shape>
+		<Shape BKColor="user6" Bottom="123" Height="47" Id="Shape1" Left="39" LineColor="user7" Right="782" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="24" Top="76" Type="RoundRect" Width="743"></Shape>
+		<Shape BKColor="user8" Bottom="118" Height="37" Id="Shape0" Left="44" LineWidth="0" Right="777" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="25" Top="81" Type="Rectangle" Width="733"></Shape>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="120" Style="table" TabOrder="10" Top="389" VAlign="Middle" Width="659" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static21" Left="123" Style="table" TabOrder="4" Top="368" VAlign="Middle" Width="656" WordWrap="TRUE"></Static>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="1" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1260">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="cob_jo" Left="377" OnChanged="cob_jo_OnChanged" ResetIndex="FIRST" Style="combo_indis" TabOrder="2" Top="91" Width="169"></Combo>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" AutoScrollBar="Vert" BindDataset="ds_empid" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="554" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="107" Id="grd_empid" InputPanel="FALSE" Left="40" LineColor="default" LineType="ExVERT" MinWidth="100" NoDataText="조원&#32;정보가&#32;없습니다." OnCellDBLClick="grd_empid_OnCellDblClick" Right="782" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="447" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="742">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="50"/>
+						<col fix="left" width="163"/>
+						<col fix="left" width="343"/>
+						<col fix="left" width="187"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="No"/>
+						<cell col="1" display="text" text="사원번호"/>
+						<cell col="2" display="text" text="성명"/>
+						<cell col="3" display="text" text="직급"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expr="rowindex+1" SuppressAlign="Middle"/>
+						<cell align="center" col="1" colid="SHIFT_WORKER_CD" display="text" edit="normal" expandsize="18" limit="9" wordwrap="word"/>
+						<cell align="center" col="2" colid="NM_KOR" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="POS_CLS_NM" display="text" edit="normal"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Edit BindDataset="ds_Org" Border="Flat" Column="CAR_NUM" Enable="FALSE" Height="18" Id="edt_CarManageNum" Left="147" Style="edit" TabOrder="5" Top="370" Width="125"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static27" Left="270" Style="table" TabOrder="7" Text="차종" Top="368" VAlign="Middle" Width="210" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Org" Border="Flat" Column="CAR_MANAGE_NM" Enable="FALSE" Height="18" Id="edt_CarManageNm" Left="481" Style="edit" TabOrder="6" Top="370" Width="252"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Org" Border="Flat" Column="TABLET_MANAGE_NUM" Height="18" Id="edt_tp" ImeMode="none" Left="147" MaxLength="11" Number="TRUE" Style="edit" TabOrder="9" Top="391" UpperOnly="TRUE" Width="144"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Org" Border="Flat" Column="TRS_NUM" Height="18" Id="edt_trs" ImeMode="none" Left="481" MaxLength="4" Number="TRUE" Style="edit" TabOrder="11" Top="390" UpperOnly="TRUE" Width="72"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_car" ImageID="search" Left="251" OnClick="btn_car_OnClick" TabOrder="8" Text="Button8" Top="370" Width="17"></Button>
+		<Shape BKColor="user15" Bottom="448" Height="3" Id="Shape2" Left="40" LineWidth="0" Right="782" TabOrder="12" Top="445" Type="Rectangle" Width="742"></Shape>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="40" Style="table_indis" TabOrder="14" Text="차량&#32;" Top="368" VAlign="Middle" Width="106" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="40" Style="table_indis" TabOrder="15" Text="HSDPA(모뎀)번호" Top="389" VAlign="Middle" Width="106" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="397" Style="table_indis" TabOrder="16" Text="TRS&#32;번호&#32;" Top="389" VAlign="Middle" Width="83" WordWrap="TRUE"></Static>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_empid" ImageID="btn_4_registration&#32;sample" Left="593" LeftMargin="21" OnClick="btn_empid_OnClick" Style="button" TabOrder="17" Text="조원찾기" Top="422" Width="76"></Button>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="86" OnChanged="cob_BranchCd_OnChanged" ResetIndex="FIRST" Style="combo_indis" TabOrder="18" Top="91" Width="105"></Combo>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="47" LeftMargin="12" Style="blt_search_Indis" TabOrder="19" TabStop="FALSE" Text="지사" Top="92" Width="37"></Image>
+		<Image Align="Left" Height="9" Id="Image0" ImageID="blt_8" Left="42" LeftMargin="12" Style="text_title" TabOrder="20" Text="조&#32;및&#32;조원등록" Top="53" Width="117"></Image>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="195" LeftMargin="12" Style="blt_search_Indis" TabOrder="22" TabStop="FALSE" Text="팀" Top="92" Width="37"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_team" InnerDataset="ds_Team" Left="220" OnChanged="cob_team_OnChanged" ResetIndex="FIRST" Style="combo_indis" TabOrder="21" Top="91" Width="126"></Combo>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="351" LeftMargin="12" Style="blt_search_Indis" TabOrder="23" TabStop="FALSE" Text="조" Top="92" Width="37"></Image>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static22" Left="736" Style="table" TabOrder="26" Top="368" VAlign="Middle" Width="46" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static8" Left="115" Style="table" TabOrder="28" Top="347" VAlign="Middle" Width="664" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_Org" Border="Flat" Column="SHIFT_WORK_NM" Enable="FALSE" Height="18" Id="cob_jo2" Left="147" Style="edit" TabOrder="29" Top="349" Width="252"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static14" Left="115" Style="table" TabOrder="30" Top="326" VAlign="Middle" Width="664" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static18" Left="400" Style="table" TabOrder="31" Text="팀" Top="326" VAlign="Middle" Width="80" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static20" Left="40" Style="table_indis" TabOrder="32" Text="지사" Top="326" VAlign="Middle" Width="106" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_Org" Border="Flat" Column="BRANCH_NM" Enable="FALSE" Height="18" Id="edt_BranchCd2" Left="147" Style="edit" TabOrder="33" Top="328" Width="252"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Org" Border="Flat" Column="TEAM_NM" Enable="FALSE" Height="18" Id="edt_TeamCd2" Left="481" Style="edit" TabOrder="34" Top="328" Width="252"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static12" Left="40" Style="table_indis" TabOrder="35" Text="조" Top="347" VAlign="Middle" Width="106" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static10" Left="736" Style="table" TabOrder="36" Top="326" VAlign="Middle" Width="46" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static23" Left="736" Style="table" TabOrder="37" Top="347" VAlign="Middle" Width="46" WordWrap="TRUE"></Static>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_del_empid" ImageID="btn_delete" Left="732" LeftMargin="20" OnClick="btn_del_empid_OnClick" Style="button" TabOrder="38" Text="삭제" Top="422" Width="50"></Button>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" AutoFitEndLine="Hide" BindDataset="ds_org" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="320" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="192" Id="Grid0" InputPanel="FALSE" Left="40" LineColor="default" LineType="ExVERT" MinWidth="100" NoDataText="조&#32;정보가&#32;없습니다." Right="782" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="39" TabStop="true" Top="128" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="742">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="39"/>
+						<col fix="left" width="89"/>
+						<col fix="left" width="125"/>
+						<col fix="left" width="95"/>
+						<col fix="left" width="146"/>
+						<col fix="left" width="85"/>
+						<col fix="left" width="106"/>
+						<col fix="left" width="55"/>
+						<col fix="left" width="46"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="No"/>
+						<cell col="1" display="text" text="지사"/>
+						<cell col="2" display="text" text="팀"/>
+						<cell col="3" display="text" text="조"/>
+						<cell col="4" display="text" text="구간명"/>
+						<cell col="5" display="text" text="차량번호"/>
+						<cell col="6" display="text" text="HSDPA(모뎀)번호"/>
+						<cell col="7" display="text" text="TRS"/>
+						<cell col="8" display="text" text="SEQ"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expr="rowindex+1" SuppressAlign="Middle"/>
+						<cell align="center" col="1" colid="BRANCH_NM" display="text" edit="normal" expandsize="18" limit="9" wordwrap="word"/>
+						<cell align="center" col="2" colid="TEAM_NM" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="SHIFT_WORK_NM" display="text" edit="normal"/>
+						<cell col="4" colid="BLOCK_NM" display="text"/>
+						<cell col="5" colid="CAR_NUM" display="text"/>
+						<cell align="center" col="6" colid="TABLET_MANAGE_NUM" display="text"/>
+						<cell align="center" col="7" colid="TRS_NUM" display="text"/>
+						<cell col="8" colid="SHIFT_WORK_SEQ" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Combo BindDataset="ds_Org" Border="Flat" CodeColumn="BLOCK_CD" Column="BLOCK_CD" DataColumn="BLOCK_NM" Height="18" Id="cob_block" InnerDataset="ds_Block" Left="481" Style="combo_indis" TabOrder="13" Top="348" Width="254"></Combo>
+		<Static Align="Center" Border="Flat" Color="ACTIVECAPTION" Height="22" Id="Static2" Left="292" Style="table" TabOrder="40" Text="예)&#32;01012346504" Top="389" VAlign="Middle" Width="108" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static7" Left="400" Style="table_indis" TabOrder="41" Text="구간&#32;" Top="346" VAlign="Middle" Width="81" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="554" Style="table_indis" TabOrder="42" Text="관리번호" Top="389" VAlign="Middle" Width="83" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_Org" Border="Flat" Column="MANAGE_NUM" Enable="FALSE" Height="22" Id="Edit0" Left="636" Style="edit" TabOrder="43" Top="389" Width="97"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static3" Left="736" Style="table" TabOrder="44" Top="389" VAlign="Middle" Width="46" WordWrap="TRUE"></Static>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_add_empid" ImageID="btn_add" Left="676" LeftMargin="20" OnClick="btn_add_empid_OnClick" Style="button" TabOrder="45" Text="저장" Top="422" Width="50"></Button>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101020012F.xml
+* Form 설명  : 구간별조등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 권기철
+* 작성일     : 2010-06-13
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONE30001.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+var fv_FindRow_ShowRow = -1; 		  // 조회후 보여줄 컬럼 체크변수
+var fv_FindRow_ShowKey = -1;          // KEY값
+
+var iGridPos = '';
+
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1101020012F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();	
+//	fn_search_block();	
+}
+//--------------------------------------------------------------------------------------------------
+//	fn_Init
+//--------------------------------------------------------------------------------------------------
+function fn_Init() 
+{
+	gfn_SetComboBox_Comcode("D10070",gfn_setDsObject_Comcode("cob_jo"));	
+	
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd")); // 지사콤보세팅 
+
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+	    cob_BranchCd.Index = 0;
+	} else {
+	    cob_BranchCd.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+	    cob_BranchCd.Enable = false;
+	}
+	
+	cob_BranchCd_OnChanged();		
+}
+
+function fn_CommonSearch() 
+{
+	ds_Org.ClearData();
+	ds_empid.ClearData();
+	
+	var ServiceId = "search_org";
+	var ServicePart = "D10";
+	var Url = "handle.do?ServiceName=D1101020012F-service";
+	var InputDsList  = "";
+	var OutputDsList = "ds_Org=ds_Org";
+	var Argument  = "search_org=1";
+	    Argument += " BRANCH_CD=" + quote(cob_BranchCd.Value);
+        Argument += " TEAM_CD=" + quote(cob_team.Value);
+        Argument += " SHIFT_WORK_CD=" + quote(cob_jo.Value);
+	
+	gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+	
+	cob_block.Enable=false;	
+}
+
+function fn_search_block() 
+{
+	ds_Block.ClearData();
+
+	var ServiceId = "search_block";
+	var ServicePart = "D10";
+	var Url = "handle.do?ServiceName=D1101020012F-service";
+	var InputDsList  = "";
+	var OutputDsList = "ds_Block=ds_Block";
+	var Argument  = "search_block=1";
+	    Argument += " BRANCH_CD=" + quote(cob_BranchCd.Value);
+        Argument += " TEAM_CD=" + quote(cob_team.Value);
+	
+	gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+	
+	// var strSvcID = "search_block";
+	// var strPart  = "D10";
+	// var strURL   = "handle.do?ServiceName=D1101020012F-service";
+	// var strInDatasets  = "";
+	// var strOutDatasets  = "ds_Block=ds_Block";
+	// var strArgument  = "search_block=1";
+		
+	// gfn_SyncCall( 
+					 // strSvcID 
+				   // , strPart
+				   // , strURL
+				   // , strInDatasets
+				   // , strOutDatasets
+				   // , strArgument				  
+			   // );	
+	
+	if (ErrorCode < 0) {
+        
+		return;
+	}		   
+}
+
+//--------------------------------------------------------------------------------------------------
+//	서비스 CallBack
+//--------------------------------------------------------------------------------------------------
+function fn_D1_CallBack(SrvID,ErrorCode,ErrorMsg)
+{
+
+	if(ErrorCode < 0) {
+	
+		alert(ErrorMsg);
+		//에러시 초기화
+		fv_FindRow_ShowRow = -1;
+		return;
+	}
+	
+    switch(SrvID){
+
+		//상세 조회
+        case "save_org":
+        
+			//alert("call back");
+			// 로우선택하기
+			// if(fv_FindRow_ShowRow > 0)
+			// {
+				// var nFocusRow = ds_Org.FindRow("SHIFT_WORK_SEQ",fv_FindRow_ShowKey);
+				// if (nFocusRow != -1)
+				// {
+					// ds_Org.row = nFocusRow;
+				// }	
+				// fv_FindRow_ShowRow = -1;
+			// }
+        	break;	
+
+        default:
+
+    }
+}
+
+function btn_car_OnClick(obj) 
+{
+
+	if(cob_jo.Value == "" || cob_jo.Value == null) 
+	{
+	
+	    alert("조를 선택해주세요."); 
+	    return;
+	    
+	} 
+	else 
+	{    
+	
+		var retValue = gfn_E3_CarsIDialog();
+			
+		if(retValue != "0" && retValue != null) 
+		{
+		
+			edt_CarManageNum.text = retValue[2];
+			edt_CarManageNm.text = retValue[10];
+		}
+	}
+}
+
+function btn_empid_OnClick(obj) 
+{
+	if(ds_Org.GetRowCount()<1)
+	{
+		alert("조 정보(차량 및 타블릿 정보를 먼저 등록 후 조원을 등록하세요...");
+		return;
+	}
+	
+	if(ds_Org.GetRowType(ds_Org.row) == "insert")
+	{
+		alert("조 정보를 먼저 등록 후 조정보(차량 정보)를 저장 후 등록하세요...");
+		return;
+	}
+
+	var args = "BRANCH_CD=" + cob_BranchCd.Value
+		 + " TEAM_CD=" + cob_team.Value
+		 + " SHIFT_WORK_CD=" +  cob_jo.Value
+		 + " SFALG=" +  "";
+	              
+	var retValue = Dialog("D10::D1101020014U.xml", args, 699, 299, true, -1, -1);
+}
+
+function fn_CommonAddRow() 
+{   
+	ds_Search_max.ClearData();
+	ds_Search_max.AddRow();
+	
+	ds_Search_max.SetColumn(0,"BRANCH_CD",cob_BranchCd.Value);
+	ds_Search_max.SetColumn(0,"TEAM_CD",cob_team.Value);
+	ds_Search_max.SetColumn(0,"SHIFT_WORK_CD",cob_jo.Value);	
+	
+	var ServiceId = "search_max";
+	var ServicePart = "D10";
+	var Url = "handle.do?ServiceName=D1101020012F-service";
+	var InputDsList  = "ds_Search_max=ds_Search_max";
+	var OutputDsList = "ds_Max=ds_Max";
+	var Argument  = "search_max=1";
+	
+	gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+	
+	if (ErrorCode < 0) 
+	{
+        
+		return;
+	}
+		
+	var row = ds_Org.AddRow(); 
+
+	iGridPos = row;
+	cob_block.Value="";
+	cob_block.Enable=true;
+	ds_Org.SetColumn(row,"BRANCH_CD",cob_BranchCd.Value);
+	ds_Org.SetColumn(row,"BRANCH_NM",cob_BranchCd.GetSelText());	
+	ds_Org.SetColumn(row,"TEAM_CD",cob_team.Value);
+	ds_Org.SetColumn(row,"TEAM_NM",cob_team.GetSelText());
+	ds_Org.SetColumn(row,"SHIFT_WORK_CD",cob_jo.Value);
+	ds_Org.SetColumn(row,"SHIFT_WORK_NM",cob_jo.GetSelText());
+	ds_Org.SetColumn(row,"SHIFT_WORK_SEQ",ds_Max.GetColumn(0, "SHIFT_WORK_SEQ"));
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSave()
+ * 설명: 상세 내용를 저장 하는 함수
+ * return 내용: 없음
+===============================================================================*/ 
+function fn_CommonSave()
+{
+    var shift_work_cd = ds_Org.GetColumn(ds_Org.row,"SHIFT_WORK_CD");
+    
+    if(shift_work_cd == "10")
+    {
+		if(ds_Org.GetColumn(ds_Org.row,"BLOCK_CD")==""||ds_Org.GetColumn(ds_Org.row,"BLOCK_CD")==null)
+		{
+			alert("배관순찰조는 구간이 필수항목입니다.");
+			return;
+		}
+    }
+    
+	//EOCS전담조, 안전기획/비상계획관리조/배관탐사조는 조구분만 등록함
+	if(shift_work_cd =="10" || shift_work_cd =="20" || shift_work_cd =="30" || shift_work_cd =="40" || shift_work_cd =="41")
+	{
+		if(ds_Org.GetColumn(ds_Org.row,"CAR_NUM")==""||ds_Org.GetColumn(ds_Org.row,"CAR_NUM")==null)	
+		{
+			alert("차량번호를 선택하세요.");
+			return;
+		}
+			
+		if(ds_Org.GetColumn(ds_Org.row,"TABLET_MANAGE_NUM")==""||ds_Org.GetColumn(ds_Org.row,"TABLET_MANAGE_NUM")==null)
+		{
+			alert("HSDPA(모뎀)번호를 입력하세요 !!.");
+			return;
+			}
+		else if(length(trim(ds_Org.GetColumn(ds_Org.row,"TABLET_MANAGE_NUM")))<>11)
+		{
+			alert("HSDPA(모뎀)번호는 11자리 입니다...");
+			return;
+		}
+		
+		if(ds_Org.GetColumn(ds_Org.row,"TRS_NUM")=="" || ds_Org.GetColumn(ds_Org.row,"TRS_NUM")==null)
+		{
+			alert("TRS 번호를 입력하세요 !!.");
+			return;
+		}
+		else if(length(trim(ds_Org.GetColumn(ds_Org.row,"TRS_NUM")))<>4)
+		{
+			alert("TRS번호는 4자리 입니다...");
+			return;
+		}
+		
+		ds_Org.SetColumn(ds_Org.row, "MANAGE_NUM", substr(ds_Org.GetColumn(ds_Org.row,"TABLET_MANAGE_NUM"),4,3));
+	}	
+		
+	if(ds_Org.GetRowType(ds_Org.row) == 'insert')
+	{
+		ds_Org.SetColumn(ds_Org.row, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_Org.SetColumn(ds_Org.row, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_Org.SetColumn(ds_Org.row, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_Org.SetColumn(ds_Org.row, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+	}
+	else if(ds_Org.GetRowType(ds_Org.row) == 'update')
+	{
+		ds_Org.SetColumn(ds_Org.row, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_Org.SetColumn(ds_Org.row, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	
+	}	
+		
+//	fv_FindRow_ShowRow = 1;
+//	fv_FindRow_ShowKey = ds_num.GetColumn(ds_num.row, "SHIFT_WORK_SEQ"); // SEQ
+	iGridPos = ds_Org.row;
+		
+	var strSvcID        = "save_org";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1101020012F-service";
+	var strInDatasets   = "ds_Org=ds_Org:u ds_Arfaci=ds_Arfaci:u";
+	var strOutDatasets  = "";
+	var strArgument     = "save_org=1";		
+	var strCallbackFunc = "fn_D1_CallBack";		
+	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallbackFunc					
+
+			   );
+			   			
+	 if(ErrorCode < 0) 
+	 {
+		return;
+	 }
+
+	//trace("callback:"+ds_Org.getcolumn(ds_Org.Row, "SHIFT_WORK_SEQ"));
+
+	if(shift_work_cd =="10")
+	{
+		ds_Arfaci.ClearData();
+		ds_Arfaci.UpdateControl = false ;
+		ds_Arfaci.Addrow();
+		ds_Arfaci.SetRowType(0, "update");
+		ds_Arfaci.SetColumn(0,"BLOCK_CD",cob_block.Value); 
+		ds_Arfaci.SetColumn(0,"BRANCH_CD",ds_Org.GetColumn(ds_Org.row,"BRANCH_CD")); 
+		ds_Arfaci.SetColumn(0,"SHIFT_WORK_CD",ds_Org.GetColumn(ds_Org.row,"SHIFT_WORK_CD")); 
+		ds_Arfaci.SetColumn(0,"SHIFT_WORK_SEQ",ds_Org.GetColumn(ds_Org.row,"SHIFT_WORK_SEQ")); 		
+		ds_Arfaci.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_Arfaci.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+
+		fn_Arfaci_Modify(); 	
+	}	
+	alert("등록/수정 되었습니다");
+	fn_CommonSearch();
+	
+}
+
+// 구간 체크 
+function fn_Block_Chk() 
+{
+	ds_bchk.ClearData();
+	
+	var ServiceId = "block_chk";
+	var ServicePart = "D10";
+	var Url = "handle.do?ServiceName=D1101020013F-service";
+	var InputDsList  = "";
+	var OutputDsList = "ds_bchk=ds_bchk";
+	var Argument  = "block_chk=1";
+	    Argument += " BLOCK_CD=" + quote(cob_block.Value);
+	
+	gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+	
+	if (ErrorCode < 0) 
+	{
+        
+		return;
+	}
+}
+
+
+function fn_CommonDeleteRow() 
+{
+    if (cob_jo.Value == "" || cob_jo.Value == null) 
+    {
+    
+        alert("조를 선택해주세요.");
+        return;
+    }
+    
+	if (ds_Empid.RowCount() > 0)
+	{
+		alert("조원정보가 존재합니다.. 조원정보 삭제를 먼저 하시기 바랍니다..");
+		return;
+	}
+	
+	if(confirm("삭제하시겠습니까?"))
+	{
+    	ds_Arfaci.ClearData();
+		if (ds_Org.GetColumn(ds_Org.row, "SHIFT_WORK_CD") == "10") 
+		{
+			ds_Arfaci.UpdateControl = false ;
+	
+			ds_Arfaci.AddRow();
+			ds_Arfaci.SetRowType(0, "update");		
+			ds_Arfaci.SetColumn(0, "SHIFT_WORK_CD", '');
+			ds_Arfaci.SetColumn(0, "SHIFT_WORK_SEQ", 0);
+			ds_Arfaci.SetColumn(0,"UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_Arfaci.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));		
+			ds_Arfaci.SetColumn(0, "BLOCK_CD", ds_Org.GetColumn(ds_Org.row, "BLOCK_CD"));
+		}
+    
+		
+		ds_Org.DeleteRow(ds_Org.row);
+		
+		var strSvcID        = "save_org";
+		var strPart         = "D10";	
+		var strURL          = "handle.do?ServiceName=D1101020012F-service";
+		var strInDatasets   = "ds_Org=ds_Org:u";
+		var strOutDatasets  = "";
+		var strArgument     = "save_org=1";
+			
+		gfn_SyncCall( 
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+		 
+		 if(ErrorCode < 0) 
+		 {
+			return;
+		 }
+		 else
+		 {
+			fn_Arfaci_Modify(); 
+		    alert("삭제되었습니다");
+			gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 삭제를"),"black",true);
+		 }
+	}	 
+}
+
+function fn_Arfaci_Modify() 
+{
+		var strSvcID        = "arfaci_modify";
+		var strPart         = "D10";	
+		var strURL          = "handle.do?ServiceName=D1101020012F-service";
+		var strInDatasets   = "ds_Arfaci=ds_Arfaci:u";
+		var strOutDatasets  = "";
+		var strArgument     = "arfaci_modify=1";
+			
+		gfn_SyncCall( 
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+		 
+		 if(ErrorCode < 0) 
+		 {
+			return;
+		 }
+}		 
+		 
+// 지사 콤보변경 이벤트 
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	gfn_D1_SetComboBox_Teamcd01("ds_Team",cob_BranchCd);
+	cob_team_OnChanged();
+	cob_jo_OnChanged();
+}
+
+function cob_team_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+    fn_search_block();
+   	cob_jo_OnChanged();
+}
+
+// 조 콤보변경 이벤트 
+function cob_jo_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	if(cob_jo.Value=="10")
+    {
+        Static7.Visible=true;
+		cob_block.Visible=true;
+    }
+    else
+    {
+        Static7.Visible=false;
+		cob_block.Visible=false;
+	}
+	fn_CommonSearch();
+}
+
+function ds_Org_OnRowPosChanged(obj,nOldRow,nRow)
+{
+	if(ds_Org.GetRowType(nRow) == "insert")
+	{
+		cob_block.Enable=true;
+	}
+	else
+	{
+		cob_block.Enable=false;
+	}
+	
+	ds_Empid.ClearData();
+	
+	var ServiceId = "search_empid";
+	var ServicePart = "D10";
+	var Url = "handle.do?ServiceName=D1101020012F-service";
+	var InputDsList  = "";
+	var OutputDsList = "ds_Empid=ds_Empid";
+	var Argument = "search_empid=1";
+	    Argument += " BRANCH_CD=" + quote(ds_Org.getcolumn(nRow, "BRANCH_CD"));
+        Argument += " TEAM_CD=" +  quote(ds_Org.getcolumn(nRow, "TEAM_CD"));
+        Argument += " SHIFT_WORK_CD=" +  quote(ds_Org.getcolumn(nRow, "SHIFT_WORK_CD"));
+		Argument += " SHIFT_WORK_SEQ=" +  quote(ds_Org.getcolumn(nRow, "SHIFT_WORK_SEQ"));
+//	var strCallbackFunc = "fn_D1_CallBack";		
+	
+//	trace("ds_num_OnRowPosChanged:"+ds_num.getcolumn(ds_num.Row, "BRANCH_CD"));
+
+	gfn_AsyncCall(ServiceId, 
+	             ServicePart, 
+	             Url, 
+	             InputDsList, 
+	             OutputDsList, 
+	             Argument//,
+				 //strCallbackFunc
+	             );
+}
+
+function btn_add_empid_OnClick(obj)
+{
+	if(ds_Empid.GetRowCount() == 0 )
+	{
+		return;
+	}	
+	
+	if(ds_Org.GetRowType(ds_Org.row) == "insert")
+	{
+		alert("조정보를 먼저 등록 후 조원정보를 등록하세요...");
+		return;
+	}	
+
+	for(var i=0; i<ds_Empid.GetRowCount();i++)
+	{
+		if(ds_Empid.GetColumn(ds_Empid.row,"SHIFT_WORKER_CD")==""||length(trim(ds_Empid.GetColumn(ds_Empid.row,"SHIFT_WORKER_CD")))==0)	
+		{
+			alert("조원정보 선택오류입니다. 조회 후 다시 등록하세요.");
+			return;
+		}
+			
+		if(ds_Empid.GetRowType(i) == 'insert')
+		{
+			ds_Empid.SetColumn(i, "BRANCH_CD", ds_Org.GetColumn(ds_Org.row,"BRANCH_CD"));
+			ds_Empid.SetColumn(i, "TEAM_CD", ds_Org.GetColumn(ds_Org.row,"TEAM_CD"));
+			ds_Empid.SetColumn(i, "SHIFT_WORK_CD", ds_Org.GetColumn(ds_Org.row,"SHIFT_WORK_CD"));
+			ds_Empid.SetColumn(i, "SHIFT_WORK_SEQ", ds_Org.GetColumn(ds_Org.row,"SHIFT_WORK_SEQ"));
+			ds_Empid.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_Empid.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+			ds_Empid.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_Empid.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		}
+	}
+			
+	var strSvcID        = "save_empid";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1101020012F-service";
+	var strInDatasets   = "ds_Empid=ds_Empid:u";
+	var strOutDatasets  = "";
+	var strArgument     = "save_empid=1";			
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	 
+	 if(ErrorCode < 0) 
+	 {
+		return;
+	 }
+	 else
+	 {
+		alert("저장 되었습니다");
+	 }
+}
+
+function btn_del_empid_OnClick(obj)
+{
+	if(ds_Empid.GetRowCount() == 0)
+	{
+		return;
+	}
+	
+    if(confirm("조원을 삭제하시겠습니까?"))
+    {
+		ds_Empid.DeleteRow(ds_Empid.ROW);
+    
+		var strSvcID        = "save_empid";
+		var strPart         = "D10";	
+		var strURL          = "handle.do?ServiceName=D1101020012F-service";
+		var strInDatasets   = "ds_Empid=ds_Empid:u";
+		var strOutDatasets  = "";
+		var strArgument     = "save_empid=1";			
+		
+		gfn_SyncCall( 	 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+		 
+		 if(ErrorCode < 0) 
+		 {
+			return;
+		 }
+		 else
+		 {
+		    alert("삭제되었습니다");
+			gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 삭제를"),"black",true);
+		 }
+	 }	
+}
+
+function ds_Org_OnLoadCompleted(obj,nErrorCode,strErrorMsg,nReason)
+{
+	if(nreason == 0) //반드시 0에서 로직 처리 0인경우가 DataSet을 모부 받은 경우입니다.
+	{
+		Grid0.SetFocus();
+		ds_Org.row = iGridPos;
+	}
+}
+]]></Script>
+</Window>

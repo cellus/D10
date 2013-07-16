@@ -1,0 +1,1531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1201010012F" Left="8" OnLoadCompleted="D1201010012F_OnLoadCompleted" PidAttrib="7" Title="분기별&#32;순찰계획&#32;등록_D1201010012F" Top="8" Ver="1.0" Width="1270" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Team"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_bungi">
+				<Contents>
+					<colinfo id="CD_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CD_NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CD_ID>1</CD_ID>
+						<CD_NAME>1분기</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>2</CD_ID>
+						<CD_NAME>2분기</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>3</CD_ID>
+						<CD_NAME>3분기</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>4</CD_ID>
+						<CD_NAME>4분기</CD_NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list">
+				<Contents></Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExcelData">
+				<Contents>
+					<colinfo id="EXCOL0" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL1" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL2" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL3" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL4" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL5" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL6" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL7" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL8" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL9" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL10" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXCOL11" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXCOL12" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXCOL13" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXCOL14" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXCOL15" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXCOL16" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXCOL17" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXCOL18" size="256" summ="default" type="STRING"/>
+					<record>
+						<EXCOL0></EXCOL0>
+						<EXCOL1></EXCOL1>
+						<EXCOL10></EXCOL10>
+						<EXCOL11></EXCOL11>
+						<EXCOL12></EXCOL12>
+						<EXCOL13></EXCOL13>
+						<EXCOL14></EXCOL14>
+						<EXCOL15></EXCOL15>
+						<EXCOL16></EXCOL16>
+						<EXCOL17></EXCOL17>
+						<EXCOL18></EXCOL18>
+						<EXCOL2></EXCOL2>
+						<EXCOL3></EXCOL3>
+						<EXCOL4></EXCOL4>
+						<EXCOL5></EXCOL5>
+						<EXCOL6></EXCOL6>
+						<EXCOL7></EXCOL7>
+						<EXCOL8></EXCOL8>
+						<EXCOL9></EXCOL9>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Count">
+				<Contents>
+					<colinfo id="NCOUNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Count1">
+				<Contents>
+					<colinfo id="MAX_QUARTER" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_delete">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PlanYmd">
+				<Contents>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAY_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Dummy">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="CYCLE_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CYCLE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="OLDFACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PlanWeek">
+				<Contents>
+					<colinfo id="DAY_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PlanDgree">
+				<Contents>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAY_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEGREE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_shift_cd">
+				<Contents>
+					<colinfo id="shift_work_cd" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_block"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CYCLE_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CYCLE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="OLDFACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Patrol">
+				<Contents>
+					<colinfo id="PATROL_CNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="75" Height="39" Id="Shape1" Left="2" LineColor="user7" Right="1262" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="16" Top="36" Type="RoundRect" Width="1260"></Shape>
+		<Shape BKColor="user8" Bottom="70" Height="29" Id="Shape2" Left="7" LineWidth="0" Right="1257" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="15" Top="41" Type="Rectangle" Width="1250"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_bungi" ImageID="btn_10_data" Left="1056" LeftMargin="21" OnClick="btn_bungi_OnClick" Style="button" TabOrder="1" Text="전&#32;분기데이타&#32;가져오기" Top="80" Visible="FALSE" Width="155"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button32" ImageID="btn_5_excel" Left="1169" LeftMargin="21" OnClick="btn_ExcelUp_OnClick" Style="button" TabOrder="2" Text="EXCEL등록" Top="80" Width="97"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button243" ImageID="btn_5_Amendment" Left="4" LeftMargin="21" OnClick="Button243_OnClick" Style="button" TabOrder="3" Text="시스템등록" Top="112" Visible="FALSE" Width="87"></Button>
+		<Combo BindDataset="ds_bungi" Border="Flat" CodeColumn="CD_ID" DataColumn="CD_NAME" Height="18" Id="cob_bungi" ImeMode="none" InnerDataset="ds_bungi" Left="811" Style="combo" TabOrder="4" Top="46" Width="80"></Combo>
+		<Spin Border="Flat" Height="18" Id="year" Left="711" Style="spin" TabOrder="5" Text="1" Top="47" Width="54"></Spin>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="508" LeftMargin="12" Style="blt_search" TabOrder="6" Text="구간" Top="47" Width="45"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_PBlockCd" InnerDataset="ds_block" Left="548" Style="combo" TabOrder="7" Top="46" Width="116"></Combo>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_Team" InnerDataset="ds_Team" Left="363" OnChanged="cob_Team_OnChanged" Style="combo" TabOrder="8" Top="46" Width="137"></Combo>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="671" LeftMargin="12" Style="blt_search" TabOrder="9" Text="년도" Top="47" Width="50"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="53" OnChanged="cob_BranchCd_OnChanged" Style="combo" TabOrder="10" Top="46" Width="105"></Combo>
+		<Image Align="Left" Height="18" Id="Image10" ImageID="blt" Left="773" LeftMargin="12" Style="blt_search" TabOrder="11" Text="분기" Top="47" Width="59"></Image>
+		<Shape BKColor="#6cbae1" Bottom="104" Height="3" Id="Shape0" Left="4" LineWidth="0" Right="1259" TabOrder="12" Top="101" Type="Rectangle" Width="1255"></Shape>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="337" LeftMargin="12" Style="blt_search" TabOrder="13" Text="팀" Top="47" Width="45"></Image>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="14" Text="지사" Top="46" Width="54"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="6" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="17" Text="Div0" Top="-1" Url="globals::ComHead.xml" Visible="FALSE" Width="1260">
+			<Contents></Contents>
+		</Div>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="1216" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="96" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1261" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="18" TabStop="true" Top="1120" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1256">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="91"/>
+						<col width="115"/>
+						<col width="118"/>
+						<col width="131"/>
+						<col width="151"/>
+						<col width="134"/>
+						<col width="125"/>
+						<col width="162"/>
+						<col width="90"/>
+						<col width="123"/>
+						<col width="100"/>
+						<col width="94"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="점검년도"/>
+						<cell col="1" display="text" text="점검분기"/>
+						<cell col="2" display="text" text="구간코드"/>
+						<cell col="3" display="text" text="시설물번호"/>
+						<cell col="4" display="text" text="계획일자"/>
+						<cell col="5" display="text" text="지사코드"/>
+						<cell col="6" display="text" text="팀코드"/>
+						<cell col="7" display="text" text="조코드"/>
+						<cell col="8" display="text" text="시설(도로)구분"/>
+						<cell col="9" display="text" text="순로"/>
+						<cell col="10" display="text" text="타블릿통신구분"/>
+						<cell col="11" display="text" text="점검구분"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CHK_YEAR" display="text"/>
+						<cell col="1" colid="CHK_QUARTER" display="text"/>
+						<cell col="2" colid="BLOCK_CD" display="text"/>
+						<cell col="3" colid="FACI_NUM" display="text"/>
+						<cell col="4" colid="PLAN_YMD" display="text"/>
+						<cell col="5" colid="BRANCH_CD" display="text"/>
+						<cell col="6" colid="TEAM_CD" display="text"/>
+						<cell col="7" colid="SHIFT_WORK_CD" display="text"/>
+						<cell align="center" col="8" colid="ROAD_FLAG" display="text"/>
+						<cell col="9" colid="ROUTE" display="text"/>
+						<cell col="10" colid="TABLET_COMM_FLAG" display="text"/>
+						<cell col="11" colid="CHK_FLAG" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_ExcelExport" ImageID="btn_8_Excel&#32;File&#32;creation" Left="1044" LeftMargin="21" OnClick="btn_ExcelExport_OnClick" Style="button" TabOrder="19" Text="EXCEL&#32;파일생성" Top="80" Width="121"></Button>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="162" LeftMargin="12" Style="blt_search" TabOrder="22" Text="시설물구분" Top="47" Width="73"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_FaciGubun" Left="236" Style="combo" TabOrder="21" Top="46" Width="97"></Combo>
+		<Image Align="Left" Height="18" Id="Image13" ImageID="blt" Left="5" LeftMargin="12" Style="blt_search" TabOrder="23" TabStop="FALSE" Text="등록일시&#32;:&#32;" Top="80" Width="67"></Image>
+		<Static Color="red" Height="13" Id="st_Reg" Left="77" Style="static" TabOrder="24" Top="82" Width="112"></Static>
+		<Grid AutoEnter="TRUE" BindDataset="ds_list" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="920" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="64" Id="grd_excel" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" Right="1263" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="26" TabStop="true" Top="856" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1255">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="60"/>
+						<col width="51"/>
+						<col width="97"/>
+						<col width="0"/>
+						<col width="85"/>
+						<col width="0"/>
+						<col width="112"/>
+						<col width="0"/>
+						<col width="180"/>
+						<col width="0"/>
+						<col width="0"/>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="0"/>
+						<col width="92"/>
+						<col width="245"/>
+						<col width="70"/>
+						<col width="61"/>
+						<col width="87"/>
+						<col width="0"/>
+						<col width="0"/>
+						<col width="0"/>
+						<col width="0"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="점검년도"/>
+						<cell col="1" display="text" text="점검분기"/>
+						<cell col="2" display="text" text="시설물구분"/>
+						<cell col="3" display="text" text="지사코드"/>
+						<cell col="4" display="text" text="지사"/>
+						<cell col="5" display="text" text="팀코드"/>
+						<cell col="6" display="text" text="팀"/>
+						<cell col="7" display="text" text="구간"/>
+						<cell col="8" display="text" text="구간명"/>
+						<cell col="9" display="text" text="시설물번호"/>
+						<cell col="10" display="text" text="상세번호"/>
+						<cell col="11" display="text" text="시설물번호"/>
+						<cell col="12" display="text" text="시설물명"/>
+						<cell col="13" display="text" text="계획일자"/>
+						<cell col="14" display="text" text="계획차수/요일"/>
+						<cell col="15" display="text" text="주소"/>
+						<cell col="16" display="text" text="주기구분"/>
+						<cell col="17" display="text" text="점검주기"/>
+						<cell col="18" display="text" text="구시설물번호"/>
+						<cell col="19" display="text" text="수정일시"/>
+						<cell col="20" display="text" text="수정IP"/>
+						<cell col="21" display="text" text="등록일시"/>
+						<cell col="22" display="text" text="등록IP"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CHK_YEAR" display="text"/>
+						<cell align="center" col="1" colid="CHK_QUARTER" display="text"/>
+						<cell align="center" col="2" colid="FACI_FLAG" display="text"/>
+						<cell align="center" col="3" colid="BRANCH_CD" display="text"/>
+						<cell align="center" col="4" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="5" colid="TEAM_CD" display="text"/>
+						<cell align="center" col="6" colid="TEAM_NM" display="text"/>
+						<cell col="7" colid="BLOCK_CD" display="text"/>
+						<cell align="center" col="8" colid="BLOCK_NM" display="text"/>
+						<cell col="9" colid="FACI_NUM" display="text"/>
+						<cell col="10" colid="DETAIL_NUM" display="text"/>
+						<cell align="center" col="11" colid="FACI_NO" display="text"/>
+						<cell align="left" col="12" colid="FACI_NM" display="text"/>
+						<cell col="13" colid="PLAN_YMD" display="date"/>
+						<cell align="center" col="14" colid="PLAN_YMD1" display="normal"/>
+						<cell col="15" colid="LOT_NUM_UNION" display="text"/>
+						<cell col="16" colid="CYCLE_CD" display="text"/>
+						<cell align="center" col="17" colid="CYCLE_FLAG" display="text"/>
+						<cell align="center" col="18" colid="OLDFACI_NUM" display="text"/>
+						<cell col="19" colid="UPD_EMPID" display="text"/>
+						<cell col="20" colid="UPD_IP" display="text"/>
+						<cell col="21" colid="CRT_EMPID" display="text"/>
+						<cell col="22" colid="CRT_IP" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Multi" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="848" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="744" Id="grd_list" InputPanel="FALSE" Left="4" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" NoDataText="계획&#32;내역이&#32;없습니다" OnExpandEdit="grd_list_OnExpandEdit" Right="1259" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="20" TabStop="true" Top="104" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1255">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="35"/>
+						<col width="60"/>
+						<col width="32"/>
+						<col width="65"/>
+						<col width="1"/>
+						<col width="70"/>
+						<col width="1"/>
+						<col width="108"/>
+						<col width="1"/>
+						<col width="133"/>
+						<col width="1"/>
+						<col width="0"/>
+						<col width="100"/>
+						<col width="81"/>
+						<col width="87"/>
+						<col width="56"/>
+						<col width="222"/>
+						<col width="56"/>
+						<col width="54"/>
+						<col width="71"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell bkcolor="user11" col="1" display="text" text="점검년도"/>
+						<cell bkcolor="user11" col="2" display="text" text="분기"/>
+						<cell col="3" display="text" text="시설물구분"/>
+						<cell col="4" display="text" text="지사코드"/>
+						<cell bkcolor="user11" col="5" display="text" text="지사"/>
+						<cell col="6" display="text" text="팀코드"/>
+						<cell bkcolor="user11" col="7" display="text" text="팀"/>
+						<cell col="8" display="text" text="구간"/>
+						<cell bkcolor="user11" col="9" display="text" text="구간명"/>
+						<cell col="10" display="text" text="시설물번호"/>
+						<cell col="11" display="text" text="상세번호"/>
+						<cell bkcolor="user11" col="12" display="text" text="시설물번호"/>
+						<cell col="13" display="text" text="시설물명"/>
+						<cell bkcolor="user11" col="14" display="text" text="계획일자"/>
+						<cell bkcolor="user11" col="15" display="text" text="계획요일"/>
+						<cell col="16" display="text" text="주소"/>
+						<cell col="17" display="text" text="점검주기"/>
+						<cell col="18" display="text" text="점검여부"/>
+						<cell col="19" display="text" text="점검일자"/>
+					</head>
+					<body>
+						<cell align="right" col="0" display="number" expr="rowindex+1"/>
+						<cell align="center" col="1" colid="CHK_YEAR" display="text"/>
+						<cell align="center" col="2" colid="CHK_QUARTER" display="text"/>
+						<cell align="center" col="3" colid="FACI_FLAG" display="text"/>
+						<cell align="center" col="4" colid="BRANCH_CD" display="text"/>
+						<cell align="center" col="5" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="6" colid="TEAM_CD" display="text"/>
+						<cell align="center" col="7" colid="TEAM_NM" display="text"/>
+						<cell col="8" colid="BLOCK_CD" display="text"/>
+						<cell align="center" col="9" colid="BLOCK_NM" display="text"/>
+						<cell col="10" colid="FACI_NUM" display="text"/>
+						<cell col="11" colid="DETAIL_NUM" display="text"/>
+						<cell align="center" col="12" colid="FACI_NO" display="text"/>
+						<cell align="left" col="13" colid="FACI_NM" display="text"/>
+						<cell col="14" colid="PLAN_YMD" display="date" expandimage="calendar" expandshow="true"/>
+						<cell align="center" col="15" colid="PLAN_YMD1" display="normal"/>
+						<cell col="16" colid="LOT_NUM_UNION" display="text"/>
+						<cell align="center" col="17" colid="CYCLE_FLAG" display="text"/>
+						<cell align="center" col="18" colid="CHK_FLAG" display="text"/>
+						<cell align="center" col="19" colid="PATROL_YMD" display="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Edit Align="RIGHT" Enable="FALSE" Height="20" Id="edt_work_day" Left="1087" TabOrder="27" Text="123" Top="46" Width="116"></Edit>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Dummy" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="1072" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="144" Id="Grid1" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" Right="1263" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="25" TabStop="true" Top="928" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1255">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="60"/>
+						<col width="55"/>
+						<col width="90"/>
+						<col width="0"/>
+						<col width="90"/>
+						<col width="0"/>
+						<col width="104"/>
+						<col width="0"/>
+						<col width="247"/>
+						<col width="0"/>
+						<col width="1"/>
+						<col width="100"/>
+						<col width="327"/>
+						<col width="100"/>
+						<col width="80"/>
+						<col width="277"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="0"/>
+						<col width="0"/>
+						<col width="0"/>
+						<col width="0"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="text" text="점검년도"/>
+						<cell bkcolor="user11" col="1" display="text" text="점검분기"/>
+						<cell col="2" display="text" text="시설물구분"/>
+						<cell col="3" display="text" text="지사코드"/>
+						<cell bkcolor="user11" col="4" display="text" text="지사"/>
+						<cell col="5" display="text" text="팀코드"/>
+						<cell bkcolor="user11" col="6" display="text" text="팀"/>
+						<cell col="7" display="text" text="구간"/>
+						<cell bkcolor="user11" col="8" display="text" text="구간명"/>
+						<cell col="9" display="text"/>
+						<cell col="10" display="text"/>
+						<cell bkcolor="user11" col="11" display="text" text="시설물번호"/>
+						<cell col="12" display="text" text="시설물명"/>
+						<cell bkcolor="user11" col="13" display="text" text="계획일자"/>
+						<cell bkcolor="user11" col="14" display="text" text="계획요일"/>
+						<cell col="15" display="text" text="주소"/>
+						<cell col="16" display="text"/>
+						<cell col="17" display="text" text="점검주기"/>
+						<cell col="18" display="text" text="조코드"/>
+						<cell col="19" display="text" text="순로"/>
+						<cell col="20" display="text" text="타블릿통신구분"/>
+						<cell col="21" display="text" text="점검구분"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CHK_YEAR" display="text"/>
+						<cell align="center" col="1" colid="CHK_QUARTER" display="text"/>
+						<cell align="center" col="2" colid="FACI_FLAG" display="text"/>
+						<cell align="center" col="3" colid="BRANCH_CD" display="text"/>
+						<cell align="center" col="4" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="5" colid="TEAM_CD" display="text"/>
+						<cell align="center" col="6" colid="TEAM_NM" display="text"/>
+						<cell col="7" colid="BLOCK_CD" display="text"/>
+						<cell align="center" col="8" colid="BLOCK_NM" display="text"/>
+						<cell col="9" colid="FACI_NUM" display="text"/>
+						<cell col="10" colid="DETAIL_NUM" display="text"/>
+						<cell align="center" col="11" colid="FACI_NO" display="text"/>
+						<cell align="left" col="12" colid="FACI_NM" display="text"/>
+						<cell col="13" colid="PLAN_YMD" display="date"/>
+						<cell align="center" col="14" colid="PLAN_YMD1" display="normal"/>
+						<cell col="15" colid="LOT_NUM_UNION" display="text"/>
+						<cell col="16" colid="CYCLE_CD" display="text"/>
+						<cell align="center" col="17" colid="CYCLE_FLAG" display="text"/>
+						<cell align="center" col="18" colid="SHIFT_WORK_CD" display="text"/>
+						<cell align="center" col="19" colid="ROUTE" display="text"/>
+						<cell align="center" col="20" colid="TABLET_COMM_FLAG" display="text"/>
+						<cell align="center" col="21" colid="CHK_FLAG" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Color="blue" Height="13" Id="st_Reg_empid" Left="278" Style="static" TabOrder="28" Top="82" Width="64"></Static>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="205" LeftMargin="12" Style="blt_search" TabOrder="29" TabStop="FALSE" Text="등록사번&#32;:&#32;" Top="80" Width="67"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_help" ImageID="btn_4_Further-info" Left="962" LeftMargin="21" OnClick="btn_help_OnClick" Style="button" TabOrder="30" Text="도움말" Top="80" Width="80"></Button>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1201010012F
+* Form 설명  : 분기별 순찰계획 등록
+* 시스템 명  : 안전공급
+* 작성자     : 권기철
+* 작성일     : 20010-09-14
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+
+//------------------------------------------------------------------------------- 
+// 함수명: D1201010012F_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+//   arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function D1201010012F_OnLoadCompleted(obj) 
+{
+	gfn_LoadForm(obj);
+	
+	gfn_D1_SetGrid_Sort(grd_list);
+	
+	gfn_SetGrdComboBox_Comcode("grd_list",3,"D10001");	//시설물구분
+	grd_list.SetCellProp("body",3,"Edit","none");
+	gfn_SetGrdComboBox_Comcode("grd_list",17,"D10222");	//시설물점검주기
+	grd_list.SetCellProp("body",17,"Edit","none");
+    // 콤보박스를 가져오는 공통함수 호출
+	 gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	 gfn_D1_SetComboBox_Comcode("D10001",gfn_setDsObject_Comcode("cob_FaciGubun"),"AP#DO#DU#DW#GV#LD#OP#SP#VT#VV#ZZ");
+	 cob_FaciGubun.index = 0;
+	
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") 
+	{
+	    cob_BranchCd.Index = 0;
+	} else 
+	{
+	    cob_BranchCd.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+	    cob_BranchCd.Enable = false;
+	}
+			
+	year.text  = substr(today(), 0, 4);
+	
+	if (substr(today(), 4, 2) == "01" || substr(today(), 4, 2) == "02" || substr(today(), 4, 2) == "03") {
+	    cob_bungi.Index = 0;
+	} else if (substr(today(), 4, 2) == "04" || substr(today(), 4, 2) == "05" || substr(today(), 4, 2) == "06") {
+	    cob_bungi.Index = 1;
+	} else if (substr(today(), 4, 2) == "07" || substr(today(), 4, 2) == "08" || substr(today(), 4, 2) == "09") {
+	    cob_bungi.Index = 2;
+	} else if (substr(today(), 4, 2) == "10" || substr(today(), 4, 2) == "11" || substr(today(), 4, 2) == "12") {
+	    cob_bungi.Index = 3;
+	}	
+	
+	cob_BranchCd_OnChanged();
+	cob_bungi_OnChanged();
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+    
+    //gfn_D1_SetComboBox_Teamcd("ds_Team",cob_BranchCd);
+    gfn_D1_SetComboBox_Teamcd01("ds_Team",cob_BranchCd);
+
+    if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") 
+    {
+	    cob_Team.Index = 1;
+	} else {
+	    cob_Team.value = gfn_GetGlobalValue("G_DEPT_CODE");
+	}
+    
+    cob_Team_OnChanged();
+    
+//    cob_FaciGubun_OnChanged();
+}  
+
+function cob_Team_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	gfn_D1_SetComboBox_Blockcd("ds_Block",cob_BranchCd,cob_Team);
+    cob_PBlockCd.Index = 0;
+}
+
+function cob_bungi_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	//해당분기에 대한 금무일수 표기
+	//	saveFlag = '';
+	//	edt_work_day.text = '23';
+}
+
+function fn_CommonSearch()
+{		
+	ds_Search.ClearData();
+	
+	ds_Multi.ClearData();
+	
+	var row = ds_Search.AddRow();
+
+	ds_Search.SetColumn(row,"CHK_YEAR",year.text);
+	ds_Search.SetColumn(row,"CHK_QUARTER",cob_bungi.Value);	
+	ds_Search.SetColumn(row,"BRANCH_CD",cob_BranchCd.Value);
+	ds_Search.SetColumn(row,"TEAM_CD",cob_Team.Value);	
+	ds_Search.SetColumn(row,"BLOCK_CD",cob_PBlockCd.Value);
+	ds_Search.SetColumn(row,"FACI_FLAG",cob_FaciGubun.Value);
+
+	var strSvcID = "find_plan";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1201010012F-service";
+	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "find_plan=1";
+
+	gfn_SyncCall( 
+					 strSvcID 
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument				  
+			   );
+				
+
+	st_Reg.Value = trim(ds_Multi.GetColumn(0, "CRT_DTM"));
+	st_Reg_empid.Value = trim(ds_Multi.GetColumn(0, "CRT_EMPID"));	
+		
+	grd_list.Editable = false;	
+}
+
+/********************************************************************************
+* 기      능   :  전분기 데이터 가져오기
+********************************************************************************/
+function btn_bungi_OnClick(obj) 
+{
+	var month = cob_bungi.Value;
+		
+	if (month == "1") {
+	
+		var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1201010011F-service"
+							+ "&CHK_YEAR="    + year.Value
+			                + "&BRANCH_CD="   + cob_BranchCd.Value
+							+ "&TEAM_CD="     + cob_Team.Value	
+							+ "&BLOCK_CD="    + cob_PBlockCd.Value
+							+ "&FACI_FLAG="   + cob_FaciGubun.Value                    
+							;
+		var InputDsList     = "";
+		var OutputDsList    = "ds_list=ds_list";
+		var Argument        = "find11";
+
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					);
+					
+	} else if (month == "2") {
+	    
+	    var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1201010011F-service"
+							+ "&CHK_YEAR="    + year.Value
+			                + "&BRANCH_CD="   + cob_BranchCd.Value
+							+ "&TEAM_CD="     + cob_Team.Value	
+							+ "&BLOCK_CD="    + cob_PBlockCd.Value
+							+ "&FACI_FLAG="   + cob_FaciGubun.Value                    
+							;
+		var InputDsList     = "";
+		var OutputDsList    = "ds_list=ds_list";
+		var Argument        = "find22";
+		
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					);	
+					
+	} else if (month == "3") {
+
+	    var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1201010011F-service"
+							+ "&CHK_YEAR="    + year.Value
+			                + "&BRANCH_CD="   + cob_BranchCd.Value
+							+ "&TEAM_CD="     + cob_Team.Value	
+							+ "&BLOCK_CD="    + cob_PBlockCd.Value
+							+ "&FACI_FLAG="   + cob_FaciGubun.Value                    
+							;
+		var InputDsList     = "";
+		var OutputDsList    = "ds_list=ds_list";
+		var Argument        = "find33";
+				
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					);
+					
+	} else if (month == "4") {
+	    
+	    var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1201010011F-service"
+							+ "&CHK_YEAR="    + year.Value
+			                + "&BRANCH_CD="   + cob_BranchCd.Value
+							+ "&TEAM_CD="     + cob_Team.Value	
+							+ "&BLOCK_CD="    + cob_PBlockCd.Value
+							+ "&FACI_FLAG="   + cob_FaciGubun.Value                    
+							;
+		var InputDsList     = "";
+		var OutputDsList    = "ds_list=ds_list";
+		var Argument        = "find44";
+		
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					);
+	}
+
+	if(ds_list.GetRowCount() == 0){
+		
+		var nCnt = parseInt(cob_bungi.Text) - 1;
+		
+		if(nCnt == 0){
+			nCnt = 4;
+		}
+		
+		alert(nCnt + "분기 순찰 계획 정보가 없습니다. ");
+		return;
+	}	
+	
+    Grid3.ExportExcel("sheet1");
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_ExcelExport_OnClick()
+// 설명: 엑셀 button 실행, 엑셀형식으로 변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function btn_ExcelExport_OnClick(obj)
+{	
+		ds_Search.ClearData();
+		
+		ds_list.ClearData();
+		
+		var row = ds_Search.AddRow();
+	
+		ds_Search.SetColumn(row,"CHK_YEAR",year.text);
+		ds_Search.SetColumn(row,"CHK_QUARTER",cob_bungi.Value);	
+		ds_Search.SetColumn(row,"BRANCH_CD",cob_BranchCd.Value);
+		ds_Search.SetColumn(row,"TEAM_CD",cob_Team.Value);	
+		ds_Search.SetColumn(row,"BLOCK_CD",cob_PBlockCd.Value);
+		ds_Search.SetColumn(row,"FACI_FLAG",cob_FaciGubun.Value);
+		
+		if(cob_PBlockCd.Value == '')
+		{
+			alert("엑셀파일 생성 구간을 선택하세요");
+			return;
+		}
+		
+		var str_STATUS = cob_FaciGubun.Value; // 시설물구분
+		if(str_STATUS == 'BH' || str_STATUS == 'RO' || str_STATUS == 'UC')
+		{
+			str_STATUS = "impor";
+		}
+		else if(str_STATUS == 'MD')
+		{
+			str_STATUS = "speci";
+		}
+
+		var strSvcID = "select";
+		var strPart  = "D10";
+		var strURL   = "handle.do?ServiceName=D1201010012F-service";
+		var strInDatasets  = "ds_Search=ds_Search";
+		var strOutDatasets  = "ds_list=ds_list";
+		var strArgument  = "select_"+str_STATUS+"=1";
+		
+		gfn_SyncCall( 
+						 strSvcID 
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument				  
+				   );					
+				
+		grd_excel.ExportExcel("sheet1");						
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_ExcelUp_OnClick
+// 설명: 엑셀 업로드 
+// arguments
+// 			없음
+// return: 없음
+//------------------------------------------------------------------------------- 
+function btn_ExcelUp_OnClick(obj)
+{		
+	if(cob_PBlockCd.Value == '')
+	{
+		alert("엑셀파일 등록할 구간을 선택하세요");
+		return;
+	}
+
+	var bungi = 0;
+	
+	if (substr(today(), 4, 2) == "01" || substr(today(), 4, 2) == "02" || substr(today(), 4, 2) == "03") {
+	    bungi = 1;
+	} else if (substr(today(), 4, 2) == "04" || substr(today(), 4, 2) == "05" || substr(today(), 4, 2) == "06") {
+	    bungi = 2;
+	} else if (substr(today(), 4, 2) == "07" || substr(today(), 4, 2) == "08" || substr(today(), 4, 2) == "09") {
+	    bungi = 3;
+	} else if (substr(today(), 4, 2) == "10" || substr(today(), 4, 2) == "11" || substr(today(), 4, 2) == "12") {
+	    bungi = 4;
+	}	
+	
+	// 2012.12.31 이건민 - 권기철 과장님 추가요청사항 (년도 체크 후 분기체크가 되도록 변경요청)
+	var year_temp = 0;
+	year_temp = substr(today(), 0, 4);
+	
+	if(year.Value < year_temp){
+		if(cob_bungi.Value < bungi)
+		{
+			alert("이미 지난 " + year.text + "년 " + cob_bungi.GetSelText() + "의 계획은 등록 불가합니다.");
+			return;
+		}
+	}
+	
+	/*
+	if(cob_bungi.Value < bungi)
+	{
+		alert("이미 지난 " + year.text + "년 " + cob_bungi.GetSelText() + "의 계획은 등록 불가합니다.");
+		return;
+	}
+	*/
+	
+	ds_Dummy.ClearData();
+	
+	alert("정압기 및 중앙직공급은 요일로 예) 월요일, 화요일..등\n
+중점관리 시설은 엑셀파일 생성 저장 후 엑셀등록 후 화면에서 일자를 등록하세요\n
+나머지는 차수를 등록해주세요 예) 1,2,3..등");
+	       
+	
+	var strColNms = "CHK_YEAR,CHK_QUARTER,FACI_FLAG,BRANCH_CD,BRANCH_NM,TEAM_CD,TEAM_NM,BLOCK_CD,BLOCK_NM,FACI_NUM,DETAIL_NUM,FACI_NO,FACI_NM,PLAN_YMD,PLAN_YMD1,LOT_NUM_UNION,CYCLE_CD,CYCLE_FLAG,OLDFACI_NUM";
+	
+	gfn_D1_UploadExcelData(ds_Dummy, Grid1, strColNms);
+
+	if(ds_Dummy.GetRowCount() == 0)
+	{
+		return;
+	}
+	else
+	{	
+		st_Reg.Value = '';
+		st_Reg_empid.Value = '';
+		
+		grd_list.Editable = true;
+	}
+		
+	var strFaciGubun = cob_FaciGubun.Value;	
+		
+	ds_Multi.ClearData();
+		
+	if(strFaciGubun != 'GR' && strFaciGubun != 'MD' &&
+	   strFaciGubun != 'RO' && strFaciGubun != 'UC' &&
+	   strFaciGubun != 'BH')
+	{		
+		fn_D1_findPlnYmd1();
+		ds_Multi.Copy("ds_Dummy");
+	}
+
+	ds_Multi.UpdateControl = false;
+	
+	for(var i=0 ; i < ds_Dummy.GetRowCount() ; i++)
+	{
+		var strWeek = trim(ds_Dummy.GetColumn(i, "PLAN_YMD1"));
+		
+		// 정압실(지역)과 중압직공급 점검주기는 주단위
+		if(strFaciGubun == 'GR' || strFaciGubun == 'MD')
+		{
+			if(ds_Dummy.GetColumn(i, "CYCLE_FLAG") == '10')  // 지구 정압기 1회/일
+			{ 
+				fn_D1_findPlnYmd1();
+				
+				for(var j=0 ; j<ds_PlanDgree.GetRowCount() ; j++){
+					var nRow = ds_Multi.AddRow();			
+					ds_Multi.CopyRow(nRow, "ds_Dummy", i, "");
+					ds_Multi.SetRowType(nRow, "insert");
+					
+					ds_Multi.SetColumn(nRow, "PLAN_YMD" , ds_PlanDgree.GetColumn(j, "PLAN_YMD"));
+					ds_Multi.SetColumn(nRow, "PLAN_YMD1", ds_PlanDgree.GetColumn(j, "DAY_NM"  ));
+				}
+			
+			}
+			else   //나머지 1회/주
+			{			
+				if( strWeek != '월요일' && strWeek != '화요일' && strWeek != '수요일' && strWeek != '목요일' && strWeek != '금요일')
+				{
+					alert("계획 요일 형식이 맞지 않습니다. 엑셀파일을 확인하세요. ex)월요일, 화요일");
+					return;
+				}
+				
+				fn_D1_findPlnYmd(strWeek);								
+							
+				for(var j=0 ; j<ds_PlanYmd.GetRowCount() ; j++)
+				{
+				
+					var nRow = ds_Multi.AddRow();			
+					ds_Multi.CopyRow(nRow, "ds_Dummy", i, "");
+					ds_Multi.SetRowType(nRow, "insert");			
+					ds_Multi.SetColumn(nRow, "PLAN_YMD" , ds_PlanYmd.GetColumn(j, "PLAN_YMD"));
+					ds_Multi.SetColumn(nRow, "PLAN_YMD1", ds_PlanYmd.GetColumn(j, "DAY_NM"  ));
+				}
+			}
+		}else if( strFaciGubun == 'RO' || strFaciGubun == 'UC' || strFaciGubun == 'BH')
+		{		
+			for(var j=0; j<3; j++)
+			{
+				var nRow = ds_Multi.AddRow();
+				ds_Multi.CopyRow(nRow, "ds_Dummy", i, "");
+				ds_Multi.SetRowType(nRow, "insert");
+			}
+		}
+		else
+		{					
+			if(gfn_IsNumber(strWeek) < 0 )
+			{
+				alert("계획 차수 형식이 맞지 않습니다. 엑셀파일을 확인하세요. ex)1, 2, 3");
+				return;
+			}
+			
+			var str_PlanYmd  = ''; 
+			var str_PlanWeek = ''; 
+						
+			for(var j=0 ; j<ds_PlanDgree.GetRowCount() ; j++){
+			
+				var str_Degree = ds_PlanDgree.GetColumn(j, "DEGREE");
+				
+				if(ds_Multi.GetColumn(i, "PLAN_YMD1") == str_Degree){
+					str_PlanYmd  = ds_PlanDgree.GetColumn(j, "PLAN_YMD");
+					str_PlanWeek = ds_PlanDgree.GetColumn(j, "DAY_NM"  );
+				}
+			}			
+			ds_Multi.SetRowType(i, "insert");			
+			ds_Multi.SetColumn(i , "PLAN_YMD" , str_PlanYmd);
+			ds_Multi.SetColumn(i , "PLAN_YMD1", str_PlanWeek);
+		}			
+	}
+	
+	alert("계획내역이 생성되었습니다..날짜 수정은 가능합니다..\n
+확인후 저장 하십시요");
+					
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_ExcelUp_OnClick
+// 설명: 엑셀로 작성한 시설물별 요일에 대한 계획일자 조회
+// arguments
+// 			없음
+// return: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_findPlnYmd(str_DayNm){
+	
+	ds_PlanYmd.ClearData();
+	
+	var str_Year    = year.Value;
+	var str_Quarter = cob_bungi.Value;
+	
+	var strPlanYmd_Str = '';
+	var strPlanYmd_End = '';
+
+	if (str_Quarter = 1) {
+		strPlanYmd_Str = str_Year + '0101';
+		strPlanYmd_End = str_Year + '0331';
+	} else if (str_Quarter = 2) {
+		strPlanYmd_Str = str_Year + '0401';
+		strPlanYmd_End = str_Year + '0630';
+	} else if (str_Quarter = 3) {
+		strPlanYmd_Str = str_Year + '0701';
+		strPlanYmd_End = str_Year + '0930';
+	} else if (str_Quarter = 4) {
+		strPlanYmd_Str = str_Year + '1001';
+		strPlanYmd_End = str_Year + '1231';
+	}
+	
+	var strSvcID       = "";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName=D1201010011F-service"
+	                   + "&MNG_DATE_START="   + strPlanYmd_Str
+	                   + "&MNG_DATE_END="     + strPlanYmd_End
+	                   + "&DAY_NM="     	  + str_DayNm
+	                   ;
+	                   
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_PlanYmd=ds_PlanYmd" ;
+	var strArgument     = "PlanYmdFind";
+	
+	gfn_SyncCall( 
+				 strSvcID
+			   , strPart
+			   , strURL
+			   , strInDatasets
+			   , strOutDatasets
+			   , strArgument
+		   );
+		   
+	var nRowCount = ds_PlanYmd.GetRowCount();
+	
+	for(var i=0; i<nRowCount; i++)
+	{
+		
+		var str_PlanYmd  = ds_PlanYmd.GetColumn(i, "PLAN_YMD");
+		
+	    var temp=0;
+	    var temp2=50;
+	    
+		for( temp; temp<temp2;temp++ )
+		{
+			if(gfn_Is_Holiday(str_PlanYmd) == 'Y')
+			{
+				str_PlanYmd = addDate(str_PlanYmd, -1);
+			}
+			else
+			{
+				ds_PlanYmd.SetColumn(i,"DAY_NM"  ,fn_D1_findPlnWeek(str_PlanYmd));
+				ds_PlanYmd.SetColumn(i,"PLAN_YMD",str_PlanYmd);
+				temp=50;
+				str_PlanYmd="";
+			}
+		}			
+	}
+	
+	//현재 분기 아닌 계획일자 삭제함
+	for(var i=nRowCount; i>=0; i--){		
+		var str_PlanYmd = ds_PlanYmd.GetColumn(i,"PLAN_YMD");
+		
+		if (str_Quarter == 1) {
+			if (str_PlanYmd < str_Year + '0101' || str_PlanYmd > str_Year + '0331') {
+				ds_PlanYmd.DeleteRow(i);
+			}
+		} else if (str_Quarter == 2) {
+			if (str_PlanYmd < str_Year + '0401' || str_PlanYmd > str_Year + '0630') {
+				ds_PlanYmd.DeleteRow(i);
+			}
+		} else if (str_Quarter == 3) {
+			if (str_PlanYmd < str_Year + '0701' || str_PlanYmd > str_Year + '0930') {
+				ds_PlanYmd.DeleteRow(i);
+			}
+		} else if (str_Quarter == 4) {
+			//if (str_PlanYmd > str_Year + '1001' || str_PlanYmd < str_Year + '1231') {
+			if (str_PlanYmd < str_Year + '1001' || str_PlanYmd > str_Year + '1231') {			
+				ds_PlanYmd.DeleteRow(i);
+			}
+		}
+	}
+}
+//-------------------------------------------------------------------------------
+// 함수명: btn_ExcelUp_OnClick
+// 설명: 엑셀로 작성한 시설물별 차수에 대한 계획일자 조회
+// arguments
+// 			없음
+// return: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_findPlnYmd1(){
+	
+	ds_PlanDgree.ClearData();
+	
+	var str_Year    = year.Value;
+	var str_Quarter = cob_bungi.Value;
+	
+	var strPlanYmd_Str = '';
+	var strPlanYmd_End = '';
+	
+	if (str_Quarter = 1) {
+		strPlanYmd_Str = str_Year + '0101';
+		strPlanYmd_End = str_Year + '0331';
+	} else if (str_Quarter = 2) {
+		strPlanYmd_Str = str_Year + '0401';
+		strPlanYmd_End = str_Year + '0630';
+	} else if (str_Quarter = 3) {
+		strPlanYmd_Str = str_Year + '0701';
+		strPlanYmd_End = str_Year + '0930';
+	} else if (str_Quarter = 4) {
+		strPlanYmd_Str = str_Year + '1001';
+		strPlanYmd_End = str_Year + '1231';
+	}
+		
+	var strSvcID       = "";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName=D1201010011F-service"
+	                   + "&MNG_DATE_START="   + strPlanYmd_Str
+	                   + "&MNG_DATE_END="     + strPlanYmd_End
+	                   ;
+	                   
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_PlanDgree=ds_PlanDgree" ;
+	var strArgument     = "PlanYmdFind1";
+	
+	gfn_SyncCall( 
+				 strSvcID
+			   , strPart
+			   , strURL
+			   , strInDatasets
+			   , strOutDatasets
+			   , strArgument
+		   );
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_ExcelUp_OnClick
+// 설명: 엑셀로 작성한 시설물별 계획일자에 대한 요일 조회
+// arguments
+// 			없음
+// return: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_findPlnWeek(str_PlanYmd){
+	
+	var strSvcID       = "";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName=D1201010011F-service"
+	                   + "&MNG_DATE=" + str_PlanYmd
+	                   ;
+	                   
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_PlanWeek=ds_PlanWeek" ;
+	var strArgument     = "PlanWeekFind";
+	
+	gfn_SyncCall( 
+				 strSvcID
+			   , strPart
+			   , strURL
+			   , strInDatasets
+			   , strOutDatasets
+			   , strArgument
+		   );
+		   
+	return ds_PlanWeek.GetColumn(0, "DAY_NM");
+}
+
+function fn_CommonSave()
+{
+	if(ds_Multi.GetRowCount() == 0){
+		alert("저장할 데이터가 존재하지 않습니다. ");
+		return;
+	}
+	
+	var month = cob_bungi.Value;
+
+	for(var i=0; i<ds_Multi.GetRowCount(); i++){		
+		var chkYear = ds_Multi.GetColumn(i,"CHK_YEAR");
+		if(Length(chkYear)!=4 || chkYear=="")
+		{
+			alert("점검년도 날짜 형식이 맞지 않습니다. 엑셀파일을 확인하세요. ");
+			return;
+		}
+				
+		var chkQuarter = ds_Multi.GetColumn(i,"CHK_QUARTER");
+		if(Length(chkQuarter)!=1 || chkQuarter=='' || chkQuarter != month)
+		{
+			alert("점검분기 형식이 맞지 않습니다. 엑셀파일을 확인하세요. ");
+			return;
+		}
+				
+		var chkBranchCd = ds_Multi.GetColumn(i,"BRANCH_CD");
+		if(Length(chkBranchCd)!=6 || chkBranchCd=='' || chkBranchCd != cob_BranchCd.Value)
+		{
+			alert("지사코드 형식이 맞지 않습니다. 엑셀파일을 확인하세요. ");
+			return;
+		}
+		
+		
+		// if(cob_FaciGubun.value == 'GR' || cob_FaciGubun.value == 'VB' || cob_FaciGubun.value == 'TB')
+		// {
+			var chkTeamCd = ds_Multi.GetColumn(i,"TEAM_CD");
+			if(Length(chkTeamCd)!=6 || chkTeamCd=='' || chkTeamCd != cob_Team.Value)
+			{
+				alert("팀코드 형식이 맞지 않습니다. 엑셀파일을 확인하세요. ");
+				return;
+			}
+			
+			var chkBlockCd = ds_Multi.GetColumn(i,"BLOCK_CD");
+			if(Length(chkBlockCd)!=8 || chkBlockCd=='' || chkBlockCd != cob_PBlockCd.Value)
+			{
+				alert("구간코드 형식이 맞지 않습니다. 엑셀파일을 확인하세요. ");
+				return;
+			}
+		//}
+			
+		var chkFaciNum = ds_Multi.GetColumn(i,"FACI_NUM");
+		if(Length(chkFaciNum)!=8 || chkFaciNum=='' || substr(chkFaciNum, 0, 2) != cob_FaciGubun.Value)
+		{
+			alert("시설물 번호 형식이 맞지 않습니다. 엑셀파일을 확인하세요. ");
+			return;
+		}
+		
+		for(var j=0; j<i; j++){
+			if(ds_Multi.GetColumn(i, "FACI_NO") == ds_Multi.GetColumn(j, "FACI_NO")){
+				if(ds_Multi.GetColumn(i, "PLAN_YMD") == ds_Multi.GetColumn(j, "PLAN_YMD")){
+					alert("중복된 시설물번호에 중복된 계획일자 정보가 존재합니다. 엑셀파일을 확인하세요. ");
+					return;
+				}
+			}
+		}
+		
+		var chkPlanYmd = ds_Multi.GetColumn(i,"PLAN_YMD");
+		
+		if(Length(chkPlanYmd)!=8 || chkPlanYmd=='')
+		{
+			alert("계획날짜 형식이 맞지 않습니다. 엑셀파일을 확인하세요. ");
+			return;
+		}
+	}
+
+	if(fn_D1_Count() > 0)
+	{
+		alert(month + "분기 " + cob_FaciGubun.Text + " 계획정보는 이미 등록되어 있습니다. \n데이터를 조회하십시오. ");
+		return;
+	}
+	
+		
+	for(var i=0; i<ds_Multi.GetRowCount(); i++){
+		
+		var str_PLAN_M = substr(ds_Multi.GetColumn(i, "PLAN_YMD"), 4, 2);
+				
+		var month = cob_bungi.Value;
+			
+		if(month == '1'){
+			if(str_PLAN_M == '01' || str_PLAN_M == '02' || str_PLAN_M == '03'){				
+			}else{ 
+				alert("1분기에 해당하는 계획일자만 등록 가능합니다. ");
+				return;
+			}				
+		}else if(month == '2'){
+			if(str_PLAN_M == '04' || str_PLAN_M == '05' || str_PLAN_M == '06'){			
+			}else{ 
+				alert("2분기에 해당하는 계획일자만 등록 가능합니다. ");
+				return;
+			}		
+		}else if(month == '3'){
+			if(str_PLAN_M == '07' || str_PLAN_M == '08' || str_PLAN_M == '09'){			
+			}else{ 
+				alert("3분기에 해당하는 계획일자만 등록 가능합니다. ");
+				return;
+			}		
+		}else if(month == '4'){
+			if(str_PLAN_M == '10' || str_PLAN_M == '11' || str_PLAN_M == '12'){		
+			}else{ 
+				alert("4분기에 해당하는 계획일자만 등록 가능합니다. ");
+				return;
+			}			
+		}		
+	}		
+	
+	var strSvcID         = "save_plan";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1201010012F-service";					
+	var strInDatasets    = "ds_Multi=ds_Multi:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_plan=1";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+	
+	if(ErrorCode<0)
+	{
+		return;
+	}
+
+	alert("계획이 정상 저장 되었습니다.");
+	
+	fn_CommonSearch();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Count()
+//   설명  :  해당 분기 등록 여부
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Count()
+{	
+	var month = cob_bungi.Value;
+	
+    var strSvcID       = "";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName=D1201010012F-service"
+	                   + "&BRANCH_CD="   + cob_BranchCd.Value
+	                   + "&TEAM_CD="     + cob_Team.Value
+	                   + "&BLOCK_CD="    + cob_PBlockCd.Value
+	                   + "&CHK_YEAR="    + year.Value
+	                   + "&CHK_QUARTER=" + month
+					   + "&FACI_FLAG="   + cob_FaciGubun.Value
+	                   ;
+	                    
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Count=ds_Count";
+	var strArgument     = "count";
+	
+	gfn_SyncCall( 
+				 strSvcID
+			   , strPart
+			   , strURL
+			   , strInDatasets
+			   , strOutDatasets
+			   , strArgument
+		   );
+	 	
+	if(ds_Count.GetColumn(0, "NCOUNT") == '0' ){ return 0; } else { return 1; }
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Count()
+//   설명  :  마지막 분기 정보 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Count1()
+{	    
+    var strSvcID    = "";
+	var strPart     = "D10";
+	var strURL      = "handle.do?ServiceName=D1201010012F-service"
+	                + "&CHK_YEAR="    + year.Value
+	                ;
+	                    
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Count1=ds_Count1";
+	var strArgument     = "count1";
+	
+	gfn_SyncCall( 
+				 strSvcID
+			   , strPart
+			   , strURL
+			   , strInDatasets
+			   , strOutDatasets
+			   , strArgument
+		   );
+		   
+	return ds_Count1.GetColumn(0, "MAX_QUARTER");
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonDeleteRow()
+// 설명: 마지막으로 등록된 분기 정보만을 삭제 한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonDeleteRow()
+{
+	if(ds_Multi.RowCount() == 0)
+	{
+		return;
+	}
+		
+	var bungi = 0;
+	
+	if (substr(today(), 4, 2) == "01" || substr(today(), 4, 2) == "02" || substr(today(), 4, 2) == "03") {
+	    bungi = 1;
+	} else if (substr(today(), 4, 2) == "04" || substr(today(), 4, 2) == "05" || substr(today(), 4, 2) == "06") {
+	    bungi = 2;
+	} else if (substr(today(), 4, 2) == "07" || substr(today(), 4, 2) == "08" || substr(today(), 4, 2) == "09") {
+	    bungi = 3;
+	} else if (substr(today(), 4, 2) == "10" || substr(today(), 4, 2) == "11" || substr(today(), 4, 2) == "12") {
+	    bungi = 4;
+	}	
+
+	fn_patrol_Count();
+	
+	if(ds_Patrol.GetColumn(0, "PATROL_CNT") > 0)
+	{
+		alert(cob_FaciGubun.Text + '의 ' + year.text + "년 " + cob_bungi.GetSelText() + "의 실적이 등록되어 삭제가 불가합니다.");
+		return;	
+	}
+	else if(cob_bungi.Value < bungi)
+	{
+		alert("이미 지난 " + year.text + "년 " + cob_bungi.GetSelText() + "의 계획 삭제는 불가합니다.");
+		return;
+	}	
+	else if(Confirm("데이터를 삭제 하시겠습니까? "))
+	{
+		ds_Multi.ClearData();
+		ds_Multi.AddRow();
+		
+		ds_Multi.SetColumn(0, "BRANCH_CD"  , cob_BranchCd.Value   );
+		ds_Multi.SetColumn(0, "TEAM_CD"    , cob_Team.Value       );
+		ds_Multi.SetColumn(0, "BLOCK_CD"   , cob_PBlockCd.Value   );
+		ds_Multi.SetColumn(0, "CHK_YEAR"   , year.Value		   );
+		ds_Multi.SetColumn(0, "CHK_QUARTER", cob_bungi.Value   );
+		ds_Multi.SetColumn(0, "FACI_FLAG"  , cob_FaciGubun.Value  );
+	
+		ds_Multi.UpdateControl = false;
+		ds_Multi.SetRowType(0, "delete");
+				
+		var strSvcID         = "save_plan";
+		var strPart          = "D10";	
+		var strURL           = "handle.do?ServiceName=D1201010012F-service";					
+		var strInDatasets    = "ds_Multi=ds_Multi:u";
+		var strOutDatasets   = "";		
+		var strArgument      = "save_plan=1";
+	
+		gfn_syncCall( 
+						 strSvcID
+					   , strPart  	 
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+					);
+		
+		if(ErrorCode<0)
+		{
+			return;
+		}
+	
+		alert("계획이 정상 삭제 되었습니다.");
+		
+		fn_CommonSearch();
+	}
+}
+
+function fn_patrol_Count()
+{	
+	ds_Search.ClearData();
+	
+	ds_Patrol.ClearData();
+	
+	var row = ds_Search.AddRow();
+
+	ds_Search.SetColumn(row,"CHK_YEAR",year.text);
+	ds_Search.SetColumn(row,"CHK_QUARTER",cob_bungi.Value);	
+	ds_Search.SetColumn(row,"BRANCH_CD",cob_BranchCd.Value);
+	ds_Search.SetColumn(row,"TEAM_CD",cob_Team.Value);	
+	ds_Search.SetColumn(row,"BLOCK_CD",cob_PBlockCd.Value);
+	ds_Search.SetColumn(row,"FACI_FLAG",cob_FaciGubun.Value);
+
+	var strSvcID = "patrol_cnt";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1201010012F-service";
+	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Patrol=ds_Patrol";
+	var strArgument  = "patrol_cnt=1";
+		
+	gfn_SyncCall( 
+					 strSvcID 
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument				  
+			   );
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Delete()
+//   설명  :  분기별 순찰 등록 내역 삭제
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function grd_list_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+	var str_PlanYmd = ds_Multi.GetColumn(nRow, "PLAN_YMD" );
+	var str_PlanNm  = ds_Multi.GetColumn(nRow, "PLAN_YMD1");
+	
+	gfn_SetCalendar(obj, nRow, nCell);
+		 
+	var str_HoliDay = gfn_Bank_Holiday(ds_Multi.GetColumn(nRow, "PLAN_YMD"));			
+				
+	if(str_HoliDay == 'Y'){
+		alert("휴일 일자는 등록하실 수 없습니다. ");
+		ds_Multi.SetColumn(nRow, "PLAN_YMD" , str_PlanYmd);
+		ds_Multi.SetColumn(nRow, "PLAN_YMD1", str_PlanNm);
+		return;
+	}
+	
+	ds_Multi.SetColumn(nRow,"PLAN_YMD1",fn_D1_findPlnWeek(ds_Multi.GetColumn(nRow, "PLAN_YMD")));
+}
+
+
+function btn_help_OnClick(obj)
+{
+	alert("정압기 및 중앙직공급은 계획차수/요일란에 요일로 예) 월요일, 화요일..등\n
+지구 및 지역정압실은 자동체크되어 계획이 생성됩니다. 시작 요일만 등록하세요\n
+중점관리 시설은 엑셀파일 생성 저장 후 엑셀등록 후 화면에서 일자를 등록하세요\n
+(계획차수/요일란 미작성)\n
+나머지는 계획차수/요일란에 차수를 등록해주세요 예) 1,2,3..등\n
+정압실,밸브박스,테스트박스를 제외한 시설물은 지사 전체로 엑셀자료 생성후\n
+계획 수립을 하세요..");
+}
+
+// function cob_FaciGubun_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+// {
+	// if(cob_FaciGubun.value == 'GR' || cob_FaciGubun.value == 'VB' || cob_FaciGubun.value == 'TB')
+	// {
+		// cob_Team.Enable = true;
+		// cob_PBlockCd.Enable = true;	
+		// cob_Team.index = 1;
+		// cob_PBlockCd.index = 0;		
+	// }
+	// else
+	// {
+		// cob_Team.Value = '';
+		// cob_PBlockCd.Value = '';
+		// cob_Team.Enable = false;
+		// cob_PBlockCd.Enable = false;
+	// }
+// }
+]]></Script>
+</Window>

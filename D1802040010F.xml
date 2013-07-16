@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1802040010F" Left="8" OnLoadCompleted="D1802040010F_OnLoadCompleted" PidAttrib="7" Title="도로상&#32;점용&#32;정압실&#32;상세조회_D1802040010F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_GovRtu">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="OBJECT_FLAG" size="256" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" type="STRING"/>
+					<colinfo id="LEASE_FACI_FLAG" size="256" type="STRING"/>
+					<colinfo id="OLD_NEW_FLAG" size="256" type="STRING"/>
+					<colinfo id="AREA_CD" size="256" type="STRING"/>
+					<colinfo id="AREA_NM" size="256" type="STRING"/>
+					<colinfo id="INST_LOC" size="256" type="STRING"/>
+					<colinfo id="COMPL_YMD" size="256" type="STRING"/>
+					<colinfo id="INST_FLAG" size="256" type="STRING"/>
+					<colinfo id="SQUARE" size="256" type="STRING"/>
+					<colinfo id="FACI_CNT" size="256" type="STRING"/>
+					<colinfo id="INCOME_FLAG" size="256" type="STRING"/>
+					<colinfo id="LEASE_LOC" size="256" type="STRING"/>
+					<colinfo id="PUBLIC_PRC" size="256" type="STRING"/>
+					<colinfo id="EXPECT_LEASE_AMT" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1000" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="30" Type="RoundRect" Width="995"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="995" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="35" Type="Rectangle" Width="985"></Shape>
+		<Shape BKColor="#6cbae1" Bottom="95" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1000" TabOrder="2" Top="92" Type="Rectangle" Width="995"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_GovRtu" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="577" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="482" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1000" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="95" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="120"/>
+						<col width="150"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="102"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="순번"/>
+						<cell col="1" display="text" text="GIS_ID"/>
+						<cell col="2" display="text" text="준공일자"/>
+						<cell col="3" display="text" text="지역"/>
+						<cell col="4" display="text" text="설치위치"/>
+						<cell col="5" display="text" text="설치구분"/>
+						<cell col="6" display="text" text="면적"/>
+						<cell col="7" display="text" text="수입구분"/>
+						<cell col="8" display="text" text="점용위치"/>
+						<cell col="9" display="text" text="공시지가"/>
+						<cell col="10" display="text" text="예상점용료"/>
+					</head>
+					<body>
+						<cell col="0" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="COMPL_YMD" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="AREA_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="INST_LOC" display="text"/>
+						<cell align="center" col="5" colid="INST_FLAG" display="text"/>
+						<cell align="center" col="6" colid="SQUARE" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="7" colid="INCOME_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="8" colid="LEASE_LOC" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="9" colid="PUBLIC_PRC" display="currency"/>
+						<cell col="10" colid="EXPECT_LEASE_AMT" display="currency"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="3" Text="정압실&#32;점용&#32;상세내역" Top="75" Width="270"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="6" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="995">
+			<Contents></Contents>
+		</Div>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear" Left="85" Min="0" Style="spin" TabOrder="12" Text="2008" Top="41" Width="54"></Spin>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" Left="220" Style="combo_indis" TabOrder="9" Top="39" Width="140"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_LeaseFaciFlag" Left="433" Style="combo_indis" TabOrder="11" Top="39" Width="140"></Combo>
+		<Image Align="Left" Height="10" Id="Image7" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search" TabOrder="7" Text="기준년도" Top="46" Width="84"></Image>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="155" LeftMargin="12" Style="blt_search" TabOrder="8" Text="대상구분" Top="46" Width="95"></Image>
+		<Image Align="Left" Height="6" Id="Image10" ImageID="blt" Left="370" LeftMargin="12" Style="blt_search" TabOrder="10" Text="점용구분" Top="46" Width="84"></Image>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802040010F.xml
+* Form 설명  : 도로상 점용 정압실 상세 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-12
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+function D1802040010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	//fn_E3_Find();  //  초기조회
+}
+
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	//gfn_SetButton("0011011");
+	
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_SetComboBox_Comcode("",gfn_setDsObject_Comcode("cob_ObjectFlag"   ));
+	gfn_SetComboBox_Comcode("B20023",gfn_setDsObject_Comcode("cob_LeaseFaciFlag"));
+		
+	//-----------------------------------------
+	//  콤보박스의 초기 설정 : 기준년도
+	//-----------------------------------------
+	cob_BaseYear.Value      = Substr(Today(),0,4)+"년";
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	/*
+	if(cob_ObjectFlag.Index == -1){	
+		alert("대상구분을 지정하여 주십시오. ");
+		return;
+	}
+	
+	if(cob_LeaseFaciFlag.Index == -1){
+		alert("점용구분을 지정하여 주십시오. ");
+		return 
+	}
+	*/
+	fn_D10_Find();
+}
+
+function fn_CommonExcelExport(){
+	Grid0.ExportExcel("sheet1"); 
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_FindPipeVelveList()
+//   설명  : 도로상 점용 정압실 RTU 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D10_Find()
+{	
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_RoadLeaseGovemDetaSearMgr-service&BASE_YEAR=" + cob_BaseYear.Value + "&OBJECT_FLAG=" + '1' + "&LEASE_FACI_FLAG=" + '1';//cob_LeaseFaciFlag.Value ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_GovRtu=ds_GovRtu";
+	var strArgument     = "find";
+		
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_GovRtu.GetRowCount()==0) trace("조회결과가 없습니다.");
+	trace(ds_GovRtu.SaveXML());
+}]]></Script>
+</Window>

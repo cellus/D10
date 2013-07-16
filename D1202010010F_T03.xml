@@ -1,0 +1,1471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="696" Id="D1202010010F_T03" Left="8" OnLoadCompleted="D1202010010F_T03_OnLoadCompleted" OnUnloadCompleted="D1202010010F_T03_OnUnloadCompleted" PidAttrib="7" Title="밸브순찰점검등록_D1202010010F_T03" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_ValveBox" OnLoadCompleted="ds_ValveBox_OnLoadCompleted" OnRowPosChanged="ds_ValveBox_OnRowPosChanged"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ValveSave">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALVE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_VALVE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEAK_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_STS_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="OUTWARD_STS_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="VBOX_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="PREVI_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LATER_ELEC_POT" size="256" summ="default" type="STRING"/>
+					<colinfo id="BONDING" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOV_LST" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_REQ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID2" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID3" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID2_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID3_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="IN_VALVE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALVE_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Vbcnt">
+				<Contents></Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static22" Left="110" Style="table" TabOrder="54" Top="330" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="ZIP_NO2" Enable="FALSE" Height="18" Id="Edit21" ImeMode="none" Left="190" Style="edit" TabOrder="31" Top="332" Visible="FALSE" Width="38"></Edit>
+		<Static Height="13" Id="Static20" Left="182" Style="static" TabOrder="30" Text="-" Top="335" Visible="FALSE" Width="10"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="ZIP_NO1" Enable="FALSE" Height="18" Id="Edit14" ImeMode="none" Left="143" Style="edit" TabOrder="29" Top="332" Visible="FALSE" Width="38"></Edit>
+		<Shape BKColor="user15" Bottom="23" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1248" TabOrder="2" Top="20" Type="Rectangle" Width="1243"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_ValveBox" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="264" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="241" Id="grd_Multi1" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" NoDataText="조회된&#32;밸브박스내역이&#32;없습니다." OnCellClick="grd_Multi1_OnCellClick" Right="1248" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="23" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1243">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="40"/>
+						<col width="108"/>
+						<col width="98"/>
+						<col width="115"/>
+						<col width="132"/>
+						<col width="66"/>
+						<col width="250"/>
+						<col width="0"/>
+						<col width="76"/>
+						<col width="81"/>
+						<col width="76"/>
+						<col width="80"/>
+						<col width="95"/>
+						<col width="28"/>
+						<col width="18"/>
+						<col width="31"/>
+						<col width="0"/>
+						<col width="0"/>
+						<col width="20"/>
+						<col width="25"/>
+						<col width="20"/>
+						<col width="25"/>
+						<col width="20"/>
+						<col width="30"/>
+						<col width="60"/>
+						<col width="86"/>
+						<col width="83"/>
+						<col width="86"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="내용년수"/>
+						<cell col="1" display="text" text="NO"/>
+						<cell col="2" display="text" text="밸브&#32;번호"/>
+						<cell col="3" display="text" text="구&#32;밸브박스번호"/>
+						<cell col="4" display="text" text="팀"/>
+						<cell col="5" display="text" text="구간"/>
+						<cell col="6" display="text" text="시/구"/>
+						<cell col="7" display="text" text="주소"/>
+						<cell col="8" display="text"/>
+						<cell col="9" display="text" text="밸브압력"/>
+						<cell col="10" display="text" text="전위측정대상"/>
+						<cell col="11" display="text" text="계획일자"/>
+						<cell col="12" display="text" text="최근점검일자"/>
+						<cell col="13" display="text" text="공사번호"/>
+						<cell col="14" colspan="3" display="text" text="공사정보조회"/>
+						<cell col="17" display="text" text="시설물카드"/>
+						<cell col="18" display="text"/>
+						<cell col="19" colspan="3" display="text" text="시설물카드"/>
+						<cell col="22" colspan="3" display="text" text="GIS위치보기"/>
+						<cell col="25" display="text" text="MOV여부"/>
+						<cell col="26" display="text" text="MOV명"/>
+						<cell col="27" display="text" text="밸브박스재질"/>
+						<cell col="28" display="text" text="시설(도로)구분"/>
+						<cell col="29" display="text" text="밸브종류"/>
+						<cell col="30" display="text" text="밸브재질"/>
+						<cell col="31" display="text" text="절연방법"/>
+						<cell col="32" display="text" text="밸브노출"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" display="text" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="2" colid="FACI_VALVE_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="OLDFACI_NUM" display="text"/>
+						<cell align="center" col="4" colid="TEAM_NM" display="text"/>
+						<cell align="left" col="5" colid="BLOCK_NM" display="text"/>
+						<cell align="center" col="6" colid="GU" display="text"/>
+						<cell align="left" col="7" colid="LOT_NUM_UNION" display="text"/>
+						<cell col="8" display="text"/>
+						<cell col="9" colid="PRESS" display="text"/>
+						<cell align="center" col="10" colid="ELECT_POT_MEAS_OBJ_YN" display="text"/>
+						<cell align="center" col="11" colid="PLAN_YMD" display="date"/>
+						<cell align="center" col="12" colid="PATROL_YMD" display="date"/>
+						<cell align="center" col="13" colid="WORK_NUM" display="text"/>
+						<cell col="14" display="text"/>
+						<cell col="15" colid="WORK_INFO" display="text" expandimage="search" expandshow="true"/>
+						<cell col="16" display="text"/>
+						<cell col="17" display="text"/>
+						<cell col="18" display="text" expandimage="search" expandshow="true" expandsize="17"/>
+						<cell col="19" colid="FACI_CARD" colspan="3" display="text">
+							<cell col="0" display="text"/>
+							<cell col="1" display="text" expandimage="search" expandshow="true"/>
+							<cell col="2" display="text"/>
+						</cell>
+						<cell col="22" colid="GIS_POSITION" colspan="3" display="text">
+							<cell col="0" display="text"/>
+							<cell col="1" display="text" expandimage="search" expandshow="true" expandsize="17"/>
+							<cell col="2" display="text"/>
+						</cell>
+						<cell align="center" col="25" colid="MOV_YN" display="text"/>
+						<cell col="26" colid="MOV_NM" display="text"/>
+						<cell align="center" col="27" colid="VBOX_MATER_FLAG" display="text"/>
+						<cell align="center" col="28" colid="ROAD_FLAG" display="text"/>
+						<cell col="29" colid="VALVE_KIND" display="text"/>
+						<cell col="30" colid="VALVE_MATER_FLAG" display="text"/>
+						<cell col="31" display="text"/>
+						<cell align="center" col="32" colid="VBOX_EXPOS_FLAG" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="13" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="3" Text="점검&#32;등록&#32;및&#32;이력(해당년도분)" Top="471" Width="203"></Image>
+		<Shape BKColor="user15" Bottom="490" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="1248" TabOrder="5" Top="487" Type="Rectangle" Width="1243"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_ValveSave" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="687" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="199" Id="grd_MultiSave" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" NoDataText="순찰점검&#32;내역이&#32;없습니다." OnCellClick="grd_MultiSave_OnCellClick" OnCellDBLClick="grd_MultiSave_OnCellDblClick" OnCellPosChanged="grd_MultiSave_OnCellPosChanged" Right="1251" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="4" TabStop="true" Top="488" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1243">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="40"/>
+						<col fix="left" width="90"/>
+						<col fix="left" width="83"/>
+						<col fix="left" width="65"/>
+						<col fix="left" width="53"/>
+						<col fix="left" width="80"/>
+						<col fix="left" width="57"/>
+						<col fix="left" width="54"/>
+						<col width="55"/>
+						<col width="54"/>
+						<col width="25"/>
+						<col width="55"/>
+						<col width="25"/>
+						<col width="58"/>
+						<col width="25"/>
+						<col width="60"/>
+						<col width="69"/>
+						<col width="233"/>
+						<col width="65"/>
+						<col width="60"/>
+						<col width="62"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="내용년수"/>
+						<cell col="1" display="text" text="NO"/>
+						<cell col="2" display="text" text="밸브번호"/>
+						<cell bkcolor="user11" col="3" display="text" text="점검일자"/>
+						<cell col="4" display="text" text="계획일자"/>
+						<cell col="5" display="text" text="결재상태"/>
+						<cell col="6" display="text" text="순찰점검구분"/>
+						<cell col="7" display="text" text="누출여부"/>
+						<cell col="8" display="text" text="작동상태"/>
+						<cell col="9" display="text" text="외관상태"/>
+						<cell col="10" display="text" text="박스상태"/>
+						<cell col="11" colspan="2" display="text" text="전단전위(mV)"/>
+						<cell col="13" colspan="2" display="text" text="후단전위(mV)"/>
+						<cell col="15" colspan="2" display="text" text="본딩전위(mV)"/>
+						<cell bkcolor="user11" col="17" display="text" text="MOV점검표"/>
+						<cell col="18" display="text" text="특이사항"/>
+						<cell col="19" display="text" text="점검자&#32;1"/>
+						<cell col="20" display="text" text="점검자&#32;2"/>
+						<cell col="21" display="text" text="점검자&#32;3"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" display="text" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="2" colid="FACI_VALVE_NUM" display="text"/>
+						<cell col="3" colid="PATROL_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="PLAN_YMD" display="date"/>
+						<cell align="center" col="5" colid="DECIDE_PROC_STS" display="text"/>
+						<cell align="center" col="6" colid="CHK_FLAG" display="combo"/>
+						<cell align="center" col="7" colid="LEAK_YN" display="combo"/>
+						<cell align="center" col="8" colid="OPERAT_STS_CD" display="combo"/>
+						<cell align="center" col="9" colid="OUTWARD_STS_CD" display="combo"/>
+						<cell align="center" col="10" colid="VBOX_STS" display="combo"/>
+						<cell align="right" col="11" display="text" text="-"/>
+						<cell align="left" col="12" colid="PREVI_ELECT" display="text"/>
+						<cell align="right" col="13" display="text" text="-"/>
+						<cell align="left" col="14" colid="LATER_ELEC_POT" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="15" display="text" text="-"/>
+						<cell align="left" col="16" colid="BONDING" display="text"/>
+						<cell col="17" colid="MOV_LST" display="combo" expandimage="popup" expandshow="true"/>
+						<cell col="18" colid="CHK_DESC" display="text"/>
+						<cell align="center" col="19" colid="TAKER_EMPID1_NM" display="text"/>
+						<cell align="center" col="20" colid="TAKER_EMPID2_NM" display="text"/>
+						<cell align="center" col="21" colid="TAKER_EMPID3_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button276" ImageID="btn_8_Inquiry" Left="1124" LeftMargin="21" OnClick="fn_Valve_OnClick" Style="button" TabOrder="6" Text="순찰점검&#32;이력조회" Top="468" Width="127"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button282" ImageID="btn_6_reg" Left="1024" LeftMargin="21" OnClick="btn_MainterReq_OnClick" Style="button" TabOrder="7" Text="정비보수의뢰" Top="467" Width="100"></Button>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static25" Left="110" Style="table" TabOrder="10" Top="351" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static26" Left="5" Style="table" TabOrder="9" Text="신주소" Top="330" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="110" Style="table" TabOrder="12" Top="288" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="5" Style="table" TabOrder="11" Text="밸브박스번호" Top="288" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="110" Style="table" TabOrder="15" Top="309" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static3" Left="629" Style="table" TabOrder="13" Text="슬리브" Top="351" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="317" Style="table" TabOrder="14" Text="공사번호" Top="288" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static7" Left="629" Style="table" TabOrder="16" Text="시공회사" Top="288" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static8" Left="939" Style="table" TabOrder="17" Text="시공감리일" Top="351" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static9" Left="5" Style="table" TabOrder="18" Text="철개" Top="351" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static11" Left="317" Style="table" TabOrder="19" Text="포장구분" Top="351" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="13" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="20" Text="밸브박스&#32;정보" Top="271" Width="117"></Image>
+		<Image Align="Left" Height="14" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="21" Text="밸브기본&#32;정보" Top="378" Width="117"></Image>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="FACI_NUM" Enable="FALSE" Height="18" Id="edt_FaciNum" ImeMode="none" Left="143" Style="edit" TabOrder="22" Top="290" Width="171"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="WORK_FIRM_CD" Enable="FALSE" Height="18" Id="edt_WorkFirmCd" ImeMode="none" Left="767" Style="edit" TabOrder="23" Top="290" Width="169"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="WORK_NUM" Enable="FALSE" Height="18" Id="edt_WorkNum" ImeMode="none" Left="455" Style="edit" TabOrder="24" Top="290" Width="171"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="ZIP_NO1" Enable="FALSE" Height="18" Id="edt_ZipNo1" ImeMode="none" Left="143" Style="edit" TabOrder="25" Top="311" Width="38"></Edit>
+		<Static Height="13" Id="C2502030010F" Left="182" Style="static" TabOrder="26" Text="-" Top="314" Width="10"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="ZIP_NO2" Enable="FALSE" Height="18" Id="edt_ZipNo2" ImeMode="none" Left="190" Style="edit" TabOrder="27" Top="311" Width="38"></Edit>
+		<Edit BindDataset="ds_ValveBox" Border="Flat" Column="LOT_NUM_UNION" Enable="FALSE" Height="18" Id="Edit6" ImeMode="none" Left="229" Style="edit" TabOrder="28" Top="311" Width="1018"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="NEW_ADDR_UNION" Enable="FALSE" Height="18" Id="Edit5" ImeMode="none" Left="143" Style="edit" TabOrder="32" Top="332" Width="171"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static42" Left="5" Style="table" TabOrder="33" Text="가로(m)" Top="878" VAlign="Middle" Visible="FALSE" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="SLEEVE" Enable="FALSE" Height="18" Id="edt_Sleeve" ImeMode="none" Left="767" Style="edit" TabOrder="34" Top="353" Width="169"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="BOX_CAP_TYPE" Enable="FALSE" Height="18" Id="edt_BoxCapType" ImeMode="none" Left="143" Style="edit" TabOrder="36" Top="353" Width="171"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="PAVEMENT_KIND" Enable="FALSE" Height="18" Id="edt_PavementKind" ImeMode="none" InputPanel="FALSE" Left="455" Style="edit" TabOrder="35" Top="353" Width="170"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_ValveBox" Border="Flat" Column="WIDTH" Enable="FALSE" Height="18" Id="edt_" ImeMode="none" Left="143" Style="edit" TabOrder="37" Top="880" Visible="FALSE" Width="171"></Edit>
+		<Calendar BindDataset="ds_ValveBox" Border="Flat" Column="INST_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_InstYmd" Left="1077" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="38" Top="353" WeeksFont="Default,-1" Width="170"></Calendar>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="GU" Enable="FALSE" Height="18" Id="edt_Gu" ImeMode="none" Left="1077" Style="edit" TabOrder="40" Top="290" Width="170"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static115" Left="939" Style="table" TabOrder="39" Text="시/구" Top="288" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static23" Left="5" Style="table" TabOrder="8" Text="주소" Top="309" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" BindDataset="ds_ValveBox" Border="Flat" Column="VERTICAL" Enable="FALSE" Height="18" Id="Edit0" ImeMode="none" Left="455" Style="edit" TabOrder="42" Top="880" Visible="FALSE" Width="170"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static10" Left="317" Style="table" TabOrder="41" Text="세로(m)" Top="878" VAlign="Middle" Visible="FALSE" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static12" Left="629" Style="table" TabOrder="43" Text="높이(m)" Top="878" VAlign="Middle" Visible="FALSE" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" BindDataset="ds_ValveBox" Border="Flat" Column="HEIGHT" Enable="FALSE" Height="18" Id="Edit1" ImeMode="none" Left="767" Style="edit" TabOrder="44" Top="880" Visible="FALSE" Width="169"></Edit>
+		<Static Align="Right" BindDataset="ds_ValveBox" Border="Flat" Height="22" Id="Static13" Left="939" Style="table" TabOrder="45" Text="면적(m²)" Top="878" VAlign="Middle" Visible="FALSE" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" BindDataset="ds_ValveBox" Border="Flat" Column="AREA" Enable="FALSE" Height="18" Id="Edit2" ImeMode="none" Left="1077" Style="edit" TabOrder="46" Top="880" Visible="FALSE" Width="170"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button101" ImageID="btn_6_Statistics" Left="920" LeftMargin="21" OnClick="fn_MeasElectPot_OnClick" Style="button" TabOrder="47" Text="측정전위&#32;통계" Top="464" Visible="FALSE" Width="103"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="939" Style="table" TabOrder="48" Text="시설(도로)구분" Top="330" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="ROAD_FLAG" Enable="FALSE" Height="18" Id="Edit3" ImeMode="none" Left="1077" Style="edit" TabOrder="49" Top="332" Width="170"></Edit>
+		<Static Height="13" Id="Static4" Left="902" Style="static" TabOrder="50" Text="※점검대상(분기)&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;개,&#32;점검&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;개,&#32;미점검&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;개" Top="5" Width="348"></Static>
+		<Static Align="Right" BindDataset="ds_Vbcnt" Column="TOT_CNT" Height="10" Id="st_TOT" Left="1014" Style="static" TabOrder="51" Text="0" Top="5" Width="24"></Static>
+		<Static Align="Right" BindDataset="ds_Vbcnt" Column="OK_CNT" Height="10" Id="st_OK" Left="1106" Style="static" TabOrder="51" Text="0" Top="5" Width="24"></Static>
+		<Static Align="Right" BindDataset="ds_Vbcnt" Column="NO_CNT" Height="10" Id="st_NO" Left="1208" Style="static" TabOrder="52" Text="0" Top="5" Width="24"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static15" Left="629" Style="table" TabOrder="56" Text="MOV명" Top="330" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="MOV_NM" Enable="FALSE" Height="18" Id="Edit7" ImeMode="none" Left="767" Style="edit" TabOrder="55" Top="332" Width="169"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="MOV_YN" Enable="FALSE" Height="18" Id="Edit8" ImeMode="none" Left="455" Style="edit" TabOrder="57" Top="332" Width="171"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static16" Left="317" Style="table" TabOrder="58" Text="MOV&#32;여부" Top="330" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static14" Left="110" Style="table" TabOrder="74" Top="396" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="ZIP_NO2" Enable="FALSE" Height="18" Id="Edit4" ImeMode="none" Left="190" Style="edit" TabOrder="67" Top="398" Visible="FALSE" Width="38"></Edit>
+		<Static Height="13" Id="Static17" Left="182" Style="static" TabOrder="66" Text="-" Top="401" Visible="FALSE" Width="10"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="ZIP_NO1" Enable="FALSE" Height="18" Id="Edit9" ImeMode="none" Left="143" Style="edit" TabOrder="65" Top="398" Visible="FALSE" Width="38"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static18" Left="110" Style="table" TabOrder="60" Top="417" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static19" Left="5" Style="table" TabOrder="59" Text="밸브번호" Top="396" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static21" Left="629" Style="table" TabOrder="61" Text="노출여부" Top="417" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static24" Left="939" Style="table" TabOrder="62" Text="인입밸브여부" Top="417" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static27" Left="5" Style="table" TabOrder="63" Text="밸브재질" Top="417" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static28" Left="317" Style="table" TabOrder="64" Text="제작사명" Top="417" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="FACI_VALVE_NUM" Enable="FALSE" Height="18" Id="Edit10" ImeMode="none" Left="143" Style="edit" TabOrder="68" Top="398" Width="171"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="VBOX_EXPOS_FLAG" Enable="FALSE" Height="18" Id="Edit11" ImeMode="none" Left="767" Style="edit" TabOrder="69" Top="419" Width="169"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="VALVE_MATER_FLAG" Enable="FALSE" Height="18" Id="Edit12" ImeMode="none" Left="143" Style="edit" TabOrder="71" Top="419" Width="171"></Edit>
+		<Edit BindDataset="ds_ValveBox" Border="Flat" Column="MAKER_NM" Enable="FALSE" Height="18" Id="Edit13" ImeMode="none" InputPanel="FALSE" Left="455" Style="edit" TabOrder="70" Top="419" Width="170"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static29" Left="939" Style="table" TabOrder="72" Text="밸브종류" Top="396" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="VALVE_KIND" Enable="FALSE" Height="18" Id="Edit15" ImeMode="none" Left="1077" Style="edit" TabOrder="73" Top="398" Width="170"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static30" Left="629" Style="table" TabOrder="76" Text="압력" Top="396" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="PRESS" Enable="FALSE" Height="18" Id="Edit16" ImeMode="none" Left="767" Style="edit" TabOrder="75" Top="398" Width="169"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="STD" Enable="FALSE" Height="18" Id="Edit17" ImeMode="none" Left="455" Style="edit" TabOrder="77" Top="398" Width="171"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static31" Left="317" Style="table" TabOrder="78" Text="규격(관경)" Top="396" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static32" Left="110" Style="table" TabOrder="79" Top="438" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static33" Left="629" Style="table" TabOrder="80" Text="전위측정대상" Top="438" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static35" Left="5" Style="table" TabOrder="81" Text="밸브형태" Top="438" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static36" Left="317" Style="table" TabOrder="82" Text="절연방법" Top="438" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="ELECT_POT_MEAS_OBJ_YN" Enable="FALSE" Height="18" Id="Edit18" ImeMode="none" Left="767" Style="edit" TabOrder="83" Top="440" Width="169"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="VALVE_TYPE_NM" Enable="FALSE" Height="18" Id="Edit19" ImeMode="none" Left="143" Style="edit" TabOrder="85" Top="440" Width="171"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="ISOLATION_METHOD_CD" Enable="FALSE" Height="18" Id="Edit20" ImeMode="none" InputPanel="FALSE" Left="455" Style="edit" TabOrder="84" Top="440" Width="170"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static34" Left="939" Style="table" TabOrder="86" Top="438" VAlign="Middle" Width="309" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ValveBox" Border="Flat" Column="IN_VALVE_YN" Enable="FALSE" Height="18" Id="Edit22" ImeMode="none" Left="1077" Style="edit" TabOrder="87" Top="419" Width="170"></Edit>
+		<Static Color="red" Height="13" Id="st_chg_rmk" Left="240" Style="static" TabOrder="88" Text="※&#32;전위&#32;값이&#32;-850&#32;이상인&#32;경우&#32;전위불량으로&#32;처리됩니다.&#32;&#32;전위값은&#32;이미&#32;-처리되어&#32;있으므로&#32;+값으로&#32;입력바랍니다." Top="470" Width="664"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID      : D1201010010F_T03.xml
+* Form 설명   : 밸브 순찰점검등록 조회,등록,수정,삭제
+* 시스템 명   : 안전공급(D1)
+* 작성자      : 임성수
+* 작성일      : 2008-12-11
+* 변경내용    : 변경내용없음
+****************************************************************************************************/
+//ds_Multi_T03 => ds_ValveBox
+//ds_Plan 계획내역에 실적 업데이트 
+//ds_Decide 결재 내역 확인
+//ds_SaveBad 전위불량시설 특별관리 시설 생성
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+var Quarter = '';
+var Patrol_Str_ymd = '';
+
+function D1202010010F_T03_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_D1_SetGrid_Sort(grd_Multi1);
+	gfn_D1_SetGrid_Sort(grd_MultiSave);
+
+	gfn_SetGrdComboBox_Comcode("grd_MultiSave",5,"A10411");	    //결재상태
+	grd_MultiSave.SetCellProp("body",5,"Edit","none");
+	
+	// 2012.06.21 이건민 - 권기철 과장님 추가요청사항
+	gfn_SetGrdComboBox_Comcode("grd_MultiSave",6,"D10135");		//순찰점검구분
+	
+	gfn_SetGrdComboBox_Comcode("grd_MultiSave",7,"D10151");		//누설여부
+	gfn_SetGrdComboBox_Comcode("grd_MultiSave",8,"D10208");		//작동상태
+	gfn_SetGrdComboBox_Comcode("grd_MultiSave",9,"D10209");		//외관상태
+	gfn_SetGrdComboBox_Comcode("grd_MultiSave",10,"D10038");		//박스상태
+	grd_MultiSave.SetCellProp("body",15,"Edit","none");
+	
+	if (IsExistVar("PORTLET_FLAG", true)){
+		if (PORTLET_FLAG == "p"){
+			fn_D1_PortletFind(FACI_NUM, VALVE_NUM, PLAN_YMD);
+		}
+	}
+	
+	fn_chkQuarter();
+}
+
+
+function fn_chkQuarter()
+{
+	if(SubStr(cal_PPatrolYmd.Value,4,2)=="01"||SubStr(cal_PPatrolYmd.Value,4,2)=="02"||SubStr(cal_PPatrolYmd.Value,4,2)=="03")
+	{
+		Quarter = '1';
+		Patrol_Str_ymd = SubStr(cal_PPatrolYmd.Value,0,4) + "0101";
+	}
+	else if(SubStr(cal_PPatrolYmd.Value,4,2)=="04"||SubStr(cal_PPatrolYmd.Value,4,2)=="05"||SubStr(cal_PPatrolYmd.Value,4,2)=="06")
+	{
+		Quarter = '2';
+		Patrol_Str_ymd = SubStr(cal_PPatrolYmd.Value,0,4) + "0401";
+	}
+	else if(SubStr(cal_PPatrolYmd.Value,4,2)=="07"||SubStr(cal_PPatrolYmd.Value,4,2)=="08"||SubStr(cal_PPatrolYmd.Value,4,2)=="09")
+	{
+		Quarter = '3';
+		Patrol_Str_ymd = SubStr(cal_PPatrolYmd.Value,0,4) + "0701";
+	}
+	else if(SubStr(cal_PPatrolYmd.Value,4,2)=="10"||SubStr(cal_PPatrolYmd.Value,4,2)=="11"||SubStr(cal_PPatrolYmd.Value,4,2)=="12")
+	{
+		Quarter = '4';
+		Patrol_Str_ymd = SubStr(cal_PPatrolYmd.Value,0,4) + "1001";
+	}    
+}   
+
+function fn_Quarter(chk_ymd)
+{
+	if(SubStr(chk_ymd,4,2)=="01"||SubStr(chk_ymd,4,2)=="02"||SubStr(chk_ymd,4,2)=="03")
+	{
+		return '1';
+	}
+	else if(SubStr(chk_ymd,4,2)=="04"||SubStr(chk_ymd,4,2)=="05"||SubStr(chk_ymd,4,2)=="06")
+	{
+		return '2';
+	}
+	else if(SubStr(chk_ymd,4,2)=="07"||SubStr(chk_ymd,4,2)=="08"||SubStr(chk_ymd,4,2)=="09")
+	{
+		return '3';
+	}
+	else if(SubStr(chk_ymd,4,2)=="10"||SubStr(chk_ymd,4,2)=="11"||SubStr(chk_ymd,4,2)=="12")
+	{
+		return '4';
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_ExcelExport()
+//  설명: 특별관리시설 엑셀로 저장
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_ExcelExport()
+{ 
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 :"     + RPad(cob_PBranchCd.Text," ",20);
+    SearchCondition = SearchCondition + "팀 :"       + RPad(cob_PTeamCd.Text," ",20);
+    SearchCondition = SearchCondition + "조 :"       + RPad(cob_PShiftWorkCd.Text," ",20);
+    SearchCondition = SearchCondition + "구간 :"    + RPad(cob_block.Text," ",20);
+    SearchCondition = SearchCondition + "순찰일자 :" + RPad(cal_PPatrolYmd.Text," ",20);
+    SearchCondition = SearchCondition + "시설물번호 :" + RPad(edt_PFaciNum.Text," ",20);
+    
+	gfn_ExportExcel("밸브 순찰점검등록", 5, SearchCondition, "grd_Multi1");
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_D1_Find()
+// 설명     : 순찰점검 주 계획을 조회한다.
+// return 내용 : 없음
+//-------------------------------------------------------------------------------
+function fn_D1_Find()
+{
+	fn_chkQuarter();
+	
+	ds_Search.ClearData();
+	
+	ds_ValveBox.ClearData();
+	
+	var row = ds_Search.AddRow();
+
+	ds_Search.SetColumn(row,"CHK_YEAR",SubStr(cal_PPatrolYmd.Value,0,4));
+	ds_Search.SetColumn(row,"CHK_QUARTER",Quarter);	
+	ds_Search.SetColumn(row,"BRANCH_CD",cob_PBranchCd.Value);
+	ds_Search.SetColumn(row,"BLOCK_CD",cob_block.Value);
+	ds_Search.SetColumn(row,"STR_YMD",Patrol_Str_ymd);
+	ds_Search.SetColumn(row,"PLAN_YMD",cal_PPatrolYmd.Value);
+	ds_Search.SetColumn(row,"FACI_NUM",edt_PFaciNum.Text);	
+		
+	if(cob_PShiftWorkCd.value=="10"||cob_PShiftWorkCd.value=="20")
+	{
+		ds_Search.SetColumn(row,"TEAM_CD",cob_PTeamCd.Value);
+	}
+	else
+	{
+		ds_Search.SetColumn(row,"TEAM_CD",'');
+	}
+	if(cob_PShiftWorkCd.value=="10")
+	{
+		ds_Search.SetColumn(row,"SHIFT_WORK_CD",cob_PShiftWorkCd.Value);
+	}
+	else
+	{
+		ds_Search.SetColumn(row,"SHIFT_WORK_CD",'');
+	}	
+
+	grd_Multi1.SetCellProp("head",12,"text"   ,"최근점검일자");
+
+	ds_ValveBox.ClearData();
+	if(cob_Gubun.value=="10" || cob_Gubun.value=="40") // 계획,분기계획
+	{
+		grd_Multi1.SetCellProp("head",12,"text"   ,"점검일자");
+		if (cob_Gubun.value=="40")
+		{
+			ds_Search.SetColumn(row,"PLAN_YMD",'');
+		}	
+		var strSvcID = "plan_valve";
+		var strPart  = "D10";
+		var strURL   = "handle.do?ServiceName=D1202010010F-service";
+		var strInDatasets  = "ds_Search=ds_Search";
+		var strOutDatasets  = "ds_ValveBox=ds_Multi";
+		var strArgument  = "plan_valve=1";
+					
+		gfn_syncCall( 
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );					  
+    }
+    else if(cob_Gubun.value=="20") // 미점검 
+    {
+		var strSvcID = "nocheck_valve";
+		var strPart  = "D10";
+		var strURL   = "handle.do?ServiceName=D1202010010F-service";
+		var strInDatasets  = "ds_Search=ds_Search";
+		var strOutDatasets  = "ds_ValveBox=ds_Multi";
+		var strArgument  = "nocheck_valve=1";
+					
+		gfn_syncCall( 
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );					  
+    }
+    else if(cob_Gubun.value=="30") //  비계획
+    {
+		var strSvcID = "noplan_valve";
+		var strPart  = "D10";
+		var strURL   = "handle.do?ServiceName=D1202010010F-service";
+		var strInDatasets  = "ds_Search=ds_Search";
+		var strOutDatasets  = "ds_ValveBox=ds_Multi";
+		var strArgument  = "noplan_valve=1";
+					
+		gfn_syncCall( 
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );						   			      
+    }
+
+	if(ErrorCode < 0)
+	{
+		return;
+	}		
+	
+	fn_D1_Cnt();
+}
+
+// 미점검 , 금일점검, 점검대상 카운트 
+function fn_D1_Cnt()
+{
+	ds_Search_cnt.ClearData();
+	ds_Search_cnt.AddRow(); 
+
+	ds_Search_cnt.SetColumn(0,"CHK_YEAR",SubStr(cal_PPatrolYmd.Value,0,4));
+	ds_Search_cnt.SetColumn(0,"CHK_QUARTER",Quarter);	
+	ds_Search_cnt.SetColumn(0,"BRANCH_CD",cob_PBranchCd.Value);
+	ds_Search_cnt.SetColumn(0,"BLOCK_CD",cob_block.Value);
+	ds_Search_cnt.SetColumn(0,"FACI_FLAG","VB");
+	ds_Search_cnt.SetColumn(0,"PATROL_YMD",cal_PPatrolYmd.Value);
+	
+	ds_Count.ClearData();
+	ds_Vbcnt.ClearData();
+
+	var strSvcID = "plan_cnt";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1202010010F-service";
+	var strInDatasets  = "ds_Search_cnt=ds_Search_cnt";
+	var strOutDatasets  = "ds_Vbcnt=ds_Count";
+	var strArgument  = "plan_cnt=1";
+				
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );						   			      
+				   	
+}	
+	
+function grd_Multi1_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(ds_ValveBox.rowcount() == 0)
+	{
+		return;
+	}	
+	 
+	if("FACI_CARD" == grd_Multi1.GetCellProp("body",nCell,"ColId"))
+	{
+		fn_Card(nRow);											//시설물카드
+		return;
+	}
+
+	if("GIS_POSITION" == grd_Multi1.GetCellProp("body",nCell,"ColId"))
+	{
+		var args = "BUNGI='10' FACI_NUM="+ds_ValveBox.GetColumn(nRow,"FACI_NUM");
+		gfn_Dialog("D10","D1402060011U",args,1208,840,true,-1,-1);	//GIS 불러오기
+		return;
+	}
+
+	if("WORK_INFO" == grd_Multi1.GetCellProp("body",nCell,"ColId"))		//공사정보조회
+	{	
+		if(trim(ds_ValveBox.GetColumn(nRow,"WORK_NUM"))==""||ds_ValveBox.GetColumn(nRow,"WORK_NUM")==null)
+		{
+			alert("공사번호가 없습니다..");
+			return;
+		}
+		alert(ds_ValveBox.GetColumn(nRow,"WORK_NUM"));
+		var strPrefix = "B20";
+		var strFormid = "B2204010010F";
+		var strArg    = "fa_BranchCd=" + ds_ValveBox.GetColumn(nRow,"BRANCH_CD"); 
+		    strArg   += "  fa_WorkNum="+ ds_ValveBox.GetColumn(nRow,"WORK_NUM"); 
+		    
+		gfn_NewWindow(strPrefix,strFormid,strArg);
+		return;
+	}		
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_Card(obj)
+//   설명  :  밸브 시설물카드조회 팝업
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_Card(nRow)
+{	
+	// ds_ReportList.ClearData();
+	// for(var i=0; i<ds_Valve.GetRowCount();i++)
+	// {
+		// ds_ReportList.addRow();
+		// var strTitle    = "밸브시설물카드조회 "+ds_Valve.GetColumn(i,"VALVE_NUM") ;               // 출력물 제목
+		// var strPart     = "D10" ;                           // 시스템 명 
+		// var strReport   = "D1202010035P";
+		// var strParameter= "FACI_NUM=" + ds_Valve.GetColumn(i,"FACI_NUM")  // 파라미터구문 (단 ',' 로구분할것 ) 
+						 // +",GOV_NUM="+ds_Valve.GetColumn(i,"VALVE_NUM")
+						 // ;
+		// ds_ReportList.SetColumn(i, "SYSTEM_ID"   ,strPart     ); // 시스템 명 
+		// ds_ReportList.SetColumn(i, "REPORT_ID"   ,strReport   ); // 출력물 ID 
+		// ds_ReportList.SetColumn(i, "REPORT_ARGS" ,strParameter); // 파라미터구문 
+		// ds_ReportList.SetColumn(i, "REPORT_TITLE",strTitle    ); // 출력물 제목
+	// }
+		// gfn_MultiReportPopup("",ds_ReportList, "false");		
+		
+	// 함수 호출용 파라미터를 설정한다
+	var strTitle ="밸브시설물카드조회"; 
+	var strPart ="D10";           
+	var strReport="D1202010035P"; 
+	var strParameter="FACI_NUM=" 	+ds_ValveBox.GetColumn(nRow,"FACI_NUM")    
+					+",GOV_NUM=" +ds_ValveBox.GetColumn(nRow,"VALVE_NUM")
+					;
+	//gfn_bt_d2_Report
+	// 공통 레포트 팝업 함수 호출 
+	gfn_ReportPopup(strTitle,strPart,strReport,strParameter);					
+} 
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Save
+//   설명  : 사유지 점용료 협의사항를 등록/업데이트한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save()
+{
+	var row = 0;
+	var row1 = 0;
+	ds_SaveBad.ClearData();
+	ds_SaveBad.UpdateControl = false ;
+	ds_Plan.ClearData();
+	ds_Plan.UpdateControl = false ;
+
+
+	for(var i =0; i<ds_ValveSave.GetRowCount();i++)
+	{ 
+		if ((ds_ValveSave.GetRowType(i) == 'insert') || (ds_ValveSave.GetRowType(i) == 'update'))
+		{
+			if(ds_ValveSave.GetColumn(i,"PATROL_YMD") > today())
+			{
+				alert("점검일자가 현재일보다 큽니다.");
+				return;
+			}
+	
+			if(ds_ValveSave.GetColumn(i,"LEAK_YN") == "" || ds_ValveSave.GetColumn(i,"LEAK_YN") == null)
+			{
+				alert(gfn_GetMessage("M000011","%AAA%","누출여부를"));
+				return;
+			}	
+					
+			if(ds_ValveSave.GetColumn(i,"OPERAT_STS_CD") == "" || ds_ValveSave.GetColumn(i,"OPERAT_STS_CD") == null)
+			{
+				alert(gfn_GetMessage("M000011","%AAA%","작동상태를"));
+				return;
+			}	
+			if(ds_ValveBox.GetColumn(ds_ValveBox.row,"ELECT_POT_MEAS_OBJ_YN") == 'Y')
+			{
+				// 2012.05.23 권기철 과장님 추가요청사항_이건민 전단전위, 후단전위, 본딩전위가 모두 공백이면 리턴
+				if( (ds_ValveSave.GetColumn(i,"PREVI_ELECT") == "" 			|| ds_ValveSave.GetColumn(i,"PREVI_ELECT") == null)
+					&&	(ds_ValveSave.GetColumn(i,"LATER_ELEC_POT") == "" 	|| ds_ValveSave.GetColumn(i,"LATER_ELEC_POT") == null)
+					&&	(ds_ValveSave.GetColumn(i,"BONDING") == "" 			|| ds_ValveSave.GetColumn(i,"BONDING") == null) )
+				{
+					alert("전위 값은 필수 입니다.");
+					return;
+				}
+				
+				// 2012.05.23 권기철 과장님 추가 요청사항_이건민 전위 값 0보다 작거나 같은경우 입력 불가
+				if(ds_ValveSave.GetColumn(i,"PREVI_ELECT") <= 0)
+				{
+					alert(gfn_GetMessage("M000011","%AAA%","전단 전위는 -값이 이미적용되어 +값 또는 0이상의 값으로 입력바랍니다."));
+					return;
+				}
+				
+				if(ds_ValveSave.GetColumn(i,"LATER_ELEC_POT") <= 0)
+				{
+					alert(gfn_GetMessage("M000011","%AAA%","후단 전위는 -값이 이미적용되어 +값 또는 0이상의 값으로 입력바랍니다."));
+					return;
+				}
+					
+				if(ds_ValveSave.GetColumn(i,"BONDING") <= 0)
+				{
+					alert(gfn_GetMessage("M000011","%AAA%","본딩 전위는 -값이 이미적용되어 +값 또는 0이상의 값으로 입력바랍니다."));
+					return;
+				}
+				
+				/* 2012.05.23 권기철 추가요청 사항으로 주석처리_이건민
+				if(ds_ValveSave.GetColumn(i,"PREVI_ELECT") == "" || ds_ValveSave.GetColumn(i,"PREVI_ELECT") == null || ds_ValveSave.GetColumn(i,"PREVI_ELECT") == 0)
+				{
+					alert(gfn_GetMessage("M000011","%AAA%","전위 측정 대상으로 전단 전위를"));
+					return;
+				}
+				else if(ds_ValveSave.GetColumn(i,"PREVI_ELECT") < 0)
+				{
+					alert(gfn_GetMessage("M000011","%AAA%","전단 전위는 -값이 이미적용되어 +값으로 입력바랍니다.."));
+					return;
+				}
+				
+				if(ds_ValveSave.GetColumn(i,"LATER_ELEC_POT") < 0)
+				{
+					alert(gfn_GetMessage("M000011","%AAA%","후단 전위는 -값이 이미적용되어 +값으로 입력바랍니다.."));
+					return;
+				}
+					
+				if(ds_ValveSave.GetColumn(i,"BONDING") < 0)
+				{
+					alert(gfn_GetMessage("M000011","%AAA%","본딩 전위는 -값이 이미적용되어 +값으로 입력바랍니다.."));
+					return;
+				}	
+				*/
+			}
+			
+			if (ds_ValveSave.GetRowType(i) == 'insert')
+			{
+				ds_ValveSave.SetColumn(i, "CHK_YEAR", substr(ds_ValveSave.GetColumn(i, "PATROL_YMD"),0,4));
+				var chk_month = substr(ds_ValveSave.GetColumn(i, "PATROL_YMD"),4,2);
+				
+				if(chk_month == "01"|| chk_month =="02"|| chk_month =="03")
+				{
+					ds_ValveSave.SetColumn(i, "CHK_QUARTER", '1');
+				}
+				else if(chk_month == "04"|| chk_month =="05"|| chk_month =="06")
+				{
+					ds_ValveSave.SetColumn(i, "CHK_QUARTER", '2');
+				}
+				else if(chk_month == "07"|| chk_month =="08"|| chk_month =="09")
+				{
+					ds_ValveSave.SetColumn(i, "CHK_QUARTER", '3');
+				}
+				else if(chk_month == "10"|| chk_month =="11"|| chk_month =="12")
+				{
+					ds_ValveSave.SetColumn(i, "CHK_QUARTER", '4');
+				}
+				else
+				{
+					alert("순찰일자 오류입니다..");
+					return;
+				}			
+				
+				//결재여부 확인 루틴//점검일에 결재 유무 확인
+				if (fn_decide(ds_ValveSave.GetColumn(i, "PATROL_YMD"), ds_ValveSave.GetColumn(i, "BRANCH_CD"), ds_ValveSave.GetColumn(i, "TEAM_CD")) == false)
+				{
+					alert("점검일자(" + ds_ValveSave.GetColumn(i, "PATROL_YMD") +  ")는 결재 진행중입니다...등록 불가 합니다..");
+					return;
+				}
+				
+				if (ds_ValveSave.GetColumn(i,"PLAN_FLAG") == "11")
+				{
+					if (substr(ds_ValveSave.GetColumn(i, "PATROL_YMD"),0,4) != substr(ds_ValveSave.GetColumn(i, "PLAN_YMD"),0,4))
+					{
+						alert("점검년도가 계획년도와 다릅니다. 등록 불가합니다..");
+						return;
+					}	
+		
+					if (fn_Quarter(ds_ValveSave.GetColumn(i, "PATROL_YMD")) != fn_Quarter(ds_ValveSave.GetColumn(i, "PLAN_YMD")))
+					{
+						alert("점검일자와 계획일자가 동일 분기가 아닙니다.. 등록 불가합니다..");
+						return;
+					}				
+					
+					row1 = ds_Plan.AddRow();
+					ds_Plan.SetRowType(row1, "update");
+					ds_Plan.SetColumn(row1, "CHK_YEAR", ds_ValveSave.GetColumn(i, "CHK_YEAR"));		//순찰일자
+					ds_Plan.SetColumn(row1, "CHK_QUARTER", ds_ValveSave.GetColumn(i, "CHK_QUARTER"));		//순찰일자
+					ds_Plan.SetColumn(row1, "BLOCK_CD", ds_ValveSave.GetColumn(i, "BLOCK_CD"));		//순찰일자
+					ds_Plan.SetColumn(row1, "FACI_NUM", ds_ValveSave.GetColumn(i, "FACI_NUM"));		//밸브박스번호
+					ds_Plan.SetColumn(row1, "DETAIL_NUM", ds_ValveSave.GetColumn(i, "VALVE_NUM"));		//밸브번호
+					ds_Plan.SetColumn(row1, "PLAN_YMD", ds_ValveSave.GetColumn(i, "PLAN_YMD"));		//순찰일자
+					ds_Plan.SetColumn(row1, "PATROL_YMD", ds_ValveSave.GetColumn(i, "PATROL_YMD"));		//순찰일자
+					ds_Plan.SetColumn(row1, "CHK_FLAG", "Y");
+					ds_Plan.SetColumn(row1, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+					ds_Plan.SetColumn(row1, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP				
+				}
+				var previ_elect;
+				var later_elec_pot;
+				var bonding;
+				if(ds_ValveBox.GetColumn(ds_ValveBox.row,"ELECT_POT_MEAS_OBJ_YN") == 'Y')
+				{
+					if (ds_ValveSave.GetColumn(i,"PREVI_ELECT") == null)
+					{
+						previ_elect = 0;
+					}
+					else
+					{	
+						previ_elect = toNumber(ds_ValveSave.GetColumn(i,"PREVI_ELECT"));
+					}
+					
+					if (ds_ValveSave.GetColumn(i,"LATER_ELEC_POT") == null)
+					{
+						later_elec_pot = 0;
+					}
+					else
+					{	
+						later_elec_pot = toNumber(ds_ValveSave.GetColumn(i,"LATER_ELEC_POT"));
+					}
+
+					if (ds_ValveSave.GetColumn(i,"BONDING") == null)
+					{
+						bonding = 0;
+					}
+					else
+					{	
+						bonding = toNumber(ds_ValveSave.GetColumn(i,"BONDING"));
+					}					
+				
+					// 2012.05.23 권기철 과장님 추가요청 사항_이건민 측정전위 값 100 ~ 849이면 불량으로 인한 if문 주석처리
+					// if((previ_elect !=0 && previ_elect < 850) || (later_elec_pot !=0 && later_elec_pot < 850) || (bonding !=0 && bonding < 850))
+					
+					// 2012.05.23 권기철 과장님 추가요청 사항_이건민 측정전위 값 100 ~ 849이면 불량
+					if((previ_elect !=0 && previ_elect >= 100 && previ_elect <= 849) || (later_elec_pot !=0 && later_elec_pot >= 100 && later_elec_pot <= 849) || (bonding !=0 && bonding >= 100 && bonding <= 849))
+					{
+						row = ds_SaveBad.AddRow();
+						ds_SaveBad.SetRowType(row, "insert");
+						
+						ds_ValveSave.SetColumn(i, "CHK_RSLT", "N");	//점검결과
+						ds_SaveBad.SetColumn(row, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+						ds_SaveBad.SetColumn(row, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP						
+						ds_SaveBad.SetColumn(row, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+						ds_SaveBad.SetColumn(row, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP
+						ds_SaveBad.SetColumn(row, "FACI_NUM", ds_ValveSave.GetColumn(i, "FACI_NUM")); //시설물번호
+						ds_SaveBad.SetColumn(row, "DETAIL_NUM", ds_ValveSave.GetColumn(i, "VALVE_NUM"));							//상세번호(TB는 상세번호가 없기 때문에 TB00으로 무조건 셋팅)
+						ds_SaveBad.SetColumn(row, "PATROL_YMD", ds_ValveSave.GetColumn(i, "PATROL_YMD"));		//순찰일자
+						
+						//측정전위 우선순위는 본딩전위, 전단전위, 후단전위 서부지사 황윤기계장 2010.5.7
+						// if  (bonding >= 100 && bonding <= 849)
+						// {
+							// ds_SaveBad.SetColumn(row, "ELECT_POT_MEAS", bonding); //본딩전위
+						// }
+						// else if (previ_elect >= 100 && previ_elect <= 849)
+						// {
+							// ds_SaveBad.SetColumn(row, "ELECT_POT_MEAS", previ_elect); //전단전위
+						// }
+						// else if (later_elec_pot >= 100 && later_elec_pot <= 849)
+						// {
+							// ds_SaveBad.SetColumn(row, "ELECT_POT_MEAS", later_elec_pot); //후단측정전위
+						// }	
+						
+						ds_SaveBad.SetColumn(row, "ELECT_POT_MEAS", 0); //측정전위
+						
+						ds_SaveBad.SetColumn(row, "PREVI_ELECT", ds_ValveSave.GetColumn(ds_ValveSave.row, "PREVI_ELECT"));	//전단전위
+						ds_SaveBad.SetColumn(row, "LATER_ELEC_POT",  ds_ValveSave.GetColumn(ds_ValveSave.row, "LATER_ELEC_POT")); //후단전위
+						ds_SaveBad.SetColumn(row, "BONDING",  ds_ValveSave.GetColumn(ds_ValveSave.row, "BONDING"));	//본딩
+						ds_SaveBad.SetColumn(row, "BRANCH_CD", ds_ValveSave.GetColumn(ds_ValveSave.row, "BRANCH_CD"));	//지사코드
+						ds_SaveBad.SetColumn(row, "TEAM_CD",  ds_ValveSave.GetColumn(ds_ValveSave.row, "TEAM_CD"));   //팀코드
+						ds_SaveBad.SetColumn(row, "SHIFT_WORK_CD",  ds_ValveSave.GetColumn(ds_ValveSave.row, "SHIFT_WORK_CD"));	//팀코드
+						ds_SaveBad.SetColumn(row, "ZIP_NO1", ds_ValveSave.GetColumn(ds_ValveSave.row, "ZIP_NO1"));	//조코드
+						ds_SaveBad.SetColumn(row, "ZIP_NO2", ds_ValveSave.GetColumn(ds_ValveSave.row, "ZIP_NO2"));	//조코드
+						ds_SaveBad.SetColumn(row, "CHK_YEAR",  ds_ValveSave.GetColumn(ds_ValveSave.row, "CHK_YEAR"));	//지사코드
+						ds_SaveBad.SetColumn(row, "CHK_QUARTER", ds_ValveSave.GetColumn(ds_ValveSave.row, "CHK_QUARTER")); //구코드
+						ds_SaveBad.SetColumn(row, "BLOCK_CD", ds_ValveSave.GetColumn(ds_ValveSave.row, "BLOCK_CD"));						//팀코드
+		
+						ds_SaveBad.SetColumn(row, "PLAN_YMD", ds_ValveSave.GetColumn(ds_ValveSave.row, "PLAN_YMD"));			//계획일자								
+						ds_SaveBad.SetColumn(row, "PLAN_FLAG", ds_ValveSave.GetColumn(ds_ValveSave.row, "PLAN_FLAG"));			//계획구분				
+					}
+				}	
+				else
+				{
+					ds_ValveSave.SetColumn(i, "CHK_RSLT", "Y");	//점검결과
+				}	
+				
+				ds_ValveSave.SetColumn(i, "CRT_EMPID"     ,gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+				ds_ValveSave.SetColumn(i, "CRT_IP"        ,gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP
+				ds_ValveSave.SetColumn(i, "UPD_EMPID"     ,gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+				ds_ValveSave.SetColumn(i, "UPD_IP"        ,gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP			
+			}
+			else if(ds_ValveSave.GetRowType(i) == 'update')
+			{
+				if(ds_ValveSave.GetColumn(i,"DECIDE_PROC_STS") == '0'  || ds_ValveSave.GetColumn(i, "DECIDE_PROC_STS") == '1' || ds_ValveSave.GetColumn(i, "DECIDE_PROC_STS") == '2')
+				{
+					alert("점검일자(" + ds_ValveSave.GetColumn(i, "PATROL_YMD") +  ")는 결재(완료/진행중)으로 내역을 수정할 수 없습니다...");
+					return;
+				}
+				else
+				{
+					ds_ValveSave.SetColumn(i, "UPD_EMPID"     ,gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+					ds_ValveSave.SetColumn(i, "UPD_IP"        ,gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP			
+				}
+			}
+		}
+	}
+
+	var strSvcID         = "valve_chk_ins";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1202010010F-service";					
+	var strInDatasets    = "ds_ValveSave=ds_ValveSave:u ds_SaveBad=ds_SaveBad:u ds_Plan=ds_Plan:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "valve_chk_ins=1";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}
+
+	alert("저장/수정 되었습니다.");
+	
+}
+
+function fn_decide(PATROL_YMD, BRANCH_CD, TEAM_CD)
+{
+	ds_Decide.ClearData();
+	
+	var strSvcID        = "decide";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1202010010F-service";
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Decide=ds_Decide";
+	var strArgument     = "decide=1";
+		strArgument		+= " PATROL_YMD="  + PATROL_YMD;
+		strArgument		+= " BRANCH_CD=" + BRANCH_CD;
+		strArgument		+= " TEAM_CD="  + TEAM_CD;
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	
+	if(ds_Decide.RowCount() == 0) return true;
+	
+	if(ds_Decide.GetColumn(0,"DECIDE_PROC_STS") == '0' || ds_Decide.GetColumn(0,"DECIDE_PROC_STS") == '1' || ds_Decide.GetColumn(0,"DECIDE_PROC_STS") == '2')
+	{
+		return false;
+	}	
+	else
+	{
+		return true;
+	}	
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Addrowm()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Addrowm()
+{   
+	if(ds_ValveBox.GetRowCount()==0)
+	{
+		return;
+	}
+	
+    if((gfn_GetGlobalValue("G_BRANCH_CD") == "999999") AND (gfn_GetGlobalValue("G_USER_NO") != '199443297'))
+    {
+		return;
+	}
+	
+	else if(ds_ValveBox.GetColumn(ds_ValveBox.row, "FACI_NUM") == '' || ds_ValveBox.GetColumn(ds_ValveBox.row, "FACI_NUM") == null)	
+	{
+        alert("실적 등록할 시설물을 선택하세요");
+        return;
+    }else if(ds_ValveBox.GetRowType(0)=="insert") {
+		return;
+    }
+
+    //계획 및 분기계획건의 경우 점검일자가 등록되어 있는 경우는 실적 추가등록 불가
+    if(cob_Gubun.value=="10" || cob_Gubun.value=="40") // 계획,분기계획
+    {
+    	if(length(trim(ds_ValveBox.GetColumn(ds_ValveBox.row, "PATROL_YMD"))) > 0)            
+		{
+			alert("해당 계획일자의 점검 실적이 등록되어 있습니다...");
+			return;
+		}
+	}	    
+	ds_ValveSave.InsertRow(0);								//insert시 맨위에 행추가
+	ds_ValveSave.SetColumn(0,"FACI_NUM", ds_ValveBox.GetColumn(ds_ValveBox.row, "FACI_NUM"));
+	ds_ValveSave.SetColumn(0,"VALVE_NUM", ds_ValveBox.GetColumn(ds_ValveBox.row, "VALVE_NUM"));
+	ds_ValveSave.SetColumn(0,"FACI_VALVE_NUM", ds_ValveBox.GetColumn(ds_ValveBox.row, "FACI_NUM") + '-' + ds_ValveBox.GetColumn(ds_ValveBox.row, "VALVE_NUM"));
+	ds_ValveSave.SetColumn(0, "MOV_LST","N");			//MOV점검표(컬럼이 없어서 코드값이 아닌 미점검 한글로 set)
+	ds_ValveSave.SetColumn(0, "PATROL_YMD", Today());	
+	grd_MultiSave.SetCellProp("body",3,"Edit"   ,"expr:decode(rowtype,'insert','date','none')"); 
+	//전위측정대상여부가 대상, 비대상 여부에 따라 전위 활성화, 비활성화 여부	
+	if(ds_ValveBox.GetColumn(ds_ValveBox.Row,"ELECT_POT_MEAS_OBJ_YN") == "Y")
+	{
+		grd_MultiSave.SetCellProp("Body", 12, "Edit", "number");	//전단전위
+		grd_MultiSave.SetCellProp("Body", 14, "Edit", "number");	//후단전위
+		grd_MultiSave.SetCellProp("Body", 16, "Edit", "number");	//본딩전위
+	}else 
+	{
+		grd_MultiSave.SetCellProp("Body", 12, "Edit", "none");		//전단전위
+		grd_MultiSave.SetCellProp("Body", 14, "Edit", "none");		//후단전위
+		grd_MultiSave.SetCellProp("Body", 16, "Edit", "none");		//본딩전위		
+	}			
+	
+	ds_ValveSave.SetColumn(0, "BRANCH_CD"     ,ds_ValveBox.GetColumn(ds_ValveBox.row, "BRANCH_CD"));
+	ds_ValveSave.SetColumn(0, "TEAM_CD"       ,ds_ValveBox.GetColumn(ds_ValveBox.row, "TEAM_CD"));
+	ds_ValveSave.SetColumn(0, "SHIFT_WORK_CD" ,cob_PShiftWorkCd.Value );
+	ds_ValveSave.SetColumn(0, "ZIP_NO1"       ,ds_ValveBox.GetColumn(ds_ValveBox.row, "ZIP_NO1"));
+	ds_ValveSave.SetColumn(0, "ZIP_NO2"       ,ds_ValveBox.GetColumn(ds_ValveBox.row, "ZIP_NO2"));
+	ds_ValveSave.SetColumn(0, "BLOCK_CD"      ,ds_ValveBox.GetColumn(ds_ValveBox.row, "BLOCK_CD"));
+	ds_ValveSave.SetColumn(0, "PLAN_FLAG"     ,ds_ValveBox.GetColumn(ds_ValveBox.row, "PLAN_FLAG"));
+	// alert("aaa");
+	// alert(ds_Valve.GetColumn(ds_Valve.row, "PRESS_FLAG"));
+	ds_ValveSave.SetColumn(0, "PRESS_FLAG"    ,ds_ValveBox.GetColumn(ds_ValveBox.row, "PRESS_FLAG"));
+	// alert("bbb");	
+	// alert(ds_Valve.GetColumn(ds_Valve.row, "IN_VALVE_YN"));
+	ds_ValveSave.SetColumn(0, "IN_VALVE_YN"   ,ds_ValveBox.GetColumn(ds_ValveBox.row, "IN_VALVE_YN"));
+	// alert("ccc");	
+	// alert(ds_Valve.GetColumn(ds_Valve.row, "VALVE_TYPE"));	
+	ds_ValveSave.SetColumn(0, "VALVE_TYPE"    ,ds_ValveBox.GetColumn(ds_ValveBox.row, "VALVE_TYPE"));
+	ds_ValveSave.SetColumn(0, "TAKER_EMPID1_NM", edt_empnm1.text);	
+	ds_ValveSave.SetColumn(0, "TAKER_EMPID2_NM", edt_empnm2.text);
+	ds_ValveSave.SetColumn(0, "TAKER_EMPID3_NM", edt_empnm3.text);
+	ds_ValveSave.SetColumn(0, "TAKER_EMPID1",edt_empid1.text );	
+	ds_ValveSave.SetColumn(0, "TAKER_EMPID2",edt_empid2.text );
+	ds_ValveSave.SetColumn(0, "TAKER_EMPID3",edt_empid3.text );
+
+	//비계획인 경우는 계획일자가 없다.--권기철 2010/01/06
+    if(cob_Gubun.value == '30')
+    {
+		ds_ValveSave.SetColumn(0,"PLAN_YMD",'');
+    }
+    else{
+		ds_ValveSave.SetColumn(0,"PLAN_YMD",ds_ValveBox.GetColumn(ds_ValveBox.Row,"PLAN_YMD"));
+    }	    
+}
+
+function fn_D1_Delete()
+{
+	if (ds_ValveSave.GetRowCount() == 0)
+	{
+		return;
+	}
+		
+	if(ds_ValveSave.GetRowType(ds_ValveSave.row) == "insert")
+	{
+		ds_ValveSave.DeleteRow(ds_ValveSave.row);
+		return;
+	}
+
+	if (ds_ValveSave.GetColumn(ds_ValveSave.row, "DECIDE_PROC_STS") == '0' || ds_ValveSave.GetColumn(ds_ValveSave.row, "DECIDE_PROC_STS") == '1' || ds_ValveSave.GetColumn(ds_ValveSave.row, "DECIDE_PROC_STS") == '2') 
+	{	
+		alert("결재(진행/완료)중으로 삭제가 불가합니다...");
+		return;
+    }else if(confirm("삭제하시겠습니까?"))
+    {
+		ds_SaveBad.ClearData();
+		ds_SaveBad.UpdateControl = false ;
+
+		ds_SaveBad.AddRow();
+		ds_SaveBad.SetRowType(0, "delete");
+		
+		ds_SaveBad.SetColumn(0, "FACI_NUM", ds_ValveSave.GetColumn(ds_ValveSave.row, "FACI_NUM")); //시설물번호
+		ds_SaveBad.SetColumn(0, "DETAIL_NUM", ds_ValveSave.GetColumn(ds_ValveSave.row, "VALVE_NUM")); //밸브번호
+		ds_SaveBad.SetColumn(0, "PATROL_YMD", ds_ValveSave.GetColumn(ds_ValveSave.row, "PATROL_YMD")); //순찰일자
+
+		ds_Plan.ClearData();
+		ds_Plan.UpdateControl = false ;
+
+		ds_Plan.AddRow();
+		ds_Plan.SetRowType(0, "update");		
+		ds_Plan.SetColumn(0, "CHK_YEAR", ds_ValveSave.GetColumn(ds_ValveSave.row, "CHK_YEAR"));		//순찰일자
+		ds_Plan.SetColumn(0, "CHK_QUARTER", ds_ValveSave.GetColumn(ds_ValveSave.row, "CHK_QUARTER"));		//순찰일자
+		ds_Plan.SetColumn(0, "BLOCK_CD", ds_ValveSave.GetColumn(ds_ValveSave.row, "BLOCK_CD"));		//순찰일자
+		ds_Plan.SetColumn(0, "FACI_NUM", ds_ValveSave.GetColumn(ds_ValveSave.row, "FACI_NUM"));		//순찰일자
+		ds_Plan.SetColumn(0, "DETAIL_NUM", ds_ValveSave.GetColumn(ds_ValveSave.row, "VALVE_NUM"));		//밸브번호		
+		ds_Plan.SetColumn(0, "PLAN_YMD", ds_ValveSave.GetColumn(ds_ValveSave.row, "PLAN_YMD"));		//순찰일자
+		ds_Plan.SetColumn(0, "PATROL_YMD", '');		//순찰일자초기화
+		ds_Plan.SetColumn(0, "CHK_FLAG", "N");
+		ds_Plan.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+		ds_Plan.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP						
+
+		ds_ValveSave.DeleteRow(ds_ValveSave.row);
+
+		var strSvcID         = "valve_chk_del";
+		var strPart          = "D10";	
+		var strURL           = "handle.do?ServiceName=D1202010010F-service";					
+		var strInDatasets    = "ds_ValveSave=ds_ValveSave:u ds_SaveBad=ds_SaveBad:u ds_Plan=ds_Plan:u";
+		var strOutDatasets   = "";		
+		var strArgument      = "valve_chk_del=1";
+	
+		gfn_SyncCall(
+						 strSvcID
+					   , strPart  	 
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+	
+		if(ErrorCode < 0)
+		{
+			return;
+		}
+		else
+		{
+			alert(gfn_GetMessage("M000009","%AAA%","정상적으로 삭제를"));
+		}		
+			
+	}
+}	
+
+// ---------------------------------------------------------
+// 달력 팝업 및 점검대장 팝업
+// ---------------------------------------------------------
+function grd_MultiSave_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{	
+	//이 화면은 등록만 되고 수정은 누출여부, 작동상태, 외관상태, 박스상태만가능 전위수정은 불가하며 삭제 후 다시 등록 요함. 그래서 insert만 활성화 됨.
+	if(ds_ValveSave.GetRowType(nRow) == "insert")
+	{
+		// 2012.06.21 이건민 - 권기철 과장님 추가요청 사항
+		grd_MultiSave.SetCellProp("body",6,"Edit","combo");		//순찰점검구분
+		
+		grd_MultiSave.SetCellProp("body",7,"Edit","combo");		//누출여부
+		grd_MultiSave.SetCellProp("body",8,"Edit","combo");		//작동상태
+		grd_MultiSave.SetCellProp("body",9,"Edit","combo");		//외관상태
+		grd_MultiSave.SetCellProp("body",10,"Edit","combo");		//박스상태
+		grd_MultiSave.SetCellProp("body",18,"Edit","normal");	//특기사항
+		
+		//전위측정대상여부가 대상, 비대상 여부에 따라 전위 활성화, 비활성화 여부
+		if(ds_ValveBox.GetColumn(ds_ValveBox.row,"ELECT_POT_MEAS_OBJ_YN") == "Y")
+		{
+			grd_MultiSave.SetCellProp("Body", 12, "Edit", "number");	//전단전위
+			grd_MultiSave.SetCellProp("Body", 14, "Edit", "number");	//후단전위
+			grd_MultiSave.SetCellProp("Body", 16, "Edit", "number");	//본딩전위
+		}else 
+		{
+			grd_MultiSave.SetCellProp("Body", 12, "Edit", "none");		//전단전위
+			grd_MultiSave.SetCellProp("Body", 14, "Edit", "none");		//후단전위
+			grd_MultiSave.SetCellProp("Body", 16, "Edit", "none");		//본딩전위		
+		}
+	}
+	else if(ds_ValveSave.GetColumn(nRow,"DECIDE_PROC_STS") == '0' || ds_ValveSave.GetColumn(nRow,"DECIDE_PROC_STS") == '1' ||  ds_ValveSave.GetColumn(nRow,"DECIDE_PROC_STS") == '2')
+	{
+		// 2012.06.21 이건민 - 권기철 과장님 추가요청 사항
+		grd_MultiSave.SetCellProp("body",6,"Edit","none");		//순찰점검구분
+		
+		grd_MultiSave.SetCellProp("body",7,"Edit","none");		//누출여부
+		grd_MultiSave.SetCellProp("body",8,"Edit","none");		//작동상태
+		grd_MultiSave.SetCellProp("body",9,"Edit","none");		//외관상태
+		grd_MultiSave.SetCellProp("body",10,"Edit","none");		//박스상태
+		grd_MultiSave.SetCellProp("body",12,"Edit","none");		//전단전위
+		grd_MultiSave.SetCellProp("body",14,"Edit","none");		//후단전위
+		grd_MultiSave.SetCellProp("body",16,"Edit","none");		//본딩전위
+		grd_MultiSave.SetCellProp("body",18,"Edit","none");		//특기사항
+	}
+	else
+	{
+		// 2012.06.21 이건민 - 권기철 과장님 추가요청 사항
+		grd_MultiSave.SetCellProp("body",6,"Edit","combo");		//순찰점검구분
+		
+		grd_MultiSave.SetCellProp("body",7,"Edit","combo");		//누출여부
+		grd_MultiSave.SetCellProp("body",8,"Edit","combo");		//작동상태
+		grd_MultiSave.SetCellProp("body",9,"Edit","combo");		//외관상태
+		grd_MultiSave.SetCellProp("body",10,"Edit","combo");	//박스상태
+		grd_MultiSave.SetCellProp("body",12,"Edit","none");		//전단전위
+		grd_MultiSave.SetCellProp("body",14,"Edit","none");		//후단전위
+		grd_MultiSave.SetCellProp("body",16,"Edit","none");		//본딩전위		
+		grd_MultiSave.SetCellProp("body",18,"Edit","normal");	//특기사항	
+		
+	}		
+}
+
+
+//---------------------------------------------------------
+// 정비보수의뢰 조회 popup
+//---------------------------------------------------------
+function btn_MainterReq_OnClick(obj)
+{
+
+	if(ds_ValveBox.GetColumn(ds_ValveBox.Row, "FACI_NUM")==""||ds_ValveBox.GetColumn(ds_ValveBox.Row, "FACI_NUM")==null)
+	{
+		alert("밸브를 선택하여 주십시오.");
+		return;
+	}
+	// var strPrefix = "D10";
+	// var strFormid = "D1601010010F";
+	// var strArg    = "BRANCH_CD="   + ds_Valve_2.GetColumn(grd_Multi2.ClickedRow, "BRANCH_CD");
+	    // strArg   += " FACI_NUM="   + ds_Valve_2.GetColumn(grd_Multi2.ClickedRow, "FACI_NUM") ;
+	    // strArg   += " DETAIL_NUM=" + ds_Valve_2.GetColumn(grd_Multi2.ClickedRow, "VALVE_NUM")  ;
+	// gfn_NewWindow(strPrefix,strFormid,strArg) ;
+	
+	// ##############################################
+	// 정비보수 화면 연계
+	// ##############################################
+	
+	var objDsName = gfn_D10_setDsObject_D1601010010F();
+	
+	eval(objDsName).SetColumn(0,"OPEN_FLAG"         ,"D1202010010F_T03"); // 01. 구분 (지정된 화면)  
+	eval(objDsName).SetColumn(0,"MAINTER_NUM"       ,ds_ValveSave.GetColumn(ds_ValveSave.Row,"MAINTER_NUM")); // 02. 정비보수번호        
+	eval(objDsName).SetColumn(0,"BRANCH_CD"         ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"BRANCH_CD")); // 03. 지사코드            
+	eval(objDsName).SetColumn(0,"ZIP_NO1"           ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"ZIP_NO1")); // 04. 시/구코드           
+	eval(objDsName).SetColumn(0,"TEAM_CD"           ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"TEAM_CD")); // 05. 팀코드              
+	eval(objDsName).SetColumn(0,"WORK_FIRM_CD"      ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"WORK_FIRM_CD")); // 06. 시공사코드          
+	eval(objDsName).SetColumn(0,"FACI_NUM"          ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"FACI_NUM")); // 07. 시설물코드          
+	eval(objDsName).SetColumn(0,"FACI_NM"           ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"FACI_NUM")); // 08. 시설물명            
+	eval(objDsName).SetColumn(0,"ZIP_SEQ"           ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"ZIP_SEQ")); // 09. 우편일련번호        
+	eval(objDsName).SetColumn(0,"ZIP_NO1"           ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"ZIP_NO1")); // 10. 우편번호1           
+	eval(objDsName).SetColumn(0,"ZIP_NO2"           ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"ZIP_NO2")); // 11. 우편번호2           
+	eval(objDsName).SetColumn(0,"HILL"              ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"HILL")); // 12. 산번지              
+	eval(objDsName).SetColumn(0,"ADDR_M"            ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"ADDR_M")); // 13. 본번                
+	eval(objDsName).SetColumn(0,"ADDR_S"            ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"ADDR_S")); // 14. 부번                
+	eval(objDsName).SetColumn(0,"SECOND_ADDR"       ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"SECOND_ADDR")); // 15. 보조주소            
+	eval(objDsName).SetColumn(0,"BLD_DONG"          ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"BLD_DONG")); // 16. 건물동              
+	eval(objDsName).SetColumn(0,"HOSU"              ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"HOSU")); // 17. 호수                
+	eval(objDsName).SetColumn(0,"LOT_NUM_UNION"     ,ds_ValveBox.GetColumn(ds_ValveBox.Row,"LOT_NUM_UNION")); // 18. 지번주소조합        
+	eval(objDsName).SetColumn(0,"PAVEMENT_KIND"     ,ds_ValveBox.GetColumn(0,"PAVEMENT_KIND")); // 19. 포장종류코드        
+	eval(objDsName).SetColumn(0,"WORK_REQ_EMPID"    ,gfn_GetGlobalValue("G_USER_NO")); // 20. 의뢰자ID            
+	eval(objDsName).SetColumn(0,"WORK_REQ_EMPID_NM" ,gfn_GetGlobalValue("G_NAME")); // 21. 의뢰자명          
+	eval(objDsName).SetColumn(0,"KEY1"              ,ds_ValveSave.GetColumn(ds_ValveSave.Row,"FACI_NUM")); // 22. PK1                 
+	eval(objDsName).SetColumn(0,"KEY2"              ,ds_ValveSave.GetColumn(ds_ValveSave.Row,"VALVE_NUM")); // 23. PK2                 
+	eval(objDsName).SetColumn(0,"KEY3"              ,ds_ValveSave.GetColumn(ds_ValveSave.Row,"PATROL_YMD")); // 24. PK3                 
+	eval(objDsName).SetColumn(0,"KEY4"              ,""); // 25. PK4                 
+	eval(objDsName).SetColumn(0,"KEY5"              ,""); // 26. PK5	
+
+	// 화면 OPEN
+	gfn_Form_D1601010010F( objDsName );
+}
+
+
+//---------------------------------------------------------
+// 밸브 순찰점검 이력조회 popup
+//---------------------------------------------------------
+function fn_Valve_OnClick(obj)
+{
+	if(edt_ValveNum == "" || edt_ValveNum == null)
+	{
+		alert('밸브를 선택해주세요');
+		return;
+	}
+	var args = "FACI_NUM="   +ds_ValveBox.GetColumn(ds_ValveBox.ROW,"FACI_NUM")		//밸브박스번호
+		     + " VALVE_NUM=" +ds_ValveBox.GetColumn(ds_ValveBox.ROW,"VALVE_NUM");		//밸브번호
+		     
+	gfn_Dialog("D10","D1202010017U",args,800,400,true,-1,-1);
+}
+
+
+//---------------------------------------------------------
+// 측정전위 popup
+//---------------------------------------------------------
+function fn_MeasElectPot_OnClick(obj)
+{
+	if((ds_ValveBox.GetColumn(0, "FACI_NUM") == ""|| ds_ValveBox.GetColumn(0, "FACI_NUM") == null) && ds_ValveSave.GetRowCount()==0)
+	{
+		alert("밸브를 선택해주세요.");
+		return;
+	}
+	else if(ds_Valve.GetRowType(0) == "normal" || ds_Valve.GetRowType(0) == "update")
+	{
+		var args = "FACI_NUM="   +ds_ValveBox.GetColumn(ds_ValveBox.ROW,"FACI_NUM")		//밸브박스번호
+				 + " VALVE_NUM=" +ds_ValveBox.GetColumn(ds_ValveBox.ROW,"VALVE_NUM");		//밸브번호
+		gfn_Dialog("D10","D1202010040U",args,800,456,true,-1,-1);
+	}
+}
+
+
+
+function D1202010010F_T03_OnUnloadCompleted(obj)
+{
+	if(ds_ValveSave.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변동된 사항이 있습니다. 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+
+function fn_D1_PortletFind(str_FaciNum, str_Valve, str_PlanYmd){
+		
+	var strSvcID = "fn_D1_Find";
+	var strPart  = "D10";				
+	var strURL   = "handle.do?ServiceName=D1_PatrolCheckResultMgr-service"
+				 + "&BRANCH_CD="	  + ""						//지사코드
+				 + "&BLOCK_CD=" 	  + ""        				//구코드
+				 + "&TEAM_CD=" 		  + ""					    //팀코드
+				 + "&SHIFT_WORK_CD="  + ""						//조코드
+				 + "&PATROL_YMD=" 	  + str_PlanYmd			    //순찰일자
+				 + "&FACI_NUM="	      + str_FaciNum				//시설물번호
+				 ; 
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Multi_T03=ds_Multi";
+	var strArgument     = "find3";
+	
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);
+	              
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+	              
+	if(ds_Multi_T03.GetRowCount()==0)
+	{
+		grd_Multi.NoDataText=gfn_GetMessage("M000009","%AAA%","조회를");
+		return;
+	}
+		
+		grd_Multi_OnCellClick ("",0,"","","","");
+		
+		for(var i=0; i<ds_ValveBox.GetRowCount(); i++){
+			if(ds_ValveBox.GetColumn(i, "VALVE_NUM") == str_Valve){
+			   ds_ValveBox.SelectRow(i);
+			   ds_ValveBox.row = i;
+			}	
+		}				
+}
+function grd_MultiSave_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if("MOV_LST" == grd_MultiSave.GetCellProp("body",nCell,"ColId"))	//점검대장 등록여부
+	{
+	    if(ds_ValveSave.GetRowType(grd_MultiSave.ClickedRow)=="insert")
+	    {
+			alert("순찰점검등록을 먼저 하십시오.");
+			return;
+	    }
+		if(ds_ValveBox.GetColumn(ds_ValveBox.row,"MOV_YN")=="Y")
+		{
+			var strCopyType = "";
+			var args = "";
+			var strRowType = "";
+			
+			//if(ds_ValveSave.GetRowType(nRow)=="insert")
+			if(ds_ValveSave.GetColumn(nRow,"MOV_LST") == 'N')
+			{
+				strRowType="insert";
+			}
+			else
+			{
+				strRowType="normal";
+			}
+			
+			strCopyType = strRowType;
+			
+			args  = "FACI_NUM="      +quote(ds_ValveBox.GetColumn(ds_ValveBox.row,"FACI_NUM"));												//밸브박스번호
+			args += " VALVE_NUM="    +quote(ds_ValveBox.GetColumn(ds_ValveBox.row,"VALVE_NUM"));							//밸브번호
+			args += " PATROL_YMD="   +quote(ds_ValveSave.GetColumn(nRow,"PATROL_YMD"));					//순찰일자
+			args += " MOV_NM="   	 +quote(ds_ValveBox.GetColumn(ds_ValveBox.row,"MOV_NM"));					//MOV명
+			args += " STD="   	 	 +quote(ds_ValveBox.GetColumn(ds_ValveBox.row,"STD"));				//규격
+			args += " TAKER_EMPID1=" +quote(ds_ValveSave.GetColumn(nRow,"TAKER_EMPID1_NM"));				//점검자1	
+			args += " YEAR=" 	     +quote(substr(ds_ValveSave.GetColumn(nRow,"PATROL_YMD"), 0, 4));	//순찰일자
+			args += " MONTH=" 	     +quote(substr(ds_ValveSave.GetColumn(nRow,"PATROL_YMD"), 4, 2));	//순찰일자
+			args += " DAY=" 	     +quote(substr(ds_ValveSave.GetColumn(nRow,"PATROL_YMD"), 6, 2));	//순찰일자
+			
+			//이 화면은 등록만 되고 수정이 안됨, 수정을 하고 싶은면 삭제후 다시 등록 요함. 그래서 insert만 활성화 됨.
+			// if(ds_ValveSave.GetRowType(nRow) == "insert")
+			//{
+				strRowType = gfn_Dialog("D10","D1202010015U",args,900,535,true,-1,-1);		//MOV점검표 팝업
+			//}
+			
+			if(strRowType == "saveOk")
+			{
+				strRowType = "update";
+				ds_ValveSave.SetColumn(ds_ValveSave.row,"MOV_LST","Y");	//MOV점검표
+			}// }else
+			// {
+				// strRowType = strCopyType;
+				// ds_ValveSave.SetColumn(ds_ValveSave.row,"MOV_LST","N");	//MOV점검표				
+			// }
+		}
+		else
+		{
+			alert("MOV 대상이 아닙니다.");
+		}
+	}
+}
+//권기철 추가 2010.1.3
+function grd_MultiSave_OnCellPosChanged(obj,nRow,nCell,nOldRow,nOldCell,nPivotIndex,nOldPivotIndex)
+{
+	if(ds_ValveSave.GetColumn(0,"PATROL_YMD")>today())
+	{
+		alert("현재일보다 큽니다.");
+		ds_ValveSave.SetColumn(0,"PATROL_YMD",'');
+	}
+}
+
+function ds_ValveBox_OnRowPosChanged(obj,nOldRow,nRow)
+{
+// ds_Valve.ClearData();
+    // var strSvcID        = "valve_find";
+	// var strPart         = "D10";	
+	// var strURL          = "handle.do?ServiceName=D1202010010F-service";
+	// var strInDatasets   = "";
+	// var strOutDatasets  = "ds_Valve=ds_Valve";
+	// var strArgument     = "valve_find=1";
+		// strArgument		+= " FACI_NUM="    + ds_ValveBox.GetColumn(ds_ValveBox.row,"FACI_NUM");
+								 	 
+	// gfn_AsyncCall( 
+					 // strSvcID
+				   // , strPart
+				   // , strURL
+				   // , strInDatasets
+				   // , strOutDatasets
+				   // , strArgument
+			   // );	
+			   	
+	ds_ValveSave.ClearData();
+    var strSvcID        = "rst_valve";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1202010010F-service";
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_ValveSave=ds_ValveSave";
+	var strArgument     = "rst_valve=1";
+		strArgument		+= " FACI_NUM="    + ds_ValveBox.GetColumn(nRow,"FACI_NUM");
+		strArgument		+= " VALVE_NUM="   + ds_ValveBox.GetColumn(nRow,"VALVE_NUM");
+		
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );					
+}
+
+function ds_ValveBox_OnLoadCompleted(obj,nErrorCode,strErrorMsg,nReason)
+{
+	if(nReason == 5)
+	{
+		ds_ValveBox_OnRowPosChanged();
+	}
+}]]></Script>
+</Window>

@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="470" Id="D1801040010F_T04" Left="8" OnLoadCompleted="D1801040010F_T04_OnLoadCompleted" PidAttrib="7" Title="D1801040010F_T04" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_FileList">
+				<Contents>
+					<colinfo id="FILE_ID" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NUM" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_FLAG" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_KIND" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_ID" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM" size="256" type="STRING"/>
+					<colinfo id="ORIG_ATTACH_FILE_NM" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_PATH" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_SIZE" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_TYPE" size="256" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" type="STRING"/>
+					<colinfo id="USE_YN" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_LeaseRt">
+				<Contents>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<NAME>0.02</NAME>
+						<VALUE>0.02</VALUE>
+					</record>
+					<record>
+						<NAME>0.025</NAME>
+						<VALUE>0.025</VALUE>
+					</record>
+					<record>
+						<NAME>0.03</NAME>
+						<VALUE>0.03</VALUE>
+					</record>
+					<record>
+						<NAME>0.04</NAME>
+						<VALUE>0.04</VALUE>
+					</record>
+					<record>
+						<NAME>0.05</NAME>
+						<VALUE>0.05</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Count" OnColumnChanged="ds_FPay_OnColumnChanged">
+				<Contents>
+					<colinfo id="NCOUNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Com">
+				<Contents>
+					<colinfo id="LOAN_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="FNC_PROD_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BillDelete">
+				<Contents>
+					<colinfo id="COM_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BIZPLC_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_LINE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BillDetailDelete"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BillHeader">
+				<Contents>
+					<colinfo id="COM_ID" size="255" type="STRING"/>
+					<colinfo id="BIZPLC_CD" size="255" type="STRING"/>
+					<colinfo id="BILL_YMD" size="255" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="255" type="STRING"/>
+					<colinfo id="UPD_DTM" size="255" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="255" type="STRING"/>
+					<colinfo id="UPD_IP" size="255" type="STRING"/>
+					<colinfo id="CRT_DTM" size="255" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="255" type="STRING"/>
+					<colinfo id="CRT_IP" size="255" type="STRING"/>
+					<colinfo id="APPRO_YN" size="255" type="STRING"/>
+					<colinfo id="ACNT_YMD" size="255" type="STRING"/>
+					<colinfo id="ACNT_BILL_SEQ" size="255" type="STRING"/>
+					<colinfo id="TOT_LN_NUM" size="255" type="DECIMAL"/>
+					<colinfo id="FINL_LN_NUM" size="255" type="STRING"/>
+					<colinfo id="DR_SUM_AMT" size="255" type="DECIMAL"/>
+					<colinfo id="CR_SUM_AMT" size="255" type="DECIMAL"/>
+					<colinfo id="BILL_WRITE_DEPT_CD" size="255" type="STRING"/>
+					<colinfo id="BILL_KIND" size="255" type="STRING"/>
+					<colinfo id="SYS_FLAG" size="255" type="STRING"/>
+					<colinfo id="BILL_FLAG" size="255" type="STRING"/>
+					<colinfo id="BILL_CRT_INFO" size="255" type="STRING"/>
+					<colinfo id="ACNT_FLAG" size="255" type="STRING"/>
+					<colinfo id="DEL_YN" size="255" type="STRING"/>
+					<colinfo id="ADJ_CNT" size="255" type="DECIMAL"/>
+					<colinfo id="OUTPUT_CNT" size="255" type="DECIMAL"/>
+					<colinfo id="BILL_OUTPUT_DTM" size="255" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Com_0">
+				<Contents>
+					<colinfo id="LOAN_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="FNC_PROD_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Modify">
+				<Contents>
+					<colinfo id="BILL_APPRO_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="TXBILL_VAT_BIZPLC" size="256" summ="default" type="STRING"/>
+					<colinfo id="TXBILL_PUBL_YM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TXBILL_PUBL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PE_PIPE_FACI_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BillDetail">
+				<Contents>
+					<colinfo id="COM_ID" size="255" summ="default" type="STRING"/>
+					<colinfo id="BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPNM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="255" summ="default" type="STRING"/>
+					<colinfo id="DRCR_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="TITACNT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="TITACNT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="NO_APPRO_BILL_AMT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="APPLY" size="255" summ="default" type="STRING"/>
+					<colinfo id="FIRM_DEPT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEPART_DPT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="PASS_DEPT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PASS_DEPT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="EST_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BNK_BRANCH_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEPST_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="OTHER_YN" size="255" summ="default" type="STRING"/>
+					<colinfo id="CHECK_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="QTY_PERS" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="UNIT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="INT_RT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="CAPI_SUPPLY_VAL" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="CURCY_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCHG_RT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="FORGCURCY_AMT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="PERIOD_FROM_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PERIOD_TO" size="255" summ="default" type="STRING"/>
+					<colinfo id="NO_CLOSE_ACNT_UNITY_YN" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_BILL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PAY_WAY" size="255" summ="default" type="STRING"/>
+					<colinfo id="PAY_ACCOUNT_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="EVIDENCE_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="CARD_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_KIND" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_NO" size="255" summ="default" type="STRING"/>
+					<colinfo id="PUBL_PROPO_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_STS_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_PUBL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_EXPIRE_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_CD_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SITE_CD_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CONST_ASSET_COST_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="ASSET_CHG_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="ASSET_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PROJECT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BUY_SALES_VAT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BUY_NOEXEC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SALES_VAT_CLASS_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="VAT_BIZPLC" size="255" summ="default" type="STRING"/>
+					<colinfo id="SUSPENSE_TXBILL_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="RCV_BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="FND_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOAN_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOAN_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_PLAN_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_PLAN_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_APPRO_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BACK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PUBL_YM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PUBL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PUBL_SEQ" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_LEASE_COND_YN">
+				<Contents>
+					<colinfo id="name" size="256" summ="default" type="STRING"/>
+					<colinfo id="value" size="256" summ="default" type="STRING"/>
+					<record>
+						<name>일시</name>
+						<value>0</value>
+					</record>
+					<record>
+						<name>영구</name>
+						<value>1</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BillDetail2">
+				<Contents>
+					<colinfo id="COM_ID" size="255" summ="default" type="STRING"/>
+					<colinfo id="BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPNM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="255" summ="default" type="STRING"/>
+					<colinfo id="DRCR_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="TITACNT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="TITACNT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="NO_APPRO_BILL_AMT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="APPLY" size="255" summ="default" type="STRING"/>
+					<colinfo id="FIRM_DEPT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEPART_DPT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="PASS_DEPT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PASS_DEPT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="EST_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BNK_BRANCH_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEPST_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="OTHER_YN" size="255" summ="default" type="STRING"/>
+					<colinfo id="CHECK_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="QTY_PERS" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="UNIT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="INT_RT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="CAPI_SUPPLY_VAL" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="CURCY_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCHG_RT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="FORGCURCY_AMT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="PERIOD_FROM_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PERIOD_TO" size="255" summ="default" type="STRING"/>
+					<colinfo id="NO_CLOSE_ACNT_UNITY_YN" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_BILL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PAY_WAY" size="255" summ="default" type="STRING"/>
+					<colinfo id="PAY_ACCOUNT_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="EVIDENCE_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="CARD_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_KIND" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_NO" size="255" summ="default" type="STRING"/>
+					<colinfo id="PUBL_PROPO_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_STS_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_PUBL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_EXPIRE_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_CD_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SITE_CD_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CONST_ASSET_COST_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="ASSET_CHG_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="ASSET_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PROJECT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BUY_SALES_VAT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BUY_NOEXEC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SALES_VAT_CLASS_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="VAT_BIZPLC" size="255" summ="default" type="STRING"/>
+					<colinfo id="SUSPENSE_TXBILL_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="RCV_BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="FND_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOAN_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOAN_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_PLAN_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_PLAN_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_APPRO_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BACK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PUBL_YM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PUBL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PUBL_SEQ" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid AutoEnter="TRUE" BindDataset="ds_DataPay" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="469" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="290" Id="grd_Pay" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" NoDataText="조회된&#32;내용이&#32;없습니다." Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="179" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="55"/>
+						<col width="80"/>
+						<col width="96"/>
+						<col width="70"/>
+						<col width="60"/>
+						<col width="60"/>
+						<col width="70"/>
+						<col width="60"/>
+						<col width="100"/>
+						<col width="90"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="6" display="text" text="적용요율"/>
+						<cell bkcolor="user11" col="7" display="text" text="점용일수"/>
+						<cell col="8" display="text" text="산정금액(원)"/>
+						<cell col="10" display="text" text="점용료(원)"/>
+						<cell col="12" display="text" text="비고"/>
+						<cell col="13" display="text" text="전표발행번호"/>
+						<cell col="14" display="text" text="전표번호"/>
+						<cell col="0" display="text" text="해당년도"/>
+						<cell col="1" display="text" text="점용단가구분"/>
+						<cell bkcolor="user11" col="2" display="text" text="단가(공시지가)"/>
+						<cell col="3" display="text" text="점용면적"/>
+						<cell col="4" display="text" text="관경"/>
+						<cell col="5" display="text" text="연장"/>
+						<cell col="9" display="text" text="부가세"/>
+						<cell col="11" display="text" text="지급총액"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="PAY_YEAR" display="normal" expandsize="18" limit="4" wordwrap="word"/>
+						<cell align="center" col="1" colid="LEASE_UNIT_PRC_FLAG" combocol="CODE_ITEM" combodataset="ds_D10004" combodisplayrowcnt="20" combotext="ITEM_KNAME" display="combo"/>
+						<cell align="right" col="2" colid="UNIT_PRC" display="number" edit='expr:decode(length(trim(BILL_YMD)),0,&quot;number&quot;,&quot;none&quot;)'/>
+						<cell align="right" col="3" colid="LEASE_SQUARE" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="DIAM" combocol="CODE_ITEM" combodataset="ds_D10300" combodisplayrowcnt="20" combofilter='expr:&quot;GUBUN&#32;==&#32;&apos;&quot;+ds_TopData.GetColumn(currow,&quot;MPIPE_MATER_FLAG&quot;)+&quot;&apos;' combotext="ITEM_KNAME" display="combo"/>
+						<cell align="right" col="5" colid="LENG" display="number"/>
+						<cell align="right" col="6" colid="LEASE_RT" display="number" expandsize="18" limit="4" wordwrap="word"/>
+						<cell align="right" col="7" colid="LEASE_DAY_CNT" display="number" edit='expr:decode(length(trim(BILL_YMD)),0,&quot;number&quot;,&quot;none&quot;)' limit="3"/>
+						<cell align="right" col="8" colid="CALCU_AMT" display="number" limit="10"/>
+						<cell align="right" col="9" colid="VAT" display="number" limit="10"/>
+						<cell align="right" col="10" display="number" expr="CALCU_AMT&#32;+&#32;VAT" limit="10"/>
+						<cell align="right" col="11" colid="PAY_TOT_AMT" display="number"/>
+						<cell col="12" colid="RMK" display="text" edit='expr:decode(length(trim(BILL_YMD)),0,&quot;normal&quot;,&quot;none&quot;)' limit="50"/>
+						<cell align="center" col="13" colid="BILL_YMD" display="text"/>
+						<cell align="center" col="14" colid="BILL_SEQ" display="text"/>
+					</body>
+					<summary>
+						<cell col="0" display="date" edit="number" Mask="####"/>
+						<cell col="1" display="text"/>
+						<cell col="2" display="text"/>
+						<cell col="3" display="date" edit="number" Mask="####"/>
+						<cell col="4" display="text"/>
+						<cell col="5" display="text"/>
+						<cell col="6" display="date" edit="date" Mask="mmmm"/>
+						<cell col="7" display="text"/>
+						<cell align="center" col="8" display="text" text="소계"/>
+						<cell align="center" col="9" display="text"/>
+						<cell align="right" col="10" display="number" expr='SumNF(&quot;PAY_TOT_AMT&quot;)'/>
+						<cell col="11" display="text"/>
+						<cell col="12" display="text"/>
+						<cell col="13" display="text"/>
+						<cell col="14" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="180" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1254" TabOrder="2" Top="177" Type="Rectangle" Width="1249"></Shape>
+		<Image Align="Left" Height="10" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="3" Text="협약&#32;연도&#32;점용료&#32;계산" Top="162" Width="210"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static1" Left="100" Style="table" TabOrder="30" Top="66" VAlign="Middle" Width="1154" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static4" Left="100" Style="table" TabOrder="27" Top="45" VAlign="Middle" Width="1154" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="100" Style="table" TabOrder="31" Top="24" VAlign="Middle" Width="1154" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="4" Text="협약내역등록" Top="5" Width="210"></Image>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static11" Left="275" Style="table" TabOrder="5" Text="계약조건" Top="45" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_DataContAgree" Border="Flat" Column="AGREE_TAKER_NAME" Enable="FALSE" Height="18" Id="edt_AgreeTalerName" ImeMode="none" Left="1106" MaxLength="9" Style="edit" TabOrder="6" Top="26" Width="97"></Edit>
+		<Edit BindDataset="ds_DataContAgree" Border="Flat" Column="AGREE_TAKER_NM" Enable="FALSE" Height="18" Id="edt_AgreeTalerNm" ImeMode="none" Left="1025" MaxLength="9" Style="edit_Indis" TabOrder="7" Top="26" Width="79"></Edit>
+		<Edit BindDataset="ds_FileList_Txt" Border="Flat" Column="FILE_LIST" Enable="FALSE" Height="18" Id="edtFileList" ImeMode="none" Left="1025" Style="edit" TabOrder="8" Top="68" Width="149"></Edit>
+		<Combo BindDataset="ds_DataContAgree" Border="Flat" CodeColumn="CODE_ITEM" Column="AGREE_TAKER_TEL_DDD" DataColumn="ITEM_KNAME" Enable="FALSE" Height="18" Id="cob_AgreeTakerTelDDD" ImeMode="none" InnerDataset="ds_A10110" Left="698" Style="combo_indis" TabOrder="9" Top="25" Width="53"></Combo>
+		<Calendar BindDataset="ds_DataContAgree" Border="Flat" Column="LEASE_STR_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_LeaseStrYmd" Left="699" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="10" Top="47" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Edit BindDataset="ds_DataContAgree" Border="Flat" Column="AGREE_TAKER_TEL_NUM" Enable="FALSE" Height="18" Id="edt_AgreeTakerTelNum" Left="803" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="11" Top="26" Width="41"></Edit>
+		<Edit BindDataset="ds_DataContAgree" Border="Flat" Column="AGREE_TAKER_TEL_EXN" Enable="FALSE" Height="18" Id="edt_AgreeTakerTelExn" Left="757" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="12" Top="26" Width="39"></Edit>
+		<Calendar BindDataset="ds_DataContAgree" Border="Flat" Column="PAS_DU_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_PasDuYmd" Left="397" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="13" Top="68" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar BindDataset="ds_DataContAgree" Border="Flat" Column="LEASE_END_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_LeaseENdYmd" Left="1025" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="14" Top="47" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar BindDataset="ds_DataContAgree" Border="Flat" Column="COMPL_INSPECT_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_ComplInspectYmd" Left="128" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="15" Top="68" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar BindDataset="ds_DataContAgree" Border="Flat" Column="AGREE_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_AgreeYmd" Left="128" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="16" Top="26" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Combo BindDataset="ds_DataContAgree" Border="Flat" CodeColumn="CODE_ITEM" Column="LEASE_COND" DataColumn="ITEM_KNAME" Enable="FALSE" Height="18" Id="cob_LeaseCond" InnerDataset="ds_D10202" Left="127" Style="combo_indis" TabOrder="17" Top="46" Width="90"></Combo>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static9" Left="275" Style="table" TabOrder="18" Text="이관일자" Top="66" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static7" Left="6" Style="table" TabOrder="19" Text="시공감리일" Top="66" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static40" Left="903" Style="table" TabOrder="20" Text="협약종료일" Top="45" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static36" Left="577" Style="table" TabOrder="21" Text="협약시작일" Top="45" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static14" Left="903" Style="table" TabOrder="22" Text="협약서첨부" Top="66" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_DataContAgree" Border="Flat" Column="AGREE_MAIN" Enable="FALSE" Height="18" Id="Edit0" Left="397" Style="edit" TabOrder="23" Top="26" Width="178"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static8" Left="577" Style="table" TabOrder="24" Text="연락처" Top="24" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static6" Left="6" Style="table" TabOrder="25" Text="협약일자" Top="24" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static5" Left="6" Style="table" TabOrder="26" Text="점용조건" Top="45" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static3" Left="275" Style="table" TabOrder="28" Text="협약주체" Top="24" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static2" Left="903" Style="table" TabOrder="29" Text="협약담당자" Top="24" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="tit_18" Left="577" Style="table" TabOrder="33" Text="지급시기" Top="66" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_DataContAgree" Border="Flat" Column="LEASE_AMT_PAY_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cob_LeaseAmtPayYmd" Left="699" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="32" Top="68" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static10" Left="750" Style="static" TabOrder="34" Text="-" Top="29" Width="10"></Static>
+		<Static Height="13" Id="Static15" Left="796" Style="static" TabOrder="35" Text="-" Top="29" Width="10"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="bar_14" Left="100" Style="table" TabOrder="37" Top="110" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="bar_15" Left="99" Style="table" TabOrder="38" Top="131" VAlign="Middle" Width="1156" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="tit_12" Left="5" Style="table" TabOrder="36" Text="사업자(주민)번호" Top="131" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="tit_17" Left="275" Style="table" TabOrder="39" Text="허가기간" Top="131" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="tit_14" Left="275" Style="table" TabOrder="40" Text="예금주" Top="110" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="tit_16" Left="905" Style="table" TabOrder="41" Text="연락처" Top="110" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="tit_15" Left="577" Style="table" TabOrder="42" Text="은행명" Top="110" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="tit_20" Left="905" Style="table_1" TabOrder="43" Text="세금계산서발행" Top="131" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_DataPayNm" Border="Flat" Column="ACCOUNT_NUM" Enable="FALSE" Height="18" Id="edt_AccountNum" Left="127" MaxLength="20" Style="edit" TabOrder="44" Top="112" Width="146"></Edit>
+		<Edit BindDataset="ds_DataPayNm" Border="Flat" Column="BIZ_REGI_NUM" Enable="FALSE" Height="18" Id="edt_PayYear" Left="127" MaxLength="14" Style="edit_Indis" TabOrder="45" Top="133" Width="146"></Edit>
+		<Edit BindDataset="ds_DataPayNm" Border="Flat" Column="DEPOSITOR_NM1" Enable="FALSE" Height="18" Id="edt_DepositorNm" Left="397" MaxLength="100" Style="edit_Indis" TabOrder="46" Top="112" Width="178"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="tit_19" Left="577" Style="table" TabOrder="47" Text="증빙구분" Top="131" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_DataPayNm" Border="Flat" CodeColumn="CODE_ITEM" Column="EVIDENCE_YN" DataColumn="ITEM_KNAME" Enable="FALSE" Height="18" Id="cob_EvidenceYn" InnerDataset="ds_A10200" Left="698" Style="combo_indis" TabOrder="48" Top="132" Width="90"></Combo>
+		<Calendar BindDataset="ds_DataPayNm" Border="Flat" Column="ADMIT_PERIOD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar0" Left="397" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="49" Top="133" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Edit BindDataset="ds_DataPayNm" Border="Flat" Column="PAY_NM_TEL_EXN" Enable="FALSE" Height="18" Id="Edit5" Left="1084" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="50" Top="112" Width="35"></Edit>
+		<Edit BindDataset="ds_DataPayNm" Border="Flat" Column="PAY_NM_TEL_NUM" Enable="FALSE" Height="18" Id="Edit6" Left="1127" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="51" Top="112" Width="35"></Edit>
+		<Combo BindDataset="ds_DataPayNm" Border="Flat" CodeColumn="CODE_ITEM" Column="TXBILL_PUBL_YN" DataColumn="ITEM_KNAME" Enable="FALSE" Height="18" Id="Combo0" InnerDataset="ds_A10200" Left="1026" Style="combo_indis" TabOrder="52" Top="132" Width="90"></Combo>
+		<Combo BindDataset="ds_DataPayNm" Border="Flat" CodeColumn="CODE_ITEM" Column="PAY_NM_TEL_DDD" DataColumn="ITEM_KNAME" Enable="FALSE" Height="18" Id="Combo1" InnerDataset="ds_A10110" Left="1026" Style="combo_indis" TabOrder="53" Top="111" Width="51"></Combo>
+		<Image Align="Left" Height="10" Id="img2" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="54" Text="협약자정보등록" Top="94" Width="210"></Image>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="tit_13" Left="5" Style="table" TabOrder="55" Text="계좌번호" Top="110" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Height="15" Id="Static12" Left="1077" Style="static" TabOrder="56" Text="-" Top="115" Width="10"></Static>
+		<Static Height="13" Id="Static13" Left="1120" Style="static" TabOrder="57" Text="-" Top="115" Width="10"></Static>
+		<Edit BindDataset="ds_DataPayNm" Border="Flat" Column="BNK_NM1" Enable="FALSE" Height="18" Id="ds_BnkNm" Left="699" MaxLength="30" Style="edit" TabOrder="58" Top="112" Width="204"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="18" Id="btn_FileAdd" ImageID="btn_4_fileadd" Left="1175" LeftMargin="21" OnClick="btn_FileAdd_OnClick" Style="button" TabOrder="59" Text="파일첨부&#32;" Top="68" Width="75"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_bill" ImageID="btn_4_billreg" Left="1104" LeftMargin="21" OnClick="btn_bill_OnClick" Style="button" TabOrder="60" Text="전표등록" Top="1" Width="76"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_billDel" ImageID="btn_4_Close&#32;cancellation" Left="1181" LeftMargin="21" OnClick="btn_billDel_OnClick" Style="button" TabOrder="61" Text="전표취소" Top="1" Width="76"></Button>
+		<Radio BindDataset="ds_DataContAgree" Border="None" CodeColumn="value" Color="user17" Column="LEASE_COND_YN" ColumnCount="2" DataColumn="name" Enable="FALSE" Height="13" Id="rad_LEASE_COND_YN" INDEX="0" InnerDataset="ds_LEASE_COND_YN" Left="397" OnClick="div_agree_rad_LEASE_COND_YN_OnClick" Style="radio" TabOrder="62" Top="50" Width="105">
+			<Contents>
+				<Layout Height="20" left="0" text="명" width="80"/>
+				<Layout Height="20" left="80" text="코드" width="80"/>
+			</Contents>
+		</Radio>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_AddSub" ImageID="btn_addrow" Left="1206" LeftMargin="15" OnClick="btn_AddSub_OnClick" Style="button" TabOrder="63" Text="추가" Top="156" Width="48"></Button>
+		<Grid BindDataset="ds_BillHeader" BkColor2="default" BoldHead="true" Bottom="328" Enable="true" EndLineColor="default" Height="64" Id="Grid0" InputPanel="FALSE" Left="24" LineColor="default" Right="1240" Style="grid" TabOrder="64" TabStop="true" Top="264" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1216">
+			<contents>
+				<columns>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="COM_ID"/>
+					<cell col="1" display="text" text="BIZPLC_CD"/>
+					<cell col="2" display="text" text="BILL_YMD"/>
+					<cell col="3" display="text" text="BILL_SEQ"/>
+					<cell col="4" display="text" text="UPD_DTM"/>
+					<cell col="5" display="text" text="UPD_EMPID"/>
+					<cell col="6" display="text" text="UPD_IP"/>
+					<cell col="7" display="text" text="CRT_DTM"/>
+					<cell col="8" display="text" text="CRT_EMPID"/>
+					<cell col="9" display="text" text="CRT_IP"/>
+					<cell col="10" display="text" text="APPRO_YN"/>
+					<cell col="11" display="text" text="ACNT_YMD"/>
+					<cell col="12" display="text" text="ACNT_BILL_SEQ"/>
+					<cell col="13" display="text" text="TOT_LN_NUM"/>
+					<cell col="14" display="text" text="FINL_LN_NUM"/>
+					<cell col="15" display="text" text="DR_SUM_AMT"/>
+					<cell col="16" display="text" text="CR_SUM_AMT"/>
+					<cell col="17" display="text" text="BILL_WRITE_DEPT_CD"/>
+					<cell col="18" display="text" text="BILL_KIND"/>
+					<cell col="19" display="text" text="SYS_FLAG"/>
+					<cell col="20" display="text" text="BILL_FLAG"/>
+					<cell col="21" display="text" text="BILL_CRT_INFO"/>
+					<cell col="22" display="text" text="ACNT_FLAG"/>
+					<cell col="23" display="text" text="DEL_YN"/>
+					<cell col="24" display="text" text="ADJ_CNT"/>
+					<cell col="25" display="text" text="OUTPUT_CNT"/>
+					<cell col="26" display="text" text="BILL_OUTPUT_DTM"/>
+				</head>
+				<body>
+					<cell col="0" colid="COM_ID" display="text"/>
+					<cell col="1" colid="BIZPLC_CD" display="text"/>
+					<cell col="2" colid="BILL_YMD" display="text"/>
+					<cell col="3" colid="BILL_SEQ" display="text"/>
+					<cell col="4" colid="UPD_DTM" display="text"/>
+					<cell col="5" colid="UPD_EMPID" display="text"/>
+					<cell col="6" colid="UPD_IP" display="text"/>
+					<cell col="7" colid="CRT_DTM" display="text"/>
+					<cell col="8" colid="CRT_EMPID" display="text"/>
+					<cell col="9" colid="CRT_IP" display="text"/>
+					<cell col="10" colid="APPRO_YN" display="text"/>
+					<cell col="11" colid="ACNT_YMD" display="text"/>
+					<cell col="12" colid="ACNT_BILL_SEQ" display="text"/>
+					<cell col="13" colid="TOT_LN_NUM" display="number"/>
+					<cell col="14" colid="FINL_LN_NUM" display="text"/>
+					<cell col="15" colid="DR_SUM_AMT" display="number"/>
+					<cell col="16" colid="CR_SUM_AMT" display="number"/>
+					<cell col="17" colid="BILL_WRITE_DEPT_CD" display="text"/>
+					<cell col="18" colid="BILL_KIND" display="text"/>
+					<cell col="19" colid="SYS_FLAG" display="text"/>
+					<cell col="20" colid="BILL_FLAG" display="text"/>
+					<cell col="21" colid="BILL_CRT_INFO" display="text"/>
+					<cell col="22" colid="ACNT_FLAG" display="text"/>
+					<cell col="23" colid="DEL_YN" display="text"/>
+					<cell col="24" colid="ADJ_CNT" display="number"/>
+					<cell col="25" colid="OUTPUT_CNT" display="number"/>
+					<cell col="26" colid="BILL_OUTPUT_DTM" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+		<Grid BindDataset="ds_BillDetail" BkColor2="default" BoldHead="true" Bottom="408" Enable="true" EndLineColor="default" Height="80" Id="Grid1" InputPanel="FALSE" Left="24" LineColor="default" Right="1240" Style="grid" TabOrder="65" TabStop="true" Top="328" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1216">
+			<contents>
+				<columns>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="COM_ID"/>
+					<cell col="1" display="text" text="BIZPLC_CD"/>
+					<cell col="2" display="text" text="BILL_YMD"/>
+					<cell col="3" display="text" text="BILL_SEQ"/>
+					<cell col="4" display="text" text="BILL_LINE"/>
+					<cell col="5" display="text" text="UPD_DTM"/>
+					<cell col="6" display="text" text="UPD_EMPID"/>
+					<cell col="7" display="text" text="UPD_IP"/>
+					<cell col="8" display="text" text="CRT_DTM"/>
+					<cell col="9" display="text" text="CRT_EMPID"/>
+					<cell col="10" display="text" text="CRT_EMPNM"/>
+					<cell col="11" display="text" text="CRT_IP"/>
+					<cell col="12" display="text" text="DRCR_FLAG"/>
+					<cell col="13" display="text" text="TITACNT_CD"/>
+					<cell col="14" display="text" text="TITACNT_NM"/>
+					<cell col="15" display="text" text="NO_APPRO_BILL_AMT"/>
+					<cell col="16" display="text" text="APPLY"/>
+					<cell col="17" display="text" text="FIRM_DEPT_CD"/>
+					<cell col="18" display="text" text="DEPART_DPT_NM"/>
+					<cell col="19" display="text" text="PASS_DEPT_CD"/>
+					<cell col="20" display="text" text="PASS_DEPT_NM"/>
+					<cell col="21" display="text" text="EST_CD"/>
+					<cell col="22" display="text" text="DEAL_FLAG"/>
+					<cell col="23" display="text" text="DEAL_CD"/>
+					<cell col="24" display="text" text="BNK_BRANCH_CD"/>
+					<cell col="25" display="text" text="DEPST_CD"/>
+					<cell col="26" display="text" text="OTHER_YN"/>
+					<cell col="27" display="text" text="CHECK_NUM"/>
+					<cell col="28" display="text" text="QTY_PERS"/>
+					<cell col="29" display="text" text="UNIT_CD"/>
+					<cell col="30" display="text" text="INT_RT"/>
+					<cell col="31" display="text" text="CAPI_SUPPLY_VAL"/>
+					<cell col="32" display="text" text="CURCY_CD"/>
+					<cell col="33" display="text" text="EXCHG_RT"/>
+					<cell col="34" display="text" text="FORGCURCY_AMT"/>
+					<cell col="35" display="text" text="PERIOD_FROM_YMD"/>
+					<cell col="36" display="text" text="PERIOD_TO"/>
+					<cell col="37" display="text" text="NO_CLOSE_ACNT_UNITY_YN"/>
+					<cell col="38" display="text" text="ALT_OBJ_ACNT_YMD"/>
+					<cell col="39" display="text" text="ALT_OBJ_ACNT_BILL_SEQ"/>
+					<cell col="40" display="text" text="ALT_OBJ_ACNT_BILL_LINE"/>
+					<cell col="41" display="text" text="ALT_OBJ_BILL_YMD"/>
+					<cell col="42" display="text" text="PAY_WAY"/>
+					<cell col="43" display="text" text="PAY_ACCOUNT_NUM"/>
+					<cell col="44" display="text" text="EVIDENCE_FLAG"/>
+					<cell col="45" display="text" text="CARD_NUM"/>
+					<cell col="46" display="text" text="NOTE_FLAG"/>
+					<cell col="47" display="text" text="NOTE_KIND"/>
+					<cell col="48" display="text" text="NOTE_NO"/>
+					<cell col="49" display="text" text="PUBL_PROPO_FLAG"/>
+					<cell col="50" display="text" text="NOTE_STS_CD"/>
+					<cell col="51" display="text" text="NOTE_PUBL_YMD"/>
+					<cell col="52" display="text" text="NOTE_EXPIRE_YMD"/>
+					<cell col="53" display="text" text="MANAGE_CD_FLAG"/>
+					<cell col="54" display="text" text="MANAGE_CD"/>
+					<cell col="55" display="text" text="SITE_CD_NM"/>
+					<cell col="56" display="text" text="CONST_ASSET_COST_FLAG"/>
+					<cell col="57" display="text" text="ASSET_CHG_FLAG"/>
+					<cell col="58" display="text" text="ASSET_CD"/>
+					<cell col="59" display="text" text="PROJECT_CD"/>
+					<cell col="60" display="text" text="DEAL_YMD"/>
+					<cell col="61" display="text" text="BUY_SALES_VAT_CD"/>
+					<cell col="62" display="text" text="BUY_NOEXEC_CD"/>
+					<cell col="63" display="text" text="SALES_VAT_CLASS_CD"/>
+					<cell col="64" display="text" text="VAT_BIZPLC"/>
+					<cell col="65" display="text" text="SUSPENSE_TXBILL_FLAG"/>
+					<cell col="66" display="text" text="PLAN_YMD"/>
+					<cell col="67" display="text" text="RCV_BIZPLC_CD"/>
+					<cell col="68" display="text" text="SND_BIZPLC_CD"/>
+					<cell col="69" display="text" text="SND_ACNT_YMD"/>
+					<cell col="70" display="text" text="SND_ACNT_BILL_SEQ"/>
+					<cell col="71" display="text" text="SND_ACNT_BILL_LINE"/>
+					<cell col="72" display="text" text="DEAL_SEQ"/>
+					<cell col="73" display="text" text="FND_KIND"/>
+					<cell col="74" display="text" text="LOAN_YEAR"/>
+					<cell col="75" display="text" text="LOAN_SEQ"/>
+					<cell col="76" display="text" text="REC_PLAN_SEQ"/>
+					<cell col="77" display="text" text="REC_PLAN_FLAG"/>
+					<cell col="78" display="text" text="BILL_APPRO_YN"/>
+					<cell col="79" display="text" text="PAY_YEAR"/>
+					<cell col="80" display="text" text="FACI_NUM"/>
+					<cell col="81" display="text" text="BACK_YEAR"/>
+					<cell col="82" display="text" text="PUBL_YM"/>
+					<cell col="83" display="text" text="PUBL_YMD"/>
+					<cell col="84" display="text" text="PUBL_SEQ"/>
+				</head>
+				<body>
+					<cell col="0" colid="COM_ID" display="text"/>
+					<cell col="1" colid="BIZPLC_CD" display="text"/>
+					<cell col="2" colid="BILL_YMD" display="text"/>
+					<cell col="3" colid="BILL_SEQ" display="text"/>
+					<cell col="4" colid="BILL_LINE" display="text"/>
+					<cell col="5" colid="UPD_DTM" display="text"/>
+					<cell col="6" colid="UPD_EMPID" display="text"/>
+					<cell col="7" colid="UPD_IP" display="text"/>
+					<cell col="8" colid="CRT_DTM" display="text"/>
+					<cell col="9" colid="CRT_EMPID" display="text"/>
+					<cell col="10" colid="CRT_EMPNM" display="text"/>
+					<cell col="11" colid="CRT_IP" display="text"/>
+					<cell col="12" colid="DRCR_FLAG" display="text"/>
+					<cell col="13" colid="TITACNT_CD" display="text"/>
+					<cell col="14" colid="TITACNT_NM" display="text"/>
+					<cell col="15" colid="NO_APPRO_BILL_AMT" display="number"/>
+					<cell col="16" colid="APPLY" display="text"/>
+					<cell col="17" colid="FIRM_DEPT_CD" display="text"/>
+					<cell col="18" colid="DEPART_DPT_NM" display="text"/>
+					<cell col="19" colid="PASS_DEPT_CD" display="text"/>
+					<cell col="20" colid="PASS_DEPT_NM" display="text"/>
+					<cell col="21" colid="EST_CD" display="text"/>
+					<cell col="22" colid="DEAL_FLAG" display="text"/>
+					<cell col="23" colid="DEAL_CD" display="text"/>
+					<cell col="24" colid="BNK_BRANCH_CD" display="text"/>
+					<cell col="25" colid="DEPST_CD" display="text"/>
+					<cell col="26" colid="OTHER_YN" display="text"/>
+					<cell col="27" colid="CHECK_NUM" display="text"/>
+					<cell col="28" colid="QTY_PERS" display="number"/>
+					<cell col="29" colid="UNIT_CD" display="text"/>
+					<cell col="30" colid="INT_RT" display="number"/>
+					<cell col="31" colid="CAPI_SUPPLY_VAL" display="number"/>
+					<cell col="32" colid="CURCY_CD" display="text"/>
+					<cell col="33" colid="EXCHG_RT" display="number"/>
+					<cell col="34" colid="FORGCURCY_AMT" display="number"/>
+					<cell col="35" colid="PERIOD_FROM_YMD" display="text"/>
+					<cell col="36" colid="PERIOD_TO" display="text"/>
+					<cell col="37" colid="NO_CLOSE_ACNT_UNITY_YN" display="text"/>
+					<cell col="38" colid="ALT_OBJ_ACNT_YMD" display="text"/>
+					<cell col="39" colid="ALT_OBJ_ACNT_BILL_SEQ" display="text"/>
+					<cell col="40" colid="ALT_OBJ_ACNT_BILL_LINE" display="text"/>
+					<cell col="41" colid="ALT_OBJ_BILL_YMD" display="text"/>
+					<cell col="42" colid="PAY_WAY" display="text"/>
+					<cell col="43" colid="PAY_ACCOUNT_NUM" display="text"/>
+					<cell col="44" colid="EVIDENCE_FLAG" display="text"/>
+					<cell col="45" colid="CARD_NUM" display="text"/>
+					<cell col="46" colid="NOTE_FLAG" display="text"/>
+					<cell col="47" colid="NOTE_KIND" display="text"/>
+					<cell col="48" colid="NOTE_NO" display="text"/>
+					<cell col="49" colid="PUBL_PROPO_FLAG" display="text"/>
+					<cell col="50" colid="NOTE_STS_CD" display="text"/>
+					<cell col="51" colid="NOTE_PUBL_YMD" display="text"/>
+					<cell col="52" colid="NOTE_EXPIRE_YMD" display="text"/>
+					<cell col="53" colid="MANAGE_CD_FLAG" display="text"/>
+					<cell col="54" colid="MANAGE_CD" display="text"/>
+					<cell col="55" colid="SITE_CD_NM" display="text"/>
+					<cell col="56" colid="CONST_ASSET_COST_FLAG" display="text"/>
+					<cell col="57" colid="ASSET_CHG_FLAG" display="text"/>
+					<cell col="58" colid="ASSET_CD" display="text"/>
+					<cell col="59" colid="PROJECT_CD" display="text"/>
+					<cell col="60" colid="DEAL_YMD" display="text"/>
+					<cell col="61" colid="BUY_SALES_VAT_CD" display="text"/>
+					<cell col="62" colid="BUY_NOEXEC_CD" display="text"/>
+					<cell col="63" colid="SALES_VAT_CLASS_CD" display="text"/>
+					<cell col="64" colid="VAT_BIZPLC" display="text"/>
+					<cell col="65" colid="SUSPENSE_TXBILL_FLAG" display="text"/>
+					<cell col="66" colid="PLAN_YMD" display="text"/>
+					<cell col="67" colid="RCV_BIZPLC_CD" display="text"/>
+					<cell col="68" colid="SND_BIZPLC_CD" display="text"/>
+					<cell col="69" colid="SND_ACNT_YMD" display="text"/>
+					<cell col="70" colid="SND_ACNT_BILL_SEQ" display="text"/>
+					<cell col="71" colid="SND_ACNT_BILL_LINE" display="text"/>
+					<cell col="72" colid="DEAL_SEQ" display="text"/>
+					<cell col="73" colid="FND_KIND" display="text"/>
+					<cell col="74" colid="LOAN_YEAR" display="text"/>
+					<cell col="75" colid="LOAN_SEQ" display="text"/>
+					<cell col="76" colid="REC_PLAN_SEQ" display="text"/>
+					<cell col="77" colid="REC_PLAN_FLAG" display="text"/>
+					<cell col="78" colid="BILL_APPRO_YN" display="text"/>
+					<cell col="79" colid="PAY_YEAR" display="text"/>
+					<cell col="80" colid="FACI_NUM" display="text"/>
+					<cell col="81" colid="BACK_YEAR" display="text"/>
+					<cell col="82" colid="PUBL_YM" display="text"/>
+					<cell col="83" colid="PUBL_YMD" display="text"/>
+					<cell col="84" colid="PUBL_SEQ" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="16" Id="Image4" ImageID="blt" Left="924" LeftMargin="12" Style="blt_search" TabOrder="67" Text="전표발행일자" Top="3" Width="84"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_BillYmd" Left="1014" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="66" Top="1" WeeksFont="Default,-1" Width="88"></Calendar>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1801040010F_T04.xml
+* Form 설명  : 사유지배관 점용료_지급처리
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 황재혁
+* 작성일     : 2009-07-17
+* 변경내용   : 변경일자, 변경내용,변경자
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONA10005.js";
+#include "JS::COMMONE50001.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+var fv_ServiceId = "D1801040010F";
+var nRowNum   = '';
+var nValueNum = '';
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1801040010F_T04_OnLoadCompleted(obj)
+{
+	//gfn_LoadForm(obj);
+} 
+//--------------------------------------------------------------------------------------------------
+//	추가버튼 클릭시
+//--------------------------------------------------------------------------------------------------
+function btn_AddSub_OnClick(obj)
+{
+
+	if(ds_DataContAgree.getRowCount() <= 0)
+	{
+		alert("협약정보를 입력바랍니다.");
+		return;
+	}
+	
+	if(ds_DataPayNm.getRowCount() <= 0)
+	{
+		alert("협약자정보를 입력바랍니다.");
+		return;
+	}
+
+ 	var strSysYYYY = substr(today(),0,4);
+	var nRow = ds_DataPay.FindRow("PAY_YEAR", strSysYYYY);
+	if(nRow != -1)
+	{
+		alert(strSysYYYY+"년도 사유지배관 점용료지급 데이터가 존재합니다. 기존데이터를 수정하여 주십시오.");
+		return;	
+	}
+	
+	var nRow = ds_DataPay.AddRow();
+	ds_DataPay.SetColumn(nRow, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_DataPay.SetColumn(nRow, "CRT_IP",    gfn_GetLocalIpAddress());
+	ds_DataPay.SetColumn(nRow, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_DataPay.SetColumn(nRow, "UPD_IP",    gfn_GetLocalIpAddress());
+	
+	// 기본정보
+	var nTopRow = ds_TopData.row;
+	var str_BRANCH_CD    = ds_TopData.GetColumn(nTopRow, "BRANCH_CD");
+	var str_AREA         = ds_TopData.GetColumn(nTopRow, "AREA");
+	var str_LEASE_SQUARE = ds_TopData.GetColumn(nTopRow, "LEASE_SQUARE");
+	var str_DIAM         = ds_TopData.GetColumn(nTopRow, "DIAM");
+	var str_LENG         = ds_TopData.GetColumn(nTopRow, "LENG");
+
+
+	ds_DataPay.SetColumn(nRow, "BRANCH_CD",           str_BRANCH_CD);           // 지사코드
+	ds_DataPay.SetColumn(nRow, "AREA",                str_AREA);                // 시군구
+	ds_DataPay.SetColumn(nRow, "LEASE_SQUARE",        str_LEASE_SQUARE);        // 점용면적 
+	ds_DataPay.SetColumn(nRow, "DIAM",                str_DIAM);                // 관경
+	ds_DataPay.SetColumn(nRow, "LENG",                str_LENG);                // 연장
+		
+	
+	// 협약사항
+	var nContAgreeRow = ds_DataContAgree.row;
+	var str_LEASE_UNIT_PRC_FLAG = ds_DataContAgree.GetColumn(nContAgreeRow, "LEASE_UNIT_PRC_FLAG");
+	var str_LEASE_RT            = ds_DataContAgree.GetColumn(nContAgreeRow, "LEASE_RT");
+	var str_LEASE_AMT_PAY_YMD   = ds_DataContAgree.GetColumn(nContAgreeRow, "LEASE_AMT_PAY_YMD");
+	
+	ds_DataPay.SetColumn(nRow, "LEASE_UNIT_PRC_FLAG", str_LEASE_UNIT_PRC_FLAG); // 점용단가구분	
+	ds_DataPay.SetColumn(nRow, "LEASE_RT",            str_LEASE_RT);            // 적용요율
+	ds_DataPay.SetColumn(nRow, "LEASE_AMT_PAY_YMD",   str_LEASE_AMT_PAY_YMD);   // 점용료지급일자
+	
+	ds_DataPay.SetColumn(nRow, "PAY_YEAR", substr(today(),0,4)); // 해당년도
+	
+}
+/*===============================================================================
+ * 전표처리
+===============================================================================*/ 
+//-------------------------------------------------------------------------------
+// 함수명: btn_Bill_OnClick()
+//   설명: 전표 처리
+// arguments   
+//          obj: 사용된 객체를 전달 한다.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function btn_bill_OnClick(obj)
+{
+	// 2009-12-21 마감체크 추가 
+	var strComId = gfn_GetGlobalValue("G_COM_ID");
+	var strBizplc = gfn_GetGlobalValue("G_BIZPLACE");
+	var strClsYmd = cal_BillYmd.Value;
+	var massageYn = "Y";
+	
+	var Result  = gfn_E5_checkClsYn( strComId , strBizplc , strClsYmd , massageYn);
+	
+	if(Result == "1")
+	{
+		return;
+	}
+	
+	if(!fn_D1_PreBill()){
+		return false;
+	}
+	
+	var strSvcID = "btn_bill_OnClick";
+	var strPart  = "E50";
+	var strURL   = "handle.do?ServiceName=E5_AutoBillCreateMgr-service&insert=1"
+				 ;
+				 	
+	var strInDatasets   = "";
+	    strInDatasets  += "ds_Multi=ds_BillDetail:u ds_Single=ds_BillHeader:u";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_BillDetail2=ds_Multi ds_BillHeader=ds_Single";
+	var strArgument     = "";
+	var strCallbackFunc = "fn_D1_CallBack";
+	
+	gfn_AsyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument,
+	              strCallbackFunc
+	              );
+	   
+}
+
+function fn_D1_PreBill()
+{     
+
+	if( ds_DataPay.GetUpdate() )
+	{
+		alert("[단가, 점용일수] 변경된 내용을 저장 후 발행가능합니다");		
+		return false;
+	}
+	
+	if( ds_DataPay.GetRowCount() == 0)
+	{
+		alert("전표 처리될 데이터가 없습니다. ");
+		return false;
+	}
+	
+	if( ds_ACNT_CD.GetRowCount() == 0)
+	{
+		alert("전표기초코드 데이터가 없습니다.[차변,대변코드 ds_ACNT_CD]");
+		return false;
+	}
+	
+	if( gfn_IsNull(trim(cal_BillYmd.Value)))
+	{
+		alert("전표발행일자를 선택하여 주십시오.");
+		return false;
+	}
+	
+ 	var strSysYYYY = substr(today(),0,4);
+	var nRow = ds_DataPay.FindRow("PAY_YEAR", strSysYYYY);
+	if(nRow != -1)
+	{
+		
+		if(! gfn_IsNull(ds_DataPay.GetColumn(nRow,"BILL_YMD")))
+		{
+			alert("이미 전표생성된 자료가 포함되어 있습니다. ");
+			return false;
+		}
+	}
+	else
+	{
+		alert("[지급처리] 해당년도 지급처리 데이터가 생성되지 않았습니다. 추가버튼을 눌러 생성하여 주십시오.");
+		return false;
+	}
+	
+	fn_D1_MakeBillData();
+	
+	return true;
+}
+
+function fn_D1_MakeBillData()
+{
+
+	var comId		= gfn_GetGlobalValue("G_COM_ID");
+	var bizplcCd 	= gfn_GetGlobalValue("G_BIZPLACE");
+	var billYmd  	= cal_BillYmd.Value;  // 발행일자
+	var billSeq  	= fn_D1_Tr_getBillSeq(comId,bizplcCd,billYmd);
+		
+	fn_D1_MakeBillDetail(comId,bizplcCd,billYmd,billSeq);
+	fn_D1_MakeBillHeader(comId,bizplcCd,billYmd,billSeq);
+}
+
+
+function fn_D1_Tr_getBillSeq(ComId,bizplcCd,billYmd)
+{
+	//-------------------------------------------------------------------------------
+	// 함수명   : fn_D1_getBillSeq(ComId,bizplcCd,billYmd)
+	// 설명     : 전표번호를 리턴.
+	// return 내용 : 4자리 문자형태의 전표번호 
+	//-------------------------------------------------------------------------------
+		
+	var strSvcID = "fn_D1_Tr_find";
+	var strPart  = "E50";
+	var strURL   = "handle.do?ServiceName=E5_NonBillCreateMgr-service&seqSelect=1"
+                 + "&COM_ID="		+ ComId			//회사구분
+	             + "&BIZPLC_CD="	+ bizplcCd		//사업장코드
+	             + "&NUMB_YMD=" 	+ billYmd		//전표일자
+	             + "&NUMB_FLAG=" 	+ "10"			
+	             ;
+	 
+	var strInDatasets   = "";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_Com=ds_Multi";
+	var strArgument     = "";
+
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);
+	              
+	if (  ErrorCode<0 )
+	{
+		alert(ErrorCode);
+		return false;
+		
+	}
+	else
+	{
+		if(ds_Com.RowCount()==0)
+		{
+			return "0001";	
+		}
+		else
+		{
+			return ds_Com.GetColumn(0,"BILL_SEQ");
+		}
+	}
+}
+
+function fn_D1_MakeBillDetail(strComId,strBizplcCd,strBillYmd,strBillSeq)
+{	
+	var count    = 0;			//선택된 row만 체크하여 전표BILL_LINE생성해주기위한 변수
+	var sumvalue = 0;			//선택된 row만 체크하여 발행금액합계를 구하기위한 변수
+	
+	var EVIDENCE_FLAG    = '';	// 증빙구분
+	var BUY_SALES_VAT_CD = '';
+												
+	ds_BillDetail.ClearData();	//실행되기전 데이터셋내의 모든 데이터를 삭제함.
+		
+	
+	var str_ACNT_TITACNT_CD_CR     = ds_ACNT_CD.GetColumn(0,"ACNT_TITACNT_CD_CR");  // 차변-- V41387  (판매비및일반관리비-임차료)
+	var str_ACNT_TITACNT_CD_CR_VAT = ds_ACNT_CD.GetColumn(0,"ACNT_TITACNT_CD_CR1"); // 차변-- A72919  (선급제세-부가세)
+	var str_ACNT_TITACNT_CD_DR     = ds_ACNT_CD.GetColumn(0,"ACNT_TITACNT_CD_DR");  // 대변-- J33117  (미지급금-일반)
+	
+	
+	var str_PAY_TOT_AMT = 0; // 지급총액
+	var str_CALCU_AMT   = 0; // 공급가액
+	var str_VAT         = 0; // 부가세 
+ 
+	
+	var nRow = ds_DataPay.FindRow("PAY_YEAR",substr(today(),0,4));
+	if(nRow != -1)
+	{
+		str_PAY_TOT_AMT = ds_DataPay.GetColumn(nRow,"PAY_TOT_AMT");
+		str_CALCU_AMT   = ds_DataPay.GetColumn(nRow,"CALCU_AMT");    // 공급가액
+		str_VAT         = ds_DataPay.GetColumn(nRow,"VAT");          // 부가세 
+		
+	}
+	
+	var str_STR_POINT       = ds_TopData.GetColumn(ds_TopData.row, "STR_POINT"); // 시작지점
+	var str_APPLY           = str_STR_POINT + " 사유지배관 점용료";              // 적요 (시작지점+사유지배관 점용료)
+
+	// 거래처 정보
+	var str_DEAL_FLAG       = ds_DataPayNm.GetColumn(0,"DEAL_FLAG");            // 100 거래처구분(필)
+	var str_DEAL_CD         = ds_DataPayNm.GetColumn(0,"DEPOSITOR_NM");         // 101 거래처(필)
+	var str_BNK_BRANCH_CD   = ds_DataPayNm.GetColumn(0,"BNK_NM");               // 102 은행
+	// var str_PLAN_YMD        = ds_DataContAgree.GetColumn(0,"LEASE_AMT_PAY_YMD");// 107 예정일자(필)
+	var str_PAY_ACCOUNT_NUM = ds_DataPayNm.GetColumn(0,"ACCOUNT_NUM");          // 108 지불계좌번호
+
+	var str_TXBILL_PUBL_YN  = ds_DataPayNm.GetColumn(0,"TXBILL_PUBL_YN");       // 세금계산서 여부
+	var str_G_DEPT_CODE     = gfn_GetGlobalValue("G_DEPT_CODE");
+	
+	//---------------------------------------------------------------------------------------------------------------------------
+	gfn_E5_DatasetAddRow(ds_BillDetail);
+						
+	//공통(차변)				
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"COM_ID"    , strComId);               //회사구분               
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"BIZPLC_CD" , strBizplcCd);            //사업장코드             
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_YMD"  , strBillYmd);             //전표일자               
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_SEQ"  , strBillSeq);             //전표SEQ                
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_LINE" , LPAD((count+1),'0',4));	 //전표lINE
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"TITACNT_CD", str_ACNT_TITACNT_CD_CR); //계정코드
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"DRCR_FLAG" , "1");					 //차변으로 세팅
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"APPLY"     , str_APPLY);              //적요	
+	
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"FIRM_DEPT_CD"     ,str_G_DEPT_CODE);          
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"PASS_DEPT_CD"     ,str_G_DEPT_CODE);
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"NO_APPRO_BILL_AMT",str_CALCU_AMT  );	//미승인전표금액(점용료)
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"VAT_BIZPLC"       ,"1098131605"   );
+	//공통(차변)
+		
+	//계정별관리항목에서 가져오는 선택값(차변) STSRT
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"DEAL_YMD"          , strBillYmd); // 111 거래일자  (발행일자)
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"EVIDENCE_FLAG"     , '01'); // 증빙구분(필수)
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"BUY_SALES_VAT_CD"  , '11'); // 매입매출부가세코드
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"CAPI_SUPPLY_VAL"   ,  ""  ); // 116 원금액/공급가액
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"UNIT_CD"           , "400"); // 121 단위	
+	
+	//계정별관리항목에서 가져오는 선택값(차변) END												
+	//---------------------------------------------------------------------------------------------------------------------------
+	
+	if(str_TXBILL_PUBL_YN == "Y") // 세금계산서 발행할 경우만 Y: 일반, N: 면세 영세없음	|| 사유지만 해당
+	{
+
+		//---------------------------------------------------------------------------------------------------------------------------
+		count ++;	
+		gfn_E5_DatasetAddRow(ds_BillDetail);
+	
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"COM_ID"    ,strComId);              		//회사구분               
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"BIZPLC_CD" ,strBizplcCd);           		//사업장코드             
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_YMD"  ,strBillYmd);            		//전표일자               
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_SEQ"  ,strBillSeq);            		//전표SEQ                
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_LINE" ,LPAD((count+1),'0',4));		//전표lINE
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"TITACNT_CD",str_ACNT_TITACNT_CD_CR_VAT);	//계정코드
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"DRCR_FLAG","1");							//차변으로 세팅	
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"APPLY"     , str_APPLY);                 //적요	
+		
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"FIRM_DEPT_CD"     ,str_G_DEPT_CODE);          
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"PASS_DEPT_CD"     ,str_G_DEPT_CODE);
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"NO_APPRO_BILL_AMT",str_VAT);//미승인전표금액(점용료)
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"VAT_BIZPLC"       ,"1098131605");		
+		//공통(차변)
+		
+		//계정별관리항목에서 가져오는 선택값(차변: 사유지점용료 부가세) START
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"DEAL_FLAG"         , str_DEAL_FLAG ); // 100 거래처구분(필)
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"DEAL_CD"           , str_DEAL_CD   ); // 101 거래처(필)		 	
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"EVIDENCE_FLAG"     , '01'          ); // 증빙구분(필수)
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"BUY_SALES_VAT_CD"  , '11'          ); // 매입매출부가세코드
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"DEAL_YMD"          , strBillYmd    ); // 거래일자(필수)
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"CAPI_SUPPLY_VAL"   , str_CALCU_AMT ); // 원금액/공급가액(필수)
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"QTY_PERS"          , "1"           ); // 수량/인원(필수)
+		ds_BillDetail.SetColumn(ds_BillDetail.row,"UNIT_CD"		      , "400"		  ); // 단위(필수)
+		//계정별관리항목에서 가져오는 선택값(대변: 사유지점용료 부가세) END	
+		//---------------------------------------------------------------------------------------------------------------------------
+	
+	}
+	
+	//---------------------------------------------------------------------------------------------------------------------------
+	count ++;		
+	gfn_E5_DatasetAddRow(ds_BillDetail);
+			
+	//공통(대변)				
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"COM_ID"           ,strComId   );           	//회사구분               
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"BIZPLC_CD"        ,strBizplcCd);	         	//사업장코드             
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_YMD"         ,strBillYmd );            	//전표일자               
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_SEQ"         ,strBillSeq );            	//전표SEQ                
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_LINE"        ,LPAD((count+1),'0',4));	
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"TITACNT_CD"       ,str_ACNT_TITACNT_CD_DR);	//계정코드
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"DRCR_FLAG"        ,"2");						//대변으로 세팅		
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"APPLY",           str_APPLY);                //적요
+	
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"FIRM_DEPT_CD"     ,str_G_DEPT_CODE);          
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"PASS_DEPT_CD"     ,str_G_DEPT_CODE);    			
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"NO_APPRO_BILL_AMT",str_CALCU_AMT + str_VAT); //미승인전표금액(점용료)
+	//공통(대변)
+	
+	//계정별관리항목에서 가져오는 선택값(대변) STSRT
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"DEAL_FLAG"         , str_DEAL_FLAG);     // 100 거래처구분(필)
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"DEAL_CD"           , str_DEAL_CD);       // 101 거래처(필)
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"BNK_BRANCH_CD"     , str_BNK_BRANCH_CD); // 102 은행
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"PAY_WAY"	          , "40");              // 106 지불수단(필) - 자동이체 - 계좌이체
+
+	
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"PLAN_YMD"          , strBillYmd);       // 107 예정일자(필)
+	ds_BillDetail.SetColumn(ds_BillDetail.row,"PAY_ACCOUNT_NUM"   , str_PAY_ACCOUNT_NUM);// 108 지불계좌번호
+	//계정별관리항목에서 가져오는 선택값(대변) END
+		
+	//---------------------------------------------------------------------------------------------------------------------------
+}
+
+function fn_D1_MakeBillHeader(comId,bizplcCd,billYmd,billSeq)
+{
+
+    //헤더추가
+    ds_BillHeader.ClearData();
+	gfn_E5_DatasetAddRow(ds_BillHeader);
+	
+	var DR_sum = 0;
+	var CR_sum = 0;
+	
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"COM_ID"             , comId   );  //회사구분
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BIZPLC_CD"          , bizplcCd);  //사업장
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_YMD"           , billYmd );  //전표일자 
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_SEQ"           , billSeq );  //전표번호                        
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"APPRO_YN"           , "N"     );  //승인여부
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_WRITE_DEPT_CD" ,gfn_GetGlobalValue("G_DEPT_CODE")); //입력부서코드
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_KIND"          ,"3");        //전표종류 3:대체
+	
+	 //여기까지공통
+	
+	 //변경되는부분
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"SYS_FLAG"      ,"D1");           //시스템구분 D1:안전공급 
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_FLAG"     ,"603");          //전표구분   000:수전표
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_CRT_INFO" ,"D1801040010F"); //전표생성정보 D1801040010F : 전표등록프로그램
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"ACNT_FLAG"     ,'3');            //회계구분 3:공통         
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"DEL_YN"        ,"N");            //삭제구분 
+	//여기까지변경되는부분
+	
+	for (var i=0 ; i<ds_BillDetail.rowcount ; i++)
+	{
+		drcrFlag = ds_BillDetail.GetColumn(i,"DRCR_FLAG");						//차변
+		
+		noApprAmt= toNumber(ds_BillDetail.GetColumn(i,"NO_APPRO_BILL_AMT"));	//미승인전표금액(점용료금액) 
+	    
+	    if(drcrFlag=="1")
+	    {
+			DR_sum+=noApprAmt;													//차변금액합계
+	    }
+	    else
+	    {
+			CR_sum+=noApprAmt;													//대변금액합계
+	    }
+	
+		ds_BillHeader.SetColumn(0,"TOT_LN_NUM"  ,ds_BillDetail.rowcount);			//총행수
+		ds_BillHeader.SetColumn(0,"FINL_LN_NUM" ,ds_BillDetail.Max("BILL_LINE"));	//최종행수	
+		ds_BillHeader.SetColumn(0,"DR_SUM_AMT"  ,DR_sum);							//차변합계금액
+		ds_BillHeader.SetColumn(0,"CR_SUM_AMT"  ,CR_sum);							//대변합계금액                       
+	}
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명   : btn_billDel_OnClick()
+// 설명     : 전표취소//조회 트렌젝션을 처리 fn_D1_CallBack으로 결과를 넘김.
+// return 내용 : 없음
+//-------------------------------------------------------------------------------
+function btn_billDel_OnClick(obj)
+{
+ 
+ 	var strSysYYYY = substr(today(),0,4);
+	var nRow = ds_DataPay.FindRow("PAY_YEAR", strSysYYYY);
+	if(nRow != -1)
+	{
+		if(!confirm("발행된 전표를를 정말로 취소하시겠습니까? "))
+		{
+			return false;
+		}
+		else
+		{
+			
+			var str_BILL_YMD      = trim(ds_DataPay.GetColumn(nRow,"BILL_YMD"));
+			var str_BILL_APPRO_YN = trim(ds_DataPay.GetColumn(nRow,"BILL_APPRO_YN"));
+			var str_BILL_YMD      = ds_DataPay.GetColumn(nRow,"BILL_YMD");
+			var str_BILL_SEQ      = ds_DataPay.GetColumn(nRow,"BILL_SEQ");
+			var str_comId		  = gfn_GetGlobalValue("G_COM_ID");
+			var str_bizplcCd 	  = gfn_GetGlobalValue("G_BIZPLACE");			
+			
+			if(gfn_IsNull(str_BILL_YMD))
+			{
+				alert("전표가 발행되지 않아 취소할 수 없습니다.");
+				return;
+			}
+			else if(str_BILL_APPRO_YN == '1')
+			{
+				alert("전표가 승인되어 취소할 수 없습니다.");
+				return;
+			}			
+			
+			ds_BillDelete.Clear();    
+			ds_BillDelete.ClearData();
+			
+			ds_BillDelete.AddColumn("COM_ID"    , "STRING", 256);
+			ds_BillDelete.AddColumn("BIZPLC_CD" , "STRING", 256);	
+			ds_BillDelete.AddColumn("BILL_YMD"  , "STRING", 256);
+			ds_BillDelete.AddColumn("BILL_SEQ"  , "STRING", 256);
+			ds_BillDelete.AddColumn("SYS_FLAG"  , "STRING", 256);
+			
+			var nAddRow = ds_BillDelete.AddRow();
+
+			ds_BillDelete.SetColumn(nAddRow,"COM_ID"    , str_comId);    //회사구분
+			ds_BillDelete.SetColumn(nAddRow,"BIZPLC_CD" , str_bizplcCd); //사업장
+			ds_BillDelete.SetColumn(nAddRow,"BILL_YMD"  , str_BILL_YMD); //전표일자 
+			ds_BillDelete.SetColumn(nAddRow,"BILL_SEQ"  , str_BILL_SEQ); //전표번호 
+			ds_BillDelete.SetColumn(nAddRow,"SYS_FLAG"  , "D1");   		 //지급여부
+						
+			var strSvcID = "fn_D1_Tr_delete";
+			var strPart  = "E50";
+			var strURL ;
+				strURL = "handle.do?ServiceName=E5_AutoBillCreateMgr-service&delete=1";	 
+			var strInDatasets   = "";
+				strInDatasets  += "ds_Single=ds_BillDelete:u ";
+			var strOutDatasets  = "";
+			   
+			var strArgument  = "";
+			var strCallbackFunc = "fn_D1_CallBack";
+			
+			gfn_AsyncCall(strSvcID,
+						  strPart,
+						  strURL,
+						  strInDatasets,
+						  strOutDatasets,
+						  strArgument,
+						  strCallbackFunc);
+
+		}
+    
+	}
+	else
+	{
+		alert("[지급처리-협약 연도 점용료 계산] 취소할 전표데이터가 존재하지 않습니다.");
+		return;
+	}
+
+}
+
+function fn_D1_billUpdate(Flag)
+{
+
+ 	var strSysYYYY = substr(today(),0,4);
+	var nRow = ds_DataPay.FindRow("PAY_YEAR", strSysYYYY);
+	if(nRow != -1)
+	{
+	
+		var str_PE_PIPE_FACI_NUM = ds_DataPay.GetColumn(nRow, "PE_PIPE_FACI_NUM");
+		var str_PAY_YEAR         = ds_DataPay.GetColumn(nRow, "PAY_YEAR");
+		
+		
+		ds_Modify.Clear();
+		ds_Modify.ClearData();
+		
+		ds_Modify.AddColumn("UPD_EMPID"		   );
+		ds_Modify.AddColumn("UPD_IP"	       );
+		ds_Modify.AddColumn("BILL_APPRO_YN"    );
+		ds_Modify.AddColumn("BILL_YMD"	       );
+		ds_Modify.AddColumn("BILL_SEQ"	       );
+		ds_Modify.AddColumn("TXBILL_VAT_BIZPLC");
+		ds_Modify.AddColumn("TXBILL_PUBL_YM"   );
+		ds_Modify.AddColumn("TXBILL_PUBL_SEQ"  );
+		ds_Modify.AddColumn("LEASE_AMT_PAY_YN" );
+		ds_Modify.AddColumn("PE_PIPE_FACI_NUM" );
+		ds_Modify.AddColumn("PAY_YEAR"		   );
+		
+		ds_Modify.UpdateControl = false;
+		
+		ds_Modify.AddRow();
+		
+		ds_Modify.SetColumn(ds_Modify.row, "PE_PIPE_FACI_NUM" , str_PE_PIPE_FACI_NUM);	
+		ds_Modify.SetColumn(ds_Modify.row, "PAY_YEAR"         , str_PAY_YEAR);	
+		ds_Modify.SetColumn(ds_Modify.row, "UPD_EMPID"        , gfn_GetGlobalValue("G_USER_NO"));
+		ds_Modify.SetColumn(ds_Modify.row, "UPD_IP"           , gfn_GetGlobalValue("G_IPADDRESS"));
+				
+		if(Flag = 'update')
+		{
+			ds_Modify.SetColumn(ds_Modify.row, "BILL_APPRO_YN", 'N' );
+			ds_Modify.SetColumn(ds_Modify.row, "BILL_YMD"         , ds_BillDetail2.GetColumn(0, "BILL_YMD"  ));
+			ds_Modify.SetColumn(ds_Modify.row, "BILL_SEQ"         , ds_BillDetail2.GetColumn(0, "BILL_SEQ"  ));
+			ds_Modify.SetColumn(ds_Modify.row, "TXBILL_VAT_BIZPLC", ds_BillDetail2.GetColumn(0, "VAT_BIZPLC"));
+			ds_Modify.SetColumn(ds_Modify.row, "TXBILL_PUBL_YM"   , ds_BillDetail2.GetColumn(0, "PUBL_YM"   ));
+			ds_Modify.SetColumn(ds_Modify.row, "TXBILL_PUBL_SEQ"  , ds_BillDetail2.GetColumn(0, "PUBL_SEQ"  ));
+			ds_Modify.SetColumn(ds_Modify.row, "LEASE_AMT_PAY_YN" , "Y");
+		}
+		else
+		{
+			ds_Modify.SetColumn(ds_Modify.row, "BILL_APPRO_YN"    , ' ' );
+			ds_Modify.SetColumn(ds_Modify.row, "BILL_YMD"         , '' );
+			ds_Modify.SetColumn(ds_Modify.row, "BILL_SEQ"         , '' );			
+			ds_Modify.SetColumn(ds_Modify.row, "TXBILL_VAT_BIZPLC", '' );
+			ds_Modify.SetColumn(ds_Modify.row, "TXBILL_PUBL_YM"   , '' );
+			ds_Modify.SetColumn(ds_Modify.row, "TXBILL_PUBL_SEQ"  , '' );
+			ds_Modify.SetColumn(ds_Modify.row, "LEASE_AMT_PAY_YN" , 'N');
+		}
+		
+			
+		ds_Modify.SetRowType(ds_Modify.row, "update");
+				
+		var strSvcID         = "bill_update";
+		var strPart          = "D10";	
+		var strURL           = "handle.do?ServiceName="+fv_ServiceId+"-service" ;					
+		var strInDatasets    = "ds_Modify=ds_Modify:u";
+		var strOutDatasets   = "";		
+		var strArgument      = "bill_update=1";
+				
+		gfn_SyncCall( 
+						 strSvcID
+					   , strPart  	 
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+	
+		if(ErrorCode<0)
+		{
+			alert(ErrorMsg);
+			return;
+		}
+		
+		// 상위조회
+		parent.fn_SearchDetail(ds_TopData.row);
+	}
+	
+}
+
+
+function fn_D1_CallBack(svcId, ErrorCode, ErrorMsg)
+{    
+	//-------------------------------------------------------------------------------
+	// 함수명   : fn_D1_CallBack(svcid, errcd, errmsg)
+	// 설명     : 각 트렌젝션의 결과를 처리 .
+	// return 내용 : 없음
+	//-------------------------------------------------------------------------------
+	//-------------------------------------------------------------------------------
+    // svcid, errcd, errmsg 값 Transaction 함수에서 넘겨받음
+    //-------------------------------------------------------------------------------
+
+	if ( ErrorCode <0 ){
+	
+		return;
+	}
+	
+	switch(svcId)
+	{	
+		
+		case "btn_bill_OnClick": //전표생성후
+			alert("전표가 발행되었습니다. ");
+			fn_D1_billUpdate('update');
+
+			break;	
+		case "fn_D1_Tr_delete": //업데이트 성공시 조회가 들어가므로 조회와 똑같이 처리 
+			alert("전표가 취소되었습니다");
+			fn_D1_billUpdate('delete');
+			break;							
+	}
+}
+
+//--------------------------------------------------------------------------------------------------
+//	첨부화일 팝업
+//--------------------------------------------------------------------------------------------------
+function btn_FileAdd_OnClick(obj)
+{
+
+	// 사유지배관시설물코드
+	var lv_PE_PIPE_FACI_NUM = ds_TopData.GetColumn(ds_TopData.Row,"PE_PIPE_FACI_NUM");	
+	
+	if( ds_TopData.GetRowCount() == 0)
+	{
+		alert("사유지배관 정보를 입력바랍니다. ");
+		return false;
+	}
+	
+	if(ds_TopData.GetRowType(ds_TopData.row) == "insert")
+	{
+		alert("사유지배관정보를 저장 후 첨부화일을 입력바랍니다.");
+		return;
+	}
+	
+	if( gfn_isNull(lv_PE_PIPE_FACI_NUM) )
+	{
+		alert("첨부화일을 등록하시기전 시설물 코드를 입력하세요.");
+		return;
+	}
+	
+	var arg = "fa_Url=handle.do?ServiceName=D1801040010F-service&PE_PIPE_FACI_NUM="+ lv_PE_PIPE_FACI_NUM +"&ATTACH_FILE_FLAG=00 fa_Part=D10";
+	
+	var arrList = gfn_Dialog("D10","D1101010018U",arg,450,280,true,-1,-1);
+	if( trim(arrList) > 0 )
+	{	
+		var str_FileName = "";
+		for(var i=0; i<arrList.length; i++)
+		{
+			str_FileName += arrList[i];
+			if(arrList.length-1 != i) str_FileName += "/";
+		}
+
+		ds_FileList_Txt.SetColumn(0, "FILE_LIST", str_FileName);
+	}
+}
+]]></Script>
+</Window>

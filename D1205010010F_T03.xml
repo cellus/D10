@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="744" Id="D1205010010F_T03" Left="8" OnLoadCompleted="D1205010010F_T03_OnLoadCompleted" PidAttrib="7" Title="정류기&#32;순찰실적" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_rect"></Dataset>
+		</Datasets>
+		<Shape BKColor="user15" Bottom="5" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1254" TabOrder="1" Top="2" Type="Rectangle" Width="1249"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button231" ImageID="btn_8_Search" Left="1122" LeftMargin="21" OnClick="Button231_OnClick" Style="button" TabOrder="2" Text="DCVG탐사이력조회" Top="209" Width="132"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button15" ImageID="btn_addrow" Left="1102" LeftMargin="15" OnClick="Btn_add_Rst_OnClick" Style="button" TabOrder="3" Text="추가" Top="399" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button0" ImageID="btn_addrow" Left="966" LeftMargin="15" OnClick="Btn_add_ArRst_OnClick" Style="button" TabOrder="5" Text="추가" Top="209" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button1" ImageID="btn_deleterow" Left="1072" LeftMargin="15" OnClick="btn_del_ArRst_OnClick" Style="button" TabOrder="4" Text="삭제" Top="209" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Save" ImageID="btn_2" Left="1155" LeftMargin="15" OnClick="btn_save_Rst_OnClick" Style="button" TabOrder="7" TabStop="FALSE" Text="저장" Top="399" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button2" ImageID="btn_deleterow" Left="1206" LeftMargin="15" OnClick="btn_del_Rst_OnClick" Style="button" TabOrder="6" Text="삭제" Top="399" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button3" ImageID="btn_2" Left="1020" LeftMargin="15" OnClick="btn_save_ArRst_OnClick" Style="button" TabOrder="8" TabStop="FALSE" Text="저장" Top="209" Width="48"></Button>
+		<Grid AutoEnter="TRUE" BindDataset="ds_rect" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="735" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="731" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="silver" LineType="ExVERT" OnHeadClick="Grid1_OnHeadClick" Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="9" TabStop="true" Top="4" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="54"/>
+						<col width="72"/>
+						<col width="76"/>
+						<col width="72"/>
+						<col width="60"/>
+						<col width="120"/>
+						<col width="128"/>
+						<col width="78"/>
+						<col width="78"/>
+						<col width="71"/>
+						<col width="75"/>
+						<col width="82"/>
+						<col width="53"/>
+						<col width="53"/>
+						<col width="52"/>
+						<col width="52"/>
+						<col width="53"/>
+						<col width="54"/>
+						<col width="59"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="No"/>
+						<cell col="1" display="text" text="정류기번호"/>
+						<cell col="2" display="text" text="정류기명"/>
+						<cell col="3" display="text" text="점검일자"/>
+						<cell col="4" display="text" text="지사"/>
+						<cell col="5" display="text" text="시/구"/>
+						<cell col="6" display="text" text="팀"/>
+						<cell col="7" display="text" text="제조사"/>
+						<cell col="8" display="text" text="사용정격"/>
+						<cell col="9" display="text" text="계량기번호"/>
+						<cell col="10" display="text" text="고객번호"/>
+						<cell col="11" display="text" text="입력전원"/>
+						<cell col="12" display="text" text="중압연장"/>
+						<cell col="13" display="text" text="저압연장"/>
+						<cell col="14" display="text" text="출력전압"/>
+						<cell col="15" display="text" text="출력전류"/>
+						<cell col="16" display="text" text="측정전압"/>
+						<cell col="17" display="text" text="측정전류"/>
+						<cell col="18" display="text" text="방식전위"/>
+					</head>
+					<body>
+						<cell align="right" col="0" colid="GNUM" display="text" suppress="1"/>
+						<cell align="center" col="1" colid="FACI_NUM" display="normal" suppress="1"/>
+						<cell align="left" col="2" colid="RECTIFIER_NM" display="text" suppress="1"/>
+						<cell align="center" col="3" colid="PATROL_YMD" display="date"/>
+						<cell align="center" col="4" colid="BRANCH_NM" display="text"/>
+						<cell col="5" colid="ADDR_NM" display="text" suppress="1"/>
+						<cell align="left" col="6" colid="TEAM_NM" display="text"/>
+						<cell align="left" col="7" colid="MAKER_NM" display="text"/>
+						<cell align="center" col="8" colid="USE_FORMAL_CAPA" display="text"/>
+						<cell align="left" col="9" colid="MTR_NUM" display="text"/>
+						<cell align="left" col="10" colid="CUST_NUM" display="text"/>
+						<cell align="center" col="11" colid="AC_ELECT" display="text"/>
+						<cell align="right" col="12" colid="M_PRESS_CATHODIC_LENG" display="number"/>
+						<cell align="right" col="13" colid="L_PRESS_CATHODIC_LENG" display="number"/>
+						<cell align="right" col="14" colid="OUTPUT_VOLTAGE" display="normal"/>
+						<cell align="right" col="15" colid="OUTPUT_VOLTAIC" display="normal"/>
+						<cell align="right" col="16" colid="VOLTAGE" display="normal"/>
+						<cell align="right" col="17" colid="VOLTAIC" display="normal"/>
+						<cell align="right" col="18" colid="RECTIFER_ELECT_POT" display="number"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1605030011F.xml
+* Form 설명  : DCVG탐사 계획/구간/결과 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-23
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+
+function D1205010010F_T03_OnLoadCompleted(obj)
+{
+	gfn_SetGrdComboBox_Comcode ("Grid1",7,"D10062");   /*제조사*/
+	gfn_SetGrdComboBox_Comcode ("Grid1",8,"D10063");   /*사용정격*/	
+	gfn_SetGrdComboBox_Comcode ("Grid1",11,"D10064");   /*입력전원*/	
+}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_addRow()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	ds_Search.ClearData();
+	var row = ds_Search.AddRow();
+	ds_Search.SetColumn(row,"BRANCH_CD",cob_branch.Value);
+	ds_Search.SetColumn(row,"TEAM_CD",cob_TeamCdSearch.Value);
+	ds_Search.SetColumn(row,"PATROL_STR_YMD",cal_Ymd_From.Value);
+	ds_Search.SetColumn(row,"PATROL_END_YMD",cal_Ymd_To.Value);
+	
+	ds_list.ClearData();
+	ds_rect.ClearData();
+	
+    var strSvcID        = "Search_RECT";
+	var strPart         = "D10";	             
+	var strURL          = "handle.do?ServiceName=D1205010010F-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_rect=ds_list";
+	var strArgument     = "Search_RECT=1";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );			   
+}
+
+function fn_D1_Excel()
+{
+	var SearchCondition= "";
+   
+    SearchCondition = SearchCondition + "지사 : " +     RPad(cob_branch.Text," ",20);
+    SearchCondition = SearchCondition + "팀 : " +    RPad(cob_TeamCdSearch.Text," ",20);
+    SearchCondition = SearchCondition + "순찰일자 : " + RPad(substr(today(),0,4) + '0101' + ' ~ ' + today()," ",40);
+    
+    gfn_ExportExcel("정류기 순찰실적", 3, SearchCondition, "Grid1");     
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명  : 탐사일지 장표를 출력한다. 
+// arguments 없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_D1_Print()
+{
+	PrintScreen();
+}
+
+function Grid1_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+		//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+
+]]></Script>
+</Window>

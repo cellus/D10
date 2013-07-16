@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1201010015F" Left="8" OnLoadCompleted="D1201010015F_OnLoadCompleted" OnUnloadCompleted="D1201010015F_OnUnloadCompleted" PidAttrib="7" Title="누출탐지차량&#32;&#32;분기순찰계획&#32;등록_D1201010015F" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_TeamCd">
+				<Contents>
+					<colinfo id="KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Block"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="FID_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOWN" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_PLAN_DEGREE" size="256" summ="default" type="STRING"/>
+					<colinfo id="CAR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_FID_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_FID_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_WALK_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_WALK_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_END_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="TABLET_COMM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Count">
+				<Contents>
+					<colinfo id="NCOUNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Town">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="FID_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DONG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Degree">
+				<Contents>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<NAME>1차</NAME>
+						<VALUE>001</VALUE>
+					</record>
+					<record>
+						<NAME>2차</NAME>
+						<VALUE>002</VALUE>
+					</record>
+					<record>
+						<NAME>3차</NAME>
+						<VALUE>003</VALUE>
+					</record>
+					<record>
+						<NAME>4차</NAME>
+						<VALUE>004</VALUE>
+					</record>
+					<record>
+						<NAME>5차</NAME>
+						<VALUE>005</VALUE>
+					</record>
+					<record>
+						<NAME>6차</NAME>
+						<VALUE>006</VALUE>
+					</record>
+					<record>
+						<NAME>7차</NAME>
+						<VALUE>007</VALUE>
+					</record>
+					<record>
+						<NAME>8차</NAME>
+						<VALUE>008</VALUE>
+					</record>
+					<record>
+						<NAME>9차</NAME>
+						<VALUE>009</VALUE>
+					</record>
+					<record>
+						<NAME>10차</NAME>
+						<VALUE>010</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi1">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="FID_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOWN" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_PLAN_DEGREE" size="256" summ="default" type="STRING"/>
+					<colinfo id="CAR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_FID_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_FID_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_WALK_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_WALK_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_END_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="TABLET_COMM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Town1">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="FID_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DONG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Delete">
+				<Contents>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="FID_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Edit Border="Flat" Height="18" Id="edt_PBlockCd" ImeMode="none" Left="215" Style="edit" TabOrder="15" Top="103" Visible="FALSE" Width="101"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_BlockCd" ImageID="search" Left="317" OnClick="btn_BlockCd_OnClick" TabOrder="16" Text="Button8" Top="103" Visible="FALSE" Width="17"></Button>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1258" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="9" Top="30" Type="RoundRect" Width="1253"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1253" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="10" Top="35" Type="Rectangle" Width="1243"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="6" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1253">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="476" LeftMargin="12" Style="blt_search_Indis" TabOrder="7" Text="년도" Top="40" Width="59"></Image>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="581" LeftMargin="12" Style="blt_search_Indis" TabOrder="8" Text="분기" Top="40" Width="49"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="853" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="759" Id="grd_Multi" InputPanel="FALSE" Left="5" LineColor="silver" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnExpandEdit="grd_Multi_OnExpandEdit" Right="1258" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="12" TabStop="true" Top="94" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1253">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="0"/>
+						<col width="61"/>
+						<col width="39"/>
+						<col width="80"/>
+						<col width="0"/>
+						<col width="127"/>
+						<col width="85"/>
+						<col width="1"/>
+						<col width="255"/>
+						<col width="90"/>
+						<col width="83"/>
+						<col width="79"/>
+						<col width="86"/>
+						<col width="88"/>
+						<col width="81"/>
+						<col width="93"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="차수"/>
+						<cell col="1" display="text" rowspan="2" text="년도"/>
+						<cell col="2" display="text" rowspan="2" text="분기"/>
+						<cell col="3" display="text" rowspan="2" text="차수"/>
+						<cell col="4" display="text" rowspan="2" text="구간"/>
+						<cell col="5" display="text" rowspan="2" text="구간명"/>
+						<cell col="6" display="text" rowspan="2" text="구간번호"/>
+						<cell col="7" display="text" rowspan="2" text="차량번호"/>
+						<cell col="8" display="text" rowspan="2" text="동구분"/>
+						<cell col="9" colspan="7" display="text" text="연장(m)"/>
+						<cell col="12" display="text" row="1" text="전체공급관"/>
+						<cell bkcolor="user11" col="13" display="text" row="1" text="도보공급관"/>
+						<cell bkcolor="user11" col="14" display="text" row="1" text="FID&#32;공급관"/>
+						<cell col="15" display="text" row="1" text="계"/>
+						<cell col="9" display="text" row="1" text="전체본관"/>
+						<cell bkcolor="user11" col="10" display="text" row="1" text="도보본관"/>
+						<cell bkcolor="user11" col="11" display="text" row="1" text="FID&#32;본관"/>
+					</head>
+					<body>
+						<cell align="left" col="0" colid="PATROL_PLAN_DEGREE" display="text"/>
+						<cell align="center" col="1" colid="CHK_YEAR" display="text"/>
+						<cell align="center" col="2" colid="CHK_QUARTER" display="text"/>
+						<cell align="center" col="3" colid="SEQ" combocol="VALUE" combodataset="ds_Degree" combotext="NAME" display="combo"/>
+						<cell align="center" col="4" colid="BLOCK_CD" display="text" limit="8"/>
+						<cell align="center" col="5" colid="BLOCK_NM" display="normal" limit="3"/>
+						<cell align="center" col="6" colid="BLOCK_CD" display="normal" limit="3"/>
+						<cell col="7" colid="CAR_NUM" display="text"/>
+						<cell align="left" col="8" colid="TOWN" display="text" expandimage="search" expandshow="true"/>
+						<cell align="right" col="9" colid="KOPIPE_LENG" display="number" expr="parseInt(KOPIPE_WALK_LENG)+parseInt(KOPIPE_FID_LENG)" limit="4"/>
+						<cell align="right" col="10" colid="KOPIPE_WALK_LENG" display="number" edit="number" limit="9" LimitDec="2"/>
+						<cell align="right" col="11" colid="KOPIPE_FID_LENG" display="number" edit="number" limit="9" LimitDec="2"/>
+						<cell align="right" col="12" colid="MPIPE_LENG" display="number" expr="parseInt(MPIPE_WALK_LENG)+parseInt(MPIPE_FID_LENG)" limit="4"/>
+						<cell align="right" col="13" colid="MPIPE_WALK_LENG" display="number" edit="number" limit="9" LimitDec="2"/>
+						<cell align="right" col="14" colid="MPIPE_FID_LENG" display="number" edit="number" limit="9" LimitDec="2"/>
+						<cell align="right" col="15" colid="ALL_LENG" display="number" expr="parseInt(KOPIPE_WALK_LENG)+parseInt(KOPIPE_FID_LENG)+parseInt(MPIPE_WALK_LENG)+parseInt(MPIPE_FID_LENG)" limit="4"/>
+					</body>
+					<summary>
+						<cell align="center" bkcolor="user13" col="0" colspan="9" display="text" text="소계"/>
+						<cell align="right" bkcolor="user13" col="9" display="number" expr='SumNF(&quot;KOPIPE_WALK_LENG+KOPIPE_FID_LENG&quot;)'/>
+						<cell align="right" bkcolor="user13" col="10" display="number" expr='SumNF(&quot;KOPIPE_WALK_LENG&quot;)'/>
+						<cell align="right" bkcolor="user13" col="11" display="number" expr='SumNF(&quot;KOPIPE_FID_LENG&quot;)'/>
+						<cell align="right" bkcolor="user13" col="12" display="number" expr='SumNF(&quot;MPIPE_WALK_LENG+MPIPE_FID_LENG&quot;)'/>
+						<cell align="right" bkcolor="user13" col="13" display="number" expr='SumNF(&quot;MPIPE_WALK_LENG&quot;)'/>
+						<cell align="right" bkcolor="user13" col="14" display="number" expr='SumNF(&quot;MPIPE_FID_LENG&quot;)'/>
+						<cell align="right" bkcolor="user13" col="15" display="number" expr='SumNF(&quot;KOPIPE_WALK_LENG+KOPIPE_FID_LENG+MPIPE_WALK_LENG+MPIPE_FID_LENG&quot;)'/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="94" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1258" TabOrder="11" Top="91" Type="Rectangle" Width="1253"></Shape>
+		<Image Align="Left" Height="12" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="13" Text="누출탐지차량&#32;&#32;분기순찰계획&#32;등록" Top="74" Width="219"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_PChkQuarter" Left="619" OnChanged="cob_block_OnChanged" Style="combo_indis" TabOrder="4" Top="39" Width="89"></Combo>
+		<Spin Border="Flat" Height="18" Id="sp_PChkYear" Left="516" OnChanged="cob_block_OnChanged" OnMouseOut="cob_block_OnChanged" Style="spin_indis" TabOrder="3" Text="2009" Top="40" Width="54"></Spin>
+		<Combo Border="Flat" Height="18" Id="cob_PFidFlag" Left="773" OnChanged="cob_block_OnChanged" Style="combo_indis" TabOrder="5" Top="39" Width="98"></Combo>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="716" LeftMargin="12" Style="blt_search_Indis" TabOrder="14" Text="FID구분" Top="40" Width="59"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_block" InnerDataset="ds_Block" Left="210" OnChanged="cob_block_OnChanged" Style="combo" TabOrder="2" Top="39" Width="259"></Combo>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="170" LeftMargin="12" Style="blt_search" TabOrder="17" Text="구간" Top="40" Width="43"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_PTeamCd" InnerDataset="ds_TeamCd" Left="246" OnChanged="cob_PTeamCd_OnChanged" Style="combo" TabOrder="18" Top="70" Visible="FALSE" Width="141"></Combo>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="220" LeftMargin="12" Style="blt_search" TabOrder="19" Text="팀" Top="71" Visible="FALSE" Width="27"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_PBranchCd" Left="53" OnChanged="cob_PBranchCd_OnChanged" Style="combo_indis" TabOrder="1" Top="39" Width="114"></Combo>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_Indis" TabOrder="20" Text="지사" Top="40" Width="59"></Image>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID      : D1201010015F.xml
+* Form 설명   : 누설탐지차량순찰계획 조회,수정,삭제
+* 시스템 명   : 안전공급(D1)
+* 작성자      : 임성수
+* 작성일      : 2008-01-09
+* 변경내용    : 변경내용없음
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+var fv_State_Flag = "none";
+//---------------------------------------------------------
+//	화면 OnLoadCompleted 이벤트처리 발생하는 함수( 화면ID_OnLoadCompleted )
+//---------------------------------------------------------
+function D1201010015F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_D1_On_load();
+}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+/*===============================================================================
+ * 함수명: fn_CommonAddRow()
+   설명: 내용를 신규 추가 하는 모드로 변경 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonAddRow()
+{
+	if(fv_State_Flag != 'select'){
+		alert("데이터를 먼저 조회하세요. ");
+		return;
+	}
+
+	fn_D1_Addrowm();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonDeleteRow()
+   설명: 삭제 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonDeleteRow()
+{
+	if(fv_State_Flag != 'select'){
+		alert("데이터를 먼저 조회하세요. ");
+		return;
+	}
+	
+	var nCnt   = ds_Multi.GetRowCount();
+	var MaxSeq = '';
+	var NowSeq = toNumber(ds_Multi.GetColumn(ds_Multi.row, "SEQ"));
+			
+	for(var i=0; i<nCnt; i++){
+			
+		if(ds_Multi.GetColumn(ds_Multi.row, "BLOCK_CD") == ds_Multi.GetColumn(i, "BLOCK_CD")){			
+			var str_Seq = toNumber(ds_Multi.GetColumn(i, "SEQ"));			
+			if(MaxSeq < str_Seq){
+				MaxSeq = str_Seq;
+			}
+		}
+	}
+	
+	if(MaxSeq != NowSeq){
+		alert("최종 차수 순서로 삭제 가능합니다. ");
+		return;
+	}
+	
+	var result = Confirm("데이터를 삭제하시겠습니까? ");
+		
+	if(result == '0'){
+			return;
+	}
+
+	fn_D1_DeleteRow();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSave()
+   설명: 상세 내용를 저장 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonSave()
+{
+	if(ds_Multi.GetRowCount() == 0){
+		alert("저장할 데이터가 없습니다. ");
+		return;
+	}
+	
+	var nCnt = ds_Multi.GetRowCount();
+	
+	for(var i=0; i<nCnt; i++){
+		
+		var str_TOWN = ds_Multi.GetColumn(i, "TOWN");
+		if(str_TOWN == '' || str_TOWN == null){
+			alert("동정보는 필수입력사항입니다. ");
+			return;
+		}
+		
+		var str_KOPIPE_WALK_LENG = ds_Multi.GetColumn(i, "KOPIPE_WALK_LENG");
+		if(str_KOPIPE_WALK_LENG == '' || str_KOPIPE_WALK_LENG == null){
+			alert("도보본관 연장 정보는 필수입력사항입니다. ");
+			return;
+		}
+		
+		var str_KOPIPE_FID_LENG = ds_Multi.GetColumn(i, "KOPIPE_FID_LENG");
+		if(str_KOPIPE_FID_LENG == '' || str_KOPIPE_FID_LENG == null){
+			alert("FID본관 연장 정보는 필수입력사항입니다. ");
+			return;
+		}
+		
+		var str_MPIPE_WALK_LENG = ds_Multi.GetColumn(i, "MPIPE_WALK_LENG");
+		if(str_MPIPE_WALK_LENG == '' || str_MPIPE_WALK_LENG == null){
+			alert("도보공급관 연장 정보는 필수입력사항입니다. ");
+			return;
+		}
+		
+		var str_MPIPE_FID_LENG = ds_Multi.GetColumn(i, "MPIPE_FID_LENG");
+		if(str_MPIPE_FID_LENG == '' || str_MPIPE_FID_LENG == null){
+			alert("FID공급관 연장 정보는 필수입력사항입니다. ");
+			return;
+		}		
+	}
+	
+	fn_D1_Save();
+	fv_State_Flag = '';
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSearch()
+   설명: 공통 조회
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonSearch()
+{   
+	fn_D1_Find();
+	fv_State_Flag = 'select';
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonPrint()
+//  설명 : 공통 엑셀 출력
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonExcelExport()
+{
+	fn_D1_ExcelExport();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonPrint()
+//  설명 : 공통 장표 출력
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonPrint()
+{
+	//PrintScreen(true);
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_ExcelExport()
+//  설명 : 누출탐지차량 분기순찰계획 엑셀로 저장
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_ExcelExport()
+{ 
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 :"     + RPad(cob_PBranchCd.Text  ," ",20);
+    SearchCondition = SearchCondition + "팀 :"       + RPad(cob_PTeamCd.Text    ," ",20);
+    SearchCondition = SearchCondition + "구간 :" 	 + RPad(edt_PBlockCd.Text   ," ",20);
+    SearchCondition = SearchCondition + "년도 :" 	 + RPad(sp_PChkYear.Text    ," ",20);
+    SearchCondition = SearchCondition + "분기 :" 	 + RPad(cob_PChkQuarter.Text," ",20);
+    SearchCondition = SearchCondition + "FID구분 :"  + RPad(cob_PFidFlag.Text   ," ",20);
+	gfn_ExportExcel("누설탐지차량 순찰계획등록", 5, SearchCondition, "grd_Multi");
+}
+
+
+function fn_D1_On_load()
+{
+	// 콤보 코드 정의
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_PBranchCd"));
+	gfn_SetComboBox_Comcode("E50059",gfn_setDsObject_Comcode("cob_PChkQuarter"));
+	gfn_SetComboBox_Comcode("D10216",gfn_setDsObject_Comcode("cob_PFidFlag"));
+	
+		
+	//  콤보 INDEX 기본 셋팅
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+	    cob_PBranchCd.Index = 0;
+	} else {
+	    cob_PBranchCd.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+	    cob_PBranchCd.Enable = false;
+	}
+	
+	cob_PBranchCd_OnChanged();	
+	cob_block_OnChanged();
+	
+	sp_PChkYear.Value = substr(today(),0,4);		
+	cob_PChkQuarter.Index = fn_D1_DefaultSetting();	
+		
+	cob_PFidFlag.Index = 0;
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: cob_PBranchCd_OnChanged()
+//   설명  :  지사에 따른 구간 및 FID 차량 조회 및 선택
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function cob_PBranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+    cob_PTeamCd.Index = '';
+    
+    gfn_D1_SetComboBox_Blockcd("ds_Block",cob_PBranchCd,cob_PTeamCd);
+   
+    cob_block.value = "";
+    //강북지사일 경우만 FID구분이 FID1, FID2 선택가능
+    var branchcd = cob_PBranchCd.Value;    
+    
+    if(branchcd=='100664'){
+		cob_PFidFlag.Enable=true;
+	}
+	else
+	{
+		cob_PFidFlag.Index=0;
+		cob_PFidFlag.Enable=false;
+	}
+}
+
+function cob_PTeamCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	gfn_D1_SetComboBox_Blockcd("ds_Block",cob_PBranchCd,cob_PTeamCd);
+    cob_block.value = "";
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Addrowm()
+//   설명  :  구간에 따른 담당지역 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Addrowm()
+{
+	ds_Town.ClearData();
+
+	var str_BranchCd = cob_PBranchCd.Value ;
+	var str_BlockCD  = cob_block.Value     ;
+	var str_FidFlag  = cob_PFidFlag.Value  ;
+	
+	if(str_BranchCd == '' || str_BranchCd == null){
+		alert("지사를 선택하세요. ");
+		return;
+	}
+	
+	if(str_BlockCD == '' || str_BlockCD == null){
+		alert("구간을 선택하세요. ");
+		return;	
+	}
+	
+	if(str_FidFlag == '' || str_FidFlag == null){
+		alert("FID구분을 선택하세요. ");
+		return;
+	}
+	
+	var strSvcID = "";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_CarsPatroPlanRegisMgr-service"
+				 + "&BRANCH_CD="		+ cob_PBranchCd.Value		//지사코드
+				 + "&TEAM_CD=" 		    + cob_PTeamCd.Value			//팀코드
+				 + "&CHK_YEAR=" 		+ sp_PChkYear.Value			//년도
+	             + "&CHK_QUARTER="      + cob_PChkQuarter.Value		//분기
+	             + "&FID_FLAG="    	    + cob_PFidFlag.Value		//FID구분
+	             + "&BLOCK_CD =" 		+ cob_block.Value			//구간코드				 
+				 ;
+				 
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Multi1=ds_Multi";
+	var strArgument     = "selectBlockCd";
+	
+	gfn_SyncCall(
+			      strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument
+	             );	
+	             
+	fn_D1_Append();             
+}
+
+function fn_D1_Append(){
+	
+	var str_BlockCd  = cob_block.Value;
+	var str_BlockCd1 = ds_Multi1.GetColumn(0, "BLOCK_CD");
+	var str_Seq      = '0';
+	
+	var nCnt = ds_Multi.GetRowCount() ;
+	
+	for(var i=0; i<nCnt; i++){
+		for(var j=0; j<nCnt; j++){
+			if(ds_Multi.GetColumn(j, "BLOCK_CD") == ds_Multi1.GetColumn(0, "BLOCK_CD")){
+				if(toNumber(str_Seq) < toNumber(ds_Multi.GetColumn(j, "SEQ"))){
+					str_Seq = toNumber(ds_Multi.GetColumn(j, "SEQ"));
+				}else{
+					str_Seq = '1';
+				}
+			 }
+		 }
+	}
+	
+	var str_Seq1 = lpad(toNumber(str_Seq) + toNumber(1), '0', 3) ;
+	
+	ds_Multi.AppendDataset(ds_Multi1);
+	ds_Multi.SetColumn(ds_Multi.lastrow, "SEQ", str_Seq1);
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_SAVE
+//   설명  : 누출탐지차량 분기별순찰계획 정보를 등록/업데이트한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save()
+{
+	if(ds_Multi.RowCount() == 0)
+	{
+		return;
+	}	
+	
+	var str_BlockCd    = "";
+	var str_ChkYear	   = "";
+	var str_ChkQuarter = "";
+	var str_FidFlag    = "";
+	var str_Seq        = "";
+	
+	ds_Multi.UpdateControl = false;	
+	
+	for(var i=0; i<ds_Multi.GetRowCount(); i++){
+		str_BlockCd    = ds_Multi.GetColumn(i, "BLOCK_CD"   );
+		str_ChkYear	   = ds_Multi.GetColumn(i, "CHK_YEAR"   );
+		str_ChkQuarter = ds_Multi.GetColumn(i, "CHK_QUARTER");
+		str_FidFlag    = ds_Multi.GetColumn(i, "FID_FLAG"   );
+		str_Seq        = ds_Multi.GetColumn(i, "SEQ"        );
+	
+		ds_Multi.SetColumn(i, "CRT_EMPID"  , gfn_GetGlobalValue("G_USER_NO"  ));
+		ds_Multi.SetColumn(i, "CRT_IP"     , gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_Multi.SetColumn(i, "UPD_EMPID"  , gfn_GetGlobalValue("G_USER_NO"  ));
+		ds_Multi.SetColumn(i, "UPD_IP"     , gfn_GetGlobalValue("G_IPADDRESS"));
+	
+	   	if(fn_D1_Count(str_BlockCd, str_ChkYear, str_ChkQuarter, str_FidFlag, str_Seq) == '0'){
+			ds_Multi.SetRowType(i, "insert");
+		}else{
+			ds_Multi.SetRowType(i, "update");
+		}
+	}
+
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_CarsPatroPlanRegisMgr-service";					
+	var strInDatasets    = "ds_Multi=ds_Multi:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save";
+	
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);	
+	              
+	if(ErrorCode < 0)
+	{
+		return;
+	}   
+	
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true);
+	
+	fn_D1_Save1();	
+	fn_D1_Find();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_SAVE
+//   설명  : 누출탐지차량 분기별순찰계획 동 정보를 등록/업데이트한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 	
+function fn_D1_Save1()
+{	
+	ds_Town1.UpdateControl = false;
+
+	var str_ChkYr   = "";
+	var str_ChkQrtr = "";
+	var str_FdFlg   = "";
+	var str_BlckCd  = "";
+	var str_Sq      = "";
+
+	var nCnt = ds_Multi.GetRowCount();	
+		
+	for(var i=0; i<nCnt; i++){
+		var str_Flag = ds_Multi.GetColumn(i, "FLAG");
+	
+		if(str_Flag == '1'){
+		
+			str_ChkYr   = "";
+			str_ChkQrtr = "";
+			str_FdFlg   = "";
+			str_BlckCd  = "";
+			str_Sq      = "";
+			
+			str_ChkYr   = ds_Multi.GetColumn(i, "CHK_YEAR"   );
+			str_ChkQrtr = ds_Multi.GetColumn(i, "CHK_QUARTER");
+			str_FdFlg   = ds_Multi.GetColumn(i, "FID_FLAG"   );
+			str_BlckCd  = ds_Multi.GetColumn(i, "BLOCK_CD"   );
+			str_Sq      = ds_Multi.GetColumn(i, "SEQ"        );
+			
+			fn_D1_DeleteDong(str_ChkYr, str_ChkQrtr, str_FdFlg, str_BlckCd, str_Sq);
+		}
+	}
+	
+	for(var i=0; i<ds_Town1.GetRowCount(); i++){
+		
+		ds_Town1.SetColumn(i, "CRT_EMPID"  , gfn_GetGlobalValue("G_USER_NO"  ));
+		ds_Town1.SetColumn(i, "CRT_IP"     , gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_Town1.SetColumn(i, "UPD_EMPID"  , gfn_GetGlobalValue("G_USER_NO"  ));
+		ds_Town1.SetColumn(i, "UPD_IP"     , gfn_GetGlobalValue("G_IPADDRESS"));
+		
+		ds_Town1.SetRowType(i, "insert");
+	}
+	
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_CarsPatroPlanRegisMgr-service";					
+	var strInDatasets    = "ds_Town=ds_Town1:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "saveZip";
+	
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);	
+	              
+	if(ErrorCode < 0)
+	{
+		return;
+	}   
+	
+	ds_Town1.ClearData();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_D1_Find()
+// 설명     : 순찰점검 주 계획을 조회한다.
+// return 내용 : 없음
+//-------------------------------------------------------------------------------
+function fn_D1_Find()
+{	
+	// if(!fn_DateCheckYear(sp_PChkYear))
+	// {
+		// return;
+	// }
+	
+	var strSvcID = "";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_CarsPatroPlanRegisMgr-service"
+	             + "&BRANCH_CD="		+ cob_PBranchCd.Value
+	             + "&TEAM_CD=" 		    + cob_PTeamCd.Value
+	             + "&BLOCK_CD =" 		+ cob_block.Value
+	             + "&CHK_YEAR=" 		+ sp_PChkYear.Value
+	             + "&CHK_QUARTER="      + cob_PChkQuarter.Value
+	             + "&FID_FLAG="    	    + cob_PFidFlag.Value
+	             ;
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi ds_Town=ds_Town";
+	var strArgument     = "find";
+	
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);
+
+	if(ErrorCode < 0)
+	{
+		return;
+	}		
+	
+	if(ds_Multi.GetRowCount()==0)
+	{
+        grd_Multi.NoDataText="조회결과가 없습니다.";
+    
+    }else{
+		for(var i=0; i<ds_Multi.GetRowCount(); i++){  
+			
+			var bfr_ChkYr   = ds_Multi.GetColumn(i, "CHK_YEAR"   );
+			var bfr_ChkQrtr = ds_Multi.GetColumn(i, "CHK_QUARTER");
+			var bfr_FdFlg   = ds_Multi.GetColumn(i, "FID_FLAG"   );
+			var bfr_BlckCd  = ds_Multi.GetColumn(i, "BLOCK_CD"   );
+			var bfr_Sq      = ds_Multi.GetColumn(i, "SEQ"        );
+			
+			var str_Town = "";
+			
+			var aftr_ChkYr  = "";
+			var aftr_ChkQrtr= "";
+			var aftr_FdFlg  = "";
+			var aftr_BlckCd = "";
+			var aftr_Sq     = "";		
+			
+			var temp  = bfr_ChkYr + bfr_ChkQrtr + bfr_FdFlg + bfr_BlckCd + bfr_Sq;
+			var temp2 = "";	 
+			 
+			for(var j=0; j<ds_Town.GetRowCount(); j++){		
+				
+				aftr_ChkYr  = "";
+				aftr_ChkQrtr= "";
+				aftr_FdFlg  = "";
+				aftr_BlckCd = "";
+				aftr_Sq     = "";	
+	
+				aftr_ChkYr  = ds_Town.GetColumn(j, "CHK_YEAR"   );
+				aftr_ChkQrtr= ds_Town.GetColumn(j, "CHK_QUARTER");
+				aftr_FdFlg  = ds_Town.GetColumn(j, "FID_FLAG"   );
+				aftr_BlckCd = ds_Town.GetColumn(j, "BLOCK_CD"   );
+				aftr_Sq     = ds_Town.GetColumn(j, "SEQ"        );			
+				
+				temp2 = aftr_ChkYr + aftr_ChkQrtr + aftr_FdFlg + aftr_BlckCd + aftr_Sq;
+				
+				if(temp == temp2)
+				{
+					str_Town = str_Town + " " + ds_Town.GetColumn(j, "DONG_NM");
+				}
+			}
+			
+			ds_Multi.SetColumn(i, "TOWN", str_Town);
+			temp2    = "";	 
+			str_Town = "";	
+		}
+	}
+
+	grd_Multi.BindDataset = "ds_Multi";
+	fv_State_Flag = 'select';
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_DeleteDong
+//   설명  : 누출탐지차량 분기별순찰계획 동 정보를 삭제한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 	
+function fn_D1_DeleteDong(str_ChkYr, str_ChkQrtr, str_FdFlg, str_BlckCd, str_Sq){
+	
+	ds_Delete.ClearData();
+	
+	ds_Delete.AddRow();
+	ds_Delete.SetColumn(0, "CHK_YEAR"   , str_ChkYr  );
+	ds_Delete.SetColumn(0, "CHK_QUARTER", str_ChkQrtr);
+	ds_Delete.SetColumn(0, "FID_FLAG"   , str_FdFlg  );
+	ds_Delete.SetColumn(0, "BLOCK_CD"   , str_BlckCd );
+	ds_Delete.SetColumn(0, "SEQ"        , str_Sq     );
+	
+	ds_Delete.UpdateControl = false;
+	ds_Delete.SetRowType(0, "delete");
+	
+	var strSvcID       = "";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName=D1_CarsPatroPlanRegisMgr-service";
+	var strInDatasets  = "ds_Delete=ds_Delete:u";
+	var strOutDatasets = "";
+	var strArgument    = "deleteZip";
+	
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_DeleteRow
+//   설명  : 누출탐지차량 분기별순찰계획 정보를 삭제한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 	
+function fn_D1_DeleteRow(){
+	
+	ds_Delete.ClearData();
+	
+	var str_BlckCd  = ds_Multi.GetColumn(ds_Multi.row, "BLOCK_CD"   );
+	var str_ChkYr   = ds_Multi.GetColumn(ds_Multi.row, "CHK_YEAR"   );
+	var str_ChkQrtr = ds_Multi.GetColumn(ds_Multi.row, "CHK_QUARTER");
+	var str_FdFlg   = ds_Multi.GetColumn(ds_Multi.row, "FID_FLAG"   );
+	var str_Sq      = ds_Multi.GetColumn(ds_Multi.row, "SEQ"        );
+	
+	ds_Delete.AddRow();
+	ds_Delete.SetColumn(0, "CHK_YEAR"   , str_ChkYr  );
+	ds_Delete.SetColumn(0, "CHK_QUARTER", str_ChkQrtr);
+	ds_Delete.SetColumn(0, "FID_FLAG"   , str_FdFlg  );
+	ds_Delete.SetColumn(0, "BLOCK_CD"   , str_BlckCd );
+	ds_Delete.SetColumn(0, "SEQ"        , str_Sq     );
+	
+	ds_Delete.UpdateControl = false;
+	ds_Delete.SetRowType(0, "delete");
+		
+	var strSvcID       = "";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName=D1_CarsPatroPlanRegisMgr-service";
+	var strInDatasets  = "ds_Multi=ds_Delete:u";
+	var strOutDatasets = "";
+	var strArgument    = "save";
+	
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);
+	
+	fn_D1_DeleteDong(str_ChkYr, str_ChkQrtr, str_FdFlg, str_BlckCd, str_Sq);                                                                                                                                                                                                                               
+	              
+	fn_D1_Find();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_D1_Count()
+// 설명     : 순찰점검 등록 여부를 조회한다.
+// return 내용 : 없음
+//-------------------------------------------------------------------------------
+function fn_D1_Count(str_BlockCd, str_ChkYear, str_ChkQuarter, str_FidFlag, str_Seq)
+{
+	var strSvcID = "";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_CarsPatroPlanRegisMgr-service"
+	             + "&BLOCK_CD =" 		+ str_BlockCd		//구간코드
+	             + "&CHK_YEAR=" 		+ str_ChkYear		//년도
+	             + "&CHK_QUARTER="      + str_ChkQuarter	//분기
+	             + "&FID_FLAG="    	    + str_FidFlag		//FID구분
+	             + "&SEQ="				+ str_Seq
+	             ;
+	             
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Count=ds_Count";
+	var strArgument     = "count";
+	
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);
+
+	if(ErrorCode < 0)
+	{
+		return;
+	}		
+
+	if(ds_Count.GetColumn(0, "NCOUNT") > 0){ return 1; }else{ return 0; }
+}
+
+function fn_D1_DefaultSetting(){
+
+	var quarter = '';
+	
+	if (substr(today(), 4, 2) == "01" || substr(today(), 4, 2) == "02" || substr(today(), 4, 2) == "03") {
+	    quarter = 0;	    
+	} else if (substr(today(), 4, 2) == "04" || substr(today(), 4, 2) == "05" || substr(today(), 4, 2) == "06") {
+	    quarter = 1;
+	} else if (substr(today(), 4, 2) == "07" || substr(today(), 4, 2) == "08" || substr(today(), 4, 2) == "09") {
+	    quarter = 2;
+	} else if (substr(today(), 4, 2) == "10" || substr(today(), 4, 2) == "11" || substr(today(), 4, 2) == "12") {
+	    quarter = 3;
+	}
+	return quarter ;
+}
+
+function D1201010015F_OnUnloadCompleted(obj)
+{
+	if(ds_Multi.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","편집중인 내용을 무시하고 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+
+function grd_Multi_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{		
+		if("TOWN" == grd_Multi.GetCellProp("body",nCell,"ColId")){
+		var arg  =  "BRANCH_CD=" + ds_Multi.GetColumn(nRow, "BRANCH_CD") ;
+			arg +=  " BLOCK_CD=" + ds_Multi.GetColumn(nRow, "BLOCK_CD" ) ;
+		
+		var arrList = gfn_Dialog("D10","D1201010015U",arg,798,436,true,-1,-1);
+	
+		if(arrList == '' || arrList == null){
+			return;
+		}
+		
+		ds_Multi.SetColumn(nRow, "FLAG", '1');
+		 	
+		var str_DongNm_List    = split(arrList[0],"#","webstyle"); // 동 명
+		var str_ZipNo1NM_List1 = split(arrList[1],"#","webstyle"); // ZIPNO1
+		var str_ZipNo1NM_List2 = split(arrList[2],"#","webstyle"); // ZIPNO2
+		
+		var bfr_ChkYr   = ds_Multi.GetColumn(nRow, "CHK_YEAR"   );
+		var bfr_ChkQrtr = ds_Multi.GetColumn(nRow, "CHK_QUARTER");
+		var bfr_FdFlg   = ds_Multi.GetColumn(nRow, "FID_FLAG"   );
+		var bfr_BlckCd  = ds_Multi.GetColumn(nRow, "BLOCK_CD"   );
+		var bfr_Sq      = ds_Multi.GetColumn(nRow, "SEQ"        );
+		
+		var aftr_ChkYr    = "";
+		var aftr_ChkQrtr  = "";
+		var aftr_FdFlg    = "";
+		var aftr_BlckCd   = "";
+		var aftr_Sq       = "";		
+		var after_BranchCd= "";
+		
+		var temp  = bfr_ChkYr + bfr_ChkQrtr + bfr_FdFlg + bfr_BlckCd + bfr_Sq;
+		var temp2 = "";		
+		var nCnt = ds_Town1.GetRowCount();
+		
+		for(nCnt; nCnt>=0 ; nCnt--){		
+			
+			aftr_ChkYr  = "";
+			aftr_ChkQrtr= "";
+			aftr_FdFlg  = "";
+			aftr_BlckCd = "";
+			aftr_Sq     = "";	
+
+			aftr_ChkYr  = ds_Town1.GetColumn(nCnt, "CHK_YEAR"   );
+			aftr_ChkQrtr= ds_Town1.GetColumn(nCnt, "CHK_QUARTER");
+			aftr_FdFlg  = ds_Town1.GetColumn(nCnt, "FID_FLAG"   );
+			aftr_BlckCd = ds_Town1.GetColumn(nCnt, "BLOCK_CD"   );
+			aftr_Sq     = ds_Town1.GetColumn(nCnt, "SEQ"        );
+			
+			temp2 = aftr_ChkYr + aftr_ChkQrtr + aftr_FdFlg + aftr_BlckCd + aftr_Sq;
+			
+			if(temp == temp2)
+			{
+				ds_Town1.DeleteRow(nCnt);
+			}
+		}		
+		
+		var str_DongNm = '';
+		
+		for(var i=1; i<str_ZipNo1NM_List2.Length; i++){
+			
+			ds_Town1.AddRow();				
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "CHK_YEAR"   , ds_Multi.GetColumn(nRow, "CHK_YEAR"   ));
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "CHK_QUARTER", ds_Multi.GetColumn(nRow, "CHK_QUARTER"));
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "FID_FLAG"   , ds_Multi.GetColumn(nRow, "FID_FLAG"   ));
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "BLOCK_CD"   , ds_Multi.GetColumn(nRow, "BLOCK_CD"   ));
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "SEQ"        , ds_Multi.GetColumn(nRow, "SEQ"        ));
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "ZIP_NO1"    , str_ZipNo1NM_List1[i]);
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "ZIP_NO2"    , str_ZipNo1NM_List2[i]);
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "UPD_EMPID"  , ds_Multi.GetColumn(nRow, "UPD_EMPID"  ));
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "UPD_ID"     , ds_Multi.GetColumn(nRow, "UPD_ID"     ));
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "CRT_EMPID"  , ds_Multi.GetColumn(nRow, "CRT_EMPID"  ));
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "CRT_IP"     , ds_Multi.GetColumn(nRow, "CRT_IP"     ));
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "DONG_NM"    , str_DongNm_List[i]);
+			ds_Town1.SetColumn(ds_Town1.GetRowCount()-1, "BRANCH_CD"  , ds_Multi.GetColumn(nRow, "BRANCH_CD"  ));
+			
+			str_DongNm = str_DongNm + " " + str_DongNm_List[i];
+		}		
+		ds_Multi.SetColumn(nRow, "TOWN", str_DongNm);
+	}
+}
+
+function cob_block_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	fn_D1_Find();
+	fv_State_Flag = 'select';	
+}
+]]></Script>
+</Window>

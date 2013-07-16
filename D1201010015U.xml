@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="543" Id="D1201010015U" Left="8" OnLoadCompleted="D1201010015U_OnLoadCompleted" PidAttrib="7" Title="누출탐지차량&#32;구간&#32;담당&#32;지역&#32;조회_D1201010015U" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Town">
+				<Contents>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="DONG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="누출탐지차량&#32;구간담당지역&#32;조회" Transparent="TRUE" Width="800"></Image>
+		<Shape BKColor="user16" Bottom="104" Height="3" Id="Shape1" Left="0" LineWidth="0" Right="797" TabOrder="2" Top="101" Type="Rectangle" Width="797"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Town" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="540" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="436" Id="grd_list" InputPanel="FALSE" LineColor="default" LineType="ExVERT" MinWidth="100" OnHeadClick="grd_list_OnHeadClick" Right="798" SelColor="MENU" Style="grid_pop" TabOrder="3" TabStop="true" Top="104" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="798">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="32"/>
+						<col width="240"/>
+						<col width="67"/>
+						<col width="125"/>
+						<col width="150"/>
+						<col width="0"/>
+						<col width="120"/>
+						<col width="0"/>
+						<col width="160"/>
+					</columns>
+					<head>
+						<cell col="0" display="checkbox" edit="checkbox"/>
+						<cell col="1" display="text" text="구간명"/>
+						<cell col="2" display="text" text="구간번호"/>
+						<cell col="3" display="text" text="지사"/>
+						<cell col="4" display="text" text="팀"/>
+						<cell col="5" display="text" text="시/구코드"/>
+						<cell col="6" display="text" text="시/구"/>
+						<cell col="7" display="text" text="동코드"/>
+						<cell col="8" display="text" text="동"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CHK" display="checkbox" edit="checkbox"/>
+						<cell align="left" col="1" colid="BLOCK_NM" display="text"/>
+						<cell align="center" col="2" colid="BLOCK_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="4" colid="TEAM_NM" display="text"/>
+						<cell col="5" colid="ZIP_NO1" display="text"/>
+						<cell align="center" col="6" colid="GU_NM" display="text"/>
+						<cell col="7" colid="ZIP_NO2" display="text"/>
+						<cell align="center" col="8" colid="DONG_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Div DisableBKColor="white" Height="31" Id="div_ComHead" Left="-1" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="4" Text="Div0" Top="37" Url="globals::ComButton.xml" Visible="FALSE" Width="795">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID      : D1201010015U.xml
+* Form 설명   : 일별계획
+* 시스템 명   : 안전공급(D1)
+* 작성자      : 정주혜
+* 작성일      : 2009-07-24
+* 변경내용    : 변경내용없음
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+
+function D1201010015U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_D1_Search();
+}
+
+//-----------------------
+//  체크박스 체크
+//-----------------------
+function grd_list_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_GridSelChk(obj, "CHK");
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Search
+//   설명  : 누출탐지차량 구간에 대한 담당 지역 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Search() {
+
+   	ds_Town.ClearData();
+	
+	var strSvcID = "";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_CarsPatroPlanRegisMgr-service"
+				 + "&BRANCH_CD="		+ BRANCH_CD					//지사코드
+	             + "&BLOCK_CD =" 		+ BLOCK_CD					//구간코드				 
+				 ;
+				 
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Town=ds_Town";
+	var strArgument     = "selectTown";
+	
+	gfn_SyncCall(
+			      strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument
+	             );
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_CommonSelect()
+//   설명  : 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSelect()
+{
+	var str_TownName = ""; // DONG NAME
+	var str_Zipno1   = ""; // ZIPNO1 CODE
+	var str_Zipno2   = ""; // ZIPNO2 CODE
+	
+	var chkCnt = 0;
+	var nCnt = ds_Town.GetRowCount();
+	
+	for(var i=0; i<nCnt; i++){		
+		var chk = ds_Town.GetColumn(i, "CHK");
+		if(chk == '1'){
+				chkCnt = toNumber(chkCnt) + toNumber(1);
+		}
+	}
+	
+	if(chkCnt == '0'){
+		alert("체크된 항목이 없습니다. ");
+		return;
+	}
+	
+	for(var i=0; i<nCnt; i++){		
+		var chk = ds_Town.GetColumn(i, "CHK");
+		if(chk == '1'){
+			str_TownName  = str_TownName + "#" + ds_Town.GetColumn(i, "DONG_NM");
+			str_Zipno1    = str_Zipno1   + "#" + ds_Town.GetColumn(i, "ZIP_NO1");
+			str_Zipno2    = str_Zipno2   + "#" + ds_Town.GetColumn(i, "ZIP_NO2");
+		}
+	}
+	 
+	var arrList = array();
+     
+	arrList[0]  = str_TownName;
+	arrList[1]  = str_Zipno1  ;
+	arrList[2]  = str_Zipno2  ;
+		     
+    Close(arrList);
+}]]></Script>
+</Window>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="730" Id="D1201010010F_D03" Left="8" OnLoadCompleted="D1201010010F_D03_OnLoadCompleted" PidAttrib="7" Title="순찰점검&#32;일&#32;계획조회" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_listday">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" type="STRING"/>
+					<colinfo id="PATROL_YMD" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_listday" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="722" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="719" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1256" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="2" TabStop="true" Top="3" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1251">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="150"/>
+						<col width="548"/>
+						<col width="150"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell col="0" colspan="4" display="text" text="순찰점검&#32;계획"/>
+						<cell col="2" display="text" row="1" text="설치일자"/>
+						<cell col="0" display="text" row="1" text="시설물명/시설물번호"/>
+						<cell col="1" display="text" row="1" text="주소"/>
+						<cell col="3" display="text" row="1" text="이전점검일"/>
+					</head>
+					<body>
+						<cell col="0" colid="FACI_NUM" display="text"/>
+						<cell col="1" colid="LOT_NUM_UNION" display="text"/>
+						<cell col="2" colid="INST_YMD" display="date"/>
+						<cell col="3" colid="PATROL_YMD" display="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="3" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1256" TabOrder="1" Top="0" Type="Rectangle" Width="1251"></Shape>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+function D1201010010F_D03_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	Combo4.value = "";
+	Combo4.enable = false;
+	Combo5.value = "";
+	Combo5.enable = false;
+	cal_day.value = today();
+	cal_day.enable = true;
+	cob_FaciFlag.value = "";
+}
+
+/********************************************************************************
+* 기      능   :  순찰점검 월 계획조회
+********************************************************************************/
+function fn_D1_Search() {
+
+    var strSvcID = "";
+    var strPart = "D10";
+    var strURL = "handle.do?ServiceName=D1_PatrolMonthCheckMgr-service"
+               + "&BRANCH_CD=" + cob_BranchCd.value 
+               + "&TEAM_CD=" + cob_TeamCd.value 
+               + "&BLOCK_CD="  + cob_PBlockCd.value
+               + "&PLAN_YMD=" + cal_day.value 
+               + "&FACI_NUM=" + cob_FaciFlag.value;
+    var strInDatasets = "";
+    var strOutDatasets = "ds_listday=ds_listday";
+    var strArgument = "search1";
+ 
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );	
+	if(ds_listday.GetRowCount()==0)
+        Grid1.NoDataText="조회결과가 없습니다.";		 		      
+}]]></Script>
+</Window>

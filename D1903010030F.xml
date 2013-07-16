@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1903010030F" Left="8" OnLoadCompleted="D1903010030F_OnLoadCompleted" PidAttrib="7" Title="신설배관처리현황_D1903010030F" Top="8" Ver="1.0" Width="1270" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search1">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RSLT_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" GroupKey="WORK_NUM" Id="ds_MgrList">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RSLT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIAM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONSULT_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_POINT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIAM_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1264" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="0" Top="30" Type="RoundRect" Width="1259"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1259" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="35" Type="Rectangle" Width="1249"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="1" TabStop="FALSE" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1259">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="#6cbae1" Bottom="98" Height="3" Id="Shape0" Left="4" LineWidth="0" Right="1266" TabOrder="3" Top="95" Type="Rectangle" Width="1262"></Shape>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image5_OnClick" Style="text_title" TabOrder="2" TabStop="FALSE" Text="신설배관&#32;처리현황" Top="80" Width="270"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_MgrList" BkColor2="user3" BoldHead="FALSE" Border="Flat" BorderColor="user7" Bottom="842" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="746" Id="grd_List" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnHeadClick="grd_list_OnHeadClick" Right="1268" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="6" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1260">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="0"/>
+						<col width="55"/>
+						<col width="88"/>
+						<col width="79"/>
+						<col width="56"/>
+						<col width="220"/>
+						<col width="100"/>
+						<col width="43"/>
+						<col width="43"/>
+						<col width="78"/>
+						<col width="78"/>
+						<col width="78"/>
+						<col width="78"/>
+						<col width="78"/>
+						<col width="78"/>
+						<col width="52"/>
+						<col width="52"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="test"/>
+						<cell col="1" display="text" text="기준년도"/>
+						<cell col="2" display="text" text="공사번호"/>
+						<cell col="3" display="text" text="의뢰번호"/>
+						<cell col="4" display="text" text="결과번호"/>
+						<cell col="5" display="text" text="공사명"/>
+						<cell col="6" display="text" text="업체명"/>
+						<cell col="7" display="text" text="압력"/>
+						<cell col="8" display="text" text="관경"/>
+						<cell col="9" display="text" text="품의연장(m)"/>
+						<cell col="10" display="text" text="공사연장(m)"/>
+						<cell col="11" display="text" text="요청연장(m)"/>
+						<cell col="12" display="text" text="탐사연장(m)"/>
+						<cell col="13" display="text" text="접수일자"/>
+						<cell col="14" display="text" text="탐사일자"/>
+						<cell col="15" display="text" text="손상개소"/>
+						<cell col="16" display="text" text="조치개소"/>
+					</head>
+					<body>
+						<cell bkcolor='expr:iif(rowlevel=1,&#32;&quot;orange&quot;,&#32;&quot;white&quot;)' col="0" display="text" expr="rowlevel"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="1" colid="BASE_YEAR" display="text" expr="iif(rowlevel&#32;=&#32;1,&apos;소계&apos;,BASE_YEAR)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="2" colid="WORK_NUM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;(공사번호별)&apos;,WORK_NUM)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="3" colid="REQ_NUM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,REQ_NUM)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="4" colid="RSLT_NUM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,RSLT_NUM)"/>
+						<cell align="left" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="5" colid="WORK_NM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,WORK_NM)"/>
+						<cell align="left" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="6" colid="PIPE_FIRM_NM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,PIPE_FIRM_NM)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="7" colid="PRESS_NM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,PRESS_NM)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="8" colid="DIAM_NM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,DIAM_NM)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="9" colid="CONSULT_LENG" display="number" expr="round(CONSULT_LENG.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="10" colid="WORK_LENG" display="number" expr="round(WORK_LENG.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="11" colid="LENG" display="number" expr="round(LENG.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="12" colid="EXPLOR_LENG" display="number" expr="round(EXPLOR_LENG.sum)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="13" colid="RECEIVE_YMD" display="date" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,RECEIVE_YMD)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="14" colid="EXPLOR_YMD" display="date" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,EXPLOR_YMD)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="15" colid="DAMAGE_POINT_CNT" display="number" expr="round(DAMAGE_POINT_CNT.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="16" colid="ACT_CNT" display="number" expr="round(ACT_CNT.sum)"/>
+					</body>
+					<summary>
+						<cell bkcolor="greenyellow" col="0" display="text"/>
+						<cell align="center" bkcolor="greenyellow" col="1" display="text" text="총&#32;계"/>
+						<cell bkcolor="greenyellow" col="2" display="text"/>
+						<cell bkcolor="greenyellow" col="3" display="text"/>
+						<cell bkcolor="greenyellow" col="4" display="text"/>
+						<cell bkcolor="greenyellow" col="5" display="text"/>
+						<cell bkcolor="greenyellow" col="6" display="text"/>
+						<cell bkcolor="greenyellow" col="7" display="text"/>
+						<cell bkcolor="greenyellow" col="8" display="text"/>
+						<cell align="right" bkcolor="greenyellow" col="9" display="number" expr='round(CaseSum(&apos;REQ_NUM&#32;!=&#32;&quot;&#32;&quot;&apos;,&apos;CONSULT_LENG&apos;))'/>
+						<cell align="right" bkcolor="greenyellow" col="10" display="number" expr='round(CaseSum(&apos;REQ_NUM&#32;!=&#32;&quot;&#32;&quot;&apos;,&apos;WORK_LENG&apos;))'/>
+						<cell align="right" bkcolor="greenyellow" col="11" display="number" expr='round(CaseSum(&apos;REQ_NUM&#32;!=&#32;&quot;&#32;&quot;&apos;,&apos;LENG&apos;))'/>
+						<cell align="right" bkcolor="greenyellow" col="12" display="number" expr='round(CaseSum(&apos;REQ_NUM&#32;!=&#32;&quot;&#32;&quot;&apos;,&apos;EXPLOR_LENG&apos;))'/>
+						<cell bkcolor="greenyellow" col="13" display="text"/>
+						<cell bkcolor="greenyellow" col="14" display="text"/>
+						<cell align="right" bkcolor="greenyellow" col="15" display="number" expr='round(CaseSum(&apos;REQ_NUM&#32;!=&#32;&quot;&#32;&quot;&apos;,&apos;DAMAGE_POINT_CNT&apos;))'/>
+						<cell align="right" bkcolor="greenyellow" col="16" display="number" expr='round(CaseSum(&apos;REQ_NUM!=&quot;&#32;&quot;&apos;,&apos;ACT_CNT&apos;))'/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Color="blue" Height="18" Id="Image8" ImageID="blt" Left="15" LeftMargin="12" Style="blt_search" TabOrder="8" TabStop="FALSE" Text="지사" Top="40" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Branc" INDEX="0" Left="56" Style="combo_indis" TabOrder="7" TabStop="FALSE" Top="40" Width="125"></Combo>
+		<Image Align="Left" Color="blue" Height="18" Id="Image7" ImageID="blt" Left="192" LeftMargin="12" Style="blt_search" TabOrder="9" Text="기준년도" Top="42" Width="61"></Image>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear_From" Left="256" OnClickUpDown="cob_BaseYear_From_OnClickUpDown" Style="spin_indis" TabOrder="10" Text="2008" Top="42" Width="54"></Spin>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear_To" Left="326" OnClickUpDown="cob_BaseYear_To_OnClickUpDown" Style="spin_indis" TabOrder="11" Text="2008" Top="42" Width="54"></Spin>
+		<Image Align="Left" Color="blue" Height="18" Id="Image0" ImageID="blt" Left="-294" LeftMargin="12" Style="blt_search" TabOrder="12" Text="기준년도" Top="40" Width="61"></Image>
+		<Spin Border="Flat" Height="18" Id="Spin1" Left="-230" Style="spin_indis" TabOrder="13" Text="2008" Top="40" Width="54"></Spin>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="416" LeftMargin="12" Style="blt_search" TabOrder="15" TabStop="FALSE" Text="공사번호" Top="41" Width="90"></Image>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_WorkNum" ImeMode="none" Left="479" MaxLength="11" Number="TRUE" Style="edit" TabOrder="14" Top="41" Width="174"></Edit>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="672" LeftMargin="12" Style="blt_search" TabOrder="17" TabStop="FALSE" Text="의뢰번호" Top="41" Width="90"></Image>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_ReqNum" ImeMode="none" Left="736" MaxLength="11" Number="TRUE" Style="edit" TabOrder="16" Top="40" Width="174"></Edit>
+		<Image Align="Left" Height="18" Id="Image9" ImageID="blt" Left="936" LeftMargin="12" Style="blt_search" TabOrder="19" TabStop="FALSE" Text="결과번호" Top="41" Width="90"></Image>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_RsltNum" ImeMode="none" Left="999" MaxLength="5" Number="TRUE" Style="edit" TabOrder="18" Top="41" Width="174"></Edit>
+		<Static Height="13" Id="Static109" Left="313" Style="static" TabOrder="20" Text="~" Top="46" Width="10"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1903010030F.xml
+* Form 설명  : 신설배관처리현황 내역조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 팽무진 
+* 작성일     : 2003-06-18
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1903010030F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	
+	// 로그인 정보 추출
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999")  // 본사
+		{
+			
+			cob_Branc.Enable = true;
+			cob_Branc.Value = "";  // 지사 코드가 "" 인 지사명 "전체"를 가지고 옴. (Datacolumn)
+			
+		} 
+		else  
+		{   // 지사
+			
+			cob_Branc.Enable = false;
+			cob_Branc.Value = gfn_GetGlobalValue("G_BRANCH_CD");			
+			
+		}	
+
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	// 지사코드, 기준년도 등
+	//-----------------------------------------
+	//gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branc")); 
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branc"));		//지사코드 -- 전체 추가
+	  
+  
+	cob_BaseYear_From.Value = Substr(AddMonth(gfn_GetServerTime(),-12),0,4);        //기준년도 세팅     
+	cob_BaseYear_To.Value = Substr(gfn_GetServerTime(),0,4);  
+	
+	
+	
+	//cob_Branc.Index = 0;
+	edt_WorkNum.Text="";
+	edt_ReqNum.Text="";
+	edt_RsltNum.Text="";
+	
+	
+}
+
+
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+	
+	fn_D1_find();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  신규배관 처리현황  내역
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	
+	
+	ds_Search1.ClearData();
+	
+	var nRow = ds_Search1.AddRow();  //Dataset의 레코드 신규 생성 .. return:0
+	
+	//Dataset의 해당로우의 컬럼id값 세팅
+	ds_Search1.SetColumn(nRow, "BRANCH_CD", cob_Branc.Value); 
+	ds_Search1.SetColumn(nRow, "BASE_YEAR_FROM", cob_BaseYear_From.Value);
+	ds_Search1.SetColumn(nRow, "BASE_YEAR_TO", cob_BaseYear_To.Value);
+	ds_Search1.SetColumn(nRow, "WORK_NUM", edt_WorkNum.Text);
+	ds_Search1.SetColumn(nRow, "REQ_NUM",edt_ReqNum.Text);
+	ds_Search1.SetColumn(nRow, "RSLT_NUM", edt_RsltNum.Text);
+	
+	
+	var strSvcID       = "mgrList";
+	var strPart        = "D10";	
+	var strURL         = "handle.do?ServiceName=D1_DCVGSearchCoatExploreReqMgr-service";
+	var strInDatasets  = "ds_Search1=ds_Search1";
+	var strOutDatasets = "ds_MgrList=ds_MgrList";
+	var strArgument    = "mgrList";
+    var strCallBack    = "fn_D1_CallBack";	
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallBack
+			   );
+
+			   
+	if(ds_MgrList.GetRowCount()==0) { grd_List.NoDataText = "신설배관현황 조회결과가 없습니다."; }
+
+	
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 : "  +     RPad(cob_Branc.Text," ",20);
+    SearchCondition = SearchCondition + "기준년도 : " +  RPad(cob_BaseYear_From.Text," ",8) + " ~ " + RPad(cob_BaseYear_To.Text," ",20);
+    SearchCondition = SearchCondition + "공사번호 : " +  RPad(edt_WorkNum.Text," ",20);
+    SearchCondition = SearchCondition + "의뢰번호 : " +  RPad(edt_ReqNum.Text," ",20);
+    SearchCondition = SearchCondition + "결과번호 : " +  RPad(edt_RsltNum.Text," ",20);
+        
+    gfn_ExportExcel("신설배관 현황조회", 4, SearchCondition, "grd_list");  //엑셀 양식 세팅
+}
+
+
+// 그리드 정렬기능
+function grd_list_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_D1_SetGrid_Sort(grd_list);
+}
+
+
+ //-------------------------------------------------------------------------------
+ // 설명     :   FROM ~ TO 체크 (조회) spin  
+ //-------------------------------------------------------------------------------
+
+function cob_BaseYear_From_OnClickUpDown(obj,strOldText,strText,bUp)
+{
+	  	if(cob_BaseYear_From.Value !="" && cob_BaseYear_To.Value !="" && cob_BaseYear_From.Value > cob_BaseYear_To.Value){	
+  		alert("TO 기준년도는 FROM 기준년도보다 같거나 큰값을 입력하세요.");
+  		cob_BaseYear_From.SetFocus();
+  		// cob_BaseYear_From.value = "";
+  		// cob_BaseYear_To.value = "";
+  		cob_BaseYear_From.value = Substr(gfn_GetServerTime(),0,4);
+  		cob_BaseYear_To.value = Substr(gfn_GetServerTime(),0,4);
+  		return;
+  	}	
+}
+
+function cob_BaseYear_To_OnClickUpDown(obj,strOldText,strText,bUp)
+{
+	if(cob_BaseYear_From.Value !="" && cob_BaseYear_To.Value !="" && cob_BaseYear_From.Value > cob_BaseYear_To.Value){	
+  		alert("TO 기준년도는 FROM 기준년도보다 같거나 큰값을 입력하세요.");
+  		cob_BaseYear_From.SetFocus();
+  		// cob_BaseYear_From.value = "";
+  		// cob_BaseYear_To.value = "";
+  		cob_BaseYear_From.value = Substr(gfn_GetServerTime(),0,4);;
+  		cob_BaseYear_To.value = Substr(gfn_GetServerTime(),0,4);
+  		return;
+  	}
+}
+]]></Script>
+</Window>

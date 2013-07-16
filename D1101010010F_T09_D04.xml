@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="762" Id="D1101010010F_T09_D04" Left="8" OnLoadCompleted="D1101010010F_T09_D01_OnLoadCompleted" OnUnloadCompleted="D1101010010F_T09_D04_OnUnloadCompleted" PidAttrib="7" Title="시설물정보등록_특별관리시설&#32;등록_중압직공급" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Speci">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="OLDFACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SpeciDetail">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECOND_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_ADDR_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="MODEL1" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_GATE1" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_EXIT1" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIAM_GATE1" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIAM_EXIT1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TYPE1" size="256" summ="default" type="STRING"/>
+					<colinfo id="LINE_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="MODEL2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_GATE2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_EXIT2" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIAM_GATE2" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIAM_EXIT2" size="256" summ="default" type="STRING"/>
+					<colinfo id="TYPE2" size="256" summ="default" type="STRING"/>
+					<colinfo id="LINE_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLD_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESOU_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK2" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="HILL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_S" size="256" summ="default" type="STRING"/>
+					<colinfo id="DONG" size="256" summ="default" type="STRING"/>
+					<colinfo id="HOSU" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_ADDR_BLD_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_ADDR_UNGRNOUD_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_HOSU" size="256" summ="default" type="STRING"/>
+					<colinfo id="REGTR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REGTR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_STS_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GetNum">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FileList">
+				<Contents>
+					<colinfo id="FILE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORIG_ATTACH_FILE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_PATH" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_SIZE" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="USE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOWN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_S" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SpeciExcel"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FileList2">
+				<Contents>
+					<colinfo id="FILE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORIG_ATTACH_FILE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_PATH" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_SIZE" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="USE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOWN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_S" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Block">
+				<Contents>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GetWorkInfo"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FaciFile">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static30" Left="110" Style="table" TabOrder="43" Top="672" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="REGTR_FLAG" Editable="TRUE" Height="18" Id="cob_RegtrFlag" Left="858" Style="combo" TabOrder="130" Top="673" Width="109"></Combo>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static14" Left="967" Style="table_indis" TabOrder="127" Text="구역&#32;조정기&#32;명칭" Top="672" VAlign="Middle" Width="143" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="110" Style="table" TabOrder="39" Top="546" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="ZIP_NO1" Enable="FALSE" Height="18" Id="cob_Gu" Left="1077" Style="combo" TabOrder="120" TabStop="FALSE" Top="526" Width="173"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="PRESS_GATE1" Height="18" Id="cob_PressGate1" INDEX="0" Left="300" Style="combo" TabOrder="12" Top="631" Width="111"></Combo>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static18" Left="110" Style="table" TabOrder="37" Top="567" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="110" Style="table" TabOrder="38" Top="525" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static1" Left="5" Style="table_indis" TabOrder="38" Text="시설물번호" Top="525" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static3" Left="5" Style="table_indis" TabOrder="38" Text="시공사" Top="546" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="13" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="37" TabStop="FALSE" Text="중압직공급&#32;등록" Top="508" Width="117"></Image>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static4" Left="317" Style="table_indis" TabOrder="41" Text="건물명" Top="525" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_SpeciDetail" Border="Flat" Column="FACI_NUM" Enable="FALSE" Height="18" Id="edt_FaciNum" ImeMode="none" Left="141" Style="edit" TabOrder="36" TabStop="FALSE" Top="527" Width="175"></Edit>
+		<Edit BindDataset="ds_SpeciDetail" Border="Flat" Column="FACI_NM" Height="18" Id="edt_FaciNm" ImeMode="none" Left="453" MaxLength="20" Style="edit" TabOrder="7" Top="527" Width="175"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button0" ImageID="search" Left="924" OnClick="WORK_NUM_SEARCH" TabOrder="9" TabStop="FALSE" Text="Button8" Top="549" Width="17"></Button>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static10" Left="629" Style="table_indis" TabOrder="41" Text="공사번호" Top="546" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="BRANCH_CD" Enable="FALSE" Height="18" Id="cob_BranchCd" INDEX="0" Left="764" OnChanged="cob_BranchCd_OnChanged1" Style="combo" TabOrder="33" TabStop="FALSE" Top="526" Width="178"></Combo>
+		<Edit BindDataset="ds_SpeciDetail" Border="Flat" Column="WORK_FIRM_NM" Enable="FALSE" Height="18" Id="edt_WorkFirmCd" ImeMode="none" Left="141" Style="edit_indis" TabOrder="34" TabStop="FALSE" Top="548" Width="175"></Edit>
+		<Edit BindDataset="ds_SpeciDetail" Border="Flat" Column="WORK_NUM" Enable="FALSE" Height="18" Id="edt_WorkNum" ImeMode="none" Left="765" MaxLength="11" Number="TRUE" Style="edit_indis" TabOrder="32" Top="548" Width="158"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static31" Left="5" Style="table" TabOrder="43" Text="특기사항" Top="672" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static48" Left="110" Style="table" TabOrder="44" Top="693" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edtFileList" ImeMode="none" Left="141" Style="edit" TabOrder="35" TabStop="FALSE" Top="695" Width="494"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="18" Id="Button23" ImageID="btn_4_fileadd" Left="636" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="29" TabStop="FALSE" Text="파일첨부&#32;" Top="695" Width="75"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static50" Left="5" Style="table" TabOrder="44" Text="첨부파일" Top="693" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_SpeciDetail" Border="Flat" Column="RMK2" Height="18" Id="Edit99" ImeMode="none" Left="141" MaxLength="50" Style="edit" TabOrder="28" Top="674" Width="605"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static17" Left="139" Style="table" TabOrder="45" Top="630" VAlign="Middle" Width="161" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static20" Left="139" Style="table" TabOrder="47" Top="651" VAlign="Middle" Width="161" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static15" Left="5" Style="table_indis" TabOrder="44" Text="1단" Top="630" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static19" Left="967" Style="table" TabOrder="46" Text="등급&#32;및&#32;전수" Top="651" VAlign="Middle" Width="143" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="43" Id="Static8" Left="5" Style="table" TabOrder="44" Text="구분" Top="588" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="43" Id="Static9" Left="139" Style="table_indis" TabOrder="47" Text="모델" Top="588" VAlign="Middle" Width="161" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static12" Left="299" Style="table_indis" TabOrder="48" Text="압력" Top="588" VAlign="Middle" Width="225" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static13" Left="299" Style="table_indis" TabOrder="49" Text="입구" Top="609" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static25" Left="411" Style="table_indis" TabOrder="50" Text="출구" Top="609" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static27" Left="523" Style="table_indis" TabOrder="51" Text="관경" Top="588" VAlign="Middle" Width="225" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static28" Left="523" Style="table_indis" TabOrder="52" Text="입구" Top="609" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static29" Left="635" Style="table_indis" TabOrder="53" Text="출구" Top="609" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="43" Id="Static32" Left="747" Style="table_indis" TabOrder="54" Text="타입" Top="588" VAlign="Middle" Width="111" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="43" Id="Static33" Left="857" Style="table_indis" TabOrder="55" Text="열수" Top="588" VAlign="Middle" Width="111" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="43" Id="Static34" Left="967" Style="table_indis" TabOrder="56" Text="건물형태" Top="588" VAlign="Middle" Width="143" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="43" Id="Static35" Left="1109" Style="table_indis" TabOrder="57" Text="자원내역" Top="588" VAlign="Middle" Width="142" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static36" Left="299" Style="table" TabOrder="58" Top="630" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static37" Left="299" Style="table" TabOrder="59" Top="651" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static38" Left="411" Style="table" TabOrder="60" Top="630" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static39" Left="411" Style="table" TabOrder="61" Top="651" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static40" Left="523" Style="table" TabOrder="62" Top="630" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static41" Left="523" Style="table" TabOrder="63" Top="651" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static42" Left="635" Style="table" TabOrder="65" Top="651" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static43" Left="635" Style="table" TabOrder="64" Top="630" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static44" Left="747" Style="table" TabOrder="66" Top="630" VAlign="Middle" Width="111" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static45" Left="747" Style="table" TabOrder="67" Top="651" VAlign="Middle" Width="111" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static46" Left="857" Style="table" TabOrder="68" Top="630" VAlign="Middle" Width="111" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static47" Left="857" Style="table" TabOrder="69" Top="651" VAlign="Middle" Width="111" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static52" Left="967" Style="table" TabOrder="70" Top="630" VAlign="Middle" Width="143" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static54" Left="1109" Style="table" TabOrder="71" Top="630" VAlign="Middle" Width="142" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static55" Left="1109" Style="table" TabOrder="72" Top="651" VAlign="Middle" Width="142" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static53" Left="5" Style="table_indis" TabOrder="73" Text="2단" Top="651" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="RESOU_DESC" Height="18" Id="cob_ResouDesc" INDEX="0" Left="1110" Style="combo" TabOrder="19" Top="631" Width="140"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="BLD_TYPE" Height="18" Id="cob_BldType" INDEX="0" Left="968" Style="combo" TabOrder="18" Top="631" Width="141"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="TYPE1" Height="18" Id="cob_Type1" INDEX="0" Left="748" Style="combo" TabOrder="16" Top="631" Width="109"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="LINE_NO1" Height="18" Id="cob_LineNo1" INDEX="0" Left="858" Style="combo" TabOrder="17" Top="631" Width="109"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="TYPE2" Height="18" Id="cob_Type2" INDEX="0" Left="748" Style="combo" TabOrder="25" Top="652" Width="109"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="LINE_NO2" Height="18" Id="cob_LineNo2" INDEX="0" Left="858" Style="combo" TabOrder="26" Top="652" Width="109"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="MODEL1" Height="18" Id="cob_Model1" INDEX="0" Left="140" Style="combo" TabOrder="11" Top="631" Width="159"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="MODEL2" Height="18" Id="cob_Model2" INDEX="0" Left="140" Style="combo" TabOrder="20" Top="652" Width="159"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="DIAM_EXIT1" Height="20" Id="cob_DiamExit1" INDEX="0" Left="636" Style="combo" TabOrder="15" Top="631" Width="111"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="DIAM_EXIT2" Height="18" Id="cob_DiamExit2" INDEX="0" Left="636" Style="combo" TabOrder="24" Top="652" Width="111"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="DIAM_GATE1" Height="18" Id="cob_DiamGate1" INDEX="0" Left="524" Style="combo" TabOrder="14" Top="631" Width="111"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="DIAM_GATE2" Height="18" Id="cob_DiamGate2" INDEX="0" Left="524" Style="combo" TabOrder="23" Top="652" Width="111"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="PRESS_EXIT1" Height="18" Id="cob_PressExit1" INDEX="0" Left="412" Style="combo" TabOrder="13" Top="631" Width="111"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="PRESS_EXIT2" Height="18" Id="cob_PressExit2" INDEX="0" Left="412" Style="combo" TabOrder="22" Top="652" Width="111"></Combo>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="PRESS_GATE2" Height="18" Id="cob_PressGate2" INDEX="0" Left="300" Style="combo" TabOrder="21" Top="652" Width="111"></Combo>
+		<Edit BindDataset="ds_SpeciDetail" Border="Flat" Column="RMK" Height="18" Id="Edit88" ImeMode="none" Left="1111" MaxLength="50" Style="edit" TabOrder="27" Top="653" Width="138"></Edit>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="7" LeftMargin="12" Style="blt_search_Indis" TabOrder="39" TabStop="FALSE" Text="지사" Top="19" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Branc" INDEX="0" Left="48" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="0" TabStop="FALSE" Top="19" Width="125"></Combo>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="176" LeftMargin="12" Style="blt_search_Indis" TabOrder="40" TabStop="FALSE" Text="시/구" Top="19" Width="59"></Image>
+		<Shape BKColor="user15" Bottom="44" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1251" TabOrder="77" Top="41" Type="Rectangle" Width="1246"></Shape>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo1" INDEX="0" Left="221" Style="combo_indis" TabOrder="1" TabStop="FALSE" Top="19" Width="125"></Combo>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="738" LeftMargin="12" Style="blt_search" TabOrder="41" TabStop="FALSE" Text="건물명" Top="19" Width="59"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_StructureNm" ImeMode="none" Left="789" Style="edit" TabOrder="4" TabStop="FALSE" Top="19" UpperOnly="TRUE" Width="115"></Edit>
+		<Image Align="Left" Height="9" Id="Image2" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="42" TabStop="FALSE" Text="중압직공급&#32;조정기&#32;조회" Top="5" Width="181"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Speci" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="496" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="452" Id="grd_Dire" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellClick="grd_speci_OnCellClick" Right="1251" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="6" TabStop="FALSE" Top="44" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="0"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="110"/>
+						<col width="150"/>
+						<col width="550"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="No"/>
+						<cell col="1" display="text" text="중압직공급번호"/>
+						<cell col="2" display="text" text="구중압직공급번호"/>
+						<cell col="3" display="text" text="지사"/>
+						<cell col="4" display="text" text="시/구"/>
+						<cell col="5" display="text" text="팀"/>
+						<cell col="6" display="text" text="구간"/>
+						<cell col="7" display="text" text="건물명"/>
+						<cell col="8" display="text" text="주소"/>
+						<cell col="9" display="text" text="GIS&#32;위치보기"/>
+					</head>
+					<body>
+						<cell align="right" col="0" display="text" expr="rowindex+1" SuppressAlign="Middle"/>
+						<cell align="center" col="1" colid="FACI_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" display="text"/>
+						<cell align="center" col="3" colid="BRANCH_CD" display="text"/>
+						<cell align="center" col="4" colid="ZIP_NO1" display="text"/>
+						<cell align="center" col="5" colid="TEAM_NM" display="text"/>
+						<cell align="center" col="6" colid="BLOCK_NM" display="text"/>
+						<cell align="left" col="7" colid="FACI_NM" display="text"/>
+						<cell align="left" col="8" colid="LOT_NUM_UNION" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="9" cursor="hand" display="text" expandimage="SEarch" expandshow="true"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static5" Left="629" Style="table_indis" TabOrder="80" Text="지사" Top="525" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_SpeciDetail" Border="Flat" Column="WORK_FIRM_CD" Enable="FALSE" Height="18" Id="Edit2" ImeMode="none" Left="336" Style="edit_indis" TabOrder="38" TabStop="FALSE" Top="548" Visible="FALSE" Width="117"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button3" ImageID="search" Left="317" OnClick="Button3_OnClick" TabOrder="8" TabStop="FALSE" Text="Button8" Top="548" Width="17"></Button>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_SpeciExcel" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="920" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="80" Id="grd_Excel" InputPanel="FALSE" Left="-8" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_speci_OnCellClick" Right="4048" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="45" TabStop="FALSE" Top="840" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="4056">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="90"/>
+						<col width="80"/>
+						<col width="120"/>
+						<col width="110"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="90"/>
+						<col width="110"/>
+						<col width="90"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="150"/>
+						<col width="250"/>
+						<col width="250"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="250"/>
+						<col width="250"/>
+						<col width="250"/>
+					</columns>
+					<head>
+						<cell align="center" col="0" display="text" text="시설물번호"/>
+						<cell align="center" col="1" display="text" text="지사코드"/>
+						<cell col="2" display="text" text="팀"/>
+						<cell col="3" display="text" text="구간"/>
+						<cell align="center" col="4" display="text" text="시/구"/>
+						<cell align="center" col="5" display="text" text="동"/>
+						<cell align="center" col="6" display="text" text="공사번호"/>
+						<cell align="center" col="7" display="text" text="시공업체"/>
+						<cell align="center" col="8" display="text" text="설치일자"/>
+						<cell align="center" col="9" display="text" text="시설물명"/>
+						<cell col="10" display="text" text="조정기구분"/>
+						<cell col="11" display="text" text="조정기명칭"/>
+						<cell align="center" col="12" display="text" text="주소"/>
+						<cell align="center" col="13" display="text" text="새주소"/>
+						<cell align="center" col="14" display="text" text="모델_1단"/>
+						<cell align="center" col="15" display="text" text="압력_입구_1단"/>
+						<cell align="center" col="16" display="text" text="압력_출구_1단"/>
+						<cell align="center" col="17" display="text" text="관경_입구_1단"/>
+						<cell align="center" col="18" display="text" text="관경_출구_1단"/>
+						<cell align="center" col="19" display="text" text="타입_1단"/>
+						<cell align="center" col="20" display="text" text="열수_1단"/>
+						<cell align="center" col="21" display="text" text="모델_2단"/>
+						<cell align="center" col="22" display="text" text="압력_입구_2단"/>
+						<cell align="center" col="23" display="text" text="압력_출구_2단"/>
+						<cell align="center" col="24" display="text" text="관경_입구_2단"/>
+						<cell align="center" col="25" display="text" text="관경_출구_2단"/>
+						<cell align="center" col="26" display="text" text="타입_2단"/>
+						<cell align="center" col="27" display="text" text="열수_2단"/>
+						<cell align="center" col="28" display="text" text="건물형태"/>
+						<cell align="center" col="29" display="text" text="자원내역"/>
+						<cell align="center" col="30" display="text" text="비고"/>
+						<cell align="center" col="31" display="text" text="비고2"/>
+						<cell col="32" display="text"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="FACI_NUM" display="text" edit="normal" limit="8"/>
+						<cell align="center" col="1" colid="BRANCH_CD" display="text" edit="normal" limit="6"/>
+						<cell align="center" col="2" colid="TEAM_NM" display="text"/>
+						<cell align="center" col="3" colid="BLOCK_NM" display="text"/>
+						<cell align="center" col="4" colid="GUOFFICE" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="5" colid="DONG" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="6" colid="WORK_NUM" display="text" edit="normal" limit="11"/>
+						<cell align="center" col="7" colid="WORK_FIRM_CD" display="text" edit="normal" limit="10"/>
+						<cell align="center" col="8" colid="INST_YMD" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="9" colid="FACI_NM" display="text" edit="normal" limit="80"/>
+						<cell align="center" col="10" colid="REGTR_FLAG" display="text"/>
+						<cell align="center" col="11" colid="REGTR_NM" display="text"/>
+						<cell align="center" col="12" colid="LOT_NUM_UNION" display="text" edit="normal" limit="300"/>
+						<cell align="center" col="13" colid="NEW_ADDR_UNION" display="text" edit="normal" limit="300"/>
+						<cell align="center" col="14" colid="MODEL1" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="15" colid="PRESS_GATE1" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="16" colid="PRESS_EXIT1" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="17" colid="DIAM_GATE1" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="18" colid="DIAM_EXIT1" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="19" colid="TYPE1" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="20" colid="LINE_NO1" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="21" colid="MODEL2" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="22" colid="PRESS_GATE2" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="23" colid="PRESS_EXIT2" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="24" colid="DIAM_GATE2" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="25" colid="DIAM_EXIT2" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="26" colid="TYPE2" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="27" colid="LINE_NO2" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="28" colid="BLD_TYPE" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="29" colid="RESOU_DESC" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="30" colid="RMK" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="31" colid="RMK2" display="text" edit="normal" limit="160"/>
+						<cell col="32" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="353" LeftMargin="12" Style="blt_search_Indis" TabOrder="43" TabStop="FALSE" Text="팀" Top="19" Width="41"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_Team" InnerDataset="ds_Team" Left="380" OnChanged="cob_Team_OnChanged" Style="combo_indis" TabOrder="2" TabStop="FALSE" Top="19" Width="123"></Combo>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="910" LeftMargin="12" Style="blt_search" TabOrder="44" TabStop="FALSE" Text="시설물번호" Top="19" Width="73"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_FaciNumSearch" ImeMode="none" Left="983" MaxLength="8" Style="edit" TabOrder="5" TabStop="FALSE" Top="19" UpperOnly="TRUE" Width="115"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static64" Left="5" Style="table_indis" TabOrder="92" Text="주소" Top="567" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_SpeciDetail" Border="Flat" Column="LOT_NUM_UNION" Enable="FALSE" Height="18" Id="edt_lot_num_union" ImeMode="none" Left="141" Style="edit" TabOrder="46" TabStop="FALSE" Top="569" Width="469"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_DZip" ImageID="search" Left="611" OnClick="fn_ZipSearch" TabOrder="10" TabStop="FALSE" Text="Button8" Top="570" Width="17"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="629" Style="table_indis" TabOrder="94" Text="신주소" Top="567" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_SpeciDetail" Border="Flat" Column="NEW_ADDR_UNION" Enable="FALSE" Height="18" Id="edt_new_addr_union" ImeMode="none" Left="765" Style="edit" TabOrder="47" TabStop="FALSE" Top="569" Width="484"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="ZIP_SEQ" Height="18" Id="edt_zip_seq" ImeMode="none" Left="104" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="48" TabStop="FALSE" Top="768" Width="78"></Edit>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image7" ImageID="blt_8" Left="13" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="49" TabStop="FALSE" Text="우편일련번호" Top="774" Width="117"></Image>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="HILL" Height="18" Id="edt_hill" ImeMode="none" Left="224" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="50" TabStop="FALSE" Top="768" Width="78"></Edit>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image10" ImageID="blt_8" Left="181" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="51" TabStop="FALSE" Text="산번지" Top="774" Width="101"></Image>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image12" ImageID="blt_8" Left="309" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="53" TabStop="FALSE" Text="본번" Top="774" Width="101"></Image>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="ADDR_M" Height="18" Id="edt_addr_m" ImeMode="none" Left="348" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="52" TabStop="FALSE" Top="770" Width="78"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="ADDR_S" Height="18" Id="edt_addr_s" ImeMode="none" Left="468" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="54" TabStop="FALSE" Top="770" Width="78"></Edit>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image13" ImageID="blt_8" Left="429" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="55" TabStop="FALSE" Text="부번" Top="774" Width="101"></Image>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image14" ImageID="blt_8" Left="549" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="57" TabStop="FALSE" Text="보조주소" Top="774" Width="101"></Image>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="SECOND_ADDR" Height="18" Id="edt_second_addr" ImeMode="none" Left="612" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="56" TabStop="FALSE" Top="770" Width="78"></Edit>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image15" ImageID="blt_8" Left="693" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="59" TabStop="FALSE" Text="건물동" Top="774" Width="101"></Image>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="DONG" Height="18" Id="edt_bld_dong" ImeMode="none" Left="740" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="58" TabStop="FALSE" Top="770" Width="78"></Edit>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image16" ImageID="blt_8" Left="821" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="61" TabStop="FALSE" Text="호수" Top="774" Width="101"></Image>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="HOSU" Height="18" Id="edt_hosu" ImeMode="none" Left="860" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="60" TabStop="FALSE" Top="770" Width="78"></Edit>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image18" ImageID="blt_8" Left="13" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="63" TabStop="FALSE" Text="새주소건물일련번호" Top="806" Width="125"></Image>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="NEW_ADDR_BLD_SEQ" Height="18" Id="edt_new_addr_bld_seq" ImeMode="none" Left="140" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="62" TabStop="FALSE" Top="802" Width="78"></Edit>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image19" ImageID="blt_8" Left="421" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="65" TabStop="FALSE" Text="새주소호수" Top="806" Width="77"></Image>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="NEW_HOSU" Height="18" Id="edt_new_hosu" ImeMode="none" Left="500" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="64" TabStop="FALSE" Top="802" Width="78"></Edit>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image17" ImageID="blt_8" Left="221" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="67" TabStop="FALSE" Text="새주소지하여부" Top="806" Width="101"></Image>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="NEW_ADDR_UNGRNOUD_YN" Height="18" Id="edt_new_addr_ungrnoud_yn" ImeMode="none" Left="328" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="66" TabStop="FALSE" Top="800" Width="78"></Edit>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image20" ImageID="blt_8" Left="941" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="69" TabStop="FALSE" Text="우편번호1" Top="774" Width="117"></Image>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="ZIP_NO1" Height="18" Id="edt_zip_no1" ImeMode="none" Left="1012" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="68" TabStop="FALSE" Top="770" Width="78"></Edit>
+		<Image Align="Left" Font="돋움,8,Bold" Height="13" Id="Image21" ImageID="blt_8" Left="1093" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="71" TabStop="FALSE" Text="우편번호2" Top="774" Width="117"></Image>
+		<Edit Align="RIGHT" BindDataset="ds_SpeciDetail" Border="Flat" Column="ZIP_NO2" Height="18" Id="edt_zip_no2" ImeMode="none" Left="1164" OnCharChanged="edt_PipeDiam1_OnCharChanged" Style="edit" TabOrder="70" TabStop="FALSE" Top="770" Width="78"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static7" Left="942" Style="table_indis" TabOrder="119" Text="시/구" Top="525" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_SpeciDetail" Border="Flat" Column="FACI_STS_CD" Enable="FALSE" Height="18" Id="cob_FaciStsCd" Left="1077" Style="combo" TabOrder="122" Top="547" Width="173"></Combo>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static11" Left="942" Style="table" TabOrder="121" Text="중압직공급상태" Top="546" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edtFileList2" ImeMode="none" Left="712" Style="edit" TabOrder="123" TabStop="FALSE" Top="695" Width="416"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="bt_file2" ImageID="btn_8_File&#32;creation" Left="1129" LeftMargin="21" OnClick="Bt_Img_OnClick" Style="button" TabOrder="30" Text="이미지&#32;파일첨부" Top="695" Width="121"></Button>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="510" LeftMargin="12" Style="blt_search" TabOrder="124" Text="구간" Top="18" Width="41"></Image>
+		<Combo BKColor="user8" Border="Flat" CodeColumn="BLOCK_CD" DataColumn="BLOCK_NM" Height="18" Id="cob_PBlockCd" ImeMode="none" InnerDataset="ds_Block" Left="549" Style="combo" TabOrder="3" Top="18" Width="185"></Combo>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="1132" LeftMargin="12" Style="blt_search" TabOrder="125" TabStop="FALSE" Text="건수&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;건" Top="19" Width="120"></Image>
+		<Static Align="Right" Height="13" Id="st_Reg" Left="1193" Style="static" TabOrder="126" Text="0" Top="22" Width="35"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static16" Left="747" Style="table_indis" TabOrder="129" Text="조정기&#32;구분" Top="672" VAlign="Middle" Width="111" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_SpeciDetail" Border="Flat" Column="REGTR_NM" Height="18" Id="edt_RegtrNm" ImeMode="none" Left="1111" MaxLength="50" Style="edit" TabOrder="128" Top="674" Width="138"></Edit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101010010F_T09_D01.xml
+* Form 설명  : 시설내역등록 특별관리시설  
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2008-12-11
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONB30001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+ 
+//-------------------------------------------------------------------------------
+//  fv_saveMode   : 수정과 신규 저장 모드 플래그 
+//	fv_faciNum	  : 선택된 시설물 번호
+//-------------------------------------------------------------------------------
+
+var fv_saveMode = "";
+var strFaciNum = "";
+//-------------------------------------------------------------------------------
+// 함수명: fn_ZipSearch()
+//   설명: 우편번호 조회클릭시 우편번호 조회 popup화면 로딩
+// arguments   
+//          obj: 사용된 객체를 전달 한다.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_ZipSearch(obj)
+{
+    //if(strFaciNum != "")
+	//{
+		var arrList = gfn_Dialog("A10", "A1101020010U", "", 1100, 600, true, -1, -1);
+		
+		if(arrList == 0){
+			return;
+		}
+		
+		if (arrList != "" && arrList != null) {
+			
+			if (cob_ZipNo1.Value != arrList[2]) {
+				 alert("해당 시/구를 선택해주세요.");
+				 return;
+			}
+			
+			if(obj.id == "btn_DZip"){   
+			
+				edt_lot_num_union = arrList[17];  		 // 지번주소조합
+				edt_new_addr_union = arrList[23]; 		 // 새주소조합
+				edt_zip_seq = arrList[0];         		 // 우편일련번호     
+				edt_hill = arrList[10];           		 // 산번지
+				edt_addr_m = arrList[11];         		 // 본번
+				edt_addr_s = arrList[12];         		 // 부번  
+				edt_second_addr = arrList[13];    		 // 보조주소
+				edt_bld_dong = arrList[14];       		 // 동
+				edt_hosu = arrList[15];           		 // 호수
+				// edt_new_addr_bld_seq = arrList[18]; 	 // 새주소일련번호
+				// edt_new_addr_ungrnoud_yn = arrList[25];  // 새주소지하여부
+				// edt_new_hosu = arrList[21];              // 새주소호수 
+				edt_zip_no1 = arrList[2];                // 우편번호1
+				edt_zip_no2 = arrList[3];                // 우편번호2
+			}
+		}	
+		
+		G_ACTIVEWIN = parent.id;
+	//}	
+}
+
+// ===============================================================================
+// 함수명: D1101010010F_T09_D01_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1101010010F_T09_D01_OnLoadCompleted()
+{
+    //gfn_LoadForm(obj);
+    
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branc"));
+	//gfn_SetComboBox_Comcode("B10037",gfn_setDsObject_Comcode("cob_Branc"));	
+	gfn_SetComboBox_Comcode("B10004",gfn_setDsObject_Comcode("cob_ZipNo1"));
+	//gfn_SetComboBox_Comcode("B10037",gfn_setDsObject_Comcode("cob_BranchCd"));	
+	gfn_SetComboBox_Comcode("D10186",gfn_setDsObject_Comcode("cob_FaciStsCd"));
+	
+	// 2013.04.25. 이건민 - 주철민 계장 추가요청사항 (조정기 구분)
+	gfn_SetComboBox_Comcode("D10087",gfn_setDsObject_Comcode("cob_RegtrFlag"));
+	
+	//-----------------------------------------
+	//  콤보박스의 초기 설정
+	//-----------------------------------------
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+	    cob_Branc.value = '';
+	} else {
+	    cob_Branc.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+	    cob_Branc.Enable = false;
+	}
+	
+	cob_BranchCd.Enable = false;
+	
+	cob_BranchCd_OnChanged();
+	gfn_D1_SetGrid_Sort(grd_Dire);
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_ExcelExport()
+//  설명: 특별관리시설 엑셀로 저장
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_ExcelExport()
+{	
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 :" + RPad(cob_Branc.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo1.Text," ",20);
+    SearchCondition = SearchCondition + "팀 :" + RPad(cob_Team.Text," ",20);
+    SearchCondition = SearchCondition + "구간 :" + RPad(cob_PBlockCd.Text," ",20);  
+    SearchCondition = SearchCondition + "건물명 :" + RPad(edt_StructureNm.Text," ",20);
+	gfn_ExportExcel("중압직공급 조회 ", 5, SearchCondition, "grd_Excel"); 
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Search()
+//  설명: 특별관리시설   등록 화면 리스트를 조회 하는 함수
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Search()
+{	
+	//-------------------------------------------------------------------------------
+	//  Kind   :  현재 화면 종류
+	//  ServiceId   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+	
+	ds_SpeciDetail.ClearData();
+    var ServiceId    = "select10";
+    var ServicePart  = "D10";
+    var strURL 		 = "handle.do?ServiceName=D1_FacilityInfoMgr-service"
+					 + "&BRANCH_CD=" + cob_Branc.Value
+					 + "&ZIP_NO1="   + cob_ZipNo1.Value
+					 + "&FACI_NM="   + edt_StructureNm.Text
+					 + "&TEAM_CD="   + cob_Team.Value
+					 + "&FACI_NUM="  + edt_FaciNumSearch.Text
+					 + "&BLOCK_CD="  + cob_PBlockCd.Value
+					 ;					 
+    var InputDsList  = "";
+    var OutputDsList = "ds_Speci=ds_Speci ds_SpeciExcel=ds_SpeciExcel";
+    var Argument     = "select10";
+    gfn_SyncCall(ServiceId, ServicePart, strURL, InputDsList, OutputDsList, Argument);
+   
+    if(ErrorCode < 0)
+	{    
+		return;
+	}
+	if(ds_Speci.GetRowCount()==0)
+        grd_Dire.NoDataText="조회결과가 없습니다.";
+	
+	st_Reg.Text = ds_Speci.GetRowCount();
+	strFaciNum = "";
+	edtFileList2.Text="";
+	grd_speci_OnCellClick("",0,"","","","");
+	
+	
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: grd_speci_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+//   설명: 특별관리시설 상세내용를 조회 하는 fn_D1_DetailSearch()을 부르는 이벤트용 함수
+//         그리드 클릭시 이벤트 처리
+// arguments   
+//          obj: Object 이 Event가 발생된 Component.
+//          nRow: Integer Event가 발생한 Cell의 Row Index.
+//          nCell: Integer Event가 발생한 Cell의 Column Index.
+//          nX: Integer Grid 내에서 Click 된 마우스 포인트의 X 좌표.
+//          nY Integer Grid 내에서 Click 된 마우스 포인트의 Y 좌표.
+//          nPivotIndex CrossTabGrid에서 Event가 발생한 Cell의 Pivot Index.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function grd_speci_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+    if (nCell == 9) {
+        var args = "BUNGI='01'";
+            args += " GU_NM=" + quote(ds_Speci.GetColumn(nRow, "ZIP_NO1"))
+                 + " DONG_NM_H=" + quote(ds_Speci.GetColumn(nRow, "TOWN"))
+                 + " FNU=" + quote(ds_Speci.GetColumn(nRow, "ADDR_M"))  
+                 + " SNU=" + quote(ds_Speci.GetColumn(nRow, "ADDR_S"))
+                 ;
+	
+		Dialog("D10::D1402060011U.xml", args, 1208, 840, "Resize=true Scroll=true", -1, -1);
+    } else {
+		strFaciNum = ds_Speci.getcolumn(nRow, "FACI_NUM");
+		fn_D1_SetComboInit();
+		fn_D1_DetailSearch(strFaciNum);
+		cob_BranchCd_OnChanged1();
+		//fv_saveMode = "updateSpeci";
+	}	
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_DetailSearch(strFaciNum)
+//   설명: 특별관리시설  상세내용를 조회 하는 함수
+// arguments   
+//          strFaciNum  : 시설물 번호
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_DetailSearch(args)
+{	
+	ds_SpeciDetail.ClearData();
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+    var ServiceId     = "select10Detail";
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName=D1_FacilityInfoMgr-service&FACI_NUM="+args;
+    var InputDsList     = "";
+    var OutputDsList = "ds_SpeciDetail=ds_SpeciDetail";
+    var Argument      = "select10Detail";
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    if(ErrorCode < 0)
+	{    
+		return;
+	}
+		
+	fn_D1_FileListNm(args);
+	fn_D1_FileListNmImg(args);
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FileListNm(strFaciNum)
+//   설명: 특별관리시설  파일명을 조회 하는 함수
+// arguments   
+//          strFaciNum  : 시설물 번호
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FileListNm(strFaciNum)
+{	
+    var ServiceId     = "search";
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName=D1_FacilityInfoMgr-service&FACI_NUM="+ strFaciNum;
+    var InputDsList     = "";
+    var OutputDsList = "ds_FileList=ds_FileList";
+    var Argument      = "findFile";
+    
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	
+	edtFileList.text = "";
+	for(var i=0; i<ds_FileList.RowCount(); i++)
+	{
+		edtFileList.text += ds_FileList.GetColumn(i,"ORG_FILE_NAME");
+		if(ds_FileList.RowCount()-1 != i) edtFileList.text += "/";
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FileListNmImg(strFaciNum)
+//   설명: 특별관리시설  파일명을 조회 하는 함수
+// arguments   
+//          strFaciNum  : 시설물 번호
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FileListNmImg(strFaciNum)
+{	
+    var ServiceId     = "search";
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName=D1_FacilityInfoMgr-service&FACI_NUM="+ strFaciNum;
+    var InputDsList     = "";
+    var OutputDsList = "ds_FileList2=ds_FileList2";
+    var Argument      = "findFile2";
+    
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	edtFileList2.text = "";
+	for(var i=0; i<ds_FileList2.RowCount(); i++)
+	{
+		edtFileList2.text += ds_FileList2.GetColumn(i,"ORG_FILE_NAME");
+		if(ds_FileList2.RowCount()-1 != i) edtFileList2.text += "/";
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SetComboInit()
+//   설명: 특별관리시설 상세내용 콤보 박스를 초기화 한다.
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SetComboInit()
+{
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	gfn_D1_NULL_SetComboBox_Comcode("C30067",gfn_setDsObject_Comcode("cob_Model1")); 
+	gfn_D1_NULL_SetComboBox_Comcode("C30067",gfn_setDsObject_Comcode("cob_Model2"));
+	gfn_D1_NULL_SetComboBox_Comcode("D10006",gfn_setDsObject_Comcode("cob_PressGate1"));
+	gfn_D1_NULL_SetComboBox_Comcode("D10006",gfn_setDsObject_Comcode("cob_PressGate2"));
+	gfn_D1_NULL_SetComboBox_Comcode("D10007",gfn_setDsObject_Comcode("cob_PressExit1"));
+	gfn_D1_NULL_SetComboBox_Comcode("D10007",gfn_setDsObject_Comcode("cob_PressExit2"));
+	gfn_D1_NULL_SetComboBox_Comcode("B30007",gfn_setDsObject_Comcode("cob_DiamGate1"));
+	gfn_D1_NULL_SetComboBox_Comcode("B30007",gfn_setDsObject_Comcode("cob_DiamGate2"));
+	gfn_D1_NULL_SetComboBox_Comcode("B30007",gfn_setDsObject_Comcode("cob_DiamExit1"));
+	gfn_D1_NULL_SetComboBox_Comcode("B30007",gfn_setDsObject_Comcode("cob_DiamExit2"));
+	gfn_D1_NULL_SetComboBox_Comcode("C30166",gfn_setDsObject_Comcode("cob_Type1"));
+	gfn_D1_NULL_SetComboBox_Comcode("C30166",gfn_setDsObject_Comcode("cob_Type2"));
+	gfn_D1_NULL_SetComboBox_Comcode("C30110",gfn_setDsObject_Comcode("cob_LineNo1"));
+	gfn_D1_NULL_SetComboBox_Comcode("C30110",gfn_setDsObject_Comcode("cob_LineNo2"));
+	gfn_D1_NULL_SetComboBox_Comcode("B10005",gfn_setDsObject_Comcode("cob_BldType"));
+	gfn_D1_NULL_SetComboBox_Comcode("B10001",gfn_setDsObject_Comcode("cob_ResouDesc"));
+	
+	//*** 2009-11-04 (정우현과장님요청  ) ***// 
+	// cob_Model1.Index = 0;
+	// cob_Model2.Index = 0;
+	// cob_PressGate1.Index = 0;
+	// cob_PressGate2.Index = 0;
+	// cob_PressExit1.Index = 0;
+	// cob_PressExit2.Index = 0;
+	// cob_DiamGate1.Index = 0;
+	// cob_DiamGate2.Index = 0;
+	// cob_DiamExit1.Index = 0;
+	// cob_DiamExit2.Index = 0;
+	// cob_Type1.Index = 0;
+	// cob_Type2.Index = 0;
+	// cob_LineNo1.Index = 0;
+	// cob_LineNo2.Index = 0;
+	// cob_BldType.Index = 0;
+	// cob_ResouDesc.Index = 0;
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonAddRow()
+//   설명: 특별관리시설 내용를 신규 추가 하는 모드로 변경 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonAddRow()
+{	
+	fv_faciNum = "";
+
+    if (cob_Branc.Value == "" || cob_Branc.Value == null) {
+        alert("지사를 선택해주세요.");
+        cob_BranchCd.Value = "";
+        cob_Gu.Value = "";
+        return;
+    }
+    
+    edtFileList.Text = "";
+    edtFileList2.Text = "";
+	ds_SpeciDetail.ClearData();
+    ds_SpeciDetail.AddRow();
+    cob_BranchCd.Value = cob_Branc.Value;    
+    cob_BranchCd_OnChanged1();
+    cob_Gu.Value = cob_ZipNo1.Value;    
+    fn_D1_SetComboInit();
+    //strFaciNum = GetFaciNum();
+    cob_FaciStsCd.Index = 1;
+    //fv_saveMode     = "insertSpeci";
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSave()
+//   설명: 특별관리시설 상세 내용를 저장 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSave()
+{   
+	if(edt_FaciNm == "")
+	{
+		alert("건물명을 입력해주세요.");
+		return;
+	}
+	
+	/* 20090810
+	if(edt_WorkFirmCd == "")
+	{
+		alert("시공사를 선택해주세요.");
+		return;
+	}
+	*/
+	
+	// 2013.04.25. 이건민- 주철민 계장 요청으로 공사번호 필수항목 체크추가
+	if(edt_WorkNum == "")
+	{
+		alert("공사번호를 선택해주세요.");
+		return;
+	}
+	
+		
+	if(edt_lot_num_union.Text == "")
+	{
+		alert("주소를 선택해주세요.");
+		return;
+	}
+	
+	// 2013.04.25. 이건민 - 주철민 계장 요청사항 (조정기 구분이 '구역'일경우에는 구역 조정기 명칭 필수)
+	var strRegtrNm = replace(edt_RegtrNm.text, ' ', '');
+	
+	if(cob_RegtrFlag.Value == "20")
+	{
+		if(strRegtrNm == null || strRegtrNm == "")
+		{
+			alert("조정기 구분이 '구역'일 경우 '구역 조정기 명칭'은 필수입니다.");
+			return;
+		}
+	}
+			
+	// 2013.04.25. 이건민 - 주철민 계장 요청사항 (구역 조정기 명칭에 '압력' 명칭 제약)
+	for(var i=0; i < length(strRegtrNm); i++)
+	{
+		if(charAt(strRegtrNm, i) == "압")
+		{
+			i++;
+			if(charAt(strRegtrNm, i) == "력")
+			{
+				alert("구역 조정기 명칭에 '압력'을 빼주세요.");
+				
+				return;
+			}
+		}
+	}
+	
+	var kind = "";
+	
+	//중앙직공급 채번해오기
+	if(ds_SpeciDetail.GetRowType(0) == "insert")
+	{
+	    strFaciNum = GetFaciNum();
+		ds_SpeciDetail.SetColumn(0,"FACI_NUM",strFaciNum);
+		kind = strFaciNum;
+	} else {
+	    kind = ds_SpeciDetail.GetColumn(0,"FACI_NUM");
+	} 
+	
+	ds_SpeciDetail.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_SpeciDetail.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_SpeciDetail.SetColumn(0, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_SpeciDetail.SetColumn(0, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_SpeciDetail.SetColumn(0, "REGTR_NM", strRegtrNm);
+    
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+
+	var Transition      = "fn_D10_Save";
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName=D1_FacilityInfoMgr-service";
+    var InputDsList     = "ds_SpeciDetail=ds_SpeciDetail:u";
+    var OutputDsList    = "";
+    var Argument        = "saveDire";
+   
+    gfn_SyncCall(Transition, ServicePart, Url, InputDsList, OutputDsList, Argument);
+	
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+	if(fv_saveMode=="insertGovRoom")
+	{
+		// 팀-전체
+		cob_Team.Value = "";     // 전체
+		cob_PBlockCd.Value = ""; // 전체
+	}
+		
+	fn_D1_Search();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonDeleteRow()
+//   설명: 특별관리시설를 삭제 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonDeleteRow()
+{
+	
+    if(!Confirm(gfn_GetMessage("M000016","%AAA%","삭제")))	//"삭제하시겠습니까?" 
+     {
+        return false;
+     };
+        
+    if(ds_Speci.GetRowCount()==0){ 
+        alert(gfn_GetMessage("M000008","%AAA%","삭제대상"));	//"삭제하실 내역이 없습니다."
+		return;
+    }
+    
+    var str_FaciNum = ds_Speci.GetColumn(ds_Speci.row, "FACI_NUM");
+	fn_D1_FileDelete(str_FaciNum);      
+        
+    ds_Speci.DeleteRow(ds_Speci.row);	
+    //-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+	
+    var Transition    = "deleteSpeci";
+    var ServicePart   = "D10";
+    var Url           = "handle.do?ServiceName="+"D1_FacilityInfoMgr-service&FACI_NUM=";
+    var InputDsList   = "ds_Speci=ds_Speci:u";
+    var OutputDsList  = "ds_Speci=ds_Speci";
+    var Argument      = "deleteSpeci1";
+    
+    gfn_SyncCall(Transition, ServicePart, Url, InputDsList, OutputDsList, Argument);
+        
+	if(ErrorCode<0){
+	    if(ErrorMsg!=""){
+	       alert(ErrorMsg);
+	    } else {   
+	       
+	    }
+		ds_Speci.Reset();
+		return false;
+	}
+    fn_CommonSearch();
+}
+
+function fn_D1_FileDelete(str_FACI_NUM){
+  	    
+	ds_FaciFile.ClearData();
+	ds_FaciFile.AddRow();
+	
+	ds_FaciFile.SetColumn(0, "FACI_NUM", str_FACI_NUM);
+	
+	ds_FaciFile.UpdateControl = false;
+	ds_FaciFile.SetRowType(0, "delete");
+	
+	// 첨부파일 삭제
+	var Transition    = "deleteGov";
+	var ServicePart   = "D10";
+	var Url           = "handle.do?ServiceName=D1_FacilityFileInfoMgr-service";    
+	var InputDsList   = "ds_FaciFile=ds_FaciFile:u";
+	var OutputDsList  = "";
+	var Argument      = "deleteFaciFile";
+	
+	gfn_SyncCall(Transition, ServicePart, Url, InputDsList, OutputDsList, Argument);
+} 
+
+//------------------------------------------------------------------------------- 
+// 함수명: GetFaciNum()
+//   설명: 채번 함수
+// arguments   
+//          FACI_NUM  : 시설물 번호
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function GetFaciNum()
+{	
+	ds_GetNum.ClearData();
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+	
+    var Transition     = "selectNum";
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName="+"D1_FacilityInfoMgr-service";
+    var InputDsList     = "";
+    var OutputDsList = "ds_GetNum=ds_GetNum";
+    var Argument      = "selectGetFaciNum";
+    gfn_SyncCall(Transition, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    return ds_GetNum.GetColumn(0,"FACI_NUM");
+}
+
+function WORK_NUM_SEARCH(obj)
+{
+	//if(strFaciNum != "")
+	//{
+		var args = "fa_BranchCd="     + ds_SpeciDetail.GetColumn(ds_SpeciDetail.row, "BRANCH_CD"  )
+				 + " fa_OfficeFlag="  + ds_SpeciDetail.GetColumn(ds_SpeciDetail.row, "ZIP_NO1"    ) 
+				 ;
+		
+		var retValue = gfn_Dialog("B20","B2202010012U",args,728,424,true,-1,-1);
+	
+		if(retValue != "" && retValue != null)
+		{
+			if (cob_Gu.Value != retValue[3]){	
+				alert("해당 시/구를 선택해주세요.");
+				return;
+			}
+		
+			ds_SpeciDetail.SetColumn(0,"WORK_NUM"    ,retValue[0] );
+			ds_SpeciDetail.SetColumn(0,"WORK_FIRM_NM",retValue[5] );
+			ds_SpeciDetail.SetColumn(0,"WORK_FIRM_CD",retValue[12]);
+									
+			var Transition    = "selectWorkInfo";
+			var ServicePart   = "D10";
+			var Url           = "handle.do?ServiceName=" + "D1_FacilityInfoMgr-service"+"&WORK_NUM=" + retValue[0] ;
+			var InputDsList   = "";
+			var OutputDsList  = "ds_GetWorkInfo=ds_GetWorkInfo";
+			var Argument      = "selectWorkInfo";
+						
+			gfn_SyncCall(Transition, ServicePart, Url, InputDsList, OutputDsList, Argument);			
+						
+			if(ds_GetWorkInfo.GetRowCount() > 0){
+				// 외부공사일 경우 주소 정보 셋팅시켜 줄 수 있음. 투자공사는 공사 시,종점으로 관리			
+				edt_lot_num_union  = ds_GetWorkInfo.GetColumn(0, "CURR_ADDR_UNION");  	   // 지번주소조합
+				edt_zip_seq        = ds_GetWorkInfo.GetColumn(0, "ZIP_SEQ"        );       // 우편일련번호     
+				edt_hill           = ds_GetWorkInfo.GetColumn(0, "HILL"           );       // 산번지
+				edt_addr_m         = ds_GetWorkInfo.GetColumn(0, "ADDR1_M"        );       // 본번
+				edt_addr_s         = ds_GetWorkInfo.GetColumn(0, "ADDR1_S"        );       // 부번  
+				edt_second_addr    = ds_GetWorkInfo.GetColumn(0, "SECOND_ADDR"    );   	   // 보조주소
+				edt_bld_dong       = ds_GetWorkInfo.GetColumn(0, "BLD_DONG"       );       // 동
+				edt_hosu           = ds_GetWorkInfo.GetColumn(0, "HOSU"           );       // 호수
+				edt_zip_no1        = ds_GetWorkInfo.GetColumn(0, "ZIP_NO1"        );       // 우편번호1
+				cob_Gu.Value       = ds_GetWorkInfo.GetColumn(0, "ZIP_NO1"        );       // 우편번호1
+				edt_zip_no2        = ds_GetWorkInfo.GetColumn(0, "ZIP_NO2"        );       // 우편번호2
+			}
+		}
+	//}
+}
+
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_Branc.value, fn_setDsObject_Comcode("1", "cob_ZipNo1"));
+    
+    if (cob_Branc.Value == "" || cob_Branc.Value == null) {
+    //    cob_ZipNo1.Enable = false;
+		//권기철20091008
+		cob_ZipNo1.Value = "";
+	//	cob_ZipNo1.Index = 0;
+    } else {
+		cob_ZipNo1.Value = "";
+    //    cob_ZipNo1.Enable = true;
+    //    cob_ZipNo1.Index  = 0;
+    }
+             
+    gfn_D1_SetComboBox_Teamcd("ds_Team",cob_Branc);
+    cob_Team.Value = "";
+    
+    cob_Team_OnChanged();
+}
+
+function D1101010010F_T09_D04_OnUnloadCompleted(obj)
+{
+	if(ds_SpeciDetail.GetUpdate()){
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 내용이 있습니다.종료")))
+		{
+			return false;
+		}
+	}
+}
+
+function Button3_OnClick(obj)
+{
+	//if(strFaciNum != "")
+	//{
+		var retValue = gfn_Dialog("B20","B2203050011U","",450,400,true,-1,-1);
+		
+		if(retValue != "" && retValue != null)
+		{
+			ds_SpeciDetail.SetColumn(0,"WORK_FIRM_CD",Trim(retValue[0]));
+			ds_SpeciDetail.SetColumn(0,"WORK_FIRM_NM",retValue[1]);
+		}
+	//}
+}
+
+function Button0_OnClick(obj)
+{
+    if(strFaciNum != "")
+	{
+		var arg = "fa_Url=handle.do?ServiceName=D1_FacilityInfoMgr-service&FACI_NUM="+ strFaciNum+" fa_Part=D10";
+		var arrList = gfn_Dialog("D10","D1101010018U",arg,450,280,true,-1,-1);
+		if(!arrList == null)
+		{		
+			edtFileList.text = "";
+			for(var i=0; i<arrList.length; i++)
+			{
+				edtFileList.text += arrList[i];
+				if(arrList.length-1 != i) edtFileList.text += "/";
+			}
+		}
+	}	
+}
+
+function Bt_Img_OnClick(obj)
+{
+    if(strFaciNum != "")
+	{
+	    var RootParam ="";
+	    if(cob_BranchCd.Value=="100584")
+	    {
+			RootParam = "WMD";
+	    }
+	    else if(cob_BranchCd.Value=="100591")
+	    {
+			RootParam = "SMD";
+	    }
+	    else if(cob_BranchCd.Value=="100664")
+	    {
+			RootParam ="NMD";
+	    }
+	    else if(cob_BranchCd.Value=="101500")
+	    {
+			RootParam ="GMD";
+	    }
+		var arg = "fa_Url=handle.do?ServiceName=D1_FacilityInfoMgr-service&FACI_NUM="+ strFaciNum+" fa_Part="+RootParam;
+		var arrList = gfn_Dialog("D10","D1101010020U",arg,450,280,true,-1,-1);
+		if(!arrList == null)
+		{		
+			edtFileList2.text = "";
+			for(var i=0; i<arrList.length; i++)
+			{
+				edtFileList2.text += arrList[i];
+				if(arrList.length-1 != i) edtFileList2.text += "/";
+			}
+		}
+	}	
+}
+
+
+function cob_BranchCd_OnChanged1(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	// 지사별 구 콤보 셋팅 시
+    fn_Part_SetComboBox_Comcode("1", cob_BranchCd.value, fn_setDsObject_Comcode("1", "cob_Gu"));
+}
+
+function cob_Team_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	ds_Search.ClearData();
+	ds_Search.AddRow();
+	
+	ds_Search.SetColumn(0, "BRANCH_CD" , cob_Branc.Value);
+	ds_Search.SetColumn(0, "TEAM_CD", cob_Team.Value);
+	
+	var strSvcID = "find_block";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_FacilityInfoMgr-service";
+	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Block=ds_Block";
+	var strArgument  = "find_block=1";
+				
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );					 	    
+    
+    if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	
+	cob_PBlockCd.Index = 0;
+	
+	if(ds_Block.GetRowCount() == 0){
+		cob_PBlockCd.Enable = false;
+	}else{
+		cob_PBlockCd.Enable = true;
+		// 전체추가
+		var str_nRow = ds_Block.AppendRow();
+		ds_Block.SetColumn(str_nRow, "BLOCK_CD", ""    );
+		ds_Block.SetColumn(str_nRow, "BLOCK_NM", "전체");
+	}
+}
+]]></Script>
+</Window>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="762" Id="D1101010010F_T09_D08" Left="8" OnLoadCompleted="D1101010010F_T09_D08_OnLoadCompleted" PidAttrib="7" Title="시설물정보등록_특별관리시설&#32;등록_현황집계표" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Speci">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TARGET_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TARGET_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="GUBUN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_SUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="#6cbae1" Bottom="48" Height="3" Id="Shape0" Left="8" LineWidth="0" Right="1254" TabOrder="2" Top="45" Type="Rectangle" Width="1246"></Shape>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="336" LeftMargin="12" Style="blt_search_Indis" TabOrder="3" Text="시설구분" Top="62" Visible="FALSE" Width="61"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_FaciGubun" Left="399" Style="combo_indis" TabOrder="4" Top="62" Visible="FALSE" Width="108"></Combo>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="523" LeftMargin="12" Style="blt_search" TabOrder="5" Text="성명" Top="62" Visible="FALSE" Width="41"></Image>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_UserNm" ImeMode="none" Left="562" Style="edit" TabOrder="6" Top="62" Visible="FALSE" Width="76"></Edit>
+		<Image Align="Left" Height="10" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="7" Text="시설물정보등록_특별관리시설&#32;등록_현황집계표" Top="5" Width="304"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Speci" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="783" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="735" Id="Grid0" InputPanel="FALSE" Left="8" LineColor="#cecece" LineType="ExVERT" MinWidth="100" Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="48" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="내용년수"/>
+						<cell col="1" display="text" rowspan="2" text="구분"/>
+						<cell col="2" display="text" rowspan="2" text="지사"/>
+						<cell col="3" display="text" rowspan="2" text="팀"/>
+						<cell col="4" display="text" rowspan="2" text="시/구"/>
+						<cell col="5" colspan="2" display="text" text="대상"/>
+						<cell col="7" colspan="2" display="text" text="조치"/>
+						<cell col="9" display="text" rowspan="2" text="비고"/>
+						<cell col="0" display="text" row="1"/>
+						<cell col="5" display="text" row="1" text="개소"/>
+						<cell col="6" display="text" row="1" text="연장(m)"/>
+						<cell align="center" col="7" display="text" row="1" text="개소"/>
+						<cell align="center" col="8" display="text" row="1" text="연장(m)"/>
+					</head>
+					<body>
+						<cell bkcolor2="user20" col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" bkcolor="blanchedalmond" col="1" colid="GUBUN" display="text" expandsize="18" suppress="1" wordwrap="word"/>
+						<cell align="center" bkcolor="blanchedalmond" col="2" colid="BRANCH_CD" display="text" expandsize="18" suppress="2" wordwrap="word"/>
+						<cell align="center" bkcolor="blanchedalmond" col="3" colid="TEAM_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" bkcolor="blanchedalmond" col="4" colid="ZIP_NO1" display="text" expandsize="18" SuppressAlign="Middle" wordwrap="word"/>
+						<cell align="right" bkcolor2="user20" col="5" colid="TARGET_CNT" display="number"/>
+						<cell align="right" bkcolor2="user20" col="6" colid="TARGET_LENG" display="number"/>
+						<cell align="right" bkcolor2="user20" col="7" colid="ACT_CNT" display="number"/>
+						<cell align="right" bkcolor2="user20" col="8" colid="ACT_SUM" display="number"/>
+						<cell align="left" bkcolor="user6" col="9" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Color="blue" Height="18" Id="Image8" ImageID="blt" Left="9" LeftMargin="12" Style="blt_search" TabOrder="10" TabStop="FALSE" Text="지사" Top="22" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Branc" Left="47" OnChanged="cob_Branc_OnChanged" Style="combo_indis" TabOrder="8" TabStop="FALSE" Top="22" Width="125"></Combo>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="175" LeftMargin="12" Style="blt_search_Indis" TabOrder="11" TabStop="FALSE" Text="시/구" Top="22" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo1" INDEX="0" Left="218" Style="combo_indis" TabOrder="9" TabStop="FALSE" Top="22" Width="125"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101010010F_T09_D08.xml
+* Form 설명  : 특별관리시설_현황집계표
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2009-01-30
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+ 
+function D1101010010F_T09_D08_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branc"));
+	gfn_D1_SetComboBox_Comcode("D10001",gfn_setDsObject_Comcode("cob_FaciGubun"),"AP#BH#DA#GR#GV#RC#RO#TB#UC#VB#VT#VV#WD");	
+	cob_FaciGubun.Index = 0;
+	edt_UserNm.text = gfn_GetGlobalValue("G_Name");
+	
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+	    cob_Branc.value = '';
+	} else {
+	    cob_Branc.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+	    cob_Branc.Enable = false;
+	}
+	    
+	cob_Branc.Enable = false;    
+	cob_Branc_OnChanged();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Search()
+//  설명: 특별관리시설_현황집계표를 조회 하는 함수
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Search()
+{	
+//-------------------------------------------------------------------------------
+//  Kind   :  현재 화면 종류
+//  ServiceId   : Service id
+//  ServicePart   : Service part
+//  Url   : Server url
+//  InputDsList   : Input Dataset List
+//  OutputDsList   : Output Dataset List
+//  Argument   :  Argument
+//-------------------------------------------------------------------------------
+	
+    var ServiceId       = "selectTotal";
+    var ServicePart     = "D10";
+    var strURL 			= "handle.do?ServiceName=D1_FacilityInfoMgr-service"
+						+ "&BRANCH_CD=" + cob_Branc.Value 
+						+ "&ZIP_NO1="   + cob_ZipNo1.Value
+                        + "&BRANCH_NM=" + decode(cob_Branc.Text, '전체', '', cob_Branc.Text)
+                        + "&ZIP_NM="    + decode(cob_ZipNo1.Text, '전체', '', cob_ZipNo1.Text)
+                        ;
+    var InputDsList     = "";
+    var OutputDsList    = "ds_Speci=ds_Speci";
+    var Argument        = "selectTotal";
+    gfn_SyncCall(ServiceId, ServicePart, strURL, InputDsList, OutputDsList, Argument);   
+    
+    if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	
+	
+}
+
+function fn_D1_ExcelExport()
+{	
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "시설구분 :" + RPad(cob_FaciGubun.Text," ",20);
+	gfn_ExportExcel("현황집계표 ", 5, SearchCondition, "Grid0"); 
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonAddRow()
+//   설명: 공동주택등록 내용를 신규 추가 하는 모드로 변경 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonAddRow()
+{	
+	return;
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonDeleteRow()
+//   설명: 공동주택등록를 삭제 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonDeleteRow()
+{
+	return;
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSave()
+//   설명: 공동주택등록 상세 내용를 저장 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSave()
+{
+	return;
+}
+
+function cob_Branc_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+		// 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_Branc.value, fn_setDsObject_Comcode("1", "cob_ZipNo1"));
+    
+    if (cob_Branc.Value == "" || cob_Branc.Value == null) {
+    //    cob_ZipNo1.Enable = false;
+    //권기철 변경 본사직원로그인시 전체가 아닌 서부가 기본제공
+		cob_ZipNo1.Value = "";
+		//cob_ZipNo1.Index =  0;
+    } else {
+		cob_ZipNo1.Value = "";
+    //    cob_ZipNo1.Enable = true;
+    //    cob_ZipNo1.Index  = 0;
+    }
+}
+]]></Script>
+</Window>

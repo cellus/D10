@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="816" Id="D1402060011U" Left="8" OnLoadCompleted="D1402060011U_OnLoadCompleted" PidAttrib="7" Title="WEB&#32;GIS" Top="8" Ver="1.0" Width="1232" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_insert">
+				<Contents>
+					<colinfo id="GIS_UPD_REQ_NUM" size="10" type="CHAR"/>
+					<colinfo id="GIS_UPD_REQ_PATH_CD" size="2" type="CHAR"/>
+					<colinfo id="UPD_DTM" size="7" type="DATE"/>
+					<colinfo id="UPD_EMPID" size="9" type="CHAR"/>
+					<colinfo id="UPD_IP" size="32" type="STRING"/>
+					<colinfo id="CRT_DTM" size="7" type="DATE"/>
+					<colinfo id="CRT_EMPID" size="9" type="CHAR"/>
+					<colinfo id="CRT_IP" size="32" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="6" type="CHAR"/>
+					<colinfo id="DANGER_NUM" size="10" type="CHAR"/>
+					<colinfo id="DANGER_JOB_FLAG" size="1" type="CHAR"/>
+					<colinfo id="EOCS_NUM" size="13" type="CHAR"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="1" type="CHAR"/>
+					<colinfo id="MAINTER_NUM" size="11" type="CHAR"/>
+					<colinfo id="WORK_NM" size="160" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="3" type="CHAR"/>
+					<colinfo id="ZIP_NO2" size="3" type="CHAR"/>
+					<colinfo id="ZIP_NO3" size="3" type="CHAR"/>
+					<colinfo id="BASIC_ADDR" size="300" type="STRING"/>
+					<colinfo id="DETA_ADDR" size="300" type="STRING"/>
+					<colinfo id="NEW_ADDR_BLD_SEQ" size="10" type="CHAR"/>
+					<colinfo id="NEW_HOSU" size="4" type="CHAR"/>
+					<colinfo id="NEW_UNGRNOUD_YN" size="1" type="CHAR"/>
+					<colinfo id="NEW_ADDR_UNION" size="300" type="STRING"/>
+					<colinfo id="JOIN_YMD" size="8" type="CHAR"/>
+					<colinfo id="CONF_YMD" size="8" type="CHAR"/>
+					<colinfo id="RMK" size="160" type="STRING"/>
+					<colinfo id="BEFO_PIPE_DIAM_CD" size="3" type="CHAR"/>
+					<colinfo id="CONF_DIAM_CD" size="3" type="CHAR"/>
+					<colinfo id="BEFO_MATER_FLAG" size="1" type="CHAR"/>
+					<colinfo id="CONF_MATER_FLAG" size="1" type="CHAR"/>
+					<colinfo id="IMAGE_TYPE" size="1" type="CHAR"/>
+					<colinfo id="CEN_X_COORDI" size="14" type="CHAR"/>
+					<colinfo id="CEN_Y_COORDI" size="14" type="CHAR"/>
+					<colinfo id="UP_LEFT_Y_COODI" size="14" type="CHAR"/>
+					<colinfo id="LOW_RIGHT_X_COODI" size="14" type="CHAR"/>
+					<colinfo id="LOW_RIGHT_Y_COODI" size="14" type="CHAR"/>
+					<colinfo id="EMPID_1" size="9" type="CHAR"/>
+					<colinfo id="EMPID_2" size="9" type="CHAR"/>
+					<colinfo id="EMPID_3" size="9" type="CHAR"/>
+					<colinfo id="DECIDE_STS_FLAG" size="1" type="CHAR"/>
+					<colinfo id="DECIDE_YMD" size="8" type="CHAR"/>
+					<colinfo id="DECIDE_EMPID" size="2" type="CHAR"/>
+					<colinfo id="DECIDE_RTURN_WHY" size="160" type="STRING"/>
+					<colinfo id="TABLET_TELE_FLAG" size="2" type="CHAR"/>
+					<colinfo id="DRAFTER_EMPID" size="9" type="CHAR"/>
+					<colinfo id="DECIDE_ROUTE" size="300" type="STRING"/>
+					<colinfo id="DECIDE_OPINI" size="1200" type="STRING"/>
+					<colinfo id="DECIDE_STS" size="1" type="CHAR"/>
+					<colinfo id="DECIDE_NUM" size="255" type="DECIMAL"/>
+					<colinfo id="BASE_YEAR" size="4" type="CHAR"/>
+					<colinfo id="MPIPE_ID" size="10" type="DECIMAL"/>
+					<colinfo id="EXPLOR_YMD" size="8" type="CHAR"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" size="3" type="DECIMAL"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="3" type="DECIMAL"/>
+					<colinfo id="COATING_STS" size="1" type="CHAR"/>
+					<colinfo id="UP_LEFT_X_COODI" size="14" type="CHAR"/>
+					<colinfo id="BLUEPRINT_DRAFT_DESC" size="4000" type="BLOB"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchGIS">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_WegGIS">
+				<Contents>
+					<colinfo id="BUNGI" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEMP01" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEMP02" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<WebBrowser Border="Default" Height="815" Id="web_Gis" TabOrder="1" Width="1230"></WebBrowser>
+		<TextArea Height="24" Id="TextArea0" Left="128" TabOrder="2" Top="32" Visible="FALSE" Width="1096"></TextArea>
+		<TextArea Height="24" Id="TextArea1" Left="128" TabOrder="3" Top="5" Visible="FALSE" Width="1096"></TextArea>
+	</Form>
+	<Script><![CDATA[/*******************************************************************************
+* FormID     : D1402060011U.xml
+* Form 설명  : WEB_GIS를 호출한다.
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 문달호
+* 작성일     : 2009-03-23
+* 변경내용   : 
+*******************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+
+var sFilter = "";
+var uId     = "";
+var sSheet  = "";
+
+function D1402060011U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+
+function fn_Init()
+{
+    // sSheet="주소";
+    // var GU_NM="마포구";
+    // var DONG_NM_H="신공덕동";
+    // var FNU="100";
+    // var SNU=2;
+    // sFilter=" GU_NM='"+GU_NM+"' AND DONG_NM_H='"+DONG_NM_H+"' AND FNU='"+FNU+"'  AND SNU="+SNU+" ";
+    // sFilter="GU_NM='마포구' AND DONG_NM_H='신공덕동' AND FNU='100' AND SNU=2";
+    // uId="199443297";
+    // web_Gis.PageUrl="http://newgis.seoulgas.co.kr/gisviewer/gisview.aspx?width=1200&height=800&uid="+uId+"&&locsheet="+sSheet+"&locfilter="+sFilter;
+	// web_Gis.run();
+	fn_Setting();
+}
+
+function fn_Setting()
+{
+
+	// 공사번호가 있다면 
+	// D3AT_MPIPE, D3AT_SPIPE, D3AT_VALUE, D3AT_TESTBOX, D3AT_RECTIFIER, D3AT_DRAINAGE, D3AT_PROTE_PLATE
+	// 위 테이블에서 찾아서 웹GIS를 보여 준다.
+	if ( IsExistVar("arg_WORK_NUM", true) )
+	{
+	
+		ds_SearchGIS.ClearData();
+		ds_WegGIS.ClearData();
+		
+		ds_SearchGIS.AddRow();
+		ds_SearchGIS.Setcolumn(0,"WORK_NUM", arg_WORK_NUM);
+		
+		gfn_SyncCall("find",
+					 "D10",
+					 "handle.do?ServiceName=D1402060011U-service",
+					 "ds_SearchGIS=ds_SearchGIS",
+					 "ds_WegGIS=ds_WegGIS",
+					 "find_1");
+
+		if(ErrorCode<0)
+		{
+			alert(gfn_GetMessage("M000014","%AAA%","조회"));	//"조회 중 오류가 발생했습니다."
+			close();
+		}
+
+		if ( ds_WegGIS.rowcount < 1 )
+		{
+			alert("해당 공사에 정보가 없습니다. 관리자에게 문의 하세요!");
+			close();
+		}
+	
+		if ( ds_WegGIS.GetColumn(0, "BUNGI") == "03" ) 
+		{
+			sSheet ="공급관";
+			sFilter="ID="+ ds_WegGIS.GetColumn(0, "TEMP01") +" ";
+			fn_run();
+		}
+		else if ( ds_WegGIS.GetColumn(0, "BUNGI") == "07" )
+		{
+			sSheet ="밸브";
+			sFilter="VALVE_NUM='"+ ds_WegGIS.GetColumn(0, "TEMP01") +"' AND FACI_NUM='"+ ds_WegGIS.GetColumn(0, "TEMP02") +"' ";
+			fn_run();
+		}
+		else if ( ds_WegGIS.GetColumn(0, "BUNGI") == "10" )
+		{
+			sSheet ="테스트박스";
+			sFilter="FACI_NUM='"+ ds_WegGIS.GetColumn(0, "TEMP01") +"' ";
+			fn_run();
+		}
+		else if ( ds_WegGIS.GetColumn(0, "BUNGI") == "11" )
+		{
+			sSheet ="정류기";
+			sFilter="FACI_NUM='"+ ds_WegGIS.GetColumn(0, "TEMP01") +"' ";
+			fn_run();
+		}
+		else if ( ds_WegGIS.GetColumn(0, "BUNGI") == "12" )
+		{
+			sSheet ="배류기";
+			sFilter="FACI_NUM='"+ ds_WegGIS.GetColumn(0, "TEMP01") +"' ";
+			fn_run();
+		}
+		else if ( ds_WegGIS.GetColumn(0, "BUNGI") == "20" )
+		{
+			sSheet ="인입관";
+			sFilter="ID="+ ds_WegGIS.GetColumn(0, "TEMP01") +" ";
+			fn_run();
+		}
+		else if ( ds_WegGIS.GetColumn(0, "BUNGI") == "21" )
+		{
+			sSheet ="보호판";
+			sFilter="ID="+ ds_WegGIS.GetColumn(0, "TEMP01") +" ";
+			fn_run();
+		}
+		else
+		{
+			alert("잘못된 데이터 없음");
+			close();
+		}
+	}
+	else if(IsExistVar("BUNGI",true))
+	{
+
+		if(BUNGI=="01")  // 구주소 
+		{
+			// alert("111");
+			// alert(gu_nm);
+			// alert("2222");
+			// alert(DONG_NM_H);
+			// alert("333");
+			// alert(FNU);
+			// alert("444");
+			// alert(SNU);
+			if(gfn_isNull(SNU)){
+	
+				sSheet ="주소";
+				sFilter=" GU_NM='"+GU_NM+"' AND DONG_NM_H='"+DONG_NM_H+"' AND FNU='"+FNU+"' ";
+	
+				fn_run();
+			}else{
+	
+				sSheet ="주소";
+				sFilter=" GU_NM='"+GU_NM+"' AND DONG_NM_H='"+DONG_NM_H+"' AND FNU='"+FNU+"'  AND SNU="+SNU+" ";
+	
+				fn_run();
+			}
+		}
+		else if(BUNGI=="02") //신주소
+		{
+			sSheet ="새주소";
+			sFilter="GU_NM='"+GU_NM+"' AND DONG_NM='"+DONG_NM+"' AND RD_NM='"+RD_NM+"' AND BD_MA_SN="+BD_MA_SN+" AND BD_SB_SN= "+BD_SB_SN+" ";
+			fn_run();
+		}
+		else if(BUNGI=="03")// 공급관
+		{
+			sSheet ="공급관";
+			sFilter="ID="+ID+" ";
+			fn_run();
+		}
+		else if(BUNGI=="04")
+		{
+			sSheet ="정압실";
+			sFilter="FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="05")
+		{
+			sSheet ="정압기";
+			sFilter="GOV_NUM='"+GOV_NUM+"' AND FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="06")
+		{
+			sSheet ="밸브박스";
+			sFilter="FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="07")
+		{
+			sSheet ="밸브";
+			sFilter="VALVE_NUM='"+VALVE_NUM+"' AND FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="08")
+		{
+			sSheet ="전용정압기";
+			sFilter="FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="09")
+		{
+			sSheet ="전용조정기";
+			sFilter="FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="10")
+		{
+			sSheet ="테스트박스";
+			sFilter="FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="11")
+		{
+			sSheet ="정류기";
+			sFilter="FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="12")
+		{
+			sSheet ="배류기";
+			sFilter="FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="13")
+		{
+			sSheet ="도보순찰구간";
+			sFilter="BLOCK_CD='"+BLOCK_CD+"' AND SMALL_BLOCK_CD='"+SMALL_BLOCK_CD+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="14")
+		{
+			sSheet ="굴착공사";
+			sFilter="DIG_WORK_PATH_FLAG='"+DIG_WORK_PATH_FLAG+"' AND EOCS_NUM='"+EOCS_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="15")
+		{
+			sSheet ="재개발건축";
+			sFilter="OBJ_NUM='"+OBJ_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="16")
+		{
+			sSheet ="피복측정점";
+			sFilter="BASE_YEAR='"+BASE_YEAR+"' AND MPIPE_ID="+MPIPE_ID+" AND EXPLOR_YMD='"+EXPLOR_YMD+"' AND EXPLOR_BLOCK_SEQ="+EXPLOR_BLOCK_SEQ+" AND EXPLOR_RSLT_SEQ="+EXPLOR_RSLT_SEQ+" ";
+			fn_run();
+		}
+		else if(BUNGI=="17")
+		{
+			sSheet ="특별관리구역";
+			sFilter="FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else if(BUNGI=="18")
+		{
+			sSheet ="수취기";
+			sFilter="FACI_NUM='"+FACI_NUM+"' ";
+			fn_run();
+		}
+		else
+		{
+			//alert("해당사항이 없습니다.");  //임시문구 
+			fn_run2();
+		}
+		
+		TextArea1.Text = "BUNGI="+BUNGI;
+	}
+	else
+	{
+			sSheet ="도면신청";
+			sFilter="req_num=" + req_num + "";
+			
+			fn_run();
+
+		TextArea1.Text = "도면신청:"+ req_num;
+	}
+
+}
+
+function fn_run()
+{
+
+	uId = gfn_GetGlobalValue("G_USER_NO");
+	//uId="199443297";
+	
+    web_Gis.PageUrl="http://ugis.seoulgas.co.kr/gisviewer/gisview.aspx?width=1200&height=800&uid="+uId+"&&locsheet="+sSheet+"&locfilter="+sFilter;
+    
+    textArea0.Text = web_Gis.PageUrl;
+
+	web_Gis.run();
+}
+
+function fn_run2()
+{
+
+	uId = gfn_GetGlobalValue("G_USER_NO");
+	//uId="199443297";
+	
+	sSheet ="주소";
+	sFilter="GU_NM='강서구' AND DONG_NM_H='염창동' AND FNU='281' AND SNU=";
+    web_Gis.PageUrl="http://ugis.seoulgas.co.kr/gisviewer/gisview.aspx?width=1200&height=800&uid="+uId+"&&locsheet="+sSheet+"&locfilter="+sFilter;
+	web_Gis.run();
+}]]></Script>
+</Window>

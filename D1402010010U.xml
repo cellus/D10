@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="600" Id="D1402010010U" Left="8" OnLoadCompleted="D1402010010U_OnLoadCompleted" PidAttrib="7" Title="D1402010010U_굴착공사현장&#32;교육실시결과&#32;기록부" Top="8" Ver="1.0" Width="700" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search1">
+				<Contents>
+					<colinfo id="DIG_WORK_NM" size="256" type="STRING"/>
+					<colinfo id="START_ADDR" size="256" type="STRING"/>
+					<colinfo id="EDU_TIME_CNT" size="256" type="STRING"/>
+					<colinfo id="EDU_LECTU_EMPID" size="256" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" type="STRING"/>
+					<colinfo id="SCG_TAKER_EMPID" size="256" type="STRING"/>
+					<colinfo id="EOCS_NUM" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" type="STRING"/>
+					<colinfo id="SEQ" size="256" type="STRING"/>
+					<colinfo id="JOIN_YMD" size="256" type="STRING"/>
+					<colinfo id="JOIN_TIME_FROM" size="256" type="STRING"/>
+					<colinfo id="JOIN_TIME_TO" size="256" type="STRING"/>
+					<colinfo id="EDU_LECTU_EMPID_NM" size="256" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" type="STRING"/>
+					<colinfo id="SCG_TEL" size="256" type="STRING"/>
+					<colinfo id="GAS_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TAKER_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_TEL" size="256" type="STRING"/>
+					<colinfo id="SCG_TAKER_EMPID_NM" size="256" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" type="STRING"/>
+					<colinfo id="JOIN_YY" size="256" type="STRING"/>
+					<colinfo id="JOIN_MM" size="256" type="STRING"/>
+					<colinfo id="JOIN_DD" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search2">
+				<Contents>
+					<colinfo id="CONST_MACHIME_CD" size="256" type="STRING"/>
+					<colinfo id="CONST_MACHIME_ENGINEER_NM" size="256" type="STRING"/>
+					<colinfo id="TEL" size="256" type="STRING"/>
+					<colinfo id="EOCS_NUM" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" type="STRING"/>
+					<colinfo id="SEQ" size="256" type="STRING"/>
+					<colinfo id="E_SIGN" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static22" Left="5" Style="table" TabOrder="33" Top="68" VAlign="Middle" Width="690" WordWrap="TRUE"></Static>
+		<Static Align="Center" Height="13" Id="Static71" Left="273" Style="static" TabOrder="39" Text="년&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;월&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;일" Top="392" Width="155"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static8" Left="5" Style="table" TabOrder="12" Top="152" VAlign="Middle" Width="690" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static7" Left="5" Style="table" TabOrder="11" Top="131" VAlign="Middle" Width="690" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static5" Left="5" Style="table" TabOrder="8" Top="110" VAlign="Middle" Width="690" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="굴착공사현장&#32;교육실시결과&#32;기록부" Transparent="TRUE" Width="700"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Search2" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="346" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="127" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="695" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="219" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="690">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="209"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="건설기계명"/>
+						<cell col="1" display="text" text="성명"/>
+						<cell col="2" display="text" text="연락처"/>
+						<cell col="3" display="text" text="전자서명"/>
+					</head>
+					<body>
+						<cell col="0" colid="CONST_MACHIME_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="CONST_MACHIME_ENGINEER_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="TEL" display="text"/>
+						<cell col="3" colid="E_SIGN" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="219" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="695" TabOrder="3" Top="216" Type="Rectangle" Width="690"></Shape>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="5" Style="table" TabOrder="4" Top="89" VAlign="Middle" Width="690" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static10" Left="5" Style="table_1" TabOrder="5" Text="공사명" Top="89" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Search1" Border="Flat" Column="DIG_WORK_NM" Enable="FALSE" Height="18" Id="Edit7" Left="113" Readonly="TRUE" Style="edit_Indis" TabOrder="6" Top="91" Width="578"></Edit>
+		<Div Height="29" Id="Div0" Left="44" TabOrder="7" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="651">
+			<Contents></Contents>
+		</Div>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static0" Left="5" Style="table_1" TabOrder="9" Text="공사장소" Top="110" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Calendar Border="Flat" Dateformat="yyyy-MM-dd&#32;hh:mm" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar3" Left="113" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="10" Top="133" WeeksFont="Default,-1" Width="119"></Calendar>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static9" Left="5" Style="table_1" TabOrder="14" Text="교육내용" Top="152" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static11" Left="5" Style="table_1" TabOrder="13" Text="교육일시" Top="131" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static12" Left="5" Style="table_1" TabOrder="16" Text="교육일시" Top="173" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static13" Left="5" Style="table" TabOrder="15" Top="173" VAlign="Middle" Width="690" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static14" Left="5" Style="table_1" TabOrder="17" Text="교육강사" Top="173" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Search1" Border="Flat" Column="START_ADDR" Enable="FALSE" Height="18" Id="Edit3" Left="113" Readonly="TRUE" Style="edit_Indis" TabOrder="18" Top="112" Width="578"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="235" Style="table_1" TabOrder="19" Text="지사" Top="173" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit2" Left="113" Readonly="TRUE" Style="edit_Indis" TabOrder="20" Top="154" Width="578"></Edit>
+		<Edit BindDataset="ds_Search1" Border="Flat" Column="EDU_LECTU_EMPID_NM" Enable="FALSE" Height="18" Id="Edit4" Left="113" Readonly="TRUE" Style="edit_Indis" TabOrder="21" Top="175" Width="119"></Edit>
+		<Edit BindDataset="ds_Search1" Border="Flat" Column="BRANCH_NM" Enable="FALSE" Height="18" Id="Edit5" Left="343" Readonly="TRUE" Style="edit_Indis" TabOrder="22" Top="175" Width="134"></Edit>
+		<Edit BindDataset="ds_Search1" Border="Flat" Column="SCG_TAKER_EMPID_NM" Enable="FALSE" Height="18" Id="Edit6" Left="588" Readonly="TRUE" Style="edit_Indis" TabOrder="24" Top="175" Width="103"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static15" Left="480" Style="table_1" TabOrder="23" Text="성명" Top="173" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Static Height="51" Id="Static16" Left="5" LineSpacing="5" Style="static" TabOrder="25" Text="도시가스사업법&#32;시행규칙&#32;별지&#32;제39호&#32;서식의&#32;굴착공사협의서에&#32;따라&#32;상기와&#32;같이&#32;굴착관련&#32;건설기계조종사에&#32;대한&#32;가스안전교육(교육자료&#32;전달)을&#32;실시하였음." Top="351" Width="680" WordWrap="TRUE"></Static>
+		<Static Height="11" Id="Static2" Left="381" Style="static" TabOrder="26" Text="도시가스사&#32;&#32;&#32;회사명&#32;:" Top="414" Width="116" WordWrap="TRUE"></Static>
+		<Static Height="11" Id="Static3" Left="453" Style="static" TabOrder="27" Text="직&#32;&#32;&#32;위&#32;:&#32;" Top="435" Width="45" WordWrap="TRUE"></Static>
+		<Static Height="11" Id="Static4" Left="453" Style="static" TabOrder="28" Text="연락처&#32;:" Top="456" Width="45" WordWrap="TRUE"></Static>
+		<Static Height="11" Id="Static18" Left="381" Style="static" TabOrder="29" Text="굴착업체&#32;&#32;&#32;&#32;&#32;&#32;회사명&#32;:" Top="504" Width="117" WordWrap="TRUE"></Static>
+		<Static Height="11" Id="Static19" Left="453" Style="static" TabOrder="30" Text="직&#32;&#32;&#32;위&#32;:&#32;" Top="525" Width="45" WordWrap="TRUE"></Static>
+		<Static Height="11" Id="Static20" Left="453" Style="static" TabOrder="31" Text="연락처&#32;:" Top="546" Width="45" WordWrap="TRUE"></Static>
+		<Static Height="11" Id="Static21" Left="453" Style="static" TabOrder="32" Text="성&#32;&#32;&#32;명&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;" Top="567" Width="45" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Search1" Border="Flat" Column="EOCS_NUM" Enable="FALSE" Height="18" Id="Edit0" Left="113" Readonly="TRUE" Style="edit_Indis" TabOrder="35" Top="70" Width="578"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static23" Left="5" Style="table_1" TabOrder="34" Text="EOCS번호" Top="68" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Static Height="11" Id="Static17" Left="453" Style="static" TabOrder="36" Text="성&#32;&#32;&#32;명&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;" Top="477" Width="45" WordWrap="TRUE"></Static>
+		<Sign Border="FLAT" BorderColor="gray" Color="#5f5f5f" Height="18" Id="Sign0" Left="587" TabOrder="37" Text="전자서명" Top="473" Width="108"></Sign>
+		<Sign Border="FLAT" BorderColor="gray" Color="#5f5f5f" Height="18" Id="Sign1" Left="587" TabOrder="38" Text="전자서명" Top="565" Width="108"></Sign>
+		<Edit Align="CENTER" BindDataset="ds_Search1" Border="Flat" Column="JOIN_YY" Height="18" Id="Edit1" Left="238" Readonly="TRUE" Style="edit" TabOrder="40" Top="388" Width="48"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Search1" Border="Flat" Column="JOIN_MM" Height="18" Id="Edit8" Left="303" Readonly="TRUE" Style="edit" TabOrder="41" Top="388" Width="37"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Search1" Border="Flat" Column="JOIN_DD" Height="18" Id="Edit9" Left="357" Readonly="TRUE" Style="edit" TabOrder="42" Top="388" Width="37"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Search1" Border="Flat" Column="GAS_NM" Height="18" Id="Edit10" Left="500" Readonly="TRUE" Style="edit" TabOrder="43" Top="410" Width="195"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Search1" Border="Flat" Column="ITEM_KNAME" Height="18" Id="Edit11" Left="500" Readonly="TRUE" Style="edit" TabOrder="44" Top="431" Width="195"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Search1" Border="Flat" Column="SCG_TEL" Height="18" Id="Edit12" Left="500" Readonly="TRUE" Style="edit" TabOrder="45" Top="452" Width="195"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Search3" Border="Flat" Column="SCG_TAKER_EMPID_NM" Height="18" Id="Edit13" Left="500" Readonly="TRUE" Style="edit" TabOrder="46" Top="473" Width="86"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Search1" Border="Flat" Column="WORK_FIRM_NM" Height="18" Id="Edit14" Left="500" Readonly="TRUE" Style="edit" TabOrder="47" Top="502" Width="195"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Search3" Border="Flat" Column="WORK_KNAME" Height="18" Id="Edit15" Left="500" Readonly="TRUE" Style="edit" TabOrder="48" Top="523" Width="195"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Search1" Border="Flat" Column="WORK_TEL" Height="18" Id="Edit16" Left="500" Readonly="TRUE" Style="edit" TabOrder="49" Top="544" Width="195"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Search3" Border="Flat" Column="WORK_FIRM_TAKER_NM" Height="18" Id="Edit17" Left="500" Readonly="TRUE" Style="edit" TabOrder="50" Top="565" Width="86"></Edit>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+function D1402010010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	fn_D10_Serach();
+}
+
+function fn_D10_Serach()
+{
+	
+	
+	var sss="081244153-0";
+	var ttt="1";
+	var rrr="001";
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DIGGING_WORK_SITE_EDUCMgr-service&Search=1"
+	            + "&EOCS_NUM="+ sss
+	            + "&DIG_WORK_PATH_FLAG="+ ttt
+	            + "&SEQ="+ rrr
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Search1=ds_Search ds_Search2=ds_List";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+}]]></Script>
+</Window>

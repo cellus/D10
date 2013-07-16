@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="848" Id="D1601010016U" Left="8" OnLoadCompleted="D1601010016U_OnLoadCompleted" PidAttrib="7" Title="정비보수&#32;실비계산_D1601010016U" Top="8" Ver="1.0" Width="905" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi" OnColumnChanged="ds_Multi_OnColumnChanged">
+				<Contents>
+					<colinfo id="MAINTER_REAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_STD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EA" size="256" summ="default" type="STRING"/>
+					<colinfo id="COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_CLASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Excel">
+				<Contents>
+					<colinfo id="MAINTER_REAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_STD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EA" size="256" summ="default" type="STRING"/>
+					<colinfo id="COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_CLASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Re">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_AMT_REAL_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_jamt">
+				<Contents>
+					<colinfo id="MATERIAL_AMT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_samt">
+				<Contents>
+					<colinfo id="NOMU_JU_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NOMU_YA_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="JANG_BE_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_AMT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_pamt">
+				<Contents>
+					<colinfo id="REAL_PRC_NM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM2" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM3" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM4" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM5" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM6" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM7" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_sample">
+				<Contents>
+					<colinfo id="COL1" size="256" summ="default" type="STRING"/>
+					<colinfo id="COL2" size="256" summ="default" type="STRING"/>
+					<colinfo id="COL3" size="256" summ="default" type="STRING"/>
+					<colinfo id="COL4" size="256" summ="default" type="STRING"/>
+					<colinfo id="COL5" size="256" summ="default" type="STRING"/>
+					<colinfo id="COL6" size="256" summ="default" type="STRING"/>
+					<colinfo id="COL7" size="256" summ="default" type="STRING"/>
+					<colinfo id="COL8" size="256" summ="default" type="STRING"/>
+					<colinfo id="COL9" size="256" summ="default" type="STRING"/>
+					<record>
+						<COL1></COL1>
+						<COL2></COL2>
+						<COL3></COL3>
+						<COL4></COL4>
+						<COL5></COL5>
+						<COL6></COL6>
+						<COL7></COL7>
+						<COL8></COL8>
+						<COL9></COL9>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="REAL_JOB_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="정비보수&#32;실비계산" Transparent="TRUE" Width="900"></Image>
+		<Shape BKColor="user16" Bottom="72" Height="3" Id="Shape1" Left="0" LineWidth="0" Right="900" TabOrder="2" Top="69" Type="Rectangle" Width="900"></Shape>
+		<Div DisableBKColor="white" Height="25" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="3" Text="Div0" Top="40" Url="globals::ComButton.xml" Visible="FALSE" Width="900">
+			<Contents></Contents>
+		</Div>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi_Excel" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="550" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="455" Id="grd_ExcelList" InputPanel="FALSE" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="900" ScrollCell="true" SelColor="BACKGROUND" Style="grid_pop" TabOrder="4" TabStop="true" Top="95" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="900">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="30"/>
+						<col width="100"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="120"/>
+						<col width="100"/>
+						<col width="140"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="실비단가분류"/>
+						<cell col="2" display="text" text="실비단가명"/>
+						<cell col="3" display="text" text="실비단가규격"/>
+						<cell col="4" display="text" text="단가(원)"/>
+						<cell col="5" display="text" text="수량(개)"/>
+						<cell col="6" display="text" text="비용(원)"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="left" col="1" colid="REAL_PRC_CLASS" display="text" edit="combo" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="2" colid="REAL_PRC_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="3" colid="REAL_PRC_STD" display="text"/>
+						<cell align="right" col="4" colid="UNIT_PRC" display="number"/>
+						<cell align="right" col="5" colid="EA" display="number" edit="number"/>
+						<cell align="right" col="6" colid="COST" display="number"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user9" Bottom="95" Height="24" Id="Shape2" Left="0" LineColor="user10" Right="900" TabOrder="5" Top="71" Type="Rectangle" Width="900"></Shape>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="6" Text="조치일자" Top="74" Transparent="TRUE" Width="70"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="843" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" Font="돋움,9" HeadBorder="Flat" HeadHeight="20" Height="747" Id="grd_MultiList" InputPanel="FALSE" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_MultiList_OnCellClick" Right="900" SelColor="MENU" Style="grid_pop" TabOrder="7" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="900">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="30"/>
+						<col width="100"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="120"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="140"/>
+						<col width="140"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="실비단가분류"/>
+						<cell col="2" display="text" text="실비단가명"/>
+						<cell col="3" display="text" text="실비단가규격"/>
+						<cell col="4" display="text" text="단가(원)"/>
+						<cell col="5" display="text" text="단위"/>
+						<cell bkcolor="user11" col="6" display="text" text="수량(개)"/>
+						<cell col="7" display="text" text="비용(원)"/>
+						<cell col="8" display="text" text="비고"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="left" col="1" colid="REAL_PRC_CLASS" display="text" edit="combo" expandsize="18" suppress="1" wordwrap="word"/>
+						<cell align="left" col="2" colid="REAL_PRC_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="3" colid="REAL_PRC_STD" display="text"/>
+						<cell align="right" col="4" colid="UNIT_PRC" display="number"/>
+						<cell col="5" colid="UNIT_NM" display="text"/>
+						<cell align="right" col="6" colid="EA" display="number" edit="number"/>
+						<cell align="right" col="7" colid="COST" display="number"/>
+						<cell col="8" colid="RMK" display="text" edit="normal"/>
+					</body>
+					<summary>
+						<cell col="0" colspan="5" display="text"/>
+						<cell col="5" display="text"/>
+						<cell align="center" col="6" display="text" text="합계(원)"/>
+						<cell align="right" col="7" display="number" expr='SUM(&quot;COST&quot;)'/>
+						<cell col="8" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="717" LeftMargin="12" Style="blt_search_1" TabOrder="8" Text="단가기준일" Top="74" Transparent="TRUE" Width="70"></Image>
+		<Calendar Border="Flat" Enable="FALSE" Height="18" Id="cal_Gymd" Left="798" SaturdayTextColor="blue" SelDayStyle="calendar" Style="calendar" SundayTextColor="red" TabOrder="9" Top="73" Width="85"></Calendar>
+		<Edit Align="RIGHT" Border="Flat" DisableColor="user0" Enable="FALSE" Height="18" Id="edt_Time" ImeMode="none" Left="640" Style="edit" TabOrder="10" Top="74" Width="55"></Edit>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="577" LeftMargin="12" Style="blt_search_1" TabOrder="11" Text="작업시간" Top="74" Transparent="TRUE" Width="70"></Image>
+		<Grid BindDataset="ds_jamt" BkColor2="default" BoldHead="true" Bottom="376" Enable="true" EndLineColor="default" Height="48" Id="Grid0" InputPanel="FALSE" Left="16" LineColor="default" Right="192" TabOrder="12" TabStop="true" Top="328" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="176">
+			<contents>
+				<columns>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="MATERIAL_AMT"/>
+				</head>
+				<body>
+					<cell col="0" colid="MATERIAL_AMT" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+		<Grid BindDataset="ds_samt" BkColor2="default" BoldHead="true" Bottom="456" Enable="true" EndLineColor="default" Height="64" Id="Grid1" InputPanel="FALSE" Left="16" LineColor="default" Right="376" TabOrder="13" TabStop="true" Top="392" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="360">
+			<contents>
+				<columns>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="NOMU_JU_AMT"/>
+					<cell col="1" display="text" text="NOMU_YA_AMT"/>
+					<cell col="2" display="text" text="JANG_BE_AMT"/>
+					<cell col="3" display="text" text="ETC_AMT"/>
+				</head>
+				<body>
+					<cell col="0" colid="NOMU_JU_AMT" display="text"/>
+					<cell col="1" colid="NOMU_YA_AMT" display="text"/>
+					<cell col="2" colid="JANG_BE_AMT" display="text"/>
+					<cell col="3" colid="ETC_AMT" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+		<Grid BindDataset="ds_pamt" BkColor2="default" BoldHead="true" Bottom="552" Enable="true" EndLineColor="default" Height="80" Id="Grid2" InputPanel="FALSE" Left="16" LineColor="default" Right="528" TabOrder="14" TabStop="true" Top="472" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="512">
+			<contents>
+				<columns>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="REAL_PRC_NM1"/>
+					<cell col="1" display="text" text="REAL_PRC_NM2"/>
+					<cell col="2" display="text" text="REAL_PRC_NM3"/>
+					<cell col="3" display="text" text="REAL_PRC_NM4"/>
+					<cell col="4" display="text" text="REAL_PRC_NM5"/>
+					<cell col="5" display="text" text="REAL_PRC_NM6"/>
+				</head>
+				<body>
+					<cell col="0" colid="REAL_PRC_NM1" display="text"/>
+					<cell col="1" colid="REAL_PRC_NM2" display="text"/>
+					<cell col="2" colid="REAL_PRC_NM3" display="text"/>
+					<cell col="3" colid="REAL_PRC_NM4" display="text"/>
+					<cell col="4" colid="REAL_PRC_NM5" display="text"/>
+					<cell col="5" colid="REAL_PRC_NM6" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+		<Grid BindDataset="ds_sample" BkColor2="default" BoldHead="true" Bottom="680" Enable="true" EndLineColor="default" Height="120" Id="Grid3" InputPanel="FALSE" Left="16" LineColor="default" Right="744" TabOrder="15" TabStop="true" Top="560" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="728">
+			<contents>
+				<columns>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="COL1"/>
+					<cell col="1" display="text" text="COL2"/>
+					<cell col="2" display="text" text="COL3"/>
+					<cell col="3" display="text" text="COL4"/>
+					<cell col="4" display="text" text="COL5"/>
+					<cell col="5" display="text" text="COL6"/>
+					<cell col="6" display="text" text="COL7"/>
+					<cell col="7" display="text" text="COL8"/>
+					<cell col="8" display="text" text="COL9"/>
+				</head>
+				<body>
+					<cell col="0" colid="COL1" display="text"/>
+					<cell col="1" colid="COL2" display="text"/>
+					<cell col="2" colid="COL3" display="text"/>
+					<cell col="3" colid="COL4" display="text"/>
+					<cell col="4" colid="COL5" display="text"/>
+					<cell col="5" colid="COL6" display="text"/>
+					<cell col="6" colid="COL7" display="text"/>
+					<cell col="7" colid="COL8" display="text"/>
+					<cell col="8" colid="COL9" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+		<Calendar Border="Flat" Enable="FALSE" Height="18" Id="cal_REAL_JOB_YMD" Left="78" SaturdayTextColor="blue" SelDayStyle="calendar" Style="calendar" SundayTextColor="red" TabOrder="16" Top="74" Width="85"></Calendar>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1601010016U.xml
+* Form 설명  : 정비보수 실비 등록 및 조회 
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2008-01-05
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+#include "js::COMMONA10008.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+var strJob_time = 0;
+var strYn_flag  ="";
+var strMainternum = "";
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1601010016U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	gfn_SetForceButton("00110001"); 
+	
+	gfn_D1_SetGrid_Sort(grd_MultiList);
+
+	gfn_SetGrdComboBox_Comcode ("grd_MultiList",1,"B20115");
+	grd_MultiList.SetCellProp("body",1,"Edit","none");
+	strMainternum = MAINTER_DANGER_FLAG;
+	//strMainternum ="20091000057";
+	grd_MultiList.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");				   
+		
+	if (IsExistVar("JOB_TIME", true)) 
+	{
+		strJob_time = toNumber(JOB_TIME);
+		strYn_flag = YN_FLAG;
+		
+		edt_Time.Text = strJob_time;
+	}
+
+	cal_REAL_JOB_YMD.Value = REAL_JOB_YMD;
+
+	fn_CommonSearch();
+}
+//---------------------------------------------------------------------------------
+// 기      능   :  공통 조회
+//---------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+//n_nomo_amt = Truncate((toNumber(137200) * toNumber(13.3))/100);
+    
+   // alert(n_nomo_amt);
+    if(yn_flag=="Y")
+    {
+		grd_MultiList.Editable= false;
+    }
+    else
+    {
+		grd_MultiList.Editable= true;
+    }
+	
+	
+	fn_D1_FindListD10();
+
+	// 값이 없으면
+	if(ds_Multi.GetRowCount() < 1  )
+	{
+		fn_D1_FindList();			// 영공 실비 데이타 가져오기 
+	}
+}
+//---------------------------------------------------------------------------------
+// 기      능   :  공통 조회 버튼 클릭시 실행 (저장된 데이타 가져오기)
+//---------------------------------------------------------------------------------
+function fn_D1_FindListD10()
+{	
+	var strSvcID = "searchD10";
+	var strPart  = "D10";	
+	var strURL   = "handle.do?ServiceName=D1_MaintRepaiCostMgr_Popup-service";  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "searchD10=1";
+		strArgument	+= " MAINTER_NUM=" + quote(strMainternum);
+			   	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if ( ds_Multi.GetRowCount() > 0)
+	{
+		cal_Gymd.Value = ds_Multi.GetColumn(0,"BASE_YMD");	
+	}
+}
+
+
+
+//---------------------------------------------------------------------------------
+// 기      능   :  공통 조회 버튼 클릭시 실행 (영공 데이타 가져오기)
+//---------------------------------------------------------------------------------
+function fn_D1_FindList()
+{	
+	ds_Search.ClearData();
+	ds_Search.AddRow();
+	
+	ds_Search.SetColumn(0,"REAL_JOB_YMD"  , cal_REAL_JOB_YMD.Value); 
+	
+	var strSvcID = "search";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiCostMgr_Popup-service";  
+	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Multi=ds_Multi ds_Multi_Excel=ds_Multi_Excel";
+	var strArgument  = "search=1";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+		
+	if ( ds_Multi.GetRowCount() > 0)
+	{			   
+		cal_Gymd.Value = ds_Multi.GetColumn(0,"BASE_YMD");
+	}
+
+}
+
+
+function fn_CommonSelect()
+{
+    fn_d1_Calculator();
+    
+    var n_Total      = 0;  //(자재비+노무비+장비비+기타 부대공사)의 합계
+    var n_nomo_amt   = 0; // 간접노무비 
+    var n_san_amt    = 0; // 산재고용보험료 
+    var n_etc_amt    = 0; // 기타경비 
+    var n_safe_amt   = 0; // 안전관리비 
+    var n_nor_amt    = 0; // 일반관리비 
+    var n_profit_amt = 0; // 이윤 
+    var total_sum    = 0; // 총 공사비 
+    var total_amt    = 0; // 시행금액 
+    var n_s_amt      = 0; // 소계
+    var jm_amt       = 0; // 잡자재비 
+    var m_amt = ToFloat(ds_jamt.GetColumn(0,"MATERIAL_AMT")); // 자재비 총  
+    //alert(m_amt);
+    var j_amt = ToFloat(ds_samt.GetColumn(0,"NOMU_JU_AMT")); // 노무비 주간
+    var y_amt = ToFloat(ds_samt.GetColumn(0,"NOMU_YA_AMT")); // 노무비 야간 
+    var jy_amt = j_amt + y_amt; 
+    var b_amt = ToFloat(ds_samt.GetColumn(0,"JANG_BE_AMT")); // 장비비
+    var e_amt = ToFloat(ds_samt.GetColumn(0,"ETC_AMT"));     // 기타부대공사 
+    
+    var percent1 = ToFloat(ds_pamt.GetColumn(0,"REAL_PRC_NM1"));  // 간접노무비
+    var percent2 = ToFloat(ds_pamt.GetColumn(0,"REAL_PRC_NM2"));  // 산재고용보험료
+    var percent3 = ToFloat(ds_pamt.GetColumn(0,"REAL_PRC_NM3"));  // 기타경비
+    var percent4 = ToFloat(ds_pamt.GetColumn(0,"REAL_PRC_NM4"));  // 안전관리비
+    var percent5 = ToFloat(ds_pamt.GetColumn(0,"REAL_PRC_NM5"));  // 일반관리비
+    var percent6 = ToFloat(ds_pamt.GetColumn(0,"REAL_PRC_NM6"));  // 이윤
+    //권기철 기타공사비 추가 2010.10.5
+    var percent7 = ToFloat(ds_pamt.GetColumn(0,"REAL_PRC_NM7"));  // 기타공사비    
+    
+    n_Total = m_amt+j_amt+y_amt+b_amt+e_amt;
+    n_nomo_amt = Truncate(((j_amt+y_amt) * percent1)/100);                 // 간접노무비     * 13.3 %
+    n_san_amt  = Truncate(((n_nomo_amt+ (j_amt+y_amt)) * percent2) /100);  // 산재고용보험료 * 4.1  %
+    
+    //trace(m_amt + ", "+ jy_amt +", "+n_nomo_amt+", "+percent3+" ");
+    
+    n_etc_amt  = Truncate(((m_amt + jy_amt + n_nomo_amt) * percent3)/100); // 기타경비       * 6.55 %
+    n_safe_amt = Truncate(((m_amt + jy_amt) * percent4)/100);              // 안전관리비     * 2.48 %
+    
+    n_nor_amt  = Truncate(((n_Total + n_nomo_amt + n_san_amt + n_etc_amt + n_safe_amt) * percent5)/100); // 일반관리비 6 %
+    n_s_amt    = n_nomo_amt + n_san_amt + n_etc_amt + n_safe_amt;  // 소계
+    n_profit_amt = Truncate(((jy_amt + b_amt + e_amt + n_s_amt + n_nor_amt) * percent6)/100); // 이윤 * 15 % 
+    
+    total_sum = n_Total + n_s_amt + n_nor_amt + n_profit_amt;
+    
+    total_amt = (Truncate(total_sum / 1000) * 1000) + percent7;  // 백단위 제거 및 추가공사비용 적용    
+    
+    ds_sample.SetColumn(0, "COL1", n_nomo_amt);
+    ds_sample.SetColumn(0, "COL2", n_san_amt);
+    ds_sample.SetColumn(0, "COL3", n_etc_amt);
+    ds_sample.SetColumn(0, "COL4", n_safe_amt);
+    ds_sample.SetColumn(0, "COL5", n_nor_amt);
+    ds_sample.SetColumn(0, "COL6", n_s_amt);
+    ds_sample.SetColumn(0, "COL7", n_profit_amt);
+    ds_sample.SetColumn(0, "COL8", total_sum);
+    ds_sample.SetColumn(0, "COL9", total_amt);
+    
+    // 정비보수 마스터 UPDATE 
+    ds_Multi_Re.ClearData();
+    var nUpdateRow = ds_Multi_Re.AddRow();
+
+    ds_Multi_Re.UpdateControl = false;    
+    ds_Multi_Re.SetRowType(nUpdateRow,"update");
+
+	ds_Multi_Re.SetColumn(nUpdateRow,"MAINTER_NUM",strMainternum);
+	ds_Multi_Re.SetColumn(nUpdateRow,"WORK_AMT_REAL_COST",total_amt);
+	ds_Multi_Re.SetColumn(nUpdateRow,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+	ds_Multi_Re.SetColumn(nUpdateRow,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+			    
+	var strSvcID = "updateMain";
+	var strPart  = "D10";	
+	var strURL   = "handle.do?ServiceName=D1_MaintRepaiCostMgr_Popup-service";  
+	var strInDatasets  = "ds_Multi_Re=ds_Multi_Re:u";
+	var strOutDatasets  = "";
+	var strArgument  = "updateMain=1";
+		strArgument	+= " MAINTER_NUM=" + quote(strMainternum);
+			   	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+    
+    // alert(total_sum);
+    // alert(percent7);
+    // alert(total_amt);
+    
+	var arrList = array();
+	arrList[0] = total_amt;
+
+	close(arrList);
+	
+}
+// 실비계산 
+function fn_d1_Calculator()
+{
+	var strSvcID = "calcul";
+	var strPart  = "D10";	
+	var strURL   = "handle.do?ServiceName=D1_MaintRepaiCostMgr_Popup-service";  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_jamt=ds_jamt ds_samt=ds_samt ds_pamt=ds_pamt";
+	var strArgument  = "calcul=1";
+		strArgument	+= " MAINTER_NUM=" + quote(strMainternum);
+
+    			   	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_CommonSave()
+// 설명     : 공통 저장
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function fn_CommonSave()
+{
+    //정우현 과장 작업시간과 실비 인건비 작업시간 Check 제외 2010.4.5
+    // var Totalcnt = 0;
+    // for(var i=0;i<ds_multi.GetColCount();i++)
+    // {   
+        // if(ds_Multi.GetColumn(i,"UNIT_CD")=="420")
+        // {
+			// if(toNumber(ds_multi.GetColumn(i,"EA")) > strJob_time)
+			// {
+				// alert("작업시간보다 초과입력되었습니다.");
+				// return;
+			// }
+		// }
+    // }
+  
+	fn_D1_Save();
+
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Save()
+//   설명:  실비단가 저장하기 
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save()
+{
+
+	ds_Multi.UpdateControl=false;
+
+	for(var i=0; i<ds_Multi.GetRowCount(); i++)
+	{	
+		var check = ds_Multi.GetColumn(i,"MAINTER_NUM");
+		if(gfn_IsNull(check))
+		{
+			ds_Multi.SetColumn(i,"MAINTER_NUM",strMainternum);
+			ds_Multi.SetColumn(i,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+			ds_Multi.SetColumn(i,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+			ds_Multi.SetColumn(i,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+			ds_Multi.SetColumn(i,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+			
+			ds_Multi.SetRowType(i,"insert");
+		}
+		else if(!gfn_IsNull(check))
+		{
+			ds_Multi.SetColumn(i,"MAINTER_NUM",strMainternum);
+			ds_Multi.SetColumn(i,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+			ds_Multi.SetColumn(i,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+			
+			ds_Multi.SetRowType(i,"update");
+		}
+	}
+	var strSvcID = "fn_D1_Save1";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiCostMgr_Popup-service";
+	var strInDatasets  = "ds_Multi=ds_Multi:u";
+	var strOutDatasets = "";
+	var strArgument  = "save=1";	
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}else{
+		//gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+		alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"));
+		fn_CommonSelect();
+	}
+}
+
+
+// function fn_D1_Save()
+// {
+	
+	// for(var i=0; ds_Multi.GetRowCount() > i; i++)
+	// {	
+		// var check 		  = ds_Multi.GetColumn(i,"MAINTER_NUM");
+		// var realprcclass  = ds_Multi.GetColumn(i,"REAL_PRC_CLASS");
+		// var mainterrealcd = ds_Multi.GetColumn(i,"MAINTER_REAL_CD");
+		// var realprcnm 	  = ds_Multi.GetColumn(i,"REAL_PRC_NM");
+		// var realprcstd 	  = ds_Multi.GetColumn(i,"REAL_PRC_STD");
+		// var unitprc 	  = ds_Multi.GetColumn(i,"UNIT_PRC");
+		// var ea 			  = ds_Multi.GetColumn(i,"EA");
+		// var cost 		  = ds_Multi.GetColumn(i,"COST");
+		// var ipaddress     = gfn_GetGlobalValue("G_IPADDRESS");
+		// var userno        = gfn_GetGlobalValue("G_USER_NO");
+
+		// if(gfn_IsNull(check)){
+			// ds_Multi_Re.AddRow();
+			// ds_Multi_Re.SetRowType(i,"insert");
+			
+			// ds_Multi_Re.SetColumn(i,"MAINTER_NUM",strMainternum);
+			// ds_Multi_Re.SetColumn(i,"REAL_PRC_CLASS",realprcclass);
+			// ds_Multi_Re.SetColumn(i,"MAINTER_REAL_CD",mainterrealcd);
+			// ds_Multi_Re.SetColumn(i,"REAL_PRC_NM",realprcnm);
+			// ds_Multi_Re.SetColumn(i,"REAL_PRC_STD",realprcstd);
+			// ds_Multi_Re.SetColumn(i,"UNIT_PRC",unitprc);
+			// ds_Multi_Re.SetColumn(i,"EA",ea);
+			// ds_Multi_Re.SetColumn(i,"COST",cost);
+			// ds_Multi_Re.SetColumn(i,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+			// ds_Multi_Re.SetColumn(i,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+		// }else if(!gfn_IsNull(check)){
+			// ds_Multi_Re.SetRowType(i,"update");
+			// ds_Multi_Re.SetColumn(i,"UPD_IP",ipaddress); 
+			// ds_Multi_Re.SetColumn(i,"UPD_EMPID",userno);
+		// }
+	// }
+	// var strSvcID = "fn_D1_Save1";
+	// var strPart = "D10";
+	// var strURL = "handle.do?ServiceName=D1_MaintRepaiCostMgr_Popup-service";
+	// var strInDatasets  = "ds_Multi_Re=ds_Multi_Re:u";
+	// var strOutDatasets = "";
+	// var strArgument  = "save=1";	
+	
+	// gfn_SyncCall( 
+					 // strSvcID
+				   // , strPart
+				   // , strURL
+				   // , strInDatasets
+				   // , strOutDatasets
+				   // , strArgument
+			   // );
+			   
+	// if(ErrorCode < 0)
+	// {    
+		// alert(ErrorMsg);
+		// return;
+	// }else{
+		// gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+	// }
+// }
+/*===============================================================================
+ * 기      능   :  공통 Excel
+===============================================================================*/
+function fn_CommonExcelExport()
+{
+    gfn_ExportExcel("정비보수 실비", 5, "", "grd_ExcelList"); 	
+}
+
+function ds_Multi_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	if(strColumnID == "EA" || strColumnID == "UNIT_PRC")
+	{
+		var chkUnitprc = ds_Multi.GetColumn(ds_Multi.row,"UNIT_PRC");
+		var chkEa = ds_Multi.GetColumn(ds_Multi.row,"EA");
+		var sum = toNumber(chkUnitprc)*toNumber(chkEa);
+		ds_Multi.SetColumn(ds_Multi.row,"COST",sum);
+	}
+}
+
+function grd_MultiList_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+
+	// 단가표외 추가장비, 기타공사비
+	if(ds_Multi.GetColumn(nRow,"MAINTER_REAL_CD")=="30607200048" || ds_Multi.GetColumn(nRow,"MAINTER_REAL_CD")=="30607400076")
+	{
+		grd_MultiList.SetCellProp("body",4,"Edit","number");
+		grd_MultiList.SetCellProp("body",8,"Edit","normal");
+	}
+	else
+	{
+		grd_MultiList.SetCellProp("body",4,"Edit","none");
+		grd_MultiList.SetCellProp("body",8,"Edit","none");
+	}
+}
+]]></Script>
+</Window>

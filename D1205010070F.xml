@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1205010070F" Left="8" OnLoadCompleted="D1205010070F_OnLoadCompleted" PidAttrib="7" Title="정비보수현황조회_D1205010070F" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_DangerAppro">
+				<Contents>
+					<colinfo id="DANGER_APPRO_OBJ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<record>
+						<DANGER_APPRO_OBJ_YN>전체</DANGER_APPRO_OBJ_YN>
+						<VALUE></VALUE>
+					</record>
+					<record>
+						<DANGER_APPRO_OBJ_YN>대상</DANGER_APPRO_OBJ_YN>
+						<VALUE>Y</VALUE>
+					</record>
+					<record>
+						<DANGER_APPRO_OBJ_YN>비대상</DANGER_APPRO_OBJ_YN>
+						<VALUE>N</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_MapUpd">
+				<Contents>
+					<colinfo id="MAP_UPD_OBJ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<record>
+						<MAP_UPD_OBJ_YN>전체</MAP_UPD_OBJ_YN>
+						<VALUE></VALUE>
+					</record>
+					<record>
+						<MAP_UPD_OBJ_YN>대상</MAP_UPD_OBJ_YN>
+						<VALUE>Y</VALUE>
+					</record>
+					<record>
+						<MAP_UPD_OBJ_YN>비대상</MAP_UPD_OBJ_YN>
+						<VALUE>N</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Excel">
+				<Contents>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_REQ_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_LOC1" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_APPRO_OBJ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAP_UPD_OBJ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="MIS_UPD_OBJ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK1" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPECT_JOB_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_JOB_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_APPRO_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_APPRO_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_OBJ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_SCALE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_ADMIT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADJ_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK2" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_L_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_M_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_S_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_END_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_PAS_DU_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_CONF_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_AMT_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_AMT_REAL_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="IND_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIR_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_TREAT_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_TREAT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_REQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_REQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_REQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_MAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_MAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_MAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_RST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_RST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_RST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_PAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_PAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_PAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="TABLET_COMM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECOND_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_TYPE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_EMPID_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_RETURN_WHY_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_EMPID_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_RETURN_WHY_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_EMPID_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_RETURN_WHY_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM_SUB" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_L_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_M_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_S_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MATER_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADJ_TYPE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_YN" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team">
+				<Contents>
+					<colinfo id="KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_REQ_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_LOC1" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_APPRO_OBJ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAP_UPD_OBJ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="MIS_UPD_OBJ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK1" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPECT_JOB_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_JOB_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_APPRO_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_APPRO_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_OBJ_YN_A" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_SCALE_A" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_ADMIT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADJ_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK2" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_L_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_M_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_S_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_END_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_PAS_DU_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_CONF_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_AMT_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_AMT_REAL_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="IND_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIR_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_TREAT_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_TREAT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_REQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_REQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_REQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_MAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_MAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_MAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_RST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_RST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_RST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_PAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_PAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_PAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="TABLET_COMM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECOND_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_TYPE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RETURN_WHY_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_EMPID_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_RETURN_WHY_WORK_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_EMPID_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_RETURN_WHY_IND_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_YMD_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_EMPID_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSENT_RETURN_WHY_DIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM_SUB" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_REQ_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_L_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_M_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_S_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MATER_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACROSS_A" size="256" summ="default" type="STRING"/>
+					<colinfo id="HEIGHT_A" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACROSS_B" size="256" summ="default" type="STRING"/>
+					<colinfo id="HEIGHT_B" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_OBJ_YN_B" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_SCALE_B" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAY_NIGHT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADJ_TYPE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_YN" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_WorkType">
+				<Contents>
+					<colinfo id="WORK_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<record>
+						<VALUE>01</VALUE>
+						<WORK_TYPE>유상</WORK_TYPE>
+					</record>
+					<record>
+						<VALUE>02</VALUE>
+						<WORK_TYPE>무상</WORK_TYPE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_WorkFirmCd">
+				<Contents>
+					<colinfo id="WORK_EXEC_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FaciNumSub_01">
+				<Contents>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<record>
+						<NAME>전체</NAME>
+						<VALUE></VALUE>
+					</record>
+					<record>
+						<NAME>정압실</NAME>
+						<VALUE>GR</VALUE>
+					</record>
+					<record>
+						<NAME>밸브박스</NAME>
+						<VALUE>VB</VALUE>
+					</record>
+					<record>
+						<NAME>테스트박스</NAME>
+						<VALUE>TB</VALUE>
+					</record>
+					<record>
+						<NAME>수취기</NAME>
+						<VALUE>WD</VALUE>
+					</record>
+					<record>
+						<NAME>정류기</NAME>
+						<VALUE>RE</VALUE>
+					</record>
+					<record>
+						<NAME>배류기</NAME>
+						<VALUE>DA</VALUE>
+					</record>
+					<record>
+						<NAME>공동주택</NAME>
+						<VALUE>AP</VALUE>
+					</record>
+					<record>
+						<NAME>시설물외</NAME>
+						<VALUE>OUT</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FaciNumSub_02">
+				<Contents>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<record>
+						<NAME>배류기</NAME>
+						<VALUE>DR</VALUE>
+					</record>
+					<record>
+						<NAME>정압실</NAME>
+						<VALUE>GR</VALUE>
+					</record>
+					<record>
+						<NAME>정압기</NAME>
+						<VALUE>GV</VALUE>
+					</record>
+					<record>
+						<NAME>정류기</NAME>
+						<VALUE>RE</VALUE>
+					</record>
+					<record>
+						<NAME>테스트박스</NAME>
+						<VALUE>TB</VALUE>
+					</record>
+					<record>
+						<NAME>밸브박스&#32;</NAME>
+						<VALUE>VB</VALUE>
+					</record>
+					<record>
+						<NAME>밸브</NAME>
+						<VALUE>VV</VALUE>
+					</record>
+					<record>
+						<NAME>수취기</NAME>
+						<VALUE>WD</VALUE>
+					</record>
+					<record>
+						<NAME>공동주택</NAME>
+						<VALUE>AP</VALUE>
+					</record>
+					<record>
+						<NAME>교량첨가</NAME>
+						<VALUE>BH</VALUE>
+					</record>
+					<record>
+						<NAME>과심도</NAME>
+						<VALUE>DO</VALUE>
+					</record>
+					<record>
+						<NAME>심도미달</NAME>
+						<VALUE>DU</VALUE>
+					</record>
+					<record>
+						<NAME>하수관통</NAME>
+						<VALUE>DW</VALUE>
+					</record>
+					<record>
+						<NAME>저밀도</NAME>
+						<VALUE>LD</VALUE>
+					</record>
+					<record>
+						<NAME>중압직공급</NAME>
+						<VALUE>MD</VALUE>
+					</record>
+					<record>
+						<NAME>15년&#32;경과</NAME>
+						<VALUE>OP</VALUE>
+					</record>
+					<record>
+						<NAME>철길통과</NAME>
+						<VALUE>RO</VALUE>
+					</record>
+					<record>
+						<NAME>PLP단구간</NAME>
+						<VALUE>SP</VALUE>
+					</record>
+					<record>
+						<NAME>하상통과</NAME>
+						<VALUE>UC</VALUE>
+					</record>
+					<record>
+						<NAME>전위불량</NAME>
+						<VALUE>VT</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Cathodic">
+				<Contents>
+					<colinfo id="CATHODIC_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<record>
+						<CATHODIC_YN>Y</CATHODIC_YN>
+						<VALUE>Y</VALUE>
+					</record>
+					<record>
+						<CATHODIC_YN>N</CATHODIC_YN>
+						<VALUE>N</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="11" Id="Image7" ImageID="blt_8" Left="7" LeftMargin="12" Style="text_title" TabOrder="33" Text="정비보수작업" Top="98" Width="130"></Image>
+		<Shape BKColor="user6" Bottom="92" Height="62" Id="Shape1" Left="0" LineColor="user7" Right="1270" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="10" Top="30" Type="RoundRect" Width="1270"></Shape>
+		<Shape BKColor="user8" Bottom="87" Height="52" Id="Shape2" Left="4" LineWidth="0" Right="1266" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="11" Top="35" Type="Rectangle" Width="1262"></Shape>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="16" LeftMargin="12" Style="blt_search_Indis" TabOrder="7" Text="지사" Top="40" Width="59"></Image>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="147" LeftMargin="12" Style="blt_search_Indis" TabOrder="8" Text="시/구" Top="40" Width="59"></Image>
+		<Image Align="Left" Height="18" Id="Image9" ImageID="blt" Left="202" LeftMargin="12" Style="blt_search_1" TabOrder="9" Text="도면수정대상" Top="64" Width="126"></Image>
+		<Combo Border="Flat" CodeColumn="VALUE" DataColumn="MAP_UPD_OBJ_YN" Height="18" Id="cob_Map" InnerDataset="ds_MapUpd" Left="293" ResetIndex="FIRST" Style="combo" TabOrder="5" Top="64" Width="90"></Combo>
+		<Div DisableBKColor="white" Height="30" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="12" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1270">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" INDEX="0" Left="56" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="1" Top="40" Width="80"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo1" INDEX="0" Left="194" Style="combo_indis" TabOrder="2" Top="40" Width="75"></Combo>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="986" LeftMargin="12" Style="blt_search_1" TabOrder="13" Text="의뢰일자" Top="41" Width="64"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_WorkReqStrYmd" Left="1056" OnChanged="cal_WorkReqStrYmd_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="3" Top="41" WeeksFont="Default,-1" Width="90"></Calendar>
+		<Static Height="13" Id="Static10" Left="1152" Style="static" TabOrder="14" Text="~" Top="45" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_WorkReqEndYmd" Left="1169" OnChanged="cal_WorkReqEndYmd_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="4" Top="41" WeeksFont="Default,-1" Width="90"></Calendar>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="16" LeftMargin="12" Style="blt_search_1" TabOrder="15" Text="위험승인대상" Top="64" Width="126"></Image>
+		<Combo Border="Flat" CodeColumn="VALUE" DataColumn="DANGER_APPRO_OBJ_YN" Height="18" Id="cob_Danger" InnerDataset="ds_DangerAppro" Left="104" ResetIndex="FIRST" Style="combo" TabOrder="6" Top="64" Width="90"></Combo>
+		<Shape BKColor="#6cbae1" Bottom="120" Height="3" Id="Shape0" Left="0" LineWidth="0" Right="1270" TabOrder="16" Top="117" Type="Rectangle" Width="1270"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Multi_Excel" BkColor2="#f8f8f8" BkSelColor="skyblue" BoldHead="FALSE" Border="Flat" Bottom="850" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="730" Id="grd_ExcelList" InputPanel="FALSE" LineColor="silver" LineType="ExVERT" MultiSelect="TRUE" Right="1270" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="18" TabStop="true" Top="120" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1270">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+					</columns>
+					<head>
+						<cell align="center" col="0" display="text" text="정비보수번호"/>
+						<cell align="center" col="1" display="text" text="지사"/>
+						<cell align="center" col="2" display="text" text="팀"/>
+						<cell align="center" col="3" display="text" text="정비보수의뢰구분"/>
+						<cell align="center" col="4" display="text" text="시설물번호"/>
+						<cell align="center" col="5" display="text" text="시공업체"/>
+						<cell align="center" col="6" display="text" text="공사의뢰일자"/>
+						<cell align="center" col="7" display="text" text="공사의뢰자사번"/>
+						<cell align="center" col="8" display="text" text="공사의뢰내역"/>
+						<cell align="center" col="9" display="text" text="공사요청일자"/>
+						<cell align="center" col="10" display="text" text="공사구분"/>
+						<cell align="center" col="11" display="text" text="공사유형"/>
+						<cell align="center" col="12" display="text" text="공사위치"/>
+						<cell align="center" col="13" display="text" text="우편번호1"/>
+						<cell align="center" col="14" display="text" text="우편번호2"/>
+						<cell align="center" col="15" display="text" text="보조주소"/>
+						<cell align="center" col="16" display="text" text="지번주소조합"/>
+						<cell align="center" col="17" display="text" text="위험승인대상여부"/>
+						<cell align="center" col="18" display="text" text="이설보수번호"/>
+						<cell align="center" col="19" display="text" text="도면수정대상여부"/>
+						<cell align="center" col="20" display="text" text="MIS수정대상여부"/>
+						<cell align="center" col="21" display="text" text="배관종류"/>
+						<cell align="center" col="22" display="text" text="배관관경코드"/>
+						<cell align="center" col="23" display="text" text="압력구분"/>
+						<cell align="center" col="24" display="text" text="연장"/>
+						<cell align="center" col="25" display="text" text="도로포장종류"/>
+						<cell align="center" col="26" display="text" text="비고1"/>
+						<cell align="center" col="27" display="text" text="예상작업일자"/>
+						<cell align="center" col="28" display="text" text="실작업일자"/>
+						<cell align="center" col="29" display="text" text="굴착승인기간_FROM"/>
+						<cell align="center" col="30" display="text" text="굴착승인기간_TO"/>
+						<cell align="center" col="31" display="text" text="굴착대상여부"/>
+						<cell align="center" col="32" display="text" text="굴착규모"/>
+						<cell align="center" col="33" display="text" text="굴착허가번호"/>
+						<cell align="center" col="34" display="text" text="정산유형"/>
+						<cell align="center" col="35" display="text" text="접수여부"/>
+						<cell align="center" col="36" display="text" text="접수일자"/>
+						<cell align="center" col="37" display="text" text="수신자명"/>
+						<cell align="center" col="38" display="text" text="비고2"/>
+						<cell align="center" col="39" display="text" text="공사대구분"/>
+						<cell align="center" col="40" display="text" text="공사중구분"/>
+						<cell align="center" col="41" display="text" text="공사소구분"/>
+						<cell align="center" col="42" display="text" text="조치시작시간"/>
+						<cell align="center" col="43" display="text" text="조치완료시간"/>
+						<cell align="center" col="44" display="text" text="조치일자"/>
+						<cell align="center" col="45" display="text" text="조치자명"/>
+						<cell align="center" col="46" display="text" text="조치내용"/>
+						<cell align="center" col="47" display="text" text="GIS접수일자"/>
+						<cell align="center" col="48" display="text" text="GIS이관일자"/>
+						<cell align="center" col="49" display="text" text="GIS확인일자"/>
+						<cell align="center" col="50" display="text" text="공사금액_단가"/>
+						<cell align="center" col="51" display="text" text="공사금액_실비"/>
+						<cell align="center" col="52" display="text" text="간접복구비"/>
+						<cell align="center" col="53" display="text" text="직접복구비"/>
+						<cell align="center" col="54" display="text" text="전표처리여부"/>
+						<cell align="center" col="55" display="text" text="전표처리일자"/>
+						<cell align="center" col="56" display="text" text="정비보수상태구분"/>
+						<cell align="center" col="57" display="text" text="결재상태구분"/>
+						<cell align="center" col="58" display="text" text="결재일자(의뢰)"/>
+						<cell align="center" col="59" display="text" text="결재자사번(의뢰)"/>
+						<cell align="center" col="60" display="text" text="결재반려사유(의뢰)"/>
+						<cell align="center" col="61" display="text" text="결재일자(자재)"/>
+						<cell align="center" col="62" display="text" text="결재자사번(자재)"/>
+						<cell align="center" col="63" display="text" text="결재반려사유(자재)"/>
+						<cell align="center" col="64" display="text" text="결재일자(검토_공사비)"/>
+						<cell align="center" col="65" display="text" text="결재자사번(검토_공사비)"/>
+						<cell align="center" col="66" display="text" text="결재반려사유(검토_공사비)"/>
+						<cell align="center" col="67" display="text" text="결재일자(정산)"/>
+						<cell align="center" col="68" display="text" text="결재자사번(정산)"/>
+						<cell align="center" col="69" display="text" text="결재반려사유(정산)"/>
+						<cell align="center" col="70" display="text" text="결재일자(지급품의)"/>
+						<cell align="center" col="71" display="text" text="결재자사번(지급품의)"/>
+						<cell align="center" col="72" display="text" text="결재반려사유(지급품의)"/>
+						<cell align="center" col="73" display="text" text="타블릿통신구분"/>
+						<cell align="center" col="74" display="text" text="첨부파일유무"/>
+						<cell align="center" col="75" display="text" text="결재일자(검토_간접복구비)"/>
+						<cell align="center" col="76" display="text" text="결재자사번(검토_간접복구비)"/>
+						<cell align="center" col="77" display="text" text="결재반려사유(검토_간접복구비)"/>
+						<cell align="center" col="78" display="text" text="결재일자(검토_직접복구비)"/>
+						<cell align="center" col="79" display="text" text="결재자사번(검토_직접복구비)"/>
+						<cell align="center" col="80" display="text" text="결재반려사유(검토_직접복구비)"/>
+						<cell align="center" col="81" display="text" text="승인일자(승인_공사비)"/>
+						<cell align="center" col="82" display="text" text="승인자사번(승인_공사비)"/>
+						<cell align="center" col="83" display="text" text="승인반려사유(승인_공사비)"/>
+						<cell align="center" col="84" display="text" text="승인일자(승인_간접복구비)"/>
+						<cell align="center" col="85" display="text" text="승인자사번(승인_간접복구비)"/>
+						<cell align="center" col="86" display="text" text="승인반려사유(승인_간접복구비)"/>
+						<cell align="center" col="87" display="text" text="승인일자(승인_직접복구비)"/>
+						<cell align="center" col="88" display="text" text="승인자사번(승인_직접복구비)"/>
+						<cell align="center" col="89" display="text" text="승인반려사유(승인_직접복구비)"/>
+						<cell align="center" col="90" display="text" text="기안자사원번호"/>
+						<cell align="center" col="91" display="text" text="결재라인"/>
+						<cell align="center" col="92" display="text" text="결재의견"/>
+						<cell align="center" col="93" display="text" text="결재진행상태"/>
+						<cell align="center" col="94" display="text" text="결재의뢰번호"/>
+						<cell align="center" col="95" display="text" text="결재일자"/>
+						<cell align="center" col="96" display="text" text="재질구분"/>
+						<cell col="97" display="text" text="전기방식대상여부"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MAINTER_NUM" display="text" edit="normal" limit="11"/>
+						<cell align="center" col="1" colid="BRANCH_CD_NM" display="text" edit="normal" limit="6"/>
+						<cell align="center" col="2" colid="TEAM_CD_NM" display="text" edit="normal" limit="6"/>
+						<cell align="center" col="3" colid="MAINTER_REQ_FLAG" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="4" colid="FACI_NUM" display="text" edit="normal" limit="8"/>
+						<cell align="center" col="5" colid="WORK_FIRM_CD_NM" display="text" edit="normal" limit="10"/>
+						<cell align="center" col="6" colid="WORK_REQ_YMD_1" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="7" colid="WORK_REQ_EMPID" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="8" colid="WORK_REQ_DESC" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="9" colid="WORK_REQ_YMD" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="10" colid="WORK_FLAG" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="11" colid="WORK_TYPE" display="text" edit="normal" limit="1"/>
+						<cell align="center" col="12" colid="WORK_LOC1" display="text" edit="normal" limit="100"/>
+						<cell align="center" col="13" colid="ZIP_NO1" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="14" colid="ZIP_NO2" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="15" colid="SECOND_ADDR" display="text" edit="normal" limit="100"/>
+						<cell align="center" col="16" colid="LOT_NUM_UNION" display="text" edit="normal" limit="300"/>
+						<cell align="center" col="17" colid="DANGER_APPRO_OBJ_YN" display="text" edit="normal" limit="1"/>
+						<cell align="center" col="18" colid="MOVE_REPAIR_NUM" display="text" edit="normal" limit="11"/>
+						<cell align="center" col="19" colid="MAP_UPD_OBJ_YN" display="text" edit="normal" limit="1"/>
+						<cell align="center" col="20" colid="MIS_UPD_OBJ_YN" display="text" edit="normal" limit="1"/>
+						<cell align="center" col="21" colid="PIPE_KIND" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="22" colid="PIPE_DIAM_CD" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="23" colid="PRESS_FLAG" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="24" colid="LENG" display="text" edit="normal" limit="5"/>
+						<cell align="center" col="25" colid="PAVEMENT_KIND" display="text" edit="normal" limit="3"/>
+						<cell align="center" col="26" colid="RMK1" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="27" colid="EXPECT_JOB_YMD" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="28" colid="REAL_JOB_YMD" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="29" colid="DIG_APPRO_FROM" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="30" colid="DIG_APPRO_TO" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="31" colid="DIG_OBJ_YN" display="text" edit="normal" limit="1"/>
+						<cell align="center" col="32" colid="DIG_SCALE" display="text" edit="normal" limit="100"/>
+						<cell align="center" col="33" colid="DIG_ADMIT_NUM" display="text" edit="normal" limit="10"/>
+						<cell align="center" col="34" colid="ADJ_TYPE" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="35" colid="RECEIVE_YN" display="text" edit="normal" limit="1"/>
+						<cell align="center" col="36" colid="RECEIVE_YMD" display="text" edit="normal" limit="8"/>
+						<cell align="center" col="37" colid="RECEIVER_NM" display="text" edit="normal" limit="32"/>
+						<cell align="center" col="38" colid="RMK2" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="39" colid="WORK_L_FLAG" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="40" colid="WORK_M_FLAG" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="41" colid="WORK_S_FLAG" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="42" colid="ACT_STR_TIME" display="text" edit="normal" limit="6"/>
+						<cell align="center" col="43" colid="ACT_END_TIME" display="text" edit="normal" limit="6"/>
+						<cell align="center" col="44" colid="ACT_YMD" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="45" colid="ACT_NM" display="text" edit="normal" limit="32"/>
+						<cell align="center" col="46" colid="ACT_DESC" display="text" edit="normal" limit="80"/>
+						<cell align="center" col="47" colid="GIS_RECEIVE_YMD" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="48" colid="GIS_PAS_DU_YMD" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="49" colid="GIS_CONF_YMD" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="50" colid="WORK_AMT_UNIT_PRC" display="text" edit="normal" limit="15"/>
+						<cell align="center" col="51" colid="WORK_AMT_REAL_COST" display="text" edit="normal" limit="15"/>
+						<cell align="center" col="52" colid="IND_RC_AMT" display="text" edit="normal" limit="15"/>
+						<cell align="center" col="53" colid="DIR_RC_AMT" display="text" edit="normal" limit="15"/>
+						<cell align="center" col="54" colid="BILL_TREAT_YN" display="text" edit="normal" limit="1"/>
+						<cell align="center" col="55" colid="BILL_TREAT_YMD" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="56" colid="MAINTER_STS_FLAG" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="57" colid="DECIDE_STS_FLAG" display="text" edit="normal" limit="1"/>
+						<cell align="center" col="58" colid="DECIDE_YMD_REQ" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="59" colid="DECIDE_EMPID_REQ" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="60" colid="DECIDE_RETURN_WHY_REQ" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="61" colid="DECIDE_YMD_MAT" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="62" colid="DECIDE_EMPID_MAT" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="63" colid="DECIDE_RETURN_WHY_MAT" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="64" colid="DECIDE_YMD_WORK_COST" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="65" colid="DECIDE_EMPID_WORK_COST" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="66" colid="DECIDE_RETURN_WHY_WORK_COST" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="67" colid="DECIDE_YMD_RST" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="68" colid="DECIDE_EMPID_RST" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="69" colid="DECIDE_RETURN_WHY_RST" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="70" colid="DECIDE_YMD_PAY" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="71" colid="DECIDE_EMPID_PAY" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="72" colid="DECIDE_RETURN_WHY_PAY" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="73" colid="TABLET_COMM_FLAG" display="text" edit="normal" limit="2"/>
+						<cell align="center" col="74" colid="ATTACH_FILE_YN" display="text" edit="normal" limit="1"/>
+						<cell align="center" col="75" colid="DECIDE_YMD_IND_COST" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="76" colid="DECIDE_EMPID_IND_COST" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="77" colid="DECIDE_RETURN_WHY_IND_COST" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="78" colid="DECIDE_YMD_DIR_COST" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="79" colid="DECIDE_EMPID_DIR_COST" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="80" colid="DECIDE_RETURN_WHY_DIR_COST" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="81" colid="ASSENT_YMD_WORK_COST" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="82" colid="ASSENT_EMPID_WORK_COST" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="83" colid="ASSENT_RETURN_WHY_WORK_COST" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="84" colid="ASSENT_YMD_IND_COST" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="85" colid="ASSENT_EMPID_IND_COST" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="86" colid="ASSENT_RETURN_WHY_IND_COST" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="87" colid="ASSENT_YMD_DIR_COST" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="88" colid="ASSENT_EMPID_DIR_COST" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="89" colid="ASSENT_RETURN_WHY_DIR_COST" display="text" edit="normal" limit="160"/>
+						<cell align="center" col="90" colid="DRAFTER_EMPID" display="text" edit="normal" limit="9"/>
+						<cell align="center" col="91" colid="DECIDE_ROUTE" display="text" edit="normal" limit="300"/>
+						<cell align="center" col="92" colid="DECIDE_OPINI" display="text" edit="normal" limit="1200"/>
+						<cell align="center" col="93" colid="DECIDE_PROC_STS" display="text" edit="normal" limit="1"/>
+						<cell align="center" col="94" colid="DECIDE_REQ_NUM" display="text" edit="normal" limit="13"/>
+						<cell align="center" col="95" colid="DECIDE_YMD" display="date" edit="normal" limit="8"/>
+						<cell align="center" col="96" colid="MATER_FLAG" display="text" edit="normal" limit="3"/>
+						<cell col="97" colid="CATHODIC_YN" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Multi" BkColor2="#f8f8f8" BkSelColor="skyblue" BoldHead="FALSE" Border="Flat" Bottom="850" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="730" Id="grd_Mainter" InputPanel="FALSE" LineColor="silver" LineType="ExVERT" MultiSelect="TRUE" Right="1270" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="17" TabStop="true" Top="120" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1270">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="33"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="130"/>
+						<col width="90"/>
+						<col width="200"/>
+						<col width="90"/>
+						<col width="100"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="90"/>
+						<col width="200"/>
+						<col width="150"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" edit="normal" text="NO"/>
+						<cell col="1" display="text" text="정비보수번호"/>
+						<cell col="2" display="text" text="지사"/>
+						<cell col="3" display="text" text="시/구"/>
+						<cell col="4" display="text" text="팀"/>
+						<cell col="5" display="text" text="공사진행상태"/>
+						<cell col="6" display="text" text="의뢰내역"/>
+						<cell col="7" display="text" text="의뢰일자"/>
+						<cell col="8" display="text" text="시설물구분"/>
+						<cell col="9" display="text" text="시설물번호"/>
+						<cell col="10" display="text" text="공사유형"/>
+						<cell col="11" display="text" text="위험승인대상"/>
+						<cell col="12" display="text" text="도면수정대상"/>
+						<cell col="13" display="text" text="정산유형"/>
+						<cell col="14" display="text" text="조치일자"/>
+						<cell col="15" display="text" text="조치내용"/>
+						<cell col="16" display="text" text="시공회사"/>
+						<cell col="17" display="text" text="전기방식대상여부"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" edit="checkbox" expr="currow+1"/>
+						<cell align="center" col="1" colid="MAINTER_NUM" display="text"/>
+						<cell align="center" col="2" colid="BRANCH_CD_NM" display="text"/>
+						<cell col="3" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="center" col="4" colid="TEAM_CD_NM" display="text"/>
+						<cell align="center" col="5" colid="MAINTER_STS_FLAG_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="6" colid="WORK_REQ_DESC" display="text"/>
+						<cell align="center" col="7" colid="WORK_REQ_YMD_1" display="text" Mask="####-##-##"/>
+						<cell col="8" colid="FACI_NUM_SUB" combocol="VALUE" combodataset="ds_FaciNumSub_02" combotext="NAME" display="combo"/>
+						<cell align="center" col="9" colid="FACI_NUM" display="text"/>
+						<cell align="center" col="10" colid="WORK_TYPE" combocol="VALUE" combodataset="ds_WorkType" combotext="WORK_TYPE" display="combo"/>
+						<cell align="center" col="11" colid="DANGER_APPRO_OBJ_YN" display="text"/>
+						<cell align="center" col="12" colid="MAP_UPD_OBJ_YN" display="text"/>
+						<cell align="center" col="13" colid="ADJ_TYPE_NM" display="text"/>
+						<cell align="center" col="14" colid="REAL_JOB_YMD" display="text" Mask="####-##-##"/>
+						<cell col="15" colid="ACT_DESC" display="text"/>
+						<cell col="16" colid="WORK_FIRM_CD_NM" display="text"/>
+						<cell align="center" col="17" colid="CATHODIC_YN" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="280" LeftMargin="12" Style="blt_search" TabOrder="20" Text="팀" Top="40" Width="46"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_TeamCd" InnerDataset="ds_Team" Left="307" Style="combo_indis" TabOrder="19" Top="40" Width="125"></Combo>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="797" LeftMargin="12" Style="blt_search_1" TabOrder="21" Text="시공회사" Top="41" Width="59"></Image>
+		<Combo Border="Flat" CodeColumn="VALUE" DataColumn="NAME" Height="18" Id="cob_FaciNumSub" InnerDataset="ds_FaciNumSub_01" Left="470" ResetIndex="FIRST" Style="combo" TabOrder="22" Top="64" Width="90"></Combo>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="392" LeftMargin="12" Style="blt_search_1" TabOrder="23" Text="시설물구분" Top="64" Width="126"></Image>
+		<Image Align="Left" Height="18" Id="Image29" ImageID="blt" Left="441" LeftMargin="12" Style="blt_search" TabOrder="25" Text="공사진행상태" Top="40" Width="91"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_MainterStsFlag" Left="527" Style="combo" TabOrder="24" Top="40" Width="65"></Combo>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="600" LeftMargin="12" Style="blt_search" TabOrder="26" Text="승인상태" Top="40" Width="86"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_AssentType" Left="663" Style="combo" TabOrder="27" Top="40" Width="125"></Combo>
+		<Combo Border="Flat" CodeColumn="DEAL_CD" DataColumn="DEAL_CD_NM" Height="18" Id="cob_WorkFirmCd" InnerDataset="ds_WorkFirmCd" Left="859" ResetIndex="FIRST" Style="combo" TabOrder="28" Top="40" Width="120"></Combo>
+		<Edit AutoSelect="TRUE" BKColor="white" Border="None" Height="20" Id="Edit1" ImeMode="none" Left="106" MaxLength="10" Style="static" TabOrder="31" Text="(" Top="94" Width="7"></Edit>
+		<Image Align="Left" Height="6" Id="Image18" ImageID="blt" Left="134" LeftMargin="12" Style="blt_search" TabOrder="32" Text="건" Top="101" Width="30"></Image>
+		<Edit Align="CENTER" AutoSelect="TRUE" BKColor="white" Border="None" DisableBKColor="white" Height="20" Id="edt_Count" ImeMode="none" Left="116" MaxLength="10" Number="TRUE" Readonly="TRUE" Style="static" TabOrder="29" Top="94" Width="30"></Edit>
+		<Edit AutoSelect="TRUE" BKColor="white" Border="None" Height="20" Id="Edit4" ImeMode="none" Left="163" MaxLength="10" Style="static" TabOrder="30" Text=")" Top="94" Width="7"></Edit>
+		<Combo Border="Flat" CodeColumn="VALUE" DataColumn="CATHODIC_YN" Height="18" Id="cob_CathodicYn" InnerDataset="ds_Cathodic" Left="664" ResetIndex="FIRST" Style="combo" TabOrder="34" Top="64" Width="90"></Combo>
+		<Image Align="Left" Height="18" Id="Image10" ImageID="blt" Left="568" LeftMargin="12" OnClick="Image10_OnClick" Style="blt_search_1" TabOrder="35" Text="전기방식구분" Top="64" Width="126"></Image>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1205010070F.xml
+* Form 설명  : 정비보수 작업현황조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 송석환 
+* 작성일     : 2013-03-06
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1205010070F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+    fn_Init();
+    gfn_D1_SetGrid_Sort(grd_Mainter);
+    fn_D1_WorkFirmCdList();
+}
+/*===============================================================================
+ * 기      능   :  공통 코드 셋팅
+===============================================================================*/
+function fn_Init()
+{
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branchcd"));
+//-----------------------------------------
+//  지사 콤보박스의 초기 설정
+//-----------------------------------------	
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+		cob_Branchcd.Enable = true;
+	}else{
+		cob_Branchcd.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+		cob_Branchcd.Enable = false;
+	} 			
+	cob_BranchCd_OnChanged();
+	gfn_D1_All_SetComboBox_Comcode("D10115",gfn_setDsObject_Comcode("cob_MainterStsFlag"),""); 	//공사진행상태
+		cob_MainterStsFlag.Value="";
+	gfn_D1_All_SetComboBox_Comcode("D10116",gfn_setDsObject_Comcode("cob_AssentType"),"");		//승인상태
+		cob_AssentType.Index = 8;	
+}
+/********************************************************************************
+* 기      능   :  지사_구 콤보 
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+    fn_SetComboBox_Comcode("1", cob_BranchCd.value, fn_setDsObject_Comcode("1", "cob_ZipNo1"));
+    //cob_ZipNo1.Index = 0;
+    gfn_D1_SetComboBox_Teamcd("ds_Team",cob_Branchcd);
+   
+    cob_ZipNo1.Value="";
+	cob_TeamCd.Value="";
+    
+    // if(cob_BranchCd.Value = "100584"){							//서부
+		// cob_ZipNo1.Value="";
+		// cob_TeamCd.Value="";
+	// }else if(cob_BranchCd.Value = "100664"){					//강북
+		// cob_ZipNo1.Value="";
+		// cob_TeamCd.Value="";
+	// }else if(cob_BranchCd.Value = "100591"){					//남부
+		// cob_ZipNo1.Value="";
+		// cob_TeamCd.Value="";
+	// }else if(cob_BranchCd.Value = "101500"){					//경기
+		// cob_ZipNo1.Value="";
+		// cob_TeamCd.Value="";
+	// }
+}
+
+/*===============================================================================
+ * 기      능   :  공통 조회
+===============================================================================*/
+function fn_CommonSearch()
+{
+	if(cob_FaciNumSub.Value == "OUT"){
+		fn_D1_List1();
+		fn_D1_ExcelList1();
+	}else{
+		fn_D1_List();
+		fn_D1_ExcelList();
+	}
+	edt_Count.Text = ds_Multi.GetRowCount();
+}
+
+/*===============================================================================
+ * 기      능   :  조회(시설물)
+===============================================================================*/
+function fn_D1_List()
+{
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiWorkSearMgr-service&searchCathodic_Yn=1"
+				+ "&BRANCH_CD=" + cob_BranchCd.Value
+				+ "&ZIP_NO1=" + cob_ZipNo1.Value
+				+ "&TEAM_CD=" + cob_TeamCd.Value
+				+ "&MAINTER_STS_FLAG=" + cob_MainterStsFlag.Value
+				+ "&WORK_REQ_YMD_1_01=" + cal_WorkReqStrYmd.Value
+				+ "&WORK_REQ_YMD_1_02=" + cal_WorkReqEndYmd.Value
+				+ "&MAP_UPD_OBJ_YN=" + cob_Map.Value
+				+ "&DANGER_APPRO_OBJ_YN=" + cob_Danger.Value
+				+ "&FACI_NUM=" + cob_FaciNumSub.Value
+				+ "&ASSENT_TYPE=" + cob_AssentType.Value
+				+ "&WORK_FIRM_CD=" + cob_WorkFirmCd.Value
+				+ "&CATHODIC_YN=" + cob_CathodicYn.Value
+			   ;  															
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+	grd_Mainter.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");		
+}
+/*===============================================================================
+ * 기      능   :  조회(시설물 외)
+===============================================================================*/
+function fn_D1_List1()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiWorkSearMgr-service&searchCathodic_Yn1=1"
+				+ "&BRANCH_CD=" + cob_BranchCd.Value
+				+ "&ZIP_NO1=" + cob_ZipNo1.Value
+				+ "&TEAM_CD=" + cob_TeamCd.Value
+				+ "&MAINTER_STS_FLAG=" + cob_MainterStsFlag.Value
+				+ "&WORK_REQ_YMD_1_01=" + cal_WorkReqStrYmd.Value
+				+ "&WORK_REQ_YMD_1_02=" + cal_WorkReqEndYmd.Value
+				+ "&MAP_UPD_OBJ_YN=" + cob_Map.Value
+				+ "&DANGER_APPRO_OBJ_YN=" + cob_Danger.Value
+				+ "&ASSENT_TYPE=" + cob_AssentType.Value
+				+ "&WORK_FIRM_CD=" + cob_WorkFirmCd.Value
+				+ "&CATHODIC_YN=" + cob_CathodicYn.Value
+			   ;  															
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+	grd_Mainter.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");		
+}
+/*===============================================================================
+ * 기      능   :  엑셀 조회(시설물)
+===============================================================================*/
+function fn_D1_ExcelList()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiWorkSearMgr-service&SearchCathodic_Yn_Excel=1"
+				+ "&BRANCH_CD=" + cob_BranchCd.Value
+				+ "&ZIP_NO1=" + cob_ZipNo1.Value
+				+ "&TEAM_CD=" + cob_TeamCd.Value
+				+ "&MAINTER_STS_FLAG=" + cob_MainterStsFlag.Value
+				+ "&WORK_REQ_YMD_1_01=" + cal_WorkReqStrYmd.Value
+				+ "&WORK_REQ_YMD_1_02=" + cal_WorkReqEndYmd.Value
+				+ "&MAP_UPD_OBJ_YN=" + cob_Map.Value
+				+ "&DANGER_APPRO_OBJ_YN=" + cob_Danger.Value
+				+ "&FACI_NUM=" + cob_FaciNumSub.Value
+				+ "&ASSENT_TYPE=" + cob_AssentType.Value
+				+ "&WORK_FIRM_CD=" + cob_WorkFirmCd.Value
+				+ "&CATHODIC_YN=" + cob_CathodicYn.Value
+			   ;  															
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi_Excel=ds_Multi_Excel";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+	
+}
+/*===============================================================================
+ * 기      능   :  엑셀 조회(시설물 외)
+===============================================================================*/
+function fn_D1_ExcelList1()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiWorkSearMgr-service&SearchCathodic_Yn_Excel1=1"
+				+ "&BRANCH_CD=" + cob_BranchCd.Value
+				+ "&ZIP_NO1=" + cob_ZipNo1.Value
+				+ "&TEAM_CD=" + cob_TeamCd.Value
+				+ "&MAINTER_STS_FLAG=" + cob_MainterStsFlag.Value
+				+ "&WORK_REQ_YMD_1_01=" + cal_WorkReqStrYmd.Value
+				+ "&WORK_REQ_YMD_1_02=" + cal_WorkReqEndYmd.Value
+				+ "&MAP_UPD_OBJ_YN=" + cob_Map.Value
+				+ "&DANGER_APPRO_OBJ_YN=" + cob_Danger.Value
+				+ "&ASSENT_TYPE=" + cob_AssentType.Value
+				+ "&WORK_FIRM_CD=" + cob_WorkFirmCd.Value
+				+ "&CATHODIC_YN=" + cob_CathodicYn.Value
+			   ;  															
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi_Excel=ds_Multi_Excel";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+	
+}
+/*===============================================================================
+ * 기      능   :  공통 Excel
+===============================================================================*/
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    SearchCondition = SearchCondition + "지사코드 :" + RPad(cob_BranchCd.Text," ",20);
+    SearchCondition = SearchCondition + "팀코드 :" + RPad(cob_TeamCd.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo1.Text," ",20);
+    SearchCondition = SearchCondition + "진행상태 :" + RPad(cob_MainterStsFlag.Text," ",20);
+    SearchCondition = SearchCondition + "작업의뢰일자 :" + RPad(cal_WorkReqStrYmd.Value +" ~ "+ cal_WorkReqEndYmd.Value," ",20);
+    SearchCondition = SearchCondition + "위험승인대상 :" + RPad(cob_Danger.Text," ",20);
+    SearchCondition = SearchCondition + "도면수정대상 :" + RPad(cob_Map.Text," ",20); 
+    
+    gfn_ExportExcel("정비보수 작업현황조회", 5, SearchCondition, "grd_ExcelList"); 	
+}
+//-------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 인쇄
+//-------------------------------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+//-------------------------------------------------------------------------------
+// 설명     :   FROM ~ TO 체크 (조회)
+//-------------------------------------------------------------------------------
+function cal_WorkReqStrYmd_OnChanged(obj,strOldText,strNewText)
+{
+	if(cal_WorkReqStrYmd.Value !="" && cal_WorkReqEndYmd.Value !="" && cal_WorkReqStrYmd.Value > cal_WorkReqEndYmd.Value){	
+		alert("TO 날짜는 FROM 날짜보다 같거나 큰값을 입력하세요.");
+		cal_WorkReqStrYmd.SetFocus();
+		cal_WorkReqStrYmd.value = "";
+		cal_WorkReqEndYmd.value = "";		
+		return;
+	}	
+}
+
+function cal_WorkReqEndYmd_OnChanged(obj,strOldText,strNewText)
+{
+	if(cal_WorkReqStrYmd.Value !="" && cal_WorkReqEndYmd.Value !="" && cal_WorkReqStrYmd.Value > cal_WorkReqEndYmd.Value){	
+		alert("TO 날짜는 FROM 날짜보다 같거나 큰값을 입력하세요.");
+		cal_WorkReqStrYmd.SetFocus();
+		cal_WorkReqStrYmd.value = "";
+		cal_WorkReqEndYmd.value = "";		
+		return;
+	}	
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_WorkFirmCdList()
+//   설명:  정비 관련 시공사코드및 명 가져오기 
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_WorkFirmCdList()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiWorkSearMgr-service&WorkFirmCd=1"
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_WorkFirmCd=ds_WorkFirmCd";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	ds_WorkFirmCd.InsertRow(0);
+	ds_WorkFirmCd.SetColumn(0,"DEAL_CD","");
+	ds_WorkFirmCd.SetColumn(0,"DEAL_CD_NM","전체");
+}]]></Script>
+</Window>

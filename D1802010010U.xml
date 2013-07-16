@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="560" Id="D1802010010U" Left="8" OnLoadCompleted="D18020010U_OnLoadCompleted" PidAttrib="7" Title="재산세&#32;산출내역&#32;과세표" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Tax_A">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" type="STRING"/>
+					<colinfo id="PIPE_MATER_FLAG" size="256" type="STRING"/>
+					<colinfo id="UNIT_PRC" size="256" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" type="STRING"/>
+					<colinfo id="PIPE_MATER_NM" size="256" type="STRING"/>
+					<colinfo id="BASE_YEAR_NM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Tax_C">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="TAX_STD_RATE" size="256" type="STRING"/>
+					<colinfo id="PROPE_TAX_RATE" size="256" type="STRING"/>
+					<colinfo id="C_PLAN_TAX_RATE" size="256" type="STRING"/>
+					<colinfo id="EDU_TAX_RATE" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Tax_B">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" type="STRING"/>
+					<colinfo id="INSTALL_YESR" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="REMAIN_PRI_RATE" size="256" type="STRING"/>
+					<colinfo id="BASE_YEAR_NM" size="256" type="STRING"/>
+					<colinfo id="INSTALL_YESR_NM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Check">
+				<Contents>
+					<colinfo id="NCOUNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Tax_B_New">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSTALL_YESR" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="REMAIN_PRI_RATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSTALL_YESR_NM" size="256" summ="default" type="STRING"/>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1980</INSTALL_YESR>
+						<INSTALL_YESR_NM>1980년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1981</INSTALL_YESR>
+						<INSTALL_YESR_NM>1981년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1982</INSTALL_YESR>
+						<INSTALL_YESR_NM>1982년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1983</INSTALL_YESR>
+						<INSTALL_YESR_NM>1983년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1984</INSTALL_YESR>
+						<INSTALL_YESR_NM>1984년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1985</INSTALL_YESR>
+						<INSTALL_YESR_NM>1985년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1986</INSTALL_YESR>
+						<INSTALL_YESR_NM>1986년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1987</INSTALL_YESR>
+						<INSTALL_YESR_NM>1987년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1988</INSTALL_YESR>
+						<INSTALL_YESR_NM>1988년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1989</INSTALL_YESR>
+						<INSTALL_YESR_NM>1989년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1990</INSTALL_YESR>
+						<INSTALL_YESR_NM>1990년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1991</INSTALL_YESR>
+						<INSTALL_YESR_NM>1991년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1992</INSTALL_YESR>
+						<INSTALL_YESR_NM>1992년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1993</INSTALL_YESR>
+						<INSTALL_YESR_NM>1993년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1994</INSTALL_YESR>
+						<INSTALL_YESR_NM>1994년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1995</INSTALL_YESR>
+						<INSTALL_YESR_NM>1995년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1996</INSTALL_YESR>
+						<INSTALL_YESR_NM>1996년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1997</INSTALL_YESR>
+						<INSTALL_YESR_NM>1997년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1998</INSTALL_YESR>
+						<INSTALL_YESR_NM>1998년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1999</INSTALL_YESR>
+						<INSTALL_YESR_NM>1999년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2000</INSTALL_YESR>
+						<INSTALL_YESR_NM>2000년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2001</INSTALL_YESR>
+						<INSTALL_YESR_NM>2001년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2002</INSTALL_YESR>
+						<INSTALL_YESR_NM>2002년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2003</INSTALL_YESR>
+						<INSTALL_YESR_NM>2003년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2004</INSTALL_YESR>
+						<INSTALL_YESR_NM>2004년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR>2006</BASE_YEAR>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2005</INSTALL_YESR>
+						<INSTALL_YESR_NM>2005년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Tax_A_New">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_MATER_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_MATER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR_NM" size="256" summ="default" type="STRING"/>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>090</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>100MM&#32;이하</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>010</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PE</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>140</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>100MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>010</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PE</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>160</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>150MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>010</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PE</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>220</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>200MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>010</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PE</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>280</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>250MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>010</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PE</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>315</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>300MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>010</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PE</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>355</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>350MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>010</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PE</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>450</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>400MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>010</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PE</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>500</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>500MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>010</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PE</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>090</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>100MM&#32;이하</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>020</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PLP</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>140</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>100MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>020</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PLP</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>160</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>150MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>020</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PLP</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>220</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>200MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>020</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PLP</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>280</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>250MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>020</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PLP</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>315</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>300MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>020</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PLP</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>355</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>350MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>020</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PLP</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>450</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>400MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>020</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PLP</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2006년~2008년</BASE_YEAR_NM>
+						<PIPE_DIAM_FLAG>500</PIPE_DIAM_FLAG>
+						<PIPE_DIAM_NM>500MM&#32;이상</PIPE_DIAM_NM>
+						<PIPE_MATER_FLAG>020</PIPE_MATER_FLAG>
+						<PIPE_MATER_NM>PLP</PIPE_MATER_NM>
+						<UNIT_PRC></UNIT_PRC>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Tax_B_Old">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSTALL_YESR" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="REMAIN_PRI_RATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSTALL_YESR_NM" size="256" summ="default" type="STRING"/>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1978</INSTALL_YESR>
+						<INSTALL_YESR_NM>1978년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1979</INSTALL_YESR>
+						<INSTALL_YESR_NM>1979년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1980</INSTALL_YESR>
+						<INSTALL_YESR_NM>1980년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1981</INSTALL_YESR>
+						<INSTALL_YESR_NM>1981년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1982</INSTALL_YESR>
+						<INSTALL_YESR_NM>1982년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1983</INSTALL_YESR>
+						<INSTALL_YESR_NM>1983년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1984</INSTALL_YESR>
+						<INSTALL_YESR_NM>1984년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1985</INSTALL_YESR>
+						<INSTALL_YESR_NM>1985년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1986</INSTALL_YESR>
+						<INSTALL_YESR_NM>1986년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1987</INSTALL_YESR>
+						<INSTALL_YESR_NM>1987년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1988</INSTALL_YESR>
+						<INSTALL_YESR_NM>1988년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1989</INSTALL_YESR>
+						<INSTALL_YESR_NM>1989년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1990</INSTALL_YESR>
+						<INSTALL_YESR_NM>1990년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1991</INSTALL_YESR>
+						<INSTALL_YESR_NM>1991년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1992</INSTALL_YESR>
+						<INSTALL_YESR_NM>1992년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1993</INSTALL_YESR>
+						<INSTALL_YESR_NM>1993년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1994</INSTALL_YESR>
+						<INSTALL_YESR_NM>1994년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1995</INSTALL_YESR>
+						<INSTALL_YESR_NM>1995년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1996</INSTALL_YESR>
+						<INSTALL_YESR_NM>1996년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1997</INSTALL_YESR>
+						<INSTALL_YESR_NM>1997년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1998</INSTALL_YESR>
+						<INSTALL_YESR_NM>1998년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>1999</INSTALL_YESR>
+						<INSTALL_YESR_NM>1999년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2000</INSTALL_YESR>
+						<INSTALL_YESR_NM>2000년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2001</INSTALL_YESR>
+						<INSTALL_YESR_NM>2001년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2002</INSTALL_YESR>
+						<INSTALL_YESR_NM>2002년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2003</INSTALL_YESR>
+						<INSTALL_YESR_NM>2003년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2004</INSTALL_YESR>
+						<INSTALL_YESR_NM>2004년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<BASE_YEAR_NM>2005년</BASE_YEAR_NM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<INSTALL_YESR>2005</INSTALL_YESR>
+						<INSTALL_YESR_NM>2005년</INSTALL_YESR_NM>
+						<REMAIN_PRI_RATE></REMAIN_PRI_RATE>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Check1">
+				<Contents>
+					<colinfo id="NCOUNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static9" Left="840" Style="table" TabOrder="21" Top="192" VAlign="Middle" Width="159" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static8" Left="840" Style="table" TabOrder="20" Top="168" VAlign="Middle" Width="159" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="822" Style="table" TabOrder="13" Top="95" VAlign="Middle" Width="177" WordWrap="TRUE"></Static>
+		<Image Align="Left" Color="blue" Height="18" Id="Image7" ImageID="blt" Left="6" LeftMargin="12" Style="blt_search" TabOrder="8" Text="기준년도" Top="45" Width="74"></Image>
+		<Shape BKColor="#6cbae1" Bottom="93" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="355" TabOrder="9" Top="90" Type="Rectangle" Width="350"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Tax_A" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="552" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="459" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="355" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="2" TabStop="true" Top="93" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="350">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="관경(A)"/>
+						<cell col="1" display="text" text="재질"/>
+						<cell col="2" display="text" text="금액(원)"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="PIPE_DIAM_NM" display="text"/>
+						<cell align="center" col="1" colid="PIPE_MATER_NM" display="text"/>
+						<cell align="right" col="2" colid="UNIT_PRC" display="number" edit="number" limit="9" text="0"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="10" Text="과표" Top="75" Width="120"></Image>
+		<Shape BKColor="#6cbae1" Bottom="93" Height="3" Id="Shape3" Left="360" LineWidth="0" Right="710" TabOrder="11" Top="90" Type="Rectangle" Width="350"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Tax_B" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="552" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="459" Id="Grid1" InputPanel="FALSE" Left="360" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="710" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="93" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="350">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="설치년도"/>
+						<cell col="1" display="text" text="잔가율(%)"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="INSTALL_YESR_NM" display="text"/>
+						<cell align="right" col="1" colid="REMAIN_PRI_RATE" display="number" edit="number" limit="2" LimitDec="2" text="0"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Edit Align="RIGHT" AutoSelect="TRUE" BindDataset="ds_Tax_C" Border="Flat" Column="TAX_STD_RATE" Height="18" Id="Edit0" ImeMode="none" Left="845" MaxLength="2" Number="TRUE" Style="edit" TabOrder="4" Top="97" Width="133"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static3" Left="717" Style="table" TabOrder="12" Text="년도&#32;세율" Top="95" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="10" Id="Image0" ImageID="blt_8" Left="717" LeftMargin="12" Style="text_title" TabOrder="14" Text="과세표준율" Top="80" Width="120"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static1" Left="840" Style="table" TabOrder="16" Top="144" VAlign="Middle" Width="159" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" AutoSelect="TRUE" BindDataset="ds_Tax_C" Border="Flat" Column="PROPE_TAX_RATE" Height="18" Id="Edit2" ImeMode="none" Left="845" MaxLength="2" Number="TRUE" Style="edit" TabOrder="5" Top="146" Width="135"></Edit>
+		<Image Align="Left" Height="11" Id="Image1" ImageID="blt_8" Left="717" LeftMargin="12" Style="text_title" TabOrder="17" Text="세율" Top="126" Width="120"></Image>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="717" Style="table" TabOrder="18" Text="도시계획세" Top="168" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" AutoSelect="TRUE" BindDataset="ds_Tax_C" Border="Flat" Column="C_PLAN_TAX_RATE" Height="18" Id="Edit3" ImeMode="none" Left="845" MaxLength="2" Number="TRUE" Style="edit" TabOrder="6" Top="170" Width="134"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="717" Style="table" TabOrder="15" Text="재산세" Top="144" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="717" Style="table" TabOrder="19" Text="교육세" Top="192" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" AutoSelect="TRUE" BindDataset="ds_Tax_C" Border="Flat" Column="EDU_TAX_RATE" Height="18" Id="Edit4" ImeMode="none" Left="846" MaxLength="2" Number="TRUE" Style="edit" TabOrder="7" Top="194" Width="133"></Edit>
+		<Image Align="Left" Height="10" Id="Image2" ImageID="blt_8" Left="361" LeftMargin="12" Style="text_title" TabOrder="22" Text="잔가율" Top="75" Width="120"></Image>
+		<Static Height="15" Id="Static0" Left="983" TabOrder="23" Text="%" Top="100" Width="16"></Static>
+		<Static Height="15" Id="Static7" Left="983" TabOrder="24" Text="%" Top="197" Width="16"></Static>
+		<Static Align="Right" Color="user1" Height="13" Id="Static10" Left="727" TabOrder="25" Text="2005" Top="100" Width="59"></Static>
+		<Image Align="Left" Height="39" Id="Image3" ImageID="popup_top" Left="-8" LeftMargin="33" OnClick="Image3_OnClick" Style="popup_title" TabOrder="26" Text="재산세&#32;산출내역&#32;과세표" Transparent="TRUE" Width="1012"></Image>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="140" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="27" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="864">
+			<Contents></Contents>
+		</Div>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear" Left="72" Style="spin" TabOrder="1" Text="2008" Top="45" Width="54"></Spin>
+		<Static Height="15" Id="Static11" Left="983" TabOrder="28" Text="%" Top="174" Width="16"></Static>
+		<Static Height="15" Id="Static12" Left="983" TabOrder="29" Text="%" Top="150" Width="16"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802010010U.xml
+* Form 설명  : 도로상 점용과세표
+* 시스템 명  : 안전공급 (D10)
+* 작성자     : 정주혜 
+* 작성일     : 2009-02-01
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+var nCount;
+
+function D18020010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}                                                                 
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{	
+	//fn_SetButton("0011011");
+	cob_BaseYear.Value = subStr(today(), 0, 4);
+	Static10.Text      = subStr(today(), 0, 4);
+	
+	fn_CommonSearch();
+}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+function fn_CommonSearch(){
+
+	Static10.Text = cob_BaseYear.Text;
+	
+	nCount = fn_D1_check();
+	fn_D1_find_A();
+}
+
+function fn_CommonAddRow(){	
+	
+	if(ds_Tax_A.GetRowCount() > 0){
+		return;
+	}
+	
+	if(ds_Tax_B.GetRowCount() > 0){
+		return;
+	}
+	
+	if(ds_Tax_C.GetRowCount() > 0){
+		return;
+	}
+		
+	addNum = 1;			
+		
+	ds_Tax_A.Copy("ds_Tax_A_New");
+	
+	if(cob_BaseYear.Value <= '2005'){
+		ds_Tax_B.Copy("ds_Tax_B_Old");
+	}else{
+		for(var i = ds_Tax_B_New.GetColumn(ds_Tax_B_New.GetRowCount()-1, "INSTALL_YESR"); i<cob_BaseYear.Value; i++){
+			
+			var j = ds_Tax_B_New.AddRow();
+			
+			ds_Tax_B_New.SetColumn(j, "INSTALL_YESR"   , parseInt(i)+1       );
+			ds_Tax_B_New.SetColumn(j, "INSTALL_YESR_NM", parseInt(i)+1 + "년");	
+		}
+	
+		ds_Tax_B.Copy("ds_Tax_B_New");
+	}
+		
+	ds_Tax_C.AddRow();
+	ds_Tax_C.SetColumn(0, "BASE_YEAR"     , cob_BaseYear.Value);
+} 
+
+function fn_CommonSave(){
+	
+	if(ds_Tax_A.GetColumn(0, "UNIT_PRC") == '' || ds_Tax_A.GetColumn(0, "UNIT_PRC") == null){
+		alert(gfn_GetMessage("M000015","%AAA%","과표 금액(원)은 "));
+		return;
+	}
+	
+	fn_D1_save_A();
+	fn_D1_save_B();
+	fn_D1_save_C();
+	
+	alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+}
+
+
+function fn_D1_check(){
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_RoadLeaseObjRegisMgrTax-service"
+						+ "&BASE_YEAR=" + cob_BaseYear.Value
+						;		
+	
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Check=ds_Check ds_Check1=ds_Check1";
+	var strArgument     = "find_Check";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find_A()
+//   설명  :  과세표_A 내역 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find_A()
+{			    
+    var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_RoadLeaseObjRegisMgrTax-service"
+						+ "&BASE_YEAR=" + cob_BaseYear.Value
+						;
+						
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Tax_A=ds_Tax_A ds_Tax_B=ds_Tax_B ds_Tax_C=ds_Tax_C";
+	var strArgument     = "find";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID	
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_Tax_A.GetRowCount()==0){
+		Grid0.NoDataText = gfn_GetMessage("M000009","%AAA%","조회를");
+	}
+	
+	if(ds_Tax_B.GetRowCount()==0){
+		Grid1.NoDataText = gfn_GetMessage("M000009","%AAA%","조회를");
+	}
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_save_A()
+//   설명  :  과세표_A 내역 저장
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_save_A()
+{   		
+	ds_Tax_A.UpdateControl = false;
+	
+	if(ds_Check.GetColumn(0, "NCOUNT") > 0){
+		for(var i=0; i<20; i++){
+			ds_Tax_A.SetColumn(i, "BASE_YEAR", cob_BaseYear.Value);
+			ds_Tax_A.SetRowType(i, "update");
+			fn_GetDataSet_Value(i);
+		}
+	} else {
+		for(var i=0; i<20; i++){
+			ds_Tax_A.SetColumn(i, "BASE_YEAR", cob_BaseYear.Value);
+			ds_Tax_A.SetRowType(i, "insert");
+			fn_GetDataSet_Value(i);
+		}
+	}
+	
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_RoadLeaseObjRegisMgrTax-service";
+	var strInDatasets    = "ds_Tax_A=ds_Tax_A:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_A";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+function fn_D1_save_B()
+{   
+	ds_Tax_B.UpdateControl = false;
+	
+	var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;   // SESSION ID
+	var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");   // SESSION IP
+
+	if(ds_Check1.GetColumn(0, "NCOUNT") > 0){
+		for(var i=0; i<ds_Tax_B.GetRowCount(); i++){
+			ds_Tax_B.SetRowType(i, "update");			
+			ds_Tax_B.SetColumn(i, "BASE_YEAR", cob_BaseYear.Value);
+			ds_Tax_B.SetColumn(i, "UPD_EMPID"  , USER_ID       );
+			ds_Tax_B.SetColumn(i, "UPD_IP"     , USER_IP       );
+			ds_Tax_B.SetColumn(i, "CRT_EMPID"  , USER_ID       );
+			ds_Tax_B.SetColumn(i, "CRT_IP"     , USER_IP       );
+		}
+	} else {
+		for(var i=0; i<ds_Tax_B.GetRowCount(); i++){
+			ds_Tax_B.SetRowType(i, "insert");
+			ds_Tax_B.SetColumn(i, "BASE_YEAR"  , cob_BaseYear.Value);
+			ds_Tax_B.SetColumn(i, "UPD_EMPID"  , USER_ID       );
+			ds_Tax_B.SetColumn(i, "UPD_IP"     , USER_IP       );
+			ds_Tax_B.SetColumn(i, "CRT_EMPID"  , USER_ID       );
+			ds_Tax_B.SetColumn(i, "CRT_IP"     , USER_IP       );
+		}
+	}	
+	
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_RoadLeaseObjRegisMgrTax-service";
+	var strInDatasets    = "ds_Tax_B=ds_Tax_B:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_B";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+function fn_D1_save_C()
+
+{   					
+	var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;   // SESSION ID
+	var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");   // SESSION IP
+	
+	ds_Tax_C.SetColumn(0, "BASE_YEAR"  , cob_BaseYear.Value);
+	ds_Tax_C.SetColumn(0, "UPD_EMPID"  , USER_ID           );
+	ds_Tax_C.SetColumn(0, "UPD_IP"     , USER_IP		   );
+	ds_Tax_C.SetColumn(0, "CRT_EMPID"  , USER_ID           );
+	ds_Tax_C.SetColumn(0, "CRT_IP"     , USER_IP		   );
+	
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_RoadLeaseObjRegisMgrTax-service";
+	var strInDatasets    = "ds_Tax_C=ds_Tax_C:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_C";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_GetDataSet_Value()
+//   설명  :  도로상 점용과세표 등록 기본 셋팅
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_GetDataSet_Value(i){
+			
+	var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;   // SESSION ID
+	var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");   // SESSION IP
+
+	ds_Tax_A.AddColumn("UPD_EMPID"     , "STRING", 256 );	// ID
+	ds_Tax_A.AddColumn("UPD_IP"        , "STRING", 256 );	// IP
+	ds_Tax_A.AddColumn("CRT_EMPID"     , "STRING", 256 );	// ID
+	ds_Tax_A.AddColumn("CRT_IP"        , "STRING", 256 );	// IP
+	
+	ds_Tax_A.SetColumn(i, "UPD_EMPID"  , USER_ID       );
+	ds_Tax_A.SetColumn(i, "UPD_IP"     , USER_IP	   );
+	ds_Tax_A.SetColumn(i, "CRT_EMPID"  , USER_ID       );
+	ds_Tax_A.SetColumn(i, "CRT_IP"     , USER_IP	   );
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - Print
+//---------------------------------------------------------
+function fn_CommonPrint()
+{
+}
+]]></Script>
+</Window>

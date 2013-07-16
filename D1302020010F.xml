@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1301020010F" Left="8" OnLoadCompleted="D1301020010F_OnLoadCompleted" PidAttrib="7" Title="자율검사&#32;결과등록" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Plan">
+				<Contents>
+					<colinfo id="CODE" size="256" type="STRING"/>
+					<colinfo id="ITEM" size="256" type="STRING"/>
+					<record>
+						<CODE>1</CODE>
+						<ITEM>등록</ITEM>
+					</record>
+					<record>
+						<CODE>2</CODE>
+						<ITEM>계획</ITEM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team">
+				<Contents>
+					<colinfo id="KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Block">
+				<Contents>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1257" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="1" Top="30" Type="RoundRect" Width="1252"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape0" Left="10" LineWidth="0" Right="1252" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="35" Type="Rectangle" Width="1242"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1252" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="2" Top="35" Type="Rectangle" Width="1242"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="3" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1252">
+			<Contents></Contents>
+		</Div>
+		<Tab Border="Flat" FixedImage="FALSE" Height="757" Id="tab_FaciReg" Left="8" OnChanging="tab_FaciReg_OnChanging" PreLoad="TRUE" Style="tab" TabOrder="4" Top="72" Width="1252">
+			<Contents>
+				<TabPage Height="727" Id="tabpg01" ImageID="tab" Left="2" Style="tab" TabOrder="60" Text="배관" Top="28" Url="D10::D1302020010F_T01.xml" Width="1248"></TabPage>
+				<TabPage Height="727" Id="tabpg02" ImageID="tab" Left="2" Style="tab" TabOrder="13" Text="정압기" Top="28" Url="D10::D1302020010F_T02.xml" Width="1248"></TabPage>
+				<TabPage Height="727" Id="tabpg03" ImageID="tab" Left="2" scroll="true" TabOrder="13" Text="공동주택" Top="28" Url="D10::D1302020010F_T03.xml" Width="1248"></TabPage>
+			</Contents>
+		</Tab>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search_Indis" TabOrder="9" Text="지사" Top="40" Width="84"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Branch" ImeMode="none" Left="56" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="6" Top="40" Width="120"></Combo>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="185" LeftMargin="12" Style="blt_search_Indis" TabOrder="10" Text="시/구" Top="40" Width="95"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo" Left="228" Style="combo_indis" TabOrder="7" Top="40" Width="120"></Combo>
+		<Image Align="Left" Height="18" Id="Image10" ImageID="blt" Left="354" LeftMargin="12" Style="blt_search_Indis" TabOrder="13" Text="팀" Top="41" Width="84"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cob_Team" InnerDataset="ds_Team" Left="380" OnChanged="cob_Team_OnChanged" Style="combo_indis" TabOrder="12" Top="39" Width="120"></Combo>
+		<Image Align="Left" Height="18" Id="Image22" ImageID="blt" Left="509" LeftMargin="12" Style="blt_search" TabOrder="15" Text="구간" Top="41" Width="41"></Image>
+		<Combo BKColor="user8" Border="Flat" CodeColumn="BLOCK_CD" DataColumn="BLOCK_NM" Height="18" Id="cob_PBlockCd" ImeMode="none" InnerDataset="ds_Block" Left="548" Style="combo" TabOrder="14" Top="40" Width="185"></Combo>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="741" LeftMargin="12" Style="blt_search_Indis" TabOrder="11" Text="년도" Top="41" Width="84"></Image>
+		<Spin Border="Flat" Height="18" Id="sp_Year" Left="781" Style="spin_indis" TabOrder="8" Text="2008" Top="41" Width="54"></Spin>
+		<Image Align="Left" Height="18" Id="Image33" ImageID="blt" Left="845" LeftMargin="12" Style="blt_search_Indis" TabOrder="16" Text="공동주택명" Top="41" Width="76"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_Faci_Nm" ImeMode="none" Left="923" MaxLength="8" Style="edit" TabOrder="17" TabStop="FALSE" Top="41" UpperOnly="TRUE" Width="115"></Edit>
+	</Form>
+	<Script><![CDATA[/********************`*******************************************************************************
+* FormID     : D1302020010F.xml
+* Form 설명  : 정기검사결과등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2008-11-19
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+//------------------------------------------------------------------------------- 
+// 함수명: D1301020010F_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1301020010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	Image33.Visible = false;
+	edt_Faci_Nm.Visible = false;	
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branch"));
+	//gfn_SetComboBox_Comcode("B10004",gfn_setDsObject_Comcode("cob_ZipNo"));
+	//gfn_SetComboBox_Comcode("A10150",gfn_setDsObject_Comcode("cob_TeamCd"));
+	
+	if (IsExistVar("PORTLET_FLAG", true)) {
+		if (PORTLET_FLAG == "p") {
+			tab_FaciReg_OnActivate();
+		}
+	}else{ 
+		//-----------------------------------------
+		//  콤보박스의 초기 설정
+		//-----------------------------------------	
+		if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+			cob_Branch.Enable = true;
+			cob_Branch.Index  = 0;
+		 } else {
+			 cob_Branch.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+			 cob_Branch.Enable = false;
+		 }
+		
+		cob_BranchCd_OnChanged();
+		sp_Year.Text = substr(today(),0,4);
+	}
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSearch()
+   설명: 공통 조회 클릭시 조회 업무  수행 
+   return 내용: 없음
+===============================================================================*/ 
+
+function fn_CommonSearch(){
+
+	if(!fn_DateCheckYear(sp_Year))
+	{
+		return;
+	}else{
+		tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_SearchPlan();
+	}
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSave()
+   설명: 상세 내용를 저장 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonSave()
+{
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_SaveReg();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonAddRow()
+   설명:  결과등록 레코드 한줄을 추가한다.
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonAddRow()
+{
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_AddRow();
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_Branch.value, fn_setDsObject_Comcode("1", "cob_ZipNo"));
+    cob_ZipNo.Index = 0;
+    
+    gfn_D1_SetComboBox_Teamcd("ds_Team",cob_Branch);
+    cob_Team.Value = "";
+    
+    cob_Team_OnChanged();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonDeleteRow()
+   설명:  결과등록 레코드 한줄을 삭제한다.
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonDeleteRow()
+{   
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_DeleteRow();
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonExcelExport()
+//   설명  :  엑셀다운 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_CommonExcelExport()
+{
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_ExcelExport();
+}
+
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+function tab_FaciReg_OnActivate(obj)
+{
+	if (IsExistVar("PORTLET_FLAG", true)) {
+		if (PORTLET_FLAG == "p") {
+					
+			sp_Year.Text     = INSPECT_YEAR;
+			
+			cob_Branch.value = BRANCH_CD;
+			
+			cob_BranchCd_OnChanged();
+			
+			cob_ZipNo.value = ZIP_NO1;
+			
+				if(GUBUN = "PIPE")
+				{
+					tab_FaciReg.TabIndex = 0;
+					tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_SearchPlanPortlet(INSPECT_YEAR, BRANCH_CD, ZIP_NO1);			
+				
+				}else if(GUBUN = "GOV")
+				{
+					tab_FaciReg.TabIndex = 1;
+					
+				}else if(GUBUN = "HOUSE")
+				{
+					tab_FaciReg.TabIndex = 2;
+				}
+		}
+	}
+}
+
+// 배관 팝업
+function fn_Maint_Repai_Reque(flag0, flag1, flag2, flag3, flag4, flag5, flag6, flag7, flag8, flag9, flag10, flag11, flag12, flag13, flag14)
+{
+	var args = "";
+	
+	    args  = "INSPECT_STR_YMD="   + quote(flag0);
+		args += " VALVE_CNT="        + quote(flag1);
+		args += " TB_CNT="           + quote(flag2);
+		args += " WTDR_CNT=" 	     + quote(flag3);
+		args += " INSPECT_YMD_PRI1=" + quote(flag4);
+		args += " BLOCK_NM="  	     + quote(flag5);
+		args += " BLOCK_CD=" 	     + quote(flag6);
+		args += " INSPECT_YEAR="     + quote(flag7);
+		args += " STR_POINT=" 	     + quote(flag8);
+		args += " END_POINT=" 	     + quote(flag9);
+		args += " ROWTYPE="  	     + quote(flag10);
+		args += " CRT_DTM="			 + quote(flag11);
+		args += " CRT_EMPID="		 + quote(flag12);
+		args += " DECIDE_YMD="		 + quote(flag13);
+		args += " DECIDE_PROC_STS="	 + quote(flag14);
+						
+	    return gfn_Dialog("D10","D1302040010U",args,904,728,true,-1,240);
+}
+
+// 정압기 팝업
+function fn_Maint_Repai_Reque1(flag0, flag1, flag2, flag3, flag4, flag5, flag6, flag7, flag8, flag9, flag10, flag11, flag12, flag13)
+{
+	var args = "";
+			
+		args  = "INSPECT_YMD="       + quote(flag0);
+		args += " INSPECT_YMD_PRI1=" + quote(flag1);
+		args += " INST_YMD="         + quote(flag2);
+		args += " GOV_ROOM_NM="      + quote(flag3);
+		args += " GOV_MODEL_NM="     + quote(flag4);
+		args += " LOT_NUM_UNION="    + quote(flag5);
+		args += " GOV_NUM=" 		 + quote(flag6);
+		args += " FACI_NUM=" 		 + quote(flag7);
+		args += " INSPECT_YEAR=" 	 + quote(flag8);
+		args += " ROWTYPE=" 		 + quote(flag9);
+		args += " CRT_DTM="			 + quote(flag10);
+		args += " CRT_EMPID="		 + quote(flag11);
+		args += " DECIDE_YMD="		 + quote(flag12);
+		args += " DECIDE_PROC_STS="	 + quote(flag13);		
+				
+	    return gfn_Dialog("D10","D1302050010U",args,900,701,true,-1,240);
+}
+
+// 공통주택 팝업
+function fn_Maint_Repai_Reque2(flag0, flag1, flag2, flag3, flag4, flag5, flag6, flag7, flag8, flag9, flag10, flag11)
+{
+	var args = "";
+			
+		args  = "INSPECT_YMD="       + quote(flag0);
+		args += " INSPECT_YMD_PRI1=" + quote(flag1);
+		args += " CO_LIVE_NM="       + quote(flag2);
+		args += " FACI_RMK=" 		 + quote(flag3);
+		args += " FACI_NUM=" 		 + quote(flag4);
+		args += " INSPECT_YEAR=" 	 + quote(flag5);
+		args += " ROWTYPE=" 		 + quote(flag6);
+		args += " MATER_FLAG=" 		 + quote(flag7);
+		args += " CRT_DTM="			 + quote(flag8);
+		args += " CRT_EMPID="		 + quote(flag9);
+		args += " DECIDE_YMD="		 + quote(flag10);
+		args += " DECIDE_PROC_STS="	 + quote(flag11);		
+		
+	    // 자율검사서 팝업 상단 위치조정_By Paeng_20130524
+	    return gfn_Dialog("D10","D1302060010U",args,900,640,"true",-1,-1);
+}
+	
+function tab_FaciReg_OnChanging(obj,nOldIndex,nNewIndex)
+{
+	if(nNewindex == 2)
+	{
+		Image10.Visible = false;
+		cob_Team.Visible = false;
+		Image22.Visible = false;
+		Image33.Visible = true;
+		edt_Faci_Nm.Visible = true;
+		cob_PBlockCd.Visible = false;
+		Image2.Left = 357;
+		sp_Year.Left = 400;
+		Image33.Left = 460;
+		edt_Faci_Nm.Left = 540;		
+		
+	}else{
+		Image10.Visible = true;
+		cob_Team.Visible = true;
+		Image22.Visible = true;
+		Image33.Visible = false;
+		edt_Faci_Nm.Visible = false;
+		cob_PBlockCd.Visible = true;
+		Image2.Left = 741;
+		sp_Year.Left = 781;
+	}
+}
+
+function cob_Team_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	ds_Search.ClearData();
+	ds_Search.AddRow();
+	
+	ds_Search.SetColumn(0, "BRANCH_CD" , cob_Branch.Value);
+	ds_Search.SetColumn(0, "TEAM_CD", cob_Team.Value);
+
+	var strSvcID = "find_block";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeMgr-service";
+	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Block=ds_Block";
+	var strArgument  = "find_block=1";
+				
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );					 	           
+    
+    if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	
+	cob_PBlockCd.Index = 0;
+	
+	if(ds_Block.GetRowCount() == 0){
+		cob_PBlockCd.Enable = false;
+	}else{
+		cob_PBlockCd.Enable = true;
+		// 전체추가
+		var str_nRow = ds_Block.AppendRow();
+		ds_Block.SetColumn(str_nRow, "BLOCK_CD", ""    );
+		ds_Block.SetColumn(str_nRow, "BLOCK_NM", "전체");
+	}	
+}
+]]></Script>
+</Window>

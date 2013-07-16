@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="700" Id="D1301010012U" Left="8" OnLoadCompleted="D1301010012U_OnLoadCompleted" PidAttrib="7" Title="정기검사신청서작성_D1301010012U" Top="8" Ver="1.0" Width="800" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_UpdateForm">
+				<Contents>
+					<colinfo id="INSPECT_YEAR" size="256" type="STRING"/>
+					<colinfo id="GOV_NUM" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<record>
+						<BLOCK_CD></BLOCK_CD>
+						<FACI_NUM></FACI_NUM>
+						<GOV_NUM></GOV_NUM>
+						<INSPECT_YEAR></INSPECT_YEAR>
+						<UPD_EMP></UPD_EMP>
+						<UPD_IP></UPD_IP>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_OzSet">
+				<Contents>
+					<colinfo id="OUTPUT_DTM" size="11" summ="default" type="STRING"/>
+					<colinfo id="EMPLOYEE_ID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="OUTPUT_ID" size="255" summ="default" type="STRING"/>
+					<colinfo id="OUTPUT_FLAG" size="1" summ="default" type="CHAR"/>
+					<colinfo id="ACCESS_IP_ADDRESS" size="255" summ="default" type="STRING"/>
+					<colinfo id="ACCESS_PC_NAME" size="255" summ="default" type="STRING"/>
+					<colinfo id="OUTPUT_CNT" size="5" summ="default" type="DECIMAL"/>
+					<colinfo id="OUTPUT_NAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="정기검사신청서&#32;출력" Transparent="TRUE" Width="800"></Image>
+		<OZAViewer Bottom="696" Height="658" Id="OZAViewer0" OZPrintCommand="OZAViewer0_OZPrintCommand" Right="800" Top="38" Width="800"></OZAViewer>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1301010012U.xml
+* Form 설명  : 자율 검사 배관장표를 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2009-01-05
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+
+var strInspectFlag  = "";
+var strFormFlag     = "";
+var strInspecdtYear = "";
+var strGovNum 	    = "";
+var strFaciNum 	    = "";
+var strBlockCd 	    = "";
+var strRgPlanYmd 	= "";
+var strsfOfficeNum  = "";
+
+var fv_RepId;
+
+function D1301010012U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	fn_Init();
+	
+	fv_RepId = "D1301010012P";
+	
+	// 신청서를 인쇄하는 팝업 오픈한다.	
+	var args  = "INSPECT_SCOPE="         + replace(INSPECT_SCOPE, "!", "");
+		args += ",INSPECT_BE_SCOPE="     + INSPECT_BE_SCOPE     ;
+		args += ",INSPECT_FLAG="	     + INSPECT_FLAG         ;
+		args += ",FORM_FLAG="	         + FORM_FLAG		    ;
+		args += ",INSPECT_YEAR="         + INSPECT_YEAR		    ;
+		args += ",GOV_NUM="              + GOV_NUM			    ;
+		args += ",FACI_NUM="		     + FACI_NUM		  	    ;
+		args += ",BLOCK_CD="			 + BLOCK_CD			    ;
+		args += ",REG_INSPECT_PLAN_YMD=" + REG_INSPECT_PLAN_YMD ;
+		args += ",SAFE_OFFICE_NUM="      + SAFE_OFFICE_NUM      ;
+		
+	var strTitle    = "정기 검사 신청서"; 
+	var strPart     = "D10"			    ;           
+	var strReport   = "D1301010012P"    ; 
+	var strParameter= args				;
+
+	var strParam = gfn_SetReportParam(strPart,strReport,strParameter,strTitle);
+	OZAViewer0.CreateReport(strParam);
+}
+
+function D1301010012U_OnSize(obj,nCx,nCy,nState)
+{
+	Image0.Width      = D1301010012U.Width; 
+	Image0.Top        = 0; 
+	Image0.Left       = 0; 
+	OZAViewer0.Left   = 0;
+	OZAViewer0.Top    = Image0.Height;
+	OZAViewer0.Width  = D1301010012U.Width;
+	OZAViewer0.Height = D1301010012U.Height - Image0.Height;	
+}
+
+function fv_setOzRepInfo()
+{
+	var strSvcID 	   = "OzInfo";
+	var strPart 	   = "A10";
+	var strURL         = "handle.do?ServiceName=A1801010011U-service&addOzInfo=1";
+	var strInDatasets  = "ds_RepInfo=ds_OzSet:u";
+	var strOutDatasets = "";
+	var strArgument    = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+function OZAViewer0_OZPrintCommand(obj,msg,code,reportname,printername,printcopy,printpages,printrange,username,printerdrivername)
+{
+	ds_OzSet.ClearData();
+	ds_OzSet.AddRow();
+	ds_OzSet.SetColumn(0,"OUTPUT_DTM"       ,gfn_GetServerTime());
+	ds_OzSet.SetColumn(0,"EMPLOYEE_ID"      ,gfn_GetGlobalValue("G_USER_NO"));
+	ds_OzSet.SetColumn(0,"OUTPUT_ID"        ,fv_RepId);
+	ds_OzSet.SetColumn(0,"OUTPUT_NAME"      ,reportname);
+	//ds_OzSet.SetColumn(0,"OUTPUT_ID",reportname);
+	ds_OzSet.SetColumn(0,"OUTPUT_FLAG"      ,"O");			// OZ 인경우는 O로 구분 
+	ds_OzSet.SetColumn(0,"ACCESS_IP_ADDRESS",gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_OzSet.SetColumn(0,"ACCESS_PC_NAME"   ,gfn_GetLocalPcName());
+	ds_OzSet.SetColumn(0,"OUTPUT_CNT"       ,printcopy);
+	
+	fv_setOzRepInfo();
+	
+	fn_D1_UpdateFormFlag();
+	str_StateFlag = '유';
+	Close(str_StateFlag);
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{	
+	if(IsExistVar("INSPECT_SCOPE"))
+	{
+		strInspectBeScope = INSPECT_SCOPE;
+	}
+	if(IsExistVar("INSPECT_BE_SCOPE"))
+	{
+		strInspectBeScope = INSPECT_BE_SCOPE;
+	}
+	if(IsExistVar("INSPECT_FLAG"))
+	{
+		strInspectFlag = INSPECT_FLAG;
+	}
+	if(IsExistVar("FORM_FLAG"))
+	{
+		strFormFlag = FORM_FLAG;
+	}
+	if(IsExistVar("INSPECT_YEAR"))
+	{
+		strInspecdtYear = INSPECT_YEAR;
+	}
+	if(IsExistVar("GOV_NUM"))
+	{
+		strGovNum = GOV_NUM;
+	}
+	if(IsExistVar("FACI_NUM"))
+	{
+		strFaciNum = FACI_NUM;
+	}
+	if(IsExistVar("BLOCK_CD"))
+	{
+		strBlockCd = BLOCK_CD;
+	}
+	if(IsExistVar("REG_INSPECT_PLAN_YMD"))
+	{
+		strRgPlanYmd = REG_INSPECT_PLAN_YMD;
+	}
+	if(IsExistVar("SAFE_OFFICE_NUM"))
+	{
+		strsfOfficeNum = SAFE_OFFICE_NUM;
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_UpdateFormFlag()
+//   설명:  정기검사계획 신청서 출력후 출력 여부 저장.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_UpdateFormFlag()
+{	
+	//수정 등록시 셋팅할 사용자 정보
+	ds_UpdateForm.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_UpdateForm.SetColumn(0, "UPD_IP"      , gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_UpdateForm.SetColumn(0, "INSPECT_YEAR", strInspecdtYear);
+	
+	var strSvcID 	   = "update";
+	var strPart  	   = "D10";
+	var strURL         = "handle.do?ServiceName=D1_RegulTestRequeWriteMgr-service";
+	var strInDatasets  = "ds_UpdateForm=ds_UpdateForm:u";
+	var strOutDatasets = "";
+	var strArgument    = "";
+	
+	if(strFormFlag == "1")
+	{
+		strArgument = "updateFormFlagPipe";
+		ds_UpdateForm.SetColumn(0, "BLOCK_CD", strBlockCd);
+	}else if(strFormFlag == "2")
+	{
+		strArgument = "updateFormFlagGov";
+		ds_UpdateForm.SetColumn(0, "GOV_NUM", strGovNum);
+		ds_UpdateForm.SetColumn(0, "FACI_NUM", strFaciNum);
+	}else if(strFormFlag == "3")
+	{
+		strArgument = "updateFormFlagHouse";
+		ds_UpdateForm.SetColumn(0, "FACI_NUM", strFaciNum);
+	}
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+}]]></Script>
+</Window>

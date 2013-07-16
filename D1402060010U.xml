@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="896" Id="D1402060010U" Left="8" OnLoadCompleted="D1402060010U_OnLoadCompleted" PidAttrib="7" Title="GIS데이터&#32;수정의뢰서" Top="8" Ver="1.0" Width="1272" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_insert">
+				<Contents>
+					<colinfo id="GIS_UPD_REQ_NUM" size="10" summ="default" type="STRING"/>
+					<colinfo id="GIS_UPD_REQ_PATH_CD" size="2" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="7" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="9" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="7" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="9" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="6" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="10" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="1" summ="default" type="STRING"/>
+					<colinfo id="EOCS_NUM" size="13" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="1" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="11" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="160" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="3" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="3" summ="default" type="STRING"/>
+					<colinfo id="ZIP_SEQ" size="3" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="300" summ="default" type="STRING"/>
+					<colinfo id="SECOND_ADDR" size="300" summ="default" type="STRING"/>
+					<colinfo id="NEW_ADDR_BLD_SEQ" size="10" summ="default" type="STRING"/>
+					<colinfo id="NEW_HOSU" size="4" summ="default" type="STRING"/>
+					<colinfo id="NEW_UNGRNOUD_YN" size="1" summ="default" type="STRING"/>
+					<colinfo id="NEW_ADDR_UNION" size="300" summ="default" type="STRING"/>
+					<colinfo id="JOIN_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="CONF_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="160" summ="default" type="STRING"/>
+					<colinfo id="BEFO_PIPE_DIAM_CD" size="3" summ="default" type="STRING"/>
+					<colinfo id="CONF_DIAM_CD" size="3" summ="default" type="STRING"/>
+					<colinfo id="BEFO_MATER_FLAG" size="1" summ="default" type="STRING"/>
+					<colinfo id="CONF_MATER_FLAG" size="1" summ="default" type="STRING"/>
+					<colinfo id="IMAGE_TYPE" size="1" summ="default" type="STRING"/>
+					<colinfo id="CEN_X_COORDI" size="14" summ="default" type="STRING"/>
+					<colinfo id="CEN_Y_COORDI" size="14" summ="default" type="STRING"/>
+					<colinfo id="UP_LEFT_Y_COODI" size="14" summ="default" type="STRING"/>
+					<colinfo id="LOW_RIGHT_X_COODI" size="14" summ="default" type="STRING"/>
+					<colinfo id="LOW_RIGHT_Y_COODI" size="14" summ="default" type="STRING"/>
+					<colinfo id="EMPID_1" size="9" summ="default" type="STRING"/>
+					<colinfo id="EMPID_2" size="9" summ="default" type="STRING"/>
+					<colinfo id="EMPID_3" size="9" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_STS_FLAG" size="1" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID" size="2" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RTURN_WHY" size="160" summ="default" type="STRING"/>
+					<colinfo id="TABLET_TELE_FLAG" size="2" summ="default" type="STRING"/>
+					<colinfo id="DRAFTER_EMPID" size="9" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_ROUTE" size="300" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_OPINI" size="1200" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_STS" size="1" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="4" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="10" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" size="3" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="3" summ="default" type="STRING"/>
+					<colinfo id="COATING_STS" size="1" summ="default" type="STRING"/>
+					<colinfo id="UP_LEFT_X_COODI" size="14" summ="default" type="STRING"/>
+					<colinfo id="BLUEPRINT_DRAFT_DESC" size="4000" summ="default" type="STRING"/>
+					<colinfo id="EMPID_1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="HILL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_S" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLD_DONG" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_chk">
+				<Contents>
+					<colinfo id="GIS_UPD_REQ_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FileList">
+				<Contents>
+					<colinfo id="FILE_ID" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NUM" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_FLAG" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_KIND" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_ID" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM" size="256" type="STRING"/>
+					<colinfo id="ORIG_ATTACH_FILE_NM" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_PATH" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_SIZE" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_TYPE" size="256" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" type="STRING"/>
+					<colinfo id="USE_YN" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_chk2">
+				<Contents>
+					<colinfo id="GIS_UPD_REQ_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static50" Left="110" Style="table" TabOrder="21" Top="126" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static54" Left="110" Style="table" TabOrder="26" Top="105" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="10" Id="Image4" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="15" TabStop="FALSE" Text="기본정보" Top="70" Width="67"></Image>
+		<Image Align="Left" Height="10" Id="Image6" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="16" TabStop="FALSE" Text="시설내역" Top="157" Width="67"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static31" Left="30" Style="table" TabOrder="17" Top="239" VAlign="Middle" Width="1235" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static40" Left="5" Style="table" TabOrder="18" Text="도면첨부" Top="239" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edt_FileList" Left="143" Readonly="TRUE" Style="edit" TabOrder="17" TabStop="FALSE" Top="241" Width="1042"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="18" Id="Button23" ImageID="btn_4_fileadd" Left="1186" LeftMargin="21" OnClick="bt_d1_FileUpload" Style="button" TabOrder="18" TabStop="FALSE" Text="파일첨부&#32;" Top="241" Width="75"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button77" ImageID="btn_4_Plan&#32;start" Left="1187" LeftMargin="21" OnClick="bt_d1_WebGis" Style="button" TabOrder="19" TabStop="FALSE" Text="WEB&#32;GIS" Top="217" Width="76"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static51" Left="317" Style="table_indis" TabOrder="21" Text="공사명" Top="105" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static52" Left="110" Style="table" TabOrder="23" Top="84" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static53" Left="5" Style="table_indis" TabOrder="22" Text="확인일자" Top="84" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static55" Left="5" Style="table_indis" TabOrder="24" Text="입회자" Top="105" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static57" Left="317" Style="table_indis" TabOrder="25" Text="GIS수정의뢰번호" Top="84" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static60" Left="628" Style="table_indis" TabOrder="27" Text="공사구분" Top="84" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static62" Left="5" Style="table_indis" TabOrder="28" Text="주소" Top="126" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_insert" Border="Flat" Column="EMPID_1_NM" Height="18" Id="edt_EmpId1" ImeMode="none" Left="143" Style="edit_Indis" TabOrder="4" Top="107" Width="152"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static15" Left="939" Style="table_indis" TabOrder="29" Text="관리번호" Top="84" VAlign="Middle" Width="79" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_insert" Border="Flat" Column="GIS_UPD_REQ_PATH_CD" Height="18" Id="cob_GisUpdReqPathCd" Left="764" Style="combo_indis" TabOrder="2" Top="85" Width="173"></Combo>
+		<Calendar BindDataset="ds_insert" Border="Flat" Column="CONF_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ConfYmd" Left="143" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="1" Top="86" WeeksFont="Default,-1" Width="171"></Calendar>
+		<Edit BindDataset="ds_insert" Border="Flat" Column="GIS_UPD_REQ_NUM" Enable="FALSE" Height="18" Id="edt_GisNum" ImeMode="none" Left="455" Style="edit" TabOrder="20" TabStop="FALSE" Top="86" Width="170"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_WorkNum" ImeMode="none" Left="1020" Style="edit" TabOrder="21" TabStop="FALSE" Top="86" Width="222"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_EocsNum" ImageID="search" Left="296" OnClick="btn_CardUserEmpNm" TabOrder="5" Text="Button8" Top="108" Width="17"></Button>
+		<Edit BindDataset="ds_insert" Border="Flat" Column="LOT_NUM_UNION" Enable="FALSE" Height="18" Id="edt_BasicAddr" ImeMode="none" Left="162" Style="edit" TabOrder="22" TabStop="FALSE" Top="128" Width="462"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="143" OnClick="fn_ZipSearch" TabOrder="6" Text="Button8" Top="129" Width="17"></Button>
+		<Edit BindDataset="ds_insert" Border="Flat" Column="WORK_NM" Height="18" Id="edt_WorkNm" ImeMode="none" Left="455" Style="edit" TabOrder="8" Top="107" Width="806"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static3" Left="110" Style="table" TabOrder="36" Top="169" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="5" Style="table_indis" TabOrder="35" Text="기존재질" Top="169" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static5" Left="110" Style="table" TabOrder="39" Top="190" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="5" Style="table_indis" TabOrder="37" Text="코팅상태" Top="190" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static7" Left="317" Style="table_indis" TabOrder="38" Text="확인재질" Top="169" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static8" Left="628" Style="table_indis" TabOrder="40" Text="기존관경" Top="169" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static9" Left="317" Style="table" TabOrder="41" Text="특기사항" Top="190" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static10" Left="939" Style="table_indis" TabOrder="42" Text="확인관경" Top="169" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_insert" Border="Flat" Column="CONF_DIAM_CD" Height="18" Id="cob_ConfDiamCd" Left="1076" Style="combo_indis" TabOrder="12" Top="170" Width="186"></Combo>
+		<Edit BindDataset="ds_insert" Border="Flat" Column="RMK" Height="18" Id="Edit10" ImeMode="none" Left="455" Style="edit" TabOrder="14" Top="192" Width="806"></Edit>
+		<Combo BindDataset="ds_insert" Border="Flat" Column="BEFO_MATER_FLAG" Height="18" Id="cob_BefoMaterFlag" Left="142" OnChanged="cob_BefoMaterFlag_OnChanged" Style="combo_indis" TabOrder="9" Top="170" Width="172"></Combo>
+		<Image Align="Left" Height="10" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="23" TabStop="FALSE" Text="도면" Top="225" Width="43"></Image>
+		<Combo BindDataset="ds_insert" Border="Flat" Column="CONF_MATER_FLAG" Height="18" Id="cob_ConfMaterFlag" Left="454" OnChanged="cob_ConfMaterFlag_OnChanged" Style="combo_indis" TabOrder="10" Top="170" Width="172"></Combo>
+		<Combo BindDataset="ds_insert" Border="Flat" Column="BEFO_PIPE_DIAM_CD" Height="18" Id="cob_BefoPipeDiamCd" Left="765" Style="combo_indis" TabOrder="11" Top="170" Width="172"></Combo>
+		<Combo BindDataset="ds_insert" Border="Flat" Column="COATING_STS" Height="18" Id="cob_CoatingSts" Left="142" Style="combo_indis" TabOrder="13" Top="191" Width="172"></Combo>
+		<Edit BindDataset="ds_insert" Border="Flat" Column="NEW_ADDR_UNION" Enable="FALSE" Height="18" Id="edt_DetaAddr" ImeMode="none" Left="764" Style="edit" TabOrder="7" TabStop="FALSE" Top="128" Width="497"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button0" ImageID="search" Left="1244" OnClick="bt_d1_popup" TabOrder="3" Text="Button8" Top="86" Width="17"></Button>
+		<WebBrowser Height="632" Id="web_Gis" Left="5" TabOrder="24" Top="261" Width="1261"></WebBrowser>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button203" ImageID="btn_4" Left="1108" LeftMargin="21" OnClick="bt_d1_sanction" Style="button" TabOrder="25" TabStop="FALSE" Text="전자결재" Top="217" Width="76"></Button>
+		<Div Height="24" Id="Div0" TabOrder="26" TabStop="FALSE" Text="Div0" Top="40" Url="globals::ComButton.xml" Width="1261">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="39" Id="Image1" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="47" TabStop="FALSE" Text="GIS데이터&#32;수정의뢰서" Transparent="TRUE" Width="1270"></Image>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static0" Left="627" Style="table_indis" TabOrder="48" Text="신주소" Top="126" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+	</Form>
+	<Script><![CDATA[/*******************************************************************************
+* FormID     : D1402060010U.xml
+* Form 설명  : GIS공통수정의뢰서를 등록한다.
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 문달호
+* 작성일     : 2009-03-17
+* 변경내용   : 
+*******************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONA10005.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONA10008.js";
+#include "JS::COMMONE20001.js";
+
+var find ="";
+var gis_pk ="";
+var gubun="";
+var sSheet="";
+var sFilter="";
+var pathFlag="";
+var save_flag="";
+function D1402060010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	if (IsExistVar("GIS_UPD_REQ_NUM", true)) {
+		gfn_SetComboBox_Comcode("D10192",gfn_setDsObject_Comcode("cob_GisUpdReqPathCd"));
+	    gfn_SetComboBox_Comcode("D10002",gfn_setDsObject_Comcode("cob_BefoMaterFlag"));
+	    gfn_SetComboBox_Comcode("D10002",gfn_setDsObject_Comcode("cob_ConfMaterFlag"));
+	  //  gfn_SetComboBox_Comcode("D10002",gfn_setDsObject_Comcode("cob_BefoPipeDiamCd"));
+	  //  gfn_SetComboBox_Comcode("B30007",gfn_setDsObject_Comcode("cob_ConfDiamCd"));     
+	    gfn_SetComboBox_Comcode("D20062",gfn_setDsObject_Comcode("cob_CoatingSts"));
+	    gis_pk=GIS_UPD_REQ_NUM;
+	    
+	    // 2012.09.19 이건민 - 변수 누락 건 (버그수정)
+		gubun=GIS_UPD_REQ_PATH_CD;
+		
+		pathFlag="Y";
+		cob_GisUpdReqPathCd.Enable=false;
+		Button0.Visible=false;
+		btn_EocsNum.Visible=false;
+		Button1.Visible=false;
+		fn_d1_GisSearch();
+		cob_BefoMaterFlag_OnChanged();
+		cob_ConfMaterFlag_OnChanged();
+		fn_d1_FileSearch();
+		fn_d1_goGis();
+
+	}
+	else
+	{
+		fn_Init();
+	}
+	
+}
+
+
+function fn_Init()
+{
+
+    ds_insert.ClearData();
+	ds_insert.AddRow();
+	save_flag="insert";
+	var day = Today();
+	var yymmdd=  SubStr(day,2,6); 
+	cal_ConfYmd.Value=day;
+	
+	gfn_SetComboBox_Comcode("D10192",gfn_setDsObject_Comcode("cob_GisUpdReqPathCd"));
+	gfn_SetComboBox_Comcode("D10002",gfn_setDsObject_Comcode("cob_BefoMaterFlag"));
+	gfn_SetComboBox_Comcode("D10002",gfn_setDsObject_Comcode("cob_ConfMaterFlag"));
+	//gfn_SetComboBox_Comcode("B30022",gfn_setDsObject_Comcode("cob_BefoPipeDiamCd"));
+	//gfn_SetComboBox_Comcode("B30022",gfn_setDsObject_Comcode("cob_ConfDiamCd"));      
+	gfn_SetComboBox_Comcode("D20062",gfn_setDsObject_Comcode("cob_CoatingSts"));
+
+}
+
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+//-------------------------------------------------------------------------------
+//   함수명: fn_ZipSearch()
+//   설명: 우편번호 조회클릭시 우편번호 조회 popup화면 로딩
+//   arguments   
+//   obj: 사용된 객체를 전달 한다.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_ZipSearch(obj)
+{
+	var arrList = gfn_Dialog("A10","A1101020010U","",1090,1095,true,-1,-1);
+	
+		
+		ds_insert.SetColumn(0,"ZIP_NO1",arrList[2] ); // 우편번호 1
+		ds_insert.SetColumn(0,"ZIP_NO2",arrList[3] ); // 우편번호 2
+		ds_insert.SetColumn(0,"ZIP_SEQ",arrList[0] ); // 주소일련번호 
+		ds_insert.SetColumn(0,"HILL",arrList[10] );    // 산번지
+		ds_insert.SetColumn(0,"ADDR_M",arrList[11] );  // 본번 
+		ds_insert.SetColumn(0,"ADDR_S",arrList[12] );  // 부번 
+		ds_insert.SetColumn(0,"SECOND_ADDR",arrList[13] ); //보조주소
+		ds_insert.SetColumn(0,"BLD_DONG",arrList[14] ); // 동
+		ds_insert.SetColumn(0,"HOSU",arrList[15] ); // 호수
+		ds_insert.SetColumn(0,"LOT_NUM_UNION",arrList[17] );  // 지번주소조합 
+		// ds_insert.SetColumn(0,"NEW_ADDR_BLD_SEQ",arrList[18] ); // 새주소건물일련번호
+		// ds_insert.SetColumn(0,"NEW_HOSU",arrList[21] );         // 새주소 호수 
+		// ds_insert.SetColumn(0,"NEW_ADDR_UNION",arrList[23] );   // 새주소 조합 
+		
+		// edt_ZipNo1.Text    = arrList[0];
+		// edt_ZipNo2.Text    = arrList[1];
+		// ds_insert.SetColumn(0,"ZIP_SEQ",arrList[2]);
+		// edt_BasicAddr.Text = arrList[3];
+	
+}
+
+//*********************************
+//* 사원 찾기 팝업
+//* 
+//*********************************
+function btn_CardUserEmpNm(obj)
+{
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_EmpId1.Text); //사용자코드(조회조건용)
+	ds_insert.SetColumn(0,"EMPID_1",retValue[0]);
+	edt_EmpId1.Text=retValue[1];
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonSave()
+//   설명  :  저장 버튼 클릭시 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_CommonSave()
+{
+    if(pathFlag=="Y")
+    {
+		alert("등록 및 수정은 할 수 없습니다.");
+		return;
+    }
+	gubun = ds_insert.GetColumn(0,"GIS_UPD_REQ_PATH_CD");  // GIS수정의뢰경로 
+	if(gubun=="10")
+	{
+		find="Danger";
+		fn_D10_dt_save();
+	}
+	else if(gubun=="20")
+	{
+		find="Eocs";
+		fn_D10_dt_save();
+	}
+	else if(gubun=="30")
+	{
+		find="Mainter";
+		fn_D10_dt_save();
+	}
+	else if(gubun=="40")
+	{
+		find="Dcvg";
+		fn_D10_dt_save();
+	}
+	save_flag="";
+}
+
+//--------------------------------------------------------------------
+// 함수명 : bt_d1_popup()
+// 내 용  : 관리번호 찾기 팝업 호출 
+// args   :
+// return :
+//--------------------------------------------------------------------
+function bt_d1_popup(obj)
+{
+    if(pathFlag=="Y")
+    {
+		return;
+    }
+    if(cob_GisUpdReqPathCd.Value==""||cob_GisUpdReqPathCd==null)
+    {
+		alert("공사구분을 먼저 선택해야합니다.");
+    }
+	var gubun = ds_insert.GetColumn(0,"GIS_UPD_REQ_PATH_CD");
+	if(gubun=="10")
+	{
+		
+		var retValue = gfn_Dialog("D10","D1504010012U","",577,1005,"Scroll",-1,-1);
+		edt_WorkNum.Text=retValue[0];
+		ds_insert.SetColumn(0,"DANGER_NUM",retValue[0]);
+		ds_insert.SetColumn(0,"DANGER_JOB_FLAG",retValue[1]);
+		edt_WorkNm.Text=retValue[3];
+		ds_insert.SetColumn(0,"ZIP_NO1",retValue[4]); // 우편번호 1
+		ds_insert.SetColumn(0,"ZIP_NO2",retValue[5]); // 우편번호 2
+		ds_insert.SetColumn(0,"ZIP_SEQ",retValue[6]);                                                                // 주소일련번호 
+		ds_insert.SetColumn(0,"HILL",retValue[7]);    // 산번지
+		ds_insert.SetColumn(0,"ADDR_M",retValue[8]);  // 본번 
+		ds_insert.SetColumn(0,"ADDR_S",retValue[9]);  // 부번 
+		ds_insert.SetColumn(0,"SECOND_ADDR",retValue[10]); //보조주소
+		ds_insert.SetColumn(0,"BLD_DONG",retValue[11]); // 동
+		ds_insert.SetColumn(0,"HOSU",retValue[12]); // 호수
+		ds_insert.SetColumn(0,"LOT_NUM_UNION",retValue[13]);  // 지번주소조합 
+		ds_insert.SetColumn(0,"GU_NM",retValue[14]);  // 시구 
+		
+	}
+	else if(gubun=="20")
+	{
+		var retValue = gfn_Dialog("D10","D1401010017U","",577,1005,"Scroll",-1,-1);
+		edt_WorkNum.Text = retValue[0];
+		ds_insert.SetColumn(0,"EOCS_NUM",retValue[0]);
+		ds_insert.SetColumn(0,"DIG_WORK_PATH_FLAG",retValue[1]);
+		ds_insert.SetColumn(0,"BRANCH_CD",retValue[2]);
+		ds_insert.SetColumn(0,"ZIP_NO1",retValue[3] ); // 우편번호 1
+		ds_insert.SetColumn(0,"ZIP_NO2",retValue[4] ); // 우편번호 2
+		ds_insert.SetColumn(0,"ZIP_SEQ",retValue[8] ); // 주소일련번호 
+		ds_insert.SetColumn(0,"HILL",retValue[9] );    // 산번지
+		ds_insert.SetColumn(0,"ADDR_M",retValue[10] );  // 본번 
+		ds_insert.SetColumn(0,"ADDR_S",retValue[11] );  // 부번 
+		ds_insert.SetColumn(0,"SECOND_ADDR",retValue[6] ); //보조주소
+		ds_insert.SetColumn(0,"BLD_DONG",retValue[12] ); // 동
+		ds_insert.SetColumn(0,"HOSU",retValue[13] ); // 호수
+		ds_insert.SetColumn(0,"LOT_NUM_UNION",retValue[5] );  // 지번주소조합 
+		ds_insert.SetColumn(0,"NEW_ADDR_BLD_SEQ",retValue[14] ); // 새주소건물일련번호
+		ds_insert.SetColumn(0,"NEW_HOSU",retValue[15] );         // 새주소 호수 
+		ds_insert.SetColumn(0,"NEW_ADDR_UNION",retValue[16] );   // 새주소 조합
+		edt_WorkNm.Text=retValue[7];
+	}
+	else if(gubun=="30")
+	{
+
+	}
+	else if(gubun=="40")
+	{
+		var retValue = gfn_Dialog("D10","D1902010014U","",577,1005,"Scroll",-1,-1);
+		edt_WorkNum.Text = retValue[1];
+		ds_insert.SetColumn(0,"BASE_YEAR",retValue[0]);
+		ds_insert.SetColumn(0,"MPIPE_ID",retValue[1]);
+		ds_insert.SetColumn(0,"EXPLOR_BLOCK_SEQ",retValue[2]);
+		ds_insert.SetColumn(0,"EXPLOR_RSLT_SEQ",retValue[3]);
+		ds_insert.SetColumn(0,"EXPLOR_YMD",retValue[9]);
+		ds_insert.SetColumn(0,"BRANCH_CD",retValue[10]);
+		ds_insert.SetColumn(0,"ZIP_NO1",retValue[4] ); // 우편번호 1
+		ds_insert.SetColumn(0,"ZIP_NO2",retValue[5] ); // 우편번호 2
+		ds_insert.SetColumn(0,"LOT_NUM_UNION",retValue[6]); 
+		ds_insert.SetColumn(0,"SECOND_ADDR",retValue[7] ); 
+		edt_WorkNm.Text=retValue[3];
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명 : fn_D10_dt_save                          
+// 내 용  : gis수정의뢰_공통 테이블에 저장한다.     
+// args   :                                         
+// return :                                         
+//-------------------------------------------------------------------------------
+
+function  fn_D10_dt_save()
+{
+    var day = Today();
+	var yymmdd=  SubStr(day,0,4); 
+	fn_D1_Gis_PkChk();
+	var gisPk = ds_chk.GetColumn(0,"GIS_UPD_REQ_NUM");
+	
+	if(gisPk==""||gisPk==null)
+	{   
+		gisPk = "G"+yymmdd+"9"+"00001";
+		gis_pk=gisPk;
+	}
+	else
+	{   
+		var temp = ParseInt("1"+SubStr(gisPk,6,5));
+		temp =  ToString(temp+1);
+		gisPk = "G"+yymmdd+"9"+SubStr(temp,1,5);
+		gis_pk=gisPk;
+	}
+
+	fn_D1_Gis_PkChk2();
+	if(ds_chk2.GetRowCount()>0)
+	{
+		alert("이미 등록된 GIS수정의뢰코드가 있습니다.");
+		return;
+	}
+    var Result = fn_d1_ValidateChk();
+    if(Result=="1")
+    {
+		return;
+    }
+    
+    ds_insert.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));   //수정IP
+    ds_insert.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));  //수정자 
+    ds_insert.SetColumn(0, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));   //수정IP
+    ds_insert.SetColumn(0, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));  //수정자 
+    ds_insert.SetColumn(0,"GIS_UPD_REQ_NUM",gis_pk);
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1402060010U-service&"+find+"=1";
+	var strInDatasets   = "ds_insert=ds_insert:u";
+	var strOutDatasets  = "";
+	var strArgument     = "";
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else
+	{
+		alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장"));
+	}
+
+}
+
+//-------------------------------------------------------------------------
+// 함수명 : bt_d1_FileUpload()
+// 내 용  : 파일을 업로드 한다.
+// args   :
+// return :
+//------------------------------------------------------------------------
+function bt_d1_FileUpload(obj)
+{
+    if(save_flag=="insert")
+    {
+		alert("저장을 먼저 하십시오.");
+		return;
+    }
+    if(cob_GisUpdReqPathCd.Value==null)
+    {
+		alert(gfn_GetMessage("M000004","%AAA%"," 공사구분 선택을  "));
+		return;
+    }
+	var arg = "fa_Url=handle.do?ServiceName=D1402060010U-service&GIS_UPD_REQ_NUM="+gis_pk+"&GIS_UPD_REQ_PATH_CD="+ds_insert.GetColumn(0,"GIS_UPD_REQ_PATH_CD")+" fa_Part=D10";
+	var arrList = gfn_Dialog("D10","D1101010018U",arg,450,280,true,-1,-1);
+	edt_FileList.text = "";
+	for(var i=0; i<arrList.length; i++)
+	{
+		edt_FileList.text += arrList[i];
+		if(arrList.length-1 != i) edt_FileList.text += "/";
+	}
+
+}
+// 파일 찾기 
+//
+function fn_d1_FileSearch()
+{
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1402060010U-service&findFile=1"
+	           + "&GIS_UPD_REQ_NUM="+GIS_UPD_REQ_NUM
+	           + "&GIS_UPD_REQ_PATH_CD="+GIS_UPD_REQ_PATH_CD
+	           ;
+	var strInDatasets  = "";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_FileList=ds_FileList";
+	var strArgument  = "";
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+	edt_FileList.text = "";
+	for(var i=0; i<ds_FileList.RowCount(); i++)
+	{
+		edt_FileList.text += ds_FileList.GetColumn(i,"ORG_FILE_NAME");
+		if(ds_FileList.RowCount()-1 != i) edt_FileList.text += "/";
+		}
+	
+}
+
+
+function bt_d1_WebGis()
+{
+	var chkvali = fn_d1_ValidateChk2();
+	if(chkvali=="1")
+	{
+		alert(gfn_GetMessage("M000004","%AAA%","필수항목에 대한 입력을"));
+	}
+	else
+	{
+	    
+		if(cob_GisUpdReqPathCd.Value=="10")  //위험작업 
+		{
+			
+			sSheet ="주소";
+			var GU_NM =ds_insert.GetColumn(0,"GU_NM");
+			var DONG_NM_H=ds_insert.GetColumn(0,"BLD_DONG");
+			var SNU=ds_insert.GetColumn(0,"ADDR_M");
+			var FNU=ds_insert.GetColumn(0,"ADDR_s");
+			
+		    sFilter=" GU_NM='"+GU_NM+"' AND DONG_NM_H='"+DONG_NM_H+"' AND FNU='"+FNU+"'  AND SNU="+SNU+" ";
+		    fn_run();	
+			
+		}
+		else if(cob_GisUpdReqPathCd.Value=="20") // 굴착공사
+		{
+			
+			sSheet ="굴착공사";
+		    sFilter="DIG_WORK_PATH_FLAG='"+ds_insert.GetColumn(0,"DIG_WORK_PATH_FLAG")+"' AND EOCS_NUM='"+ds_insert.GetColumn(0,"EOCS_NUM")+"' ";
+		    fn_run();
+		}
+		else if(cob_GisUpdReqPathCd.Value=="30") // 정비보수 
+		{
+			
+			sSheet ="주소";
+			var GU_NM =ds_insert.GetColumn(0,"GU_NM");
+			var DONG_NM_H=ds_insert.GetColumn(0,"BLD_DONG");
+			var SNU=ds_insert.GetColumn(0,"ADDR_M");
+			var FNU=ds_insert.GetColumn(0,"ADDR_s");
+		    sFilter=" GU_NM='"+GU_NM+"' AND DONG_NM_H='"+DONG_NM_H+"' AND FNU='"+FNU+"'  AND SNU="+SNU+" ";
+		    fn_run();	
+		}
+		else if(cob_GisUpdReqPathCd.Value=="40") // 배관탐사
+		{
+			sSheet ="피복측정점";
+			sFilter="BASE_YEAR='"+ds_insert.GetColumn(0,"BASE_YEAR")+"' AND MPIPE_ID="+ds_insert.GetColumn(0,"MPIPE_ID")+" AND EXPLOR_YMD='"+ds_insert.GetColumn(0,"EXPLOR_YMD")+"' AND EXPLOR_BLOCK_SEQ="+ds_insert.GetColumn(0,"EXPLOR_BLOCK_SEQ")+" AND EXPLOR_RSLT_SEQ="+ds_insert.GetColumn(0,"EXPLOR_RSLT_SEQ")+" ";
+			fn_run();
+		}
+	}
+}
+
+
+//-----------------------------------------------------------------
+// 함수명 : fn_D1_Gis_PkChk()
+// 내 용  : gis수정의뢰번호 체크 
+// obj    :
+// args   :
+// return :
+//-----------------------------------------------------------------
+function fn_D1_Gis_PkChk()
+{
+
+	var strSvcID = "";
+	var strPart = "D10";
+
+    
+	var strURL  = "handle.do?ServiceName=D1402060010U-service&chk=1"
+		       	+ "&GIS_YMD="+ SubStr(Today(),0,4)
+	            ;	       
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_chk=ds_chk";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+}
+
+function fn_d1_ValidateChk()
+{
+	if(cal_ConfYmd.Value==""||cal_ConfYmd.Value==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","확인일자는"));
+		return 1;
+	}
+	if(cob_GisUpdReqPathCd.Value==""||cob_GisUpdReqPathCd.Value==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","공사구분은"));
+		return 1;
+	}
+	if(edt_WorkNum.Text==""||edt_WorkNum.Text==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","관리번호는"));
+		return 1;
+	}
+	if(edt_EmpId1.Text==""||edt_EmpId1.Text==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","입회자는"));
+		return 1;
+	}
+	if(edt_BasicAddr.Text==""||edt_BasicAddr.Text==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","기본주소는"));
+		return 1;
+	}
+	if(cob_BefoMaterFlag.Value==""||cob_BefoMaterFlag.Value==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","기존재질은"));
+		return 1;
+	}
+	if(cob_ConfMaterFlag.Value==""||cob_ConfMaterFlag.Value==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","확인재질은"));
+		return 1;
+	}	
+	if(cob_BefoPipeDiamCd.Value==""||cob_BefoPipeDiamCd.Value==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","기존관경은"));
+		return 1;
+	}	
+	if(cob_ConfDiamCd.Value==""||cob_ConfDiamCd.Value==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","확인관경은"));
+		return 1;
+	}
+	if(cob_CoatingSts.Value==""||cob_CoatingSts.Value==null)
+	{
+		alert(gfn_GetMessage("M000015","%AAA%","코팅상태"));
+		return 1;
+	}
+	return 0;
+}
+
+function fn_d1_ValidateChk2()
+{
+	if(cal_ConfYmd.Value==""||cal_ConfYmd.Value==null)
+	{
+		return 1;
+	}
+	if(cob_GisUpdReqPathCd.Value==""||cob_GisUpdReqPathCd.Value==null)
+	{
+		return 1;
+	}
+	if(edt_WorkNum.Text==""||edt_WorkNum.Text==null)
+	{
+		return 1;
+	}
+	if(edt_EmpId1.Text==""||edt_EmpId1.Text==null)
+	{
+		return 1;
+	}
+	if(edt_BasicAddr.Text==""||edt_BasicAddr.Text==null)
+	{
+		return 1;
+	}
+	if(cob_BefoMaterFlag.Value==""||cob_BefoMaterFlag.Value==null)
+	{
+		return 1;
+	}
+	if(cob_ConfMaterFlag.Value==""||cob_ConfMaterFlag.Value==null)
+	{
+		return 1;
+	}	
+	if(cob_BefoPipeDiamCd.Value==""||cob_BefoPipeDiamCd.Value==null)
+	{
+		return 1;
+	}	
+	if(cob_ConfDiamCd.Value==""||cob_ConfDiamCd.Value==null)
+	{
+		return 1;
+	}
+	if(cob_CoatingSts.Value==""||cob_CoatingSts.Value==null)
+	{
+		return 1;
+	}
+	return 0;
+}
+
+function bt_d1_sanction(obj)
+{
+	if(save_flag=="insert")
+	{
+		alert("저장을 먼저 하십시오.");
+		return;
+	}
+	// fn_D1_Gis_PkChk2();
+	// if(ds_chk2.GetRowCount()<1)
+	// {
+		// alert("등록된 내역이 없습니다.");
+		// return;
+	// }
+	var args = gis_pk+","+gubun;
+	gfv_callGWInfo("fmD16","d10","",4,""+args+"");
+}
+
+//-----------------------------------------------------------------
+// 함수명 : fn_D1_Gis_PkChk2()
+// 내 용  : gis수정의뢰번호 확인 
+// obj    :
+// args   :
+// return :
+//-----------------------------------------------------------------
+function fn_D1_Gis_PkChk2()
+{
+    
+	var strSvcID = "";
+	var strPart = "D10";
+
+    
+	var strURL  = "handle.do?ServiceName=D1402060010U-service&chk2=1"
+		       	+ "&GIS_UPD_REQ_NUM="+ gis_pk
+		       	+ "&GIS_UPD_REQ_PATH_CD="+ gubun
+	            ;	       
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_chk2=ds_chk2";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+}
+
+
+
+function fn_run()
+{
+	uId="199443297";
+    web_Gis.PageUrl="http://ugis.seoulgas.co.kr/gisviewer/gisview.aspx?width=1200&height=800&uid="+uId+"&&locsheet="+sSheet+"&locfilter="+sFilter;
+	web_Gis.run();
+}
+
+function fn_temp()
+{
+	fn_CommonSave();
+}
+
+function fn_d1_GisSearch()
+{
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1402060010U-service&find=1"
+		       	+ "&GIS_UPD_REQ_NUM="+ GIS_UPD_REQ_NUM
+		       	+ "&GIS_UPD_REQ_PATH_CD="+ GIS_UPD_REQ_PATH_CD
+	            ;	       
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_insert=ds_insert";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	if(ds_insert.GetRowCount()>0)
+	{
+		if(ds_insert.GetColumn(0,"GIS_UPD_REQ_PATH_CD")=="20")// 굴착공사
+		{  
+			edt_WorkNum.Text = ds_insert.GetColumn(0,"EOCS_NUM");
+		}
+		else
+		{
+			edt_WorkNum.Text =SubStr(ds_insert.GetColumn(0,"BRANCH_NM"),0,2)+"-"+ds_insert.GetColumn(0,"BASE_YEAR")+"-"+ds_insert.GetColumn(0,"MPIPE_ID")+"-"+ds_insert.GetColumn(0,"EXPLOR_YMD")+"-"+ds_insert.GetColumn(0,"EXPLOR_BLOCK_SEQ")+"-"+ds_insert.GetColumn(0,"EXPLOR_RSLT_SEQ");
+		}
+	}
+
+}
+
+function fn_d1_goGis()
+{
+	if(cob_GisUpdReqPathCd.Value=="10")  //위험작업 
+	{
+		
+		sSheet ="주소";
+		var GU_NM =ds_insert.GetColumn(0,"GU_NM");
+		var DONG_NM_H=ds_insert.GetColumn(0,"BLD_DONG");
+		var SNU=ds_insert.GetColumn(0,"ADDR_M");
+		var FNU=ds_insert.GetColumn(0,"ADDR_s");
+		
+		sFilter=" GU_NM='"+GU_NM+"' AND DONG_NM_H='"+DONG_NM_H+"' AND FNU='"+FNU+"'  AND SNU="+SNU+" ";
+		fn_run();	
+		
+	}
+	else if(cob_GisUpdReqPathCd.Value=="20") // 굴착공사
+	{
+		
+		sSheet ="굴착공사";
+		sFilter="DIG_WORK_PATH_FLAG='"+ds_insert.GetColumn(0,"DIG_WORK_PATH_FLAG")+"' AND EOCS_NUM='"+ds_insert.GetColumn(0,"EOCS_NUM")+"' ";
+		fn_run();
+	}
+	else if(cob_GisUpdReqPathCd.Value=="30") // 정비보수 
+	{
+		
+		sSheet ="주소";
+		var GU_NM =ds_insert.GetColumn(0,"GU_NM");
+		var DONG_NM_H=ds_insert.GetColumn(0,"BLD_DONG");
+		var SNU=ds_insert.GetColumn(0,"ADDR_M");
+		var FNU=ds_insert.GetColumn(0,"ADDR_s");
+		sFilter=" GU_NM='"+GU_NM+"' AND DONG_NM_H='"+DONG_NM_H+"' AND FNU='"+FNU+"'  AND SNU="+SNU+" ";
+		fn_run();	
+	}
+	else if(cob_GisUpdReqPathCd.Value=="40") // 배관탐사
+	{
+		sSheet ="피복측정점";
+		sFilter="BASE_YEAR='"+ds_insert.GetColumn(0,"BASE_YEAR")+"' AND MPIPE_ID="+ds_insert.GetColumn(0,"MPIPE_ID")+" AND EXPLOR_YMD='"+ds_insert.GetColumn(0,"EXPLOR_YMD")+"' AND EXPLOR_BLOCK_SEQ="+ds_insert.GetColumn(0,"EXPLOR_BLOCK_SEQ")+" AND EXPLOR_RSLT_SEQ="+ds_insert.GetColumn(0,"EXPLOR_RSLT_SEQ")+" ";
+		fn_run();
+	}
+}
+function cob_BefoMaterFlag_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+    if(cob_BefoMaterFlag.Value=="10")
+    {
+		gfn_SetComboBox_Comcode("D10300",gfn_setDsObject_Comcode("cob_BefoPipeDiamCd"));
+    }
+    else if(cob_BefoMaterFlag.Value=="20")
+    {
+		gfn_SetComboBox_Comcode("D10301",gfn_setDsObject_Comcode("cob_BefoPipeDiamCd"));
+    }
+    else if(cob_BefoMaterFlag.Value=="30")
+    {
+		gfn_SetComboBox_Comcode("D10302",gfn_setDsObject_Comcode("cob_BefoPipeDiamCd"));
+    }
+    else if(cob_BefoMaterFlag.Value=="40")
+    {
+		gfn_SetComboBox_Comcode("D10303",gfn_setDsObject_Comcode("cob_BefoPipeDiamCd"));
+    }
+    else if(cob_BefoMaterFlag.Value=="50")
+    {
+		gfn_SetComboBox_Comcode("D10304",gfn_setDsObject_Comcode("cob_BefoPipeDiamCd"));
+    }
+}
+
+function cob_ConfMaterFlag_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+    if(cob_ConfMaterFlag.Value=="10")
+    {
+		gfn_SetComboBox_Comcode("D10300",gfn_setDsObject_Comcode("cob_ConfDiamCd"));
+    }
+    else if(cob_ConfMaterFlag.Value=="20")
+    {
+		gfn_SetComboBox_Comcode("D10301",gfn_setDsObject_Comcode("cob_ConfDiamCd"));
+    }
+    else if(cob_ConfMaterFlag.Value=="30")
+    {
+		gfn_SetComboBox_Comcode("D10302",gfn_setDsObject_Comcode("cob_ConfDiamCd"));
+    }
+    else if(cob_ConfMaterFlag.Value=="40")
+    {
+		gfn_SetComboBox_Comcode("D10303",gfn_setDsObject_Comcode("cob_ConfDiamCd"));
+    }
+    else if(cob_ConfMaterFlag.Value=="50")
+    {
+		gfn_SetComboBox_Comcode("D10304",gfn_setDsObject_Comcode("cob_ConfDiamCd"));
+    }	
+}
+]]></Script>
+</Window>

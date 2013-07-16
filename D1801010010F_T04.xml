@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1801010010F_T04" Left="8" OnLoadCompleted="D1801010010F_T04_OnLoadCompleted" PidAttrib="7" Title="사유지점용료&#32;지급정보조회" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_FPay">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_ROOM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_AMT_PAY_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="AGREE_SQUARE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PERSO_PUBLIC_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_RT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_DAY_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CALCU_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="VAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_TOT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_AMT_PAY_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEPOSITOR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BNK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACCOUNT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user15" Bottom="24" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1254" TabOrder="1" Top="21" Type="Rectangle" Width="1249"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button44" ImageID="btn_5_From" Left="1165" LeftMargin="21" OnClick="btn_SingleReport_OnClick1" Style="button" TabOrder="2" Text="점용료카드" Top="1" Width="87"></Button>
+		<Grid AutoEnter="TRUE" BindDataset="ds_FPay" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="453" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="430" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" NoDataText="조회된&#32;내용이&#32;없습니다." Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="23" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="50"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="83"/>
+						<col fix="left" width="63"/>
+						<col fix="left" width="92"/>
+						<col fix="left" width="80"/>
+						<col width="192"/>
+						<col width="80"/>
+						<col width="83"/>
+						<col width="79"/>
+						<col width="240"/>
+						<col width="154"/>
+						<col width="130"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="130"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="기준년도"/>
+						<cell col="2" display="text" text="정압실명"/>
+						<cell col="3" display="text" text="지사"/>
+						<cell col="4" display="text" text="시/구"/>
+						<cell col="5" display="text" text="설치년월"/>
+						<cell col="6" display="text" text="납부시기"/>
+						<cell col="7" display="text" text="공시지가(원)"/>
+						<cell col="8" display="text" text="점용면적(㎡)"/>
+						<cell col="9" display="text" text="점용요율(%)"/>
+						<cell col="10" display="text" text="점용일수"/>
+						<cell col="11" display="text" text="산정금액(원)"/>
+						<cell col="12" display="text" text="부가세(가산비율)"/>
+						<cell col="13" display="text" text="점용료(원)"/>
+						<cell col="14" display="text" text="예금주"/>
+						<cell col="15" display="text" text="은행명"/>
+						<cell col="16" display="text" text="계좌번호"/>
+						<cell col="17" display="text" text="전표발행일자"/>
+						<cell col="18" display="text" text="전표번호"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="RNUM" display="normal" expandsize="18" expr="rowindex+1" text="0" wordwrap="word"/>
+						<cell align="center" col="1" colid="PAY_YEAR" display="text"/>
+						<cell align="center" col="2" colid="GOV_ROOM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="4" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="center" col="5" colid="INST_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="6" colid="LEASE_AMT_PAY_YMD" display="text"/>
+						<cell align="right" col="7" colid="PERSO_PUBLIC_PRC" display="number" edit="normal"/>
+						<cell col="8" colid="AGREE_SQUARE" display="numberexp" edit="number" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="9" colid="LEASE_RT" display="number" edit="number" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="10" colid="LEASE_DAY_CNT" display="number" edit="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="11" colid="CALCU_AMT" display="number" text="0"/>
+						<cell align="right" col="12" colid="VAT" display="text" edit="number"/>
+						<cell align="right" col="13" colid="PAY_TOT_AMT" display="number" text="0"/>
+						<cell align="center" col="14" colid="DEPOSITOR_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="15" colid="BNK_NM" display="text"/>
+						<cell align="center" col="16" colid="ACCOUNT_NUM" display="text"/>
+						<cell align="center" col="17" colid="BILL_YMD" display="date"/>
+						<cell align="center" col="18" colid="BILL_SEQ" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1801010010f.xml
+* Form 설명  : 사유지 점용료 협약사항 협의 정보
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-16
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+//---------------------------------------------------------
+//	화면 OnLoadCompleted 이벤트처리 발생하는 함수( 화면ID_OnLoadCompleted )
+//---------------------------------------------------------
+function D1801010010F_T04_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	fn_D1_Find(parent.FaciNumRow, parent.FaciNum, parent.ValueType);
+} 
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//---------------------------------------------------------
+function fn_CommonSave()
+{
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{	
+	fn_D1_Find(parent.FaciNumRow, parent.FaciNum, parent.ValueType);
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  사유지 점용료 지급정보를 조회한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find(nRow, value, value1)
+{	
+    var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_RentalDiscuRmkRegisMgr-service" 
+						+ "&FACI_NUM=" + value
+						//parent.ds_GvRmList.GetColumn(ds_GvRmList.currow, "FACI_NUM")
+						;	
+		
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_FPay=ds_FPay";
+	var strArgument     = "view_Tab04";
+	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );	
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_SingleReport_OnClick()
+// 설명: 공통 레포트 팝업 함수를 호출한다(단일 보고서)
+// return 내용: 없음
+//-------------------------------------------------------------------------------
+function btn_SingleReport_OnClick1(obj)
+{	
+	if(ds_FPay.GetColumn(0, "FACI_NUM") == null || ds_FPay.GetColumn(0, "FACI_NUM") == ''){
+		alert("등록된 지급정보가 없습니다. ");
+		return;
+	}
+	// 함수 호출용 파라미터를 설정한다
+	var strTitle    = "점용료 카드" ;  		  		  // 출력물 제목
+    var strPart     = "D10" ;         	    		  // 시스템 명 
+	var strReport   = "D1801010010P" ;  	    	  // 출력물 ID 
+	var strParameter= "FACI_NUM=" + ds_FPay.GetColumn(0, "FACI_NUM");
+		    
+				    
+	//공통 레포트 팝업 함수 호출 
+	gfn_ReportPopup(strTitle,strPart,strReport,strParameter);	
+}
+
+function fn_D1_Print(){
+	PrintScreen();
+}
+
+function Grid0_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_D1_SetGrid_Sort(Grid0);
+}
+
+// 데이터셋 초기화
+function fn_D1_ClearData(){
+	ds_FPay.ClearData();
+}
+]]></Script>
+</Window>

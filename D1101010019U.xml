@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="500" Id="D1101010019U" Left="8" OnLoadCompleted="D1101010019U_OnLoadCompleted" PidAttrib="7" scroll="false" Title="차단밸브번호&#32;조회_D1101010019U" Top="8" Ver="1.0" Width="760" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_list"></Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="차단밸브번호&#32;조회" Transparent="TRUE" Width="756"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_list" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="491" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="414" Id="grd_list" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellDBLClick="grd_list_OnCellDblClick" Right="751" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="77" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="746">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="1"/>
+						<col width="78"/>
+						<col width="55"/>
+						<col width="64"/>
+						<col width="49"/>
+						<col width="254"/>
+						<col width="65"/>
+						<col width="63"/>
+						<col width="60"/>
+						<col width="54"/>
+					</columns>
+					<head>
+						<cell col="0" display="text"/>
+						<cell col="1" display="text" text="밸브박스번호"/>
+						<cell col="2" display="text" text="밸브번호"/>
+						<cell col="3" display="text" text="지사"/>
+						<cell col="4" display="text" text="시/구"/>
+						<cell col="5" display="text" text="주소"/>
+						<cell col="6" display="text" text="설치일자"/>
+						<cell col="7" display="text" text="도로구분"/>
+						<cell col="8" display="text" text="재질"/>
+						<cell col="9" display="text" text="철개"/>
+					</head>
+					<body>
+						<cell col="0" display="text"/>
+						<cell align="center" col="1" colid="FACI_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="VALVE_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="BRANCH_NM" display="text"/>
+						<cell col="4" colid="ZIP_NO1_NM" display="text"/>
+						<cell col="5" colid="LOT_NUM_UNION" display="text"/>
+						<cell align="center" col="6" colid="INST_YMD" display="date"/>
+						<cell col="7" colid="ROAD_FLAG" display="text"/>
+						<cell col="8" colid="VBOX_MATER_FLAG" display="text"/>
+						<cell col="9" colid="BOX_CAP_TYPE" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="77" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="751" TabOrder="3" Top="74" Type="Rectangle" Width="746"></Shape>
+		<Div Height="30" Id="Div0" TabOrder="4" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="755">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[/*******************************************************************************
+* FormID     : D1101010019U.xml
+* Form 설명  : 차단밸브번호 조회
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 노준배
+* 작성일     : 2009-05-11
+* 변경내용   : 변경일자, 변경내용,변경자
+*******************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONB30001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+//---------------------------------------------------------
+//	화면 구동시 
+//---------------------------------------------------------
+function D1101010019U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_D1_SetGrid_Sort(grd_list);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	var ServiceId 		= "";
+    var ServicePart 	= "D10";
+    var Url          	= "handle.do?ServiceName=D1101010019U-service"
+                        + "&BRANCH_CD=" + BRANCH_CD
+                        + "&ZIP_NO1=" + ZIP_NO1
+                        ;
+    var InputDsList  	= "";
+    var OutputDsList 	= "ds_list=ds_list";
+    var Argument     	= "find";
+    
+    var OutDataSets = "";
+    
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 선택
+//---------------------------------------------------------
+function fn_CommonSelect()
+{
+    var arrList = "";
+	var nRow = ds_list.row;
+
+	arrList = ds_list.GetColumn(nRow,"FACI_NUM") + "_" + ds_list.GetColumn(nRow,"VALVE_NUM");	// 구간코드
+	
+	Close(arrList);
+}
+
+//-------------------------------------------------------------------------------
+// 조회 버튼 실행 
+//-------------------------------------------------------------------------------
+function fn_CommonSearch()
+{   
+	var ServiceId 		= "";
+    var ServicePart 	= "D10";
+    var Url          	= "handle.do?ServiceName=D1101010019U-service"
+                        + "&BRANCH_CD=" + BRANCH_CD
+                        + "&ZIP_NO1=" + ZIP_NO1
+                        ;
+    var InputDsList  	= "";
+    var OutputDsList 	= "ds_list=ds_list";
+    var Argument     	= "find";
+    
+    var OutDataSets = "";
+    
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+}
+
+//-------------------------------------------------------------------------------
+// 엑셀 버튼 실행 
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	grd_list.ExportExcelEx("sheet1");
+}
+
+//---------------------------------------------------------
+//	그리드 cell 더블 클릭 이벤트
+//---------------------------------------------------------
+
+function grd_list_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fn_CommonSelect();
+}
+]]></Script>
+</Window>

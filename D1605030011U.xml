@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1605030011U" Left="8" OnLoadCompleted="D1601010018U_OnLoadCompleted" PidAttrib="7" Title="정비보수작업&#32;전표취소_D1605030011U" Top="8" Ver="1.0" Width="440" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi" OnColumnChanged="ds_Multi_OnColumnChanged">
+				<Contents>
+					<colinfo id="DEAL_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPRE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_EXEC_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMM_TAKER" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchTop">
+				<Contents>
+					<colinfo id="BILL_YMD_START" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD_END" size="256" summ="default" type="STRING"/>
+					<record>
+						<BILL_YMD_END></BILL_YMD_END>
+						<BILL_YMD_START></BILL_YMD_START>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Bill_Cancel">
+				<Contents>
+					<colinfo id="BILL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="2" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="6" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="435">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user9" Bottom="96" Height="24" Id="Shape2" Left="5" LineColor="user10" Right="432" TabOrder="8" Top="72" Type="Rectangle" Width="427"></Shape>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="5" Text="정비보수작업&#32;전표취소" Transparent="TRUE" Width="439"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="396" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" Font="돋움,9" HeadBorder="Flat" HeadHeight="20" Height="294" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" OnHeadClick="grd_List_OnHeadClick" Right="433" SelColor="MENU" Style="grid_pop" TabOrder="4" TabStop="true" Top="102" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="428">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="30"/>
+						<col width="279"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="선택"/>
+						<cell col="1" display="text" text="전표일자"/>
+						<cell col="2" display="text" text="전표번호"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CHK" display="checkbox" edit="checkbox"/>
+						<cell align="center" col="1" colid="BILL_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="BILL_SEQ" display="normal" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="103" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="433" TabOrder="7" Top="100" Type="Rectangle" Width="428"></Shape>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="11" LeftMargin="12" Style="blt_search_1" TabOrder="9" Text="전표일자" Top="75" Transparent="TRUE" Width="64"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_BillYmdStart" Left="80" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="1" Top="75" WeeksFont="Default,-1" Width="90"></Calendar>
+		<Static Height="13" Id="Static73" Left="171" Style="static" TabOrder="10" Text="~" Top="75" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_BillYmdEnd" Left="181" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="2" Top="75" WeeksFont="Default,-1" Width="90"></Calendar>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_billDel" ImageID="btn_4_Close&#32;cancellation" Left="350" LeftMargin="21" OnClick="btn_billDel_OnClick" Style="button" TabOrder="3" Text="전표취소" Top="75" Width="76"></Button>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1605030011U.xml
+* Form 설명  : 정비보수작업 전표취소
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : Hwang 
+* 작성일     : 2010-03-31
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1601010018U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+
+	gfn_SetForceButton("00010001");	
+	
+	grd_List.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");		
+
+	cal_BillYmdStart.Value = addMonth(today(), -1) ; // 전월
+	cal_BillYmdEnd.Value = addMonth(today(), 1) ;	 // 다음달
+
+	fn_CommonSearch();
+
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+
+	ds_Multi.ClearData();
+	
+    ds_SearchTop.SetColumn(0,"BILL_YMD_START"   , cal_BillYmdStart.Value  ); // 전표일자
+    ds_SearchTop.SetColumn(0,"BILL_YMD_END"     , cal_BillYmdEnd.Value    ); // 전표일자
+
+	var strSvcID = "findList";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiApproMgr-service";  
+	var strInDatasets  = "ds_SearchTop=ds_SearchTop";
+	var strOutDatasets = "ds_Multi=ds_Multi";
+	var strArgument    = "searchPopup=1";
+    var CallBack       = "fn_D1_CallBack";
+    	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+		           , CallBack);
+}
+
+//--------------------------------------------------------------------------------------------------
+//	서비스 CallBack
+//--------------------------------------------------------------------------------------------------
+function fn_D1_CallBack(SrvID,ErrorCode,ErrorMsg)
+{
+
+	if(ErrorCode < 0) 
+	{
+		alert(ErrorMsg);
+		return;
+	}
+	
+    switch(SrvID)
+    {
+        
+        case "findList":
+        	break;	
+			
+		case "fn_D1_Tr_delete": //업데이트 성공시 조회가 들어가므로 조회와 똑같이 처리 
+			fn_D1_billUpdate();
+			break;	
+			
+		case "bill_cancel":
+			alert("전표가 취소되었습니다");
+			fn_CommonSearch();
+			break;	
+			
+        default:
+
+    }
+}
+
+//--------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 선택
+//--------------------------------------------------------------------------------------------------
+// function fn_CommonSelect()
+// {
+
+	// var arrList = array();
+	// var nRow = ds_Multi.row;     
+	// arrList[0]  = ds_Multi.GetColumn(nRow, "DEAL_CD");    // 업체코드
+	// arrList[1]  = ds_Multi.GetColumn(nRow, "DEAL_NM");    // 업체명
+	// arrList[2]  = ds_Multi.GetColumn(nRow, "BRANCH_CD");  // 지사코드
+	// arrList[3]  = ds_Multi.GetColumn(nRow, "COMM_TAKER"); // 담당자
+    
+    // Close(arrList);		
+	
+// }
+
+//-------------------------------------------------------------------------------
+//	sorting - Master Grid
+//-------------------------------------------------------------------------------
+function grd_List_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_SetGridSort(obj, nCell);
+}
+
+//--------------------------------------------------------------------------------------------------
+//	전표취소 버튼 클릭시
+//--------------------------------------------------------------------------------------------------
+function btn_billDel_OnClick(obj)
+{
+
+	if(ds_Multi.FindRow("CHK", "1") == -1)
+	{
+		alert("전표취소할 대상을 선택하여 주십시오.");
+		return;
+	}
+	
+	//복사대상
+	var fv_Row = ds_Multi.FindRow("CHK", "1");
+	var fv_BILL_YMD = ds_Multi.GetColumn(fv_Row,"BILL_YMD");	
+	var fv_BILL_SEQ = ds_Multi.GetColumn(fv_Row,"BILL_SEQ");	
+
+	if( gfn_IsNull(fv_BILL_YMD) )
+	{
+		alert("전표발행번호가 없습니다. 전표발행번호가 존재하는 건만 전표취소가능합니다.");
+		return;
+	}
+		
+    if(!confirm( "발행된 전표(발행일자:"+fv_BILL_YMD +", 전표번호:" +fv_BILL_SEQ+")를 정말로 취소하시겠습니까? ")){
+		return false;
+	}
+
+	
+	var comId		= gfn_GetGlobalValue("G_COM_ID");
+	var bizplcCd 	= gfn_GetGlobalValue("G_BIZPLACE");
+    
+	ds_BillDelete.ClearData();
+	var nRow = ds_BillDelete.AddRow();	
+	ds_BillDelete.SetColumn(nRow,"COM_ID"    , comId);         //회사구분
+	ds_BillDelete.SetColumn(nRow,"BIZPLC_CD" , bizplcCd);      //사업장
+	ds_BillDelete.SetColumn(nRow,"BILL_YMD"  , fv_BILL_YMD);   //전표일자 
+	ds_BillDelete.SetColumn(nRow,"BILL_SEQ"  , fv_BILL_SEQ);   //전표번호 
+	ds_BillDelete.SetColumn(nRow,"SYS_FLAG"  ,"D1");   		   //지급여부
+	
+	// 자동전표등록후  MIS업데이트 칠 파라미터
+	var strUPD_EMPID = gfn_GetGlobalValue("G_USER_NO");
+	var strUPD_IP = gfn_GetLocalIpAddress();
+			
+	ds_Bill_Cancel.ClearData();
+	var nRow = ds_Bill_Cancel.AddRow();
+	ds_Bill_Cancel.SetColumn(nRow, "BILL_YMD", 	fv_BILL_YMD);
+	ds_Bill_Cancel.SetColumn(nRow, "BILL_SEQ", 	fv_BILL_SEQ);
+	ds_Bill_Cancel.SetColumn(nRow, "UPD_EMPID", strUPD_EMPID);
+	ds_Bill_Cancel.SetColumn(nRow, "UPD_IP",    strUPD_IP);
+	
+	var strSvcID = "fn_D1_Tr_delete";
+	var strPart  = "E50";
+	var strURL   = "handle.do?ServiceName=E5_AutoBillCreateMgr-service";	 
+	var strInDatasets   = "ds_Single=ds_BillDelete:u ";
+	var strOutDatasets  = "";
+	var strArgument     = "delete=1";
+	var strCallbackFunc = "fn_D1_CallBack";	
+	
+	gfn_AsyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument,
+	              strCallbackFunc
+	);
+}
+//---------------------------------------------------------
+//	전표취소후 UPDATE
+//---------------------------------------------------------
+function fn_D1_billUpdate()
+{
+		
+	if( ds_Bill_Cancel.GetRowCount() <= 0) return;
+
+	var strSvcID = "bill_cancel";
+	var strPart  = "D10";	
+	var strURL   = "handle.do?ServiceName=D1_MaintRepaiApproMgr-service";
+	var strInDatasets  = "ds_Bill_Cancel=ds_Bill_Cancel:u";
+	var strOutDatasets = "";
+	var strArgument  = "bill_cancel=1";
+	var strCallBackFunc = "fn_D1_CallBack";	
+					
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallBackFunc
+			   );
+}
+
+//--------------------------------------------------------------------------------------------------
+// 선택시 중복방지
+//--------------------------------------------------------------------------------------------------
+function ds_Multi_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+   if(ds_Multi.getColumn(nRow,"CHK") == "1")
+	{
+		for(var i=0;i<ds_Multi.RowCount();i++)
+		{
+			if (nRow != i)
+				ds_Multi.SetColumn(i,"CHK", "0");
+		}
+	}	
+}
+]]></Script>
+</Window>

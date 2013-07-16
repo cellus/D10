@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1902010014U" Left="8" OnLoadCompleted="D1902010014U_OnLoadCompleted" PidAttrib="7" Title="DCVG배관탐사조회(GIS)" Top="8" Ver="1.0" Width="1005" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Dcvg">
+				<Contents>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape3" Left="5" LineColor="user7" Right="1000" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="30" Type="RoundRect" Width="995"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape4" Left="10" LineWidth="0" Right="995" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="35" Type="Rectangle" Width="985"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image0" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search" TabOrder="1" Text="기준년도" Top="41" Width="61"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Dcvg" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="576" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="500" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnCellDBLClick="grd_list_OnCellDblClick" Right="1000" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="2" TabStop="true" Top="76" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="260"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="234"/>
+						<col width="230"/>
+						<col width="100"/>
+						<col width="500"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="관리번호"/>
+						<cell col="1" display="text" text="배관_ID"/>
+						<cell col="2" display="text" text="지사"/>
+						<cell col="3" display="text" text="시/구"/>
+						<cell col="4" display="text" text="연장"/>
+						<cell col="5" display="text" text="탐사연장"/>
+						<cell col="6" display="text" text="시점"/>
+						<cell col="7" display="text" text="종점"/>
+						<cell col="8" display="text" text="탐사일자"/>
+						<cell col="9" display="text" text="손상위치"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MANAGE_NUM" display="text"/>
+						<cell align="right" col="1" colid="MPIPE_ID" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="3" colid="ZIP_NM" display="text"/>
+						<cell align="right" col="4" colid="SYS_LENG" display="text"/>
+						<cell align="right" col="5" colid="EXPLOR_LENG" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="6" colid="EXPLOR_STR_ADDR" display="text"/>
+						<cell align="left" col="7" colid="EXPLOR_END_ADDR" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="8" colid="EXPLOR_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="9" colid="DAMAGE_LOC" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="77" Height="3" Id="Shape5" Left="5" LineWidth="0" Right="1000" TabOrder="3" Top="74" Type="Rectangle" Width="995"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image1" ImageID="blt" Left="142" LeftMargin="12" Style="blt_search" TabOrder="6" Text="지사" Top="41" Width="41"></Image>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="475" LeftMargin="12" Style="blt_search" TabOrder="7" Text="탐사일자" Top="41" Width="61"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" ImeMode="none" Left="182" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="8" Top="41" Width="115"></Combo>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cob_Ymd_Str" Left="541" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="9" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear" Left="77" Style="spin_indis" TabOrder="10" Text="2008" Top="41" Width="54"></Spin>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cob_Ymd_End" Left="645" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="11" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="306" LeftMargin="12" Style="blt_search" TabOrder="12" Text="시/구" Top="41" Width="71"></Image>
+		<Static Height="13" Id="Static10" Left="632" Style="static" TabOrder="13" Text="~" Top="45" Width="10"></Static>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" ImeMode="none" Left="353" Style="combo_indis" TabOrder="14" Top="41" Width="114"></Combo>
+		<Div Height="24" Id="Div0" TabOrder="15" Text="Div0" Url="globals::ComButton.xml" Width="1002">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="740" LeftMargin="12" Style="blt_search" TabOrder="17" TabStop="FALSE" Text="배관번호" Top="41" Width="90"></Image>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_MpipeSearch" ImeMode="none" Left="803" MaxLength="8" Style="edit" TabOrder="16" Top="41" Width="174"></Edit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1902010014U.xml
+* Form 설명  : DCVG 배관탐사 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2009-03-30
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+//---------------------------------------------------------
+function D1902010014U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	//edt_WorkFirmCd  .Text = gfn_GetGlobalValue("G_COM_ID");
+	//edt_WorkFirmCdNm.Text = gfn_GetGlobalValue("G_COM_NAME");
+	
+}
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));
+	//-----------------------------------------
+	//  콤보박스의 초기 설정
+	//-----------------------------------------
+	cob_ObjectFlag.Index = 0;
+	cob_BranchCd_OnChanged();
+	
+	cob_BaseYear.Value = subStr(Today(), 0, 4);
+}
+/********************************************************************************
+* 기      능   :  지사_구 콤보 
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+    fn_SetComboBox_Comcode("1", cob_ObjectFlag.Value, fn_setDsObject_Comcode("1", "cob_CountyFlag"));
+    cob_CountyFlag.Index = 0;
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+
+	if(cob_BaseYear.Value == ''){
+		alert("기준년도를 선택해 주세요");
+		return;
+	}	
+	if(cob_ObjectFlag.Value == ''){
+		alert("해당 지사를 선택해 주세요");
+		return;
+	}
+	
+	fn_D1_FindList();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명     : fn_D1_FindList()
+// 설명       : DCVG 배관탐사 정보를 조회한다.
+// arguments
+// return 내용: 
+//------------------------------------------------------------------------------- 
+function fn_D1_FindList()
+{	
+    var strSvcID       = "";
+	var strPart        = "D10";	
+	var strURL         = "handle.do?ServiceName=D1_DCVGSechHistorySearMgr-service"
+					   + "&BASE_YEAR="        + cob_BaseYear.Value
+					   + "&BRANCH_CD="        + cob_ObjectFlag.Value
+					   + "&ZIP_NO1="          + cob_CountyFlag.Value
+					   + "&EXPLOR_YMD_START=" + cob_Ymd_Str.Value
+					   + "&EXPLOR_YMD_END="   + cob_Ymd_End.Value
+					   + "&MPIPE_ID="	      + trim(edt_MpipeSearch.Text)
+					   ;	  
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Dcvg=ds_Dcvg";
+	var strArgument     = "find1";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ds_Dcvg.GetRowCount()==0) grd_List.NoDataText  = gfn_GetMessage("M000022","%AAA%","결과가");
+	// trace(ds_Dcvg.SaveXML());
+}
+
+
+//------------------------------------------------------------------------------- 
+// 함수명     : grd_list_OnCellDblClick()
+// 설명       : 부모창으로 인자값 보내기
+// arguments
+// return 내용: 
+//------------------------------------------------------------------------------- 
+function fn_CommonSelect()
+{
+     var arrList = array();
+     
+	 arrList[0]  = ds_Dcvg.getcolumn(grd_List.ClickedRow, "BASE_YEAR"     	  ); // DCVG 기준년도
+	 arrList[1]  = ds_Dcvg.getcolumn(grd_List.ClickedRow, "MPIPE_ID"     	  ); // DCVG 배관ID
+	 arrList[2]  = ds_Dcvg.getcolumn(grd_List.ClickedRow, "EXPLOR_BLOCK_SEQ"  ); // 탐사구간일련번호
+	 arrList[3]  = ds_Dcvg.getcolumn(grd_List.ClickedRow, "EXPLOR_RSLT_SEQ"   ); // 탐사결과일련번호
+     arrList[4]  = ds_Dcvg.getcolumn(grd_List.ClickedRow, "ZIP_NO1"     	  ); // 우편번호 앞자리
+	 arrList[5]  = ds_Dcvg.getcolumn(grd_List.ClickedRow, "ZIP_NO2"      	  ); // 우편번호 뒷자리
+	 arrList[6]  = ds_Dcvg.getcolumn(grd_List.ClickedRow, "DAMAGE_ADDR"       ); // 기본주소
+	 arrList[7]  = ds_Dcvg.getcolumn(grd_List.ClickedRow, "DAMAGE_DETAIL_ADDR"); // 상세주소
+	 arrList[8]  = ds_Dcvg.getcolumn(grd_List.ClickedRow, "WORK_NM"    	      ); // 공사명
+	 arrList[9]  = ds_Dcvg.getcolumn(grd_List.ClickedRow, "EXPLOR_YMD"     	  ); 
+	 arrList[10] = ds_Dcvg.getcolumn(grd_List.ClickedRow, "BRANCH_CD"     	  ); //지사코드
+		     
+     Close(arrList);
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+	SearchCondition = SearchCondition + "기준년도 : "   + RPad(cob_BaseYear.Text," ",20);
+	SearchCondition = SearchCondition + "지사 : "       + RPad(cob_ObjectFlag.Text," ",20);
+	SearchCondition = SearchCondition + "시/구 : "       + RPad(cob_CountyFlag.Text," ",20);
+	SearchCondition = SearchCondition + "탐사일자 : " + RPad(cob_Ymd_Str.Value + ' ~ ' + cob_Ymd_End.Value," ",20);
+        
+    gfn_ExportExcel("DCVG탐사이력 조회", 5, SearchCondition, "grd_List");
+}
+function bt_d1_sanction(obj)
+{
+	fn_CommonSearch();
+}
+]]></Script>
+</Window>

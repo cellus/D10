@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="696" Id="D1202010010F_T09" Left="8" PidAttrib="8" Title="특별관리시설순찰점검등록_D1202010010F_T09" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Radio">
+				<Contents>
+					<colinfo id="mount" size="256" summ="default" type="STRING"/>
+					<record>
+						<mount>중압직공급</mount>
+					</record>
+					<record>
+						<mount>전기방식불량시설</mount>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Align="Right" BKColor="#f2fafe" Border="Flat" Height="30" Id="Static26" Left="3" Style="table" TabOrder="2" Top="8" VAlign="Middle" Width="240" WordWrap="TRUE"></Static>
+		<Radio BKColor="#f2fafe" Border="None" ColumnCount="4" DataColumn="mount" Height="16" Id="Radio1" INDEX="0" InnerDataset="ds_Radio" Left="10" OnClick="Radio1_OnClick" Style="radio" TabOrder="1" Top="14" Width="232">
+			<Contents>
+				<Layout Height="20" left="0" text="철길통과" width="80"/>
+				<Layout Height="20" left="80" text="하상통과" width="80"/>
+				<Layout Height="20" left="160" text="교량첨가" width="80"/>
+			</Contents>
+		</Radio>
+		<Div Height="713" Id="div_speci" OnLoadCompleted="D1202010010F_T09_D01_OnLoadCompleted" OnUnloadCompleted="D1202010010F_T09_D01_OnUnloadCompleted" TabOrder="3" Text="Div0" Top="35" Url="D10::D1202010010F_T09_D01.xml" Width="1260">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID      : D1201010010F_T09.xml
+* Form 설명   : 특별관리시설 순찰점검등록 조회,등록,수정,삭제
+* 시스템 명   : 안전공급(D1)
+* 작성자      : 임성수
+* 작성일      : 2009-01-13
+* 변경내용    : 변경내용없음
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+ 
+function D1202010010F_T09_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+}
+
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Find()
+//  설명: 특별관리시설 화면 리스트를 조회 하는 함수
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{	
+	div_speci.fn_D1_Find();    
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Addrowm()
+//   설명: 특별관리시설 내용를 신규 추가 하는 모드로 변경 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Addrowm()
+{	
+	div_speci.fn_D1_Addrowm();   
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Save()
+//   설명: 특별관리시설 상세 내용를 저장 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save()
+{
+	div_speci.fn_D1_Save();   
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Delete()
+//   설명: 특별관리시설를 삭제 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Delete()
+{
+   div_speci.fn_D1_Delete();   
+}
+
+function fn_D1_ExcelExport()
+{
+	div_speci.fn_D1_ExcelExport();
+}
+
+function FACILITY_INFORMATION_SEARCH(obj)
+{
+	// Dialog
+	// param1 	:	prefix
+	// param2 	:	form id
+	// param3 	:	argument
+	// param4 	:	팝업창 width - 정확히 기술
+	// param5 	:	팝업창 height - 정확히 기술
+	// param6 	:	open style
+	// param7 	:	open position nW
+	// param8 	:	open position nH
+	
+	var arrList = gfn_Dialog("D10","D1101010011U","",450,400,true,-1,-1);
+	if(arrList.length() > 0)
+	{
+		edt_comCd.text = arrList[0];			// name
+		edt_comName.text = arrList[1];	// 법인 코드
+	}
+}
+
+
+function WORK_NUM_SEARCH(obj)
+{
+	var arrList = gfn_Dialog("D10","D1101010016U","",450,400,true,-1,-1);
+}
+
+
+function Radio1_OnClick(obj)
+{
+    Image12.Text="시설물번호";
+	cob_Gubun.Visible=true;	
+	div_speci.Url ='';
+
+	var pageradio = Radio1.Index;
+	
+	if(pageradio==0)
+	{
+		Image0.Visible=true;	
+		cob_Gubun.Visible=true;		
+		//Image4.Visible=true;
+		//cal_PPatrolYmd.Visible=true;
+		div_speci.Url = "D10::D1202010010F_T09_D01.xml";
+	} 
+	else if(pageradio==1)
+	{
+		 Image0.Visible=false;	
+		 cob_Gubun.Visible=false;
+		 //Image4.Visible=false;
+		 //cal_PPatrolYmd.Visible=false;
+		 div_speci.Url = "D10::D1202010010F_T09_D02.xml";		
+    }
+}
+]]></Script>
+</Window>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="584" Id="D2001010014F" Left="8" OnLoadCompleted="D2001010014F_OnLoadCompleted" PidAttrib="7" Title="D2001010014F_BPM_준공도&#32;처리&#32;진행현황" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_List">
+				<Contents>
+					<colinfo id="activityName" size="256" summ="default" type="STRING"/>
+					<colinfo id="branchNm" size="256" summ="default" type="STRING"/>
+					<colinfo id="workNumPK" size="256" summ="default" type="STRING"/>
+					<colinfo id="workType" size="256" summ="default" type="STRING"/>
+					<colinfo id="zipAddress" size="256" summ="default" type="STRING"/>
+					<colinfo id="dealNm" size="256" summ="default" type="STRING"/>
+					<colinfo id="bpmMonitorLink" size="256" summ="default" type="STRING"/>
+					<colinfo id="systemId" size="256" summ="default" type="STRING"/>
+					<colinfo id="displayId" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_CallParams">
+				<Contents>
+					<colinfo id="userId" size="256" summ="default" type="STRING"/>
+					<colinfo id="interfaceType" size="256" summ="default" type="STRING"/>
+					<colinfo id="processDefName" size="256" summ="default" type="STRING"/>
+					<colinfo id="startPage" size="256" summ="default" type="STRING"/>
+					<colinfo id="countPerPage" size="256" summ="default" type="STRING"/>
+					<colinfo id="teamCode" size="256" summ="default" type="STRING"/>
+					<colinfo id="branchCode" size="256" summ="default" type="STRING"/>
+					<colinfo id="searchCondition" size="256" summ="default" type="STRING"/>
+					<colinfo id="searchValue" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="GDS_MENULIST_BPM">
+				<Contents>
+					<colinfo id="CATEGORY_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="MENU_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="PMENU_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="MENU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PREFIX" size="256" summ="default" type="STRING"/>
+					<colinfo id="FORM_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="FULLSIZE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="MENU_LEVEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ENABLE" size="256" summ="default" type="STRING"/>
+					<colinfo id="BTN_AUTH" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISABLE_COLOR" size="256" summ="default" type="STRING"/>
+					<colinfo id="DUP_YN" size="256" summ="default" type="STRING"/>
+					<record>
+						<BTN_AUTH></BTN_AUTH>
+						<CATEGORY_ID></CATEGORY_ID>
+						<DISABLE_COLOR></DISABLE_COLOR>
+						<DUP_YN></DUP_YN>
+						<ENABLE></ENABLE>
+						<FORM_ID>D1501010010F</FORM_ID>
+						<FULLSIZE_YN></FULLSIZE_YN>
+						<MENU_ID></MENU_ID>
+						<MENU_LEVEL></MENU_LEVEL>
+						<MENU_NM></MENU_NM>
+						<PMENU_ID></PMENU_ID>
+						<PREFIX></PREFIX>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Results"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_D10200">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="#6cbae1" Bottom="51" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1000" TabOrder="1" Top="48" Type="Rectangle" Width="995"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_List" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="579" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="528" Id="grd_master" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" NoDataText="검색된&#32;목록이&#32;없습니다." OnCellDBLClick="fn_master_OnCellDblClick" Right="1000" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="-12" TabStop="true" Top="51" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="387"/>
+						<col width="130"/>
+						<col width="48"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="진행상태"/>
+						<cell col="1" display="text" text="지사명"/>
+						<cell col="2" display="text" text="공사번호"/>
+						<cell col="3" display="text" text="공사구분"/>
+						<cell col="4" display="text" text="주소"/>
+						<cell col="5" display="text" text="협력업체"/>
+						<cell col="6" display="text" text="모니터"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="activityName" display="text" expandsize="18" imemode="english" limit="9" RegExprFilter="[a-zA-Z0-9]" wordwrap="word"/>
+						<cell align="center" col="1" colid="branchNm" display="text" imemode="native"/>
+						<cell align="center" col="2" colid="workNumPK" display="text"/>
+						<cell align="center" col="3" colid="workType" combocol="CODE_ITEM" combodataset="ds_D10200" combotext="ITEM_KNAME" display="combo"/>
+						<cell col="4" colid="zipAddress" display="text"/>
+						<cell align="center" col="5" colid="dealNm" display="text"/>
+						<cell bkimageid="bill_add" col="6" colid="CHK" cursor="hand" display="image"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="8" LeftMargin="12" Style="text_title" TabOrder="3" Text="BPM&#32;준공도&#32;처리&#32;진행현황" Top="35" Width="178"></Image>
+		<Div DisableBKColor="white" Height="30" Id="div_ComHead" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="4" Text="Div0" Url="GLOBALS::ComHead.xml" Visible="FALSE" Width="995">
+			<Contents></Contents>
+		</Div>
+		<Grid BindDataset="ds_List" BkColor2="default" BoldHead="true" Bottom="552" Enable="true" EndLineColor="default" Height="120" Id="Grid0" InputPanel="FALSE" Left="32" LineColor="default" Right="976" TabOrder="5" TabStop="true" Top="432" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="944">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="287"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="activityName"/>
+						<cell col="1" display="text" text="branchNm"/>
+						<cell col="2" display="text" text="workNumPK"/>
+						<cell col="3" display="text" text="workType"/>
+						<cell col="4" display="text" text="zipAddress"/>
+						<cell col="5" display="text" text="dealNm"/>
+						<cell col="6" display="text" text="bpmMonitorLink"/>
+						<cell col="7" display="text" text="systemId"/>
+						<cell col="8" display="text" text="displayId"/>
+					</head>
+					<body>
+						<cell col="0" colid="activityName" display="text"/>
+						<cell col="1" colid="branchNm" display="text"/>
+						<cell col="2" colid="workNumPK" display="text"/>
+						<cell col="3" colid="workType" display="text"/>
+						<cell col="4" colid="zipAddress" display="text"/>
+						<cell col="5" colid="dealNm" display="text"/>
+						<cell col="6" colid="bpmMonitorLink" display="text"/>
+						<cell col="7" colid="systemId" display="text"/>
+						<cell col="8" colid="displayId" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid BindDataset="ds_CallParams" BkColor2="default" BoldHead="true" Bottom="424" Enable="true" EndLineColor="default" Height="48" Id="Grid1" InputPanel="FALSE" Left="32" LineColor="default" Right="976" TabOrder="6" TabStop="true" Top="376" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="944">
+			<contents>
+				<columns>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="userId"/>
+					<cell col="1" display="text" text="interfaceType"/>
+					<cell col="2" display="text" text="processDefName"/>
+					<cell col="3" display="text" text="startPage"/>
+					<cell col="4" display="text" text="countPerPage"/>
+					<cell col="5" display="text" text="teamCode"/>
+					<cell col="6" display="text" text="branchCode"/>
+					<cell col="7" display="text" text="searchCondition"/>
+					<cell col="8" display="text" text="searchValue"/>
+				</head>
+				<body>
+					<cell col="0" colid="userId" display="text"/>
+					<cell col="1" colid="interfaceType" display="text"/>
+					<cell col="2" colid="processDefName" display="text"/>
+					<cell col="3" colid="startPage" display="text"/>
+					<cell col="4" colid="countPerPage" display="text"/>
+					<cell col="5" colid="teamCode" display="text"/>
+					<cell col="6" colid="branchCode" display="text"/>
+					<cell col="7" colid="searchCondition" display="text"/>
+					<cell col="8" colid="searchValue" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D2001010014F.xml
+* Form 설명  : 준공도 처리
+* 시스템 명  : 안전공급(D1)
+* 작성자     : hjh 
+* 작성일     : 2009-07-04
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+var fv_ServiceId = "D2001010014F";
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D2001010014F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	fn_BpmMenuList();
+	gfn_SetButton("00010001");
+	
+	gfn_SetComboBox_Comcode("D10200","ds_D10200"); //공사구분		
+	
+	//fn_CommonSearch();	
+}
+
+//--------------------------------------------------------------------------------------------
+//   선택된 화면을 Open하기위하여 bpm 관련화면 정보를 내려받는다.
+//--------------------------------------------------------------------------------------------
+function fn_BpmMenuList()
+{
+	// 검색 문자열을 생성한다 
+	var strSvcID = "A2101010030F";
+	var strPart = "A10";
+	var strURL = "handle.do?ServiceName=A2101010030F-service&find0=1";
+	var strInDatasets  = "";
+	var strOutDatasets  = "";
+	    strOutDatasets += "GDS_MENULIST_BPM=ds_MenuList";
+	var strArgument  = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+}
+
+//--------------------------------------------------------------------------------------------
+//   파라메터 정보에 넘겨줄 값이 Null이거나, Null 표현식 99,999999인 경우 처리내용 
+//--------------------------------------------------------------------------------------------
+function fn_NullToSp(strParam)
+{
+	var rStr = "";
+	if(trim(strParam) == "" ||  trim(strParam).length == 0 || trim(strParam) = "99" || trim(strParam) = "999999") {
+		return rStr;
+	}
+	else
+	{
+		return trim(strParam);
+	}
+}
+
+
+function fn_CommonSearch()
+{   //-------------------------------------------------------------------------------
+	// 조회 버튼 실행 
+	//-------------------------------------------------------------------------------
+	
+	
+
+// 서울도시가스	강북지사	관리팀(강북)	박병택	198540207
+// 200162331
+
+
+	// fn_NullToSp(gfn_GetGlobalValue("G_DEPT_CODE"))
+	// fn_NullToSp(gfn_GetGlobalValue("G_BRANCH_CD"))
+	
+	ds_List.ClearData();
+	ds_CallParams.ClearData();
+	ds_CallParams.AddRow();
+    ds_CallParams.SetColumn(0,"userId",gfn_GetGlobalValue("G_USER_NO"));
+    //ds_CallParams.SetColumn(0,"userId","199443113");
+	ds_CallParams.SetColumn(0,"interfaceType","Type5");
+	ds_CallParams.SetColumn(0,"processDefName","SS_CMI");
+		
+	ds_CallParams.SetColumn(0,"startPage","1");
+	ds_CallParams.SetColumn(0,"countPerPage","100");	
+	ds_CallParams.SetColumn(0,"teamCode",  gfn_GetGlobalValue("G_DEPT_CODE"));
+	ds_CallParams.SetColumn(0,"branchCode",gfn_GetGlobalValue("G_BRANCH_CD"));
+	ds_CallParams.SetColumn(0,"searchCondition","");
+	// 검색조건(공사번호:workNumPK, 공사구분:workType, 시공사:dealNm)
+	ds_CallParams.SetColumn(0,"searchValue","");
+	
+		          
+	var strSvcID       = "find";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName="+fv_ServiceId+"-service&";
+	var strInDatasets  = "ds_CallParams=ds_CallParams ds_MyList=ds_List";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_List=ds_MyList";
+	var strArgument  = "find=1";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+		          
+		          
+    if(ErrorCode<0){
+		alert(gfn_GetMessage("M000014","%AAA%","bpm처리중"));	//"저장중 오류가 발생했습니다."																		
+		return false;
+	}           
+}
+
+function fn_getRowNum(strFormId)
+{
+	var selectRow = -1;
+	for(var s_i = 0; s_i < GDS_MENULIST_BPM.rowcount +1; s_i++) {
+		if(GDS_MENULIST_BPM.GetColumn(s_i,"FORM_ID") == strFormId) {
+			selectRow = s_i;
+			return selectRow;
+		}
+	}
+	return selectRow;
+}
+
+//--------------------------------------------------------------------------------------------
+//    할일을 크릭한 경우에는 해당 화면을 Open 한다 
+//--------------------------------------------------------------------------------------------
+function fn_master_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	// BPM 모니터용  브라우져 실행 	
+	if("CHK" == grd_master.GetCellProp("body",nCell,"ColId"))
+	{
+		var linkUrl = ds_List.GetColumn(ds_List.row,"bpmMonitorLink");
+		if(trim(linkUrl) == "" || length(linkUrl) = 0) {
+			alert(" 모니터 화면 정보가 없습니다  ");
+			return;
+		}
+		else
+		{
+			ExecBrowser(linkUrl);
+			return;
+		}
+		return;
+	}
+	else
+	{
+	
+		//  MIS 해당 업무화면을  실행하기 
+		
+		var call_pgmid = trim(ds_List.GetColumn(ds_List.row,"displayId"));       // 호출프로그램 
+		var call_args = " workNumPK="+ quote(ds_List.GetColumn(ds_List.row,"workNumPK"));  // 아큐먼트 
+		
+		//var selecRow = GDS_MENULIST_BPM.SearchRow("FORM_ID=" + call_pgmid + "");
+		var selecRow = fn_getRowNum(call_pgmid);
+		
+		if(selecRow < 0) {
+			alert("[ " + call_pgmid + " ]은 등록되지 않은 화면입니다. ");
+			return;
+		}
+		
+		var allowed = GDS_MENULIST_BPM.GetColumn(selecRow,"ENABLE");
+		var stcolor = GDS_MENULIST_BPM.GetColumn(selecRow,"DISABLE_COLOR");
+		
+		// 사용권한 확인
+		if((allowed == "FALSE") || (stcolor.length() > 0)) 
+		{
+			var nX = toInteger(GetPlatformInfo("WorkArea","Width"));
+			var nY = toInteger(GetPlatformInfo("WorkArea","Height"));
+			var nLeft = toInteger(GetPlatformInfo("WorkArea","Left"));
+			var nTop = toInteger(GetPlatformInfo("WorkArea","Top"));
+			
+			nX = toInteger((nX - 352)/2 + nLeft);
+			nY = toInteger((nY - 152)/2 + nTop);
+	
+			var nCnt = AllWindows.Count-1;
+			global.windows[nCnt].Dialog("globals::ComMsgX.xml","",352,152,"resize=false autosize=false title=false border=false",nX,nY);
+			return;
+		}
+	
+		var prefix = GDS_MENULIST_BPM.GetColumn(selecRow,"PREFIX");
+		var formid = GDS_MENULIST_BPM.GetColumn(selecRow,"FORM_ID");
+		var strMenuTxt = GDS_MENULIST_BPM.GetColumn(selecRow,"MENU_NM");
+		var strMenuId = GDS_MENULIST_BPM.GetColumn(selecRow,"MENU_ID");
+		var strAuth = GDS_MENULIST_BPM.GetColumn(selecRow,"BTN_AUTH");
+		var strArg = call_args;           // Arguments 정보를 붙여준다 
+	
+		if((prefix.length() > 0) && (formid.length() > 0)) 
+		{
+			gfn_NewWindow(prefix,formid,strArg,strMenuTxt,strMenuId,strAuth,selecRow,GDS_MENULIST_BPM);
+		}
+	}
+
+}
+
+]]></Script>
+</Window>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="744" Id="D1205010010F_T05" Left="8" PidAttrib="7" Title="전기방식불량&#32;내역" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_speci"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_yn">
+				<Contents>
+					<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE_ID>Y</CODE_ID>
+						<CODE_NM>작성</CODE_NM>
+					</record>
+					<record>
+						<CODE_ID>N</CODE_ID>
+						<CODE_NM>미작성</CODE_NM>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user15" Bottom="5" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1254" TabOrder="1" Top="2" Type="Rectangle" Width="1249"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button231" ImageID="btn_8_Search" Left="1122" LeftMargin="21" OnClick="Button231_OnClick" Style="button" TabOrder="2" Text="DCVG탐사이력조회" Top="209" Width="132"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button15" ImageID="btn_addrow" Left="1102" LeftMargin="15" OnClick="Btn_add_Rst_OnClick" Style="button" TabOrder="3" Text="추가" Top="399" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button0" ImageID="btn_addrow" Left="966" LeftMargin="15" OnClick="Btn_add_ArRst_OnClick" Style="button" TabOrder="5" Text="추가" Top="209" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button1" ImageID="btn_deleterow" Left="1072" LeftMargin="15" OnClick="btn_del_ArRst_OnClick" Style="button" TabOrder="4" Text="삭제" Top="209" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Save" ImageID="btn_2" Left="1155" LeftMargin="15" OnClick="btn_save_Rst_OnClick" Style="button" TabOrder="7" TabStop="FALSE" Text="저장" Top="399" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button2" ImageID="btn_deleterow" Left="1206" LeftMargin="15" OnClick="btn_del_Rst_OnClick" Style="button" TabOrder="6" Text="삭제" Top="399" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button3" ImageID="btn_2" Left="1020" LeftMargin="15" OnClick="btn_save_ArRst_OnClick" Style="button" TabOrder="8" TabStop="FALSE" Text="저장" Top="209" Width="48"></Button>
+		<Grid AutoEnter="TRUE" BindDataset="ds_speci" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="736" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="731" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="silver" LineType="ExVERT" OnCellClick="Grid1_OnCellClick" OnHeadClick="Grid1_OnHeadClick" Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="9" TabStop="true" Top="5" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="54"/>
+						<col width="72"/>
+						<col width="79"/>
+						<col width="65"/>
+						<col width="65"/>
+						<col width="87"/>
+						<col width="113"/>
+						<col width="312"/>
+						<col width="78"/>
+						<col width="75"/>
+						<col width="76"/>
+						<col width="75"/>
+						<col width="80"/>
+						<col width="81"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="81"/>
+						<col width="105"/>
+						<col width="81"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="NO"/>
+						<cell col="1" display="text" rowspan="2" text="점검일자"/>
+						<cell col="2" display="text" rowspan="2" text="시설물번호"/>
+						<cell col="3" display="text" rowspan="2" text="세부번호"/>
+						<cell col="4" display="text" rowspan="2" text="인입밸브"/>
+						<cell col="5" display="text" rowspan="2" text="지사"/>
+						<cell col="6" display="text" rowspan="2" text="팀"/>
+						<cell col="7" display="text" rowspan="2" text="주소"/>
+						<cell col="8" colspan="4" display="text" text="점검현황"/>
+						<cell col="12" colspan="3" display="text" text="조사현황"/>
+						<cell col="15" colspan="7" display="text" text="조치현황"/>
+						<cell col="8" display="text" row="1" text="T/B전위"/>
+						<cell col="9" display="text" row="1" text="전단전위"/>
+						<cell col="10" display="text" row="1" text="후단전위"/>
+						<cell col="11" display="text" row="1" text="본딩전위"/>
+						<cell col="12" display="text" row="1" text="방식조서"/>
+						<cell align="center" col="13" display="text" row="1" text="조사완료일"/>
+						<cell col="14" display="text" row="1" text="조치방안"/>
+						<cell col="15" display="text" row="1" text="정비번호"/>
+						<cell col="16" display="text" row="1" text="정비의뢰일자"/>
+						<cell col="17" display="text" row="1" text="공사일자"/>
+						<cell col="18" display="text" row="1" text="조치여부"/>
+						<cell col="19" display="text" row="1" text="조치결과"/>
+						<cell col="20" display="text" row="1" text="조치전위"/>
+						<cell col="21" display="text" row="1" text="조치일자"/>
+					</head>
+					<body>
+						<cell align="right" col="0" display="text" expr="rowindex+1"/>
+						<cell align="center" col="1" colid="PATROL_YMD" display="date"/>
+						<cell align="center" col="2" colid="FACI_NUM" display="normal"/>
+						<cell align="center" col="3" colid="DETAIL_NUM" display="text"/>
+						<cell align="center" col="4" colid="IN_VALVE_YN" display="text"/>
+						<cell align="center" col="5" colid="BRANCH_NM" display="text"/>
+						<cell align="left" col="6" colid="TEAM_NM" display="text"/>
+						<cell col="7" colid="JUSO" display="text"/>
+						<cell align="right" col="8" colid="ELECT_POT_MEAS" display="number"/>
+						<cell align="right" col="9" colid="PREVI_ELECT" display="number"/>
+						<cell align="right" col="10" colid="LATER_ELEC_POT" display="number"/>
+						<cell align="right" col="11" colid="BONDING" display="number"/>
+						<cell align="center" col="12" colid="CHK_DOCU_REF_YN" display="normal" expandimage="popup" expandshow="true" expr='iif(CHK_DOCU_REF_YN&#32;==&#32;&quot;Y&quot;,&#32;&quot;작성&quot;,&#32;&quot;미작성&quot;)'/>
+						<cell align="center" col="13" colid="RESECH_YMD" display="date"/>
+						<cell align="center" col="14" colid="ACT_FLAG" display="text"/>
+						<cell align="center" col="15" colid="MAINTER_NUM" display="text"/>
+						<cell align="center" col="16" colid="WORK_REQ_YMD_1" display="date"/>
+						<cell align="center" col="17" colid="REAL_JOB_YMD" display="date"/>
+						<cell align="center" col="18" colid="CHECK_YN" display="text"/>
+						<cell align="center" col="19" colid="MEAS_FLAG" display="text"/>
+						<cell align="right" col="20" colid="MEAS_ELECT" display="number"/>
+						<cell align="center" col="21" colid="MEAS_YMD" display="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1605030011F.xml
+* Form 설명  : DCVG탐사 계획/구간/결과 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-23
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_addRow()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	ds_Search.ClearData();
+	var row = ds_Search.AddRow();
+	ds_Search.SetColumn(row,"BRANCH_CD",cob_branch.Value);
+	ds_Search.SetColumn(row,"TEAM_CD",cob_TeamCdSearch.Value);
+	ds_Search.SetColumn(row,"PATROL_STR_YMD",cal_Ymd_From.Value);
+	ds_Search.SetColumn(row,"PATROL_END_YMD",cal_Ymd_To.Value);
+	
+	ds_list.ClearData();
+	ds_speci.ClearData();
+	
+    var strSvcID        = "Search_SPECI";
+	var strPart         = "D10";	             
+	var strURL          = "handle.do?ServiceName=D1205010010F-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_speci=ds_list";
+	var strArgument     = "Search_SPECI=1";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );			   
+}
+
+function fn_D1_Excel()
+{
+	var SearchCondition= "";
+   
+    SearchCondition = SearchCondition + "지사 : " +     RPad(cob_branch.Text," ",20);
+    SearchCondition = SearchCondition + "팀 : " +    RPad(cob_TeamCdSearch.Text," ",20);
+    SearchCondition = SearchCondition + "순찰일자 : " + RPad(substr(today(),0,4) + '0101' + ' ~ ' + today()," ",40);
+    
+    gfn_ExportExcel("전기방식 불량 내역", 3, SearchCondition, "Grid1"); 
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명  : 탐사일지 장표를 출력한다. 
+// arguments 없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_D1_Print()
+{
+	PrintScreen();
+}
+
+function Grid1_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+
+function Grid1_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if("CHK_DOCU_REF_YN" == Grid1.GetCellProp("body",nCell,"ColId"))	// 점검대장 등록여부
+	{
+		var args = "";
+		var strRowType = ds_speci.GetRowType(nRow);
+		
+		args  = "FACI_NUM="    +quote(ds_speci.GetColumn(nRow,"FACI_NUM"));		// 시설물번호
+		args += " DETAIL_NUM=" +quote(ds_speci.GetColumn(nRow,"DETAIL_NUM"));	// 상세번호
+		args += " PATROL_YMD=" +ds_speci.GetColumn(nRow,"PATROL_YMD");			// 순찰일자
+		args += " ROWTYPE="    +strRowType;
+		
+		var Result = gfn_Dialog("D10","D1202010037U",args,627,657,true,-1,-1);		//전기방식 조사서 팝업
+		
+		fn_D1_find();
+	}
+}]]></Script>
+</Window>

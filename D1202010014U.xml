@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="493" Id="D1202010014U" Left="8" OnLoadCompleted="D1202010014U_OnLoadCompleted" OnUnloadCompleted="D1202010014U_OnUnloadCompleted" PidAttrib="7" Title="소음측정&#32;결과입력_D1202010014U" Top="8" Ver="1.0" Width="768" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="NOISE_MEAS_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="NOISE_MEAS_EMPLID" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_NOISE_LEVEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="NOISE_MEAS_REVIS_VALUE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NOISE_MEAS_JUDE_RSLT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NOISE_MEAS_ACT_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="LAW_NOISE_BASE" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIS_VALUE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list"></Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static8" Left="5" Style="table" TabOrder="43" Top="136" VAlign="Middle" Width="758" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static14" Left="5" Style="table" TabOrder="29" Top="382" VAlign="Middle" Width="758" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static13" Left="228" Style="pop_table" TabOrder="27" Text="소음대책&#32;및&#32;조치사항" Top="361" VAlign="Middle" Width="535" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static3" Left="5" Style="table" TabOrder="17" Top="528" VAlign="Middle" Visible="FALSE" Width="758" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static25" Left="110" Style="table" TabOrder="13" Top="115" VAlign="Middle" Width="653" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static22" Left="110" Style="table" TabOrder="11" Top="94" VAlign="Middle" Width="653" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="소음측정&#32;결과입력" Transparent="TRUE" Width="768"></Image>
+		<Shape BKColor="user16" Bottom="167" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="763" TabOrder="3" Top="164" Type="Rectangle" Width="758"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="355" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="188" Id="grd_Multi" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellClick="grd_Multi_OnCellClick" OnExpandEdit="grd_Multi_OnExpandEdit" Right="763" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="167" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="758">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="95"/>
+						<col width="73"/>
+						<col width="103"/>
+						<col width="75"/>
+						<col width="75"/>
+						<col width="75"/>
+						<col width="55"/>
+						<col width="203"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="소음측정일시"/>
+						<cell col="1" display="text" text="측정자"/>
+						<cell col="2" display="text" text="법적소음기준(dB)"/>
+						<cell col="3" display="text" text="측정소음도"/>
+						<cell col="4" display="text" text="보정치"/>
+						<cell col="5" display="text" text="평가소음도"/>
+						<cell col="6" display="text" text="판정"/>
+						<cell col="7" display="text" text="조치결과"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="NOISE_MEAS_DTM" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="1" colid="NOISE_MEAS_EMPLID_NM" cursor="hand" display="text" expandimage="search" expandshow="true" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="2" colid="LAW_NOISE_BASE" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="3" colid="MEAS_NOISE_LEVEL" display="number" edit="normal" limit="3"/>
+						<cell align="right" col="4" colid="REVIS_VALUE" display="number"/>
+						<cell align="right" col="5" colid="NOISE_MEAS_REVIS_VALUE" display="number" limit="3"/>
+						<cell col="6" colid="NOISE_MEAS_JUDE_RSLT" display="combo" edit="combo"/>
+						<cell col="7" colid="NOISE_MEAS_ACT_RMK" display="text" edit="normal" limit="50"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="4" Text="Button8" Top="-134" Width="2"></Button>
+		<Div Height="24" Id="Div0" TabOrder="5" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="768">
+			<Contents></Contents>
+		</Div>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="5" Style="table" TabOrder="9" Top="73" VAlign="Middle" Width="758" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_list" Border="Flat" Column="FACI_NUM" Enable="FALSE" Height="18" Id="Edit2" ImeMode="none" Left="128" Style="edit" TabOrder="7" Top="75" Width="252"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="5" Style="pop_table" TabOrder="6" Text="정압실번호" Top="73" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="383" Style="pop_table" TabOrder="8" Text="정압실명" Top="73" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static23" Left="5" Style="pop_table" TabOrder="10" Text="주소" Top="94" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static26" Left="5" Style="pop_table" TabOrder="12" Text="신주소" Top="115" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_list" Border="Flat" Column="LOT_NUM_UNION" Enable="FALSE" Height="18" Id="Edit7" ImeMode="none" Left="128" Style="edit" TabOrder="14" Top="96" Width="631"></Edit>
+		<Edit BindDataset="ds_list" Border="Flat" Column="NEW_ADDR_UNION" Enable="FALSE" Height="18" Id="Edit20" ImeMode="none" Left="128" Style="edit" TabOrder="15" Top="117" Width="631"></Edit>
+		<Edit BindDataset="ds_list" Border="Flat" Column="GOV_ROOM_NM" Enable="FALSE" Height="18" Id="Edit3" ImeMode="none" Left="506" Style="edit" TabOrder="16" Top="75" Width="253"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="383" Style="pop_table_indis" TabOrder="18" Text="적용대상2" Top="528" VAlign="Middle" Visible="FALSE" Width="120" WordWrap="TRUE"></Static>
+		<Combo Border="Flat" Height="18" Id="cob_app1" Left="127" Style="combo_indis" TabOrder="19" Top="529" Visible="FALSE" Width="254"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_app2" Left="505" Style="combo_indis" TabOrder="20" Top="529" Visible="FALSE" Width="255"></Combo>
+		<Edit BindDataset="ds_list" Border="Flat" Column="LAW_NOISE_BASE" Enable="FALSE" Height="18" Id="Edit4" ImeMode="none" Left="128" Style="edit" TabOrder="21" Top="138" Width="252"></Edit>
+		<Edit BindDataset="ds_list" Border="Flat" Column="REVIS_VALUE" Enable="FALSE" Height="18" Id="Edit5" ImeMode="none" Left="524" Style="edit" TabOrder="22" Top="138" Width="235"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static9" Left="383" Style="pop_table" TabOrder="24" Text="보정치" Top="136" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static10" Left="5" Style="pop_table" TabOrder="23" Text="법적소음기준" Top="136" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static11" Left="5" Style="pop_table" TabOrder="25" Text="법적소음기준-평가소음도" Top="361" VAlign="Middle" Width="224" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit8" ImeMode="none" Left="232" Style="edit" TabOrder="26" Text="고도의&#32;방음처리(소음기&#32;추가부착)" Top="384" Width="527"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static12" Left="5" Style="pop_table" TabOrder="28" Text="20dB이상&#32;초과한&#32;경우" Top="382" VAlign="Middle" Width="224" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static15" Left="5" Style="table" TabOrder="34" Top="424" VAlign="Middle" Width="758" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static16" Left="5" Style="table" TabOrder="31" Top="403" VAlign="Middle" Width="758" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static17" Left="5" Style="pop_table" TabOrder="30" Text="15~20dB이상&#32;초과한경우" Top="403" VAlign="Middle" Width="224" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static19" Left="5" Style="pop_table" TabOrder="32" Text="10~15dB이상&#32;초과한경우" Top="424" VAlign="Middle" Width="224" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit11" ImeMode="none" Left="232" Style="edit" TabOrder="33" Text="간단한&#32;방음처리(정압실문,&#32;환기구&#32;방음)" Top="447" Width="527"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static20" Left="5" Style="table" TabOrder="39" Top="466" VAlign="Middle" Width="758" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static21" Left="5" Style="table" TabOrder="37" Top="445" VAlign="Middle" Width="758" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static24" Left="5" Style="pop_table" TabOrder="35" Text="5~10dB이상&#32;초과한경우" Top="445" VAlign="Middle" Width="224" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit13" ImeMode="none" Left="232" Style="edit" TabOrder="36" Text="양해,&#32;허용가능" Top="468" Width="527"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static27" Left="5" Style="pop_table" TabOrder="38" Text="0~5dB이상&#32;초과한&#32;경우" Top="466" VAlign="Middle" Width="224" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit10" ImeMode="none" Left="232" Style="edit" TabOrder="40" Text="방음처리(벽면&#32;일부분&#32;방음)" Top="426" Width="527"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit9" ImeMode="none" Left="232" Style="edit" TabOrder="41" Text="방음처리(정압실&#32;전면방음)" Top="405" Width="527"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static2" Left="5" Style="pop_table_indis" TabOrder="42" Text="적용대상1" Top="528" VAlign="Middle" Visible="FALSE" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Height="16" Id="Static6" Left="503" TabOrder="44" Text="-" Top="140" Width="19"></Static>
+	</Form>
+	<Script><![CDATA[/*************************************************************************************************** 
+* FormID     : D1202010014U.xml
+* Form 설명  : 소음측정 순찰점검이력조회(POPUP)
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 임성수 
+* 작성일     : 2009-01-07 
+* 변경내용   : 변경일자, 변경내용,변경자 
+****************************************************************************************************/ 
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+//---------------------------------------------------------
+//	화면변수선언 
+//---------------------------------------------------------
+var strFaciNum = "";
+var strGovNum = "";
+var strPatrolYmd = "";
+
+function D1202010014U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_D1_SetGrid_Sort(grd_Multi);
+	fn_Init();
+	fn_D1_Find();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 넘어온 파라메터가 있으면
+	if(IsExistVar("FACI_NUM"  , true)){	strFaciNum = FACI_NUM    ;	}
+	if(IsExistVar("GOV_NUM"   , true)){ strGovNum  = GOV_NUM     ;	}
+	if(IsExistVar("PATROL_YMD", true)){	strPatrolYmd = PATROL_YMD;	}
+	
+	gfn_SetComboBox_Comcode("A10200",gfn_setDsObject_Comcode("cob_app1"));	
+	gfn_SetComboBox_Comcode("A10200",gfn_setDsObject_Comcode("cob_app2"));	
+	gfn_SetGrdComboBox_Comcode("grd_Multi",6,"A10430");	
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	fn_D1_Find();
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//---------------------------------------------------------
+function fn_CommonSave()
+{
+	fn_D1_Save();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Find()
+//   설명:  정기 검사 배관 결과를 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{	
+    fn_search_faci();
+
+	var strSvcID = "fn_D1_Find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1202010014U-service"
+	           + "&FACI_NUM=" 			+strFaciNum					//정압실번호
+	           + "&GOV_NUM=" 			+strGovNum					//정압기번호
+	           + "&PATROL_YMD=" 		+strPatrolYmd				//순찰일자
+	           ;
+
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "find";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ErrorCode < 0)
+	{
+		return;
+	}					   
+	
+	if(ds_Multi.GetRowCount()==0)
+	{
+        grd_Multi.NoDataText="조회결과가 없습니다.";
+    }
+    
+	ds_Multi.SetColumn(0, "NOISE_MEAS_DTM", PATROL_YMD);
+	
+}
+
+function fn_search_faci() {
+
+    var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1202010014U-service"
+	           + "&FACI_NUM=" 			+strFaciNum
+	           ;
+
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_list=ds_list";
+	var strArgument  = "search";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+function fn_CommonAddRow()
+{
+    // if (ds_Multi.RowCount() == 0) {
+		// ds_Multi.AddRow();
+		
+		// ds_Multi.SetColumn(ds_Multi.lastrow, "NOISE_MEAS_EMPLID_NM", gfn_GetGlobalValue("G_NAME"));
+		// ds_Multi.SetColumn(ds_Multi.lastrow, "NOISE_MEAS_EMPLID", gfn_GetGlobalValue("G_USER_NO"));
+		// ds_Multi.SetColumn(ds_Multi.lastrow, "LAW_NOISE_BASE", ds_list.GetColumn(0, "LAW_NOISE_BASE"));
+		// ds_Multi.SetColumn(ds_Multi.lastrow, "REVIS_VALUE", ds_list.GetColumn(0, "REVIS_VALUE"));
+		// ds_Multi.SetColumn(ds_Multi.lastrow, "NOISE_MEAS_DTM", PATROL_YMD);
+	// } else {
+	    // return;
+	// }	
+}
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_SAVE
+//   설명  : 소음측정결과 입력 내역을 등록/업데이트한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save()
+{
+	ds_Multi.UpdateControl = false;
+		
+	for (var i = 0; i < ds_Multi.GetRowCount(); i++) {
+		
+		if (ds_Multi.GetRowType(i) == "insert") {
+					
+			ds_Multi.SetRowType(i, "update");
+			ds_Multi.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_Multi.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//수정자 IP
+			ds_Multi.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+			ds_Multi.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//등록자 IP
+			ds_Multi.SetColumn(i, "FACI_NUM" , FACI_NUM);
+			ds_Multi.SetColumn(i, "GOV_NUM" , GOV_NUM);
+			ds_Multi.SetColumn(i, "PATROL_YMD" , PATROL_YMD);
+		}
+	}
+	
+	var strSvcID         = "fn_D1_Save";
+	var strPart          = "D10";
+	var strURL           = "handle.do?ServiceName=D1202010014U-service" ;					
+	var strInDatasets    = "ds_Multi=ds_Multi:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{
+		return;
+	}		
+			
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true);		
+}
+
+
+//---------------------------------------------------------
+// 달력 팝업 및 사원 팝업
+//---------------------------------------------------------
+function grd_Multi_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+	// if("NOISE_MEAS_DTM" == grd_Multi.GetCellProp("body",nCell,"ColId"))
+	// {
+		// gfn_SetCalendar(obj, nRow, nCell);
+	// }
+	if("NOISE_MEAS_EMPLID_NM" == grd_Multi.GetCellProp("body",nCell,"ColId"))
+	{
+		var retValue = gfn_E2_SearchOutEmplDialog(); //사용자코드(조회조건용)
+		ds_Multi.SetColumn(ds_Multi.lastrow,"NOISE_MEAS_EMPLID",retValue[0]);		//소음측정자id
+		ds_Multi.SetColumn(ds_Multi.lastrow,"NOISE_MEAS_EMPLID_NM",retValue[1]);	//소음측정자성명
+	}
+}
+
+function D1202010014U_OnUnloadCompleted(obj)
+{
+	if(ds_Multi.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","편집중인 내용을 무시하고 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+
+function grd_Multi_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	
+	var temp1 = ParseInt(ds_Multi.GetColumn(grd_Multi.ClickedRow,"MEAS_NOISE_LEVEL"));  // 측정소음도 
+	var temp2 = ParseInt(ds_Multi.GetColumn(grd_Multi.ClickedRow,"LAW_NOISE_BASE"));       // 법정소음도 
+	var temp3 = ParseInt(ds_Multi.GetColumn(grd_Multi.ClickedRow,"REVIS_VALUE"));       // 보정 
+	ds_Multi.SetColumn(grd_Multi.ClickedRow,"NOISE_MEAS_REVIS_VALUE",temp1+temp3);
+	if(temp2<(temp1+temp3))
+	{
+		ds_Multi.SetColumn(grd_Multi.ClickedRow,"NOISE_MEAS_JUDE_RSLT","N");
+	}
+	else
+	{
+		ds_Multi.SetColumn(grd_Multi.ClickedRow,"NOISE_MEAS_JUDE_RSLT","Y");
+	}
+    
+}
+]]></Script>
+</Window>

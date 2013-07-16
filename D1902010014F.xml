@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1902010014F" Left="8" OnLoadCompleted="D1902010014F_OnLoadCompleted" PidAttrib="7" Title="배관진단이력조회" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Dcvg">
+				<Contents>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORIGINAL_INPUT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="DCVG_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1264" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="30" Type="RoundRect" Width="1259"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape0" Left="10" LineWidth="0" Right="1259" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="6" Top="35" Type="Rectangle" Width="1249"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image7" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="1" Text="기준년도" Top="41" Width="61"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Dcvg" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="848" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="771" Id="Grid2" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnCellClick="Grid2_OnCellClick" Right="1262" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="2" TabStop="true" Top="77" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1257">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="170"/>
+						<col fix="left" width="70"/>
+						<col fix="left" width="70"/>
+						<col fix="left" width="75"/>
+						<col fix="left" width="75"/>
+						<col width="55"/>
+						<col width="55"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="500"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="55"/>
+						<col width="55"/>
+						<col width="55"/>
+						<col width="81"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="관리번호"/>
+						<cell col="1" display="text" text="배관_ID"/>
+						<cell col="2" display="text" text="초기입력ID"/>
+						<cell col="3" display="text" text="지사"/>
+						<cell col="4" display="text" text="시/구"/>
+						<cell col="5" display="text" text="연장"/>
+						<cell col="6" display="text" text="탐사연장"/>
+						<cell col="7" display="text" text="시점"/>
+						<cell col="8" display="text" text="종점"/>
+						<cell col="9" display="text" text="손상위치"/>
+						<cell col="10" display="text" text="DCVG탐사일자"/>
+						<cell col="11" display="text" text="ECDA탐사일자"/>
+						<cell col="12" display="text" text="손상여부"/>
+						<cell col="13" display="text" text="보수여부"/>
+						<cell col="14" display="text" text="굴착유무"/>
+						<cell col="15" display="text" text="분석카드연결"/>
+					</head>
+					<body>
+						<cell align="center" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="0" colid="MANAGE_NUM" display="text"/>
+						<cell align="center" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="1" colid="MPIPE_ID" display="text" expandsize="18"/>
+						<cell align="center" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="2" colid="ORIGINAL_INPUT_ID" display="text"/>
+						<cell align="center" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="3" colid="BRANCH_NM" display="text"/>
+						<cell align="center" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="4" colid="GU_NM" display="text"/>
+						<cell align="right" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="5" colid="SYS_LENG" display="text"/>
+						<cell align="right" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="6" colid="EXPLOR_LENG" display="text" expandsize="18"/>
+						<cell align="left" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="7" colid="STR_POINT" display="text"/>
+						<cell align="left" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="8" colid="END_POINT" display="text" expandsize="18"/>
+						<cell align="left" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="9" colid="DAMAGE_LOC" display="text" expandsize="18"/>
+						<cell align="center" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="10" colid="DCVG_EXPLOR_YMD" display="date"/>
+						<cell align="center" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="11" colid="ECDA_EXPLOR_YMD" display="date"/>
+						<cell align="center" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="12" colid="DAMAGE_FLAG_NM" display="text" expandsize="18"/>
+						<cell align="center" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="13" colid="REPAIR_FLAG_NM" display="text"/>
+						<cell align="center" bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="14" colid="DIG_YN" display="text"/>
+						<cell bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="15" colid="DAMAGE_FLAG" cursor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;hand&apos;&#32;,&#32;&apos;arrow&apos;&#32;)" display="text" expandimage="popup" expandshow="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;True&#32;,&#32;False&#32;)" expr="decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;&#32;분석카드&#32;&apos;&#32;,&#32;&apos;&apos;&#32;)"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="77" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="1262" TabOrder="3" Top="74" Type="Rectangle" Width="1257"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="4" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1275">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Color="blue" Height="18" Id="Image0" ImageID="blt" Left="143" LeftMargin="12" Style="blt_search" TabOrder="7" Text="지사" Top="41" Width="41"></Image>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="461" LeftMargin="12" Style="blt_search" TabOrder="8" Text="탐사일자" Top="41" Width="61"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" ImeMode="none" Left="181" OnChanged="cob_ObjectFlag_OnChanged" Style="combo_indis" TabOrder="9" Top="41" Width="115"></Combo>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cob_Ymd_Str" Left="527" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="10" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear" Left="78" Style="spin_indis" TabOrder="11" Text="2008" Top="41" Width="54"></Spin>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cob_Ymd_End" Left="631" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="12" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static10" Left="619" Style="static" TabOrder="13" Text="~" Top="44" Width="10"></Static>
+		<Image Align="Left" Color="blue" Height="18" Id="Image1" ImageID="blt" Left="300" LeftMargin="12" Style="blt_search_1" TabOrder="15" Text="시/구" Top="40" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" ImeMode="none" Left="343" Style="combo_indis" TabOrder="14" Top="40" Width="114"></Combo>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="724" LeftMargin="12" Style="blt_search" TabOrder="17" TabStop="FALSE" Text="배관번호" Top="41" Width="90"></Image>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_MpipeSearch" ImeMode="none" Left="787" MaxLength="9" Style="edit" TabOrder="16" Top="41" Width="174"></Edit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1902010014F.xml
+* Form 설명  : 자동배관진단이력조회  
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-23
+* 변경내용   : 2013-04-11 (kimkk)
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1902010014F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+
+	fn_Init();
+	fn_D1_Find();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	//gfn_SetButton("00011111");
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	// 지사코드, 영업구코드
+	//-----------------------------------------
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));
+	
+	//검색ds
+	ds_Search.AddRow();
+	
+	//-----------------------------------------
+	//  콤보박스의 초기 설정 : 기준년도, 지사
+	//-----------------------------------------
+	cob_ObjectFlag.Index = 0;
+	cob_BaseYear.Value = Substr(Today(),0,4);
+	cob_Ymd_Str.Value = Substr(Today(),0,4)+'0101';
+	cob_Ymd_End.Value = Today();
+	cob_ObjectFlag_OnChanged();
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+
+	if(cob_BaseYear.Value == '' || cob_BaseYear.Value == '1'){
+		cob_BaseYear.Value = substr(today(), 0, 4);	
+		return;
+	}	
+	if(cob_ObjectFlag.Value == ''){
+		alert("해당 지사를 선택해 주세요");
+		return;
+	}
+	
+	fn_DateCheck(cob_Ymd_Str,cob_Ymd_End);
+	
+	fn_D1_Find();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{	
+	if (IsExistVar("BASE_YEAR"       , true)) {cob_BaseYear.Value   = BASE_YEAR       ;}
+	if (IsExistVar("BRANCH_CD"       , true)) {cob_ObjectFlag.value = BRANCH_CD       ;}
+	if (IsExistVar("EXPLOR_YMD_START", true)) {cob_Ymd_Str   .value = EXPLOR_YMD_START;}
+	if (IsExistVar("EXPLOR_YMD_END"  , true)) {cob_Ymd_End   .value = EXPLOR_YMD_END  ;}
+	
+	ds_Search.SetColumn( ds_Search.row , "BASE_YEAR" , cob_BaseYear.Value );	
+	ds_Search.SetColumn( ds_Search.row , "BRANCH_CD" , cob_ObjectFlag.Value );
+	ds_Search.SetColumn( ds_Search.row , "ZIP_NO1"   , cob_CountyFlag.Value );
+	ds_Search.SetColumn( ds_Search.row , "EXPLOR_YMD_FROM" , cob_Ymd_Str.Value );
+	ds_Search.SetColumn( ds_Search.row , "EXPLOR_YMD_TO" , cob_Ymd_End.Value );
+	ds_Search.SetColumn( ds_Search.row , "MPIPE_ID" , trim(edt_MpipeSearch.Text) );
+		
+    var strSvcID        = "find";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechHistorySearMgr-service"; 
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Dcvg=ds_Dcvg";
+	var strArgument     = "find=1"; 
+	 	 
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	   
+	if(ds_Dcvg.GetRowCount()==0) { 
+		Grid2.NoDataText  = gfn_GetMessage("M000009","%AAA%","조회를");
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+	SearchCondition = SearchCondition + "기준년도 : " + RPad(cob_BaseYear.Text," ",20);
+	SearchCondition = SearchCondition + "지사 : "     + RPad(cob_ObjectFlag.Text," ",20);
+	SearchCondition = SearchCondition + "탐사일자 : " + RPad(cob_Ymd_Str.Value + ' ~ ' + cob_Ymd_End.Value," ",20);
+
+        
+    gfn_ExportExcel("자동배관진단이력 조회", 5, SearchCondition, "Grid2");
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명: 출력 button 실행, 데이터를 출력 한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonPrint(){
+	PrintScreen();
+}
+
+function cob_ObjectFlag_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	 // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_ObjectFlag.value, fn_setDsObject_Comcode("1", "cob_CountyFlag"));
+    
+    cob_CountyFlag.Value = ""; 
+}
+
+function Grid2_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{ 
+	switch( nCell ) {
+		case 15 :  //분석카드연결 
+			if( ds_Dcvg.GetColumn( nRow , "DAMAGE_FLAG" ) == '1' ) 
+			{
+				var strArgs = "F_BASE_YEAR=" + ds_Dcvg.GetColumn( nRow , "BASE_YEAR" );
+				    strArgs += " F_MPIPE_ID=" + ds_Dcvg.GetColumn( nRow , "MPIPE_ID" );
+				    strArgs += " F_EXPLOR_RSLT_SEQ=" + ds_Dcvg.GetColumn( nRow , "EXPLOR_RSLT_SEQ" );
+				gfn_Open("D10", "D1903010010U", strArgs , 800 , 500 ,false);
+			} 
+		 break;
+		default :
+	}
+}
+]]></Script>
+</Window>

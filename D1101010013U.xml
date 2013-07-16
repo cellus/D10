@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="744" Id="D1101010013U" Left="8" OnLoadCompleted="D1101010013U_OnLoadCompleted" PidAttrib="7" Title="방식설비대장_D1101010013U" Top="8" Ver="1.0" Width="660" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_EqMain">
+				<Contents>
+					<colinfo id="RECTIFIER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECTIFIER_LENG_MPRESS" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECTIFIER_LENG_LPRESS" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="USE_FORMAL_CAPA" size="256" summ="default" type="STRING"/>
+					<colinfo id="LAY_TYPE_UPPER" size="256" summ="default" type="STRING"/>
+					<colinfo id="AC_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LAY_DEPTH" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECORODE_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_VOLT" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CUST_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_POT_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROAD_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EqList">
+				<Contents>
+					<colinfo id="MEAS_POINT" size="256" type="STRING"/>
+					<colinfo id="MEAS_LOC" size="256" type="STRING"/>
+					<colinfo id="MEAS_KIND" size="256" type="STRING"/>
+					<colinfo id="CATHODIC_ELEC_POT_ON" size="256" type="STRING"/>
+					<colinfo id="CATHODIC_ELEC_POT_OFF" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="CATHODIC_MANAGE_NUM" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GetNum">
+				<Contents>
+					<colinfo id="CATHODIC_MANAGE_NUM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static55" Left="5" Style="table" TabOrder="52" Top="719" VAlign="Middle" Visible="FALSE" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="5" Style="table" TabOrder="30" Top="236" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static1" Left="5" Style="table" TabOrder="31" Top="257" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static7" Left="5" Style="table" TabOrder="1" Top="152" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static20" Left="5" Style="table" TabOrder="2" Top="173" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static24" Left="5" Style="table" TabOrder="3" Top="194" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static28" Left="5" Style="table" TabOrder="4" Top="215" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static27" Left="5" Style="table" TabOrder="5" Top="110" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static29" Left="5" Style="table" TabOrder="6" Top="131" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static30" Left="5" Style="table" TabOrder="7" Top="68" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static31" Left="5" Style="table" TabOrder="8" Top="89" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="127" Id="Static36" Left="5" Style="pop_table" TabOrder="9" Text="설비&#32;및&#32;정격" Top="152" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static39" Left="5" Style="pop_table" TabOrder="10" Text="설비명칭" Top="68" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static40" Left="5" Style="pop_table" TabOrder="11" Text="설치장소" Top="89" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="43" Id="Static41" Left="5" Style="pop_table" TabOrder="12" Text="방식연장" Top="110" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static43" Left="94" Style="table" TabOrder="13" Text="사용정격" Top="173" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static44" Left="443" Style="pop_table" TabOrder="14" Text="설치일자" Top="68" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static45" Left="443" Style="pop_table" TabOrder="15" Text="방식시공회사" Top="89" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="ADDR" Enable="FALSE" Height="18" Id="Edit22" Left="98" Readonly="TRUE" Style="edit" TabOrder="16" Top="91" Width="342"></Edit>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="RECTIFIER_NM" Enable="FALSE" Height="18" Id="Edit23" Left="98" Readonly="TRUE" Style="edit" TabOrder="17" Top="70" Width="342"></Edit>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="USE_FORMAL_CAPA" Enable="FALSE" Height="18" Id="Edit24" Left="237" Readonly="TRUE" Style="edit" TabOrder="18" Top="175" Width="132"></Edit>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="WORK_FIRM_CD" Enable="FALSE" Height="18" Id="Edit28" Left="536" Readonly="TRUE" Style="edit" TabOrder="19" Top="91" Width="115"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static54" Left="94" Style="pop_table" TabOrder="20" Text="압력" Top="110" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static56" Left="372" Style="table" TabOrder="21" Text="매설형식" Top="173" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static58" Left="372" Style="table" TabOrder="22" Text="전극본수" Top="194" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static59" Left="94" Style="table" TabOrder="23" Text="AC전원" Top="194" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static60" Left="94" Style="table" TabOrder="24" Text="출력전류" Top="215" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="AC_ELECT" Enable="FALSE" Height="18" Id="Edit34" Left="237" Readonly="TRUE" Style="edit" TabOrder="26" Top="196" Width="132"></Edit>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="OPERAT_ELECT" Enable="FALSE" Height="18" Id="Edit36" Left="237" Readonly="TRUE" Style="edit" TabOrder="25" Top="217" Width="132"></Edit>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="ELECORODE_CNT" Enable="FALSE" Height="18" Id="Edit38" Left="515" Readonly="TRUE" Style="edit" TabOrder="27" Top="196" Width="136"></Edit>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="LAY_TYPE_UPPER" Enable="FALSE" Height="18" Id="Edit40" Left="515" Readonly="TRUE" Style="edit" TabOrder="28" Top="175" Width="136"></Edit>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" Left="1" LeftMargin="33" OnClick="Image0_OnClick" Style="popup_title" TabOrder="29" Text="방식설비대장_정배류기" Transparent="TRUE" Width="660"></Image>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="372" Style="table" TabOrder="32" Text="시설(도로)구분" Top="215" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static5" Left="372" Style="table" TabOrder="33" Text="원방전위대상" Top="236" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="94" Style="table" TabOrder="34" Text="출력전압" Top="236" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static8" Left="94" Style="table" TabOrder="35" Text="고객번호" Top="257" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="OPERAT_VOLT" Enable="FALSE" Height="18" Id="Edit2" Left="237" Readonly="TRUE" Style="edit" TabOrder="37" Top="238" Width="132"></Edit>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="CUST_NUM" Enable="FALSE" Height="18" Id="Edit3" Left="237" Readonly="TRUE" Style="edit" TabOrder="36" Top="259" Width="132"></Edit>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="ELECT_POT_YN" Enable="FALSE" Height="18" Id="Edit4" Left="515" Readonly="TRUE" Style="edit" TabOrder="38" Top="238" Width="136"></Edit>
+		<Edit BindDataset="ds_EqMain" Border="Flat" Column="ROAD_FLAG" Enable="FALSE" Height="18" Id="Edit5" Left="515" Readonly="TRUE" Style="edit" TabOrder="39" Top="217" Width="136"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static2" Left="94" Style="pop_table" TabOrder="40" Text="외부전원식" Top="152" VAlign="Middle" Width="561" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static3" Left="233" Style="pop_table" TabOrder="41" Text="중압" Top="110" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static9" Left="372" Style="pop_table" TabOrder="42" Text="저압" Top="110" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static10" Left="511" Style="pop_table" TabOrder="43" Text="합계" Top="110" VAlign="Middle" Width="144" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static12" Left="372" Style="table" TabOrder="44" Top="131" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="442" Id="Static19" Left="5" Style="pop_table" TabOrder="45" Text="방식관로&#32;전위" Top="278" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Div Height="29" Id="Div0" Left="8" TabOrder="46" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="648">
+			<Contents></Contents>
+		</Div>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static61" Left="5" Style="pop_table" TabOrder="47" Text="파일첨부" Top="759" VAlign="Middle" Visible="FALSE" Width="90" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" BindDataset="ds_EqMain" Border="Flat" Column="TOT_LENG" Enable="FALSE" Height="18" Id="Edit30" Left="515" Readonly="TRUE" Style="edit" TabOrder="48" Top="133" Width="136"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_EqMain" Border="Flat" Column="RECTIFIER_LENG_LPRESS" Enable="FALSE" Height="18" Id="Edit31" Left="376" Readonly="TRUE" Style="edit" TabOrder="49" Top="133" Width="132"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_EqMain" Border="Flat" Column="RECTIFIER_LENG_MPRESS" Enable="FALSE" Height="18" Id="Edit33" Left="237" Readonly="TRUE" Style="edit" TabOrder="50" Top="133" Width="132"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="18" Id="Button23" ImageID="btn_4_fileadd" Left="576" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="51" Text="파일첨부&#32;" Top="761" Visible="FALSE" Width="75"></Button>
+		<Edit Border="Flat" Height="18" Id="Edit29" ImeMode="none" Left="98" Style="edit" TabOrder="53" Top="761" Visible="FALSE" Width="477"></Edit>
+		<Calendar BindDataset="ds_EqMain" Border="Flat" Column="INST_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar0" Left="536" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="54" Top="70" WeeksFont="Default,-1" Width="115"></Calendar>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static11" Left="94" Style="table" TabOrder="55" Text="연장(m)" Top="131" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_EqList" BkColor2="user3" BoldHead="FALSE" Border="Flat" BorderColor="user4" Bottom="720" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" FillAreaType="All" HeadBorder="Flat" HeadHeight="20" Height="442" Id="grd_Cathodic" InputPanel="FALSE" Left="94" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_Cathodic_OnCellClick" Right="655" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="56" TabStop="true" Top="278" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="561">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="0"/>
+						<col width="50"/>
+						<col width="211"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" colid="CATHODIC_MANAGE_NUM" display="text" rowspan="2" text="측정점"/>
+						<cell col="1" display="text" rowspan="2" text="측정점"/>
+						<cell col="2" display="text" rowspan="2" text="위치"/>
+						<cell col="3" display="text" rowspan="2" text="종류"/>
+						<cell col="4" colspan="2" display="text" text="방식전위"/>
+						<cell col="4" display="text" row="1" text="ON"/>
+						<cell col="5" display="text" row="1" text="OFF"/>
+					</head>
+					<body>
+						<cell col="0" colid="CATHODIC_MANAGE_NUM" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="MEAS_POINT" display="text" edit="normal" expandsize="18" limit="50" wordwrap="word"/>
+						<cell col="2" colid="MEAS_LOC" display="text" edit="normal" expandsize="18" limit="50" wordwrap="word"/>
+						<cell col="3" colid="MEAS_KIND" display="text" edit="normal" limit="50"/>
+						<cell col="4" colid="CATHODIC_ELEC_POT_ON" display="text" edit="normal" expandsize="18" limit="5" wordwrap="word"/>
+						<cell col="5" colid="CATHODIC_ELEC_POT_OFF" display="text" edit="normal" expandsize="18" limit="5" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101010013U.xml
+* Form 설명  : 방식설비 대장(POPUP)_정배류기
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 왕선모 
+* 작성일     : 2008-11-26
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONB30001.js";
+#include "JS::COMMONA10002.js";
+
+//-------------------------------------------------------------------------------
+//  fv_saveMode   : 수정과 신규 저장 모드 플래그 
+//  fv_manageNum   : 관리번호
+//	fv_faciNum	  : 선택된 시설물 번호
+//  fv_Kind       : 시설 종류
+//  fv_Sel       : 선택된 라인
+//-------------------------------------------------------------------------------
+	var fv_nowFaciNum = "";
+	var fv_manageNum = "";
+	var fv_Kind = "";
+	var fv_saveMode = "";
+	var fv_Sel = "";
+    var fv_Sts = "";
+// ===============================================================================
+// 함수명: D1101010013U_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1101010013U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_CatchComponents(obj);
+	if(IsExistVar("fv_faciNum")) { 
+		fv_nowFaciNum = fv_faciNum;		
+	}
+	if(IsExistVar("fv_sts")) {
+		fv_Sts = fv_sts;	
+		if(fv_Sts=="search")
+		{
+			grd_Cathodic.Enable=false;
+		}
+	}
+	fn_CommonSearch();	
+	
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSearch()
+//  설명: 방식설비 대장(POPUP)_정배류기 메인 조회 하는 함수
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSearch()
+{	
+	ds_EqMain.ClearData();
+	if(SubStr(fv_nowFaciNum, 0, 2)=="RE")
+	{
+		fv_saveMode = "selectRectifier";
+	}
+    if(SubStr(fv_nowFaciNum, 0, 2)=="DR")
+	{
+		fv_saveMode = "selectDrain";
+	}
+		
+	var ServiceId     = fv_saveMode;
+	var ServicePart     = "D10";
+	var Url             = "handle.do?ServiceName=D1_TypeEquipList-service&FACI_NUM="+fv_nowFaciNum;
+	var InputDsList     = "";
+	var OutputDsList = "ds_EqMain=ds_EqMain ds_EqList=ds_EqList";
+	var Argument      = fv_saveMode;
+	gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+	
+    if(ErrorCode < 0)
+	{
+		alert(ErrorMsg);
+		return;
+	}
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonAddRow()
+   설명:  내용를 신규 추가 하는 모드로 변경 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonAddRow()
+{
+    if(fv_Sts=="search")
+    {
+		return;
+    }
+    ds_EqList.AddRow();
+    fv_saveMode = "insert";
+	    
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSave()
+//   설명: 내용를 저장 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSave()
+{
+    if(fv_Sts=="search")
+    {
+		return;
+    }
+	if(fv_saveMode != "insert"){
+		if(SubStr(fv_nowFaciNum, 0, 2)=="RE")
+		{
+			fv_saveMode = "updateRectifier";
+			fv_Kind = "RE";
+		}
+		if(SubStr(fv_nowFaciNum, 0, 2)=="DR")
+		{
+			fv_saveMode = "updateDrain";
+			fv_Kind = "DR";
+		}
+	}else{
+	
+		//-------------------------------------------------------------------------------
+		//GetCathodicManageNum() : 채번 ds_GetNum으로 시설물 번호를 넣음 
+		//-------------------------------------------------------------------------------
+		GetCathodicManageNum();
+		if(SubStr(fv_nowFaciNum, 0, 2)=="RE")
+		{
+			fv_saveMode = "insertRectifier";
+			fv_Kind = "RE";
+		}
+		if(SubStr(fv_nowFaciNum, 0, 2)=="DR")
+		{
+			fv_saveMode = "insertDrain";
+			fv_Kind = "DR";
+		}
+
+	}
+	if(fv_saveMode=="insertRectifier"){
+		ds_EqList.AddColumn("CRT_EMPID", "STRING", 256);
+		ds_EqList.AddColumn("CRT_IP", "STRING", 256);
+		ds_EqList.AddColumn("CATHODIC_MANAGE_NUM", "STRING", 256);
+		ds_EqList.AddColumn("FACI_NUM", "STRING", 256);
+		ds_EqList.SetColumn(fv_Sel, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_EqList.SetColumn(fv_Sel, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_EqList.SetColumn(fv_Sel, "CATHODIC_MANAGE_NUM", ds_GetNum.GetColumn(0,"CATHODIC_MANAGE_NUM"));
+		ds_EqList.SetColumn(fv_Sel, "FACI_NUM", fv_nowFaciNum);
+    }else if(fv_saveMode=="insertDrain"){
+		ds_EqList.AddColumn("CRT_EMPID", "STRING", 256);
+		ds_EqList.AddColumn("CRT_IP", "STRING", 256);
+		ds_EqList.AddColumn("CATHODIC_MANAGE_NUM", "STRING", 256);
+		ds_EqList.AddColumn("FACI_NUM", "STRING", 256);
+		ds_EqList.SetColumn(fv_Sel, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_EqList.SetColumn(fv_Sel, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_EqList.SetColumn(fv_Sel, "FACI_NUM", fv_nowFaciNum);
+		ds_EqList.SetColumn(fv_Sel, "CATHODIC_MANAGE_NUM", ds_GetNum.GetColumn(0,"CATHODIC_MANAGE_NUM"));
+    }else if(fv_saveMode=="updateRectifier"){
+		ds_EqList.AddColumn("UPD_EMPID", "STRING", 256);
+		ds_EqList.AddColumn("UPD_IP", "STRING", 256);
+		ds_EqList.AddColumn("CATHODIC_MANAGE_NUM", "STRING", 256);
+		ds_EqList.AddColumn("FACI_NUM", "STRING", 256);
+		ds_EqList.SetColumn(fv_Sel, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_EqList.SetColumn(fv_Sel, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_EqList.SetColumn(fv_Sel, "CATHODIC_MANAGE_NUM", fv_manageNum);
+		ds_EqList.SetColumn(fv_Sel, "FACI_NUM", fv_nowFaciNum);
+    }else if(fv_saveMode=="updateDrain"){
+		ds_EqList.AddColumn("UPD_EMPID", "STRING", 256);
+		ds_EqList.AddColumn("UPD_IP", "STRING", 256);
+		ds_EqList.AddColumn("CATHODIC_MANAGE_NUM", "STRING", 256);
+		ds_EqList.AddColumn("FACI_NUM", "STRING", 256);
+		ds_EqList.SetColumn(fv_Sel, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_EqList.SetColumn(fv_Sel, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_EqList.SetColumn(fv_Sel, "CATHODIC_MANAGE_NUM", fv_manageNum);
+		ds_EqList.SetColumn(fv_Sel, "FACI_NUM", fv_nowFaciNum);
+    }
+    
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+	var Transition     = fv_saveMode;
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName="+"D1_TypeEquipList-service&FACI_NUM="+fv_nowFaciNum;
+    var InputDsList     = "ds_EqList=ds_EqList:u";
+    var OutputDsList = "ds_EqList=ds_EqList";
+    var Argument      = fv_saveMode;
+    
+    gfn_SyncCall(Transition, ServicePart, Url, InputDsList, OutputDsList, Argument);
+	
+	if(ErrorCode<0)
+	{
+		return false;
+	}
+	
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+}
+
+
+//------------------------------------------------------------------------------- 
+// 함수명: GetCathodicManageNum()
+//   설명: 채번 함수
+// arguments   
+//          FACI_NUM  : 시설물 번호
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function GetCathodicManageNum()
+{	
+	var CathodicManageNum = "";
+	if(SubStr(fv_nowFaciNum, 0, 2)=="RE")
+	{
+		fv_Kind = "RE";
+		fv_saveMode = "selectRecNum";
+	}
+    if(SubStr(fv_nowFaciNum, 0, 2)=="DR")
+	{
+		fv_Kind = "DR";
+		fv_saveMode = "selectDrainNum";
+	}
+	
+	ds_GetNum.ClearData();
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+	
+    var Transition     = fv_saveMode;
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName="+"D1_TypeEquipList-service"+"&FACI_NUM="+fv_nowFaciNum;
+    var InputDsList     = "";
+    var OutputDsList = "ds_GetNum=ds_GetNum";
+    var Argument      = fv_saveMode;
+    gfn_SyncCall(Transition, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    var num =ParseInt(ds_GetNum.GetColumn(0,"CATHODIC_MANAGE_NUM"))+1;
+    ds_GetNum.SetColumn(0,"CATHODIC_MANAGE_NUM", num);   
+}
+
+function grd_Cathodic_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fv_Sel = nRow;
+	fv_manageNum = grd_Cathodic.GetCellValue(nRow,0);
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonDeleteRow()
+//   설명: 삭제 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonDeleteRow()
+{
+	if(fv_Sts=="search")
+    {
+		return;
+    }
+    if(Confirm("삭제하시겠습니까?"))	//"삭제하시겠습니까?" 
+    {
+    
+		if(ds_EqList.GetRowCount()==0){ 
+			alert("삭제하실 내역이 없습니다.");	//"삭제하실 내역이 없습니다."
+			return;
+		}
+		ds_EqList.AddColumn("FACI_NUM", "STRING", 256);
+		ds_EqList.SetColumn(fv_Sel, "FACI_NUM", fv_nowFaciNum);        
+		ds_EqList.DeleteRow(ds_EqList.row);	
+		
+		if(SubStr(fv_nowFaciNum, 0, 2)=="RE")
+		{
+			fv_Kind = "RE";
+			fv_saveMode = "deleteRectifier";
+		}
+		if(SubStr(fv_nowFaciNum, 0, 2)=="DR")
+		{
+			fv_Kind = "DR";
+			fv_saveMode = "deleteDrain";
+		}
+		
+		//-------------------------------------------------------------------------------
+		//  Transition   : Service id
+		//  ServicePart   : Service part
+		//  Url   : Server url
+		//  InputDsList   : Input Dataset List
+		//  OutputDsList   : Output Dataset List
+		//  Argument   :  Argument
+		//-------------------------------------------------------------------------------
+		
+		var Transition     = fv_saveMode;
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName="+"D1_TypeEquipList-service&FACI_NUM="+fv_nowFaciNum+"&CATHODIC_MANAGE_NUM="+fv_manageNum;
+		var InputDsList     = "ds_EqList=ds_EqList:u";
+		var OutputDsList = "ds_EqList=ds_EqList";
+		var Argument      = fv_saveMode;
+		gfn_SyncCall(Transition, ServicePart, Url, InputDsList, OutputDsList, Argument);
+		if(ErrorCode<0){
+			if(ErrorMsg!=""){
+			   alert(ErrorMsg);
+			} else {   
+			   
+			}
+			ds_EqList.Reset();
+			return false;
+		}
+	}
+}]]></Script>
+</Window>

@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="728" Id="D1903010020F" Left="8" OnLoadCompleted="D1903010020F_OnLoadCompleted" PidAttrib="7" Title="신규배관실적등록_D1903010020F" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_ExploreReq" OnRowPosChanged="ds_ExploreReq_OnRowPosChanged">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RSLT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIAM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS_NM&#32;" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOC_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search1" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RSLT_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExploreRslt" OnRowPosChanged="ds_ExploreRslt_OnRowPosChanged">
+				<Contents>
+					<colinfo id="REQ_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RSLT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID3" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID6" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME3" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME6" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_VOLTAGE" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_VOLTAIC" size="256" summ="default" type="STRING"/>
+					<colinfo id="POTENTIAL" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_REQ_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_OPINI" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_ROUTE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DRAFTER_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_NAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search2" UseClientLayout="1">
+				<Contents>
+					<colinfo id="REQ_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RSLT_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExploreRsltDam">
+				<Contents>
+					<colinfo id="REQ_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RSLT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_POS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_CAUSE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_SIZE" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Repair_YN">
+				<Contents>
+					<colinfo id="Repair_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<record>
+						<Repair_YN>Y</Repair_YN>
+						<VALUE>Y</VALUE>
+					</record>
+					<record>
+						<Repair_YN>N</Repair_YN>
+						<VALUE>N</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search3" UseClientLayout="1">
+				<Contents>
+					<colinfo id="REQ_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RSLT_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static17" Left="116" Style="table" TabOrder="32" Top="334" VAlign="Middle" Width="1156" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="18" Id="imgYear" ImageID="blt" Left="356" LeftMargin="12" Style="blt_search" TabOrder="12" TabStop="FALSE" Text="기준년도" Top="47" Width="90"></Image>
+		<Shape BKColor="user6" Bottom="76" Height="39" Id="Shape4" Left="8" LineColor="user7" Right="1271" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="14" Top="37" Type="RoundRect" Width="1263"></Shape>
+		<Shape BKColor="user8" Bottom="71" Height="29" Id="Shape3" Left="13" LineWidth="0" Right="1266" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="13" Top="42" Type="Rectangle" Width="1253"></Shape>
+		<Shape BKColor="user15" Bottom="104" Height="3" Id="Shape0" Left="8" LineWidth="0" Right="1271" TabOrder="2" Top="101" Type="Rectangle" Width="1263"></Shape>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="1" Text="배관피복탐사&#32;의뢰&#32;리스트" Top="85" Width="170"></Image>
+		<Image Align="Left" Height="9" Id="Image0" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="2" Text="배관피복탐사&#32;결과입력" Top="316" Width="150"></Image>
+		<Shape BKColor="user15" Bottom="514" Height="3" Id="Shape2" Left="8" LineWidth="0" Right="1271" TabOrder="2" Top="511" Type="Rectangle" Width="1263"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_ExploreReq" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="304" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="200" Id="grd_ExploreReq" InputPanel="FALSE" Left="8" LineColor="silver" LineType="ExVERT" NoDataText="조회내역이&#32;없습니다." Right="1271" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="2" TabStop="true" Top="104" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1263">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="60"/>
+						<col width="462"/>
+						<col width="168"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="66"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="공사번호"/>
+						<cell col="1" display="text" text="의뢰번호"/>
+						<cell col="2" display="text" text="결과번호"/>
+						<cell col="3" display="text" text="공사명"/>
+						<cell col="4" display="text" text="업체명"/>
+						<cell col="5" display="text" text="압력"/>
+						<cell col="6" display="text" text="관경(A)"/>
+						<cell col="7" display="text" text="요청연장(m)"/>
+						<cell col="8" display="text" text="포장종류"/>
+						<cell col="9" display="text" text="완료여부"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="WORK_NUM" display="text" limit="11"/>
+						<cell align="center" col="1" colid="REQ_NUM" display="text" edit="expr:iif(rowtype==&apos;insert&apos;,&#32;&apos;number&apos;,&#32;&apos;none&apos;)" limit="11"/>
+						<cell align="center" col="2" colid="RSLT_NUM" display="text" limit="5"/>
+						<cell align="left" col="3" colid="WORK_NM" display="text"/>
+						<cell align="left" col="4" colid="PIPE_FIRM_NM" display="text"/>
+						<cell align="center" col="5" colid="PRESS_NM" display="text"/>
+						<cell align="center" col="6" colid="DIAM_NM" display="text"/>
+						<cell align="right" col="7" colid="LENG" display="number"/>
+						<cell align="center" col="8" colid="PAVEMENT_NM" display="text"/>
+						<cell align="center" col="9" colid="DECIDE_PROC_STS_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_ExploreRsltDam" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="714" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="200" Id="grd_ExploreRsltDam" InputPanel="FALSE" Left="8" LineColor="silver" LineType="ExVERT" MinWidth="100" NoDataText="조회내역이&#32;없습니다." Right="1271" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="2" TabStop="true" Top="514" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1263">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="42"/>
+						<col width="380"/>
+						<col width="200"/>
+						<col width="200"/>
+						<col width="60"/>
+						<col width="380"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="구분"/>
+						<cell col="1" display="text" text="위치"/>
+						<cell col="2" display="text" text="손상원인"/>
+						<cell col="3" display="text" text="손상크기"/>
+						<cell col="4" display="text" text="보수여부"/>
+						<cell col="5" display="text" text="비고"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="SEQ" display="normal" expr="currow+1"/>
+						<cell align="left" col="1" colid="DAMAGE_POS" display="text" edit="normal" limit="1000"/>
+						<cell align="left" col="2" colid="DAMAGE_CAUSE" display="text" edit="normal" limit="300"/>
+						<cell align="left" col="3" colid="DAMAGE_SIZE" display="text" edit="normal" limit="300"/>
+						<cell align="center" col="4" colid="REPAIR_YN" combocol="VALUE" combodataset="ds_Repair_YN" combodisplaynltext="true" combodisplayrowcnt="2" combotext="VALUE" display="combo" edit="combo"/>
+						<cell align="left" col="5" colid="RMK" display="text" edit="normal" limit="1000"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="7" TabStop="FALSE" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1274">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Color="blue" Height="18" Id="Image3" ImageID="blt" Left="18" LeftMargin="12" Style="blt_search" TabOrder="9" TabStop="FALSE" Text="지사" Top="48" Width="119"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="58" OnChanged="cob_BranchCd_OnChanged" Style="edit_Indis" TabOrder="8" Top="46" Width="127"></Combo>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="355" LeftMargin="12" Style="blt_search" TabOrder="11" TabStop="FALSE" Text="공사번호" Top="47" Width="90"></Image>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_WorkNum" ImeMode="none" Left="418" MaxLength="11" Number="TRUE" Style="edit" TabOrder="10" Top="47" Width="110"></Edit>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="539" LeftMargin="12" Style="blt_search" TabOrder="16" TabStop="FALSE" Text="의뢰번호" Top="47" Width="90"></Image>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_ReqNum" ImeMode="none" Left="602" MaxLength="11" Number="TRUE" Style="edit" TabOrder="15" Top="47" Width="110"></Edit>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="723" LeftMargin="12" Style="blt_search" TabOrder="18" TabStop="FALSE" Text="결과번호" Top="47" Width="90"></Image>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_SearchRsltNum" ImeMode="none" Left="786" MaxLength="5" Number="TRUE" Style="edit" TabOrder="17" Top="47" Width="86"></Edit>
+		<Button ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_save02" ImageID="btn_popsave" Left="1220" LeftMargin="21" OnClick="btn_save02_click" Style="button" TabOrder="21" Text="저장" Top="489" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_RowAdd01" ImageID="btn_add" Left="1114" LeftMargin="20" OnClick="Btn_add_OnClick" Style="button" TabOrder="19" Text="추가" Top="489" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_RowDel02" ImageID="btn_delete" Left="1167" LeftMargin="20" OnClick="fn_Dam_DeleteRow" Style="button" TabOrder="20" Text="삭제" Top="489" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_RowDel01" ImageID="btn_delete" Left="1168" LeftMargin="20" OnClick="fn_D1_deleteRow" Style="button" TabOrder="22" Text="삭제" Top="311" Width="50"></Button>
+		<Button ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_save01" ImageID="btn_popsave" Left="1115" LeftMargin="21" OnClick="btn_save01_click" Style="button" TabOrder="23" Text="저장" Top="311" Width="50"></Button>
+		<Button ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Sanction" ImageID="btn_2_Amendment" Left="1221" LeftMargin="21" OnClick="btn_Sanction_OnClick" Style="button" TabOrder="24" Text="결재" Top="311" Width="50"></Button>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static43" Left="7" Style="table" TabOrder="25" Text="탐사자" Top="355" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static0" Left="7" Style="table" TabOrder="26" Text="의뢰번호" Top="334" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static1" Left="7" Style="table" TabOrder="27" Text="위치" Top="376" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static2" Left="7" Style="table" TabOrder="28" Text="탐사일자" Top="397" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static3" Left="7" Style="table" TabOrder="29" Text="손상유무" Top="418" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="44" Id="Static4" Left="7" Style="table" TabOrder="30" Text="기타사항" Top="439" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_ExploreRslt" Border="Flat" Column="REQ_NUM" Enable="FALSE" Height="18" Id="edt_req" ImeMode="none" Left="120" MaxLength="50" Style="edit" TabOrder="31" Top="336" Width="200"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static5" Left="321" Style="table" TabOrder="33" Text="결과번호" Top="334" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_ExploreRslt" Border="Flat" Column="RSLT_NUM" DecimalLen="2" Enable="FALSE" Height="18" Id="edt_RsltNum" Left="432" MaxLength="7" Style="edit" TabOrder="34" Top="336" Width="200"></MaskEdit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static6" Left="634" Style="table" TabOrder="35" Text="접수일자" Top="334" VAlign="Middle" Width="115" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static7" Left="952" Style="table" TabOrder="36" Text="접수자" Top="334" VAlign="Middle" Width="115" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static8" Left="116" Style="table" TabOrder="37" Top="355" VAlign="Middle" Width="1156" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static9" Left="116" Style="table" TabOrder="38" Top="376" VAlign="Middle" Width="1156" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static10" Left="116" Style="table" TabOrder="39" Top="397" VAlign="Middle" Width="1156" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static11" Left="116" Style="table" TabOrder="40" Top="418" VAlign="Middle" Width="1156" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="44" Id="Static12" Left="116" Style="table" TabOrder="41" Top="439" VAlign="Middle" Width="1156" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_ExploreRslt" Border="Flat" Column="RESECH_NAME1" Enable="FALSE" Height="18" Id="edt_ResechEmpid1" ImeMode="none" Left="119" OnChanged="edt_reserchempid1_OnChanged" Style="edit" TabOrder="44" Top="357" Width="73"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ExploreRslt" Border="Flat" Column="RESECH_NAME2" Enable="FALSE" Height="18" Id="edt_ResechEmpid2" ImeMode="none" Left="196" Style="edit" TabOrder="45" Top="357" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_ResechEmpid2" ImageID="search" Left="271" OnClick="btn_emp2_OnClick" TabOrder="42" Text="Button8" Top="358" Width="17"></Button>
+		<Edit Align="CENTER" BindDataset="ds_ExploreRslt" Border="Flat" Column="RESECH_NAME3" Enable="FALSE" Height="17" Id="edt_ResechEmpid3" ImeMode="none" Left="306" Style="edit" TabOrder="46" Top="357" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_edt_ResechEmpid3" ImageID="search" Left="381" OnClick="btn_emp3_OnClick" TabOrder="43" Text="Button8" Top="358" Width="17"></Button>
+		<Edit Align="CENTER" BindDataset="ds_ExploreRslt" Border="Flat" Column="RESECH_NAME4" Enable="FALSE" Height="17" Id="edt_ResechEmpid4" ImeMode="none" Left="417" Style="edit" TabOrder="49" Top="357" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_ResechEmpid4" ImageID="search" Left="492" OnClick="btn_emp4_OnClick" TabOrder="52" Text="Button8" Top="358" Width="17"></Button>
+		<Edit Align="CENTER" BindDataset="ds_ExploreRslt" Border="Flat" Column="RESECH_NAME5" Enable="FALSE" Height="17" Id="edt_ResechEmpid5" ImeMode="none" Left="527" Style="edit" TabOrder="50" Top="357" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_ResechEmpid5" ImageID="search" Left="602" OnClick="btn_emp5_OnClick" TabOrder="47" Text="Button8" Top="358" Width="17"></Button>
+		<Edit Align="CENTER" BindDataset="ds_ExploreRslt" Border="Flat" Column="RESECH_NAME6" Enable="FALSE" Height="17" Id="edt_ResechEmpid6" ImeMode="none" Left="634" Style="edit" TabOrder="51" Top="357" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_ResechEmpid6" ImageID="search" Left="709" OnClick="btn_emp6_OnClick" TabOrder="48" Text="Button8" Top="358" Width="17"></Button>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static13" Left="636" Style="table" TabOrder="53" Text="탐사연장(m)" Top="376" VAlign="Middle" Width="115" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static14" Left="953" Style="table" TabOrder="54" Text="승인상태" Top="376" VAlign="Middle" Width="115" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_ExploreReq" Border="Flat" Column="LOC_NM" Enable="FALSE" Height="18" Id="edt_LocNm" ImeMode="none" Left="119" Style="edit" TabOrder="55" TabStop="FALSE" Top="378" Width="516"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_ExploreRslt" Border="Flat" Column="DECIDE_PROC_STS_NM" DisableColor="user24" Enable="FALSE" Height="18" Id="edt_DecideProcSts" ImeMode="none" Left="1069" Style="edit" TabOrder="56" Top="378" Width="200"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static15" Left="323" Style="table" TabOrder="57" Text="측정전압" Top="397" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<MaskEdit BindDataset="ds_ExploreRslt" Border="Flat" Column="MEAS_VOLTAGE" DecimalLen="1" Height="18" Id="edt_MeasVoltage" Left="434" MaxLength="5" Style="edit" TabOrder="58" Top="399" Value="MaskEdit0" Width="200"></MaskEdit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static16" Left="636" Style="table" TabOrder="59" Text="측정전류(mA)" Top="397" VAlign="Middle" Width="115" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static18" Left="953" Style="table" TabOrder="60" Text="전위차" Top="397" VAlign="Middle" Width="115" WordWrap="TRUE"></Static>
+		<MaskEdit BindDataset="ds_ExploreRslt" Border="Flat" Column="POTENTIAL" DecimalLen="0" Height="18" Id="edt_Potential" Left="1069" MaxLength="5" Style="edit" TabOrder="61" Top="399" Value="MaskEdit0" Width="200"></MaskEdit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static19" Left="953" Style="table" TabOrder="62" Text="조치개소" Top="418" VAlign="Middle" Width="115" WordWrap="TRUE"></Static>
+		<MaskEdit BindDataset="ds_ExploreRslt" Border="Flat" DecimalLen="1" Enable="FALSE" Height="18" Id="edt_ActCnt" Left="1069" MaxLength="4" Style="edit" TabOrder="63" Top="420" Value="MaskEdit0" Width="200"></MaskEdit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static20" Left="636" Style="table" TabOrder="64" Text="손상부개소" Top="418" VAlign="Middle" Width="115" WordWrap="TRUE"></Static>
+		<MaskEdit BindDataset="ds_ExploreRslt" Border="Flat" DecimalLen="1" Enable="FALSE" Height="18" Id="edt_DamagePointCnt" Left="752" MaxLength="4" Style="edit" TabOrder="65" Top="420" Value="MaskEdit0" Width="200"></MaskEdit>
+		<Combo BindDataset="ds_ExploreRslt" Border="Flat" Column="DAMAGE_YN" Height="18" Id="cob_DamageYn" Left="118" Style="combo" TabOrder="66" Top="419" Width="92"></Combo>
+		<Calendar BindDataset="ds_ExploreRslt" Border="Flat" Column="RECEIVE_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ReceiveYmd" Left="751" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="67" Top="336" WeeksFont="Default,-1" Width="90"></Calendar>
+		<Image Align="Left" Height="9" Id="Image2" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="68" Text="손상부&#32;입력" Top="495" Width="150"></Image>
+		<Image Align="Left" Color="blue" Height="18" Id="Image4" ImageID="blt" Left="191" LeftMargin="12" Style="blt_search_1" TabOrder="69" Text="시/구" Top="48" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo1" ImeMode="none" Left="235" Style="combo_indis" TabOrder="70" Top="47" Width="114"></Combo>
+		<Edit Align="CENTER" BindDataset="ds_ExploreRslt" Border="Flat" Column="RECEIVE_NAME" Enable="FALSE" Height="18" Id="Edit0" ImeMode="none" Left="1068" OnChanged="edt_reserchempid1_OnChanged" Style="edit" TabOrder="71" Top="336" Width="73"></Edit>
+		<MaskEdit BindDataset="ds_ExploreRslt" Border="Flat" Column="MEAS_VOLTAIC" DecimalLen="0" Height="18" Id="edt_MeasVoltaic" Left="752" MaxLength="5" Style="edit" TabOrder="72" Top="399" Value="MaskEdit0" Width="200"></MaskEdit>
+		<MaskEdit BindDataset="ds_ExploreRslt" Border="Flat" Column="EXPLOR_LENG" DecimalLen="0" Height="18" Id="edt_ExplorLeng" Left="752" MaxLength="6" Style="edit" TabOrder="73" Top="378" Value="MaskEdit0" Width="200"></MaskEdit>
+		<TextArea BindDataset="ds_ExploreRslt" Border="Flat" Column="ETC_DESC" Height="40" Id="edt_EtcDesc" Left="119" MaxLength="1000" OnKeyDown="edt_EtcDesc_OnKeyDown" Style="textarea" TabOrder="74" Top="441" Width="1150"></TextArea>
+		<Calendar BindDataset="ds_ExploreRslt" Border="Flat" Column="EXPLOR_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ExplorYmd" Left="119" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="75" Top="399" WeeksFont="Default,-1" Width="90"></Calendar>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1903010020F.xml
+* Form 설명  : 신규배관실적등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김주희
+* 작성일     : 2013-06-17
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONC10001.js";
+
+var exploreReqRow = '';
+
+function D1903010020F_OnLoadCompleted(obj)
+{	
+	gfn_LoadForm(obj);
+	fn_Init();
+	
+	// 로그인 정보 추출
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999")  // 본사
+		{
+			
+			cob_BranchCd.Enable = true;
+			cob_BranchCd.Value = "";  // 지사 코드가 "" 인 지사명 "전체"를 가지고 옴. (Datacolumn)
+			
+		} 
+		else  
+		{   // 지사
+			
+			cob_BranchCd.Enable = false;
+			cob_BranchCd.Value = gfn_GetGlobalValue("G_BRANCH_CD");			
+			
+		}
+		
+		cob_BranchCd_OnChanged();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));		//지사코드 -- 전체 추가
+	gfn_D1_NULL_SetComboBox_Comcode("A10190",gfn_setDsObject_Comcode("cob_DamageYN"));
+}
+
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+  // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_BranchCd.value, fn_setDsObject_Comcode("1", "cob_ZipNo1"));
+    
+    cob_ZipNo1.Value = ""; 	
+}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//------------------------------------------------------------------------------- 
+//   함수명: fn_CommonSearch()
+//   설명  : 배복피북탐사 의뢰 리스트 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSearch()
+{
+	ds_ExploreReq.FireEvent = false;	
+	ds_ExploreReq.ClearData();
+    ds_ExploreReq.FireEvent = true; 
+    
+	ds_Search1.ClearData();
+		
+	var strRow = ds_Search1.AddRow();
+	//Search Parameter Setting
+	ds_Search1.SetColumn(strRow, "BRANCH_CD", cob_BranchCd.Value);
+	ds_Search1.SetColumn(strRow, "ZIP_NO1", cob_ZipNo1.Value);
+	ds_Search1.SetColumn(strRow, "WORK_NUM", trim(edt_Worknum.Text));
+	ds_Search1.SetColumn(strRow, "REQ_NUM", trim(edt_ReqNum.Text));
+	ds_Search1.SetColumn(strRow, "RSLT_NUM", trim(edt_SearchRsltNum.Text));
+	
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------	
+    var ServiceId     = "selectExploreReqList";
+    var ServicePart   = "D10";
+    var Url           = "handle.do?ServiceName=D1_DCVGSearchCoatExploreReqMgr-service";
+    var InputDsList   = "ds_Search1=ds_Search1";
+    var OutputDsList  = "ds_ExploreReq=ds_ExploreReq";
+    var Argument      = "selectExploreReqList";
+  
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument); 
+    
+    if(exploreReqRow != ''){		// 배관피복탐사 결과입력을 저장했을 경우, 선택되었던 로우로 이동함
+		ds_ExploreReq.row = exploreReqRow;
+		exploreReqRow = '';
+	}
+
+    if(ErrorCode < 0){
+		alert("확인해주세요");
+		return;
+    }else{
+		if(ds_ExploreReq.GetRowCount() == 0){
+			grd_ExploreReq.NoDataText = "조회결과가 없습니다.";
+		}
+    }
+   
+}
+
+function ds_ExploreReq_OnRowPosChanged(obj,nOldRow,nRow)
+{
+	ds_ExploreRslt.Clear();
+	ds_ExploreRsltDam.ClearData();
+	
+	var req_num = ds_ExploreReq.GetColumn(nRow,"REQ_NUM");
+	var rslt_num = ds_ExploreReq.GetColumn(nRow,"RSLT_NUM");
+	
+	fn_D1_find1(req_num, rslt_num);
+}
+
+function ds_ExploreRslt_OnRowPosChanged(obj,nOldRow,nRow)
+{
+    if(nRow < 0)    return ;
+    
+	var req_num = ds_ExploreRslt.GetColumn(nRow,"REQ_NUM");
+	var rslt_num = ds_ExploreRslt.GetColumn(nRow,"RSLT_NUM");
+	
+	fn_D1_find2(req_num, rslt_num);
+}
+
+function fn_D1_find1(req_num, rslt_num)
+{
+	ds_ExploreRslt.ClearData();
+	ds_Search2.ClearData();
+	
+	var strRow = ds_Search2.AddRow();
+	
+	//Parameter Setting
+	ds_Search2.SetColumn(strRow, "REQ_NUM", req_num);
+	ds_Search2.SetColumn(strRow, "RSLT_NUM", rslt_num);
+
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------	
+    var ServiceId     = "selectExploreRslt";
+    var ServicePart   = "D10";
+    var Url           = "handle.do?ServiceName=D1_DCVGSearchCoatExploreReqMgr-service";
+    var InputDsList   = "ds_Search2=ds_Search2";
+    var OutputDsList  = "ds_ExploreRslt=ds_ExploreRslt";
+    var Argument      = "selectExploreRslt";	
+
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    gfn_D1_NULL_SetComboBox_Comcode("A10190",gfn_setDsObject_Comcode("cob_DamageYN"));   // 손상유무 세팅
+   
+    // 신규 입력 시 
+    if(ds_ExploreRslt.rowCount == 0){
+		ds_ExploreRslt.AddRow();
+		ds_ExploreRslt.setColumn(0, "REQ_NUM", req_num);
+		cal_ReceiveYmd.Value = today();
+		cal_ExplorYmd.Value = today();
+		ds_ExploreRslt.SetColumn(0,"RESECH_NAME1",gfn_GetGlobalValue("G_NAME"));
+		ds_ExploreRslt.SetColumn(0,"RESECH_EMPID1",gfn_GetGlobalValue("G_USER_NO"));
+		ds_ExploreRslt.SetColumn(0,"RECEIVE_NAME",gfn_GetGlobalValue("G_NAME"));
+		ds_ExploreRslt.SetColumn(0,"RECEIVE_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+    }
+}
+
+function fn_D1_find2(req_num, rslt_num)
+{
+	ds_ExploreRsltDam.ClearData();
+	ds_Search3.ClearData();
+	
+	var strRow = ds_Search3.AddRow();
+	
+	//Parameter Setting
+	ds_Search3.SetColumn(strRow, "REQ_NUM", req_num);
+	ds_Search3.SetColumn(strRow, "RSLT_NUM", rslt_num);
+
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------	
+    var ServiceId     = "selectExploreRsltDamList";
+    var ServicePart   = "D10";
+    var Url           = "handle.do?ServiceName=D1_DCVGSearchCoatExploreReqMgr-service";
+    var InputDsList   = "ds_Search3=ds_Search3";
+    var OutputDsList  = "ds_ExploreRsltDam=ds_ExploreRsltDam";
+    var Argument      = "selectExploreRsltDamList";	
+
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    // 손상부 입력 그리드에 데이터가 있을 경우
+    // 배관피복탐사 결과입력 그리드에 손상부개소, 조치개소 값 세팅
+    if (ds_ExploreRsltDam.rowcount != 0){	 
+		edt_DamagePointCnt.Value = ds_ExploreRsltDam.rowcount();			// 손상부개소
+		edt_ActCnt.Value = ds_ExploreRsltDam.CaseCount("REPAIR_YN=='Y'");   // 조치개소
+    }else{
+		edt_DamagePointCnt.Value = '';
+		edt_ActCnt.Value= '';
+    }
+}
+
+function btn_save01_click(obj)
+{
+	if(confirm("배관피복탐사 결과를 저장하시겠습니까?"))
+	{
+		fn_D1_save1();
+	}	
+}
+
+function btn_save02_click(obj)
+{
+	if((ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '0') || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '1')
+	  || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '2'))
+	{  
+		alert("결재건으로 수정이 불가능합니다..");
+		return;
+	}
+	
+	if(confirm("손상부 입력을 저장하시겠습니까?"))
+	{
+		fn_D1_save2();
+	}	
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_save1
+//   설명  : 구간 실적 등록된 내용을 저장한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_save1(obj)
+{
+	exploreReqRow = ds_ExploreReq.row;	// 저장 후 조회 함수에서 지금 선택된 로우로 다시 돌아오기 위함
+
+	if (!ds_ExploreRslt.GetUpdate())
+	{
+		alert("변경된 내용이 없습니다.");
+		return;
+	}
+	
+	if((ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '0') || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '1')
+	  || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '2'))
+	{  
+		alert("결재건으로 수정이 불가능합니다..");
+		return;
+	}
+	
+	if(ds_ExploreRslt.GetRowType(0) == "update"){
+		ds_ExploreRslt.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+		ds_ExploreRslt.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP		
+
+	}
+	else if(ds_ExploreRslt.GetRowType(0) == "insert"){
+		ds_ExploreRslt.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+		ds_ExploreRslt.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//수정자 IP		
+		ds_ExploreRslt.SetColumn(0, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+		ds_ExploreRslt.SetColumn(0, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//등록자 IP			
+	}
+	
+	var strSvcID         = "saveExploreRslt";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSearchCoatExploreReqMgr-service" ;	
+	var strInDatasets    = "ds_ExploreRslt=ds_ExploreRslt:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "saveExploreRslt";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}			   
+
+	alert("저장/수정이 되었습니다.");
+
+	fn_CommonSearch();	
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_save2
+//   설명  : 구간 실적 등록된 내용을 저장한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_save2(obj)
+{
+	exploreReqRow = ds_ExploreReq.row;	// 저장 후 조회 함수에서 지금 선택된 로우로 다시 돌아오기 위함
+	
+	if (!ds_ExploreRsltDam.GetUpdate())
+	{
+		alert("변경된 내용이 없습니다.");
+		return;
+	}
+	
+	for(var i = 0 ; i < ds_ExploreRsltDam.rowcount ; i++){
+		if((ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '0') 
+		  || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '1')
+		  || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '2'))
+		{  
+			alert("결재건으로 수정이 불가능합니다..");
+			return;
+		}
+		
+		if(ds_ExploreRsltDam.GetRowType(i) == "update"){
+			ds_ExploreRsltDam.SetColumn(i, "REQ_NUM", ds_ExploreRslt.GetColumn(0,"REQ_NUM"));
+			ds_ExploreRsltDam.SetColumn(i, "RSLT_NUM", ds_ExploreRslt.GetColumn(0,"RSLT_NUM"));
+			ds_ExploreRsltDam.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_ExploreRsltDam.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP		
+	
+		}
+		else if(ds_ExploreRsltDam.GetRowType(i) == "insert"){
+			ds_ExploreRsltDam.SetColumn(i, "REQ_NUM", ds_ExploreRslt.GetColumn(0,"REQ_NUM"));
+			ds_ExploreRsltDam.SetColumn(i, "RSLT_NUM", ds_ExploreRslt.GetColumn(0,"RSLT_NUM"));
+			ds_ExploreRsltDam.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_ExploreRsltDam.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//수정자 IP		
+			ds_ExploreRsltDam.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+			ds_ExploreRsltDam.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//등록자 IP			
+		}
+	}
+		
+	var strSvcID         = "saveExploreRsltDamIn";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSearchCoatExploreReqMgr-service" ;	
+	var strInDatasets    = "ds_ExploreRsltDam=ds_ExploreRsltDam:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "saveExploreRsltDamIn";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}			   
+
+	alert("저장/수정이 되었습니다.");
+	
+	fn_CommonSearch();	
+}
+	
+function fn_D1_WorkNumPopUp(obj)
+{
+	if(ds_ExploreRslt.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}	
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_ReceiveEmpNm.Text); //사용자코드(조회조건용)
+	ds_ExploreRslt.SetColumn(0,"RECEIVE_EMPID",retValue[0]);
+	ds_ExploreRslt.SetColumn(0,"RECEIVE_NAME",retValue[1]);	
+}
+	
+function btn_emp2_OnClick(obj)
+{
+	if(ds_ExploreRslt.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}	
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_ResechEmpid2.Text); //사용자코드(조회조건용)
+	ds_ExploreRslt.SetColumn(0,"RESECH_EMPID2",retValue[0]);
+	ds_ExploreRslt.SetColumn(0,"RESECH_NAME2",retValue[1]);
+}
+
+function btn_emp3_OnClick(obj)
+{
+	if(ds_ExploreRslt.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}	
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_ResechEmpid3.Text); //사용자코드(조회조건용)
+	ds_ExploreRslt.SetColumn(0,"RESECH_EMPID3",retValue[0]);
+	ds_ExploreRslt.SetColumn(0,"RESECH_NAME3",retValue[1]);
+}
+
+
+
+function btn_emp4_OnClick(obj)
+{
+	if(ds_ExploreRslt.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}	
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_ResechEmpid4.Text); //사용자코드(조회조건용)
+	ds_ExploreRslt.SetColumn(0,"RESECH_EMPID4",retValue[0]);
+	ds_ExploreRslt.SetColumn(0,"RESECH_NAME4",retValue[1]);	
+}
+
+function btn_emp5_OnClick(obj)
+{
+	if(ds_ExploreRslt.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}		
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_ResechEmpid5.Text); //사용자코드(조회조건용)
+	ds_ExploreRslt.SetColumn(0,"RESECH_EMPID5",retValue[0]);
+	ds_ExploreRslt.SetColumn(0,"RESECH_NAME5",retValue[1]);	
+}
+
+function btn_emp6_OnClick(obj)
+{
+	if(ds_ExploreRslt.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}		
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_ResechEmpid6.Text); //사용자코드(조회조건용)
+	ds_ExploreRslt.SetColumn(0,"RESECH_EMPID6",retValue[0]);
+	ds_ExploreRslt.SetColumn(0,"RESECH_NAME6",retValue[1]);	
+}
+
+
+function fn_D1_deleteRow(obj)
+{
+	if(ds_ExploreRslt.GetRowCount() == 0)
+	{
+		return;
+	}
+
+	if((ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '0') 
+	  || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '1')
+	  || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '2'))
+	{  
+		alert("결재건으로 삭제가 불가능합니다..");
+		return;
+	}
+	
+	if(confirm("배관피복탐사 결과를 삭제하시겠습니까?"))
+	{
+		ds_ExploreRslt.DeleteRow(ds_ExploreRslt.row);
+		fn_D1_save1();
+	}	
+}
+
+function btn_Sanction_OnClick(obj)
+{
+	var reqNum = edt_req.value;
+	var rlstNum = edt_RsltNum.Value;
+	//var Branch_Cd = cob_BranchCd.Value;
+	//var zip_no1 = cob_ZipNo1.Value ;
+	//var work_num = ds_ExploreReq.GetColumn(ds_ExploreReq.row, "WORK_NUM");
+	var damagePointCnt = edt_DamagePointCnt.value;
+		
+	//그룹웨어에서 차량번호(한글)파라메터 전달 불가로 로그인자 사번넘겨 차량번호 참조 오즈로 넘겨줌 
+	gfv_callGWInfo("fmD46","D10","D1903010020P",3,reqNum+","+rlstNum+","+damagePointCnt);
+   // 1번 : 화면명칭   2번 : 업무그룹 (b10,b20... OZ 인경우 필수), 3번: 프로그램ID (oz인경우 필수) 4: 아규먼트 갯수 (1....5)
+   // 5번 : 아규먼트 목록 (형식 , 표시로 각 아규먼트 구분자 사용)
+
+}
+
+//--- 장표 테스트
+function fn_CommonPrint(obj)
+{
+	var reqNum = edt_req.value;
+	var rlstNum = edt_RsltNum.Value;
+	var damagePointCnt = edt_DamagePointCnt.value;
+	
+	var ReportArgs = "";
+
+	ReportArgs = ReportArgs  + "REQ_NUM=" + reqNum +  ",RSLT_NUM=" + rlstNum + ",DAMAGEPOINTCOUNT=" + damagePointCnt ;
+
+    gfn_ReportPopup('장표',"d10",'D1903010020P',ReportArgs);
+}
+
+function Btn_add_OnClick(obj)
+{
+	if(edt_RsltNum.Value == ''){
+		alert("배관피복탐사 결과 입력 후 추가 가능합니다.");
+		return;
+	}
+	else if((ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '0')
+	        || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '1')	
+	        || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '2'))
+	{  
+		alert("결재건으로 수정이 불가능합니다..");
+		return;
+	}
+	else{
+		ds_ExploreRsltDam.AddRow();
+	}
+}
+
+function fn_Dam_DeleteRow(obj)
+{
+	if(ds_ExploreRsltDam.GetRowCount() == 0)
+	{
+		return;
+	}
+
+	if((ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '0') 
+	  || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '1')
+	  || (ds_ExploreRslt.GetColumn(0,"DECIDE_PROC_STS") == '2'))
+	{  
+		alert("결재건으로 삭제가 불가능합니다..");
+		return;
+	}
+	
+	if(confirm("손상부 입력내역을 삭제하시겠습니까?"))
+	{
+		ds_ExploreRsltDam.DeleteRow(ds_ExploreRsltDam.row);
+		fn_D1_save2();
+	}	
+}
+
+//--------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 엑셀
+//--------------------------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	//-------------------------------------------------------------------------------
+	// 엑셀 버튼 실행 
+	//-------------------------------------------------------------------------------
+    a1v_GridForExcelID = "grd_ExploreReq";
+	var SearchCondition  = "";
+	gfn_ExportExcel("배관피복탐사 의뢰 리스트", 3, SearchCondition,"배관피복탐사 의뢰 리스트", true,true);
+}
+
+
+
+function edt_EtcDesc_OnKeyDown(obj,nChar,bShift,bCtrl,bAlt,nLLParam,nHLParam)
+{
+	if(!gfn_C2_GetByteCheck("edt_EtcDesc",'1000',"기타사항"))	return false;
+}
+]]></Script>
+</Window>

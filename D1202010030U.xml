@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="312" Id="D1202010030U" Left="8" OnLoadCompleted="D1202010030U_OnLoadCompleted" PidAttrib="7" Title="철길통과&#32;배관점검표_D1202010030U" Top="8" Ver="1.0" Width="600" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_RailPass">
+				<Contents>
+					<colinfo id="ROW_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_RSLT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_PASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_NOT_PASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_OPINI" size="256" summ="default" type="STRING"/>
+					<record>
+						<CHK_ITEM>10</CHK_ITEM>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_OPINI></CHK_OPINI>
+						<CHK_PASS></CHK_PASS>
+						<CHK_RSLT></CHK_RSLT>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▷XP-702S로&#32;누출확인</DESC>
+						<FACI_NUM></FACI_NUM>
+						<INSPECT_KITEM>누출검검</INSPECT_KITEM>
+						<PATROL_YMD></PATROL_YMD>
+						<ROW_NUM>1</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<CHK_ITEM>11</CHK_ITEM>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_OPINI></CHK_OPINI>
+						<CHK_PASS></CHK_PASS>
+						<CHK_RSLT></CHK_RSLT>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▷표시판&#32;상태(표지판&#32;설치수량&#32;및&#32;관리상태)</DESC>
+						<FACI_NUM></FACI_NUM>
+						<INSPECT_KITEM>표시판&#32;상태</INSPECT_KITEM>
+						<PATROL_YMD></PATROL_YMD>
+						<ROW_NUM>2</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<CHK_ITEM>12</CHK_ITEM>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_OPINI></CHK_OPINI>
+						<CHK_PASS></CHK_PASS>
+						<CHK_RSLT></CHK_RSLT>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▷지반&#32;변형상태</DESC>
+						<FACI_NUM></FACI_NUM>
+						<INSPECT_KITEM>지반침하</INSPECT_KITEM>
+						<PATROL_YMD></PATROL_YMD>
+						<ROW_NUM>3</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<CHK_ITEM>13</CHK_ITEM>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_OPINI></CHK_OPINI>
+						<CHK_PASS></CHK_PASS>
+						<CHK_RSLT></CHK_RSLT>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▷누출검사</DESC>
+						<FACI_NUM></FACI_NUM>
+						<INSPECT_KITEM>가스차단장치</INSPECT_KITEM>
+						<PATROL_YMD></PATROL_YMD>
+						<ROW_NUM>4</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+					<record>
+						<CHK_ITEM>14</CHK_ITEM>
+						<CHK_NOT_PASS></CHK_NOT_PASS>
+						<CHK_OPINI></CHK_OPINI>
+						<CHK_PASS></CHK_PASS>
+						<CHK_RSLT></CHK_RSLT>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<DESC>▷설치개소&#32;적정여부</DESC>
+						<FACI_NUM></FACI_NUM>
+						<INSPECT_KITEM>가스차단장치</INSPECT_KITEM>
+						<PATROL_YMD></PATROL_YMD>
+						<ROW_NUM>4</ROW_NUM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_RailPassList">
+				<Contents>
+					<colinfo id="CHK_RSLT" size="256" type="STRING"/>
+					<colinfo id="RMK" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_decide"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_RailPassOpni">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_OPINI" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="철길통과&#32;배관점검표" Transparent="TRUE" Width="600"></Image>
+		<Shape BKColor="user16" Bottom="92" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="595" TabOrder="3" Top="89" Type="Rectangle" Width="590"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_RailPass" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="224" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="132" Id="grd_Multi" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellClick="grd_Multi_OnCellClick" Right="595" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="92" UseDBuff="true" UsePopupMenu="true" UseSelColor="FALSE" Visible="true" VLineColor="default" WheelScrollRow="1" Width="590">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="130"/>
+						<col width="318"/>
+						<col width="100"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="NO"/>
+						<cell col="1" display="text" rowspan="2" text="점검항목"/>
+						<cell col="2" display="text" rowspan="2" text="점검내용"/>
+						<cell col="3" colspan="2" display="text" text="점검결과"/>
+						<cell col="3" display="text" row="1" text="양호"/>
+						<cell col="4" display="text" row="1" text="불량"/>
+					</head>
+					<body>
+						<cell align="center" bkcolor="user12" col="0" colid="ROW_NUM" display="text" expandsize="18" suppress="1" SuppressAlign="Middle" wordwrap="word"/>
+						<cell align="center" bkcolor="user12" col="1" colid="INSPECT_KITEM" display="text" expandsize="18" suppress="2" SuppressAlign="Middle" wordwrap="word"/>
+						<cell align="left" col="2" colid="DESC" display="text" expandsize="18" suppress="3" SuppressAlign="Middle" wordwrap="word"/>
+						<cell col="3" colid="CHK_PASS" display="checkbox" edit="checkbox" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="CHK_NOT_PASS" display="checkbox" edit="checkbox"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="4" Text="Button8" Top="-134" Width="17"></Button>
+		<Div DisableBKColor="white" Height="29" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="5" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="595">
+			<Contents></Contents>
+		</Div>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Sanction" ImageID="btn_5_Amendment" Left="508" LeftMargin="21" OnClick="btn_Sanction_OnClick" Style="button" TabOrder="6" Text="결재(승인)" Top="68" Width="87"></Button>
+		<Static BKColor="white" Border="Flat" Height="77" Id="Static36" Left="105" Style="table" TabOrder="8" Top="228" VAlign="Middle" Width="490" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="77" Id="Static35" Left="5" Style="table_1" TabOrder="7" Text="의견" Top="228" VAlign="Middle" Width="123" WordWrap="TRUE"></Static>
+		<TextArea BindDataset="ds_RailPass" Border="Flat" Column="CHK_OPINI" Height="73" Id="ta_ChkOpini" Left="131" Style="textarea" TabOrder="9" Top="230" VScroll="TRUE" Width="460"></TextArea>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_OZ" ImageID="btn_2_Connection" Left="455" LeftMargin="20" OnClick="btn_OZ_OnClick" Style="button" TabOrder="10" Text="장표" Top="68" Width="50"></Button>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_decide" Left="59" Style="edit" TabOrder="11" Top="70" Width="84"></Edit>
+		<Static Height="16" Id="Static21" Left="5" Style="static" TabOrder="12" Text="결재상태" Top="74" Width="51"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID      : D1202010030U.xml
+* Form 설명   : 순찰중점관리철길통과배관 점검대장 조회,등록,수정,삭제
+* 시스템 명   : 안전공급(D1)
+* 작성자      : 임성수
+* 작성일      : 2008-01-16
+* 변경내용    : 변경내용없음
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONA10008.js";
+
+var strFaciNum = "";
+var strPatrolYmd = "";
+var strRowType = "";
+
+//---------------------------------------------------------
+//	화면 OnLoadCompleted 이벤트처리 발생하는 함수( 화면ID_OnLoadCompleted )
+//---------------------------------------------------------
+function D1202010030U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+
+function fn_Init()
+{
+	// 넘어온 파라메터가 있으면
+	if(IsExistVar("FACI_NUM"))
+	{
+		strFaciNum = FACI_NUM;
+	}
+	if(IsExistVar("PATROL_YMD"))
+	{
+		strPatrolYmd = PATROL_YMD;
+	}
+	// if(IsExistVar("ROWTYPE"))
+	// {
+		// strRowType = ROWTYPE;
+		// if(strRowType == "search" || strRowType == "update")
+		// {
+			//fn_D1_Find();
+		// }
+		// if(strRowType == "search" )
+		// {
+			// grd_Multi.Enable = "false";
+			// ta_ChkOpini.Enable = "false";
+		// }
+	// }
+	fn_D1_Find();
+	grd_Multi.BindDataset = "ds_RailPass";
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+/*===============================================================================
+ * 함수명: fn_CommonAddRow()
+   설명: 탭별  내용를 신규 추가 하는 모드로 변경 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonAddRow()
+{
+	fn_D1_Addrowm();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonDeleteRow()
+   설명: 탭별 삭제 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonDeleteRow()
+{
+	fn_D1_DeleteRow();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSave()
+   설명: 탭별 상세 내용를 저장 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonSave()
+{
+	fn_D1_Save();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSearch()
+   설명: 공통 조회 클릭시 조회 업무  수행 
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonSearch()
+{
+	fn_D1_Find();
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 엑셀 Export
+//---------------------------------------------------------
+function fn_CommonExcelExport()
+{
+
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - Print
+//---------------------------------------------------------
+function fn_CommonPrint()
+{
+	if(ds_RailPassList.GetRowCount()>0)
+	{
+		// 함수 호출용 파라미터를 설정한다
+		var strTitle ="철길통과 배관점검표"; 
+		var strPart ="D10";           
+		var strReport="D1202010017P";	//화면 아이디 따기                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊ"; 
+		var strParameter="FACI_NUM=" 	+FACI_NUM
+						+",PATROL_YMD=" +PATROL_YMD
+						;
+
+		// 공통 레포트 팝업 함수 호출 
+		gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_D1_Find()
+// 설명     : 순찰점검 주 계획을 조회한다.
+// return 내용 : 없음
+//-------------------------------------------------------------------------------
+
+function fn_D1_Find()
+{	
+	var strSvcID = "fn_D1_Find";
+	var strPart = "D10";				
+	var strURL = "handle.do?ServiceName=D1202010030U-service"
+	           + "&FACI_NUM="		+strFaciNum					//중점관리시설번호코드
+	           + "&PATROL_YMD=" 	+strPatrolYmd				//순찰일자
+	           ;
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_RailPassList=ds_RailPassList";
+	var strArgument  = "find";
+	
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);
+	fn_D1_Decide();
+	fn_D1_Set();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_D1_Decide()
+// 설명     : 
+// return 내용 : 없음
+//-------------------------------------------------------------------------------
+function fn_D1_Decide()
+{
+	var strSvcID = "";
+	var strPart  = "D10";				
+	var strURL   = "handle.do?ServiceName=D1202010030U-service"
+	             + "&FACI_NUM="		+strFaciNum					//중점관리시설번호코드
+	             + "&PATROL_YMD=" 	+strPatrolYmd				//순찰일자
+	             ;
+	             
+	var strInDatasets  = "";
+	var strOutDatasets = "ds_decide=ds_decide";
+	var strArgument    = "find2";
+	
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);	
+	edt_decide.Text  = ds_decide.GetColumn(0,"DECIDE_PROC_STS_NM");
+	ta_ChkOpini.Text = ds_decide.GetColumn(0,"CHK_OPINI");
+	              		            
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Set()
+//   설명:  순찰중점관리 교량첨가배관 점검대장 해당 내용을 셋팅한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Set()
+{	
+	for(var i=0;i<ds_RailPassList.RowCount();i++)
+	{
+		if(trim(ds_RailPassList.GetColumn(i,"CHK_RSLT")) == "10")			//점검결과
+		{
+			ds_RailPass.SetColumn(i,"CHK_PASS",1);					//양호
+		}else if(trim(ds_RailPassList.GetColumn(i,"CHK_RSLT")) == "20")	//점검결과
+		{
+			ds_RailPass.SetColumn(i,"CHK_NOT_PASS",1);				//불량
+		}
+	//	ta_ChkOpini.Text = ds_RailPassList.GetColumn(i,"CHK_OPINI");	//의견
+	}
+}
+
+
+//---------------------------------------------------------
+// 검사 결과 에 따른 체크값 설정
+//---------------------------------------------------------
+function grd_Multi_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if("CHK_PASS" == grd_Multi.GetCellProp("body",nCell,"ColId"))
+	{
+		ds_RailPass.SetColumn(nRow,"CHK_NOT_PASS",0);
+	}else if("CHK_NOT_PASS" == grd_Multi.GetCellProp("body",nCell,"ColId"))
+	{
+		ds_RailPass.SetColumn(nRow,"CHK_PASS",0);
+	}
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Save
+//   설명  : 사유지 점용료 협의사항를 등록/업데이트한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save()
+{
+
+	if(ds_RailPass.RowCount() == 0)
+	{
+		return;
+	}
+	
+	/* 2012. 02. 01. 결재중, 결재완료는 저장이 불가능하게 수정 - 이건민
+	if(ds_decide.GetColumn(0,"DECIDE_PROC_STS") == '0' || ds_decide.GetColumn(0,"DECIDE_PROC_STS") == '1' || ds_decide.GetColumn(0,"DECIDE_PROC_STS") == '2')
+	{
+		alert("결재 진행/완료건으로 수정이 불가능합니다..");
+		return;
+	}
+	*/
+	
+	if(ds_decide.GetColumn(0,"DECIDE_PROC_STS") == '0' || ds_decide.GetColumn(0,"DECIDE_PROC_STS") == '2')
+	{
+		alert("결재 진행/완료건으로 수정이 불가능합니다..");
+		return;
+	}
+	
+	var strType = "";
+	var strChkRslt = "";
+	
+	// if(strRowType == "update")
+	// {
+		// strType = "update";
+	// }else if(strRowType == "insert")
+	// {
+		// strType = "insert";
+	// }else {
+		// close();
+	// }
+	
+	for(var i=0; i<ds_RailPass.RowCount(); i++)
+	{
+		var strRstCd = 0;
+		
+		if(ds_RailPass.GetColumn(i,"CHK_PASS") == 1)
+		{
+			strRstCd = "10";
+		}else if(ds_RailPass.GetColumn(i,"CHK_NOT_PASS") == 1)
+		{
+			strRstCd = "20";
+		}else 
+		{
+			alert('점검항목을 모두 체크해 주세요');
+			return;
+		}
+		
+		ds_RailPass.UpdateControl = false;
+		if(ds_RailPassList.GetRowCount()>0)
+		{
+			ds_RailPass.SetRowType(i, "update");
+		}
+		else
+		{
+			ds_RailPass.SetRowType(i, "insert");
+		}
+		
+		
+		//수정 등록시 셋팅할 사용자 정보
+		ds_RailPass.SetColumn(i, "FACI_NUM", strFaciNum);
+		ds_RailPass.SetColumn(i, "PATROL_YMD", strPatrolYmd);
+		ds_RailPass.SetColumn(i, "CHK_RSLT", strRstCd);
+		//ds_RailPass.SetColumn(i, "CHK_OPINI", ta_ChkOpini.Text);
+		
+		ds_RailPass.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_RailPass.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_RailPass.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_RailPass.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+	}
+	fn_D1_SaveOpni();
+	var strSvcID         = "fn_D1_Save";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1202010030U-service" ;					
+	var strInDatasets    = "ds_RailPass=ds_RailPass:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ErrorCode<0)
+	{
+	    Close("saveNo");
+		return false;
+	}
+	
+	alert(gfn_GetMessage("M000009","%AAA%","저장을"));				   
+
+	Close("saveOk");
+}
+
+//-------------------------------------------------------------------------  
+//  함수명 : fn_D1_SaveOpni()
+//  내 용  : 점검의견을 등록 한다.
+//  return : 
+//  arg    : 
+//-------------------------------------------------------------------------  
+function fn_D1_SaveOpni()
+{
+	ds_RailPassOpni.AddRow();
+	ds_RailPassOpni.UpdateControl=false;
+	ds_RailPassOpni.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_RailPassOpni.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_RailPassOpni.SetColumn(0, "FACI_NUM", strFaciNum);
+	ds_RailPassOpni.SetColumn(0, "PATROL_YMD", strPatrolYmd);
+	ds_RailPassOpni.SetColumn(0, "CHK_OPINI",ta_ChkOpini.Text);
+	ds_RailPassOpni.SetRowType(0,"update");
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1202010030U-service";					
+	var strInDatasets    = "ds_RailPassOpni=ds_RailPassOpni:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save2";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ErrorCode<0)
+	{
+		return false;
+	}
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Addrowm()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Addrowm()
+{
+	
+	ds_RailPassList.AddRow();
+}
+
+
+function fn_D1_Delete()
+{
+	ds_RailPassList.DeleteRow(1);
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명   : btn_Sanction_OnClick(obj)
+// 설명     : 전자결재
+// return 내용 : 없음
+//-------------------------------------------------------------------------------
+function btn_Sanction_OnClick(obj)
+{
+	if (edt_decide.Text == '승인')
+	{
+		alert("결재 승인건 입니다..");
+		return;
+	}
+	
+	var FaciNum = strFaciNum;
+	var PatrolYmd = strPatrolYmd;		//상단그리드에서 순찰일자가져오는게 맞는지? 하단 같은데...
+	
+	if(ds_RailPassList.GetRowCount()>0)
+	{
+		gfv_callGWInfo("fmD05","D10","D1202010017P",2,FaciNum+","+PatrolYmd);
+	   // 1번 : 화면명칭   2번 : 업무그룹 (b10,b20... OZ 인경우 필수), 3번: 프로그램ID (oz인경우 필수) 4: 아규먼트 갯수 (1....5)
+	   // 5번 : 아규먼트 목록 (형식 , 표시로 각 아규먼트 구분자 사용)
+	}
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_Card(obj)
+//   설명  :  정배류기 점검대장 팝업
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function btn_OZ_OnClick(obj)
+{
+
+	if(ds_RailPassList.GetRowCount()>0)
+	{
+		// 함수 호출용 파라미터를 설정한다
+		var strTitle ="철길통과 배관점검표"; 
+		var strPart ="D10";           
+		var strReport="D1202010017P";	//화면 아이디 따기                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊ"; 
+		var strParameter="FACI_NUM=" 	+FACI_NUM
+						+",PATROL_YMD=" +PATROL_YMD
+						;
+		//gfn_bt_d2_Report
+		// 공통 레포트 팝업 함수 호출 
+		gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+	}
+}
+
+/*
+function D1202010030U_OnUnloadCompleted(obj)
+{
+	if(ds_RailPass.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","편집중인 내용을 무시하고 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+*/]]></Script>
+</Window>

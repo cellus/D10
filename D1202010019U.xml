@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1202010019U" Left="8" OnLoadCompleted="D1202010019U_OnLoadCompleted" PidAttrib="7" Title="테스트박스&#32;순찰점검이력_D1202010019U" Top="8" Ver="1.0" Width="660" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="COM_ID" size="2" type="STRING"/>
+					<colinfo id="PATROL_YMD" size="8" type="STRING"/>
+					<colinfo id="FACI_NM" size="11" type="STRING"/>
+					<colinfo id="CODE_ID" size="256" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" type="STRING"/>
+					<colinfo id="RCODE_ID" size="256" type="STRING"/>
+					<colinfo id="RCODE_ITEM" size="256" type="STRING"/>
+					<record>
+						<COM_ID></COM_ID>
+						<PATROL_YMD></PATROL_YMD>
+						<FACI_NM></FACI_NM>
+						<CODE_ID></CODE_ID>
+						<CODE_ITEM></CODE_ITEM>
+						<RCODE_ID></RCODE_ID>
+						<RCODE_ITEM></RCODE_ITEM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_WorkingStsCombo">
+				<Contents>
+					<colinfo id="CODE_ID" size="6" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="4" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" type="STRING"/>
+					<colinfo id="ITEM_ENAME" size="256" type="STRING"/>
+					<colinfo id="REMARK" size="256" type="STRING"/>
+					<colinfo id="SORT_ORDER" size="256" type="INT"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SelectComponents">
+				<Contents>
+					<colinfo id="CODE_ID" size="6" type="STRING"/>
+					<colinfo id="DATASET_ID" size="256" type="STRING"/>
+					<colinfo id="COM_ID" size="2" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="4" type="STRING"/>
+					<record>
+						<CODE_ID>D10108</CODE_ID>
+						<CODE_ITEM>%</CODE_ITEM>
+						<COM_ID></COM_ID>
+						<DATASET_ID>ds_WorkingStsCombo</DATASET_ID>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SelectComponentData">
+				<Contents>
+					<colinfo id="CODE_ID" size="6" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="4" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" type="STRING"/>
+					<colinfo id="ITEM_ENAME" size="256" type="STRING"/>
+					<colinfo id="REMARK" size="256" type="STRING"/>
+					<colinfo id="SORT_ORDER" size="256" type="INT"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ResultList">
+				<Contents>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_STS_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_ELECT_POT" size="256" summ="default" type="STRING"/>
+					<colinfo id="VOLTAIC" size="256" summ="default" type="STRING"/>
+					<colinfo id="EMPID_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="EMPID_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="EMPID_3" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="테스트박스&#32;순찰점검이력" Transparent="TRUE" Width="660"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_ResultList" BoldHead="FALSE" Border="Flat" Bottom="395" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="295" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="655" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="100" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="650">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="40"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="90"/>
+						<col width="200"/>
+						<col width="90"/>
+						<col width="90"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell col="1" display="normal" text="점검일자"/>
+						<cell col="2" display="text" text="계획일자"/>
+						<cell col="3" display="text" text="외관상태"/>
+						<cell col="4" display="text" text="측정전위"/>
+						<cell col="5" display="text" text="점검사항"/>
+						<cell col="6" display="text" text="점검자1"/>
+						<cell col="7" display="text" text="점검자2"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expr="rowindex+1"/>
+						<cell col="1" colid="PATROL_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="PLAN_YMD" display="date"/>
+						<cell align="center" col="3" colid="OPERAT_STS_CD" combocol="CODE_ITEM" combodataset="ds_WorkingStsCombo" combotext="ITEM_KNAME" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="4" colid="MEAS_ELECT_POT" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" colid="CHK_DESC" display="text"/>
+						<cell align="center" col="6" colid="TAKER_EMPID1" display="text"/>
+						<cell align="center" col="7" colid="TAKER_EMPID2" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="100" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="655" TabOrder="3" Top="97" Type="Rectangle" Width="650"></Shape>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="655" TabOrder="4" Top="68" Type="Rectangle" Width="650"></Shape>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PatrolYmd1" Left="79" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="5" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Div DisableBKColor="white" Height="29" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="6" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="656">
+			<Contents></Contents>
+		</Div>
+		<Static Height="13" Id="C2502030010F" Left="168" Style="static" TabOrder="7" Text="~" Top="74" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PatrolYmd2" Left="178" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="8" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="9" Text="점검일자" Top="71" Transparent="TRUE" Width="66"></Image>
+	</Form>
+	<Script><![CDATA[/*************************************************************************************************** 
+* FormID     : D1202010019U.xml
+* Form 설명  : 테스트박스순찰점검이력(POPUP)
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 임병태 
+* 작성일     : 2008-09-03 
+* 변경내용   : 변경일자, 변경내용,변경자 
+****************************************************************************************************/ 
+#include "JS::COMMONA10001.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONB30001.js";
+
+
+//---------------------------------------------------------
+//	화면변수
+//---------------------------------------------------------
+var strFaciNm; 		// 시설물명  
+
+//---------------------------------------------------------
+//	화면초기화함수
+//---------------------------------------------------------
+function D1202010019U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_D1_SetGrid_Sort(grd_List);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	cal_PatrolYmd1.Text = parseInt(substr(today(), 0, 4)) - 5 + substr(today(), 4, 4);
+	cal_PatrolYmd2.Text = today();
+	
+	fn_CommonSearch();
+
+}
+
+//-------------------------------------------------------------------------------
+// 엑셀 버튼 실행
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	grd_List.ExportExcelEx("sheet1");
+}
+
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - Print
+//---------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+
+//-------------------------------------------------------------------------------
+// 조회 버튼 실행
+//-------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	//입력한 날짜가 오늘 보다 클 경우
+	if(!fn_DateCheckToday(cal_PatrolYmd1,cal_PatrolYmd2))
+	{
+		return;
+	}
+	//TO 날짜는 FROM날짜보다 클 경우
+	if(!fn_DateCheck(cal_PatrolYmd1,cal_PatrolYmd2))
+	{
+		return;
+	}
+	// 그리드를 초기화 한다
+	gfn_SetHeadClearAll(grd_List);
+	strFaciNum = FACI_NUM;		//테스트박스번호
+
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1202010019U-service&find=1"
+	            + "&FACI_NUM ="  	+strFaciNum  //TT001370
+	            + "&PATROL_STYMD =" +cal_PatrolYmd1.Value 
+	            + "&PATROL_EDYMD =" +cal_PatrolYmd2.Value 
+	            ;
+	       
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_ResultList=ds_ResultList";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	if(ds_ResultList.GetRowCount()==0) trace("조회결과가 없습니다.");
+	
+	if(ds_ResultList.GetRowCount()==0)
+	{
+        grd_List.NoDataText="조회결과가 없습니다.";
+    }
+}
+
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 선택
+//---------------------------------------------------------
+function fn_CommonSelect()
+{
+	var arrList = array();
+	var nRow = ds_ResultList.row;
+
+	// 코드, 코드명
+	arrList[0] = ds_ResultList.GetColumn(nRow,"PATROL_YMD");		// 순찰일자
+	arrList[1] = ds_ResultList.GetColumn(nRow,"FACI_NM");		// 시설물명
+
+	Close(arrList);
+}
+//---------------------------------------------------------
+//	그리드 cell 더블 클릭 이벤트 
+//--------------------------------------------------------- 
+function grd_List_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fn_CommonSelect();
+}
+
+//---------------------------------------------------------
+//	END OF FORM SCRIPT 
+//--------------------------------------------------------- ]]></Script>
+</Window>

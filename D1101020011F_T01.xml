@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="360" Id="D1101020011F_T01" Left="8" OnLoadCompleted="D1101020011F_T01_OnLoadCompleted" PidAttrib="7" Title="정압실등록_D1101020011F_T01" Top="8" Ver="1.0" Width="1012" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_faci">
+				<Contents>
+					<colinfo id="GOV_ROOM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROAD_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOWN" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_faci1">
+				<Contents>
+					<colinfo id="GOV_ROOM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROAD_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Dong">
+				<Contents>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid AutoEnter="TRUE" BindDataset="ds_faci" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="350" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="326" Id="grd_faci" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnCellClick="grd_faci_OnCellClick" OnHeadClick="grd_faci_OnHeadClick" OnMouseOver="grd_faci_OnMouseOver" Right="488" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="24" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="480">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="30"/>
+						<col width="80"/>
+						<col width="85"/>
+						<col width="107"/>
+						<col width="81"/>
+						<col width="90"/>
+						<col width="90"/>
+					</columns>
+					<head>
+						<cell col="0" display="checkbox" edit="checkbox" text="0"/>
+						<cell col="1" display="text" text="정압실명"/>
+						<cell col="2" display="text" text="동"/>
+						<cell col="3" display="text" text="주소"/>
+						<cell col="4" display="text" text="구간"/>
+						<cell col="5" display="text" text="설치일자"/>
+						<cell col="6" display="text" text="정압실번호"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHK" cursor="hand" display="checkbox" edit="checkbox"/>
+						<cell col="1" colid="GOV_ROOM_NM" display="text"/>
+						<cell col="2" colid="TOWN" display="text" limit="10"/>
+						<cell col="3" colid="LOT_NUM_UNION" display="text" limit="10"/>
+						<cell align="center" col="4" colid="BLOCK_NM" display="text"/>
+						<cell align="center" col="5" colid="INST_YMD" display="date"/>
+						<cell align="center" col="6" colid="FACI_NUM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Cursor="HAND" Height="19" Id="btn_insert" ImageID="right" Left="492" OnClick="btn_insert_OnClick" TabOrder="3" Text="Button8" Top="132" Width="21"></Button>
+		<Button Cursor="HAND" Height="19" Id="btn_delete" ImageID="left" Left="492" OnClick="btn_delete_OnClick" TabOrder="2" Text="Button8" Top="188" Width="21"></Button>
+		<Button ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_save" ImageID="btn_popsave" Left="948" LeftMargin="21" OnClick="btn_save_OnClick" Style="button" TabOrder="4" Text="저장" Top="2" Width="50"></Button>
+		<Combo Border="Flat" Cursor="HAND" Height="18" Id="cob_Gu" Left="50" OnChanged="cob_Gu_OnChanged" Style="combo_indis" TabOrder="5" Top="3" Width="105"></Combo>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="6" LeftMargin="12" Style="blt_search_Indis" TabOrder="6" Text="시/구" Top="4" Width="61"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_faci1" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="352" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="326" Id="grd_faci1" InputPanel="FALSE" Left="523" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnHeadClick="grd_faci_OnHeadClick1" OnMouseOver="grd_faci1_OnMouseOver" Right="1003" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="7" TabStop="true" Top="26" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="480">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="30"/>
+						<col width="80"/>
+						<col width="109"/>
+						<col width="80"/>
+						<col width="90"/>
+						<col width="90"/>
+					</columns>
+					<head>
+						<cell col="0" display="checkbox" edit="checkbox" text="선택"/>
+						<cell col="1" display="text" text="정압실명"/>
+						<cell col="2" display="text" text="주소"/>
+						<cell col="3" display="text" text="구간"/>
+						<cell align="center" col="4" display="date" text="설치일자"/>
+						<cell col="5" display="text" text="정압실번호"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CHK" cursor="hand" display="checkbox" edit="checkbox"/>
+						<cell col="1" colid="GOV_ROOM_NM" display="text"/>
+						<cell col="2" colid="LOT_NUM_UNION" display="text"/>
+						<cell align="center" col="3" colid="BLOCK_NM" display="text"/>
+						<cell col="4" colid="INST_YMD" display="date"/>
+						<cell align="center" col="5" colid="FACI_NUM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="860" LeftMargin="12" Style="blt_search" TabOrder="8" TabStop="FALSE" Text="건수&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;건" Top="4" Width="83"></Image>
+		<Static Align="Right" Height="13" Id="st_Reg1" Left="905" Style="static" TabOrder="9" Text="0" Top="7" Width="24"></Static>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="462" LeftMargin="12" Style="blt_search_Indis" TabOrder="11" Text="동" Top="4" Visible="FALSE" Width="61"></Image>
+		<Combo Border="Flat" CodeColumn="VALUE" Cursor="HAND" DataColumn="NAME" Height="18" Id="cob_Dong" ImeMode="none" Left="488" OnChanged="cob_Dong_OnChanged" Style="combo" TabOrder="10" Top="3" Visible="FALSE" Width="81"></Combo>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_Dong" Left="153" MaxLength="2000" OnCharChanged="edt_Dong_OnChanged" Style="edit" TabOrder="12" Top="4" Width="0"></Edit>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="161" LeftMargin="12" Style="blt_search" TabOrder="14" TabStop="FALSE" Text="건수&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;건" Top="4" Width="83"></Image>
+		<Button ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_search" ImageID="btn_popInquiry" Left="251" LeftMargin="21" OnClick="btn_search_OnClick" Style="button" TabOrder="13" Text="조회" Top="4" Width="50"></Button>
+		<Static Align="Right" Height="13" Id="st_Reg" Left="206" Style="static" TabOrder="15" Text="0" Top="7" Width="24"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101020011F_T01.xml
+* Form 설명  : 구간시설등록_정압실  
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 노준배 
+* 작성일     : 2009-06-16
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+var G_BLOCK_CD = "";
+var G_BLOCK_CD1 = "";
+var G_FACI_COUNT = "";
+var G_FACI1_COUNT = "";
+
+// ===============================================================================
+// 함수명: D1101020011F_T01_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1101020011F_T01_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+}
+
+function fn_Init() {
+    // 지사별 구 콤보 셋팅 시   
+     
+    fn_SetComboBox_Comcode("1", parent.cob_Branc.value, fn_setDsObject_Comcode("1", "cob_Gu"));
+    cob_Gu.Index = 0;
+    
+    //2012.01.07 이건민 - 권기철 과장님 요청사항 (동삭제 요청으로 주석처리)
+    //cob_Gu_OnChanged();
+}
+
+// 시/구별 동조회
+function cob_Gu_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	var ServiceId 		= "";
+    var ServicePart 	= "D10";
+    var Url 			= "handle.do?ServiceName=D1101020011F-service"
+                        + "&ZIP_NO1="   + cob_Gu.Value
+                        ;
+
+    var InputDsList 	= "";
+    var OutputDsList 	= "ds_Dong=ds_Dong";
+    var Argument 		= "findDongSearch";
+	
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    if (ErrorCode < 0) {
+        
+		return;
+	}
+	
+	ds_Dong.InsertRow(0);
+	ds_Dong.SetColumn(0, "NAME" , "전체");
+	ds_Dong.SetColumn(0, "VALUE", ""    );
+	
+	cob_Dong.InnerDataset = "ds_Dong";
+	
+	cob_Dong.Value = '';
+	if(cob_Gu.Value=="413"||cob_Gu.Value=="415")
+	{
+		cob_Dong.Enable = false; 
+	}
+	else
+	{
+		cob_Dong.Enable = true; 
+	}
+}
+
+function fn_Clear() {
+    
+    ds_faci.ClearData();
+    ds_faci1.ClearData();
+    st_Reg.Text = 0;
+    st_Reg1.Text = 0;
+}
+
+function btn_search_OnClick(obj) {
+	
+	if (parent.cob_Branc.value == "" || parent.cob_Branc.value == null) {
+	    alert("지사를 선택해주세요.");
+	    return;
+	}
+	
+	G_BLOCK_CD = parent.edt_BlockCd.Text;
+	
+	if (parent.edt_BlockCd.Text == "" || parent.edt_BlockCd.Text == null) {
+	    
+		 alert("데이터를 먼저 조회하여 하나의 구간정보를 선택하여 주십시오. ");
+		return;
+	}
+
+	var ServiceId 		= "";
+    var ServicePart 	= "D10";
+    var Url 			= "handle.do?ServiceName=D1101020011F-service"
+                        + "&BRANCH_CD=" + parent.cob_Branc.value 
+                        + "&ZIP_NO1="   + cob_Gu.Value
+                        + "&ZIP_NO2="   + substr(cob_Dong.Value,0,3)
+                        + "&S2_ZIP_NO2=" + substr(cob_Dong.Value,3,3)
+                        + "&TOWN="      + edt_Dong.Text
+                        + "&BLOCK_CD="  + G_BLOCK_CD
+                        ;
+
+    var InputDsList 	= "";
+    var OutputDsList 	= "ds_faci=ds_faci";
+    var Argument 		= "findGV1";
+	
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    st_Reg.Text  = ds_faci.GetRowCount();
+    G_FACI_COUNT = ds_faci.GetRowCount();
+    
+    if (ErrorCode < 0) {
+        
+		return;
+	}
+	
+	fn_Search();
+}
+
+function fn_Search() {
+	
+	var ServiceId 		= "";
+    var ServicePart 	= "D10";
+    var Url 			= "handle.do?ServiceName=D1101020011F-service"
+                        + "&BRANCH_CD=" + parent.cob_Branc.value 
+                        + "&BLOCK_CD=" + G_BLOCK_CD
+                        ;
+
+    var InputDsList 	= "";
+    var OutputDsList 	= "ds_faci1=ds_faci1";
+    var Argument 		= "findGV2";
+	
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    st_Reg1.Text = ds_faci1.GetRowCount();
+    G_FACI1_COUNT = ds_faci1.GetRowCount();
+    
+    if (ErrorCode < 0) {
+        
+		return;
+	}
+}
+
+function btn_save_OnClick(obj) {
+
+	var str_TeamCD = trim(parent.edt_TeamCd.Text);
+
+    if (parent.edt_BlockCd.Text == "" || parent.edt_BlockCd.Text == null) {
+	    
+	    alert("구간을 선택하거나 등록해 주세요.");
+	    return;
+	}
+
+    if (str_TeamCD == "" || str_TeamCD == null) {
+	    alert("구간에 팀 매칭이 되어 있지 않습니다. ");
+	    return;
+	}
+	
+    if (G_FACI1_COUNT < ds_faci1.GetRowCount()) {
+		ds_faci1.UpdateControl = false;
+		
+		for (var i = 0; i < ds_faci1.GetRowCount(); i++) {
+		
+			if (ds_faci1.GetRowType(i) == "insert") {
+				
+				ds_faci1.SetRowType(i, "update");
+			}
+		}
+		
+		var ServiceId 		= "";
+		var ServicePart 	= "D10";
+		var Url 			= "handle.do?ServiceName=D1101020011F-service";
+	
+		var InputDsList 	= "ds_faci1=ds_faci1:u";
+		var OutputDsList 	= "";
+		var Argument 		= "insertGV1";
+		
+		gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+		
+		if (ErrorCode < 0) {
+			
+			return;
+		}
+		
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true);
+		
+	} else if (G_FACI_COUNT < ds_faci.GetRowCount()) {
+	
+		ds_faci.UpdateControl = false;
+		
+		for (var i = 0; i < ds_faci.GetRowCount(); i++) {
+		
+			if (ds_faci.GetRowType(i) == "insert") {
+				
+				ds_faci.SetRowType(i, "update");
+			}
+		}
+		
+		var ServiceId 		= "";
+		var ServicePart 	= "D10";
+		var Url 			= "handle.do?ServiceName=D1101020011F-service";
+	
+		var InputDsList 	= "ds_faci=ds_faci:u";
+		var OutputDsList 	= "";
+		var Argument 		= "insertGV2";
+		
+		gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+		
+		if (ErrorCode < 0) {
+			
+			return;
+		}
+		
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true);
+		
+	} else {
+	    return;
+	}	
+	
+    btn_search_OnClick(obj);
+    fn_Search();
+    
+    parent.fn_serach_count();
+}
+
+function btn_insert_OnClick(obj) {
+   
+    var count = ds_faci.RowCount();
+    
+    for (var i = count; count + 1 > 0; i--) {
+    
+		if (ds_faci.GetColumn(i, "CHK") == "1") {
+		    
+		    ds_faci1.AddRow();
+		    ds_faci1.SetColumn(ds_faci1.RowCount() - 1, "GOV_ROOM_NM"  , ds_faci.GetColumn(i, "GOV_ROOM_NM"));
+		    ds_faci1.SetColumn(ds_faci1.RowCount() - 1, "LOT_NUM_UNION", ds_faci.GetColumn(i, "LOT_NUM_UNION"));
+		    ds_faci1.SetColumn(ds_faci1.RowCount() - 1, "BLOCK_CD"     , G_BLOCK_CD);
+		    ds_faci1.SetColumn(ds_faci1.RowCount() - 1, "BLOCK_NM"     , ds_faci.GetColumn(i, "BLOCK_NM"));
+		    ds_faci1.SetColumn(ds_faci1.RowCount() - 1, "ROAD_FLAG"    , ds_faci.GetColumn(i, "ROAD_FLAG"));
+		    ds_faci1.SetColumn(ds_faci1.RowCount() - 1, "INST_YMD"     , ds_faci.GetColumn(i, "INST_YMD"));
+		    ds_faci1.SetColumn(ds_faci1.RowCount() - 1, "FACI_NUM"     , ds_faci.GetColumn(i, "FACI_NUM"));
+		    ds_faci1.SetColumn(ds_faci1.RowCount() - 1, "CHK"          , "1");
+		    ds_faci1.SetColumn(ds_faci1.RowCount() - 1, "TEAM_CD"      , parent.edt_team.text);
+		    ds_faci.DeleteRow(i);
+		}
+		
+		count = count - 1;
+	}	
+}
+
+function btn_delete_OnClick(obj) {
+
+    var count = ds_faci1.RowCount();
+   
+    for (var i = count; count + 1 > 0; i--) {
+    
+		if (ds_faci1.GetColumn(i, "CHK") == "1") {
+		    
+		    ds_faci.AddRow();
+		    ds_faci.SetColumn(ds_faci.RowCount() - 1, "GOV_ROOM_NM", ds_faci1.GetColumn(i, "GOV_ROOM_NM"));
+		    ds_faci.SetColumn(ds_faci.RowCount() - 1, "LOT_NUM_UNION", ds_faci1.GetColumn(i, "LOT_NUM_UNION"));
+		    ds_faci.SetColumn(ds_faci.RowCount() - 1, "BLOCK_CD", " ");
+		    ds_faci.SetColumn(ds_faci.RowCount() - 1, "ROAD_FLAG", ds_faci1.GetColumn(i, "ROAD_FLAG"));
+		    ds_faci.SetColumn(ds_faci.RowCount() - 1, "INST_YMD", ds_faci1.GetColumn(i, "INST_YMD"));
+		    ds_faci.SetColumn(ds_faci.RowCount() - 1, "FACI_NUM", ds_faci1.GetColumn(i, "FACI_NUM"));
+		    ds_faci.SetColumn(ds_faci.RowCount() - 1, "CHK", "1");
+		    ds_faci.SetColumn(ds_faci.RowCount() - 1, "TEAM_CD", " ");
+		    ds_faci1.DeleteRow(i);
+		}
+		
+		count = count - 1;
+	}
+}
+
+function grd_faci_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if("CHK" == grd_faci.GetCellProp("body",nCell,"ColId")){
+	
+		var str_BLOCK_CD = trim(ds_faci.GetColumn(nRow, "BLOCK_CD"));
+		
+		if(str_BLOCK_CD != '' && str_BLOCK_CD != null){
+				ds_faci.SetColumn(nRow, "CHK", "1");
+		}
+	}
+}
+
+function cob_Dong_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	if(cob_Dong.Value == '' || cob_Dong.Value == null){
+		edt_Dong.Enable = true;
+	}else{
+		edt_Dong.Text = "";
+		edt_Dong.Enable = false;
+	}
+}
+
+function edt_Dong_OnChanged(obj,strText)
+{
+	if(edt_Dong.Text != '' && edt_Dong.Text != null){
+		cob_Dong.Value = "";
+		cob_Dong.Enable = false;
+	}else{
+		cob_Dong.Enable = true;
+	}
+}
+
+function grd_faci_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	if(nCell==0)
+	{
+		if("CHK" == grd_faci.GetCellProp("body",nCell,"ColId"))
+		{
+				if(grd_faci.GetCellProp("head",0,"Text") == '0'){
+				
+					grd_faci.SetCellProp("head",0,"Text","1");
+					
+					for(var i=0; i<ds_faci.GetRowCount(); i++){
+						
+						var str_Blck = trim(ds_faci.GetColumn(i, "BLOCK_CD"));
+						
+						if(str_Blck == null || str_Blck == ''){
+							ds_faci.SetColumn(i, "CHK", "1");
+						}
+					}
+					
+				}else{
+					grd_faci.SetCellProp("head",0,"Text",'0');		
+					
+					for(var i=0; i<ds_faci.GetRowCount(); i++){
+						
+						var str_Blck = trim(ds_faci.GetColumn(i, "BLOCK_CD"));
+						
+						if(str_Blck == null || str_Blck == ''){
+							ds_faci.SetColumn(i, "CHK", "0");
+						}
+					}
+				}
+	
+		}
+	}
+	else
+	{
+		gfn_SetGridSort(grd_faci,nCell);
+	}
+}
+
+function grd_faci_OnHeadClick1(obj,nCell,nX,nY,nPivotIndex)
+{
+	if("CHK" == grd_faci.GetCellProp("body",nCell,"ColId")){
+		gfn_GridSelChk(obj, "CHK");
+	}
+}
+
+function grd_faci_OnMouseOver(obj,nPosX,nPosY,nRow,nCell,nPivotIndex)
+{
+	if(nCell == '2'){
+		grd_faci.ToolTipText = ds_faci.GetColumn(nRow, "LOT_NUM_UNION");
+	}else{
+		grd_faci.ToolTipText = '';
+	}
+}
+
+function grd_faci1_OnMouseOver(obj,nPosX,nPosY,nRow,nCell,nPivotIndex)
+{
+	if(nCell == '2'){
+		grd_faci1.ToolTipText = ds_faci1.GetColumn(nRow, "LOT_NUM_UNION");
+	}else{
+		grd_faci1.ToolTipText = '';
+	}
+}]]></Script>
+</Window>

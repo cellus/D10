@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1202010020U" Left="8" OnLoadCompleted="D1202010020U_OnLoadCompleted" PidAttrib="7" Title="측정전위&#32;통계_D1202010020U" Top="8" Ver="1.0" Width="600" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_list">
+				<Contents>
+					<colinfo id="MV" size="256" type="STRING"/>
+					<colinfo id="DAY" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="측정전위&#32;통계" Transparent="TRUE" Width="600"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="17"></Button>
+		<Div Height="29" Id="Div0" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="600">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="595" TabOrder="4" Top="68" Type="Rectangle" Width="590"></Shape>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="5" Text="기간" Top="71" Transparent="TRUE" Width="66"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="fromCal" Left="56" OnChanged="fromCal_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="7" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="C2502030010F" Left="146" Style="static" TabOrder="8" Text="~" Top="76" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="toCal" Left="156" OnChanged="toCal_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="6" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<XChart Bottom="395" Height="298" Id="ct01" Left="5" NSeries="2" NValues="5" Right="595" Top="97" Visible="FALSE" Width="590">
+			<_PersistData>&#13;&#10;/6yI0uf230NGWDYA8vJNQ/9oYXJ0RlgsIP9WZXJzaW9uPf82LjIuMTM0Mv8uMCwgQ3VsdP91cmU9bmV1dP9yYWwsIFB1Yv9saWNL&#13;&#10;ZXlUb/9rZW49YTE4N/84ZTIwNTJjMP84ZGNlElNvZv90d2FyZUZYLlr59B/y8wAj8vAgXgR6aw0E8vABAf7/gQUqawUBawUCawYG&#13;&#10;pQSRBdUy8vAQ8vAD8vD7/4d/f4JlAXwCvwKRBQG/BUFyaWFs8vBBpG8P8vIFjgWsBQBGD1h/Ei5IaWdobCkQ/3RTZXR0aW5nZ3MQ&#13;&#10;CZMIRR8AB3YFzwEBAAgCHRMfWAWfLkF4aXOVAX0CAPECOhDy82UWKDjgAAUKRxULRxmeB88f3BmVAcCeA4UNbQ9/A40OjwUCDASb&#13;&#10;H60QDbEfYi90L+cf+R8oCy+dL8UlDloYD44FvAH68vFS+fQuQmFzZZAADxIPJA82DRd3H/wiDf8uSUdhbGxlcl95VHlwZZUBFDIl&#13;&#10;URH6DIk/lTgSlTUTjQdHCABLvwBxM/LwFeQt/Ec/+yMJLkxpbmUPSW5mb9sCvSzTAzohSUKVP5cIAbgagQEWI0V9F4UnD0RlZmEY&#13;&#10;MP8uV2luZG93cw==&#13;&#10;</_PersistData>
+		</XChart>
+		<Static BKColor="user13" Font="돋움,8" Height="20" Id="Static2" Left="5" TabOrder="10" Text="챠트컬러&#32;참조&#32;:&#32;\\10.20.50.111\0000&#32;설계\0000&#32;가이드\2.&#32;디자인가이드\SCG_UI디자인가이드_v080701(최종)" Top="400" Visible="FALSE" Width="585"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1202010020U.xml
+* Form 설명  : 측정전위통계
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 노준배
+* 작성일     : 2009-01-13
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1202010020U_OnLoadCompleted(obj) {
+
+	gfn_LoadForm(obj);
+	
+	fn_D1_Search();
+	
+	fn_initData();	
+}   
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_initData() {
+
+	ct01.ClearData("COD_Values");
+	ct01.ClearData("COD_Colors");
+	ct01.BackColor="#e5eaeb";
+
+	fn_Chart_Display();	
+}
+
+/********************************************************************************
+* 기      능   :  공통 조회 클릭시 조회 업무 수행 
+********************************************************************************/
+function fn_D1_Search() {
+	
+	if (substr(FACI_NUM, 0, 2) == 'TB') {
+	
+		var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1202010020U-service" + "&FACI_NUM=" + FACI_NUM
+							   + "&PATROL_YMD1=" + fromCal.value + "&PATROL_YMD2=" + toCal.value;
+		var InputDsList     = "";
+		var OutputDsList    = "ds_list=ds_list";
+		var Argument        = "find";
+		
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					);   
+					  
+	} else if (substr(FACI_NUM, 0, 2) == 'RE' || substr(FACI_NUM, 0, 2) == 'DA') {
+		var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1202010020U-service" + "&FACI_NUM=" + FACI_NUM
+							   + "&PATROL_YMD1=" + fromCal.value + "&PATROL_YMD2=" + toCal.value;
+		var InputDsList     = "";
+		var OutputDsList    = "ds_list=ds_list";
+		var Argument        = "find1";
+		
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					); 
+	}						   				
+}	
+
+/********************************************************************************
+* 기      능   :  공통 조회 클릭시 조회 업무 수행 
+********************************************************************************/
+function fn_CommonSearch() {	
+
+	fn_D1_Search(); 
+	   
+	fn_Chart_Display();	
+}
+
+function fn_Chart_Display() {
+
+	ct01.OpenData("COD_Values", 2, ds_list.RowCount()); // 데이타를 Chart에 뿌려주는 메소드 
+	ct01.OpenData("COD_Colors", 2, ds_list.RowCount()); // 데이타를 Chart에 뿌려주는 메소드
+	//ct01.AxisY.Grid = 1;		//가로 그리드선 보여줄지 여부 (1, 0)
+	
+	ct01.AxisY.LabelsFormat.Decimals = 0; // 소수점이하 자리수 표시 1: 첫째자리, 2: 둘째자리 3: 셋째자리	
+	ct01.AxisY.LabelsFormat.Format = "AxisFormat_Number";
+	
+	ct01.AxisY2.LabelsFormat.Decimals = 1;
+	ct01.AxisY2.LabelsFormat.Format = "AxisFormat_Number";
+	ct01.SerLegBoxObj.Docked = "Docked_Top"; // 범례위치 고정
+        
+	ct01.Series[0].Gallery = "Gallery_Bar"; // 1: Line Chart, 2:  Bar Chart 
+	ct01.Series[0].cylsides = 30;
+	ct01.SerLeg(0) = "측정전위";
+    ct01.Volume = 40; // 그래프의 넓이
+    
+	ct01.Series[1].Gallery = "Gallery_Lines"; // 1: Line Chart, 2:  Bar Chart 
+	ct01.Series[1].MarkerShape = "MarkerShape_Circle";
+	ct01.SerLeg(1) = "측정전위";
+	
+	ct01.Series[0].Stacked = "Stacked_Normal";
+	ct01.Series[1].Stacked = "Stacked_Normal";
+
+	ct01.Series[0].Stacked = true;
+	ct01.Series[1].Stacked = true;
+	
+	// 데이터및 라벨 표시 
+	for(i = 0; i < ds_list.RowCount(); i++) {
+	
+		ct01.Axis[2].Label(i) = toString(ds_list.GetColumn(i, "DAY"), "@@@@.@@.@@");
+
+		ct01.Value(0, i) = ds_list.GetColumn(i, "MV");
+		ct01.Value(1, i) = ds_list.GetColumn(i, "MV");
+		
+		ct01.Series[3].YAxis = true;
+	}
+	
+	ct01.AxisX.Title.Text = "날짜"; 
+	
+	ct01.AxisY.Title.Text = "전위값"; 
+	
+	// CloseData
+	ct01.CloseData("COD_Values");
+	ct01.CloseData("COD_Colors");
+	
+	ct01.Visible = true;
+}
+
+function fromCal_OnChanged(obj,strOldText,strNewText)
+{
+	fn_DateCheck(fromCal, toCal);
+}
+
+function toCal_OnChanged(obj,strOldText,strNewText)
+{
+	fn_DateCheck(fromCal, toCal);
+}
+]]></Script>
+</Window>

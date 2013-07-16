@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="780" Id="D1201010011F" Left="8" OnLoadCompleted="D1302010010F_OnLoadCompleted" PidAttrib="7" Title="분기별&#32;순찰계획&#32;등록_D1201010011F" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_bungi">
+				<Contents>
+					<colinfo id="CD_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CD_NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CD_ID>1</CD_ID>
+						<CD_NAME>1분기</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>2</CD_ID>
+						<CD_NAME>2분기</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>3</CD_ID>
+						<CD_NAME>3분기</CD_NAME>
+					</record>
+					<record>
+						<CD_ID>4</CD_ID>
+						<CD_NAME>4분기</CD_NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list1">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROUTE" size="256" summ="default" type="STRING"/>
+					<colinfo id="TABLET_COMM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="WEEK" size="256" summ="default" type="STRING"/>
+					<colinfo id="YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list2">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROUTE" size="256" summ="default" type="STRING"/>
+					<colinfo id="TABLET_COMM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="WEEK" size="256" summ="default" type="STRING"/>
+					<colinfo id="YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list3">
+				<Contents>
+					<colinfo id="CHK_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_QUARTER" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROUTE" size="256" summ="default" type="STRING"/>
+					<colinfo id="TABLET_COMM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="WEEK" size="256" summ="default" type="STRING"/>
+					<colinfo id="YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_allList"></Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1265" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="6" Top="30" Type="RoundRect" Width="1260"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1260" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="7" Top="35" Type="Rectangle" Width="1250"></Shape>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search" TabOrder="1" Text="지사" Top="39" Width="54"></Image>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="338" LeftMargin="12" Style="blt_search" TabOrder="2" Text="팀" Top="39" Width="45"></Image>
+		<Shape BKColor="#6cbae1" Bottom="98" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="420" TabOrder="4" Top="95" Type="Rectangle" Width="415"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="765" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="667" Id="Grid0" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="423" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="415">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="45"/>
+						<col width="25"/>
+						<col width="72"/>
+						<col width="217"/>
+					</columns>
+					<head>
+						<cell col="0" colspan="4" display="text" text="1월"/>
+						<cell col="0" display="text" row="1" text="요일"/>
+						<cell col="1" display="text" row="1" text="일"/>
+						<cell col="2" display="text" row="1" text="일자"/>
+						<cell col="3" display="text" row="1" text="시설물"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="WEEK" display="text"/>
+						<cell align="right" col="1" colid="DAY" display="text"/>
+						<cell col="2" colid="YMD" display="date"/>
+						<cell col="3" colid="FACI_NUM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="18" Id="Image10" ImageID="blt" Left="768" LeftMargin="12" Style="blt_search" TabOrder="5" Text="분기" Top="39" Width="59"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="8" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1260">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="57" OnChanged="cob_BranchCd_OnChanged" Style="combo" TabOrder="9" Top="39" Width="105"></Combo>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="664" LeftMargin="12" Style="blt_search" TabOrder="10" Text="년도" Top="39" Width="50"></Image>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="172" LeftMargin="12" Style="blt_search" TabOrder="11" Text="시/구" Top="39" Width="54"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo" Left="223" Style="combo" TabOrder="12" Top="39" Width="105"></Combo>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="KITEM" Height="18" Id="cmb_team" InnerDataset="ds_Team" Left="364" Style="combo" TabOrder="13" Top="39" Width="137"></Combo>
+		<Combo Border="Flat" Height="18" Id="cmb_block" Left="550" Style="combo" TabOrder="15" Top="39" Width="105"></Combo>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="510" LeftMargin="12" Style="blt_search" TabOrder="14" Text="구간" Top="39" Width="45"></Image>
+		<Spin Border="Flat" Height="18" Id="year" Left="704" Style="spin" TabOrder="16" Text="1" Top="39" Width="54"></Spin>
+		<Combo Border="Flat" CodeColumn="CD_ID" DataColumn="CD_NAME" Height="18" Id="cmb_bungi" InnerDataset="ds_bungi" Left="806" OnChanged="cmb_bungi_OnChanged" Style="combo" TabOrder="17" Top="39" Width="80"></Combo>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button243" ImageID="btn_5_Amendment" Left="922" LeftMargin="21" OnClick="Button243_OnClick" Style="button" TabOrder="18" Text="시스템등록" Top="74" Visible="FALSE" Width="87"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button32" ImageID="btn_5_excel" Left="1172" LeftMargin="21" Style="button" TabOrder="19" Text="EXCEL등록" Top="74" Width="93"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_bungi" ImageID="btn_10_data" Left="1013" LeftMargin="21" OnClick="btn_bungi_OnClick" Style="button" TabOrder="20" Text="전&#32;분기데이타&#32;가져오기" Top="74" Width="155"></Button>
+		<Shape BKColor="#6cbae1" Bottom="98" Height="3" Id="Shape3" Left="425" LineWidth="0" Right="840" TabOrder="22" Top="95" Type="Rectangle" Width="415"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="765" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="667" Id="Grid1" InputPanel="FALSE" Left="425" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="840" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="21" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="415">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="45"/>
+						<col width="25"/>
+						<col width="92"/>
+						<col width="217"/>
+					</columns>
+					<head>
+						<cell col="0" colspan="4" display="text" text="2월"/>
+						<cell col="0" display="text" row="1" text="요일"/>
+						<cell col="1" display="text" row="1" text="일"/>
+						<cell col="2" display="text" row="1" text="일자"/>
+						<cell col="3" display="text" row="1" text="시설물"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="WEEK" display="text"/>
+						<cell align="right" col="1" colid="DAY" display="text"/>
+						<cell col="2" colid="YMD" display="date"/>
+						<cell col="3" colid="FACI_NUM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="#6cbae1" Bottom="98" Height="3" Id="Shape4" Left="845" LineWidth="0" Right="1265" TabOrder="24" Top="95" Type="Rectangle" Width="420"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="765" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="667" Id="Grid2" InputPanel="FALSE" Left="845" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1265" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="23" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="420">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="45"/>
+						<col width="25"/>
+						<col width="59"/>
+						<col width="217"/>
+					</columns>
+					<head>
+						<cell col="0" colspan="4" display="text" text="3월"/>
+						<cell col="0" display="text" row="1" text="요일"/>
+						<cell col="1" display="text" row="1" text="일"/>
+						<cell col="2" display="text" row="1" text="일자"/>
+						<cell col="3" display="text" row="1" text="시설물"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="WEEK" display="text"/>
+						<cell align="right" col="1" colid="DAY" display="text"/>
+						<cell col="2" colid="YMD" display="date"/>
+						<cell col="3" colid="FACI_NUM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_list" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="920" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="144" Id="Grid3" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1264" RowHeight="20" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="25" TabStop="true" Top="776" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1256">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="91"/>
+						<col width="115"/>
+						<col width="118"/>
+						<col width="131"/>
+						<col width="151"/>
+						<col width="134"/>
+						<col width="125"/>
+						<col width="162"/>
+						<col width="123"/>
+						<col width="100"/>
+						<col width="94"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="점검년도"/>
+						<cell col="1" display="text" text="점검분기"/>
+						<cell col="2" display="text" text="구간코드"/>
+						<cell col="3" display="text" text="시설물번호"/>
+						<cell col="4" display="text" text="계획일자"/>
+						<cell col="5" display="text" text="지사코드"/>
+						<cell col="6" display="text" text="팀코드"/>
+						<cell col="7" display="text" text="조코드"/>
+						<cell col="8" display="text" text="순로"/>
+						<cell col="9" display="text" text="타블릿통신구분"/>
+						<cell col="10" display="text" text="점검구분"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CHK_YEAR" display="text"/>
+						<cell col="1" colid="CHK_QUARTER" display="text"/>
+						<cell col="2" colid="BLOCK_CD" display="text"/>
+						<cell col="3" colid="FACI_NUM" display="text"/>
+						<cell col="4" colid="PLAN_YMD" display="text"/>
+						<cell col="5" colid="BRANCH_CD" display="text"/>
+						<cell col="6" colid="TEAM_CD" display="text"/>
+						<cell col="7" colid="SHIFT_WORK_CD" display="text"/>
+						<cell col="8" colid="ROUTE" display="text"/>
+						<cell col="9" colid="TABLET_COMM_FLAG" display="text"/>
+						<cell col="10" colid="CHK_FLAG" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1201010011F
+* Form 설명  : 분기별 순찰계획 등록
+* 시스템 명  : 안전공급
+* 작성자     : 노준배 
+* 작성일     : 2008-03-28
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+
+//------------------------------------------------------------------------------- 
+// 함수명: D1302010010F_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1302010010F_OnLoadCompleted(obj) {
+
+	gfn_LoadForm(obj);
+	
+	fn_initCode();
+	
+	cob_BranchCd_OnChanged();
+	cob_ZipNo.Index = 0;
+	
+	//cmb_bungi_OnChanged();
+}
+
+/********************************************************************************
+* 기      능   :  콤보박스 셋팅
+********************************************************************************/
+function fn_initCode() {
+    
+    // 콤보박스를 가져오는 공통함수 호출
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	
+	cmb_bungi.value = "1";
+	cob_BranchCd.Index = 0;
+		
+	year.Text = substr(today(), 0, 4);
+	year.value = substr(today(), 0, 4);
+	
+	if (substr(today(), 4, 2) == "01" || substr(today(), 4, 2) == "02" || substr(today(), 4, 2) == "03") {
+	    cmb_bungi.Index = 0;
+	} else if (substr(today(), 4, 2) == "04" || substr(today(), 4, 2) == "05" || substr(today(), 4, 2) == "06") {
+	    cmb_bungi.Index = 1;
+	} else if (substr(today(), 4, 2) == "07" || substr(today(), 4, 2) == "08" || substr(today(), 4, 2) == "09") {
+	    cmb_bungi.Index = 2;
+	} else if (substr(today(), 4, 2) == "10" || substr(today(), 4, 2) == "11" || substr(today(), 4, 2) == "12") {
+	    cmb_bungi.Index = 3;
+	}
+	
+	 var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1201010011F-service";
+		var InputDsList     = "";
+		var OutputDsList    = "ds_allList=ds_allList";
+		var Argument        = "find5";
+		
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					);
+}
+
+
+/********************************************************************************
+* 기      능   :  그리드 셋팅
+********************************************************************************/
+function cmb_bungi_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+   
+					
+    if(cmb_bungi.value == "1") {
+        
+        Grid0.SetCellProp("head", 0, "text", "1월");
+        Grid1.SetCellProp("head", 0, "text", "2월");
+        Grid2.SetCellProp("head", 0, "text", "3월");
+        
+        ds_list1.ClearData();
+        ds_list2.ClearData();
+        ds_list3.ClearData();
+        
+        for (var i = 1; i < 32; i++) {
+            
+            ds_list1.AddRow();
+            ds_list1.SetColumn(i - 1, "DAY", i);
+            
+            if (i < 10) {
+                var nday = GetDay(substr(today(), 0, 4) + "01" + "0" + i);
+                var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+	            ds_list1.SetColumn(i - 1, "WEEK", strDay);
+	            ds_list1.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "01" + "0" + i);
+	          	            
+	        } else if (i >= 10) {
+	             var nday = GetDay(substr(today(), 0, 4) + "01" + i);
+                 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list1.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list1.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "01" + i);
+	        }
+	          
+	        for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list1.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list1.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }	  
+	    }     
+	    
+	    
+        Grid0.BindDataset = "ds_list1";
+        
+        if (substr(today(), 0, 4) % 4 = 0) {
+            for (var i = 1; i < 30; i++) {
+				
+				ds_list2.AddRow();
+				ds_list2.SetColumn(i - 1, "DAY", i);
+				
+				if (i < 10) {
+					var nday = GetDay(substr(today(), 0, 4) + "02" + "0" + i);
+					var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+					ds_list2.SetColumn(i - 1, "WEEK", strDay);
+					ds_list2.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "02" + "0" + i);
+				} else if (i >= 10) {
+					var nday = GetDay(substr(today(), 0, 4) + "02" + i);
+			        var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+		    		ds_list2.SetColumn(i - 1, "WEEK", strDay);
+		    		ds_list2.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "02" + i);
+				}  
+			}	
+			
+			for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list2.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list2.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }	  
+			
+        } else {
+			
+			for (var i = 1; i < 29; i++) {
+				
+				ds_list2.AddRow();
+				ds_list2.SetColumn(i - 1, "DAY", i);
+				
+				if (i < 10) {				
+					var nday = GetDay(substr(today(), 0, 4) + "02" + "0" + i);
+					var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+					ds_list2.SetColumn(i - 1, "WEEK", strDay);
+					ds_list2.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "02" + "0" + i);
+				} else if (i >= 10) {
+					var nday = GetDay(substr(today(), 0, 4) + "02" + i);
+					var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+		   			ds_list2.SetColumn(i - 1, "WEEK", strDay);
+		   			ds_list2.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "02" + i);
+				}  
+			}	
+			
+			for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list2.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list2.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }	
+	    }      
+        Grid1.BindDataset = "ds_list2";
+        
+        for (var i = 1; i < 32; i++) {
+            
+            ds_list3.AddRow();
+            ds_list3.SetColumn(i - 1, "DAY", i);
+            
+            if (i < 10) {            
+                var nday = GetDay(substr(today(), 0, 4) + "03" + "0" + i);
+                var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+	            ds_list3.SetColumn(i - 1, "WEEK", strDay);
+	            ds_list3.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "03" + "0" + i);
+	        } else if (i >= 10) {	        
+	             var nday = GetDay(substr(today(), 0, 4) + "03" + i);
+                 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list3.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list3.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "03" + i);
+	        }  
+	        
+	        for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list3.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list3.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }	
+	    }  
+        Grid2.BindDataset = "ds_list3";
+        
+    } else if(cmb_bungi.value == "2") {
+        
+        Grid0.SetCellProp("head", 0, "text", "4월");
+        Grid1.SetCellProp("head", 0, "text", "5월");
+        Grid2.SetCellProp("head", 0, "text", "6월");
+    
+        ds_list1.ClearData();
+        ds_list2.ClearData();
+        ds_list3.ClearData();
+        
+        for (var i = 1; i < 31; i++) {
+            
+            ds_list1.AddRow();
+            ds_list1.SetColumn(i - 1, "DAY", i);
+            
+            if (i < 10) {            
+                var nday = GetDay(substr(today(), 0, 4) + "04" + "0" + i);
+                var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+	            ds_list1.SetColumn(i - 1, "WEEK", strDay);
+	            ds_list1.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "04" + "0" + i);
+            } else if (i >= 10) {
+	             var nday = GetDay(substr(today(), 0, 4) + "04" + i);
+                 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list1.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list1.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "04" + i);
+	        }  
+	        
+	        for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list1.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list1.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }	
+	    }    
+        Grid0.BindDataset = "ds_list1";
+               
+		for (var i = 1; i < 32; i++) {
+			
+			ds_list2.AddRow();
+			ds_list2.SetColumn(i - 1, "DAY", i);
+			
+			if (i < 10) {			
+				var nday = GetDay(substr(today(), 0, 4) + "05" + "0" + i);
+				var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+				ds_list2.SetColumn(i - 1, "WEEK", strDay);
+				ds_list2.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "05" + "0" + i);
+			} else if (i >= 10) {
+				 var nday = GetDay(substr(today(), 0, 4) + "05" + i);
+				 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list2.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list2.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "05" + i);
+			}  
+			
+			for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list2.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list2.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }	
+		}	
+        Grid1.BindDataset = "ds_list2";
+        
+        for (var i = 1; i < 31; i++) {
+            
+            ds_list3.AddRow();
+            ds_list3.SetColumn(i - 1, "DAY", i);
+            
+            if (i < 10) {            
+                var nday = GetDay(substr(today(), 0, 4) + "06" + "0" + i);
+                var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+	            ds_list3.SetColumn(i - 1, "WEEK", strDay);
+	            ds_list3.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "06" + "0" + i);
+	        } else if (i >= 10) {
+	             var nday = GetDay(substr(today(), 0, 4) + "06" + i);
+                 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list3.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list3.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "06" + i);
+	        }  
+	        
+	        for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list3.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list3.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }	
+	    }      
+	    Grid2.BindDataset = "ds_list3";
+        
+    } else if(cmb_bungi.value == "3") {
+        
+        Grid0.SetCellProp("head", 0, "text", "7월");
+        Grid1.SetCellProp("head", 0, "text", "8월");
+        Grid2.SetCellProp("head", 0, "text", "9월");
+        
+        ds_list1.ClearData();
+        ds_list2.ClearData();
+        ds_list3.ClearData();
+        
+        for (var i = 1; i < 32; i++) {
+            
+            ds_list1.AddRow();
+            ds_list1.SetColumn(i - 1, "DAY", i);
+            
+            if (i < 10) {            
+                var nday = GetDay(substr(today(), 0, 4) + "07" + "0" + i);
+                var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+	            ds_list1.SetColumn(i - 1, "WEEK", strDay);
+	            ds_list1.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "07" + "0" + i);
+            } else if (i >= 10) {
+	             var nday = GetDay(substr(today(), 0, 4) + "07" + i);
+                 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list1.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list1.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "07" + i);
+	        }  
+	        
+	        for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list1.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list1.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }	
+	    }    
+        Grid0.BindDataset = "ds_list1";
+               
+		for (var i = 1; i < 32; i++) {
+			
+			ds_list2.AddRow();
+			ds_list2.SetColumn(i - 1, "DAY", i);
+			
+			if (i < 10) {			
+				var nday = GetDay(substr(today(), 0, 4) + "08" + "0" + i);
+				var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+				ds_list2.SetColumn(i - 1, "WEEK", strDay);
+				ds_list2.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "08" + "0" + i);
+			} else if (i >= 10) {
+				 var nday = GetDay(substr(today(), 0, 4) + "08" + i);
+				 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list2.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list2.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "08" + i);
+			} 
+			 
+			 for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list2.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list2.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }
+		}	
+        Grid1.BindDataset = "ds_list2";
+        
+        for (var i = 1; i < 31; i++) {
+            
+            ds_list3.AddRow();
+            ds_list3.SetColumn(i - 1, "DAY", i);
+            
+            if (i < 10) {            
+                var nday = GetDay(substr(today(), 0, 4) + "09" + "0" + i);
+                var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+	            ds_list3.SetColumn(i - 1, "WEEK", strDay);
+	            ds_list3.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "09" + "0" + i);
+	        } else if (i >= 10) {
+	             var nday = GetDay(substr(today(), 0, 4) + "09" + i);
+                 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list3.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list3.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "09" + i);
+	        }  
+	        
+	        for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list3.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list3.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }
+	    }      
+	    Grid2.BindDataset = "ds_list3";
+	    
+    } else if(cmb_bungi.value == "4") {
+        
+        Grid0.SetCellProp("head", 0, "text", "10월");
+        Grid1.SetCellProp("head", 0, "text", "11월");
+        Grid2.SetCellProp("head", 0, "text", "12월");
+        
+        ds_list1.ClearData();
+        ds_list2.ClearData();
+        ds_list3.ClearData();
+        
+        for (var i = 1; i < 32; i++) {
+            
+            ds_list1.AddRow();
+            ds_list1.SetColumn(i - 1, "DAY", i);
+            
+            if (i < 10) {            
+                var nday = GetDay(substr(today(), 0, 4) + "10" + "0" + i);
+                var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+	            ds_list1.SetColumn(i - 1, "WEEK", strDay);
+	            ds_list1.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "10" + "0" + i);
+            } else if (i >= 10) {
+	             var nday = GetDay(substr(today(), 0, 4) + "10" + i);
+                 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list1.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list1.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "10" + i);
+	        }  
+	        
+	        for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list1.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list1.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }
+	    }    
+        Grid0.BindDataset = "ds_list1";
+               
+		for (var i = 1; i < 31; i++) {
+			
+			ds_list2.AddRow();
+			ds_list2.SetColumn(i - 1, "DAY", i);
+			
+			if (i < 10) {			
+				var nday = GetDay(substr(today(), 0, 4) + "11" + "0" + i);
+				var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+				ds_list2.SetColumn(i - 1, "WEEK", strDay);
+				ds_list2.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "11" + "0" + i);
+			} else if (i >= 10) {
+				 var nday = GetDay(substr(today(), 0, 4) + "11" + i);
+				 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list2.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list2.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "10" + i);
+			}  
+			
+			for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list2.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list2.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }
+		}	
+        Grid1.BindDataset = "ds_list2";
+        
+        for (var i = 1; i < 32; i++) {
+            
+            ds_list3.AddRow();
+            ds_list3.SetColumn(i - 1, "DAY", i);
+            
+            if (i < 10) {            
+                var nday = GetDay(substr(today(), 0, 4) + "12" + "0" + i);
+                var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+	            ds_list3.SetColumn(i - 1, "WEEK", strDay);
+	            ds_list3.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "12" + "0" + i);
+	        } else if (i >= 10) {
+	             var nday = GetDay(substr(today(), 0, 4) + "12" + i);
+                 var strDay = Decode( nDay, 0, "일요일", 1, "월요일", 2, "화요일", 3, "수요일", 4, "목요일", 5, "금요일", 6, "토요일" );
+                 ds_list3.SetColumn(i - 1, "WEEK", strDay);
+                 ds_list3.SetColumn(i - 1, "YMD", substr(today(), 0, 4) + "12"+ i);
+	        }  
+	        
+	        for (var j = 0; ds_allList.RowCount(); j++) {
+	                
+	            if (ds_allList.GetColumn(j, "PLAN_YMD") == ds_list3.GetColumn(i - 1, "YMD")) {
+	                
+	                ds_list3.SetColumn(i - 1, "FACI_NUM", ds_allList.GetColumn(j, "FACI_NUM"));    
+	            }   	
+	        }
+	    }      
+	    Grid2.BindDataset = "ds_list3";
+    }
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    // 지사별 구 콤보 셋팅 시
+    fn_Part_SetComboBox_Comcode("1", cob_BranchCd.value, fn_setDsObject_Comcode("1", "cob_ZipNo"));
+    cob_ZipNo.Index = 0;
+    
+    gfn_D1_SetComboBox_Teamcd("ds_Team",cob_BranchCd);
+    cmb_team.Index = 0;
+}  
+
+/********************************************************************************
+* 기      능   :  전분기 데이터 가져오기
+********************************************************************************/
+function btn_bungi_OnClick(obj) {
+	
+	var month = substr(today(),4,2);
+	
+	if (month == "01" || month == "02" || month == "03") {
+	
+		var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1201010011F-service";
+		var InputDsList     = "";
+		var OutputDsList    = "ds_list=ds_list";
+		var Argument        = "find1";
+		
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					);
+		for (var i = 0; i < ds_list.RowCount(); i++) {			
+		    if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "10") {
+		      
+		    } else if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "11") {
+		      
+		    } else if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "12") {
+		        
+		    } 
+		}    			
+					
+	} else if (month == "04" || month == "05" || month == "06") {
+	    
+	    var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1201010011F-service";
+		var InputDsList     = "";
+		var OutputDsList    = "ds_list=ds_list";
+		var Argument        = "find2";
+		
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					);
+					
+		for (var i = 0; i < ds_list.RowCount(); i++) {			
+		    if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "01") {
+		      
+		    } else if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "02") {
+		        // alert(ds_list.GetColumn(i, "PLAN_YMD"));  
+		        // for (var j = 0; ds_list.RowCount(); j++) {
+		          
+		        // }
+		    } else if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "03") {
+		         alert(ds_list.GetColumn(i, "PLAN_YMD"));  
+		    } 
+		}    				
+					
+	} else if (month == "07" || month == "08" || month == "09") {
+	    
+	    var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1201010011F-service";
+		var InputDsList     = "";
+		var OutputDsList    = "ds_list=ds_list";
+		var Argument        = "find3";
+		
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					);
+		for (var i = 0; i < ds_list.RowCount(); i++) {			
+		    if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "04") {
+		      
+		    } else if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "05") {
+		      
+		    } else if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "06") {
+		        
+		    } 
+		} 			
+					
+	} else if (month == "10" || month == "11" || month == "12") {
+	    
+	    var ServiceId       = "";
+		var ServicePart     = "D10";
+		var Url             = "handle.do?ServiceName=D1201010011F-service";
+		var InputDsList     = "";
+		var OutputDsList    = "ds_list=ds_list";
+		var Argument        = "find4";
+		
+		gfn_SyncCall( // 동기화 가능한 펑션
+					 ServiceId
+					,ServicePart
+					,Url
+					,InputDsList
+					,OutputDsList
+					,Argument
+					);
+		for (var i = 0; i < ds_list.RowCount(); i++) {			
+		    if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "07") {
+		      
+		    } else if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "08") {
+		      
+		    } else if (substr(ds_list.GetColumn(i, "PLAN_YMD"),4,2) == "09") {
+		        
+		    } 
+		} 			
+	}	
+						              
+	var SearchCondition= "";
+
+    SearchCondition = SearchCondition + "지사 :" + RPad(cob_BranchCd.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo.Text," ",20);
+    SearchCondition = SearchCondition + "팀 :" + RPad(cmb_team.Text," ",20);
+    SearchCondition = SearchCondition + "구간 :" + RPad(cmb_block.Text," ",20);
+    SearchCondition = SearchCondition + "년도 :" + RPad(year.Text," ",20);
+    SearchCondition = SearchCondition + "분기 :" + RPad(cmb_bungi.Text," ",20);
+	//gfn_ExportExcel(year.Text + "년 " + cmb_bungi.Text + " 순찰계획", 6, SearchCondition, "Grid3"); 				              
+}
+
+function fn_CommonSearch(){	
+	
+    
+}]]></Script>
+</Window>

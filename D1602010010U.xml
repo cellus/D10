@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1602010010U" Left="8" OnLoadCompleted="D1602010010U_OnLoadCompleted" PidAttrib="7" Title="정비보수자재조회_D1602010010U" Top="8" Ver="1.0" Width="660" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="MATERIAL_CD" size="256" type="STRING"/>
+					<colinfo id="MATERIAL_NM" size="256" type="STRING"/>
+					<colinfo id="MATERIAL_STD" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Radio">
+				<Contents>
+					<colinfo id="name" size="256" type="STRING"/>
+					<colinfo id="value" size="256" type="STRING"/>
+					<record>
+						<name>자재코드</name>
+						<value>0</value>
+					</record>
+					<record>
+						<name>자재명</name>
+						<value>1</value>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="정비보수자재조회" Transparent="TRUE" Width="660"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="395" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="297" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="655" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="650">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="400"/>
+						<col width="65"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="normal" text="자재코드"/>
+						<cell bkcolor="user11" col="1" display="text" text="자재명"/>
+						<cell bkcolor="user11" col="2" display="text" text="규격"/>
+						<cell bkcolor="user11" col="3" display="text" text="재고수량" TrimType="Left"/>
+					</head>
+					<body>
+						<cell col="0" colid="MATERIAL_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="MATERIAL_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="MATERIAL_STD" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="98" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="655" TabOrder="3" Top="95" Type="Rectangle" Width="650"></Shape>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="655" TabOrder="4" Top="68" Type="Rectangle" Width="650"></Shape>
+		<Image Align="Left" Height="5" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search_1" TabOrder="5" Top="77" Transparent="TRUE" Width="30"></Image>
+		<Div Height="29" Id="Div0" Left="139" TabOrder="6" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="516">
+			<Contents></Contents>
+		</Div>
+		<Edit Border="Flat" Height="18" Id="edt_Material" ImeMode="none" Left="152" Style="edit_Indis" TabOrder="7" Top="71" Width="129"></Edit>
+		<Radio BKColor="user9" Border="None" CodeColumn="value" Color="user17" ColumnCount="2" DataColumn="name" Height="13" Id="Radio" INDEX="0" InnerDataset="ds_Radio" Left="24" OnClick="Radio_OnClick" Style="radio" TabOrder="8" Top="75" Width="125">
+			<Contents>
+				<Layout Height="20" left="0" text="명" width="80"/>
+				<Layout Height="20" left="80" text="코드" width="80"/>
+			</Contents>
+		</Radio>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1602010010U.xml
+* Form 설명  : 정비보수 자재조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2008-12-14
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+//---------------------------------------------------------
+function D1602010010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);	
+	//gfn_SetButton("0001111");
+}
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	if(radio.Value == 0){
+		fn_D1_FindList();
+		if(ds_Multi.GetRowCount() == 0)
+		{
+			alert(gfn_GetMessage("M000022","%AAA%","결과가"));
+			return;
+		}	
+	}else{
+		fn_D1_FindList_s();
+		if(ds_Multi.GetRowCount() == 0)
+		{
+			alert(gfn_GetMessage("M000022","%AAA%","결과가"));
+			return;
+		}	
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명     : fn_D1_FindList()
+// 설명       :  정비보수 자재를 조회한다.
+// arguments
+// return 내용: 
+//------------------------------------------------------------------------------- 
+function fn_D1_FindList()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiMaterRegisMgr-service&search1=1"
+			   + "&MATERIAL_CD=" +edt_Material.Text
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "search1";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ds_Multi.GetRowCount()==0) trace("조회결과가 없습니다.");
+	trace(ds_Multi.SaveXML());
+}
+
+
+//자재명 검색
+function fn_D1_FindList_s()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepaiMaterRegisMgr-service&search2=1"
+			   + "&MATERIAL_NM=" +edt_Material.Text
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "findGo";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ds_Multi.GetRowCount()==0) trace("조회결과가 없습니다.");
+	trace(ds_Multi.SaveXML());
+}
+
+function Radio_OnClick(obj)
+{
+	if(Radio.Value == 0)
+	{
+		edt_Material.MaxLength = 11;
+		edt_Material.Text = "";
+	}else{
+		edt_Material.MaxLength = 50;
+		edt_Material.Text = "";
+	}
+}]]></Script>
+</Window>

@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="936" Id="D1205010050F" Left="8" OnLoadCompleted="D1205010050F_OnLoadCompleted" PidAttrib="7" Title="배관코팅저항&#32;조회_D1205010050F" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents></Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchTop">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECTIFIER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DRAINAGE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_YMD_TO" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_ELECT_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_ELECT_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_SQUARE" size="256" summ="default" type="STRING"/>
+					<colinfo id="AC_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="AC_FREQUENCY" size="256" summ="default" type="STRING"/>
+					<colinfo id="SOIL_RESIS" size="256" summ="default" type="STRING"/>
+					<colinfo id="POLAR_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEED_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_DENSITY" size="256" summ="default" type="STRING"/>
+					<colinfo id="COATING_RESIS" size="256" summ="default" type="STRING"/>
+					<colinfo id="COATING_RESIS_VALUA" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_DRA_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Sector">
+				<Contents>
+					<colinfo id="SECTOR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_ELECT_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_ELECT_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_SQUARE" size="256" summ="default" type="STRING"/>
+					<colinfo id="AC_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="AC_FREQUENCY" size="256" summ="default" type="STRING"/>
+					<colinfo id="SOIL_RESIS" size="256" summ="default" type="STRING"/>
+					<colinfo id="POLAR_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEED_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_DENSITY" size="256" summ="default" type="STRING"/>
+					<colinfo id="COATING_RESIS" size="256" summ="default" type="STRING"/>
+					<colinfo id="COATING_RESIS_VALUA" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_DRA_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search_Sector">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" GroupKey="SECTOR_NUM" Id="ds_Multi_Point">
+				<Contents>
+					<colinfo id="SECTOR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECTOR_SUB_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_ELECT_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_ELECT_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_SQUARE" size="256" summ="default" type="STRING"/>
+					<colinfo id="AC_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="AC_FREQUENCY" size="256" summ="default" type="STRING"/>
+					<colinfo id="SOIL_RESIS" size="256" summ="default" type="STRING"/>
+					<colinfo id="POLAR_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEED_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_DENSITY" size="256" summ="default" type="STRING"/>
+					<colinfo id="COATING_RESIS" size="256" summ="default" type="STRING"/>
+					<colinfo id="COATING_RESIS_VALUA" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORDER_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_DRA_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" GroupKey="SECTOR_NUM" Id="ds_Multi_ExcelPoint">
+				<Contents>
+					<colinfo id="SECTOR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECTOR_SUB_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_ELECT_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPERAT_ELECT_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_ON" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_OFF" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_SQUARE" size="256" summ="default" type="STRING"/>
+					<colinfo id="AC_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="AC_FREQUENCY" size="256" summ="default" type="STRING"/>
+					<colinfo id="SOIL_RESIS" size="256" summ="default" type="STRING"/>
+					<colinfo id="POLAR_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEED_ELECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_DENSITY" size="256" summ="default" type="STRING"/>
+					<colinfo id="COATING_RESIS" size="256" summ="default" type="STRING"/>
+					<colinfo id="COATING_RESIS_VALUA" size="256" summ="default" type="STRING"/>
+					<colinfo id="RNUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_DRA_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search_ExcelPoint">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INPUT_YMD_TO" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="8" Id="Image4" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="1" TabStop="FALSE" Text="영역전체&#32;평균&#32;배관&#32;코팅&#32;저항" Top="116" Width="190"></Image>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="2" TabStop="FALSE" Text="섹터별&#32;배관&#32;코팅저항" Top="384" Width="140"></Image>
+		<Image Align="Left" Height="8" Id="Image11" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="3" TabStop="FALSE" Text="측정&#32;포인트별&#32;측정데이터" Top="665" Width="176"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Multi" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="346" ColSelect="TRUE" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="216" Id="grd_Mainter" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnCellClick="grd_Mainter_OnCellClick" Right="1256" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="4" TabStop="FALSE" Top="130" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1248">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="30"/>
+						<col fix="left" width="80"/>
+						<col width="83"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="120"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="81"/>
+						<col width="85"/>
+						<col width="90"/>
+						<col width="105"/>
+						<col width="94"/>
+						<col width="82"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="112"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="NO"/>
+						<cell col="1" display="text" rowspan="2" text="정배류기&#32;번호"/>
+						<cell col="2" display="text" rowspan="2" text="정배류기&#32;명"/>
+						<cell col="3" display="text" rowspan="2" text="점검일자"/>
+						<cell col="4" colspan="2" display="text" text="출력전류(mA)"/>
+						<cell col="6" colspan="2" display="text" text="평균전위(mV)"/>
+						<cell col="8" display="text" rowspan="2" text="분극량(mV)"/>
+						<cell col="9" display="text" rowspan="2" text="소요전류(mA)"/>
+						<cell col="10" display="text" rowspan="2" text="총방식연장(m)"/>
+						<cell col="11" display="text" rowspan="2" text="총방식면적(㎥)"/>
+						<cell col="12" display="text" rowspan="2" text="전류밀도(mA/㎡)"/>
+						<cell col="13" display="text" rowspan="2" text="코팅저항(Ω．㎡)"/>
+						<cell col="14" display="text" rowspan="2" text="코팅저항평가"/>
+						<cell col="15" colspan="2" display="text" text="AC(V,&#32;Hz)"/>
+						<cell col="17" display="text" rowspan="2" text="토양비저항(Ω/&#32;㎠)"/>
+						<cell col="4" display="text" row="1" text="ON"/>
+						<cell col="5" display="text" row="1" text="OFF"/>
+						<cell col="6" display="text" row="1" text="ON"/>
+						<cell col="7" display="text" row="1" text="OFF"/>
+						<cell col="15" display="text" row="1" text="전위"/>
+						<cell col="16" display="text" row="1" text="주파수"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expandsize="18" expr="currow&#32;+&#32;1" wordwrap="word"/>
+						<cell align="center" col="1" colid="FACI_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="REC_DRA_NM" display="normal"/>
+						<cell align="center" col="3" colid="INPUT_YMD" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="4" colid="OPERAT_ELECT_ON" display="number" expr="round(OPERAT_ELECT_ON)"/>
+						<cell align="right" col="5" colid="OPERAT_ELECT_OFF" display="number" expr="round(OPERAT_ELECT_OFF)"/>
+						<cell align="right" col="6" colid="ELECT_ON" display="number" expr="round(ELECT_ON)"/>
+						<cell align="right" col="7" colid="ELECT_OFF" display="number" expr="round(ELECT_OFF)"/>
+						<cell align="right" col="8" colid="POLAR_AMT" display="number" expr="round(POLAR_AMT)"/>
+						<cell align="right" col="9" colid="NEED_ELECT" display="number" expr="round(NEED_ELECT)"/>
+						<cell align="right" col="10" colid="CATHODIC_LENG" display="number" expr="round(CATHODIC_LENG)"/>
+						<cell align="right" col="11" colid="CATHODIC_SQUARE" display="number" expr="round(CATHODIC_SQUARE)"/>
+						<cell align="right" col="12" colid="ELECT_DENSITY" display="number" expr="round(ELECT_DENSITY,&#32;5)"/>
+						<cell align="right" col="13" colid="COATING_RESIS" display="number" expr="round(COATING_RESIS)"/>
+						<cell align="center" col="14" colid="COATING_RESIS_VALUA" display="text"/>
+						<cell align="right" col="15" colid="AC_ELECT" display="number" expr="round(AC_ELECT)"/>
+						<cell align="right" col="16" colid="AC_FREQUENCY" display="number" expr="round(AC_FREQUENCY)"/>
+						<cell align="right" col="17" colid="SOIL_RESIS" display="number" expr="round(SOIL_RESIS)"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AreaSelect="true" AutoEnter="TRUE" BindDataset="ds_Multi_Sector" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="615" ColSelect="TRUE" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="216" Id="grd_Sector" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" Right="1256" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="5" TabStop="FALSE" Top="399" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1248">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="65"/>
+						<col fix="left" width="80"/>
+						<col width="83"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="120"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="81"/>
+						<col width="85"/>
+						<col width="90"/>
+						<col width="105"/>
+						<col width="94"/>
+						<col width="82"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="112"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="섹터"/>
+						<cell col="1" display="text" rowspan="2" text="정배류기&#32;번호"/>
+						<cell col="2" display="text" rowspan="2" text="정배류기&#32;명"/>
+						<cell col="3" display="text" rowspan="2" text="점검일자"/>
+						<cell col="4" colspan="2" display="text" text="출력전류(mA)"/>
+						<cell col="6" colspan="2" display="text" text="평균전위(mV)"/>
+						<cell col="8" display="text" rowspan="2" text="분극량(mV)"/>
+						<cell col="9" display="text" rowspan="2" text="소요전류(mA)"/>
+						<cell col="10" display="text" rowspan="2" text="총방식연장(m)"/>
+						<cell col="11" display="text" rowspan="2" text="총방식면적(㎥)"/>
+						<cell col="12" display="text" rowspan="2" text="전류밀도(mA/㎡)"/>
+						<cell col="13" display="text" rowspan="2" text="코팅저항(Ω．㎡)"/>
+						<cell col="14" display="text" rowspan="2" text="코팅저항평가"/>
+						<cell col="15" colspan="2" display="text" text="AC(V,&#32;Hz)"/>
+						<cell col="17" display="text" rowspan="2" text="토양비저항(Ω/&#32;㎠)"/>
+						<cell col="4" display="text" row="1" text="ON"/>
+						<cell col="5" display="text" row="1" text="OFF"/>
+						<cell col="6" display="text" row="1" text="ON"/>
+						<cell col="7" display="text" row="1" text="OFF"/>
+						<cell col="15" display="text" row="1" text="전위"/>
+						<cell col="16" display="text" row="1" text="주파수"/>
+					</head>
+					<body>
+						<cell align="center" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="0" colid="SECTOR_NUM" display="text"/>
+						<cell align="center" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="1" colid="FACI_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="2" colid="REC_DRA_NM" display="combo" edit="combo"/>
+						<cell align="center" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="3" colid="INPUT_YMD" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="4" colid="OPERAT_ELECT_ON" display="number" expr="round(OPERAT_ELECT_ON)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="5" colid="OPERAT_ELECT_OFF" display="number" expr="round(OPERAT_ELECT_OFF)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="6" colid="ELECT_ON" display="number" expr="round(ELECT_ON)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="7" colid="ELECT_OFF" display="number" expr="round(ELECT_OFF)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="8" colid="POLAR_AMT" display="number" expr="round(POLAR_AMT)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="9" colid="NEED_ELECT" display="number" expr="round(NEED_ELECT)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="10" colid="CATHODIC_LENG" display="number" expr="round(CATHODIC_LENG)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="11" colid="CATHODIC_SQUARE" display="number" expr="round(CATHODIC_SQUARE)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="12" colid="ELECT_DENSITY" display="number" expr="round(ELECT_DENSITY,5)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="13" colid="COATING_RESIS" display="number" expr="round(COATING_RESIS)"/>
+						<cell align="center" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="14" colid="COATING_RESIS_VALUA" display="text"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="15" colid="AC_ELECT" display="number" expr="round(AC_ELECT)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="16" colid="AC_FREQUENCY" display="number" expr="round(AC_FREQUENCY)"/>
+						<cell align="right" bkcolor='expr:iif(SECTOR_NUM=&apos;평균/합&apos;,&#32;&quot;greenyellow&quot;,&#32;&quot;white&quot;)' col="17" colid="SOIL_RESIS" display="number" expr="round(SOIL_RESIS)"/>
+					</body>
+					<summary>
+						<cell align="center" bkcolor="greenyellow" col="0" display="text" text="평균/합"/>
+						<cell bkcolor="greenyellow" col="1" display="text"/>
+						<cell bkcolor="greenyellow" col="2" display="text"/>
+						<cell bkcolor="greenyellow" col="3" display="text"/>
+						<cell align="right" bkcolor="greenyellow" col="4" display="number" expr="round(Sum(&apos;OPERAT_ELECT_ON&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="5" display="number" expr="round(Sum(&apos;OPERAT_ELECT_OFF&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="6" display="number" expr="round(Avg(&apos;ELECT_ON&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="7" display="number" expr="round(Avg(&apos;ELECT_OFF&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="8" display="number" expr="round(AVG(&apos;POLAR_AMT&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="9" display="number" expr="round(Sum(&apos;NEED_ELECT&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="10" display="number" expr="round(Sum(&apos;CATHODIC_LENG&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="11" display="number" expr="round(Sum(&apos;CATHODIC_SQUARE&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="12" display="number" expr="round(Avg(&apos;ELECT_DENSITY&apos;),&#32;5)"/>
+						<cell align="right" bkcolor="greenyellow" col="13" display="number" expr="round(Avg(&apos;COATING_RESIS&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="14" display="number"/>
+						<cell align="right" bkcolor="greenyellow" col="15" display="number" expr="round(Avg(&apos;AC_ELECT&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="16" display="number" expr="round(Avg(&apos;AC_FREQUENCY&apos;))"/>
+						<cell align="right" bkcolor="greenyellow" col="17" display="number" expr="round(Avg(&apos;SOIL_RESIS&apos;))"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AreaSelect="true" AutoEnter="TRUE" BindDataset="ds_Multi_Point" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="896" ColSelect="TRUE" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="216" Id="grd_point" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" Right="1256" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="6" TabStop="FALSE" Top="680" UseDBuff="true" UseExSizing="Both" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1248">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="80"/>
+						<col fix="left" width="42"/>
+						<col width="80"/>
+						<col width="83"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="120"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="81"/>
+						<col width="85"/>
+						<col width="90"/>
+						<col width="105"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="112"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="test"/>
+						<cell col="1" display="text" rowspan="2" text="섹터"/>
+						<cell col="2" display="text" rowspan="2" text="NO"/>
+						<cell col="3" display="text" rowspan="2" text="정배류기&#32;번호"/>
+						<cell col="4" display="text" rowspan="2" text="정배류기&#32;명"/>
+						<cell col="5" display="text" rowspan="2" text="점검일자"/>
+						<cell col="6" colspan="2" display="text" text="출력전류(mA)"/>
+						<cell col="8" colspan="2" display="text" text="평균전위(mV)"/>
+						<cell col="10" display="text" rowspan="2" text="분극량(mV)"/>
+						<cell col="11" display="text" rowspan="2" text="소요전류(mA)"/>
+						<cell col="12" display="text" rowspan="2" text="총방식연장(m)"/>
+						<cell col="13" display="text" rowspan="2" text="총방식면적(㎥)"/>
+						<cell col="14" display="text" rowspan="2" text="전류밀도(mA/㎡)"/>
+						<cell col="15" colspan="2" display="text" text="AC(V,&#32;Hz)"/>
+						<cell col="17" display="text" rowspan="2" text="토양비저항(Ω/&#32;㎠)"/>
+						<cell col="6" display="text" row="1" text="ON"/>
+						<cell col="7" display="text" row="1" text="OFF"/>
+						<cell col="8" display="text" row="1" text="ON"/>
+						<cell col="9" display="text" row="1" text="OFF"/>
+						<cell col="15" display="text" row="1" text="전위"/>
+						<cell col="16" display="text" row="1" text="주파수"/>
+					</head>
+					<body>
+						<cell bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="0" display="text" expr="rowlevel"/>
+						<cell bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="1" colid="SECTOR_NUM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;평균/합&apos;,SECTOR_NUM)" suppress="1"/>
+						<cell bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="2" colid="SECTOR_SUB_NUM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,SECTOR_SUB_NUM)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="3" colid="FACI_NUM" display="text" expandsize="18" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,FACI_NUM)" wordwrap="word"/>
+						<cell bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="4" colid="REC_DRA_NM" display="normal" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,REC_DRA_NM)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="5" colid="INPUT_YMD" display="normal" expandsize="18" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,INPUT_YMD)" wordwrap="word"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="6" colid="OPERAT_ELECT_ON" display="number" expr="round(OPERAT_ELECT_ON.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="7" colid="OPERAT_ELECT_OFF" display="number" expr="round(OPERAT_ELECT_OFF.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="8" colid="ELECT_ON" display="number" expr="round(ELECT_ON.avg)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="9" colid="ELECT_OFF" display="number" expr="round(ELECT_OFF.avg)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="10" colid="POLAR_AMT" display="number" expr="round(POLAR_AMT.avg)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="11" colid="NEED_ELECT" display="number" expr="round(NEED_ELECT.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="12" colid="CATHODIC_LENG" display="number" expr="round(CATHODIC_LENG.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="13" colid="CATHODIC_SQUARE" display="number" expr="round(CATHODIC_SQUARE.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="14" colid="ELECT_DENSITY" display="number" expr="round(ELECT_DENSITY.sum,&#32;5)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="15" colid="AC_ELECT" display="number" expr="round(AC_ELECT.avg)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="16" colid="AC_FREQUENCY" display="number" expr="round(AC_FREQUENCY.avg)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="17" colid="SOIL_RESIS" display="number" expr="round(SOIL_RESIS.avg)"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button4" ImageID="btn_6_Statistics" Left="816" LeftMargin="15" OnClick="btn4_OnClick" Style="button" TabOrder="7" Text="&#32;방식면적" Top="375" Width="103"></Button>
+		<Shape BKColor="user15" Bottom="131" Height="3" Id="Shape0" Left="9" LineWidth="0" Right="1255" TabOrder="8" Top="128" Type="Rectangle" Width="1246"></Shape>
+		<Shape BKColor="user15" Bottom="400" Height="3" Id="Shape1" Left="9" LineWidth="0" Right="1255" TabOrder="9" Top="397" Type="Rectangle" Width="1246"></Shape>
+		<Shape BKColor="user15" Bottom="681" Height="3" Id="Shape2" Left="8" LineWidth="0" Right="1254" TabOrder="10" Top="678" Type="Rectangle" Width="1246"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="8" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="11" Text="Div0" Top="16" Url="globals::ComHead.xml" Visible="FALSE" Width="1240">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user6" Bottom="93" Height="38" Id="Shape8" Left="5" LineColor="user7" Right="1250" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="19" Top="55" Type="RoundRect" Width="1245"></Shape>
+		<Shape BKColor="user8" Bottom="88" Height="29" Id="Shape9" Left="10" LineWidth="0" Right="1245" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="20" Top="59" Type="Rectangle" Width="1235"></Shape>
+		<Image Align="Left" Height="18" Id="Image18" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search_Indis" TabOrder="16" Text="지사" Top="64" Width="61"></Image>
+		<Image Align="Left" Height="18" Id="Image19" ImageID="blt" Left="157" LeftMargin="12" Style="blt_search" TabOrder="17" Text="시/구" Top="64" Width="61"></Image>
+		<Image Align="Left" Height="18" Id="Image20" ImageID="blt" Left="795" LeftMargin="12" Style="blt_search" TabOrder="18" Text="기간" Top="64" Width="90"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_InputYmdFrom" Left="848" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="14" Top="64" WeeksFont="Default,-1" Width="90"></Calendar>
+		<Static Height="13" Id="Static73" Left="942" Style="static" TabOrder="21" Text="~" Top="67" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_InputYmdTo" Left="952" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="15" Top="64" WeeksFont="Default,-1" Width="90"></Calendar>
+		<Combo Border="Flat" Height="18" Id="cob_Branchcd" Left="56" OnChanged="cob_Branchcd_OnChanged" Style="combo_indis" TabOrder="12" Top="64" Width="90"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo1" Left="205" Style="combo" TabOrder="13" Top="64" Width="93"></Combo>
+		<Image Align="Left" Height="18" Id="Image12" ImageID="blt" Left="309" LeftMargin="12" Style="blt_search" TabOrder="22" Text="정배류기명" Top="64" Width="75"></Image>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_RecDraNm" ImeMode="none" Left="384" Style="edit" TabOrder="23" Top="64" Width="150"></Edit>
+		<Button Cursor="HAND" Height="18" Id="btn_RecDraNmSearch" ImageID="search" Left="535" OnClick="btn_RecDraNmSearch_OnClick" TabOrder="24" Text="Button8" Top="64" Width="18"></Button>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="573" LeftMargin="12" Style="blt_search_Indis" TabOrder="26" Text="시설물번호" Top="64" Width="78"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_FaciNum" ImeMode="none" Left="655" Style="edit" TabOrder="25" Top="64" Width="98"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Excel" ImageID="btn_10_data" Left="765" LeftMargin="15" OnClick="btn_ExcelOnClick" Style="button" TabOrder="27" Text="기간별&#32;EXCEL&#32;전체&#32;다운" Top="656" Width="157"></Button>
+		<Grid AreaSelect="true" AutoEnter="TRUE" BindDataset="ds_Multi_ExcelPoint" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="1160" ColSelect="TRUE" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="216" Id="grd_ExcelPoint" InputPanel="FALSE" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" Right="1248" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="28" TabStop="FALSE" Top="944" UseDBuff="true" UseExSizing="Both" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1248">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="80"/>
+						<col fix="left" width="42"/>
+						<col width="80"/>
+						<col width="83"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="120"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="81"/>
+						<col width="85"/>
+						<col width="90"/>
+						<col width="105"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="112"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="test"/>
+						<cell col="1" display="text" rowspan="2" text="섹터"/>
+						<cell col="2" display="text" rowspan="2" text="NO"/>
+						<cell col="3" display="text" rowspan="2" text="정배류기&#32;번호"/>
+						<cell col="4" display="text" rowspan="2" text="정배류기&#32;명"/>
+						<cell col="5" display="text" rowspan="2" text="점검일자"/>
+						<cell col="6" colspan="2" display="text" text="출력전류(mA)"/>
+						<cell col="8" colspan="2" display="text" text="평균전위(mV)"/>
+						<cell col="10" display="text" rowspan="2" text="분극량(mV)"/>
+						<cell col="11" display="text" rowspan="2" text="소요전류(mA)"/>
+						<cell col="12" display="text" rowspan="2" text="총방식연장(m)"/>
+						<cell col="13" display="text" rowspan="2" text="총방식면적(㎥)"/>
+						<cell col="14" display="text" rowspan="2" text="전류밀도(mA/㎡)"/>
+						<cell col="15" colspan="2" display="text" text="AC(V,&#32;Hz)"/>
+						<cell col="17" display="text" rowspan="2" text="토양비저항(Ω/&#32;㎠)"/>
+						<cell col="6" display="text" row="1" text="ON"/>
+						<cell col="7" display="text" row="1" text="OFF"/>
+						<cell col="8" display="text" row="1" text="ON"/>
+						<cell col="9" display="text" row="1" text="OFF"/>
+						<cell col="15" display="text" row="1" text="전위"/>
+						<cell col="16" display="text" row="1" text="주파수"/>
+					</head>
+					<body>
+						<cell bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="0" display="text" expr="rowlevel"/>
+						<cell bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="1" colid="SECTOR_NUM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;평균&apos;,SECTOR_NUM)" suppress="1"/>
+						<cell bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="2" colid="SECTOR_SUB_NUM" display="text" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,SECTOR_SUB_NUM)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="3" colid="FACI_NUM" display="text" expandsize="18" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,FACI_NUM)" wordwrap="word"/>
+						<cell bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="4" colid="REC_DRA_NM" display="normal" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,REC_DRA_NM)"/>
+						<cell align="center" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="5" colid="INPUT_YMD" display="normal" expandsize="18" expr="iif(rowlevel&#32;=&#32;1&#32;,&apos;&apos;,INPUT_YMD)" wordwrap="word"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="6" colid="OPERAT_ELECT_ON" display="number" expr="round(OPERAT_ELECT_ON.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="7" colid="OPERAT_ELECT_OFF" display="number" expr="round(OPERAT_ELECT_OFF.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="8" colid="ELECT_ON" display="number" expr="round(ELECT_ON.avg)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="9" colid="ELECT_OFF" display="number" expr="round(ELECT_OFF.avg)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="10" colid="POLAR_AMT" display="number" expr="round(POLAR_AMT.avg)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="11" colid="NEED_ELECT" display="number" expr="round(NEED_ELECT.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="12" colid="CATHODIC_LENG" display="number" expr="round(CATHODIC_LENG.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="13" colid="CATHODIC_SQUARE" display="number" expr="round(CATHODIC_SQUARE.sum)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="14" colid="ELECT_DENSITY" display="number" expr="round(ELECT_DENSITY.avg,&#32;5)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="15" colid="AC_ELECT" display="number" expr="round(AC_ELECT.avg)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="16" colid="AC_FREQUENCY" display="number" expr="round(AC_FREQUENCY.avg)"/>
+						<cell align="right" bkcolor='expr:iif(rowlevel=1,&#32;&quot;pink&quot;,&#32;&quot;white&quot;)' col="17" colid="SOIL_RESIS" display="number" expr="round(SOIL_RESIS.avg)"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button5" ImageID="btn_6_Statistics" Left="928" LeftMargin="15" OnClick="btn5_OnClick" Style="button" TabOrder="29" Text="&#32;전류밀도" Top="375" Width="103"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button6" ImageID="btn_6_Statistics" Left="1040" LeftMargin="15" OnClick="btn6_OnClick" Style="button" TabOrder="30" Text="&#32;코팅저항" Top="375" Width="103"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button7" ImageID="btn_6_Statistics" Left="1152" LeftMargin="15" OnClick="btn7_OnClick" Style="button" TabOrder="31" Text="&#32;토양비저항" Top="375" Width="103"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button3" ImageID="btn_6_Statistics" Left="704" LeftMargin="15" OnClick="btn3_OnClick" Style="button" TabOrder="32" Text="&#32;방식연장" Top="375" Width="103"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button2" ImageID="btn_6_Statistics" Left="592" LeftMargin="15" OnClick="btn2_OnClick" Style="button" TabOrder="33" Text="&#32;소요전류" Top="375" Width="103"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button10" ImageID="btn_6_Statistics" Left="1152" LeftMargin="15" OnClick="btn10_OnClick" Style="button" TabOrder="34" Text="&#32;분극량" Top="656" Width="103"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button9" ImageID="btn_6_Statistics" Left="1040" LeftMargin="15" OnClick="btn9_OnClick" Style="button" TabOrder="35" Text="&#32;토양비저항" Top="656" Width="103"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button8" ImageID="btn_6_Statistics" Left="928" LeftMargin="15" OnClick="btn8_OnClick" Style="button" TabOrder="36" Text="&#32;전위ON_OFF" Top="656" Width="103"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button1" ImageID="btn_6_Statistics" Left="480" LeftMargin="15" OnClick="btn1_OnClick" Style="button" TabOrder="37" Text="&#32;분극량" Top="375" Width="103"></Button>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1205010050F.xml
+* Form 설명  : 배관코팅저항 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 송석환
+* 작성일     : 2013-03-08
+* 변경내용   : 
+****************************************************************************************************/
+ 
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONB30001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1205010050F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_SetButton("00010101");
+	fn_Init();
+}
+
+function fn_Init()
+{
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branchcd"));			//지사코드(전체포함)
+	cob_BranchCd.Enable = true;
+	cob_BranchCd.Value = "";
+	cob_BranchCd_OnChanged();
+	
+	//TEST
+	cal_InputYmdFrom.Value = substr(AddMonth(today(),-1),0,6) + '01';
+	cal_InputYmdTo.Value = today();
+}
+
+function fn_CommonSearch()
+{
+	fn_D1_List();
+	grd_Mainter_OnCellClick();
+}
+
+function fn_D1_List()
+{
+	ds_Multi.ClearData();
+
+	ds_SearchTop.ClearData();
+	ds_SearchTop.AddRow();
+	
+    ds_SearchTop.SetColumn(0,"BRANCH_CD"          , cob_Branchcd.Value        );  // 지사
+    ds_SearchTop.SetColumn(0,"ZIP_NO1"            , cob_ZipNo1.Value          );  // 시/구
+	ds_SearchTop.SetColumn(0,"RECTIFIER_NM"       , edt_RecDraNm.Text         );  //정배류기명
+	ds_SearchTop.SetColumn(0,"DRAINAGE_NM"        , edt_RecDraNm.Text         );  //정배류기명
+	ds_SearchTop.SetColumn(0,"FACI_NUM"           , edt_FaciNum.Text          );  //시설물 번호
+    ds_SearchTop.SetColumn(0,"INPUT_YMD_FROM"      , cal_InputYmdFrom.Value     );  // 작업요청일자
+    ds_SearchTop.SetColumn(0,"INPUT_YMD_TO"        , cal_InputYmdTo.Value       );  // 작업요청일자
+
+	
+	var strSvcID = "find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_PipeCoatingResisMgr-service";
+ 	var strInDatasets  = "ds_SearchTop=ds_SearchTop";
+	var strOutDatasets = "ds_Multi=ds_Multi";
+	var strArgument  = "search";
+		
+			   	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	grd_Mainter.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");	
+}
+
+//---------------------------------------------------------------------------------
+// 기      능   :  지사_구 콤보 
+//---------------------------------------------------------------------------------
+function cob_Branchcd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) 
+{
+    fn_SetComboBox_Comcode("1", cob_Branchcd.value, fn_setDsObject_Comcode("1", "cob_ZipNo1"));
+    cob_ZipNo1.Value = "";  
+    gfn_D1_SetComboBox_Teamcd("ds_Team",cob_Branchcd);
+}
+
+function btn_RecDraNmSearch_OnClick(obj)
+{
+	var retValue = gfn_Dialog("D10","D1205010050U","",450,400,true,-1,-1);
+	if(retValue != "" && retValue != null)
+		{
+			edt_FaciNum.Text = retValue[0]; 
+			if(retValue[1] != null){
+				edt_RecDraNm.Text = retValue[1];
+			}
+			if(retValue[2] != null){
+				edt_RecDraNm.Text = retValue[2];
+			}
+			
+		}
+}
+
+function grd_Mainter_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	//섹터별 배관 코팅저항 조회 구현
+	fn_D1_SectorList(nRow);
+	fn_D1_PointList(nRow);
+	fn_D1_ExcelPointList(nRow);
+	
+}
+
+function fn_D1_SectorList(nRow)
+{
+	ds_Multi_Sector.ClearData();
+
+	ds_Search_Sector.ClearData();
+	ds_Search_Sector.AddRow();
+	
+	ds_Search_Sector.SetColumn(0,"FACI_NUM"           , ds_Multi.GetColumn(nRow,"FACI_NUM")      );  
+	ds_Search_Sector.SetColumn(0,"INPUT_FLAG"         , ds_Multi.GetColumn(nRow,"INPUT_FLAG")    );  
+    ds_Search_Sector.SetColumn(0,"INPUT_YMD"          , ds_Multi.GetColumn(nRow,"INPUT_YMD")     );  
+	      
+	var strSvcID = "find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_PipeCoatingResisMgr-service";
+ 	var strInDatasets  = "ds_Search_Sector=ds_Search_Sector";
+	var strOutDatasets = "ds_Multi_Sector=ds_Multi_Sector";
+	var strArgument  = "searchSector";
+			   	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	grd_Sector.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");	
+}
+
+function fn_D1_PointList(nRow)
+{
+	ds_Multi_Point.ClearData();
+
+	ds_Search_Sector.ClearData();
+	ds_Search_Sector.AddRow();
+	
+	ds_Search_Sector.SetColumn(0,"FACI_NUM"           , ds_Multi.GetColumn(nRow,"FACI_NUM")      );  
+	ds_Search_Sector.SetColumn(0,"INPUT_FLAG"         , ds_Multi.GetColumn(nRow,"INPUT_FLAG")    );  
+    ds_Search_Sector.SetColumn(0,"INPUT_YMD"          , ds_Multi.GetColumn(nRow,"INPUT_YMD")     );  
+
+	
+	var strSvcID = "find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_PipeCoatingResisMgr-service";
+ 	var strInDatasets  = "ds_Search_Sector=ds_Search_Sector";
+	var strOutDatasets = "ds_Multi_Point=ds_Multi_Point";
+	var strArgument  = "searchPoint";
+			   	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+   //ds_Multi_Point.Filter("SECTOR_NUM!=0 && row!=1");
+	grd_Point.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");	
+	//grd_Point.Ds_a.SearchRow("DS_COMPANY=\"TOBE\"");
+
+
+	var delRow = ds_Multi_Point.SearchRow("rowlevel=1 && SECTOR_NUM='배드점'");
+	//alert(ds_Multi_Point.GetColumn(1, "SECTOR_NUM"));
+	//ds_Multi_Point.DeleteRow(delRow);
+	//alert(ds_Multi_Point.SearchRow("rowlevel=1 && SECTOR_NUM='배드점'"));
+	grd_Point.ChangeRowHeight(delRow, 1, -1);
+	//ds_Multi_Point.DeleteRow(1);
+}
+
+
+function fn_D1_ExcelPointList(nRow)
+{
+	ds_Multi_ExcelPoint.ClearData();
+
+	ds_Search_ExcelPoint.ClearData();
+	ds_Search_ExcelPoint.AddRow();
+	
+	ds_Search_ExcelPoint.SetColumn(0,"FACI_NUM"           , ds_Multi.GetColumn(nRow,"FACI_NUM")      );  
+	ds_Search_ExcelPoint.SetColumn(0,"INPUT_FLAG"         , ds_Multi.GetColumn(nRow,"INPUT_FLAG")    );  
+    ds_Search_ExcelPoint.SetColumn(0,"INPUT_YMD_FROM"      , cal_InputYmdFrom.Value     );  
+    ds_Search_ExcelPoint.SetColumn(0,"INPUT_YMD_TO"        , cal_InputYmdTo.Value       );  
+
+	
+	var strSvcID = "find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_PipeCoatingResisMgr-service";
+ 	var strInDatasets  = "ds_Search_ExcelPoint=ds_Search_ExcelPoint";
+	var strOutDatasets = "ds_Multi_ExcelPoint=ds_Multi_ExcelPoint";
+	var strArgument  = "searchExcelPoint";
+			   	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	grd_ExcelPoint.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");
+	
+	var totalRow = ds_Multi_ExcelPoint.GetRowCount();
+	
+	for(var i=0;i<totalRow;i++){
+		var delRow = ds_Multi_ExcelPoint.SearchRow("rowlevel=1 && SECTOR_NUM='배드점'",i);
+		grd_ExcelPoint.ChangeRowHeight(delRow, 1, -1);
+	}
+	
+}
+
+function btn_ExcelOnClick(obj)
+{
+	var SearchCondition= "";
+    SearchCondition = SearchCondition + "지사코드 :" + RPad(cob_Branchcd.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo1.Text," ",20);
+    SearchCondition = SearchCondition + "정배류기명 :" + RPad(edt_RecDraNm.Text," ",20); 
+    SearchCondition = SearchCondition + "시설물번호 :" + RPad(edt_FaciNum.Text," ",20); 
+    SearchCondition = SearchCondition + "기간 :" + RPad(cal_InputYmdFrom.Value +" ~ "+ cal_InputYmdTo.Value," ",20);  
+    
+    gfn_ExportExcel("배관코팅저항 조회", 5, SearchCondition, "grd_ExcelPoint");
+}
+
+function btn1_OnClick(obj)
+{
+	open_Dialog(0);
+}
+
+function btn2_OnClick(obj)
+{
+	open_Dialog(1);
+}
+
+function btn3_OnClick(obj)
+{
+	open_Dialog(2);
+}
+
+function btn4_OnClick(obj)
+{
+	open_Dialog(3);
+}
+
+function btn5_OnClick(obj)
+{
+	open_Dialog(4);
+}
+
+function btn6_OnClick(obj)
+{
+	open_Dialog(5);
+}
+
+function btn7_OnClick(obj)
+{
+	open_Dialog(6);
+}
+
+function open_Dialog(index)
+{
+	if(ds_Multi_Sector.GetColumn(0,"FACI_NUM")==null){
+		alert("조회된 데이터만 그래프를 볼 수 있습니다.");
+		return;
+	}
+	var args = "";
+		args  = "FACI_NUM="    + quote(ds_Multi_Sector.GetColumn(0,"FACI_NUM")) ;
+		args += " INDEX=" + quote(index);
+		args += " YMDFROM=" + quote(cal_InputYmdFrom.Value);
+		args += " YMDTO=" + quote(cal_InputYmdTo.Value);
+	gfn_Dialog("D10","D1205010051U",args,1270,853,true,-1,-1);
+}
+
+function btn8_OnClick(obj)
+{
+	open_Dialog2(0);
+}
+
+function btn9_OnClick(obj)
+{
+	open_Dialog2(1);
+}
+
+function btn10_OnClick(obj)
+{
+	open_Dialog2(2);
+}
+
+function open_Dialog2(index)
+{
+	if(ds_Multi_Sector.GetColumn(0,"FACI_NUM")==null){
+		alert("조회된 데이터만 그래프를 볼 수 있습니다.");
+		return;
+	}
+	var args = "";
+		args  = "FACI_NUM="    + quote(ds_Multi_Sector.GetColumn(0,"FACI_NUM")) ;
+		args += " INDEX=" + quote(index);
+		args += " YMDFROM=" + quote(cal_InputYmdFrom.Value);
+		args += " YMDTO=" + quote(cal_InputYmdTo.Value);
+	gfn_Dialog("D10","D1205010052U",args,1270,853,true,-1,-1);
+}
+
+
+function fn_CommonExcelExport()
+{	
+	var SearchCondition= "";
+    SearchCondition = SearchCondition + "지사코드 :" + RPad(cob_Branchcd.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo1.Text," ",20);
+    SearchCondition = SearchCondition + "정배류기명 :" + RPad(edt_RecDraNm.Text," ",20); 
+    SearchCondition = SearchCondition + "시설물번호 :" + RPad(edt_FaciNum.Text," ",20); 
+    SearchCondition = SearchCondition + "기간 :" + RPad(cal_InputYmdFrom.Value +" ~ "+ cal_InputYmdTo.Value," ",20);  
+	
+	gfn_ExportExcel("영역전체 평균 배관 코팅 저항 엑셀 ", 5, SearchCondition, "grd_Mainter"); 
+}]]></Script>
+</Window>

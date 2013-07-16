@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="748" Id="D1202010011F_T12" Left="8" OnLoadCompleted="D1202010011F_T12_OnLoadCompleted" OnUnloadCompleted="D1202010011F_T12_OnUnloadCompleted" PidAttrib="7" Title="특기사항&#32;순찰점검&#32;등록_D1202010011F_T12" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACT_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK2" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_OBJ_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID2" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID3" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Excel"></Dataset>
+		</Datasets>
+		<Shape BKColor="#6cbae1" Bottom="23" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1251" TabOrder="2" Top="20" Type="Rectangle" Width="1246"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="#f8f8f8" BkSelColor="skyblue" BoldHead="FALSE" Border="Flat" Bottom="744" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="721" Id="grd_Multi" InputPanel="FALSE" Left="5" LineColor="#cecece" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_Multi_OnCellClick" Right="1251" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="23" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="50"/>
+						<col width="100"/>
+						<col width="993"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="내용년수"/>
+						<cell col="1" display="text" text="NO"/>
+						<cell col="2" display="text" text="순찰일자"/>
+						<cell bkcolor="user11" col="3" display="text" text="특기사항"/>
+						<cell col="4" display="text" text="결재대상"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" display="text" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="2" colid="PATROL_YMD" display="date"/>
+						<cell col="3" colid="RMK2" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="DECIDE_OBJ_YN" display="checkbox" edit="normal"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="#f8f8f8" BkSelColor="skyblue" BoldHead="FALSE" Border="Flat" Bottom="799" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="41" Id="grd_Excel" InputPanel="FALSE" Left="5" LineColor="#cecece" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1251" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="758" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="50"/>
+						<col width="1093"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="내용년수"/>
+						<cell col="1" display="text" text="NO"/>
+						<cell col="2" display="text" text="특기사항"/>
+						<cell col="3" display="text" text="결재대상"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" display="text" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell col="2" colid="RMK2" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="DECIDE_OBJ_YN" display="checkbox" edit="checkbox"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID      : D1201010010F_T12.xml
+* Form 설명   : 특기사항 순찰점검등록 조회,등록,수정,삭제
+* 시스템 명   : 안전공급(D1)
+* 작성자      : 임성수
+* 작성일      : 2009-01-15
+* 변경내용    : 변경내용없음
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1202010011F_T12_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_D1_SetGrid_Sort(grd_Multi);
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_ExcelExport()
+//  설명: 특별관리시설 엑셀로 저장
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_ExcelExport()
+{ 
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 :"     + RPad(cob_PBranchCd.Text," ",20);
+    SearchCondition = SearchCondition + "팀 :"       + RPad(cob_PTeamCd.Text," ",20);
+    SearchCondition = SearchCondition + "조 :"       + RPad(cob_PShiftWorkCd.Text," ",20);
+    SearchCondition = SearchCondition + "구간 :"       	+ RPad(cob_block.Text," ",20);
+    SearchCondition = SearchCondition + "순찰일자 :" + RPad(cal_PPatrolYmd.Text," ",20);
+
+	gfn_ExportExcel("특기사항 순찰점검등록", 5, SearchCondition, "grd_Excel");
+}
+
+
+function fn_D1_Find()
+{
+	//-------------------------------------------------------------------------------
+	// 함수명   : fn_D1_Find()
+	// 설명     : 순찰점검 주 계획을 조회한다.
+	// return 내용 : 없음
+	//-------------------------------------------------------------------------------
+
+	//입력한 날짜가 오늘 보다 클 경우
+	if(!fn_DateCheckToday(cal_PPatrolYmd))
+	{
+		return;
+	}
+
+	var strSvcID = "fn_D1_Find";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_PatrolCheckResultMgr-service"
+	           + "&BRANCH_CD="		+cob_PBranchCd.Value		//지사코드
+	           + "&BLOCK_CD=" 		+cob_block.Value        	//구코드
+	           + "&TEAM_CD=" 		+cob_PTeamCd.Value			//팀코드
+	           + "&PATROL_YMD=" 	+cal_PPatrolYmd.Value		//순찰일자
+	           ;
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi ds_Excel=ds_Excel";
+	var strArgument  = "find12";
+	
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);
+
+	if(ErrorCode < 0)
+	{
+		alert(ErrorMsg);
+		return;
+	}			              
+	              
+	if(ds_Multi.GetRowCount()==0) trace("조회결과가 없습니다.");
+	
+	if(ds_Multi.GetRowCount()==0)
+	{
+        grd_Multi.NoDataText="조회결과가 없습니다.";
+    }
+}
+
+
+
+
+function fn_D1_Save()
+{
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_SAVE
+//   설명  : 사유지 점용료 협의사항를 등록/업데이트한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+	if(ds_Multi.RowCount() == 0)
+	{
+		return;
+	}	
+
+	for(var i=0; i<ds_Multi.RowCount(); i++)
+	{
+		if(ds_Multi.GetRowType(i) == "insert" || ds_Multi.GetRowType(i) == "update")
+		{
+			if(ds_Multi.GetColumn(i,"RMK2") == "" ||ds_Multi.GetColumn(i,"RMK2") == null)
+			{
+				alert(gfn_GetMessage("M000011","%AAA%","특기사항을"));	//특기사항을 입력하세요
+				return;
+			}
+			
+			if(cob_PTeamCd.Value = null || cob_PTeamCd.Value = "")
+			{
+				alert("팀를 선택해주세요.");
+				cob_PTeamCd.SetFocus();
+				return;
+			}
+			//수정 등록시 셋팅할 사용자 정보
+			ds_Multi.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_Multi.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//수정자 IP
+			ds_Multi.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+			ds_Multi.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//등록자 IP
+			ds_Multi.SetColumn(i, "BRANCH_CD", cob_PBranchCd.Value);				//지사코드
+			ds_Multi.SetColumn(i, "BLOCK_CD", cob_block.Value);					//시/구코드
+			ds_Multi.SetColumn(i, "TEAM_CD", cob_PTeamCd.Value);					//팀코드
+			ds_Multi.SetColumn(i, "SHIFT_WORK_CD", cob_PShiftWorkCd.Value);			//조코드
+			ds_Multi.SetColumn(i, "PATROL_YMD" , ds_Multi.GetColumn(i, "PATROL_YMD"));		//순찰일자 
+			ds_Multi.SetColumn(i, "TAKER_EMPID1" , edt_empid1.text);
+			ds_Multi.SetColumn(i, "TAKER_EMPID2" , edt_empid2.text);
+			ds_Multi.SetColumn(i, "TAKER_EMPID3" , edt_empid3.text);
+		}
+		
+		var strYn = grd_Multi.GetCellValue(i,3);
+		if(strYn == null)
+		{
+			ds_Multi.SetColumn(i,"DECIDE_OBJ_YN","0");		//결재대상이 아닐 경우 0으로 셋팅해줌
+		}
+	}
+
+	
+	var strSvcID         = "fn_D1_Save";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_PatrolCheckResultMgr-service";					
+	var strInDatasets    = "ds_Multi=ds_Multi:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_T12";
+	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ErrorCode < 0)
+	{
+		alert(ErrorMsg);
+		return;
+	}					   
+			   
+	Trace(ds_Multi.SaveXML());
+	alert(gfn_GetMessage("M000009","%AAA%","저장을"));
+}
+
+
+function grd_Multi_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(ds_Multi.GetRowType(nRow) == "insert")
+	{
+		grd_Multi.SetCellProp("body",3,"Edit","normal");	//특기사항
+		grd_Multi.SetCellProp("body",4,"Edit","checkbox");	//결재대상
+	}else
+	{
+	    if(cal_PPatrolYmd.value==today())
+	    {
+			grd_Multi.SetCellProp("body",3,"Edit","normal");		//특기사항
+			//grd_Multi.SetCellProp("body",4,"Edit","checkbox");		//결재대상
+		}
+		else
+		{
+			grd_Multi.SetCellProp("body",3,"Edit","none");		//특기사항
+			//grd_Multi.SetCellProp("body",4,"Edit","none");		//결재대상		
+		}
+	}
+}
+
+
+
+function fn_D1_Addrowm()
+{
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Addrowm()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+	ds_Multi.InsertRow(0);						//insert시 맨위에 행추가
+	ds_Multi.SetColumn(0,"PATROL_YMD",Today());
+}
+
+
+function fn_D1_Delete()
+{   
+	ds_Multi.DeleteRow(1);
+}
+
+
+function D1202010011F_T12_OnUnloadCompleted(obj)
+{
+	if(ds_Multi.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","편집중인 내용을 무시하고 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+]]></Script>
+</Window>

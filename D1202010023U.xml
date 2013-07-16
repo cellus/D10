@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1202010023U" Left="8" OnLoadCompleted="D1202010023U_OnLoadCompleted" PidAttrib="7" Title="정류기순찰점검이력조회_D1202010023U" Top="8" Ver="1.0" Width="660" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_codem"></Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="정류기순찰점검&#32;이력조회" Transparent="TRUE" Width="660"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_codem" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="395" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="297" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" Right="655" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="650">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="40"/>
+						<col width="91"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="98"/>
+						<col width="81"/>
+						<col width="128"/>
+						<col width="190"/>
+						<col width="81"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell col="1" display="normal" text="점검일자"/>
+						<cell col="2" display="text" text="계획일자"/>
+						<cell col="3" display="text" text="전압"/>
+						<cell col="4" display="text" text="전류"/>
+						<cell col="5" display="text" text="전위"/>
+						<cell col="6" display="text" text="점검대장등록여부"/>
+						<cell col="7" display="text" text="점검사항"/>
+						<cell col="8" display="text" text="점검자1" TrimType="Left"/>
+						<cell col="9" display="text" text="점검자2"/>
+						<cell col="10" display="text" text="점검자3"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expr="rowindex+1"/>
+						<cell col="1" colid="PATROL_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="PLAN_YMD" display="date"/>
+						<cell align="right" col="3" colid="VOLTAGE" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="4" colid="VOLTAIC" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="5" display="text"/>
+						<cell col="6" colid="MAINTER_REQ_YN" display="text"/>
+						<cell align="center" col="7" colid="CHK_DESC" display="text"/>
+						<cell align="center" col="8" colid="EMPID_1" display="text"/>
+						<cell align="center" col="9" colid="EMPID_2" display="text"/>
+						<cell col="10" colid="EMPID_3" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="98" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="655" TabOrder="3" Top="95" Type="Rectangle" Width="650"></Shape>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="655" TabOrder="4" Top="68" Type="Rectangle" Width="650"></Shape>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="5" Text="순찰일자" Top="71" Transparent="TRUE" Width="81"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PatrolYmd1" Left="80" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="6" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Div Height="29" Id="Div0" Left="1" TabOrder="7" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="656">
+			<Contents></Contents>
+		</Div>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PatrolYmd2" Left="180" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="8" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="C2502030010F" Left="169" Style="static" TabOrder="9" Text="~" Top="74" Width="10"></Static>
+	</Form>
+	<Script><![CDATA[/*************************************************************************************************** 
+* FormID     : D1202010023U.xml
+* Form 설명  : 정류기순찰점검이력조회 (POPUP)
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 임병태 
+* 작성일     : 2008-09-03 
+* 변경내용   : 변경일자, 변경내용,변경자 
+****************************************************************************************************/ 
+#include "JS::COMMONA10001.js";
+#include "JS::COMMOND10001.js";
+
+//---------------------------------------------------------
+//	화면변수
+//---------------------------------------------------------
+var strFaciNm;               // 시설물명  
+
+//---------------------------------------------------------
+//	화면초기화함수
+//---------------------------------------------------------
+function D1202010023U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_D1_SetGrid_Sort(grd_List);
+	fn_Init();	
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// gfn_D1_GetCodeList("ds_WorkFlag","B10010");     // 공사코드 Lov 출력
+    cal_PatrolYmd1.Text = parseInt(substr(today(), 0, 4)) - 1 + substr(today(), 4, 4);
+    cal_PatrolYmd2.Text = today();
+	
+	fn_CommonSearch();
+}
+
+//-------------------------------------------------------------------------------
+// 엑셀 버튼 실행
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	grd_List.ExportExcelEx("sheet1");
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - Print
+//---------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+
+//-------------------------------------------------------------------------------
+// 조회 버튼 실행
+//-------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	//입력한 날짜가 오늘 보다 클 경우
+	if(!fn_DateCheckToday(cal_PatrolYmd1,cal_PatrolYmd2))
+	{
+		return;
+	}
+	//TO 날짜는 FROM날짜보다 클 경우
+	if(!fn_DateCheck(cal_PatrolYmd1,cal_PatrolYmd2))
+	{
+		return;
+	}
+	// 그리드를 초기화 한다
+	gfn_SetHeadClearAll(grd_List);
+	strFaciNum = FACI_NUM;		//정류기번호
+
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1202010023U-service&find=1"
+	            + "&FACI_NUM ="  	+strFaciNum  //RC000033
+	            + "&PATROL_STYMD =" +cal_PatrolYmd1.Value 
+	            + "&PATROL_EDYMD =" +cal_PatrolYmd2.Value 
+	            ;
+	       
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_codem=ds_codem";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+
+	if(ds_codem.GetRowCount()==0) trace("조회결과가 없습니다.");
+	
+	if(ds_codem.GetRowCount()==0)
+	{
+        grd_List.NoDataText="조회결과가 없습니다.";
+    }
+
+}
+
+
+//-------------------------------------------------------------------------------
+//  Call Back 함수 
+//-------------------------------------------------------------------------------
+function fn_CallBack(srvId,ErrorCode,ErrorMsg)
+{
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+
+	if(srvId == "CommonSearch")
+	{
+		// 조회 후 처리
+
+	}
+}
+
+
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 선택
+//---------------------------------------------------------
+function fn_CommonSelect()
+{
+	var arrList = array();
+	var nRow = ds_codem.row;
+
+	// 코드, 코드명
+
+	arrList[0] = ds_codem.GetColumn(nRow,"PATROL_YMD");		// 순찰일자
+	arrList[1] = ds_codem.GetColumn(nRow,"FACI_NM");		// 시설물명
+
+	Close(arrList);
+}
+//---------------------------------------------------------
+//	그리드 cell 더블 클릭 이벤트 
+//--------------------------------------------------------- 
+function grd_List_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fn_CommonSelect();
+}
+
+//---------------------------------------------------------
+//	END OF FORM SCRIPT 
+//--------------------------------------------------------- 
+
+
+]]></Script>
+</Window>

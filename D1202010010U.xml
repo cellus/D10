@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1202010010U" Left="8" OnLoadCompleted="D1202010010U_OnLoadCompleted" PidAttrib="7" Title="굴착공사&#32;순찰점검&#32;이력조회_D1202010010U" Top="8" Ver="1.0" Width="700" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi"></Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="4" Text="굴착공사&#32;순찰점검&#32;이력조회" Transparent="TRUE" Width="700"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="395" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="297" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="695" SelColor="MENU" Style="grid_pop" TabOrder="3" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="690">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="40"/>
+						<col width="110"/>
+						<col width="78"/>
+						<col width="80"/>
+						<col width="70"/>
+						<col width="149"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell col="1" display="text" text="EOCS번호"/>
+						<cell col="2" display="text" text="점검일자"/>
+						<cell col="3" display="text" text="점검시간"/>
+						<cell col="4" display="text" text="교육유무"/>
+						<cell col="5" display="text" text="점검사항"/>
+						<cell col="6" display="text" text="점검자&#32;1"/>
+						<cell col="7" display="text" text="점검자&#32;2"/>
+						<cell col="8" display="text" text="점검자&#32;3"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expr="rowindex+1"/>
+						<cell align="center" col="1" colid="EOCS_NUM" display="text"/>
+						<cell col="2" colid="PATROL_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="CHK_TIME" display="text" edit="mask" Mask="##:##"/>
+						<cell align="center" col="4" colid="EDU_YN" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" colid="CHK_RSLT" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="6" colid="TAKER_EMPID1" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="7" colid="TAKER_EMPID2" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="8" colid="TAKER_EMPID3" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="98" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="695" TabOrder="5" Top="95" Type="Rectangle" Width="690"></Shape>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="695" TabOrder="6" Top="68" Type="Rectangle" Width="690"></Shape>
+		<Image Align="Left" Height="5" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="7" Text="순찰일자" Top="77" Transparent="TRUE" Width="81"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PPatrolYmdFrom" Left="79" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="1" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Div Height="29" Id="Div0" TabOrder="8" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="696">
+			<Contents></Contents>
+		</Div>
+		<Static Height="13" Id="C2502030010F" Left="168" Style="static" TabOrder="9" Text="~" Top="74" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PPatrolYmdTo" Left="178" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="2" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+	</Form>
+	<Script><![CDATA[/*************************************************************************************************** 
+* FormID     : D1202010010U.xml
+* Form 설명  : 굴착공사 순찰점검이력조회(POPUP)
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 임성수 
+* 작성일     : 2009-01-07 
+* 변경내용   : 변경일자, 변경내용,변경자 
+****************************************************************************************************/ 
+#include "JS::COMMONA10001.js";
+#include "JS::COMMOND10001.js";
+
+//---------------------------------------------------------
+//	화면변수선언 
+//---------------------------------------------------------
+
+function D1202010010U_OnLoadCompleted(obj) 
+{
+	gfn_LoadForm(obj);
+	gfn_D1_SetGrid_Sort(grd_List);
+	fn_init();
+}
+
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+    if (substr(today(), 4,2) == "01" || substr(today(), 4,2) == "02" || substr(today(), 4,2) == "03") {
+        
+        cal_PPatrolYmdFrom.Text = substr(today(), 0, 4) + "01" + "01";
+        cal_PPatrolYmdTo.Text = today();
+    } else if (substr(today(), 4,2) == "04" || substr(today(), 4,2) == "05" || substr(today(), 4,2) == "06") {
+    
+        cal_PPatrolYmdFrom.Text = substr(today(), 0, 4) + "04" + "01";
+        cal_PPatrolYmdTo.Text = today();
+    } else if (substr(today(), 4,2) == "07" || substr(today(), 4,2) == "08" || substr(today(), 4,2) == "09") {
+    
+        cal_PPatrolYmdFrom.Text = substr(today(), 0, 4) + "07" + "01";
+        cal_PPatrolYmdTo.Text = today();
+    } else if (substr(today(), 4,2) == "10" || substr(today(), 4,2) == "11" || substr(today(), 4,2) == "12") {
+    
+        cal_PPatrolYmdFrom.Text = substr(today(), 0, 4) + "10" + "01";
+        cal_PPatrolYmdTo.Text = today();
+    }
+    
+	fn_CommonSearch();
+}
+
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	fn_D1_Find();
+}
+
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 엑셀 Export
+//---------------------------------------------------------
+function fn_CommonExcelExport()
+{
+
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - Print
+//---------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Find()
+//   설명:  정기 검사 배관 결과를 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{	
+	//입력한 날짜가 오늘 보다 클 경우
+	if(!fn_DateCheckToday(cal_PPatrolYmdFrom,cal_PPatrolYmdTo))
+	{
+		return;
+	}
+	//TO 날짜는 FROM날짜보다 클 경우
+	if(!fn_DateCheck(cal_PPatrolYmdFrom,cal_PPatrolYmdTo))
+	{
+		return;
+	}
+	//alert(EOCS_NUM);
+	var strSvcID = "fn_D1_Find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1202010010U-service"
+	           + "&EOCS_NUM=" 			+EOCS_NUM					//EOCS번호
+	           + "&PATROL_YMD_FROM=" 	+cal_PPatrolYmdFrom.Value	//순찰일자FROM
+	           + "&PATROL_YMD_TO=" 		+cal_PPatrolYmdTo.Value		//순찰일자TO
+	           ;
+
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "find";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ds_Multi.GetRowCount()==0) trace("조회결과가 없습니다.");
+
+	
+	if(ds_Multi.GetRowCount()==0)
+	{
+        grd_List.NoDataText="조회결과가 없습니다.";
+    }
+}]]></Script>
+</Window>

@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="536" Id="D1901010010F" Left="8" OnLoadCompleted="D1901010010F_OnLoadCompleted" PidAttrib="7" Title="배관탐사실적등록_D1901010010F" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PipeRst">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_EQUIP_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_EQUIP_ETC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WEATHER" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_LAND_BD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_LAND_RD_EXP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_LAND_RD_OPN" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_LAND_ETC" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNEXPLOR_NO_PERMIT_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM3" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_BLOCK" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_UNEXPLOR_LENG_INSC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_UNEXPLOR_LENG_INSC" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALVE_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TB_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="WATERDRAIN_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNEXPLOR_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_OBJECT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TODAY_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Branch">
+				<Contents>
+					<colinfo id="KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE>0</CODE>
+						<KITEM>전체</KITEM>
+					</record>
+					<record>
+						<CODE>10</CODE>
+						<KITEM>강북지사(은평)</KITEM>
+					</record>
+					<record>
+						<CODE>20</CODE>
+						<KITEM>강북지사(마포)</KITEM>
+					</record>
+					<record>
+						<CODE>30</CODE>
+						<KITEM>남부지사</KITEM>
+					</record>
+					<record>
+						<CODE>40</CODE>
+						<KITEM>서부지사</KITEM>
+					</record>
+					<record>
+						<CODE>50</CODE>
+						<KITEM>경기지사</KITEM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipePln">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeRstCnt">
+				<Contents>
+					<colinfo id="CNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeSumRst">
+				<Contents>
+					<colinfo id="KOPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeRstNm">
+				<Contents>
+					<colinfo id="RESECH_NM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM3" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM5" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeSumRstToday">
+				<Contents>
+					<colinfo id="KOPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BranchCp">
+				<Contents>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeCnt">
+				<Contents>
+					<colinfo id="EXPLOR_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNEXPLOR_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOTAL_CNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeRstExcel">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_BLOCK" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_EQUIP_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_EQUIP_ETC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WEATHER" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_LAND" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_LAND_ETC" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNEXPLOR_NO_PERMIT_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM3" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM5" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALVE_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TB_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="WATERDRAIN_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_OBJECT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNEXPLOR_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TODAY_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_CNT_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNEXPLOR_CNT_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOTAL_CNT_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="1062" Style="table" TabOrder="193" Top="425" VAlign="Middle" Width="194" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static18" Left="132" Style="table" TabOrder="190" Top="488" VAlign="Middle" Width="1124" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static22" Left="132" Style="table" TabOrder="191" Top="509" VAlign="Middle" Width="1124" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static40" Left="132" Style="table" TabOrder="192" Top="269" VAlign="Middle" Width="1124" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static12" Left="132" Style="table" TabOrder="189" Top="467" VAlign="Middle" Width="1124" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static9" Left="124" Style="table" TabOrder="188" Top="446" VAlign="Middle" Width="1132" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static146" Left="144" Style="table" TabOrder="178" Top="425" VAlign="Middle" Width="142" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static37" Left="961" Style="table" TabOrder="170" Top="221" VAlign="Middle" Width="99" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static134" Left="124" Style="table" TabOrder="166" Top="404" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static117" Left="124" Style="table" TabOrder="155" Top="359" VAlign="Middle" Width="1132" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static27" Left="5" Style="table" TabOrder="57" Top="137" VAlign="Middle" Width="996" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static110" Left="1170" Style="table" TabOrder="152" Top="221" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static91" Left="5" Style="table" TabOrder="76" Top="200" VAlign="Middle" Width="996" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static10" Left="209" Style="table" TabOrder="151" Top="200" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static8" Left="5" Style="table" TabOrder="143" Top="179" VAlign="Middle" Width="996" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static30" Left="5" Style="table" TabOrder="58" Top="158" VAlign="Middle" Width="996" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static77" Left="960" Style="table" TabOrder="106" Top="137" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static90" Left="1059" Style="table" TabOrder="116" Top="137" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static113" Left="1170" Style="table" TabOrder="133" Top="137" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static69" Left="647" Style="table" TabOrder="89" Top="137" VAlign="Middle" Width="117" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static48" Left="756" Style="table" TabOrder="97" Top="137" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static66" Left="545" Style="table" TabOrder="86" Top="137" VAlign="Middle" Width="103" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static97" Left="319" Style="table" TabOrder="79" Top="200" VAlign="Middle" Width="131" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static94" Left="1059" Style="table" TabOrder="117" Top="158" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static95" Left="1059" Style="table" TabOrder="118" Top="179" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="23" Id="Static98" Left="1059" Style="table" TabOrder="119" Top="200" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static87" Left="960" Style="table" TabOrder="113" Top="200" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static81" Left="960" Style="table" TabOrder="110" Top="179" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static78" Left="960" Style="table" TabOrder="107" Top="158" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static59" Left="867" Style="table" TabOrder="103" Top="137" VAlign="Middle" Width="95" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static75" Left="867" Style="table" TabOrder="104" Top="158" VAlign="Middle" Width="95" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static83" Left="867" Style="table" TabOrder="112" Top="200" VAlign="Middle" Width="95" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static80" Left="867" Style="table" TabOrder="109" Top="179" VAlign="Middle" Width="95" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static86" Left="647" Style="table" TabOrder="94" Top="200" VAlign="Middle" Width="117" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static73" Left="647" Style="table" TabOrder="92" Top="179" VAlign="Middle" Width="117" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static70" Left="647" Style="table" TabOrder="90" Top="158" VAlign="Middle" Width="117" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static85" Left="545" Style="table" TabOrder="93" Top="200" VAlign="Middle" Width="103" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static72" Left="545" Style="table" TabOrder="91" Top="179" VAlign="Middle" Width="103" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static67" Left="545" Style="table" TabOrder="87" Top="158" VAlign="Middle" Width="103" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static24" Left="5" Style="table" TabOrder="80" Top="74" VAlign="Middle" Width="996" WordWrap="TRUE"></Static>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1256" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="52" Top="30" Type="RoundRect" Width="1251"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1251" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="53" Top="35" Type="Rectangle" Width="1241"></Shape>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static4" Left="124" Style="table" TabOrder="51" Top="317" VAlign="Middle" Width="1132" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static21" Left="5" Style="table_indis" TabOrder="41" Text="특기사항" Top="509" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static23" Left="5" Style="table_indis" TabOrder="42" Text="탐사자1" Top="269" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static16" Left="252" Style="table_indis" TabOrder="43" Text="탐사자2" Top="269" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static1" Left="5" Style="table_indis" TabOrder="44" Text="지형변경" Top="467" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static3" Left="5" Style="table_indis" TabOrder="45" Text="탐사불가사유" Top="488" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="124" Style="table" TabOrder="47" Top="338" VAlign="Middle" Width="1132" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static11" Left="647" Style="table_indis" TabOrder="46" Text="신규불탐(본관)" Top="317" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static13" Left="5" Style="table_indis" TabOrder="48" Text="탐사장비" Top="446" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static14" Left="5" Style="table_indis" TabOrder="49" Text="탐불탐사(본관)" Top="338" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static5" Left="5" Style="table_indis" TabOrder="50" Text="신규탐사(본관)" Top="317" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="54" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1260">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_Indis" TabOrder="55" Text="지사" Top="40" Width="119"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" ImeMode="none" INDEX="0" Left="56" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="1" Top="40" Width="127"></Combo>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="351" LeftMargin="12" Style="blt_search_Indis" TabOrder="56" Text="탐사일자" Top="40" Width="119"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ExplorYmd" Left="416" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="35" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static31" Left="5" Style="table" TabOrder="59" Top="95" VAlign="Middle" Width="996" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static32" Left="5" Style="table" TabOrder="60" Top="116" VAlign="Middle" Width="996" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static34" Left="96" Style="table" TabOrder="61" Text="대상_계획(m)" Top="74" VAlign="Middle" Width="354" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="43" Id="Static36" Left="5" Style="table" TabOrder="62" Text="구분" Top="74" VAlign="Middle" Width="92" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="43" Id="Static38" Left="5" Style="table" TabOrder="63" Text="탐사&#10;연장" Top="116" VAlign="Middle" Width="92" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="43" Id="Static39" Left="5" Style="table" TabOrder="64" Text="탐사&#10;불가" Top="158" VAlign="Middle" Width="92" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static42" Left="96" Style="table" TabOrder="65" Top="116" VAlign="Middle" Width="118" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static33" Left="96" Style="table" TabOrder="66" Text="본관" Top="95" VAlign="Middle" Width="114" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static51" Left="209" Style="table" TabOrder="67" Text="공급관" Top="95" VAlign="Middle" Width="111" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static52" Left="319" Style="table" TabOrder="68" Text="소계" Top="95" VAlign="Middle" Width="131" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static60" Left="209" Style="table" TabOrder="69" Top="116" VAlign="Middle" Width="111" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static63" Left="319" Style="table" TabOrder="70" Top="116" VAlign="Middle" Width="131" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="71" Text="배관탐사결과&#32;등록" Top="254" Width="122"></Image>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static84" Left="330" Style="table_indis" TabOrder="72" Text="신규탐사(공급관)" Top="317" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static15" Left="330" Style="table_indis" TabOrder="73" Text="탐불탐사(공급관)" Top="338" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static17" Left="955" Style="table_indis" TabOrder="74" Text="신불탐(공급관)" Top="317" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static19" Left="647" Style="table_indis" TabOrder="75" Text="날씨" Top="359" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="RESECH_BLOCK" Height="18" Id="edt_ResechBlock" Left="147" MaxLength="100" Style="edit_Indis" TabOrder="20" Top="361" Width="498"></Edit>
+		<Checkbox Height="12" Id="chk_ExplorEquipCd" Left="148" OnClick="chk_ExplorEquipCd_OnClick" Style="checkbox" TabOrder="25" Text="SURE-LOCK" Top="451" Width="91"></Checkbox>
+		<Checkbox Height="12" Id="chk_ExplorEquipEtc" Left="247" OnClick="chk_ExplorEquipEtc_OnClick" Style="checkbox" TabOrder="26" Text="기타" Top="451" Value="FALSE" Width="91"></Checkbox>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="EXPLOR_EQUIP_ETC" Enable="FALSE" Height="18" Id="edt_EquipEtc" Left="294" MaxLength="20" Style="edit_Indis" TabOrder="27" Top="448" Width="231"></Edit>
+		<Checkbox BindDataset="ds_PipeRst" Column="CHG_LAND_BD" Height="12" Id="chk_ChgLandBd" Left="147" Style="checkbox" TabOrder="28" Text="신축건물(아파트,업무빌딩&#32;등)" Top="472" Width="181"></Checkbox>
+		<Checkbox BindDataset="ds_PipeRst" Column="CHG_LAND_RD_EXP" Height="12" Id="chk_ChgLandRdExp" Left="336" Style="checkbox" TabOrder="29" Text="도로확장" Top="472" Value="FALSE" Width="71"></Checkbox>
+		<Checkbox BindDataset="ds_PipeRst" Column="CHG_LAND_RD_OPN" Height="12" Id="chk_ChgLandRdOpn" Left="413" Style="checkbox" TabOrder="30" Text="도로개설" Top="472" Value="FALSE" Width="71"></Checkbox>
+		<Checkbox Height="12" Id="chk_ChgLandEtc" Left="487" OnClick="chk_ChgLandEtc_OnClick" Style="checkbox" TabOrder="31" Text="기타" Top="472" Value="FALSE" Width="46"></Checkbox>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="CHG_LAND_ETC" Enable="FALSE" Height="18" Id="edt_LandEtc" Left="534" Style="edit_Indis" TabOrder="32" Top="469" Width="127"></Edit>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="UNEXPLOR_NO_PERMIT_WHY" Height="18" Id="edt_UnexplorNoPermitWhy" Left="147" MaxLength="330" Style="edit_Indis" TabOrder="33" Top="490" Width="1106"></Edit>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="EXPLOR_RMK" Height="18" Id="edt_ExplorRmk" Left="147" MaxLength="330" Style="edit_Indis" TabOrder="34" Top="511" Width="1106"></Edit>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="RESECH_NM1" Height="18" Id="edt_ResechEmpid1" Left="147" MaxLength="6" Style="edit_Indis" TabOrder="7" Top="271" Width="103"></Edit>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="RESECH_NM2" Height="18" Id="edt_ResechEmpid2" Left="394" MaxLength="6" Style="edit_Indis" TabOrder="8" Top="271" Width="103"></Edit>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="43" Id="Static92" Left="5" Style="table" TabOrder="77" Text="합계" Top="200" VAlign="Middle" Width="92" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static93" Left="96" Style="table" TabOrder="78" Top="200" VAlign="Middle" Width="114" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static25" Left="449" Style="table" TabOrder="81" Text="금일실적(m)" Top="74" VAlign="Middle" Width="419" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static47" Left="449" Style="table" TabOrder="82" Text="구분" Top="95" VAlign="Middle" Width="97" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static53" Left="545" Style="table" TabOrder="83" Text="본관" Top="95" VAlign="Middle" Width="103" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static54" Left="647" Style="table" TabOrder="84" Text="공급관" Top="95" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static55" Left="545" Style="table" TabOrder="85" Top="116" VAlign="Middle" Width="111" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static68" Left="647" Style="table" TabOrder="88" Top="116" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static26" Left="867" Style="table" TabOrder="95" Text="탐사실적(m)" Top="74" VAlign="Middle" Width="389" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static41" Left="756" Style="table" TabOrder="96" Top="116" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static50" Left="756" Style="table" TabOrder="99" Text="소계" Top="95" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static56" Left="867" Style="table" TabOrder="100" Text="본관" Top="95" VAlign="Middle" Width="95" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static57" Left="961" Style="table" TabOrder="101" Text="공급관" Top="95" VAlign="Middle" Width="99" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static58" Left="867" Style="table" TabOrder="102" Top="116" VAlign="Middle" Width="95" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static76" Left="961" Style="table" TabOrder="105" Top="116" VAlign="Middle" Width="99" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static79" Left="756" Style="table" TabOrder="108" Top="179" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static82" Left="756" Style="table" TabOrder="111" Top="200" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static88" Left="1059" Style="table" TabOrder="114" Text="소계" Top="95" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static89" Left="1059" Style="table" TabOrder="115" Top="116" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static7" Left="5" Style="table_indis" TabOrder="120" Text="조사구간" Top="359" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static28" Left="209" Style="table" TabOrder="121" Top="158" VAlign="Middle" Width="119" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static20" Left="499" Style="table_indis" TabOrder="122" Text="탐사자3" Top="269" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="RESECH_NM3" Height="18" Id="edt_ResechEmpid3" Left="641" MaxLength="6" Style="edit_Indis" TabOrder="9" Top="271" Width="103"></Edit>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static62" Left="746" Style="table_indis" TabOrder="123" Text="탐사자4" Top="269" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="RESECH_NM4" Height="18" Id="edt_ResechEmpid4" Left="888" MaxLength="6" Style="edit_Indis" TabOrder="10" Top="271" Width="103"></Edit>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static65" Left="993" Style="table_indis" TabOrder="124" Text="탐사자5" Top="269" VAlign="Middle" Width="147" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="RESECH_NM5" Height="18" Id="edt_ResechEmpid5" Left="1142" MaxLength="6" Style="edit_Indis" TabOrder="11" Top="271" Width="111"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_SearchCar" ImageID="btn_4" Left="1180" LeftMargin="21" OnClick="btn_SearchCar_OnClick" Style="button" TabOrder="125" Text="차량운행" Top="246" Width="75"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button0" ImageID="btn_4" Left="1103" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="126" Text="탐사일지" Top="246" Width="75"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button1" ImageID="btn_4" Left="1026" LeftMargin="21" OnClick="Button1_OnClick" Style="button" TabOrder="127" Text="전자결재" Top="246" Width="75"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" EscapeButton="TRUE" Height="19" Id="btn_gis" ImageID="btn_5_gis" Left="927" LeftMargin="21" OnClick="btn_gis_OnClick" Style="button" TabOrder="128" TabStop="FALSE" Text="GIS&#32;위치보기" Top="246" Width="98"></Button>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static96" Left="124" Style="table" TabOrder="130" Top="293" VAlign="Middle" Width="1132" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static100" Left="5" Style="table" TabOrder="129" Text="결재진행상태" Top="293" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static101" Left="746" Style="table" TabOrder="131" Text="결재일자" Top="293" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static112" Left="1170" Style="table" TabOrder="132" Top="116" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static114" Left="1170" Style="table" TabOrder="134" Top="158" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static115" Left="1170" Style="table" TabOrder="135" Text="진행률(%)" Top="95" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static121" Left="1170" Style="table" TabOrder="136" Top="179" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static99" Left="449" Style="table" TabOrder="138" Text="신규탐사" Top="116" VAlign="Middle" Width="97" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static102" Left="449" Style="table" TabOrder="139" Text="신규불탐" Top="137" VAlign="Middle" Width="97" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static105" Left="319" Style="table" TabOrder="142" Top="158" VAlign="Middle" Width="131" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static29" Left="1059" Style="table" TabOrder="148" Top="221" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static43" Left="867" Style="table" TabOrder="147" Top="221" VAlign="Middle" Width="95" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static61" Left="647" Style="table" TabOrder="145" Top="221" VAlign="Middle" Width="117" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static64" Left="545" Style="table" TabOrder="144" Top="221" VAlign="Middle" Width="103" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static109" Left="756" Style="table" TabOrder="146" Top="221" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static106" Left="449" Style="table" TabOrder="149" Text="탐사누계" Top="200" VAlign="Middle" Width="97" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static111" Left="449" Style="table" TabOrder="150" Text="불탐누계" Top="221" VAlign="Middle" Width="97" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static104" Left="449" Style="table" TabOrder="140" Text="탐사" Top="158" VAlign="Middle" Width="97" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static103" Left="449" Style="table" TabOrder="141" Text="탐불불탐" Top="179" VAlign="Middle" Width="97" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static49" Left="756" Style="table" TabOrder="98" Top="158" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static122" Left="1170" Style="table" TabOrder="137" Top="200" VAlign="Middle" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static107" Left="647" Style="table_indis" TabOrder="153" Text="탐불불탐(본관)" Top="338" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="user1" Height="22" Id="Static116" Left="955" Style="table_indis" TabOrder="154" Text="탐불불탐(공급관)" Top="338" VAlign="Middle" Width="140" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static118" Left="124" Style="table" TabOrder="156" Top="540" VAlign="Middle" Visible="FALSE" Width="1132" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static119" Left="5" Style="table" TabOrder="157" Text="시설물&#32;수정" Top="540" VAlign="Middle" Visible="FALSE" Width="140" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static123" Left="470" Style="table" TabOrder="158" Text="T/B" Top="540" VAlign="Middle" Visible="FALSE" Width="86" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static124" Left="786" Style="table" TabOrder="159" Text="수취기" Top="540" VAlign="Middle" Visible="FALSE" Width="99" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static125" Left="450" TabOrder="160" Text="EA" Top="546" Visible="FALSE" Width="18"></Static>
+		<Static Height="13" Id="Static126" Left="767" TabOrder="161" Text="EA" Top="545" Visible="FALSE" Width="18"></Static>
+		<Static Height="13" Id="Static127" Left="1064" TabOrder="162" Text="EA" Top="545" Visible="FALSE" Width="18"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static128" Left="124" Style="table" TabOrder="163" Top="383" VAlign="Middle" Width="876" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="43" Id="Static129" Left="64" Style="table" TabOrder="164" Text="구분" Top="383" VAlign="Middle" Width="81" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="64" Id="Static130" Left="5" Style="table" TabOrder="165" Text="배관&#10;탐사&#10;의뢰" Top="383" VAlign="Middle" Width="60" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static136" Left="64" Style="table" TabOrder="167" Text="건수" Top="425" VAlign="Middle" Width="81" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_PipeRst" Border="Flat" Column="WEATHER" Height="18" Id="cob_Weather" INDEX="0" Left="788" Style="combo_indis" TabOrder="21" Top="360" Width="166"></Combo>
+		<Grid AutoEnter="TRUE" BindDataset="ds_PipeRstExcel" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="672" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="108" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" Right="4235" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="168" TabStop="true" Top="564" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="4230">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="96"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="142"/>
+						<col width="118"/>
+						<col width="133"/>
+						<col width="125"/>
+						<col width="105"/>
+						<col width="114"/>
+						<col width="105"/>
+						<col width="113"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="300"/>
+						<col width="140"/>
+						<col width="140"/>
+						<col width="300"/>
+						<col width="300"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="95"/>
+						<col width="107"/>
+					</columns>
+					<head>
+						<cell align="center" col="0" display="text" rowspan="2" text="탐사일자"/>
+						<cell col="1" display="text" rowspan="2" text="지사"/>
+						<cell col="2" display="text" rowspan="2" text="시/구"/>
+						<cell col="3" display="text" rowspan="2" text="본관탐사&#32;연장(m)"/>
+						<cell col="4" display="text" rowspan="2" text="본관탐사&#32;불가(m)"/>
+						<cell col="5" display="text" rowspan="2" text="공급관탐사&#32;연장(m)"/>
+						<cell col="6" display="text" rowspan="2" text="공급관탐사&#32;불가(m)"/>
+						<cell col="7" display="text" rowspan="2" text="본관&#32;신불탐(m)"/>
+						<cell col="8" display="text" rowspan="2" text="공급관&#32;신불탐(m)"/>
+						<cell col="9" display="text" rowspan="2" text="본관&#32;탐사불탐(m)"/>
+						<cell col="10" display="text" rowspan="2" text="공급관&#32;탐사불탐(m)"/>
+						<cell col="11" display="text" rowspan="2" text="날씨"/>
+						<cell col="12" colspan="3" display="text" text="시설물수정"/>
+						<cell col="15" display="text" rowspan="2" text="탐사대상(건)"/>
+						<cell col="16" colspan="3" display="text" text="금일실적"/>
+						<cell col="16" display="text" row="1" text="탐사"/>
+						<cell col="17" display="text" row="1" text="탐사불가"/>
+						<cell col="21" display="text" row="1" text="소계"/>
+						<cell col="19" colspan="3" display="text" text="탐사실적"/>
+						<cell col="22" display="text" rowspan="2" text="조사구간"/>
+						<cell col="23" display="text" rowspan="2" text="탐사장비"/>
+						<cell col="24" display="text" rowspan="2" text="지형변경"/>
+						<cell col="25" display="text" rowspan="2" text="탐사불가&#32;사유"/>
+						<cell col="26" display="text" rowspan="2" text="특기사항"/>
+						<cell col="27" display="text" rowspan="2" text="탐사자1"/>
+						<cell col="28" display="text" rowspan="2" text="탐사자2"/>
+						<cell col="29" display="text" rowspan="2" text="탐사자3"/>
+						<cell col="30" display="text" rowspan="2" text="탐사자4"/>
+						<cell col="31" display="text" rowspan="2" text="탐사자5"/>
+						<cell col="32" display="text" rowspan="2" text="결재진행상태"/>
+						<cell col="33" display="text" rowspan="2" text="결재일자"/>
+						<cell col="12" display="text" row="1" text="밸브(EA)"/>
+						<cell col="13" display="text" row="1" text="T/B(EA)"/>
+						<cell col="14" display="text" row="1" text="수취기(EA)"/>
+						<cell col="18" display="text" row="1" text="소계"/>
+						<cell col="19" display="text" row="1" text="탐사"/>
+						<cell col="20" display="text" row="1" text="탐사불가"/>
+					</head>
+					<body>
+						<cell col="0" colid="EXPLOR_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="2" colid="ZIP_NM" display="text"/>
+						<cell align="right" col="3" colid="KOPIPE_EXPLOR_LENG" display="number"/>
+						<cell align="right" col="4" colid="KOPIPE_UNEXPLOR_LENG" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="5" colid="MPIPE_EXPLOR_LENG" display="number"/>
+						<cell align="right" col="6" colid="MPIPE_UNEXPLOR_LENG" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="7" colid="NEW_KOPIPE_UNEXPLOR_LENG" display="number"/>
+						<cell align="right" col="8" colid="NEW_MPIPE_UNEXPLOR_LENG" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="9" colid="KOPIPE_UNEXPLOR_LENG_INSC" display="number"/>
+						<cell align="right" col="10" colid="MPIPE_UNEXPLOR_LENG_INSC" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="11" colid="WEATHER" display="text"/>
+						<cell align="center" col="12" colid="VALVE_CNT" display="text"/>
+						<cell align="center" col="13" colid="TB_CNT" display="text"/>
+						<cell align="center" col="14" colid="WATERDRAIN_CNT" display="text"/>
+						<cell align="center" col="15" colid="EXPLOR_OBJECT_CNT" display="text"/>
+						<cell align="center" col="16" colid="EXPLOR_CNT" display="text"/>
+						<cell align="center" col="17" colid="UNEXPLOR_CNT" display="text"/>
+						<cell align="center" col="18" colid="TODAY_CNT" display="text"/>
+						<cell align="center" col="19" colid="EXPLOR_CNT_1" display="text"/>
+						<cell align="center" col="20" colid="UNEXPLOR_CNT_1" display="text"/>
+						<cell align="center" col="21" colid="TOTAL_CNT_1" display="text"/>
+						<cell align="left" col="22" colid="RESECH_BLOCK" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="23" colid="EXPLOR_EQUIP_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="24" colid="CHG_LAND" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="25" colid="UNEXPLOR_NO_PERMIT_WHY" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="26" colid="EXPLOR_RMK" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="27" colid="RESECH_NM1" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="28" colid="RESECH_NM2" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="29" colid="RESECH_NM3" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="30" colid="RESECH_NM4" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="31" colid="RESECH_NM5" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="32" colid="DECIDE_PROC_STS" display="text"/>
+						<cell align="center" col="33" colid="DECIDE_YMD" display="text"/>
+					</body>
+					<summary>
+						<cell col="0" display="text"/>
+						<cell col="1" display="text"/>
+						<cell col="2" display="text"/>
+						<cell align="right" col="3" display="number" expr='SumNF(&quot;KOPIPE_EXPLOR_LENG&quot;)'/>
+						<cell align="right" col="4" display="number" expr='SumNF(&quot;KOPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="5" display="number" expr='SumNF(&quot;MPIPE_EXPLOR_LENG&quot;)'/>
+						<cell align="right" col="6" display="number" expr='SumNF(&quot;MPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="7" display="number" expr='SumNF(&quot;NEW_KOPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="8" display="number" expr='SumNF(&quot;NEW_MPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="9" display="number" expr='SumNF(&quot;KOPIPE_UNEXPLOR_LENG_INSC&quot;)'/>
+						<cell align="right" col="10" display="number" expr='SumNF(&quot;MPIPE_UNEXPLOR_LENG_INSC&quot;)'/>
+						<cell col="11" display="text"/>
+						<cell col="12" display="text"/>
+						<cell col="13" display="text"/>
+						<cell col="14" display="text"/>
+						<cell col="15" display="text"/>
+						<cell col="16" display="text"/>
+						<cell col="17" display="text"/>
+						<cell col="18" display="text"/>
+						<cell col="19" display="text"/>
+						<cell col="20" display="text"/>
+						<cell col="21" display="text"/>
+						<cell col="22" display="text"/>
+						<cell col="23" display="text"/>
+						<cell col="24" display="text"/>
+						<cell col="25" display="text"/>
+						<cell col="26" display="text"/>
+						<cell col="27" display="text"/>
+						<cell col="28" display="text"/>
+						<cell col="29" display="text"/>
+						<cell col="30" display="text"/>
+						<cell col="31" display="text"/>
+						<cell col="32" display="text"/>
+						<cell col="33" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_History" ImageID="btn_6_Info" Left="822" LeftMargin="21" OnClick="btn_History_OnClick" Style="button" TabOrder="169" Text="&#32;탐사이력조회" Top="246" Width="104"></Button>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static44" Left="96" Style="table" TabOrder="171" Top="158" VAlign="Middle" Width="114" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static120" Left="144" Style="table" TabOrder="172" Text="밸&#32;브" Top="540" VAlign="Middle" Visible="FALSE" Width="77" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="43" Id="Static131" Left="144" Style="table" TabOrder="173" Text="탐사대상" Top="383" VAlign="Middle" Width="142" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static148" Left="768" Style="table" TabOrder="174" Top="425" VAlign="Middle" Width="146" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static145" Left="567" Style="table" TabOrder="175" Top="425" VAlign="Middle" Width="202" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static144" Left="410" Style="table" TabOrder="176" Top="425" VAlign="Middle" Width="158" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static143" Left="285" Style="table" TabOrder="177" Top="425" VAlign="Middle" Width="126" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static132" Left="285" Style="table" TabOrder="179" Text="금일실적" Top="383" VAlign="Middle" Width="592" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static138" Left="285" Style="table" TabOrder="181" Text="탐&#32;사" Top="404" VAlign="Middle" Width="126" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static137" Left="410" Style="table" TabOrder="182" Text="탐사불가" Top="404" VAlign="Middle" Width="158" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static140" Left="567" Style="table" TabOrder="183" Text="소&#32;계" Top="404" VAlign="Middle" Width="202" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static139" Left="768" Style="table" TabOrder="184" Text="탐&#32;사" Top="404" VAlign="Middle" Width="146" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static141" Left="913" Style="table" TabOrder="185" Text="탐사불가" Top="404" VAlign="Middle" Width="158" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static142" Left="1062" Style="table" TabOrder="186" Text="합&#32;계" Top="404" VAlign="Middle" Width="194" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static133" Left="768" Style="table" TabOrder="180" Text="탐사실적" Top="383" VAlign="Middle" Width="488" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="913" Style="table" TabOrder="187" Top="425" VAlign="Middle" Width="150" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="DECIDE_PROC_STS" Enable="FALSE" Height="18" Id="Edit0" Left="147" OnCharChanged="fn_D1_TodaySum" Style="edit_Indis" TabOrder="39" Top="295" Width="597"></Edit>
+		<Edit BindDataset="ds_PipeRst" Border="Flat" Column="DECIDE_YMD" Enable="FALSE" Height="18" Id="Edit2" Left="888" OnCharChanged="fn_D1_TodaySum" Style="edit_Indis" TabOrder="40" Top="295" Width="365"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_PipeRst" Border="Flat" Column="WATERDRAIN_CNT" Height="18" Id="edt_WaterCnt" Left="887" MaxLength="13" OnCharChanged="D10_Comma" Style="edit_Indis" TabOrder="38" Top="542" Visible="FALSE" Width="175"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_PipeRst" Border="Flat" Column="TB_CNT" Height="18" Id="edt_TbCnt" Left="558" MaxLength="13" OnCharChanged="D10_Comma" Style="edit_Indis" TabOrder="37" Top="542" Visible="FALSE" Width="207"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_PipeRst" Border="Flat" Column="VALVE_CNT" Height="18" Id="edt_ValveCnt" Left="223" MaxLength="13" OnCharChanged="D10_Comma" Style="edit_Indis" TabOrder="36" Top="542" Visible="FALSE" Width="224"></Edit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipePln" Border="Flat" BorderColor="user2" Color="user1" Column="KOPIPE_EXPLOR_LENG" Enable="FALSE" Height="18" Id="edt_KopipeExplorLengPln" Left="99" MaxLength="10" OnCharChanged="fn_D1_PlnSum" Style="edit_Indis" TabOrder="3" Top="129" Value="MaskEdit0" Width="108"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipePln" Border="Flat" BorderColor="user2" Color="user1" Column="KOPIPE_UNEXPLOR_LENG" Enable="FALSE" Height="18" Id="edt_KopipeUnExplorLengPln" Left="99" MaxLength="10" OnCharChanged="fn_D1_PlnSum" Style="edit_Indis" TabOrder="5" Top="171" Value="MaskEdit0" Width="108"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_KopipeSumLengPln" Left="99" MaxLength="10" Style="edit_Indis" TabOrder="194" Top="212" Value="MaskEdit0" Width="108"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_MpipeSumLengPln" Left="212" MaxLength="10" Style="edit_Indis" TabOrder="195" Top="212" Value="MaskEdit0" Width="105"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipePln" Border="Flat" BorderColor="user2" Color="user1" Column="MPIPE_UNEXPLOR_LENG" Enable="FALSE" Height="18" Id="edt_MpipeUnExplorLengPln" Left="211" MaxLength="10" OnCharChanged="fn_D1_PlnSum" Style="edit_Indis" TabOrder="6" Top="171" Value="MaskEdit0" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipePln" Border="Flat" BorderColor="user2" Color="user1" Column="MPIPE_EXPLOR_LENG" Enable="FALSE" Height="18" Id="edt_MpipeExplorLengPln" Left="211" MaxLength="10" OnCharChanged="fn_D1_PlnSum" Style="edit_Indis" TabOrder="4" Top="129" Value="MaskEdit0" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_TotalLengPln" Left="322" Style="edit_Indis" TabOrder="198" Top="212" Value="MaskEdit0" Width="125"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_UnExplorSumLengPln" Left="322" Style="edit_Indis" TabOrder="197" Top="171" Value="MaskEdit0" Width="125"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_ExplorSumLengPln" Left="322" Style="edit_Indis" TabOrder="196" Top="129" Value="MaskEdit0" Width="125"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_KopipeExplorLengToday" Left="548" MaxLength="10" Style="edit_Indis" TabOrder="199" Top="118" Width="97"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_NewKopipeUnExplorLengToday" Left="548" MaxLength="10" Style="edit_Indis" TabOrder="200" Top="139" Width="97"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_KopipeUnExplorLengToday" Left="548" MaxLength="10" Style="edit_Indis" TabOrder="201" Top="160" Width="97"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_KopipeUnexplorLengInscToday" Left="548" MaxLength="10" Style="edit_Indis" TabOrder="202" Top="181" Width="97"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_KopipeSumLengToday" Left="548" MaxLength="10" Style="edit_Indis" TabOrder="203" Top="202" Width="97"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_KopipeInscSumLengToday" Left="548" MaxLength="10" Style="edit_Indis" TabOrder="204" Top="223" Width="97"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_MpipeExplorLengToday" Left="650" MaxLength="10" Style="edit_Indis" TabOrder="205" Top="118" Width="104"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_NewMpipeUnExplorLengToday" Left="650" MaxLength="10" Style="edit_Indis" TabOrder="206" Top="139" Width="104"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_MpipeUnExplorLengToday" Left="650" MaxLength="10" Style="edit_Indis" TabOrder="207" Top="160" Width="104"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_MpipeUnexplorLengInscToday" Left="650" MaxLength="10" Style="edit_Indis" TabOrder="208" Top="181" Width="104"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_MpipeSumLengToday" Left="650" MaxLength="10" Style="edit_Indis" TabOrder="209" Top="202" Width="104"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_MpipeInscSumLengToday" Left="650" MaxLength="10" Style="edit_Indis" TabOrder="210" Top="223" Width="104"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_ExplorSumLengToday" Left="759" Style="edit_Indis" TabOrder="211" Top="118" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_NewUnExplorSumLengToday" Left="759" Style="edit_Indis" TabOrder="212" Top="139" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_UnExplorSumLengToday" Left="759" Style="edit_Indis" TabOrder="213" Top="160" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_UnExplorInscSumLengToday" Left="759" Style="edit_Indis" TabOrder="214" Top="181" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_TotalLengToday" Left="759" Style="edit_Indis" TabOrder="215" Top="202" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_TotalInscLengToday" Left="759" Style="edit_Indis" TabOrder="216" Top="223" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeSumRst" Border="Flat" BorderColor="user2" Color="user1" Column="KOPIPE_EXPLOR_LENG" Enable="FALSE" Height="18" Id="edt_KopipeExplorLengRst" Left="870" MaxLength="10" Style="edit_Indis" TabOrder="217" Top="118" Width="89"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeSumRst" Border="Flat" BorderColor="user2" Color="user1" Column="NEW_KOPIPE_UNEXPLOR_LENG" Enable="FALSE" Height="18" Id="edt_NewKopipeUnExplorLengRst" Left="870" MaxLength="10" Style="edit_Indis" TabOrder="218" Top="139" Width="89"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeSumRst" Border="Flat" BorderColor="user2" Color="user1" Column="KOPIPE_UNEXPLOR_LENG" Enable="FALSE" Height="18" Id="edt_KopipeUnExplorLengRst" Left="870" MaxLength="10" Style="edit_Indis" TabOrder="219" Top="160" Width="89"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_KopipeUnexplorLengInscRst" Left="870" MaxLength="10" Style="edit_Indis" TabOrder="220" Top="181" Width="89"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_KopipeSumLengRst" Left="870" MaxLength="10" Style="edit_Indis" TabOrder="221" Top="202" Width="89"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_KopipeInscSumLengRst" Left="870" MaxLength="10" Style="edit_Indis" TabOrder="222" Top="223" Width="89"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeSumRst" Border="Flat" BorderColor="user2" Color="user1" Column="MPIPE_EXPLOR_LENG" Enable="FALSE" Height="18" Id="edt_MpipeExplorLengRst" Left="964" MaxLength="10" Style="edit_Indis" TabOrder="223" Top="118" Width="93"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeSumRst" Border="Flat" BorderColor="user2" Color="user1" Column="NEW_MPIPE_UNEXPLOR_LENG" Enable="FALSE" Height="18" Id="edt_NewMpipeUnExplorLengRst" Left="964" MaxLength="10" Style="edit_Indis" TabOrder="224" Top="139" Width="93"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeSumRst" Border="Flat" BorderColor="user2" Color="user1" Column="MPIPE_UNEXPLOR_LENG" Enable="FALSE" Height="18" Id="edt_MpipeUnExplorLengRst" Left="964" MaxLength="10" Style="edit_Indis" TabOrder="225" Top="160" Width="93"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_MpipeUnexplorLengInscRst" Left="964" MaxLength="10" Style="edit_Indis" TabOrder="226" Top="181" Width="93"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_MpipeSumLengRst" Left="964" MaxLength="10" Style="edit_Indis" TabOrder="227" Top="202" Width="93"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_MpipeInscSumLengRst" Left="964" MaxLength="10" Style="edit_Indis" TabOrder="228" Top="223" Width="93"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_ExplorSumLengRst" Left="1062" Style="edit_Indis" TabOrder="229" Top="118" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_NewUnExplorSumLengRst" Left="1062" Style="edit_Indis" TabOrder="230" Top="139" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_UnExplorSumLengRst" Left="1062" Style="edit_Indis" TabOrder="231" Top="160" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_UnExplorInscSumLengRst" Left="1062" Style="edit_Indis" TabOrder="232" Top="181" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_TotalLengRst" Left="1062" Style="edit_Indis" TabOrder="233" Top="202" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" Enable="FALSE" Height="18" Id="edt_TotalInscLengRst" Left="1062" Style="edit_Indis" TabOrder="234" Top="223" Width="106"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" DecimalLen="2" Enable="FALSE" Height="18" Id="edt_ExplorSumLengRt" Left="1173" MaxLength="10" Style="edit_Indis" TabOrder="235" Top="118" Width="80"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" DecimalLen="2" Enable="FALSE" Height="18" Id="edt_UnExplorSumLengRt" Left="1173" MaxLength="10" Style="edit_Indis" TabOrder="236" Top="160" Width="80"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user2" Color="user1" DecimalLen="2" Enable="FALSE" Height="18" Id="edt_TotalLengRt" Left="1173" MaxLength="10" Style="edit_Indis" TabOrder="237" Top="202" Width="80"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="KOPIPE_EXPLOR_LENG" Height="18" Id="edt_KopipeExplorLeng" Left="147" MaxLength="8" OnCharChanged="fn_D1_TodaySum" Style="edit_Indis" TabOrder="12" Top="319" Value="MaskEdit0" Width="181"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="KOPIPE_UNEXPLOR_LENG" Height="18" Id="edt_KopipeUnexplorLeng" Left="147" MaxLength="8" OnCharChanged="fn_D1_TodaySum" Style="edit_Indis" TabOrder="16" Top="340" Width="181"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="MPIPE_EXPLOR_LENG" Height="18" Id="edt_MpipeExplorLeng" Left="472" MaxLength="8" OnCharChanged="fn_D1_TodaySum" Style="edit_Indis" TabOrder="13" Top="319" Width="173"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="MPIPE_UNEXPLOR_LENG" Height="18" Id="edt_MpipeUnexplorLeng" Left="472" MaxLength="8" OnCharChanged="fn_D1_TodaySum" Style="edit_Indis" TabOrder="17" Top="340" Width="173"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="NEW_KOPIPE_UNEXPLOR_LENG" Height="18" Id="edt_NewKopipeUnexplorLeng" Left="789" MaxLength="8" OnCharChanged="fn_D1_TodaySum" Style="edit_Indis" TabOrder="14" Top="319" Width="164"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="KOPIPE_UNEXPLOR_LENG_INSC" Height="18" Id="edt_KopipeUnexplorLengInsc" Left="789" MaxLength="8" OnCharChanged="fn_D1_TodaySum" Style="edit_Indis" TabOrder="18" Top="340" Width="164"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="NEW_MPIPE_UNEXPLOR_LENG" Height="18" Id="edt_NewMpipeUnexplorLeng" Left="1097" MaxLength="8" OnCharChanged="fn_D1_TodaySum" Style="edit_Indis" TabOrder="15" Top="319" Width="156"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="MPIPE_UNEXPLOR_LENG_INSC" Height="18" Id="edt_MpipeUnexplorLengInsc" Left="1097" MaxLength="8" OnCharChanged="fn_D1_TodaySum" Style="edit_Indis" TabOrder="19" Top="340" Width="156"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="UNEXPLOR_CNT" Height="18" Id="edt_UnexplorCnt" Left="413" MaxLength="8" OnCharChanged="fn_D1_ObjectCnt" Style="edit_Indis" TabOrder="24" Top="427" Value="MaskEdit0" Width="152"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="TODAY_CNT" Enable="FALSE" Height="18" Id="edt_TodaySum" Left="570" MaxLength="12" Style="edit_Indis" TabOrder="238" Top="427" Value="MaskEdit0" Width="196"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeCnt" Border="Flat" BorderColor="user2" Color="user1" Column="EXPLOR_CNT" Enable="FALSE" Height="18" Id="edt_ExplorTotalCnt" Left="771" Style="edit_Indis" TabOrder="239" Top="427" Value="MaskEdit0" Width="140"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeCnt" Border="Flat" BorderColor="user2" Color="user1" Column="UNEXPLOR_CNT" Enable="FALSE" Height="18" Id="edt_UnexplorTotalCnt" Left="916" Style="edit_Indis" TabOrder="240" Top="427" Value="MaskEdit0" Width="144"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeCnt" Border="Flat" BorderColor="user2" Color="user1" Column="TOTAL_CNT" Enable="FALSE" Height="18" Id="edt_TotalCnt" Left="1065" Style="edit_Indis" TabOrder="241" Top="427" Value="MaskEdit0" Width="188"></MaskEdit>
+		<Image Align="Left" Color="blue" Height="18" Id="Image0" ImageID="blt" Left="187" LeftMargin="12" Style="blt_search_1" TabOrder="242" Text="시/구" Top="40" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" ImeMode="none" Left="232" Style="combo_indis" TabOrder="2" Top="40" Width="114"></Combo>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="EXPLOR_OBJECT_CNT" Height="18" Id="edt_ObjCnt" Left="147" MaxLength="8" Style="edit_Indis" TabOrder="22" Top="427" Value="MaskEdit0" Width="136"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_PipeRst" Border="Flat" BorderColor="user2" Color="user1" Column="EXPLOR_CNT" Height="18" Id="edt_ExplorCnt" Left="288" MaxLength="8" OnCharChanged="fn_D1_ObjectCnt" Style="edit_Indis" TabOrder="23" Top="427" Value="MaskEdit0" Width="120"></MaskEdit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1901010010F.xml
+* Form 설명  : 배관탐사실적등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2008-11-21
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONA10008.js";
+#include "JS::COMMOND10001.js";
+
+
+var strTotalKopipeExplorLeng       = 0;
+var strTotalKopipeUnExplorLeng     = 0;
+var strTotalMpipeExplorLeng        = 0;
+var strTotalMpipeUnExplorLeng      = 0;
+var strTotalNewKopipeUnExplorLeng  = 0;
+var strTotalNewMpipeUnExplorLeng   = 0;
+var strTotalKopipeUnexplorLengInsc = 0;
+var strTotalMpipeUnexplorLengInsc  = 0;
+
+var strExplorCnt   = 0;
+var strUnexplorCnt = 0;
+
+var strRowType    = "";
+var strSearchDate = "";
+
+var str_BranchCd   = "";
+var str_CountyFlag = "";
+//------------------------------------------------------------------------------- 
+// 함수명: D1901010010F_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1901010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+    gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	gfn_SetComboBox_Comcode("A10085",gfn_setDsObject_Comcode("cob_Weather"));
+	
+	cob_BranchCd.Value = '';	
+	cob_BranchCd_OnChanged();
+}
+
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	// 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_BranchCd.value, fn_setDsObject_Comcode("1", "cob_CountyFlag"));
+    cob_CountyFlag.Value = '';    
+    
+    
+   	str_BranchCd   = "";
+	str_CountyFlag = "";
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	strRowType     = "";
+	strSearchDate  = "";
+	
+	str_BranchCd   = "";
+	str_CountyFlag = "";
+	
+	if(cob_BranchCd.Value == "0" || (cob_CountyFlag.Value == '' || cob_CountyFlag.Value == null))
+	{
+		fn_D1_FindPlanAllBranch();
+	}else{
+		fn_D1_FindPlanBranch();
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FindPlanAllBranch()
+//   설명:  배관탐사 전체 대상계획을 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FindPlanAllBranch()
+{
+	ds_PipeRst.ClearData();
+	
+	if(cal_ExplorYmd.Value == "" || cal_ExplorYmd.Value == null)
+	{
+		alert(gfn_GetMessage("M000011","%AAA%","탐사일자를"));
+		return;
+	}
+	if(!fn_DateCheckToday(cal_ExplorYmd))
+	{
+		return;
+	}
+	
+	strSearchDate  = cal_ExplorYmd.Value;
+	str_BranchCd   = cob_BranchCd.Value;
+	str_CountyFlag = cob_CountyFlag.Value;
+	
+	
+	var strSvcID       = "fn_D1_Find";
+	var strPart        = "D10";	
+	var strURL         = "handle.do?ServiceName=D1_PipingSechResltRegisMgr-service" 
+				       + "&BRANCH_CD="  + cob_BranchCd.Value
+				       + "&ZIP_NO1="    + cob_CountyFlag.Value
+				       + "&BASE_YEAR="  + substr(cal_ExplorYmd.Value,0,4)
+				       + "&EXPLOR_YMD=" + cal_ExplorYmd.Value
+				       ;
+	var strInDatasets  = "";
+	var strOutDatasets = "ds_PipePln=ds_PipePln ds_PipeSumRstToday=ds_PipeSumRstToday ds_PipeSumRst=ds_PipeSumRst ds_PipeRstCnt=ds_PipeRstCnt ds_PipeRstExcel=ds_PipeRstExcel";
+	var strArgument    = "findAllPln";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	edt_KopipeExplorLengPln.Enable   = false;
+	edt_KopipeUnExplorLengPln.Enable = false;
+	edt_MpipeExplorLengPln.Enable    = false;
+	edt_MpipeUnExplorLengPln.Enable  = false;
+	
+	edt_KopipeSumLengPln.Value       = "" ;
+	edt_MpipeSumLengPln.Value        = "" ;
+	edt_ExplorSumLengPln.Value   	 = "" ;
+	edt_UnExplorSumLengPln.Value 	 = "" ;
+	edt_TotalLengPln.Value       	 = "" ;
+	
+	edt_KopipeExplorLengToday.Text       = toNumber(replace(ds_PipeSumRstToday.GetColumn(0,"KOPIPE_EXPLOR_LENG"		  ), ",", ""));
+	edt_KopipeUnExplorLengToday.Text     = toNumber(replace(ds_PipeSumRstToday.GetColumn(0,"KOPIPE_UNEXPLOR_LENG"	  ), ",", ""));
+	edt_MpipeExplorLengToday.Text        = toNumber(replace(ds_PipeSumRstToday.GetColumn(0,"MPIPE_EXPLOR_LENG"		  ), ",", ""));
+	edt_MpipeUnExplorLengToday.Text      = toNumber(replace(ds_PipeSumRstToday.GetColumn(0,"MPIPE_UNEXPLOR_LENG"	  ), ",", ""));
+	edt_NewKopipeUnExplorLengToday.text  = toNumber(replace(ds_PipeSumRstToday.GetColumn(0,"NEW_KOPIPE_UNEXPLOR_LENG" ), ",", ""));
+	edt_NewMpipeUnExplorLengToday.text   = toNumber(replace(ds_PipeSumRstToday.GetColumn(0,"NEW_MPIPE_UNEXPLOR_LENG"  ), ",", ""));
+	edt_KopipeUnexplorLengInscToday.text = toNumber(replace(ds_PipeSumRstToday.GetColumn(0,"KOPIPE_UNEXPLOR_LENG_INSC"), ",", ""));
+	edt_MpipeUnexplorLengInscToday.text  = toNumber(replace(ds_PipeSumRstToday.GetColumn(0,"MPIPE_UNEXPLOR_LENG_INSC" ), ",", ""));
+	
+	edt_KopipeSumLengToday.text 	= toNumber(replace(edt_KopipeExplorLengToday.Text     , ",", "")) + toNumber(replace(edt_KopipeUnExplorLengToday.Text    , ",", "")) ;
+	edt_MpipeSumLengToday.text      = toNumber(replace(edt_MpipeExplorLengToday.Text      , ",", "")) + toNumber(replace(edt_MpipeUnExplorLengToday.Text     , ",", "")) ;
+	edt_KopipeInscSumLengToday.text = toNumber(replace(edt_NewKopipeUnExplorLengToday.Text, ",", "")) + toNumber(replace(edt_KopipeUnexplorLengInscToday.Text, ",", "")) ;
+	edt_MpipeInscSumLengToday.text  = toNumber(replace(edt_NewMpipeUnExplorLengToday.Text , ",", "")) + toNumber(replace(edt_MpipeUnexplorLengInscToday.Text , ",", "")) ;
+	
+	edt_ExplorSumLengToday.text       = toNumber(replace(edt_KopipeExplorLengToday.Text       , ",", "")) + toNumber(replace(edt_MpipeExplorLengToday.Text      , ",", "")) ;
+	edt_NewUnExplorSumLengToday.text  = toNumber(replace(edt_NewKopipeUnExplorLengToday.Text  , ",", "")) + toNumber(replace(edt_NewMpipeUnExplorLengToday.Text , ",", "")) ;
+	edt_UnExplorSumLengToday.text     = toNumber(replace(edt_KopipeUnExplorLengToday.Text     , ",", "")) + toNumber(replace(edt_MpipeUnExplorLengToday.Text    , ",", "")) ;	
+	edt_UnExplorInscSumLengToday.text = toNumber(replace(edt_KopipeUnexplorLengInscToday.Text , ",", "")) + toNumber(replace(edt_MpipeUnexplorLengInscToday.Text, ",", "")) ;	
+	edt_TotalLengToday.text 	  	  = toNumber(replace(edt_KopipeSumLengToday.Text		  , ",", "")) + toNumber(replace(edt_MpipeSumLengToday.Text         , ",", "")) ;
+	edt_TotalInscLengToday.text 	  = toNumber(replace(edt_KopipeInscSumLengToday.Text	  , ",", "")) + toNumber(replace(edt_MpipeInscSumLengToday.Text     , ",", "")) ;
+	
+	//대상계획 합계 및 소계 구하기
+	fn_D1_PlnSum();
+	
+	strTotalKopipeExplorLeng 	   = toNumber(replace(ds_PipeSumRst.GetColumn(0,"KOPIPE_EXPLOR_LENG"	   ), ",", "")) - toNumber(replace(edt_KopipeExplorLengToday.Text      , ",", ""));
+	strTotalKopipeUnExplorLeng 	   = toNumber(replace(ds_PipeSumRst.GetColumn(0,"KOPIPE_UNEXPLOR_LENG"	   ), ",", "")) - toNumber(replace(edt_KopipeUnExplorLengToday.Text    , ",", ""));
+	strTotalMpipeExplorLeng 	   = toNumber(replace(ds_PipeSumRst.GetColumn(0,"MPIPE_EXPLOR_LENG"		   ), ",", "")) - toNumber(replace(edt_MpipeExplorLengToday.Text       , ",", ""));
+	strTotalMpipeUnExplorLeng      = toNumber(replace(ds_PipeSumRst.GetColumn(0,"MPIPE_UNEXPLOR_LENG"      ), ",", "")) - toNumber(replace(edt_MpipeUnExplorLengToday.Text     , ",", ""));
+	strTotalNewKopipeUnExplorLeng  = toNumber(replace(ds_PipeSumRst.GetColumn(0,"NEW_KOPIPE_UNEXPLOR_LENG" ), ",", "")) - toNumber(replace(edt_NewKopipeUnExplorLengToday.Text , ",", ""));
+	strTotalNewMpipeUnExplorLeng   = toNumber(replace(ds_PipeSumRst.GetColumn(0,"NEW_MPIPE_UNEXPLOR_LENG"  ), ",", "")) - toNumber(replace(edt_NewMpipeUnExplorLengToday.Text  , ",", ""));
+	strTotalKopipeUnexplorLengInsc = toNumber(replace(ds_PipeSumRst.GetColumn(0,"KOPIPE_UNEXPLOR_LENG_INSC"), ",", "")) - toNumber(replace(edt_KopipeUnexplorLengInscToday.Text, ",", ""));
+	strTotalMpipeUnexplorLengInsc  = toNumber(replace(ds_PipeSumRst.GetColumn(0,"MPIPE_UNEXPLOR_LENG_INSC" ), ",", "")) - toNumber(replace(edt_MpipeUnexplorLengInscToday.Text , ",", ""));	
+	
+	//탐사실적 소계 및 합계 구하기
+	fn_D1_RstSum();
+	//배관탐사이력 전체를 조회한다.
+	fn_D1_FindAll();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FindPlanBranch()
+//   설명:  배관탐사 대상계획을 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FindPlanBranch()
+{	
+	if(cal_ExplorYmd.Value == "" || cal_ExplorYmd.Value == null)
+	{
+		alert(gfn_GetMessage("M000011","%AAA%","탐사일자를"));
+		return;
+	}
+	
+	if(!fn_DateCheckToday(cal_ExplorYmd))
+	{
+		return;
+	}
+	strSearchDate  = cal_ExplorYmd.Value;
+	str_BranchCd   = cob_BranchCd.Value;
+	str_CountyFlag = cob_CountyFlag.Value;
+	
+	var strSvcID       = "fn_D1_Find";
+	var strPart        = "D10";	
+	var strURL         = "handle.do?ServiceName=D1_PipingSechResltRegisMgr-service"
+					   + "&BRANCH_CD="  + cob_BranchCd.Value
+					   + "&ZIP_NO1="    + cob_CountyFlag.Value
+					   + "&BASE_YEAR="  + substr(cal_ExplorYmd.Value,0,4)
+					   + "&EXPLOR_YMD=" + cal_ExplorYmd.Value
+					   ;
+	var strInDatasets  = "";
+	var strOutDatasets = "ds_PipePln=ds_PipePln ds_PipeRstCnt=ds_PipeRstCnt ds_PipeSumRst=ds_PipeSumRst";
+	var strArgument    = "findPln";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	edt_KopipeSumLengPln.text   = "" ;
+	edt_MpipeSumLengPln.text    = "" ;
+	edt_ExplorSumLengPln.text   = "" ;
+	edt_UnExplorSumLengPln.text = "" ;
+	edt_TotalLengPln.text 	    = "" ;
+	
+	var str_BaseYear = ds_PipePln.GetColumn(0, "BASE_YEAR");
+	
+	// 조회된 건수가 없을 경우에 		
+	if(str_BaseYear == '' || str_BaseYear == null)
+	{		
+		ds_PipePln.ClearData();
+		ds_PipePln.AddRow();
+		
+		edt_KopipeExplorLengPln.Enable   = true;
+		edt_KopipeUnExplorLengPln.Enable = true;
+		edt_MpipeExplorLengPln.Enable    = true;
+		edt_MpipeUnExplorLengPln.Enable  = true;
+	}else
+	{
+		edt_KopipeExplorLengPln.Enable   = false;
+		edt_KopipeUnExplorLengPln.Enable = false;
+		edt_MpipeExplorLengPln.Enable    = false;
+		edt_MpipeUnExplorLengPln.Enable  = false;
+	}
+		
+	//대상계획 합계 및 소계 구하기
+	fn_D1_PlnSum();
+
+	//배관탐사이력 조회하기
+	fn_D1_Find();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FindAll()
+//   설명:  배관탐사이력 전체를 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FindAll()
+{	
+	strRowType = "ALL";
+	
+	if(ds_PipeRstCnt.RowCount() == "0")
+	{
+		alert("전 지사에 해당하는 모든 탐사 실적이 미등록 상태입니다. ");
+		return;
+	}
+	
+	var strMsg  = "";
+		
+	if(ds_PipeRstCnt.RowCount() > 0)
+	{
+		strMsg  =  "" ;
+		
+		for(var i=0;i<ds_PipeRstCnt.RowCount();i++)
+		{
+			strMsg += ds_PipeRstCnt.GetColumn(i,"BRANCH_NM") + " : " + ds_PipeRstCnt.GetColumn(i,"GU_NM") + "\n";
+		}
+		 		
+		alert(strMsg + "탐사 실적이 미등록 상태입니다. ");
+		
+	}else
+	{
+		alert("전 지사에 해당하는 모든 탐사 실적이 등록되었습니다.");
+		return;
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Find()
+//   설명:  배관탐사이력을 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{	
+	var strSvcID        = "fn_D1_Find";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_PipingSechResltRegisMgr-service"
+						+ "&BRANCH_CD="  + cob_BranchCd.Value
+						+ "&ZIP_NO1="    + cob_CountyFlag.Value
+						+ "&EXPLOR_YMD=" + cal_ExplorYmd.Value
+						;
+						
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_PipeRst=ds_PipeRst ds_PipeRstNm=ds_PipeRstNm ds_PipeRstExcel=ds_PipeRstExcel ds_PipeCnt=ds_PipeCnt";
+	var strArgument     = "findRst";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	if(ds_PipeRst.RowCount() == 0)
+	{
+		strRowType = "Add";
+		ds_PipeRst.AddRow();
+		
+		str_BranchCd   = cob_BranchCd.Value;
+    	str_CountyFlag = cob_CountyFlag.Value;
+		
+		//탐사장비 체크박스 초기화
+		chk_ExplorEquipCd.value = 1;
+		chk_ExplorEquipEtc.value = 0;
+		chk_ExplorEquipCd_OnClick();
+		
+		//지형변경 체크박스 초기화
+		ds_PipeRst.SetColumn(0,"CHG_LAND_BD","0");
+		ds_PipeRst.SetColumn(0,"CHG_LAND_RD_EXP","0");
+		ds_PipeRst.SetColumn(0,"CHG_LAND_RD_OPN","0");
+		chk_ChgLandEtc.Value = 0;
+		chk_ChgLandEtc_OnClick(chk_ChgLandEtc,"0");
+		
+		//최근 입력한 탐사자들 불러오기
+		ds_PipeRst.SetColumn(0,"RESECH_NM1",ds_PipeRstNm.GetColumn(0,"RESECH_NM1"));
+		ds_PipeRst.SetColumn(0,"RESECH_NM2",ds_PipeRstNm.GetColumn(0,"RESECH_NM2"));
+		ds_PipeRst.SetColumn(0,"RESECH_NM3",ds_PipeRstNm.GetColumn(0,"RESECH_NM3"));
+		ds_PipeRst.SetColumn(0,"RESECH_NM4",ds_PipeRstNm.GetColumn(0,"RESECH_NM4"));
+		ds_PipeRst.SetColumn(0,"RESECH_NM5",ds_PipeRstNm.GetColumn(0,"RESECH_NM5"));
+		
+		ds_PipeRst.UpdateControl = false;
+		ds_PipeRst.SetRowType(0,"normal");
+	}else
+	{
+		//탐사장비 체크박스 셋팅
+		if(ds_PipeRst.GetColumn(0,"EXPLOR_EQUIP_CD") == 1)
+		{
+			chk_ExplorEquipCd.value = 1;
+			chk_ExplorEquipCd_OnClick();
+		}else if(ds_PipeRst.GetColumn(0,"EXPLOR_EQUIP_CD") == 2)
+		{
+			chk_ExplorEquipEtc.value = 1;
+			chk_ExplorEquipEtc_OnClick();
+		}
+		
+		//지형변경 체크박스 셋팅
+		if(ds_PipeRst.GetColumn(0,"CHG_LAND_ETC") != "" && ds_PipeRst.GetColumn(0,"CHG_LAND_ETC") != null)
+		{
+			chk_ChgLandEtc.value = 1;
+			chk_ChgLandEtc_OnClick(chk_ChgLandEtc,"1");
+		}	
+	}
+	//금일실적 초기화
+	fn_D1_TodaySumInt();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSave()
+//   설명: 공통 저장 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSave()
+{	
+	if(str_BranchCd == '' || str_BranchCd == null){
+		alert("지사가 전체로 선택되어 있을 시 저장이 불가능 합니다.\n지사를 선택 후 다시 조회하십시오. ");
+		return;
+	}
+
+	if(str_CountyFlag == '' || str_CountyFlag == null){
+		alert("시/구가 전체로 선택되어 있을 시 저장이 불가능 합니다.\n시/구를 선택 후 다시 조회하십시오. ");
+		return;
+	}
+	
+	fn_D1_Save();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Save()
+//   설명:  배관탐사실적등록 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save()
+{
+	//수정 등록시 셋팅할 사용자 정보
+	if(str_BranchCd != cob_BranchCd.Value)
+	{
+		alert("지사를 변경 시 저장이 불가능합니다.\n지사를 변경시 다시 조회하십시오. ");
+		return;
+		
+	}else if(str_CountyFlag != cob_CountyFlag.Value)
+	{
+		alert("시/구를 변경 시 저장이 불가능합니다.\n시/구를 변경시 다시 조회하십시오. ");
+		return;
+		
+	}else if(strSearchDate != cal_ExplorYmd.Value)
+	{
+		alert('탐사일자를 변경 시 저장이 불가능합니다.\n탐사일자 변경시 다시 조회하십시오');
+		return;
+		
+	}else if(ds_PipePln.GetRowType(0) == "insert")
+	{		
+		if(edt_KopipeExplorLengPln.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사연장(본관) 대상계획을"));
+			return;
+		}
+		
+		if(edt_MpipeExplorLengPln.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사연장(공급관) 대상계획을"));
+			return;
+		}
+		
+		if(edt_KopipeUnExplorLengPln.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사불가연장(본관) 대상계획을"));
+			return;
+		}
+		
+		if(edt_MpipeUnExplorLengPln.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사불가연장(공급관) 대상계획을"));
+			return;
+		}		
+		
+		ds_PipePln.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_PipePln.SetColumn(0, "UPD_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_PipePln.SetColumn(0, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_PipePln.SetColumn(0, "CRT_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_PipePln.SetColumn(0, "BASE_YEAR", SubStr(cal_ExplorYmd.Value,0,4));
+		ds_PipePln.SetColumn(0, "ZIP_NO1"  , cob_CountyFlag.Value);
+		ds_PipePln.SetColumn(0, "BRANCH_CD", cob_BranchCd.Value  );
+		
+	}else if(ds_PipePln.GetRowType(0) == "update")
+	{
+		ds_PipePln.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"  ));
+		ds_PipePln.SetColumn(0, "UPD_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));
+		
+		
+		
+	}else if(strRowType != "ALL")
+	{		
+		/*		
+		if(edt_KopipeExplorLeng.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사연장(본관)을"));
+			return;
+		}
+		if(edt_MpipeExplorLeng.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사연장(공급관)을"));
+			return;
+		}
+		if(edt_NewKopipeUnexplorLeng.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","신불탐(본관)을"));
+			return;
+		}
+		if(edt_NewMpipeUnexplorLeng.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","신불탐(공급관)을"));
+			return;
+		}
+
+		if(edt_KopipeUnexplorLeng.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사불가(본관)을"));
+			return;
+		}
+		if(edt_MpipeUnexplorLeng.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사불가(공급관)을"));
+			return;
+		}
+		if(edt_KopipeUnexplorLengInsc.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사불탐(본관)을"));
+			return;
+		}
+		if(edt_MpipeUnexplorLengInsc.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사불탐(공급관)을"));
+			return;
+		}
+		if(edt_ResechBlock.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","조사구간을"));
+			return;
+		}
+		if(chk_ExplorEquipEtc.Value == 1 && edt_EquipEtc.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사장비 기타를"));
+			return;
+		}
+		if(cob_Weather.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","날씨를"));
+			return;
+		}
+		if(chk_ChgLandEtc.Value == 1 && edt_LandEtc.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","지형변경 기타를"));
+			return;
+		}
+		if(edt_UnexplorNoPermitWhy.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","탐사불가사유를"));
+			return;
+		}
+		if(edt_ExplorRmk.Text == "")
+		{
+			alert(gfn_GetMessage("M000011","%AAA%","특기사항을"));
+			return;
+		}
+	*/	
+		if(ds_PipeRst.GetRowType(0) != "update"){
+			ds_PipeRst.SetRowType(0,"insert");
+		}
+		
+		ds_PipeRst.SetColumn(0, "UPD_EMPID" , gfn_GetGlobalValue("G_USER_NO"));
+		ds_PipeRst.SetColumn(0, "UPD_IP"    , gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_PipeRst.SetColumn(0, "CRT_EMPID" , gfn_GetGlobalValue("G_USER_NO"));
+		ds_PipeRst.SetColumn(0, "CRT_IP"    , gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_PipeRst.SetColumn(0, "BASE_YEAR" , SubStr(cal_ExplorYmd.Value,0,4));
+		ds_PipeRst.SetColumn(0, "BRANCH_CD" , cob_BranchCd.Value);
+		ds_PipeRst.SetColumn(0, "ZIP_NO1"   , cob_CountyFlag.Value);
+		
+		ds_PipeRst.SetColumn(0, "EXPLOR_YMD", cal_ExplorYmd.Value);
+
+		if(chk_ExplorEquipCd.value == 1)
+		{
+			ds_PipeRst.SetColumn(0,"EXPLOR_EQUIP_CD","1");
+		}else if(chk_ExplorEquipEtc.value == 1)
+		{
+			ds_PipeRst.SetColumn(0,"EXPLOR_EQUIP_CD","2");
+		}
+	}
+	
+	var strSvcID 	   = "insert";
+	var strPart 	   = "D10";		
+	var strURL         = "handle.do?ServiceName=D1_PipingSechResltRegisMgr-service";
+	var strInDatasets  = "ds_PipePln=ds_PipePln:u ds_PipeRst=ds_PipeRst:u";
+	var strOutDatasets = "";
+	var strArgument    = "savePln";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true);	//"저장을 완료하였습니다."
+	fn_CommonSearch();
+}
+
+//탐사장비 SURE-ROCK 선택시
+function chk_ExplorEquipCd_OnClick(obj,strValue)
+{
+	chk_ExplorEquipEtc.value = 0;
+	edt_EquipEtc.Enable      = false;
+	edt_EquipEtc.Text        = "";
+}
+//탐사장비 기타 선택시
+function chk_ExplorEquipEtc_OnClick(obj,strValue)
+{
+	chk_ExplorEquipCd.value = 0;
+	edt_EquipEtc.Enable = true;
+}
+
+//지형변경ㅊ 기타 선택시
+function chk_ChgLandEtc_OnClick(obj,strValue)
+{
+	if(strValue = "1")
+	{
+		edt_LandEtc.Enable = true;
+	}else{
+		edt_LandEtc.Enable = false;
+		edt_LandEtc.Text   = "";
+	}
+}
+
+//대상계획 소계 및 합계 구하기.
+function fn_D1_PlnSum()
+{   
+	edt_KopipeSumLengPln.text   = toNumber(replace(edt_KopipeExplorLengPln.Text  ,',','')) + toNumber(replace(edt_KopipeUnExplorLengPln.Text,',','')) ;
+	edt_MpipeSumLengPln.text    = toNumber(replace(edt_MpipeExplorLengPln.Text   ,',','')) + toNumber(replace(edt_MpipeUnExplorLengPln.Text ,',','')) ;
+	edt_ExplorSumLengPln.text   = toNumber(replace(edt_KopipeExplorLengPln.Text  ,',','')) + toNumber(replace(edt_MpipeExplorLengPln.Text   ,',','')) ;
+	edt_UnExplorSumLengPln.text = toNumber(replace(edt_KopipeUnExplorLengPln.Text,',','')) + toNumber(replace(edt_MpipeUnExplorLengPln.Text ,',','')) ;
+	edt_TotalLengPln.text       = toNumber(replace(edt_KopipeSumLengPln.Text     ,',','')) + toNumber(replace(edt_MpipeSumLengPln.Text      ,',','')) ;
+}
+
+//금일실적 소계 및 합계 초기화.
+function fn_D1_TodaySumInt()
+{		
+	edt_KopipeExplorLengToday.Text 	     = toNumber(replace(edt_KopipeExplorLeng.Text      ,",",""));
+	edt_KopipeUnExplorLengToday.Text 	 = toNumber(replace(edt_KopipeUnexplorLeng.Text    ,",",""));
+	edt_MpipeExplorLengToday.Text 	 	 = toNumber(replace(edt_MpipeExplorLeng.Text       ,",",""));
+	edt_MpipeUnExplorLengToday.Text 	 = toNumber(replace(edt_MpipeUnexplorLeng.Text     ,",",""));
+	edt_NewKopipeUnExplorLengToday.text  = toNumber(replace(edt_NewKopipeUnexplorLeng.Text ,",",""));
+	edt_NewMpipeUnExplorLengToday.text   = toNumber(replace(edt_NewMpipeUnexplorLeng.Text  ,",",""));
+	edt_KopipeUnexplorLengInscToday.text = toNumber(replace(edt_KopipeUnexplorLengInsc.Text,",",""));
+	edt_MpipeUnexplorLengInscToday.text  = toNumber(replace(edt_MpipeUnexplorLengInsc.Text ,",",""));
+
+	if(ds_PipeRstCnt.GetColumn(0,"CNT") == '0'){
+		edt_KopipeExplorLengToday.Value       = 0;
+		edt_KopipeUnExplorLengToday.Value     = 0;
+		edt_MpipeExplorLengToday.Value        = 0;
+		edt_MpipeUnExplorLengToday.Value      = 0;
+		edt_NewKopipeUnExplorLengToday.Value  = 0;
+		edt_NewMpipeUnExplorLengToday.Value   = 0;
+		edt_KopipeUnexplorLengInscToday.Value = 0;
+		edt_MpipeUnexplorLengInscToday.Value  = 0;
+	}
+
+	edt_KopipeSumLengToday.text     = toNumber(replace(edt_KopipeExplorLengToday.Text     , ",", "")) + toNumber(replace(edt_KopipeUnExplorLengToday.Text    , ",", "")) ;
+	edt_MpipeSumLengToday.text      = toNumber(replace(edt_MpipeExplorLengToday.Text      , ",", "")) + toNumber(replace(edt_MpipeUnExplorLengToday.Text     , ",", "")) ;
+	edt_KopipeInscSumLengToday.text = toNumber(replace(edt_NewKopipeUnExplorLengToday.Text, ",", "")) + toNumber(replace(edt_KopipeUnexplorLengInscToday.Text, ",", "")) ;
+	edt_MpipeInscSumLengToday.text  = toNumber(replace(edt_NewMpipeUnExplorLengToday.Text , ",", "")) + toNumber(replace(edt_MpipeUnexplorLengInscToday.Text , ",", "")) ;
+	
+	edt_ExplorSumLengToday.text       = toNumber(replace(edt_KopipeExplorLengToday.Text      , ",", "")) + toNumber(replace(edt_MpipeExplorLengToday.Text      , ",", "")) ;
+	edt_NewUnExplorSumLengToday.text  = toNumber(replace(edt_NewKopipeUnExplorLengToday.Text , ",", "")) + toNumber(replace(edt_NewMpipeUnExplorLengToday.Text , ",", "")) ;
+	edt_UnExplorSumLengToday.text     = toNumber(replace(edt_KopipeUnExplorLengToday.Text    , ",", "")) + toNumber(replace(edt_MpipeUnExplorLengToday.Text    , ",", "")) ;	
+	edt_UnExplorInscSumLengToday.text = toNumber(replace(edt_KopipeUnexplorLengInscToday.Text, ",", "")) + toNumber(replace(edt_MpipeUnexplorLengInscToday.Text, ",", "")) ;	
+	edt_TotalLengToday.text           = toNumber(replace(edt_KopipeSumLengToday.Text         , ",", "")) + toNumber(replace(edt_MpipeSumLengToday.Text         , ",", "")) ;
+	edt_TotalInscLengToday.text       = toNumber(replace(edt_KopipeInscSumLengToday.Text     , ",", "")) + toNumber(replace(edt_MpipeInscSumLengToday.Text     , ",", "")) ;
+	
+	strTotalKopipeExplorLeng       = toNumber(replace(ds_PipeSumRst.GetColumn(0,"KOPIPE_EXPLOR_LENG"	   ),",","")) - toNumber(replace(edt_KopipeExplorLengToday.Text      , ",", ""));
+	strTotalKopipeUnExplorLeng     = toNumber(replace(ds_PipeSumRst.GetColumn(0,"KOPIPE_UNEXPLOR_LENG"	   ),",","")) - toNumber(replace(edt_KopipeUnExplorLengToday.Text    , ",", ""));
+	strTotalMpipeExplorLeng        = toNumber(replace(ds_PipeSumRst.GetColumn(0,"MPIPE_EXPLOR_LENG"		   ),",","")) - toNumber(replace(edt_MpipeExplorLengToday.Text       , ",", ""));
+	strTotalMpipeUnExplorLeng      = toNumber(replace(ds_PipeSumRst.GetColumn(0,"MPIPE_UNEXPLOR_LENG"	   ),",","")) - toNumber(replace(edt_MpipeUnExplorLengToday.Text     , ",", ""));
+	strTotalNewKopipeUnExplorLeng  = toNumber(replace(ds_PipeSumRst.GetColumn(0,"NEW_KOPIPE_UNEXPLOR_LENG" ),",","")) - toNumber(replace(edt_NewKopipeUnExplorLengToday.Text , ",", ""));
+	strTotalNewMpipeUnExplorLeng   = toNumber(replace(ds_PipeSumRst.GetColumn(0,"NEW_MPIPE_UNEXPLOR_LENG"  ),",","")) - toNumber(replace(edt_NewMpipeUnExplorLengToday.Text  , ",", ""));
+	strTotalKopipeUnexplorLengInsc = toNumber(replace(ds_PipeSumRst.GetColumn(0,"KOPIPE_UNEXPLOR_LENG_INSC"),",","")) - toNumber(replace(edt_KopipeUnexplorLengInscToday.Text, ",", ""));
+	strTotalMpipeUnexplorLengInsc  = toNumber(replace(ds_PipeSumRst.GetColumn(0,"MPIPE_UNEXPLOR_LENG_INSC" ),",","")) - toNumber(replace(edt_MpipeUnexplorLengInscToday.Text , ",", ""));
+	
+	//탐사실적 소계 및 합계 구하기
+	fn_D1_RstSum();
+}
+
+//금일실적 소계 및 합계 구하기.
+function fn_D1_TodaySum(obj,nChar,bShift,bCtrl, bAlt,LLParam,HLParam)
+{
+	edt_KopipeExplorLengToday.Text   	 = toNumber(replace(edt_KopipeExplorLeng.Text	   ,",",""));
+	edt_KopipeUnExplorLengToday.Text 	 = toNumber(replace(edt_KopipeUnexplorLeng.Text	   ,",",""));
+	edt_MpipeExplorLengToday.Text 		 = toNumber(replace(edt_MpipeExplorLeng.Text	   ,",",""));
+	edt_MpipeUnExplorLengToday.Text      = toNumber(replace(edt_MpipeUnexplorLeng.Text	   ,",",""));
+	edt_NewKopipeUnExplorLengToday.text  = toNumber(replace(edt_NewKopipeUnexplorLeng.Text ,",",""));
+	edt_NewMpipeUnExplorLengToday.text   = toNumber(replace(edt_NewMpipeUnexplorLeng.Text  ,",",""));
+	edt_KopipeUnexplorLengInscToday.text = toNumber(replace(edt_KopipeUnexplorLengInsc.Text,",",""));
+	edt_MpipeUnexplorLengInscToday.text  = toNumber(replace(edt_MpipeUnexplorLengInsc.Text ,",",""));
+		
+	edt_KopipeSumLengToday.text 	 = toNumber(replace(edt_KopipeExplorLengToday.Text	   ,",","")) + toNumber(replace(edt_KopipeUnExplorLengToday.Text	,",","")) ;
+	edt_MpipeSumLengToday.text 	     = toNumber(replace(edt_MpipeExplorLengToday.Text	   ,",","")) + toNumber(replace(edt_MpipeUnExplorLengToday.Text		,",","")) ;
+	edt_KopipeInscSumLengToday.text  = toNumber(replace(edt_NewKopipeUnExplorLengToday.Text,",","")) + toNumber(replace(edt_KopipeUnexplorLengInscToday.Text,",","")) ;
+	edt_MpipeInscSumLengToday.text   = toNumber(replace(edt_NewMpipeUnExplorLengToday.Text ,",","")) + toNumber(replace(edt_MpipeUnexplorLengInscToday.Text	,",","")) ;
+	
+	edt_ExplorSumLengToday.text       = toNumber(replace(edt_KopipeExplorLengToday.Text	     ,",","")) + toNumber(replace(edt_MpipeExplorLengToday.Text		 ,",","")) ;
+	edt_NewUnExplorSumLengToday.text  = toNumber(replace(edt_NewKopipeUnExplorLengToday.Text ,",","")) + toNumber(replace(edt_NewMpipeUnExplorLengToday.Text ,",","")) ;
+	edt_UnExplorSumLengToday.text     = toNumber(replace(edt_KopipeUnExplorLengToday.Text	 ,",","")) + toNumber(replace(edt_MpipeUnExplorLengToday.Text	 ,",","")) ;	
+	edt_UnExplorInscSumLengToday.text = toNumber(replace(edt_KopipeUnexplorLengInscToday.Text,",","")) + toNumber(replace(edt_MpipeUnexplorLengInscToday.Text,",","")) ;	
+	edt_TotalLengToday.text			  = toNumber(replace(edt_KopipeSumLengToday.Text	     ,",","")) + toNumber(replace(edt_MpipeSumLengToday.Text		 ,",","")) ;
+	edt_TotalInscLengToday.text		  = toNumber(replace(edt_KopipeInscSumLengToday.Text     ,",","")) + toNumber(replace(edt_MpipeInscSumLengToday.Text 	 ,",","")) ;
+	
+	//탐사실적 소계 및 합계 구하기
+	fn_D1_RstSum();
+}
+
+//탐사실적 소계 및 합계 구하기
+function fn_D1_RstSum(obj,nChar,bShift,bCtrl, bAlt,LLParam,HLParam)
+{	
+	edt_KopipeExplorLengRst.Text       = toNumber(strTotalKopipeExplorLeng		) + toNumber(replace(edt_KopipeExplorLengToday.Text		 ,",", ""));
+	edt_KopipeUnExplorLengRst.Text     = toNumber(strTotalKopipeUnExplorLeng	) + toNumber(replace(edt_KopipeUnExplorLengToday.Text	 ,",", ""));
+	edt_MpipeExplorLengRst.Text        = toNumber(strTotalMpipeExplorLeng		) + toNumber(replace(edt_MpipeExplorLengToday.Text		 ,",", ""));
+	edt_MpipeUnExplorLengRst.Text      = toNumber(strTotalMpipeUnExplorLeng	 	) + toNumber(replace(edt_MpipeUnExplorLengToday.Text	 ,",", ""));
+	edt_NewKopipeUnExplorLengRst.Text  = toNumber(strTotalNewKopipeUnExplorLeng ) + toNumber(replace(edt_NewKopipeUnExplorLengToday.Text ,",", ""));
+	edt_NewMpipeUnExplorLengRst.Text   = toNumber(strTotalNewMpipeUnExplorLeng  ) + toNumber(replace(edt_NewMpipeUnExplorLengToday.Text	 ,",", ""));
+	edt_KopipeUnexplorLengInscRst.Text = toNumber(strTotalKopipeUnexplorLengInsc) + toNumber(replace(edt_KopipeUnexplorLengInscToday.Text,",", ""));
+	edt_MpipeUnexplorLengInscRst.Text  = toNumber(strTotalMpipeUnexplorLengInsc ) + toNumber(replace(edt_MpipeUnexplorLengInscToday.Text ,",", ""));
+
+	edt_KopipeSumLengRst.text 	  = toNumber(replace(edt_KopipeExplorLengRst.Text	  , ",", "")) + toNumber(replace(edt_KopipeUnExplorLengRst.Text	   , ",", "")) ;
+	edt_MpipeSumLengRst.text 	  = toNumber(replace(edt_MpipeExplorLengRst.Text	  , ",", "")) + toNumber(replace(edt_MpipeUnExplorLengRst.Text	   , ",", "")) ;
+	edt_KopipeInscSumLengRst.text = toNumber(replace(edt_NewKopipeUnExplorLengRst.Text, ",", "")) + toNumber(replace(edt_KopipeUnexplorLengInscRst.Text, ",", "")) ;
+	edt_MpipeInscSumLengRst.text  = toNumber(replace(edt_NewMpipeUnExplorLengRst.Text , ",", "")) + toNumber(replace(edt_MpipeUnexplorLengInscRst.Text , ",", "")) ;
+	
+	edt_ExplorSumLengRst.text 	    = toNumber(replace(edt_KopipeExplorLengRst.Text		 , ",", "")) + toNumber(replace(edt_MpipeExplorLengRst.Text		 , ",", "")) ;
+	edt_NewUnExplorSumLengRst.text  = toNumber(replace(edt_NewKopipeUnExplorLengRst.Text , ",", "")) + toNumber(replace(edt_NewMpipeUnExplorLengRst.Text , ",", "")) ;
+	edt_UnExplorSumLengRst.text     = toNumber(replace(edt_KopipeUnExplorLengRst.Text	 , ",", "")) + toNumber(replace(edt_MpipeUnExplorLengRst.Text	 , ",", "")) ;
+	edt_UnExplorInscSumLengRst.text = toNumber(replace(edt_KopipeUnexplorLengInscRst.Text, ",", "")) + toNumber(replace(edt_MpipeUnexplorLengInscRst.Text, ",", "")) ;
+	edt_TotalLengRst.text	        = toNumber(replace(edt_KopipeSumLengRst.Text		 , ",", "")) + toNumber(replace(edt_MpipeSumLengRst.Text		 , ",", "")) ;
+	edt_TotalInscLengRst.text 		= toNumber(replace(edt_KopipeInscSumLengRst.Text	 , ",", "")) + toNumber(replace(edt_MpipeInscSumLengRst.Text	 , ",", "")) ;
+	
+	edt_ExplorSumLengRt.text   = Round(toNumber(replace(edt_ExplorSumLengRst.Text  , ",", "")) / toNumber(replace(edt_ExplorSumLengPln.Text  ,",","")) * 100,2);
+	edt_UnExplorSumLengRt.text = Round(toNumber(replace(edt_UnExplorSumLengRst.Text, ",", "")) / toNumber(replace(edt_UnExplorSumLengPln.Text,",","")) * 100,2);
+	edt_TotalLengRt.text       = Round(toNumber(replace(edt_TotalLengRst.Text      , ",", "")) / toNumber(replace(edt_TotalLengPln.Text      ,",","")) * 100,2);
+}
+
+function btn_SearchCar_OnClick(obj)
+{
+	var strPrefix = "E30";
+	var strFormid = "E3201080010F";
+	var strArg    = "" ;
+	gfn_NewWindow(strPrefix,strFormid,strArg) ; 
+}
+
+function Button0_OnClick(obj)
+{	
+	if(ds_PipeRst.GetRowCount() != 0)
+	{
+		if(ds_PipeRst.GetRowType(0) == "normal" && strRowType != "Add")
+		{
+			if(cob_BranchCd.Value != 0 && cal_ExplorYmd.Value != "")
+			{
+				// 함수 호출용 파라미터를 설정한다
+				var strTitle ="배관탐사일지"; 
+				var strPart ="D10";           
+				var strReport="D1901010010P";
+				var strParameter="BASE_YEAR=" + substr(cal_ExplorYmd.Value,0,4) +  ",EXPLOR_YMD=" + cal_ExplorYmd.Value +",BRANCH_CD="+cob_BranchCd.Value + ",ZIP_NO1=" +cob_CountyFlag.Value;
+				
+				// 공통 레포트 팝업 함수 호출 
+				gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+			}
+		}else{
+			alert('저장 후 이용가능합니다.');
+		}
+	}else if(cob_BranchCd.Value == 0)
+	{
+		alert('지사는 전체를 선택할 수 없습니다.');
+	}else{
+		alert('조회 후 이용가능합니다.');
+	}
+}
+function Button1_OnClick(obj)
+{
+	if(ds_PipeRst.GetRowCount() != 0)
+	{
+		if(strSearchDate != cal_ExplorYmd.Value)
+		{
+			alert('탐사일자를 변경 시 저장이 불가능합니다.\n탐사일자 변경시 다시 조회하십시오');
+			return;
+		}else if(ds_PipeRst.GetRowType(0) == "normal" && strRowType != "Add")
+		{
+			if(cob_BranchCd.Value != 0 && cal_ExplorYmd.Value != "")
+			{
+				var strParameter=substr(cal_ExplorYmd.Value,0,4)+","+cal_ExplorYmd.Value+","+cob_BranchCd.Value+","+cob_CountyFlag.Value;				
+				
+				gfv_callGWInfo("fmD22","D10","D1901010010P",4,strParameter);
+			}
+		}else{
+			alert('저장 후 이용가능합니다.');
+		}
+	}else if(cob_BranchCd.Value == 0)
+	{
+		alert('지사는 전체를 선택할 수 없습니다.');
+	}else{
+		alert('조회 후 이용가능합니다.');
+	}
+}
+
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonExcelExport()
+//   설명  :  엑셀다운 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+	
+    SearchCondition = SearchCondition + "지사 :"     + RPad(cob_BranchCd.Text   ," ",20);
+    SearchCondition = SearchCondition + "시/구 :"    + RPad(cob_CountyFlag.Text ," ",20);
+    SearchCondition = SearchCondition + "탐사일자 :" + RPad(cal_ExplorYmd.Text  ," ",20);
+	gfn_ExportExcel("배관탐사실적등록 ", 5, SearchCondition, "Grid0"); 
+}
+
+function btn_gis_OnClick(obj)
+{
+	var args = "BUNGI=''";	
+	Dialog("D10::D1402060011U.xml", args, 1208, 840, true, -1, -1);
+}
+
+//배관탐사의뢰 소계 및 합계 구하기.
+function fn_D1_ObjectCnt(obj,strPreText,strPostText)
+{
+	edt_TodaySum.text = toNumber(replace(edt_ExplorCnt.Text  ,",","")) 
+					  + toNumber(replace(edt_UnexplorCnt.Text,",","")) ;
+	
+	if(edt_ExplorCnt == obj)
+	{
+		edt_ExplorTotalCnt.text = toNumber(replace(edt_ExplorTotalCnt.Text,",",""))
+							    - toNumber(replace(strPreText             ,",","")) 
+								+ toNumber(replace(strPostText            ,",","")) ;
+	
+	}else if(edt_UnexplorCnt == obj)
+	{
+		edt_UnexplorTotalCnt.text = toNumber(replace(edt_UnexplorTotalCnt.Text,",","")) 
+								  - toNumber(replace(strPreText				  ,",","")) 
+								  + toNumber(replace(strPostText			  ,",","")) ;
+	}
+		
+		edt_TotalCnt.text = toNumber(replace(edt_ExplorTotalCnt.Text  ,",","")) 
+						  + toNumber(replace(edt_UnexplorTotalCnt.Text,",","")) ;
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: btn_History_OnClick()
+//   설명  :  탐사이력조회 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function btn_History_OnClick(obj)
+{
+	 var strPrefix = "D10";
+	 var strFormid = "D1901010011F";
+	 var strArg    = "" ;
+		 strArg	  += " BRANCH_CD="       + quote(cob_BranchCd.Value  ) ;
+		 strArg	  += " EXPLOR_YMD_FROM=" + quote(cal_ExplorYmd.Value ) ;
+		 strArg	  += " EXPLOR_YMD_TO="   + quote(cal_ExplorYmd.Value ) ;
+		 strArg	  += " ZIP_NO1="         + quote(cob_CountyFlag.Value) ;
+	 	 
+	 gfn_NewWindow(strPrefix,strFormid,strArg) ;
+}]]></Script>
+</Window>

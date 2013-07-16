@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="680" Id="D1903010010F_T10" Left="8" OnLoadCompleted="D1903010010F_T10_OnLoadCompleted" PidAttrib="7" Title="집계현황" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<record>
+						<BASE_YEAR></BASE_YEAR>
+						<PATROL_YMD></PATROL_YMD>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_subtotal">
+				<Contents>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="M_DAM_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="M_INT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="M_REP_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="M_MNG_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="M_WAT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="M_IGN_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_OBJ" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_DAM_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_ACT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="FAULT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="O_WORK_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONTACT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOW_D_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="MG_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_CNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user15" Bottom="64" Height="3" Id="Shape0" Left="17" LineWidth="0" Right="1209" TabOrder="1" Top="61" Type="Rectangle" Width="1192"></Shape>
+		<Calendar BindDataset="ds_Search" Border="Flat" Column="PATROL_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PatrolYmd" Left="88" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="2" ToolTipText="일자" Top="11" WeeksFont="Default,-1" Width="103"></Calendar>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="18" LeftMargin="12" Style="text_title" TabOrder="3" Text="자동집계현황" Top="46" Width="117"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_subtotal" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="600" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="536" Id="Grid1" InputPanel="FALSE" Left="17" LineColor="silver" LineType="ExVERT" NoDataText="조회내역이&#32;없습니다." OnHeadClick="Grid1_OnHeadClick" Right="1209" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="4" TabStop="true" Top="64" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1192">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="74"/>
+						<col width="100"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="3" text="지사"/>
+						<cell col="1" display="text" rowspan="3" text="시군구"/>
+						<cell col="2" colspan="3" display="text" text="DCVG"/>
+						<cell col="5" colspan="6" display="text" text="ECDA"/>
+						<cell col="11" colspan="4" display="text" text="신규배관"/>
+						<cell col="15" colspan="8" display="text" text="굴착보수"/>
+						<cell col="2" display="text" row="1" rowspan="2" text="계획연장"/>
+						<cell col="3" display="text" row="1" rowspan="2" text="실적연장"/>
+						<cell col="4" display="text" row="1" rowspan="2" text="의심부"/>
+						<cell col="5" colspan="2" display="text" row="1" text="판정결과"/>
+						<cell col="7" colspan="4" display="text" row="1" text="진단결과"/>
+						<cell col="11" display="text" row="1" rowspan="2" text="대상"/>
+						<cell col="12" display="text" row="1" rowspan="2" text="연장"/>
+						<cell col="13" display="text" row="1" rowspan="2" text="손상개소"/>
+						<cell col="14" display="text" row="1" rowspan="2" text="조치개소"/>
+						<cell col="15" display="text" row="1" rowspan="2" text="개소(건)"/>
+						<cell col="16" display="text" row="1" rowspan="2" text="보수비용"/>
+						<cell col="17" colspan="6" display="text" row="1" text="원인별"/>
+						<cell col="5" display="text" row="2" text="손상"/>
+						<cell col="6" display="text" row="2" text="간섭"/>
+						<cell col="7" display="text" row="2" text="보수"/>
+						<cell col="8" display="text" row="2" text="관리"/>
+						<cell col="9" display="text" row="2" text="감시"/>
+						<cell col="10" display="text" row="2" text="무시"/>
+						<cell col="17" display="text" row="2" text="타공사"/>
+						<cell col="18" display="text" row="2" text="접촉"/>
+						<cell col="19" display="text" row="2" text="시공불량"/>
+						<cell col="20" display="text" row="2" text="저밀도"/>
+						<cell col="21" display="text" row="2" text="MG(B-TYPE)"/>
+						<cell col="22" display="text" row="2" text="기타"/>
+					</head>
+					<body>
+						<cell align="center" bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="0" colid="BRANCH_NM" display="text"/>
+						<cell align="center" bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="1" colid="GU_NM" display="text"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="2" colid="PLAN_LENG" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="3" colid="EXPLOR_LENG" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="4" colid="DAMAGE_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="5" colid="M_DAM_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="6" colid="M_INT_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="7" colid="M_REP_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="8" colid="M_MNG_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="9" colid="M_WAT_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="10" colid="M_IGN_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="11" colid="NEW_OBJ" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="12" colid="NEW_LENG" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="13" colid="NEW_DAM_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="14" colid="NEW_ACT_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="15" colid="DIG_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="16" colid="REPAIR_COST" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="17" colid="O_WORK_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="18" colid="CONTACT_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="19" colid="FAULT_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="20" colid="LOW_D_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="21" colid="MG_CNT" display="number"/>
+						<cell bkcolor="expr:decode(&#32;BRANCH_NM&#32;,&#32;&apos;소계&apos;&#32;,&#32;&apos;pink&apos;&#32;,&#32;&apos;총계&apos;&#32;,&#32;&apos;greenyellow&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="22" colid="ETC_CNT" display="number"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="13" Id="Image2" ImageID="blt" Left="18" LeftMargin="12" Style="blt_search_Indis" TabOrder="5" Text="탐사일자" Top="14" Width="72"></Image>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1903010010F_T10.xml
+* Form 설명  : 자동집계현황
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : kimkk 
+* 작성일     : 2013-04-11
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+ 
+function D1903010010F_T10_OnLoadCompleted(obj)
+{	 
+	ds_Search.SetColumn( ds_Search.row , "PATROL_YMD" , gfn_GetServerDate());
+	gfn_LoadForm(obj); 
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{   
+	
+} 
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_D1_find()
+{    
+	ds_Search.SetColumn( ds_Search.row , "PATROL_YMD" , cal_PatrolYmd.Value);
+	ds_Search.SetColumn( ds_Search.row , "BASE_YEAR" , sp_Year.Value);
+	
+	var strSvcID = "find_subtotal";
+	var strPart  = "D10";	
+	var strURL   = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";  
+	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets = "ds_subtotal=ds_subtotal";
+	var strArgument    = "find_subtotal=1";   
+    	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument );
+}
+ 
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명  : 화면을 프린트한다.
+// arguments 없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_D1_Print()
+{
+	PrintScreen();
+} 
+
+function fn_D1_Excel () 
+{
+	var SearchCondition= "";
+   
+    SearchCondition = SearchCondition + "탐사일자 : " +     RPad( cal_PatrolYmd.Text," ",20); 
+    
+    gfn_ExportExcel("배관진단실적집계현황", 5, SearchCondition, "Grid1");     
+}
+
+function Grid1_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	//gfn_SetGridSort(obj, nCell);
+}
+
+ ]]></Script>
+</Window>

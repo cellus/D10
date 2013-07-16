@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="250" Id="D1703010010U" Left="8" OnLoadCompleted="D1703010010U_OnLoadCompleted" PidAttrib="7" Title="이설보수정산&#32;상세내역조회" Top="8" Ver="1.0" Width="660" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_MoveAdj">
+				<Contents>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_WORK_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEASURE_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TRAFFIC_MANAGE_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DESIGN_MASTER_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="REASON_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CATHODIC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NO_DESTROY_INSPECT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_ROOM_WORK_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ELECT_TEL_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RTU" size="256" summ="default" type="STRING"/>
+					<colinfo id="GET_TAX" size="256" summ="default" type="STRING"/>
+					<colinfo id="SUM_PRICE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_WorkInfo">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" type="STRING"/>
+					<record>
+						<WORK_NM></WORK_NM>
+						<WORK_NUM></WORK_NUM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<record>
+						<MOVE_REPAIR_NUM></MOVE_REPAIR_NUM>
+						<WORK_NUM></WORK_NUM>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static7" Left="5" Style="table" TabOrder="1" Top="181" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static20" Left="5" Style="table" TabOrder="2" Top="202" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static24" Left="5" Style="table" TabOrder="3" Top="223" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static27" Left="5" Style="table" TabOrder="4" Top="139" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static29" Left="5" Style="table" TabOrder="5" Top="160" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static30" Left="5" Style="table" TabOrder="6" Top="97" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static31" Left="5" Style="table" TabOrder="7" Top="118" VAlign="Middle" Width="650" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static32" Left="5" Style="table_1" TabOrder="8" Text="취/농특세" Top="223" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static35" Left="5" Style="table_1" TabOrder="9" Text="원인자복구비" Top="160" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static36" Left="5" Style="table_1" TabOrder="10" Text="전기전화비" Top="181" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static37" Left="5" Style="table_1" TabOrder="11" Text="비파괴검사비" Top="202" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static39" Left="5" Style="table_1" TabOrder="12" Text="지급구분" Top="97" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static40" Left="5" Style="table_1" TabOrder="13" Text="구청복구비" Top="118" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static41" Left="5" Style="table_1" TabOrder="14" Text="배관공사비" Top="139" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static48" Left="327" Style="table_1" TabOrder="15" Text="공사(설계)감독비" Top="181" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static51" Left="327" Style="table_1" TabOrder="16" Text="측량용역비" Top="118" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static52" Left="327" Style="table_1" TabOrder="17" Text="전기방식비" Top="139" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static55" Left="327" Style="table_1" TabOrder="18" Text="RTU" Top="160" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static56" Left="327" Style="table_1" TabOrder="19" Text="정압실공사비" Top="202" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static57" Left="327" Style="table_1" TabOrder="20" Text="합계" Top="223" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="21" Text="정산내역" Transparent="TRUE" Width="660"></Image>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static0" Left="166" Style="table_1" TabOrder="22" Text="정산금액(원)" Top="97" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static1" Left="488" Style="table_1" TabOrder="24" Text="정산금액(원)" Top="97" VAlign="Middle" Width="167" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static2" Left="327" Style="table_1" TabOrder="23" Text="지급구분" Top="97" VAlign="Middle" Width="162" WordWrap="TRUE"></Static>
+		<Div Height="29" Id="Div0" Left="139" TabOrder="25" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="516">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="26" Text="정산내역" Top="68" Width="127"></Image>
+		<Static Height="13" Id="Static126" Left="6" Style="static" TabOrder="27" Text="공사번호&#32;:&#32;" Top="84" Width="55"></Static>
+		<Static Height="13" Id="Static25" Left="63" Style="static" TabOrder="28" Top="83" Width="90"></Static>
+		<Static Height="13" Id="Static3" Left="207" Style="static" TabOrder="30" Top="83" Width="446"></Static>
+		<Static Height="13" Id="Static4" Left="161" Style="static" TabOrder="29" Text="공사명&#32;:&#32;" Top="84" Width="45"></Static>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="OFFICE_RC_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_OfficeRcAmt" Left="170" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="31" Top="120" Width="154"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="BASE_WORK_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_PipeAmt" Left="170" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="32" Top="141" Width="154"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="REASON_RC_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_ReasonRcAmpt" Left="170" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="33" Top="162" Width="154"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="ELECT_TEL_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_ElectTelAmt" Left="170" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="34" Top="183" Width="154"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="NO_DESTROY_INSPECT_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_NoDestroyInspectAmt" Left="170" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="35" Top="204" Width="154"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="GET_TAX" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_GetTax" Left="170" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="36" Top="225" Width="154"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="MEASURE_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_MeasureAmt" Left="492" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="37" Top="120" Width="159"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="CATHODIC_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_CathodicAmt" Left="492" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="38" Top="141" Width="159"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="RTU" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_Rtu" Left="492" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="39" Top="162" Width="159"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="DESIGN_MASTER_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_ContractAmt" Left="492" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="40" Top="183" Width="159"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="user7" Column="GOV_ROOM_WORK_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_GovRoomWorkAmt" Left="492" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="41" Top="204" Width="159"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_MoveAdj" Border="Flat" BorderColor="user2" Color="red" Column="SUM_PRICE" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_SumPrice" Left="492" OnCharChanged="Button18_OnClick" ShadowColor="user11" TabOrder="42" Top="225" Width="159"></MaskEdit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802030010F.xml
+* Form 설명  : 이설보수 청구내역 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-29
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1703010010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	//gfn_SetButton("0011011");
+	
+	Static25.Value = replace(WORK_NUM,"%$","");
+	Static3.Value  = replace(replace(WORK_NM, "@@", ' '),"%$","");
+	
+	fn_GetDataSet_Value();
+	fn_D1_find();
+}
+
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+	fn_D1_find();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport(){
+//	Grid0.ExportExcel("sheet1"); 
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  이설보수정산 상세내역 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	ds_MoveAdj.ClearData();
+	
+    ds_Search.SetColumn(0,"WORK_NUM"  , replace(WORK_NUM,"%$",""));  // 공사번호
+	ds_Search.SetColumn(0,"MOVE_REPAIR_NUM", replace(MOVE_REPAIR_NUM ,"%$",""));
+	
+	var strSvcID = "view";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MoveingRepairAmountListMgr-service";  
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_MoveAdj=ds_MoveAdj";
+	var strArgument     = "view=1";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_MoveAdj.GetRowCount()==0) { 
+		ds_MoveAdj.ClearData();
+	}
+	else
+	{
+		var sum_amt = ds_MoveAdj.GetColumn(0, "BASE_WORK_AMT") + 
+					ds_MoveAdj.GetColumn(0, "OFFICE_RC_AMT") +
+					ds_MoveAdj.GetColumn(0, "DESIGN_MASTER_AMT") +
+					ds_MoveAdj.GetColumn(0, "MEASURE_AMT") +
+					ds_MoveAdj.GetColumn(0, "REASON_RC_AMT") +
+					ds_MoveAdj.GetColumn(0, "CATHODIC_AMT") +
+					ds_MoveAdj.GetColumn(0, "NO_DESTROY_INSPECT_AMT") +
+					ds_MoveAdj.GetColumn(0, "GOV_ROOM_WORK_AMT") +
+					ds_MoveAdj.GetColumn(0, "ELECT_TEL_AMT") +
+					ds_MoveAdj.GetColumn(0, "RTU") +
+					ds_MoveAdj.GetColumn(0, "GET_TAX") 
+					;
+		ds_MoveAdj.SetColumn(0, "SUM_PRICE", sum_amt);
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSave()
+// 설명: 등록된 내용을 저장한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSave(){
+	fn_GetDataSet_Value();
+	fn_D1_save();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_SAVE
+//   설명  : 이설 보수 정산 상세 내역 저장한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------
+//  Transition   : Service id
+//  ServicePart   : Service part
+//  Url          : Server url
+//  InputDsList   : Input Dataset List
+//  OutputDsList   : Output Dataset List
+//  Argument   :  Argument
+//-------------------------------------------------------------------------------
+	
+function fn_D1_save(){	
+
+	ds_MoveAdj.UpdateControl = false;
+	ds_MoveAdj.SetRowType(0, "update");
+		
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_MoveingRepairAmountListMgr-service";	
+	var strInDatasets    = "ds_MoveAdj=ds_MoveAdj:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "update";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+	
+	if(ErrorCode<0)
+	{    
+		return false;
+	}
+	
+	//"저장을 완료하였습니다."
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_GetDataSet_Value()
+//   설명  :  원인자 이설 보수 정산 내역 등록 기본 셋팅
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_GetDataSet_Value(){
+	
+	var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;   // SESSION ID
+	var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");   // SESSION IP
+
+	ds_MoveAdj.AddColumn("UPD_EMPID"      , "STRING", 256 );	// ID
+	ds_MoveAdj.AddColumn("UPD_IP"         , "STRING", 256 );	// IP
+	ds_MoveAdj.AddColumn("MOVE_REPAIR_NUM", "STRING", 256 );
+	
+	ds_MoveAdj.SetColumn(0, "UPD_EMPID"   , USER_ID       );
+	ds_MoveAdj.SetColumn(0, "UPD_IP"      , USER_IP       );	
+	ds_MoveAdj.SetColumn(0, "MOVE_REPAIR_NUM", replace(MOVE_REPAIR_NUM ,"%$",""));
+}
+
+function Edit_OnCharChanged(obj,strPreText,strPostText)
+{
+	edt_SumPrice.Value =
+					  +	parseInt(edt_OfficeRcAmt.Value)
+					  +	parseInt(edt_MeasureAmt.Value)
+					  + parseInt(edt_ReasonRcAmpt.Value)
+					  + parseInt(edt_CathodicAmt.Value)
+					  + parseInt(edt_ElectTelAmt.Value)
+					  +	parseInt(edt_Rtu.Value)
+					  + parseInt(edt_TrafficManage.Value)
+					  + parseInt(edt_ContractAmt.Value)
+					  + parseInt(edt_NoDestroyInspectAmt.Value)
+					  + parseInt(edt_GovRoomWorkAmt.Value)
+					  + parseInt(edt_GetTax.Value)
+					  ;
+}
+]]></Script>
+</Window>

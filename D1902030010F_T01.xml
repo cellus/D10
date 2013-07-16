@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="768" Id="D1902030010F_T01" Left="8" PidAttrib="7" Title="DCVG탐사실적등록_계획배관등록" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME3" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="GAP_DISTANCE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME6" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DcvgDiary">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_DUTY_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID3" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME3" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_EMPID6" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME6" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DcvgArRst">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user15" Bottom="25" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1254" TabOrder="4" Top="22" Type="Rectangle" Width="1249"></Shape>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="0" Text="탐사자" Top="5" Width="117"></Image>
+		<Shape BKColor="user15" Bottom="177" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="631" TabOrder="2" Top="174" Type="Rectangle" Width="626"></Shape>
+		<Static BKColor="white" Border="Flat" Height="116" Id="Static22" Left="5" Style="table" TabOrder="3" Top="177" VAlign="Middle" Width="626" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="16" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="5" Text="업무내용" Top="155" Width="82"></Image>
+		<Static BKColor="white" Border="Flat" Height="116" Id="Static0" Left="632" Style="table" TabOrder="6" Top="177" VAlign="Middle" Width="627" WordWrap="TRUE"></Static>
+		<Button ButtonStyle="TRUE" Height="19" Id="btn_CarOperat" ImageID="btn_4_Putson" Left="1179" LeftMargin="21" OnClick="Button91_OnClick" Style="button" TabOrder="7" Text="차량운행" Top="1" Width="76"></Button>
+		<Image Align="Left" Height="16" Id="Image1" ImageID="blt_8" Left="637" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="8" Text="특기사항" Top="155" Width="83"></Image>
+		<Shape BKColor="user15" Bottom="177" Height="3" Id="Shape2" Left="629" LineWidth="0" Right="1255" TabOrder="9" Top="174" Type="Rectangle" Width="626"></Shape>
+		<Image Align="Left" Height="13" Id="Image2" ImageID="blt" Left="21" LeftMargin="12" Style="blt_search_Indis" TabOrder="15" Text="DCVG&#32;탐사자&#32;정보" Top="52" Width="120"></Image>
+		<Edit Align="CENTER" BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_EMPID1" Enable="FALSE" Height="18" Id="edt_reserch1" ImeMode="none" Left="146" Style="edit" TabOrder="10" Top="80" Visible="FALSE" Width="73"></Edit>
+		<Edit BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_EMPID2" Enable="FALSE" Height="18" Id="edt_reserchempnm2" ImeMode="none" Left="222" Style="edit" TabOrder="11" Top="80" Visible="FALSE" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_emp2" ImageID="search" Left="298" OnClick="btn_emp2_OnClick" TabOrder="13" Text="Button8" Top="50" Width="17"></Button>
+		<Edit BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_EMPID3" Enable="FALSE" Height="18" Id="edt_reserchempnm3" ImeMode="none" Left="320" Style="edit" TabOrder="12" Top="80" Visible="FALSE" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_emp3" ImageID="search" Left="396" OnClick="btn_emp3_OnClick" TabOrder="14" Text="Button8" Top="50" Width="17"></Button>
+		<Edit Align="CENTER" BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_NAME1" Enable="FALSE" Height="18" Id="edt_reserchempid1" ImeMode="none" Left="147" Style="edit" TabOrder="16" Top="49" Width="73"></Edit>
+		<Edit BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_NAME2" Enable="FALSE" Height="18" Id="edt_reserchempid2" ImeMode="none" Left="223" Style="edit" TabOrder="17" Top="49" Width="73"></Edit>
+		<Edit BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_NAME3" Enable="FALSE" Height="18" Id="edt_reserchempid3" ImeMode="none" Left="321" Style="edit" TabOrder="18" Top="49" Width="73"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_EMPID4" Enable="FALSE" Height="18" Id="edt_reserchempnm4" ImeMode="none" Left="418" Style="edit" TabOrder="19" Top="80" Visible="FALSE" Width="73"></Edit>
+		<Edit BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_EMPID5" Enable="FALSE" Height="18" Id="edt_reserchempnm5" ImeMode="none" Left="516" Style="edit" TabOrder="20" Top="80" Visible="FALSE" Width="73"></Edit>
+		<Button Cursor="HAND" Height="9" Id="btn_emp5" ImageID="search" Left="591" OnClick="btn_emp5_OnClick" TabOrder="22" Text="Button8" Top="50" Width="17"></Button>
+		<Edit BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_NAME6" Enable="FALSE" Height="18" Id="edt_reserchempnm6" ImeMode="none" Left="614" Style="edit" TabOrder="21" Top="80" Visible="FALSE" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_emp6" ImageID="search" Left="689" OnClick="btn_emp6_OnClick" TabOrder="23" Text="Button8" Top="50" Width="17"></Button>
+		<Edit Align="CENTER" BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_NAME4" Enable="FALSE" Height="18" Id="edt_reserchempid4" ImeMode="none" Left="418" Style="edit" TabOrder="24" Top="49" Width="73"></Edit>
+		<Edit BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_NAME5" Enable="FALSE" Height="18" Id="edt_reserchempid5" ImeMode="none" Left="516" Style="edit" TabOrder="25" Top="49" Width="73"></Edit>
+		<Edit BindDataset="ds_DcvgDiary" Border="Flat" Column="RESECH_NAME6" Enable="FALSE" Height="18" Id="edt_reserchempid6" ImeMode="none" Left="614" Style="edit" TabOrder="26" Top="49" Width="73"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_emp4" ImageID="search" Left="493" OnClick="btn_emp4_OnClick" TabOrder="27" Text="Button8" Top="50" Width="17"></Button>
+		<Image Align="Left" Height="13" Id="Image3" ImageID="blt" Left="21" LeftMargin="12" Style="blt_search_Indis" TabOrder="28" Text="등록/수정&#32;일자" Top="114" Width="112"></Image>
+		<Image Align="Left" Height="13" Id="Image4" ImageID="blt" Left="325" LeftMargin="12" Style="blt_search_Indis" TabOrder="29" Text="결재상태" Top="114" Width="64"></Image>
+		<Edit Align="CENTER" BindDataset="ds_DcvgDiary" Border="Flat" Column="UPD_DTM" DisableColor="user24" Enable="FALSE" Height="18" Id="Edit7" ImeMode="none" Left="146" Style="edit" TabOrder="30" Top="111" Width="148"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_DcvgDiary" Border="Flat" Column="DECIDE_PROC_STS_NM" DisableColor="user24" Enable="FALSE" Height="18" Id="Edit8" ImeMode="none" Left="418" Style="edit" TabOrder="31" Top="111" Width="73"></Edit>
+		<Button ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Sanction" ImageID="btn_5_Amendment" Left="1082" LeftMargin="21" OnClick="btn_Sanction_OnClick" Style="button" TabOrder="32" Text="일지&#32;결재" Top="1" Width="90"></Button>
+		<TextArea BindDataset="ds_DcvgDiary" Border="Flat" Column="EXPLOR_DUTY_DESC" Height="116" Id="TextArea0" Left="7" Style="textarea" TabOrder="33" Top="177" Width="622"></TextArea>
+		<TextArea BindDataset="ds_DcvgDiary" Border="Flat" Column="EXPLOR_RMK" Height="116" Id="TextArea1" Left="634" Style="textarea" TabOrder="34" Top="177" Width="622"></TextArea>
+		<Image Align="Left" Height="9" Id="Image5" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="36" Text="DCVG탐사구간&#32;등록&#32;내역" Top="327" Width="182"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_DcvgArRst" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="611" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="261" Id="Grid" InputPanel="FALSE" Left="7" LineColor="silver" LineType="ExVERT" NoDataText="해당일자의&#32;탐사구간&#32;등록&#32;내역이&#32;없습니다." OnHeadClick="Grid_OnHeadClick" Right="1256" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="35" TabStop="true" Top="350" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="77"/>
+						<col width="75"/>
+						<col width="79"/>
+						<col width="248"/>
+						<col width="256"/>
+						<col width="92"/>
+						<col width="340"/>
+						<col width="72"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="배관_ID"/>
+						<cell col="1" display="text" text="연장(m)"/>
+						<cell bkcolor="user11" col="2" display="text" text="탐사연장(m)"/>
+						<cell col="3" display="text" text="시점"/>
+						<cell col="4" display="text" text="종점"/>
+						<cell bkcolor="user11" col="5" display="text" text="탐사일자"/>
+						<cell col="6" display="text" text="비고"/>
+						<cell col="7" display="text" text="결재여부"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MPIPE_ID" display="text"/>
+						<cell align="right" col="1" colid="SYS_LENG" display="text"/>
+						<cell align="right" col="2" colid="EXPLOR_LENG" display="number" displaymaskchar="#" limit="5" LimitDec="0" Mask="##0.##"/>
+						<cell align="left" col="3" colid="EXPLOR_STR_ADDR" display="text"/>
+						<cell align="left" col="4" colid="EXPLOR_END_ADDR" display="text"/>
+						<cell align="center" col="5" colid="EXPLOR_YMD" display="date"/>
+						<cell align="left" col="6" colid="EXPLOR_RMK" display="text"/>
+						<cell align="center" col="7" colid="DECIDE_PROC_STS" display="text"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" display="text" text="소계"/>
+						<cell align="right" col="1" display="text" expr='SumNF(&quot;SYS_LENG&quot;)&#32;/&#32;rowcount'/>
+						<cell align="right" col="2" display="text" expr='iif(SumNF(&quot;EXPLOR_LENG&quot;)==&apos;0&apos;,&#32;null,&#32;SumNF(&quot;EXPLOR_LENG&quot;))'/>
+						<cell align="center" col="3" display="text"/>
+						<cell col="4" display="text"/>
+						<cell col="5" display="text"/>
+						<cell col="6" display="text"/>
+						<cell col="7" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802030010F.xml
+* Form 설명  : DCVG탐사 계획/구간/결과 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-23
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+
+function D1902020010F_OnLoadCompleted(obj)
+{	
+	gfn_LoadForm(obj);
+	gfn_SetGrdComboBox_Comcode("Grid",7,"A10411");
+}
+function fn_Init()
+{
+}
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+function fn_D1_addRow()
+{
+	alert("조회 버튼을 클릭 후 저장/수정하세요...");
+}
+function fn_D1_deleteRow(){
+	if(ds_DcvgDiary.GetRowType(ds_DcvgDiary.row) == "insert"){
+		ds_DcvgDiary.ClearData();
+		return;
+	}
+
+	if(ds_DcvgDiary.GetRowCount() == 0)
+	{
+		return;
+	}
+
+	if((ds_DcvgDiary.GetColumn(0,"DECIDE_PROC_STS") == '0') || (ds_DcvgDiary.GetColumn(0,"DECIDE_PROC_STS") == '1')
+	  || (ds_DcvgDiary.GetColumn(0,"DECIDE_PROC_STS") == '2'))
+	{  
+		alert("결재건으로 삭제가 불가능합니다..");
+		return;
+	}	
+		
+	if(confirm("DCVG 탐사내역을 삭제하시겠습니까?"))
+	{
+		fn_DelDiary();
+	}	
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonDeleteRow()
+// 설명: 접수행을 삭제 한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_DelDiary()
+{	
+	ds_DcvgDiary.DeleteRow(ds_DcvgDiary.row);
+
+    var strSvcID        = "diary";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeMgr-service"
+						;
+												
+	var strInDatasets   = "ds_DcvgDiary=ds_DcvgDiary:u";
+	var strOutDatasets  = "";
+	var strArgument     = "diary";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+	
+	alert("정상 삭제 되었습니다.");
+}
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_SAVE
+//   설명  : 구간 실적 등록된 내용을 저장한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------
+//  Transition   : Service id
+//  ServicePart   : Service part
+//  Url          : Server url
+//  InputDsList   : Input Dataset List
+//  OutputDsList   : Output Dataset List
+//  Argument   :  Argument
+//-------------------------------------------------------------------------------
+function fn_D1_save()
+{			
+	if (ds_DcvgDiary.RowCount() == 0)
+	{
+		return;
+	}
+	
+	if((ds_DcvgDiary.GetColumn(0,"DECIDE_PROC_STS") == '0') || (ds_DcvgDiary.GetColumn(0,"DECIDE_PROC_STS") == '1')
+	  || (ds_DcvgDiary.GetColumn(0,"DECIDE_PROC_STS") == '2'))
+	{  
+		alert("결재건으로 수정이 불가능합니다..");
+		return;
+	}
+	
+	if (ds_DcvgDiary.GetRowType(0) == 'insert' || ds_DcvgDiary.GetRowType(0) == 'update')
+	{	
+		if(ds_DcvgDiary.GetColumn(0, "RESECH_EMPID1") == '' || ds_DcvgDiary.GetColumn(0, "RESECH_EMPID1") == null)
+		{
+			alert("조회 후 등록하세요. ");
+			return;
+		}
+		
+		if(ds_DcvgDiary.GetColumn(0, "EXPLOR_DUTY_DESC") == '' || ds_DcvgDiary.GetColumn(0, "EXPLOR_DUTY_DESC") == null)
+		{
+			alert("업무내용을 입력하세요. ");
+			return;
+		}
+		
+		if (ds_DcvgDiary.GetRowType(0) == 'insert') 
+		{
+			ds_DcvgDiary.SetColumn(0,"UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_DcvgDiary.SetColumn(0,"UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+			ds_DcvgDiary.SetColumn(0,"CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+			ds_DcvgDiary.SetColumn(0,"CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP
+		}	
+		else
+		{	
+			ds_DcvgDiary.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_DcvgDiary.SetColumn(0, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+		}
+	}
+	
+	var strSvcID         = "diary";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeMgr-service" ;	
+	var strInDatasets    = "ds_DcvgDiary=ds_DcvgDiary:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "diary";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}
+				
+	alert("저장/수정을 되었습니다.");
+	
+	fn_D1_find();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  계획실적 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	ds_DcvgDiary.ClearData();
+	ds_DcvgArRst.ClearData();
+	
+    var strSvcID        = "view_diary";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeMgr-service"
+						+ "&BASE_YEAR="   + Substr(cal_Ymd.value, 0, 4)
+						+ "&BRANCH_CD="   + cob_ObjectFlag.Value
+						+ "&EXPLOR_YMD="  + cal_Ymd.value
+						;
+											
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_DcvgDiary=ds_DcvgDiary ds_Excel=ds_Excel ds_DcvgArRst=ds_DcvgArRst";
+	var strArgument     = "view_diary";
+	 	
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_DcvgDiary.GetRowCount()==0) 
+	{
+		ds_DcvgDiary.AddRow();
+		ds_DcvgDiary.SetColumn(0,"BASE_YEAR",substr(cal_Ymd.Value,0,4));
+		ds_DcvgDiary.SetColumn(0,"EXPLOR_YMD",cal_Ymd.Value);
+		ds_DcvgDiary.SetColumn(0,"BRANCH_CD",cob_ObjectFlag.Value);
+		ds_DcvgDiary.SetColumn(0,"RESECH_EMPID1",gfn_GetGlobalValue("G_USER_NO"));
+		ds_DcvgDiary.SetColumn(0,"RESECH_NAME1",gfn_GetGlobalValue("G_NAME")); 
+	}
+	
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: grd_MultiSave_OnExpandEdit()
+//   설명  :  달력 기능과 사원번호 팝업
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function grd_MultiSave_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+	if(nCell == '5')
+	 {
+		gfn_SetCalendar(obj, nRow, nCell);
+	 }
+	 
+	var retValue  = '';
+	
+	if(nCell == '6')
+	 {
+		 retValue = gfn_E2_SearchOutEmplDialog();
+		 		 
+		 if(retValue != null)
+		 {
+			 ds_DcvgDiary.SetColumn(0, "RESECH_EMPID1", retValue[0]);
+			 ds_DcvgDiary.SetColumn(0, "RESECH_NAME1" , retValue[1]);
+		 } 
+	 }
+	 
+	 if(nCell == '7')
+	 {
+		 retValue = gfn_E2_SearchOutEmplDialog();
+		 
+		 if(retValue != null)
+		 {
+			 ds_DcvgDiary.SetColumn(0, "RESECH_EMPID2"  , retValue[0]);
+			 ds_DcvgDiary.SetColumn(0, "RESECH_NAME2"   , retValue[1]);
+		 } 
+	 }
+	 
+	 if(nCell == '8')
+	 {
+		 retValue = gfn_E2_SearchOutEmplDialog();
+		 
+		 if(retValue != null)
+		 {
+			 ds_DcvgDiary.SetColumn(0, "RESECH_EMPID3"  , retValue[0]);
+			 ds_DcvgDiary.SetColumn(0, "RESECH_NAME3"   , retValue[1]);
+		 } 
+	 }
+	 
+	  if(nCell == '9')
+	 {
+		 retValue = gfn_E2_SearchOutEmplDialog();
+		 
+		 if(retValue != null)
+		 {
+			 ds_DcvgDiary.SetColumn(0, "RESECH_EMPID4"  , retValue[0]);
+			 ds_DcvgDiary.SetColumn(0, "RESECH_NAME4"   , retValue[1]);
+		 } 
+	 }
+	 
+	  if(nCell == '10')
+	 {
+		 retValue = gfn_E2_SearchOutEmplDialog();
+		 
+		 if(retValue != null)
+		 {
+			 ds_DcvgDiary.SetColumn(0, "RESECH_EMPID5"  , retValue[0]);
+			 ds_DcvgDiary.SetColumn(0, "RESECH_NAME5"   , retValue[1]);
+		 } 
+	 }
+	 
+	  if(nCell == '11')
+	 {
+		 retValue = gfn_E2_SearchOutEmplDialog();
+		 
+		 if(retValue != null)
+		 {
+			 ds_DcvgDiary.SetColumn(0, "RESECH_EMPID6"  , retValue[0]);
+			 ds_DcvgDiary.SetColumn(0, "RESECH_NAME6"   , retValue[1]);
+		 } 
+	 }
+}
+
+//탐사이력 조회
+function Button231_OnClick(obj)
+{	
+	 var strPrefix = "D10";
+	 var strFormid = "D1902010014F";
+	 var strArg    = "" ;
+		 strArg    = "BASE_YEAR="        + quote(Substr(Today(), 0, 4));
+		 strArg	  += " BRANCH_CD="       + quote(cob_ObjectFlag.Value) ;
+		 strArg	  += " EXPLOR_YMD_FROM=" + quote(substr(cal_Ymd.Value,0,4) + '0101');
+		 strArg	  += " EXPLOR_YMD_TO="   + quote(cal_Ymd.Value) ;
+		 strArg	  += " EXPLOR_FLAG="     + '1';
+	 
+	gfn_NewWindow(strPrefix, strFormid, strArg, "DCVG 탐사이력 조회", strFormid, "", 0, "");
+	 
+	 //gfn_Dialog("D10","D1902010014F",strArg,1005,557,true,-1,-1);
+}
+
+// 차량 운행일지 팝업
+function Button91_OnClick(obj)
+{
+	//gfn_Dialog("E30","E3201080010F","",1005,557,true,-1,-1);
+	 var strPrefix = "E30";
+	 var strFormid = "E3201080010F";
+	 var strArg    = "" ;
+	 gfn_NewWindow(strPrefix, strFormid, strArg, "차량 운행기록", strFormid, "", 0, "");
+} 
+
+function fn_D1_Excel(){
+
+	var SearchCondition= "";
+   
+    SearchCondition = SearchCondition + "지사 : " +     RPad(cob_ObjectFlag.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 : " +    RPad(cob_CountyFlag.Text," ",20);
+    SearchCondition = SearchCondition + "탐사일자 : " + RPad(substr(cal_Ymd.Value,0,4) + '0101' + ' ~ ' + cal_Ymd.Value," ",40);
+	SearchCondition = SearchCondition + "배관번호 : " + RPad(edt_MpipeSearch.Text," ",20);
+    
+    gfn_ExportExcel("DCVG탐사실적등록_계획배관내역", 5, SearchCondition, "grd_excel");             
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명  : 탐사일지 장표를 출력한다. 
+// arguments 없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_D1_Print()
+{
+	if (length(ds_DcvgDiary.GetColumn(0,"UPD_DTM")) ==0)
+	{
+		alert("등록된 일지 내역이 없습니다.");
+		return;
+	}
+	
+    //함수 호출용 파라미터를 설정한다
+	var strTitle ="DCVG탐사 일지"; 
+	var strPart ="D10" ;
+	var strReport="D1902030010P";  
+	var strParameter="EXPLOR_YMD="+quote(cal_Ymd.Value)
+				   +",BRANCH_CD="+quote(cob_ObjectFlag.Value)
+				   +",BASE_YEAR="+quote(substr(cal_Ymd.Value,0,4))
+					;
+					
+    //	공통 레포트 팝업 함수 호출 
+	gfn_ReportPopup(strTitle,strPart,strReport,strParameter);
+}
+
+function btn_emp2_OnClick(obj)
+{
+	if(ds_DcvgDiary.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}	
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_reserchempid2.Text); //사용자코드(조회조건용)
+	ds_DcvgDiary.SetColumn(0,"RESECH_EMPID2",retValue[0]);
+	ds_DcvgDiary.SetColumn(0,"RESECH_NAME2",retValue[1]);
+}
+
+function btn_emp3_OnClick(obj)
+{
+	if(ds_DcvgDiary.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}	
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_reserchempid3.Text); //사용자코드(조회조건용)
+	ds_DcvgDiary.SetColumn(0,"RESECH_EMPID3",retValue[0]);
+	ds_DcvgDiary.SetColumn(0,"RESECH_NAME3",retValue[1]);
+}
+
+function btn_Sanction_OnClick(obj)
+{
+	if(ds_DcvgDiary.GetRowType(ds_DcvgDiary.row) == "insert"){
+		ds_DcvgDiary.ClearData();
+		return;
+	}
+
+	if(ds_DcvgDiary.GetRowCount() == 0)
+	{
+		return;
+	}
+	
+	alert("DCVG 탐사일지는 지사별 결재로 진행됩니다..");
+	
+	var Base_year = substr(cal_Ymd.Value,0,4);
+	var Explor_Ymd = cal_Ymd.Value;
+	var Branch_Cd = cob_ObjectFlag.Value;
+	
+	//그룹웨어에서 차량번호(한글)파라메터 전달 불가로 로그인자 사번넘겨 차량번호 참조 오즈로 넘겨줌 
+	gfv_callGWInfo("fmD23","D10","D1902030010P",3,Base_year+","+Explor_Ymd+","+Branch_Cd);
+   // 1번 : 화면명칭   2번 : 업무그룹 (b10,b20... OZ 인경우 필수), 3번: 프로그램ID (oz인경우 필수) 4: 아규먼트 갯수 (1....5)
+   // 5번 : 아규먼트 목록 (형식 , 표시로 각 아규먼트 구분자 사용)
+
+}
+
+function btn_emp4_OnClick(obj)
+{
+	if(ds_DcvgDiary.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}	
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_reserchempid4.Text); //사용자코드(조회조건용)
+	ds_DcvgDiary.SetColumn(0,"RESECH_EMPID4",retValue[0]);
+	ds_DcvgDiary.SetColumn(0,"RESECH_NAME4",retValue[1]);	
+}
+
+function btn_emp5_OnClick(obj)
+{
+	if(ds_DcvgDiary.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}		
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_reserchempid5.Text); //사용자코드(조회조건용)
+	ds_DcvgDiary.SetColumn(0,"RESECH_EMPID5",retValue[0]);
+	ds_DcvgDiary.SetColumn(0,"RESECH_NAME5",retValue[1]);	
+}
+
+function btn_emp6_OnClick(obj)
+{
+	if(ds_DcvgDiary.GetRowCount() == 0)
+	{
+		alert("조회 버튼 클릭후 탐사자 정보를 등록하세요...");
+		return;
+	}		
+	var retValue = gfn_E2_SearchOutEmplDialog(edt_reserchempid6.Text); //사용자코드(조회조건용)
+	ds_DcvgDiary.SetColumn(0,"RESECH_EMPID6",retValue[0]);
+	ds_DcvgDiary.SetColumn(0,"RESECH_NAME6",retValue[1]);	
+}
+
+function Grid_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+		//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+]]></Script>
+</Window>

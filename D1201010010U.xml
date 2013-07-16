@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="543" Id="D1201010010U" Left="8" OnLoadCompleted="D1201010010U_OnLoadCompleted" PidAttrib="7" Title="순찰점검&#32;일별계획조회_D1201010010U" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_listday">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_S" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOWN" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="일별계획" Transparent="TRUE" Width="800"></Image>
+		<Shape BKColor="user16" Bottom="104" Height="3" Id="Shape1" Left="0" LineWidth="0" Right="797" TabOrder="2" Top="101" Type="Rectangle" Width="797"></Shape>
+		<Calendar Border="Flat" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_date" Left="118" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="3" Top="79" WeeksFont="Default,-1" Width="102"></Calendar>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="7" LeftMargin="12" Style="blt_search" TabOrder="4" Text="순찰점검계획일&#32;:" Top="80" Width="108"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_listday" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="540" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="436" Id="grd_list" InputPanel="FALSE" LineColor="default" LineType="ExVERT" MinWidth="100" OnExpandEdit="grd_list_OnExpandEdit" Right="798" SelColor="MENU" Style="grid_pop" TabOrder="5" TabStop="true" Top="104" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="798">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="339"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="시설물구분"/>
+						<cell col="1" display="text" text="시설물번호"/>
+						<cell col="2" display="text" text="시설물명"/>
+						<cell col="3" display="text" text="주소"/>
+						<cell col="4" display="text" text="설치일자"/>
+						<cell col="5" display="text" text="이전점검일"/>
+						<cell col="6" display="text" text="GIS위치보기"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="FACI_FLAG_NM" display="text"/>
+						<cell align="center" col="1" colid="FACI_NUM" display="text"/>
+						<cell align="center" col="2" colid="FACI_NM" display="text"/>
+						<cell align="left" col="3" colid="LOT_NUM_UNION" display="text" expandsize="18"/>
+						<cell align="center" col="4" colid="INST_YMD" display="date"/>
+						<cell align="center" col="5" colid="PATROL_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="6" display="text" expandimage="search" expandshow="true"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Div DisableBKColor="white" Height="31" Id="div_ComHead" Left="-1" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="6" Text="Div0" Top="37" Url="globals::ComButton.xml" Visible="FALSE" Width="795">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID      : D1201010010U.xml
+* Form 설명   : 일별계획
+* 시스템 명   : 안전공급(D1)
+* 작성자      : 노준배
+* 작성일      : 2009-07-24
+* 변경내용    : 변경내용없음
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+
+function D1201010010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	cal_date.Text = DATE;
+	
+	fn_D1_Search();
+}
+
+/********************************************************************************
+* 기      능   :  순찰점검 일별계획조회
+********************************************************************************/
+function fn_D1_Search() {
+
+    var strSvcID = "";
+    var strPart = "D10";
+    var strURL = "handle.do?ServiceName=D1_PatrolMonthCheckMgr-service" 
+               + "&BRANCH_CD=" + cob_BranchCd.value
+               + "&BLOCK_CD="  + cob_PBlockCd.value
+               + "&TEAM_CD=" + cob_TeamCd.value 
+               + "&PLAN_YMD=" + cal_date.Value
+               ;
+    var strInDatasets = "";
+    var strOutDatasets = "ds_listday=ds_listday";
+    var strArgument = "searchday";
+ 
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );	   
+}
+
+/********************************************************************************
+* 기      능   :  시설물 위치조회
+********************************************************************************/
+function grd_list_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+	if (nCell == 6) {
+		
+		var str_BUNGI     = '';
+		var str_FACI_FLAG = substr(ds_listday.GetColumn(nRow, "FACI_NUM"), 0, 2);
+		var stR_FACI_NUM  = ds_listday.GetColumn(nRow, "FACI_NUM");
+			
+		var args = "";
+		
+		if(
+			str_FACI_FLAG == 'GR' || str_FACI_FLAG == 'VB' ||
+			str_FACI_FLAG == 'WD' || str_FACI_FLAG == 'TB' ||
+			str_FACI_FLAG == 'RE' || str_FACI_FLAG == 'DR'
+		){
+			if(str_FACI_FLAG == 'GR'){		  // 정압기
+				args  = "BUNGI='04'";
+			}else if(str_FACI_FLAG == 'VB'){   //'밸브박스' 
+				args  = "BUNGI='06'";
+			}else if(str_FACI_FLAG == 'WD'){   //'수취기'
+				args  = "BUNGI='18'";
+			}else if(str_FACI_FLAG == 'TB'){   //'테스트박스'
+				args  = "BUNGI='10'";
+			}else if(str_FACI_FLAG == 'RE'){   //'정류기'
+				args  = "BUNGI='11'";
+			}else if(str_FACI_FLAG == 'DR'){   //'배류기'
+				args  = "BUNGI='12'";	
+			}
+   
+	        args += " FACI_NUM=" + stR_FACI_NUM;
+			Dialog("D10::D1402060011U.xml", args, 1208, 840, true, -1, -1);
+			
+		}else{
+		
+			var args  = "BUNGI='01'";
+				args += " GU_NM="     + quote(ds_listday.GetColumn(nRow, "ZIP_NO1"))
+					  + " DONG_NM_H=" + quote(ds_listday.GetColumn(nRow, "TOWN"   ))
+					  + " FNU="       + quote(ds_listday.GetColumn(nRow, "ADDR_M" ))  
+					  + " SNU="       + quote(ds_listday.GetColumn(nRow, "ADDR_S" ))
+					  ;
+				
+				Dialog("D10::D1402060011U.xml", args, 1208, 840, true, -1, -1);	
+		}
+    }
+}
+]]></Script>
+</Window>

@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1402010011F" Left="8" OnLoadCompleted="D1402010011F_OnLoadCompleted" PidAttrib="7" Title="대형굴착공사입회내역서&#32;작성_D1402010011F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_search">
+				<Contents>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" type="STRING"/>
+					<colinfo id="JOIN_TIME_FROM" size="256" type="STRING"/>
+					<colinfo id="JOIN_TIME_TO" size="256" type="STRING"/>
+					<colinfo id="EOCS_NUM" size="256" type="STRING"/>
+					<colinfo id="JOIN_DEPT" size="256" type="STRING"/>
+					<colinfo id="JOIN_EMPID" size="256" type="STRING"/>
+					<colinfo id="JOIN_TEL" size="256" type="STRING"/>
+					<colinfo id="JOIN_CELLP" size="256" type="STRING"/>
+					<colinfo id="NO_JOIN_NM" size="256" type="STRING"/>
+					<colinfo id="NO_JOIN_TEL" size="256" type="STRING"/>
+					<colinfo id="NO_JOIN_CP" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_ADDR" size="256" type="STRING"/>
+					<colinfo id="DISCU_RMK" size="256" type="STRING"/>
+					<colinfo id="PIPE_CONF_FLAG" size="256" type="STRING"/>
+					<colinfo id="SITE_JOB_DESC" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_YMD" size="256" type="STRING"/>
+					<colinfo id="ORDER_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="ORDER_TAKER_NM" size="256" type="STRING"/>
+					<colinfo id="DIG_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_TAKER_NM" size="256" type="STRING"/>
+					<colinfo id="CHK_ANOTHER_ITEM" size="256" type="STRING"/>
+					<colinfo id="JOIN_TEL_DDD" size="256" type="STRING"/>
+					<colinfo id="JOIN_TEL_EXN" size="256" type="STRING"/>
+					<colinfo id="JOIN_TEL_NUM" size="256" type="STRING"/>
+					<colinfo id="JOIN_CELLP_DDD" size="256" type="STRING"/>
+					<colinfo id="JOIN_CELLP_EXN" size="256" type="STRING"/>
+					<colinfo id="JOIN_CELLP_NUM" size="256" type="STRING"/>
+					<colinfo id="NO_JOIN_TEL_DDD" size="256" type="STRING"/>
+					<colinfo id="NO_JOIN_TEL_EXN" size="256" type="STRING"/>
+					<colinfo id="NO_JOIN_TEL_NUM" size="256" type="STRING"/>
+					<colinfo id="NO_JOIN_CP_DDD" size="256" type="STRING"/>
+					<colinfo id="NO_JOIN_CP_EXN" size="256" type="STRING"/>
+					<colinfo id="NO_JOIN_CP_NUM" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_STR_YMD" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_END_YMD" size="256" type="STRING"/>
+					<colinfo id="SEQ" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list">
+				<Contents>
+					<colinfo id="CHK_RSLT" size="256" type="STRING"/>
+					<colinfo id="CHK_ITEM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_tel">
+				<Contents>
+					<colinfo id="TEL_DDD" size="256" type="STRING"/>
+					<record>
+						<TEL_DDD>02</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>031</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>032</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>033</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>041</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>042</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>043</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>051</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>052</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>053</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>054</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>055</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>061</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>062</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>063</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>064</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>011</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>016</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>018</TEL_DDD>
+					</record>
+					<record>
+						<TEL_DDD>010</TEL_DDD>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B22" Left="5" Style="table" TabOrder="71" Top="710" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="bt_02" ImageID="btn_6_reg" Left="885" LeftMargin="21" OnClick="fn_D10_Btn01" Style="button" TabOrder="150" Text="교육결과&#32;등록" Top="758" Width="100"></Button>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="1" Text="입회결과&#32;등록" Top="230" Width="117"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B3" Left="5" Style="table" TabOrder="2" Top="329" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B4" Left="5" Style="table" TabOrder="3" Top="350" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B1" Left="5" Style="table" TabOrder="4" Top="287" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B2" Left="5" Style="table" TabOrder="5" Top="308" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static31" Left="5" Style="table" TabOrder="6" Top="266" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edt_chk2" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="7" Top="289" Width="438"></Edit>
+		<Static Border="Flat" Height="22" Id="Static32" Left="5" Style="pop_table" TabOrder="8" Text="1.시험굴착&#32;및&#32;본굴착시" Top="266" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="43" Id="st_1" Left="5" Style="pop_table" TabOrder="9" Text="2.가스시설인접&#32;파일,토류판설치" Top="287" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B5" Left="5" Style="table" TabOrder="11" Top="371" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edt_chk3" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="12" Top="310" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk4" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="13" Top="331" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk5" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="14" Top="352" Width="438"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag1" Left="257" Style="table" TabOrder="15" Text="배관의&#32;위치,종류,구경&#32;및&#32;입력확인" Top="266" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag2" Left="257" Style="table" TabOrder="16" Text="파일,토류판&#32;등과&#32;배관과의거리" Top="287" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag4" Left="257" Style="table" TabOrder="18" Text="최초위치&#32;확인" Top="329" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag3" Left="257" Style="table" TabOrder="17" Text="향타기와&#32;배관의&#32;위치" Top="308" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag6" Left="257" Style="table" TabOrder="20" Text="방호설비의재료" Top="371" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag5" Left="257" Style="table" TabOrder="19" Text="변형유무&#32;확인" Top="350" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B6" Left="5" Style="table" TabOrder="21" Top="392" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B7" Left="5" Style="table" TabOrder="22" Top="413" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B8" Left="5" Style="table" TabOrder="23" Top="434" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="227" Id="st_bt" Left="5" Style="table" TabOrder="24" Top="779" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="43" Id="st_2" Left="5" Style="pop_table" TabOrder="25" Text="3.가스배관&#32;수직,수평&#32;위치측량" Top="329" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B9" Left="5" Style="table" TabOrder="26" Top="455" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B10" Left="5" Style="table" TabOrder="27" Top="476" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="127" Id="st_3" Left="5" Style="pop_table" TabOrder="10" Text="4.노출배관&#32;방호공사시" Top="371" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag7" Left="257" Style="table" TabOrder="28" Text="배관의&#32;접촉부" Top="392" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag8" Left="257" Style="table" TabOrder="29" Text="매달림지지대&#32;위치&#32;및&#32;느슨해짐&#32;유무" Top="413" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag9" Left="257" Style="table" TabOrder="30" Text="횡진방지조치설치&#32;유무" Top="434" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag10" Left="257" Style="table" TabOrder="31" Text="배관손상유무" Top="455" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag11" Left="257" Style="table" TabOrder="32" Text="가스누출유무" Top="476" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edt_chk11" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="37" Top="478" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk10" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="36" Top="457" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk9" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="35" Top="436" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk8" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="34" Top="415" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk7" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="33" Top="394" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk6" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="38" Top="373" Width="438"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B11" Left="5" Style="table" TabOrder="39" Top="497" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B12" Left="5" Style="table" TabOrder="40" Top="518" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edt_chk12" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="41" Top="499" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk13" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="42" Top="520" Width="438"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag12" Left="257" Style="table" TabOrder="43" Text="배관손상유무" Top="497" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag13" Left="257" Style="table" TabOrder="44" Text="고정접합부의&#32;이탈유무&#32;및&#32;고정위치" Top="518" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="43" Id="st_4" Left="5" Style="pop_table" TabOrder="45" Text="5.고정조치&#32;완료시" Top="497" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B13" Left="5" Style="table" TabOrder="46" Top="539" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B14" Left="5" Style="table" TabOrder="47" Top="560" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edt_chk14" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="48" Top="541" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk15" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="49" Top="562" Width="438"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag14" Left="257" Style="table" TabOrder="50" Text="배관과&#32;받침대&#32;사이의&#32;틈새&#32;유무" Top="539" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag15" Left="257" Style="table" TabOrder="51" Text="가스누출&#32;및&#32;배관&#32;유무" Top="560" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="43" Id="st_5" Left="5" Style="pop_table" TabOrder="52" Text="6.가스배관&#32;되메우기&#32;직전" Top="539" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B15" Left="5" Style="table" TabOrder="53" Top="581" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B16" Left="5" Style="table" TabOrder="54" Top="602" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edt_chk16" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="55" Top="583" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk17" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="56" Top="604" Width="438"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag16" Left="257" Style="table" TabOrder="57" Text="모래부설,&#32;보호판,&#32;보호포의&#32;시공상태" Top="581" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag17" Left="257" Style="table" TabOrder="58" Text="전기방식무식장치의&#32;시공상태" Top="602" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="43" Id="st_6" Left="5" Style="pop_table" TabOrder="59" Text="7.가스배관&#32;되메우기시" Top="581" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B17" Left="5" Style="table" TabOrder="60" Top="623" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B18" Left="5" Style="table" TabOrder="61" Top="644" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edt_chk18" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="62" Top="625" Width="438"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_chk19" ImeMode="none" Left="543" MaxLength="3" Style="edit" TabOrder="63" Top="646" Width="438"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag18" Left="257" Style="table" TabOrder="64" Text="라인마크&#32;설치상태" Top="623" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag19" Left="257" Style="table" TabOrder="65" Text="지반침하여부확인" Top="644" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="43" Id="st_7" Left="5" Style="pop_table" TabOrder="66" Text="8.가스배관&#32;되메기작업&#32;완료&#32;후" Top="623" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B19" Left="5" Style="table" TabOrder="67" Top="665" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_Flag20" Left="257" Style="table" TabOrder="68" Text="안전교육실시여부" Top="665" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="22" Id="st_8" Left="5" Style="pop_table" TabOrder="69" Text="9.기타사항" Top="665" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B21" Left="5" Style="table" TabOrder="70" Top="689" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="22" Id="st_A1" Left="5" Style="table" TabOrder="72" Text="상호협의&#32;및&#32;주의사항" Top="689" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="st_B23" Left="5" Style="table" TabOrder="73" Top="731" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="22" Id="st_A3" Left="5" Style="table" TabOrder="74" Text="현장작업내용" Top="731" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static Border="Flat" Height="22" Id="st_A2" Left="5" Style="table" TabOrder="75" Text="배관확인내용" Top="710" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_search" Border="Flat" Column="DISCU_RMK" Height="18" Id="edt_A1" Left="261" MaxLength="3" Style="edit_Indis" TabOrder="76" Top="691" Width="720"></Edit>
+		<Combo BindDataset="ds_search" Border="Flat" Column="PIPE_CONF_FLAG" Height="18" Id="Combo0" Left="260" Style="combo_indis" TabOrder="77" Top="711" Width="275"></Combo>
+		<Edit BindDataset="ds_search" Border="Flat" Column="SITE_JOB_DESC" Height="18" Id="edt_A2" Left="261" MaxLength="3" Style="edit_Indis" TabOrder="78" Top="733" Width="720"></Edit>
+		<Combo BindDataset="ds_search" Border="Flat" Column="CHK_ANOTHER_ITEM" Height="18" Id="Combo1" Left="543" Style="combo" TabOrder="79" Top="666" Width="439"></Combo>
+		<Static Height="13" Id="st_Y" Left="534" Style="static" TabOrder="80" Text="*노출&#32;배관&#32;확인시&#32;GIS수정의뢰서를&#32;작성해야합니다." Top="715" Width="290"></Static>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="985" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="124" Top="30" Type="RoundRect" Width="980"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="980" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="125" Top="35" Type="Rectangle" Width="970"></Shape>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static18" Left="5" Style="table" TabOrder="81" Top="181" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static22" Left="5" Style="table" TabOrder="82" Top="202" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static1" Left="5" Style="table" TabOrder="83" Top="136" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="5" Style="table" TabOrder="84" Top="160" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="5" Style="table" TabOrder="85" Top="94" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static12" Left="5" Style="table" TabOrder="86" Top="115" VAlign="Middle" Width="980" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static7" Left="5" Style="table" TabOrder="87" Text="공사명" Top="160" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static8" Left="5" Style="table" TabOrder="88" Text="시행자" Top="181" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static9" Left="5" Style="table" TabOrder="89" Text="시공자" Top="202" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="64" Id="Static10" Left="5" Style="table" TabOrder="90" Text="입회자" Top="94" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="5" Id="Image2" ImageID="blt" Left="335" LeftMargin="12" Style="blt_search_1" TabOrder="91" Text="공사번호" Top="46" Transparent="TRUE" Width="81"></Image>
+		<Static Height="13" Id="Static0" Left="196" Style="static" TabOrder="92" Text="~" Top="44" Width="10"></Static>
+		<Edit BindDataset="ds_search" Border="Flat" Column="EOCS_NUM" Height="18" Id="Edit15" Left="400" MaxLength="3" Style="edit" TabOrder="93" Top="40" Width="99"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static3" Left="132" Style="table" TabOrder="94" Text="휴대폰" Top="136" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="64" Id="Static5" Left="491" Style="table" TabOrder="95" Text="피입회자" Top="94" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static11" Left="132" Style="table" TabOrder="96" Text="사무실" Top="115" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static13" Left="618" Style="table" TabOrder="97" Text="휴대폰" Top="136" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static14" Left="618" Style="table" TabOrder="98" Text="사무실" Top="115" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static17" Left="618" Style="table" TabOrder="99" Text="성명" Top="94" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Height="23" Id="Static19" Left="5" Style="static" TabOrder="100" Text="*주.야간&#32;:&#32;서울도시가스(주)&#32;상황실&#32;☎3660&#32;-&#32;8282" Top="71" Width="765"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static23" Left="284" Style="table" TabOrder="101" Text="감독자" Top="181" VAlign="Middle" Width="123" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static24" Left="284" Style="table" TabOrder="102" Text="현장소장" Top="202" VAlign="Middle" Width="123" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static29" Left="284" Style="table" TabOrder="103" Text="공사위치" Top="160" VAlign="Middle" Width="123" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static4" Left="135" Style="static" TabOrder="104" Text="소속:" Top="100" Width="35"></Static>
+		<Static Height="13" Id="Static21" Left="290" Style="static" TabOrder="105" Text="성명:" Top="100" Width="35"></Static>
+		<Edit BindDataset="ds_search" Border="Flat" Column="JOIN_DEPT" Height="18" Id="Edit0" Left="165" MaxLength="3" Style="edit_Indis" TabOrder="106" Top="96" Width="119"></Edit>
+		<Edit BindDataset="ds_search" Border="Flat" Column="JOIN_EMPID" Height="18" Id="Edit1" Left="320" MaxLength="3" Style="edit_Indis" TabOrder="107" Top="96" Width="106"></Edit>
+		<Edit BindDataset="ds_search" Border="Flat" Column="DIG_WORK_NM" Enable="FALSE" Height="18" Id="Edit4" Left="136" MaxLength="3" Style="edit_Indis" TabOrder="108" Top="162" Width="145"></Edit>
+		<Edit BindDataset="ds_search" Border="Flat" Column="ORDER_FIRM_NM" Enable="FALSE" Height="18" Id="Edit5" Left="136" MaxLength="3" Style="edit_Indis" TabOrder="109" Top="183" Width="145"></Edit>
+		<Edit BindDataset="ds_search" Border="Flat" Column="DIG_FIRM_NM" Enable="FALSE" Height="18" Id="Edit6" Left="136" MaxLength="3" Style="edit_Indis" TabOrder="110" Top="204" Width="145"></Edit>
+		<Edit BindDataset="ds_search" Border="Flat" Column="NO_JOIN_NM" Height="18" Id="Edit8" Left="749" MaxLength="3" Style="edit_Indis" TabOrder="111" Top="96" Width="162"></Edit>
+		<Edit BindDataset="ds_search" Border="Flat" Column="ORDER_TAKER_NM" Enable="FALSE" Height="18" Id="Edit12" Left="410" MaxLength="3" Style="edit_Indis" TabOrder="113" Top="183" Width="110"></Edit>
+		<Edit BindDataset="ds_search" Border="Flat" Column="WORK_ADDR" Enable="FALSE" Height="18" Id="Edit13" Left="410" MaxLength="3" Style="edit_Indis" TabOrder="112" Top="162" Width="265"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button196" ImageID="btn_2_San" Left="935" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="114" Text="결재" Top="74" Width="50"></Button>
+		<Calendar BindDataset="ds_search" Border="Flat" Column="JOIN_TIME_FROM" Dateformat="yyyy-MM-dd&#32;hh:mm" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar3" Left="76" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="115" Top="40" WeeksFont="Default,-1" Width="119"></Calendar>
+		<Calendar BindDataset="ds_search" Border="Flat" Column="JOIN_TIME_TO" Dateformat="yyyy-MM-dd&#32;hh:mm" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar0" Left="206" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="116" Top="40" WeeksFont="Default,-1" Width="119"></Calendar>
+		<Static Height="13" Id="Static30" Left="804" Style="static" TabOrder="117" Text="-" Top="119" Width="10"></Static>
+		<Edit BindDataset="ds_search" Border="Flat" Column="NO_JOIN_TEL_EXN" Height="18" Id="Edit7" ImeMode="none" Left="812" Style="edit" TabOrder="119" Top="117" Width="44"></Edit>
+		<Combo BindDataset="ds_search" Border="Flat" CodeColumn="TEL_DDD" Column="NO_JOIN_TEL_DDD" DataColumn="TEL_DDD" Height="18" Id="B1401070010F" InnerDataset="ds_tel" Left="748" Style="combo" TabOrder="118" Top="116" Width="56"></Combo>
+		<Edit BindDataset="ds_search" Border="Flat" Column="NO_JOIN_TEL_NUM" Height="18" Id="Edit9" ImeMode="none" Left="866" Style="edit" TabOrder="121" Top="117" Width="45"></Edit>
+		<Static Height="13" Id="Static84" Left="857" Style="static" TabOrder="120" Text="-" Top="119" Width="10"></Static>
+		<Image Align="Left" Height="6" Id="Image5" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="122" Text="입회일시" Top="46" Width="59"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="123" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="980">
+			<Contents></Contents>
+		</Div>
+		<Static Height="13" Id="Static85" Left="804" Style="static" TabOrder="126" Text="-" Top="140" Width="10"></Static>
+		<Edit BindDataset="ds_search" Border="Flat" Column="NO_JOIN_CP_EXN" Height="18" Id="Edit2" ImeMode="none" Left="812" Style="edit" TabOrder="128" Top="138" Width="44"></Edit>
+		<Combo BindDataset="ds_search" Border="Flat" CodeColumn="TEL_DDD" Column="NO_JOIN_CP_DDD" DataColumn="TEL_DDD" Height="18" Id="Combo2" InnerDataset="ds_tel" Left="748" Style="combo" TabOrder="127" Top="137" Width="56"></Combo>
+		<Edit BindDataset="ds_search" Border="Flat" Column="NO_JOIN_CP_NUM" Height="18" Id="Edit3" ImeMode="none" Left="866" Style="edit" TabOrder="130" Top="138" Width="45"></Edit>
+		<Static Height="13" Id="Static86" Left="857" Style="static" TabOrder="129" Text="-" Top="140" Width="10"></Static>
+		<Static Height="13" Id="Static87" Left="318" Style="static" TabOrder="131" Text="-" Top="119" Width="10"></Static>
+		<Edit BindDataset="ds_search" Border="Flat" Column="JOIN_TEL_EXN" Height="18" Id="Edit11" ImeMode="none" Left="326" Style="edit" TabOrder="133" Top="117" Width="44"></Edit>
+		<Combo BindDataset="ds_search" Border="Flat" CodeColumn="TEL_DDD" Column="JOIN_TEL_DDD" DataColumn="TEL_DDD" Height="18" Id="Combo4" InnerDataset="ds_tel" Left="262" Style="combo" TabOrder="132" Top="116" Width="56"></Combo>
+		<Edit BindDataset="ds_search" Border="Flat" Column="JOIN_TEL_NUM" Height="18" Id="Edit14" ImeMode="none" Left="380" Style="edit" TabOrder="135" Top="117" Width="45"></Edit>
+		<Static Height="13" Id="Static88" Left="371" Style="static" TabOrder="134" Text="-" Top="119" Width="10"></Static>
+		<Static Height="13" Id="Static89" Left="318" Style="static" TabOrder="136" Text="-" Top="140" Width="10"></Static>
+		<Edit BindDataset="ds_search" Border="Flat" Column="JOIN_CELLP_EXN" Height="18" Id="Edit10" ImeMode="none" Left="326" Style="edit" TabOrder="138" Top="138" Width="44"></Edit>
+		<Combo BindDataset="ds_search" Border="Flat" CodeColumn="TEL_DDD" Column="JOIN_CELLP_DDD" DataColumn="TEL_DDD" Height="18" Id="Combo5" InnerDataset="ds_tel" Left="262" Style="combo" TabOrder="137" Top="137" Width="56"></Combo>
+		<Edit BindDataset="ds_search" Border="Flat" Column="JOIN_CELLP_NUM" Height="18" Id="Edit16" ImeMode="none" Left="380" Style="edit" TabOrder="140" Top="138" Width="45"></Edit>
+		<Static Height="13" Id="Static90" Left="371" Style="static" TabOrder="139" Text="-" Top="140" Width="10"></Static>
+		<Calendar BindDataset="ds_search" Border="Flat" Column="DIG_WORK_STR_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar1" Left="804" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="141" Top="162" WeeksFont="Default,-1" Width="83"></Calendar>
+		<Static Height="13" Id="Static91" Left="888" Style="static" TabOrder="142" Text="~" Top="165" Width="10"></Static>
+		<Calendar BindDataset="ds_search" Border="Flat" Column="DIG_WORK_END_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar2" Left="898" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="143" Top="162" WeeksFont="Default,-1" Width="83"></Calendar>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static93" Left="678" Style="table" TabOrder="144" Text="공사기간" Top="160" VAlign="Middle" Width="123" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_search" Border="Flat" Column="ORDER_TAKER_NM" Enable="FALSE" Height="18" Id="Edit36" Left="410" MaxLength="3" Style="edit_Indis" TabOrder="145" Top="204" Width="110"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static38" Left="5" Style="table" TabOrder="146" Text="입회공정" Top="245" VAlign="Middle" Width="253" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static35" Left="257" Style="table" TabOrder="148" Text="점검사항" Top="245" VAlign="Middle" Width="283" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static37" Left="539" Style="table" TabOrder="149" Text="점검결과" Top="245" VAlign="Middle" Width="446" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Height="18" Id="edt_chk1" Left="543" MaxLength="3" Style="edit" TabOrder="147" Top="268" Width="438"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="bt_01" ImageID="btn_2_plan" Left="830" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="151" Text="도면" Top="758" Width="51"></Button>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+function D1402010011F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+function fn_Init()
+{
+	fn_D10_Serach();
+}
+
+function fn_CommonSearch()
+{
+	fn_D10_Serach();
+
+}
+
+
+function fn_D10_Serach()
+{
+
+
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_GeneralDigWorkGateMgr-service&search=1"
+	            + "&EOCS_NUM="+ EOCS_NUM
+	            + "&DIG_WORK_PATH_FLAG="+ DIG_WORK_PATH_FLAG
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_search=ds_search ds_list=ds_list";
+	var strArgument     = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+fn_D10_Setting();
+}
+
+function fn_D10_Setting()
+
+{
+	edt_chk1.Text = ds_list.GetColumn(0,"CHK_RSLT");
+	edt_chk2.Text = ds_list.GetColumn(1,"CHK_RSLT");
+	edt_chk3.Text = ds_list.GetColumn(2,"CHK_RSLT");
+	edt_chk4.Text = ds_list.GetColumn(3,"CHK_RSLT");
+	edt_chk5.Text = ds_list.GetColumn(4,"CHK_RSLT");
+	edt_chk6.Text = ds_list.GetColumn(5,"CHK_RSLT");
+	edt_chk7.Text = ds_list.GetColumn(6,"CHK_RSLT");
+	edt_chk8.Text = ds_list.GetColumn(7,"CHK_RSLT");
+	edt_chk9.Text = ds_list.GetColumn(8,"CHK_RSLT");
+	edt_chk10.Text = ds_list.GetColumn(9,"CHK_RSLT");
+	edt_chk11.Text = ds_list.GetColumn(10,"CHK_RSLT");
+	edt_chk12.Text = ds_list.GetColumn(11,"CHK_RSLT");
+	edt_chk13.Text = ds_list.GetColumn(12,"CHK_RSLT");
+	edt_chk14.Text = ds_list.GetColumn(13,"CHK_RSLT");
+	edt_chk15.Text = ds_list.GetColumn(14,"CHK_RSLT");
+	edt_chk16.Text = ds_list.GetColumn(15,"CHK_RSLT");
+	edt_chk17.Text = ds_list.GetColumn(16,"CHK_RSLT");
+	edt_chk18.Text = ds_list.GetColumn(17,"CHK_RSLT");
+	edt_chk19.Text = ds_list.GetColumn(18,"CHK_RSLT");
+	
+
+}
+
+function fn_D10_Setting()
+{
+	if(DIG_KIND != "40")
+	{
+		st_1.Visible=false;
+		st_2.Visible=false;
+		st_3.Visible=false;
+		st_4.Visible=false;
+		st_5.Visible=false;
+		
+		edt_chk2.Visible=false;
+		edt_chk3.Visible=false;
+		edt_chk4.Visible=false;
+		edt_chk5.Visible=false;
+		edt_chk6.Visible=false;
+		edt_chk7.Visible=false;
+		edt_chk8.Visible=false;
+		edt_chk9.Visible=false;
+		edt_chk10.Visible=false;
+		edt_chk11.Visible=false;
+		edt_chk12.Visible=false;
+		edt_chk13.Visible=false;
+		edt_chk14.Visible=false;
+		edt_chk15.Visible=false;
+		
+		st_B1.Visible=false;
+		st_B2.Visible=false;
+		st_B3.Visible=false;
+		st_B4.Visible=false;
+		st_B5.Visible=false;
+		st_B6.Visible=false;
+		st_B7.Visible=false;
+		st_B8.Visible=false;
+		st_B9.Visible=false;
+		st_B10.Visible=false;
+		st_B11.Visible=false;
+		st_B12.Visible=false;
+		st_B13.Visible=false;
+		st_B14.Visible=false;
+		
+		st_Flag2.Visible=false;
+		st_Flag3.Visible=false;
+		st_Flag4.Visible=false;
+		st_Flag5.Visible=false;
+		st_Flag6.Visible=false;
+		st_Flag7.Visible=false;
+		st_Flag8.Visible=false;
+		st_Flag9.Visible=false;
+		st_Flag10.Visible=false;
+		st_Flag11.Visible=false;
+		st_Flag12.Visible=false;
+		st_Flag13.Visible=false;
+		st_Flag14.Visible=false;
+		st_Flag15.Visible=false;
+
+		st_B15.Top="287";
+		st_B16.Top="308";
+		st_B17.Top="329";
+		st_B18.Top="350";
+		st_B19.Top="371";
+		
+		edt_chk16.Top="289";
+		edt_chk17.Top="310";
+		edt_chk18.Top="331";
+		edt_chk19.Top="352";
+		Combo1.Top="372";
+		
+		st_6.Top="287";
+		st_7.Top="329";
+		st_8.Top="371";
+		
+		st_6.Text="2.가스배관 되메우기시";
+		st_7.Text="3.가스배관 되메기작업 완료 후";
+		st_8.Text="4.기타사항";
+
+		
+		st_Flag16.Top="287";
+		st_Flag17.Top="308";
+		st_Flag18.Top="329";
+		st_Flag19.Top="350";
+		st_Flag20.Top="371";
+		
+		st_A1.Top="395";
+		st_A2.Top="416";
+		st_A3.Top="437";
+		
+		edt_A1.Top="397";
+		edt_A2.Top="439";
+		st_Y.Top="420";
+		Combo0.Top="417";
+		
+		st_B21.Top="395";
+		st_B22.Top="416";
+		st_B23.Top="437";
+
+		bt_01.Top="464";
+		bt_02.Top="464";
+		
+		st_bt.top="485";
+	}
+}
+
+function fn_D10_Btn01(obj)
+{
+	var arg  = "EOCS_NUM=" + ds_search.GetColumn(0,"EOCS_NUM");
+	    arg += " DIG_WORK_PATH_FLAG=" + ds_search.GetColumn(0,"DIG_WORK_PATH_FLAG");
+	    arg += " SEQ=" + ds_search.GetColumn(0,"SEQ");
+	gfn_Dialog("D10","D1402010010U",arg,450,900,"Scroll",-1,-1);
+
+}
+]]></Script>
+</Window>

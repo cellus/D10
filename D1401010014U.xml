@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="900" Id="D1401010014U" Left="8" OnLoadCompleted="D1401010014U_OnLoadCompleted" PidAttrib="7" Title="굴착공사협의서&#32;작성_D1401010014U" Top="8" Ver="1.0" Width="800" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_list1">
+				<Contents>
+					<colinfo id="SUPPLY_FACI_FLAG" size="256" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" type="STRING"/>
+					<colinfo id="MATER_FLAG" size="256" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" type="STRING"/>
+					<colinfo id="LENG" size="256" type="STRING"/>
+					<colinfo id="RMK" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list2">
+				<Contents>
+					<colinfo id="MOVE" size="256" type="STRING"/>
+					<colinfo id="TEMPOR_PIPE" size="256" type="STRING"/>
+					<colinfo id="RC_FLAG" size="256" type="STRING"/>
+					<colinfo id="PAUSE" size="256" type="STRING"/>
+					<colinfo id="PIPE_KIND_CHG" size="256" type="STRING"/>
+					<colinfo id="KIPPER_METHOD_CD" size="256" type="STRING"/>
+					<colinfo id="KIPPER_WORK_NM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list3">
+				<Contents>
+					<colinfo id="EOCS_NUM" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_NM" size="256" type="STRING"/>
+					<colinfo id="ORDER_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="ORDER_TAKER_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TAKER_SIGN" size="256" type="STRING"/>
+					<colinfo id="CITY_GAS_FIRM_SIGN" size="256" type="STRING"/>
+					<colinfo id="DISCU_YY" size="256" type="STRING"/>
+					<colinfo id="DISCU_MM" size="256" type="STRING"/>
+					<colinfo id="DISCU_DD" size="256" type="STRING"/>
+					<colinfo id="AFTER_ROAD_RECOV_NM" size="256" type="STRING"/>
+					<colinfo id="AFTER_ROAD_RECOV_CON" size="256" type="STRING"/>
+					<colinfo id="AFTER_ROAD_RECOV_YMD" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Height="26" Id="Static0" Left="5" LineSpacing="3" Style="static" TabOrder="4" Text="[&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;]&#32;공사시행에&#32;있어&#32;산업자원부&#32;고시&#32;제&#32;2005-&#32;&#32;호&#32;타공사에&#32;의한&#32;도시가스배관&#32;손상사고를&#32;예방&#10;하기&#32;위한&#32;굴착공사&#32;원콜시스템(EOCS)&#32;시범사업을&#32;위한&#32;특례기준&#32;제&#32;13조의&#32;규정에&#32;의하여&#32;굴착공사에&#32;관하여&#32;다음과&#32;같이&#32;협의하였습니다.&#32;" Top="68" Width="773"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static46" Left="5" Style="table" TabOrder="12" Top="1119" VAlign="Middle" Width="775" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static47" Left="5" Style="table" TabOrder="13" Top="1140" VAlign="Middle" Width="775" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static54" Left="5" Style="table_1" TabOrder="16" Top="1119" VAlign="Middle" Width="163" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static55" Left="5" Style="table_1" TabOrder="17" Top="1140" VAlign="Middle" Width="163" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="굴착공사&#32;협의서" Transparent="TRUE" Width="780"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_list1" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="256" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="112" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="780" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="144" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="775">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="가스공급시설"/>
+						<cell col="2" display="text" text="압력"/>
+						<cell col="3" display="text" text="재질"/>
+						<cell col="4" display="text" text="관경"/>
+						<cell col="5" display="text" text="연장"/>
+						<cell col="6" display="text" text="비고"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell col="1" colid="SUPPLY_FACI_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="PRESS_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="MATER_FLAG" display="text"/>
+						<cell col="4" colid="PIPE_DIAM_CD" display="text"/>
+						<cell col="5" colid="LENG" display="text"/>
+						<cell col="6" colid="RMK" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="144" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="780" TabOrder="3" Top="141" Type="Rectangle" Width="775"></Shape>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="5" Style="table" TabOrder="5" Top="98" VAlign="Middle" Width="775" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static10" Left="5" Style="table_1" TabOrder="6" Text="공사명" Top="98" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_list3" Border="Flat" Column="DIG_WORK_NM" Enable="FALSE" Height="18" Id="Edit7" Left="136" Readonly="TRUE" Style="edit_Indis" TabOrder="7" Top="100" Width="253"></Edit>
+		<Static Height="11" Id="Static15" Left="5" Style="static" TabOrder="8" Text="1.다른공사에&#32;의하여&#32;영향을&#32;받는&#32;가스공급시설의&#32;범위" Top="125" Width="330"></Static>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_list2" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="971" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="112" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="780" SelColor="MENU" Style="grid_pop" TabOrder="9" TabStop="true" Top="859" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="775">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="90"/>
+						<col width="70"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="이설"/>
+						<cell col="2" display="text" text="가배관"/>
+						<cell col="3" display="text" text="복구"/>
+						<cell col="4" display="text" text="일시정지"/>
+						<cell col="5" display="text" text="관종변경"/>
+						<cell col="6" display="text" text="기타방호방법"/>
+						<cell col="7" display="text" text="방호시공자"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell col="1" colid="MOVE" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="TEMPOR_PIPE" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="RC_FLAG" display="text"/>
+						<cell col="4" colid="PAUSE" display="text"/>
+						<cell col="5" colid="PIPE_KIND_CHG" display="text"/>
+						<cell col="6" colid="KIPPER_METHOD_CD" display="text"/>
+						<cell col="7" colid="KIPPER_WORK_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="859" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="780" TabOrder="10" Top="856" Type="Rectangle" Width="775"></Shape>
+		<Static Height="130" Id="Static42" Left="5" LineSpacing="5" Style="static" TabOrder="11" Text="-&#32;가스배관의&#32;노출시에는&#32;도시가스&#32;안전관리기분&#32;통합고시의&#32;노출된&#32;가스배관의&#32;방호조치기분에&#32;의하여&#32;안전조치를&#32;시공자(시행자)&#32;부담으로&#32;시행한다.&#13;&#10;5.&#32;지반침하의&#32;측정에&#32;관한&#32;사항&#13;&#10;&#32;&#32;가.&#32;굴착으로&#32;인한&#32;지반침하&#32;예상지역은&#32;상호&#32;협의하여&#32;주기적으로&#32;측정한다.(1회&#32;/&#32;&#32;일)&#13;&#10;&#32;&#32;나.&#32;지반침하&#32;여부&#32;확인은&#32;도시가스사,&#32;시공사&#32;상호&#32;확인하고&#32;각&#32;1부씩&#32;보관한다.&#13;&#10;&#32;&#32;다.&#32;지반&#32;침하&#32;예상지역은&#32;&#32;도시가스사에&#32;즉시&#32;연락을&#32;취하고&#32;배관의&#32;대한&#32;안전점검을&#32;실시하여&#32;이상&#32;유무&#32;확인후&#32;지반&#32;복구&#32;및&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;공사를&#32;시행&#32;한다.&#13;&#10;&#32;&#32;라.&#32;공사&#32;시공중,후&#32;지반침하시&#32;공사시행자&#32;및&#32;공사시공자가&#32;책임&#32;복구할&#32;수&#32;있도록&#32;한다.&#13;&#10;" Top="976" Width="775" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static48" Left="10" Style="static" TabOrder="14" Text="6.가스공사&#32;후의&#32;도로복구자" Top="1125" Width="155"></Static>
+		<Static Height="13" Id="Static49" Left="10" Style="static" TabOrder="15" Text="7.가스공사&#32;후의&#32;복구조건" Top="1146" Width="155"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static60" Left="547" Style="table_1" TabOrder="18" Text="복구기한" Top="1140" VAlign="Middle" Width="138" WordWrap="TRUE"></Static>
+		<Static Align="Center" Height="13" Id="Static71" Left="325" Style="static" TabOrder="19" Text="년&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;월&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;일" Top="1329" Width="155"></Static>
+		<Edit BindDataset="ds_list3" Border="Flat" Column="EOCS_NUM" Enable="FALSE" Height="18" Id="Edit26" Left="523" Readonly="TRUE" Style="edit_Indis" TabOrder="21" Top="100" Width="253"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static86" Left="392" Style="table_1" TabOrder="20" Text="EOCS&#32;접수번호" Top="98" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Div Height="29" Id="Div0" Left="124" TabOrder="22" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="656">
+			<Contents></Contents>
+		</Div>
+		<Static Height="590" Id="Static1" Left="5" LineSpacing="5" Style="static" TabOrder="23" Text="2.&#32;공사계획변경에&#32;따른&#32;조치사항&#13;&#10;&#32;&#32;&#32;&#32;-&#32;공사계획(공사기간,&#32;위치&#32;등)변경&#32;또는&#32;현장책임자의&#32;변경&#32;시에는&#32;재&#32;협의&#32;후&#32;공사를&#32;시행한다.&#13;&#10;3.&#32;공사시공&#32;시&#32;준수사항에&#32;&#32;대한&#32;협의&#32;내용&#13;&#10;&#32;&#32;가.&#32;공사&#32;중&#32;가스공급시설의&#32;위험사항&#32;인지&#32;시&#32;조치사항&#13;&#10;&#32;&#32;&#32;&#32;-&#32;응급조치용&#32;안전장비&#32;및&#32;자재를&#32;비치하여야&#32;한다.&#32;(찰흙,&#32;고무밴드,&#32;목심,&#32;소화기&#32;등)&#13;&#10;&#32;&#32;&#32;&#32;-위험사항&#32;인지&#32;시&#32;도시가스&#32;담당자와&#32;협의&#32;후&#32;공사&#32;시행.&#13;&#10;&#32;&#32;&#32;&#32;-&#32;가스누출&#32;시&#32;작업&#32;중단&#32;후&#32;도시가스&#32;담당자&#32;및&#32;상황실로&#32;통보(Tel&#32;:&#32;3360-8282)하고,&#32;주변의&#32;화기사용&#32;금지&#32;및&#32;주변통제&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;(필요&#32;시&#32;도기가스와&#32;협의하여&#32;차단밸브&#32;차단)를&#32;취한다.&#13;&#10;&#32;&#32;&#32;나.굴착.되메우기.포장시&#32;조치사항&#13;&#10;&#32;&#32;&#32;&#32;-&#32;가스배관&#32;주변의&#32;시험굴착&#32;및&#32;본&#32;굴착작업은&#32;도시가스&#32;담당자&#32;입회하에&#32;가스배관&#32;위치를&#32;정확히&#32;확인한&#32;후&#32;시행하며&#32;&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;가스배관&#32;예상지점&#32;주위&#32;1m&#32;이내&#32;부분은&#32;인력으로&#32;굴착&#32;할&#32;것.&#13;&#10;&#32;&#32;&#32;&#32;-&#32;가스배관&#32;위험이&#32;예상되는&#32;작업은&#32;사전에&#32;도시가스&#32;담당자와&#32;충분히&#32;협의한&#32;후&#32;시행할&#32;것.&#13;&#10;&#32;&#32;&#32;&#32;-&#32;가스배관&#32;주위에&#32;매설물을&#32;부설&#32;할&#32;대에는&#32;가스관과&#32;30cm이상&#32;이격하여&#32;설치할&#32;것.&#13;&#10;&#32;&#32;&#32;&#32;-그라우팅,&#32;파일설치,&#32;보링작업등은&#32;시험굴착을&#32;통하여&#32;가스배관의&#32;위치를&#32;확인후&#32;작업&#32;시행하며,&#32;&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;가스배관으로&#32;부터&#32;1m&#32;이내&#32;파일&#32;설치시는&#32;유도관을&#32;설치한&#32;후&#32;시행한다.&#13;&#10;&#32;&#32;&#32;&#32;-&#32;항타기는&#32;가스배관과&#32;수평거리가&#32;2m이상&#32;되는&#32;곳에&#32;설치할&#32;것.&#13;&#10;&#32;&#32;&#32;&#32;-&#32;가스배관의&#32;주위를&#32;되메우기&#32;하거나&#32;포장할&#32;경우에는&#32;배관주위에&#32;모래채우기,&#32;보호판,&#32;보호포,&#32;라인마크설치,&#32;가스배관&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;부속시설물의&#32;설치등은&#32;굴착전과&#32;동일한&#32;상태가&#32;되도록&#32;할&#32;것.&#13;&#10;&#32;&#32;&#32;&#32;-입회요청은&#32;해당작업&#32;1일전&#32;입회요청서&#32;양식을&#32;사용하여&#32;팩스,&#32;우편으로&#32;신청하며,&#32;필요시&#32;전화로&#32;요청할&#32;수&#32;있다.&#13;&#10;&#32;&#32;&#32;&#32;-되메우기&#32;시에는&#32;30cm&#32;마다&#32;층다짐을&#32;하여&#32;사후에&#32;가스배관주위의&#32;지반이&#32;침하되지&#32;않도록&#32;하고&#32;가스배관에&#32;손상을&#32;줄&#32;&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;이물질이&#32;&#32;혼합되지&#32;않도록&#32;하며&#32;배관&#32;상,&#32;하단에는&#32;30cm이상&#32;모래를&#32;부설한다.&#13;&#10;&#32;&#32;다.&#32;건설기계&#32;조정사&#32;등&#32;작업자의&#32;현장&#32;안전교육에&#32;관한&#32;사항.&#13;&#10;&#32;&#32;&#32;&#32;-시공회사&#32;안전담당자는&#32;작업전&#32;현장작업자에&#32;대해&#32;안전교육(가스관&#32;매설위치와&#32;손상방지를&#32;위한&#32;준수사항,&#32;비상시&#32;기급조치&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;사항&#32;및&#32;대처방안,&#32;가상&#32;시나리오에&#32;의한&#32;교육&#32;및&#32;훈련)를&#32;실시하며,&#13;&#10;&#32;&#32;&#32;&#32;-&#32;작업에&#32;참여하는&#32;건설기계조종사는&#32;작업전&#32;도시가스&#32;안전관리&#32;전담자의&#32;안전교육을&#32;받을&#32;수&#32;있도록&#32;조치한다.&#13;&#10;&#32;&#32;&#32;&#32;-&#32;굴착장비&#32;조종사&#32;변경&#32;및&#32;작업기간이&#32;1개월을&#32;초과할&#32;경우에는&#32;재교육을&#32;실시할&#32;수&#32;있도록&#32;조치한다.&#13;&#10;&#32;&#32;라.&#32;안전관리&#32;점담자&#32;및&#32;안전&#32;담당자의&#32;지정&#32;및&#32;의무에&#32;관한&#32;사항.&#13;&#10;-&#32;굴착공사&#32;현장의&#32;안전확보를&#32;위해&#32;도시가스사&#32;안전관리전담자(최선웅&#32;☎017-701-7894)&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;시공자&#32;안전담당자(&#32;☎&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)를&#32;지정하여&#32;운영하면,&#32;업무는&#32;현자의&#32;업무협의와&#32;현장입회,&#32;안전조치&#32;시행&#32;및&#32;준수여부를&#32;확인한다.&#13;&#10;&#32;&#32;마.&#32;순회&#32;점검&#32;주기에&#32;관한&#32;사항&#13;&#10;&#32;&#32;&#32;&#32;-&#32;공사현장은&#32;1회&#32;/&#32;1일&#32;이상&#32;순회&#32;점검한다.&#13;&#10;&#32;&#32;바.&#32;시행자(시공자)는&#32;도시가스사업법&#32;제&#32;30조의&#32;6&#32;관련&#32;동법&#32;시행규칙&#32;별표&#32;16의&#32;가스배관의&#32;손상&#32;방지를&#32;위한&#32;작업기준을&#32;준수한다.&#13;&#10;&#32;&#32;사.&#32;제&#32;12조&#32;(굴착공사계획&#32;재신고)&#32;굴착공사계획&#32;신고의&#32;유효기간은&#32;15일로&#32;하며&#32;굴착공사계획&#32;신고일로부터&#32;15일이&#32;경과한&#32;&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;날까지&#32;공사를&#32;시작하지&#32;아니한&#32;경우에는&#32;굴착계획을&#32;다시&#32;신고하여야&#32;한다.&#13;&#10;4.&#32;가스공급시설의&#32;안전조치방법" Top="261" Width="775"></Static>
+		<Calendar BindDataset="ds_list3" Border="Flat" Column="AFTER_ROAD_RECOV_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="C1302030010F" Left="688" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="24" Top="1142" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Edit BindDataset="ds_list3" Border="Flat" Column="AFTER_ROAD_RECOV_NM" Height="18" Id="Edit0" Left="171" Readonly="TRUE" Style="edit" TabOrder="25" Top="1121" Width="605"></Edit>
+		<Edit BindDataset="ds_list3" Border="Flat" Column="AFTER_ROAD_RECOV_NM" Height="18" Id="Edit1" Left="171" Readonly="TRUE" Style="edit" TabOrder="26" Top="1142" Width="373"></Edit>
+		<Static Height="148" Id="Static2" Left="5" LineSpacing="5" Style="static" TabOrder="27" Text="8.&#32;안전조치&#32;비용&#32;부담에&#32;관한&#32;사항&#13;&#10;&#32;&#32;가.&#32;안전조치에&#32;요하는&#32;비용은&#32;원인자&#32;부담&#32;원칙에&#32;의거&#32;굴착공사&#32;시행자(시공자)가&#32;부담한다.&#13;&#10;&#32;&#32;나.&#32;기타사항은&#32;상호&#32;협의하여&#32;결정한다.&#13;&#10;9.&#32;기타&#32;필요사항&#13;&#10;&#32;&#32;가.&#32;시공사는&#32;긴급시&#32;연락할&#32;수&#32;있는&#32;비상연락체계를&#32;현장작업자까지&#32;숙지토록&#32;교육을&#32;실시하고&#32;공사현황판에&#32;게시한다.&#13;&#10;&#32;&#32;나.&#32;입회시기&#32;(입회공정)의&#32;입회요청은&#32;해당작업&#32;1일전까지&#32;전화,&#32;팩시밀리,&#32;우편등으로&#32;요청한다.&#13;&#10;&#32;&#32;다.&#32;시공사&#32;안전담당자는&#32;반드시&#32;가스배관도면을&#32;지참하고&#32;현장에&#32;상주하며,&#32;불가피한&#32;사정으로&#32;자리를&#32;비울때에는&#32;현장&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;책임자에게&#32;가스배관&#32;도면,&#32;안전조치사항&#32;등을&#32;인계한다.&#13;&#10;10.&#32;첨부서류&#32;:&#32;배관의&#32;관경,&#32;압력,&#32;재질,&#32;심도,&#32;매설위치&#32;등이&#32;기록된&#32;상세도면&#32;(1/500&#32;~&#32;1/1000축적)1부&#13;&#10;" Top="1167" Width="775" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static3" Left="5" Style="static" TabOrder="28" Text="공시시공자&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;성명&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;서명&#32;또는&#32;인&#32;:" Top="1355" Width="775"></Static>
+		<Static Height="13" Id="Static4" Left="5" Style="static" TabOrder="29" Text="도시가스사&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;성명&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;서명&#32;또는&#32;인&#32;:" Top="1376" Width="775"></Static>
+		<Edit Align="CENTER" BindDataset="ds_list3" Border="Flat" Column="DISCU_YY" Height="18" Id="Edit2" Left="286" Readonly="TRUE" Style="edit" TabOrder="30" Top="1325" Width="48"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_list3" Border="Flat" Column="DISCU_MM" Height="18" Id="Edit3" Left="353" Readonly="TRUE" Style="edit" TabOrder="31" Top="1325" Width="37"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_list3" Border="Flat" Column="DISCU_DD" Height="18" Id="Edit4" Left="411" Readonly="TRUE" Style="edit" TabOrder="32" Top="1325" Width="37"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_list3" Border="Flat" Column="ORDER_FIRM_NM" Height="18" Id="Edit5" Left="76" Readonly="TRUE" Style="edit" TabOrder="33" Top="1352" Width="219"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_list3" Border="Flat" Column="ORDER_FIRM_NM" Height="18" Id="Edit6" Left="76" Readonly="TRUE" Style="edit" TabOrder="34" Top="1373" Width="219"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_list3" Border="Flat" Column="ORDER_TAKER_NM" Height="18" Id="Edit8" Left="340" Readonly="TRUE" Style="edit" TabOrder="35" Top="1352" Width="199"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_list3" Border="Flat" Column="ORDER_TAKER_NM" Height="18" Id="Edit9" Left="340" Readonly="TRUE" Style="edit" TabOrder="36" Top="1373" Width="199"></Edit>
+		<Sign BindDataset="ds_list3" Border="FLAT" BorderColor="gray" Color="#5f5f5f" Column="WORK_FIRM_TAKER_SIGN" Height="18" Id="Sign0" Left="632" TabOrder="37" Text="Sign" Top="1352" Width="148"></Sign>
+		<Sign BindDataset="ds_list3" Border="FLAT" BorderColor="gray" Color="#5f5f5f" Column="CITY_GAS_FIRM_SIGN" Height="18" Id="Sign1" Left="632" TabOrder="38" Text="Sign" Top="1373" Width="148"></Sign>
+		<Static BindDataset="ds_list3" Column="DIG_WORK_NM" Height="16" Id="st_WorkNm" Left="14" TabOrder="39" Top="68" Width="245"></Static>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+function D1401010014U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	fn_D10_Serach();
+}
+
+
+function fn_D10_Serach()
+{
+
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkDiscuWriteMgr-service&Search=1"
+	            + "&EOCS_NUM="+ EOCS_NUM
+	            + "&DIG_WORK_PATH_FLAG="+ DIG_WORK_PATH_FLAG
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_list1=ds_list1 ds_list2=ds_list2 ds_list3=ds_list3";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	
+	
+}]]></Script>
+</Window>

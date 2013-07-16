@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="728" Id="D1902030010F" Left="8" OnLoadCompleted="D1902030010F_OnLoadCompleted" PidAttrib="7" Title="DCVG탐사실적등록" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape3" Left="8" LineColor="user7" Right="1271" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="7" Top="30" Type="RoundRect" Width="1263"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape0" Left="13" LineWidth="0" Right="1266" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="0" Top="35" Type="Rectangle" Width="1253"></Shape>
+		<Shape BKColor="user6" Bottom="-1" Height="39" Id="Shape1" Left="-88" LineColor="user7" Right="907" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="3" Top="-40" Type="RoundRect" Width="995"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image3" ImageID="blt" Left="18" LeftMargin="12" Style="blt_search" TabOrder="3" TabStop="FALSE" Text="지사" Top="41" Width="119"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" Left="58" OnChanged="cob_ObjectFlag_OnChanged" Style="edit_Indis" TabOrder="1" Top="41" Width="127"></Combo>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="189" LeftMargin="12" Style="blt_search" TabOrder="4" TabStop="FALSE" Text="탐사일자" Top="41" Width="119"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Ymd" Left="254" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="2" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="8" TabStop="FALSE" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1274">
+			<Contents></Contents>
+		</Div>
+		<Tab Border="Flat" FixedImage="FALSE" Height="648" Id="tab_FaciReg" Left="8" OnChanged="tab_FaciReg_OnChanged" Style="tab" TabOrder="9" TabStop="FALSE" Top="72" Width="1263">
+			<Contents>
+				<TabPage Height="618" Id="tab10" ImageID="tab" Left="2" TabOrder="1" Text="탐사일지" Top="28" Url="D10::D1902030010F_T01.xml" Width="1259"></TabPage>
+				<TabPage Height="618" Id="tab11" ImageID="tab" Left="2" TabOrder="1" Text="계획등록" Top="28" Url="D10::D1902030010F_T02.xml" Width="1259"></TabPage>
+				<TabPage Height="618" Id="tab12" ImageID="tab" Left="2" TabOrder="1" Text="비계획등록" Top="28" Url="D10::D1902030010F_T03.xml" Width="1259"></TabPage>
+				<TabPage Height="618" Id="tab13" ImageID="tab" Left="2" TabOrder="1" Text="신설등록" Top="28" Url="D10::D1902030010F_T04.xml" Width="1259"></TabPage>
+				<TabPage Height="618" Id="tab14" ImageID="tab" Left="2" TabOrder="1" Text="손상부현황등록" Top="28" Url="D10::D1902030010F_T05.xml" Width="1259"></TabPage>
+			</Contents>
+		</Tab>
+		<Image Align="Left" Color="blue" Height="18" Id="Image1" ImageID="blt" Left="190" LeftMargin="12" Style="blt_search_1" TabOrder="11" Text="시/구" Top="41" Visible="FALSE" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" ImeMode="none" Left="235" Style="combo_indis" TabOrder="10" Top="40" Visible="FALSE" Width="114"></Combo>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="511" LeftMargin="12" Style="blt_search" TabOrder="13" TabStop="FALSE" Text="배관번호" Top="40" Visible="FALSE" Width="90"></Image>
+		<Edit Align="CENTER" AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_MpipeSearch" ImeMode="none" Left="574" MaxLength="9" Style="edit" TabOrder="12" Top="40" Visible="FALSE" Width="86"></Edit>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="669" LeftMargin="12" Style="blt_search" TabOrder="15" TabStop="FALSE" Text="탐사기간" Top="40" Width="119"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Ymd_From" Left="734" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="14" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Ymd_To" Left="838" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="16" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="18" Id="Image110" ImageID="blt" Left="356" LeftMargin="12" Style="blt_search" TabOrder="17" TabStop="FALSE" Text="기준년도" Top="40" Width="90"></Image>
+		<Spin Border="Flat" Height="18" Id="sp_Year" Left="421" Style="spin_indis" TabOrder="18" Text="2013" Top="40" Width="83"></Spin>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802030010F.xml
+* Form 설명  : DCVG탐사 계획 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-23
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1902030010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	// fn_E3_Find();  //  초기조회
+}
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));
+	cob_ObjectFlag.Index = 0;
+	
+	cal_Ymd.Value = today();
+	cal_Ymd_From.Value = substr(today(),0,6) + '01';
+	cal_Ymd_To.Value = today();
+	cob_ObjectFlag_OnChanged();
+	
+	Image0.Visible = true;
+	cal_Ymd.Visible = true;
+	Image1.Visible = false;
+	cob_CountyFlag.Visible = false;
+	Image2.Visible = false;
+	edt_MpipeSearch.Visible = false;
+	Image4.Visible = false;
+	cal_Ymd_From.Visible = false;
+	cal_Ymd_To.Visible = false;		
+	
+	//2012.12.18 이건민 - 기준년도 추가
+	Image110.Visible = false;
+	sp_Year.Visible = false;
+}
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonAddRow()
+// 설명: 구간등록 행을 추가한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonAddRow()
+{
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_addRow();
+}
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonDeleteRow()
+// 설명: 구간등록 행을 삭제한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+
+function fn_CommonDeleteRow(){
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_deleteRow();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonSave()
+// 설명: 등록된 내용을 저장한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSave()
+{		
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_save();
+}
+
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_Init();
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_find();
+	//tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_find1();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{	
+   tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_Excel();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명: 출력 button 실행, 데이터를 출력 한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonPrint(){
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_Print();
+}
+
+function cob_ObjectFlag_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	  // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_ObjectFlag.value, fn_setDsObject_Comcode("1", "cob_CountyFlag"));
+    
+    cob_CountyFlag.Value = ""; 
+}
+
+
+
+function tab_FaciReg_OnChanged(obj,nOldIndex,nNewindex)
+{
+	if(nNewindex == 0)
+	{
+		Image0.Visible = true;
+		cal_Ymd.Visible = true;
+		Image1.Visible = false;
+		cob_CountyFlag.Visible = false;
+		Image2.Visible = false;
+		edt_MpipeSearch.Visible = false;
+		Image4.Visible = false;
+		cal_Ymd_From.Visible = false;
+		cal_Ymd_To.Visible = false;
+	}else{
+		Image0.Visible = false;
+		cal_Ymd.Visible = false;
+		
+		//2012.12.18 이건민 - 기준년도 추가
+		Image110.Visible = true;
+		sp_Year.Visible = true;
+		
+		/*
+		if(nNewindex == 4)
+		{
+			Image4.Visible = true;
+			cal_Ymd_From.Visible = true;
+			cal_Ymd_To.Visible = true;
+			
+			// 2012.12.18 이건민 - 기준년도 추가
+			Image110.Visible = false;
+			sp_Year.Visible = false;
+		}
+		else
+		{
+			Image4.Visible = false;
+			cal_Ymd_From.Visible = false;
+			cal_Ymd_To.Visible = false;
+		}
+		*/
+		
+		Image4.Visible = false;
+		cal_Ymd_From.Visible = false;
+		cal_Ymd_To.Visible = false;
+
+		Image110.Visible = true;
+		sp_Year.Visible = true;
+		
+		Image4.Visible = false;
+		cal_Ymd_From.Visible = false;
+		cal_Ymd_To.Visible = false;
+		
+		Image1.Visible = true;
+		cob_CountyFlag.Visible = true;	
+		Image2.Visible = true;
+		edt_MpipeSearch.Visible = true;
+	}		
+}
+]]></Script>
+</Window>

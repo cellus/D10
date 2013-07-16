@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1605050010F" Left="8" OnLoadCompleted="D1605050010F_OnLoadCompleted" PidAttrib="7" Title="정비보수&#32;단가조회_D1605050010F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="MAINTER_NUM" size="256" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="WORK_AMT_FLAG" size="256" type="STRING"/>
+					<colinfo id="UNIT_PRC" size="256" type="STRING"/>
+					<colinfo id="WORK_L_FLAG" size="256" type="STRING"/>
+					<colinfo id="WORK_M_FLAG" size="256" type="STRING"/>
+					<colinfo id="WORK_S_FLAG" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1000" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="30" Type="RoundRect" Width="995"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="995" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="6" Top="35" Type="Rectangle" Width="985"></Shape>
+		<Image Align="Left" Height="6" Id="Image5" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="1" Text="년도" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="152" LeftMargin="12" Style="blt_search_1" TabOrder="2" Text="대분류" Top="46" Width="59"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="3" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="995">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="cob_WorkLFlag" Left="203" Style="combo" TabOrder="4" Top="39" Width="114"></Combo>
+		<Shape BKColor="#6cbae1" Bottom="77" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1000" TabOrder="8" Top="74" Type="Rectangle" Width="995"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="580" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="500" Id="grd_RealCost" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1003" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="7" TabStop="true" Top="80" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="75"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="100"/>
+						<col width="150"/>
+						<col width="75"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="text" text="단가적용일자"/>
+						<cell bkcolor="user11" col="1" display="text" text="공사대분류"/>
+						<cell bkcolor="user11" col="2" display="text" text="공사중분류"/>
+						<cell bkcolor="user11" col="3" display="text" text="공사소분류"/>
+						<cell bkcolor="user11" col="4" display="text" text="실비구분"/>
+						<cell bkcolor="user11" col="5" display="text" text="공사단가"/>
+						<cell bkcolor="user11" col="6" display="text" text="최초등록"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="UPD_DTM" display="text" expandsize="18" Mask="####-##-##" wordwrap="word"/>
+						<cell align="center" col="1" colid="WORK_L_FLAG" display="combo"/>
+						<cell align="center" col="2" colid="WORK_M_FLAG" display="combo" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="WORK_S_FLAG" display="combo" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="WORK_AMT_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" colid="UNIT_PRC" display="text"/>
+						<cell align="center" col="6" colid="CRT_DTM" display="text" Mask="####-##-##"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Calendar Border="Flat" Dateformat="yyyy-MM" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar4" Left="55" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="9" Top="40" WeeksFont="Default,-1" Width="90"></Calendar>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1605050010F.xml
+* Form 설명  : 정비보수 단가조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2009-01-21
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1605050010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+function fn_Init()
+{
+	gfn_SetButton("0001111");
+}
+/*===============================================================================
+ * 기      능   :  공통 조회
+===============================================================================*/
+function fn_CommonSearch()
+{
+	fn_D1_List();
+}
+
+/*===============================================================================
+ * 기      능   :  조회
+===============================================================================*/
+function fn_D1_List()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaintRepairUnitPriceMgr-service&search=1"
+			   ;  															
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+	
+	if(ds_Multi.GetRowCount()==0) trace("조회결과가 없습니다.");
+	trace(ds_Multi.SaveXML());
+}]]></Script>
+</Window>

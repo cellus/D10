@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="720" Id="D1901010011F" Left="8" OnLoadCompleted="D1901020011F_OnLoadCompleted" PidAttrib="7" Title="D1901020011F_배관탐사&#32;이력조회" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PipeRst">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_KOPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_MPIPE_UNEXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_BLOCK" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_EQUIP_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_EQUIP_ETC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WEATHER" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_LAND" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_LAND_ETC" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNEXPLOR_NO_PERMIT_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM3" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NM5" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALVE_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TB_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="WATERDRAIN_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_OBJECT_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNEXPLOR_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TODAY_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_CNT_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNEXPLOR_CNT_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TODAY_CNT_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid AutoEnter="TRUE" BindDataset="ds_PipeRst" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="713" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="636" Id="Grid0" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" Right="3211" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="12" TabStop="true" Top="77" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="3203">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="96"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="100"/>
+						<col width="142"/>
+						<col width="118"/>
+						<col width="133"/>
+						<col width="125"/>
+						<col width="105"/>
+						<col width="114"/>
+						<col width="105"/>
+						<col width="113"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="150"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="95"/>
+						<col width="107"/>
+					</columns>
+					<head>
+						<cell align="center" col="0" display="text" rowspan="2" text="탐사일자"/>
+						<cell col="1" display="text" rowspan="2" text="지사"/>
+						<cell col="2" display="text" rowspan="2" text="시/구"/>
+						<cell col="3" display="text" rowspan="2" text="본관탐사&#32;연장(m)"/>
+						<cell col="4" display="text" rowspan="2" text="본관탐사&#32;불가(m)"/>
+						<cell col="5" display="text" rowspan="2" text="공급관탐사&#32;연장(m)"/>
+						<cell col="6" display="text" rowspan="2" text="공급관탐사&#32;불가(m)"/>
+						<cell col="7" display="text" rowspan="2" text="본관&#32;신불탐(m)"/>
+						<cell col="8" display="text" rowspan="2" text="공급관&#32;신불탐(m)"/>
+						<cell col="9" display="text" rowspan="2" text="본관&#32;탐사불탐(m)"/>
+						<cell col="10" display="text" rowspan="2" text="공급관&#32;탐사불탐(m)"/>
+						<cell col="11" display="text" rowspan="2" text="날씨"/>
+						<cell col="12" colspan="3" display="text" text="시설물수정"/>
+						<cell col="15" display="text" rowspan="2" text="탐사대상(건)"/>
+						<cell col="16" colspan="3" display="text" text="금일실적"/>
+						<cell col="16" display="text" row="1" text="탐사"/>
+						<cell col="17" display="text" row="1" text="탐사불가"/>
+						<cell col="21" display="text" row="1" text="소계"/>
+						<cell col="19" colspan="3" display="text" text="탐사실적"/>
+						<cell col="22" display="text" rowspan="2" text="조사구간"/>
+						<cell col="23" display="text" rowspan="2" text="탐사장비"/>
+						<cell col="24" display="text" rowspan="2" text="지형변경"/>
+						<cell col="25" display="text" rowspan="2" text="탐사불가&#32;사유"/>
+						<cell col="26" display="text" rowspan="2" text="특기사항"/>
+						<cell col="27" display="text" rowspan="2" text="탐사자1"/>
+						<cell col="28" display="text" rowspan="2" text="탐사자2"/>
+						<cell col="29" display="text" rowspan="2" text="탐사자3"/>
+						<cell col="30" display="text" rowspan="2" text="탐사자4"/>
+						<cell col="31" display="text" rowspan="2" text="탐사자5"/>
+						<cell col="32" display="text" rowspan="2" text="결재진행상태"/>
+						<cell col="33" display="text" rowspan="2" text="결재일자"/>
+						<cell col="12" display="text" row="1" text="밸브(EA)"/>
+						<cell col="13" display="text" row="1" text="T/B(EA)"/>
+						<cell col="14" display="text" row="1" text="수취기(EA)"/>
+						<cell col="18" display="text" row="1" text="소계"/>
+						<cell col="19" display="text" row="1" text="탐사"/>
+						<cell col="20" display="text" row="1" text="탐사불가"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="EXPLOR_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="BRANCH_NM" combocol="CODE" combodataset="ds_Branch" combotext="KITEM" display="combo"/>
+						<cell align="left" col="2" colid="ZIP_NM" display="text"/>
+						<cell align="right" col="3" colid="KOPIPE_EXPLOR_LENG" display="number"/>
+						<cell align="right" col="4" colid="KOPIPE_UNEXPLOR_LENG" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="5" colid="MPIPE_EXPLOR_LENG" display="number"/>
+						<cell align="right" col="6" colid="MPIPE_UNEXPLOR_LENG" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="7" colid="NEW_KOPIPE_UNEXPLOR_LENG" display="number"/>
+						<cell align="right" col="8" colid="NEW_MPIPE_UNEXPLOR_LENG" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="9" colid="KOPIPE_UNEXPLOR_LENG_INSC" display="number"/>
+						<cell align="right" col="10" colid="MPIPE_UNEXPLOR_LENG_INSC" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="11" colid="WEATHER" display="text"/>
+						<cell align="center" col="12" colid="VALVE_CNT" display="text"/>
+						<cell align="center" col="13" colid="TB_CNT" display="text"/>
+						<cell align="center" col="14" colid="WATERDRAIN_CNT" display="text"/>
+						<cell align="center" col="15" colid="EXPLOR_OBJECT_CNT" display="text"/>
+						<cell align="center" col="16" colid="EXPLOR_CNT" display="text"/>
+						<cell align="center" col="17" colid="UNEXPLOR_CNT" display="text"/>
+						<cell align="center" col="18" colid="TODAY_CNT" display="text"/>
+						<cell align="center" col="19" colid="EXPLOR_CNT_1" display="text"/>
+						<cell align="center" col="20" colid="UNEXPLOR_CNT_1" display="text"/>
+						<cell align="center" col="21" colid="TODAY_CNT_1" display="text"/>
+						<cell align="left" col="22" colid="RESECH_BLOCK" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="23" colid="EXPLOR_EQUIP_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="24" colid="CHG_LAND" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="25" colid="UNEXPLOR_NO_PERMIT_WHY" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="26" colid="EXPLOR_RMK" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="27" colid="RESECH_NM1" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="28" colid="RESECH_NM2" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="29" colid="RESECH_NM3" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="30" colid="RESECH_NM4" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="31" colid="RESECH_NM5" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="32" colid="DECIDE_PROC_STS" display="text"/>
+						<cell align="center" col="33" colid="DECIDE_YMD" display="text"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" colspan="2" display="text" text="합&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;계"/>
+						<cell col="2" display="text"/>
+						<cell align="right" col="3" display="number" expr='SumNF(&quot;KOPIPE_EXPLOR_LENG&quot;)'/>
+						<cell align="right" col="4" display="number" expr='SumNF(&quot;KOPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="5" display="number" expr='SumNF(&quot;MPIPE_EXPLOR_LENG&quot;)'/>
+						<cell align="right" col="6" display="number" expr='SumNF(&quot;MPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="7" display="number" expr='SumNF(&quot;NEW_KOPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="8" display="number" expr='SumNF(&quot;NEW_MPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="9" display="number" expr='SumNF(&quot;KOPIPE_UNEXPLOR_LENG_INSC&quot;)'/>
+						<cell align="right" col="10" display="number" expr='SumNF(&quot;MPIPE_UNEXPLOR_LENG_INSC&quot;)'/>
+						<cell col="11" display="text"/>
+						<cell col="12" display="text"/>
+						<cell col="13" display="text"/>
+						<cell col="14" display="text"/>
+						<cell col="15" display="text"/>
+						<cell col="16" display="text"/>
+						<cell col="17" display="text"/>
+						<cell col="18" display="text"/>
+						<cell col="19" display="text"/>
+						<cell col="20" display="text"/>
+						<cell col="21" display="text"/>
+						<cell col="22" display="text"/>
+						<cell col="23" display="text"/>
+						<cell col="24" display="text"/>
+						<cell col="25" display="text"/>
+						<cell col="26" display="text"/>
+						<cell col="27" display="text"/>
+						<cell col="28" display="text"/>
+						<cell col="29" display="text"/>
+						<cell col="30" display="text"/>
+						<cell col="31" display="text"/>
+						<cell col="32" display="text"/>
+						<cell col="33" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1272" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="30" Type="RoundRect" Width="1267"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape0" Left="10" LineWidth="0" Right="1267" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="35" Type="Rectangle" Width="1257"></Shape>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_Indis" TabOrder="1" Text="지사" Top="40" Width="61"></Image>
+		<Shape BKColor="user15" Bottom="77" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="1271" TabOrder="2" Top="74" Type="Rectangle" Width="1266"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="3" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1267">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" ImeMode="none" INDEX="0" Left="53" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="6" Top="40" Width="115"></Combo>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="338" LeftMargin="12" Style="blt_search" TabOrder="7" Text="탐사일자" Top="40" Width="61"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ExplorYmdFrom" Left="408" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="8" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ExplorYmdTo" Left="520" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="9" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="C2502030010F" Left="504" Style="static" TabOrder="10" Text="~" Top="42" Width="10"></Static>
+		<Grid AutoEnter="TRUE" BindDataset="ds_PipeRst" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="713" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="636" Id="Grid2" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" Right="1271" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="11" TabStop="true" Top="77" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1266">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="96"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="100"/>
+						<col width="142"/>
+						<col width="118"/>
+						<col width="133"/>
+						<col width="125"/>
+						<col width="105"/>
+						<col width="114"/>
+						<col width="105"/>
+						<col width="113"/>
+						<col width="113"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="150"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="95"/>
+						<col width="107"/>
+					</columns>
+					<head>
+						<cell align="center" col="0" display="text" text="탐사일자"/>
+						<cell col="1" display="text" text="지사"/>
+						<cell col="2" display="text" text="시/구"/>
+						<cell col="3" display="text" text="본관탐사&#32;연장(m)"/>
+						<cell col="4" display="text" text="본관탐사&#32;불가(m)"/>
+						<cell col="5" display="text" text="공급관탐사&#32;연장(m)"/>
+						<cell col="6" display="text" text="공급관탐사&#32;불가(m)"/>
+						<cell col="7" display="text" text="본관&#32;신불탐(m)"/>
+						<cell col="8" display="text" text="공급관&#32;신불탐(m)"/>
+						<cell col="9" display="text" text="본관&#32;탐사불탐(m)"/>
+						<cell col="10" display="text" text="공급관&#32;탐사불탐(m)"/>
+						<cell col="11" display="text" text="조사구간"/>
+						<cell col="12" display="text" text="탐사장비"/>
+						<cell col="13" display="text" text="지형변경"/>
+						<cell col="14" display="text" text="탐사불가&#32;사유"/>
+						<cell col="15" display="text" text="특기사항"/>
+						<cell col="16" display="text" text="탐사자1"/>
+						<cell col="17" display="text" text="탐사자2"/>
+						<cell col="18" display="text" text="탐사자3"/>
+						<cell col="19" display="text" text="탐사자4"/>
+						<cell col="20" display="text" text="탐사자5"/>
+						<cell col="21" display="text" text="결재진행상태"/>
+						<cell col="22" display="text" text="결재일자"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="EXPLOR_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="BRANCH_NM" display="text"/>
+						<cell align="left" col="2" colid="ZIP_NM" display="text"/>
+						<cell align="right" col="3" colid="KOPIPE_EXPLOR_LENG" display="number"/>
+						<cell align="right" col="4" colid="KOPIPE_UNEXPLOR_LENG" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="5" colid="MPIPE_EXPLOR_LENG" display="number"/>
+						<cell align="right" col="6" colid="MPIPE_UNEXPLOR_LENG" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="7" colid="NEW_KOPIPE_UNEXPLOR_LENG" display="number"/>
+						<cell align="right" col="8" colid="NEW_MPIPE_UNEXPLOR_LENG" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="9" colid="KOPIPE_UNEXPLOR_LENG_INSC" display="number"/>
+						<cell align="right" col="10" colid="MPIPE_UNEXPLOR_LENG_INSC" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="11" colid="RESECH_BLOCK" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="12" colid="EXPLOR_EQUIP_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="13" colid="CHG_LAND" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="14" colid="UNEXPLOR_NO_PERMIT_WHY" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="15" colid="EXPLOR_RMK" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="16" colid="RESECH_NM1" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="17" colid="RESECH_NM2" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="18" colid="RESECH_NM3" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="19" colid="RESECH_NM4" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="20" colid="RESECH_NM5" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="21" colid="DECIDE_PROC_STS" display="text"/>
+						<cell align="center" col="22" colid="DECIDE_YMD" display="text"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" display="text" text="합&#32;&#32;&#32;&#32;&#32;&#32;계"/>
+						<cell col="1" display="text"/>
+						<cell col="2" display="text"/>
+						<cell align="right" col="3" display="number" expr='SumNF(&quot;KOPIPE_EXPLOR_LENG&quot;)'/>
+						<cell align="right" col="4" display="number" expr='SumNF(&quot;KOPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="5" display="number" expr='SumNF(&quot;MPIPE_EXPLOR_LENG&quot;)'/>
+						<cell align="right" col="6" display="number" expr='SumNF(&quot;MPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="7" display="number" expr='SumNF(&quot;NEW_KOPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="8" display="number" expr='SumNF(&quot;NEW_MPIPE_UNEXPLOR_LENG&quot;)'/>
+						<cell align="right" col="9" display="number" expr='SumNF(&quot;KOPIPE_UNEXPLOR_LENG_INSC&quot;)'/>
+						<cell align="right" col="10" display="number" expr='SumNF(&quot;MPIPE_UNEXPLOR_LENG_INSC&quot;)'/>
+						<cell col="11" display="text"/>
+						<cell col="12" display="text"/>
+						<cell col="13" display="text"/>
+						<cell col="14" display="text"/>
+						<cell col="15" display="text"/>
+						<cell col="16" display="text"/>
+						<cell col="17" display="text"/>
+						<cell col="18" display="text"/>
+						<cell col="19" display="text"/>
+						<cell col="20" display="text"/>
+						<cell col="21" display="text"/>
+						<cell col="22" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Color="blue" Height="18" Id="Image0" ImageID="blt" Left="174" LeftMargin="12" Style="blt_search_1" TabOrder="14" Text="시/구" Top="40" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" ImeMode="none" Left="219" Style="combo_indis" TabOrder="13" Top="40" Width="114"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1901010011F.xml
+* Form 설명  : 배관탐사이력조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2008-11-20
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+//------------------------------------------------------------------------------- 
+// 함수명: D1901020011F_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1901020011F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	
+	cob_BranchCd.Value = '';	
+	cob_BranchCd_OnChanged();
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	fn_D1_Find();
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Find()
+//   설명:  배관탐사이력을 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{	
+	if(!fn_DateCheck(cal_ExplorYmdFrom,cal_ExplorYmdTo))
+	{
+		return;
+	}
+	
+	if(!fn_DateCheckToday(cal_ExplorYmdTo))
+	{
+		return;
+	}
+	
+	var strSvcID        = "fn_D1_Find";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_PipingSechHistorySearMgr-service" 
+						+ "&BRANCH_CD="      + cob_BranchCd.Value
+						+ "&ZIP_NO1="        + cob_CountyFlag.Value
+						+ "&EXPLOR_YMDFROM=" + cal_ExplorYmdFrom.Value
+						+ "&EXPLOR_YMDTO="   + cal_ExplorYmdTo.Value;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_PipeRst=ds_PipeRst";
+	var strArgument     = "find";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	if(ds_PipeRst.GetRowCount()==0)
+        Grid2.NoDataText=gfn_GetMessage("M000009","%AAA%","조회를");
+}
+
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonExcelExport()
+//   설명  :  엑셀다운 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+	
+    SearchCondition = SearchCondition + "지사 :"     + RPad(cob_BranchCd.Text   ," ",20);
+    SearchCondition = SearchCondition + "시/구 :"    + RPad(cob_CountyFlag.Text ," ",20);
+    SearchCondition = SearchCondition + "탐사일자 :" + cal_ExplorYmdFrom.Text + " ~ " + cal_ExplorYmdTo.Text;
+	gfn_ExportExcel("배관탐사 이력조회 ", 5, SearchCondition, "Grid0"); 
+}
+
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+		// 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_BranchCd.value, fn_setDsObject_Comcode("1", "cob_CountyFlag"));
+    cob_CountyFlag.Value = '';    
+}
+]]></Script>
+</Window>

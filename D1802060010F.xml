@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1802060010F" Left="8" OnLoadCompleted="D1802060010F_OnLoadCompleted" PidAttrib="7" scroll="false" Title="재산세&#32;산출내역_D1802060010F" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_ProTax">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" type="STRING"/>
+					<colinfo id="ID" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="INSTALL_YESR" size="256" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" type="STRING"/>
+					<colinfo id="FACI_FLAG" size="256" type="STRING"/>
+					<colinfo id="GU_NM" size="256" type="STRING"/>
+					<colinfo id="COMPL_YMD" size="256" type="STRING"/>
+					<colinfo id="PIPE_MATER_FLAG" size="256" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" type="STRING"/>
+					<colinfo id="LENG" size="256" type="STRING"/>
+					<colinfo id="DIAM_FLAG" size="256" type="STRING"/>
+					<colinfo id="MKT_PRC_STD_AMT" size="256" type="STRING"/>
+					<colinfo id="TAX_STD_AMT" size="256" type="STRING"/>
+					<colinfo id="PROPERTY_AMT" size="256" type="STRING"/>
+					<colinfo id="CITY_PLAN_TAX" size="256" type="STRING"/>
+					<colinfo id="EDUC_TAX" size="256" type="STRING"/>
+					<colinfo id="PAY_TAX" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ProTax1">
+				<Contents>
+					<colinfo id="INSTALL_YESR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_MATER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MKT_PRC_STD_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAX_STD_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROPERTY_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CITY_PLAN_TAX" size="256" summ="default" type="STRING"/>
+					<colinfo id="EDUC_TAX" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_TAX" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape2" Left="4" LineColor="user7" Right="1262" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="2" Top="30" Type="RoundRect" Width="1258"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape3" Left="9" LineWidth="0" Right="1257" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="7" Top="35" Type="Rectangle" Width="1248"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="4" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="1" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1258">
+			<Contents></Contents>
+		</Div>
+		<Grid AutoEnter="TRUE" BindDataset="ds_ProTax1" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="843" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="763" Id="Grid2" InputPanel="FALSE" Left="6" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" Right="1261" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="80" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1255">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="80"/>
+						<col fix="left" width="80"/>
+						<col fix="left" width="80"/>
+						<col fix="left" width="130"/>
+						<col fix="left" width="130"/>
+						<col fix="left" width="130"/>
+						<col fix="left" width="125"/>
+						<col fix="left" width="125"/>
+						<col fix="left" width="130"/>
+						<col fix="left" width="125"/>
+						<col fix="left" width="125"/>
+						<col fix="left" width="1"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="년도"/>
+						<cell col="1" display="text" rowspan="2" text="구분"/>
+						<cell col="2" display="text" rowspan="2" text="재질"/>
+						<cell col="3" colspan="8" display="text" text="추계내역"/>
+						<cell col="11" display="text"/>
+						<cell col="3" display="text" row="1" text="관경(A)"/>
+						<cell col="4" display="text" row="1" text="연장(m)"/>
+						<cell col="5" display="text" row="1" text="시가표준액(원)"/>
+						<cell col="6" display="text" row="1" text="과세표준액(원)"/>
+						<cell col="7" display="text" row="1" text="재산세(원)"/>
+						<cell col="8" display="text" row="1" text="도시계획세(원)"/>
+						<cell col="9" display="text" row="1" text="교육세(원)"/>
+						<cell col="10" display="text" row="1" text="납부세액(원)"/>
+						<cell col="11" display="text" row="1"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="INSTALL_YESR" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="BASE_YEAR" display="normal"/>
+						<cell align="center" col="2" colid="PIPE_MATER_NM" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="3" colid="PIPE_DIAM_NM" display="normal"/>
+						<cell align="right" col="4" colid="SYS_LENG" display="normal"/>
+						<cell align="right" col="5" colid="MKT_PRC_STD_AMT" display="normal"/>
+						<cell align="right" col="6" colid="TAX_STD_AMT" display="normal"/>
+						<cell align="right" col="7" colid="PROPERTY_AMT" display="normal"/>
+						<cell align="right" col="8" colid="CITY_PLAN_TAX" display="normal"/>
+						<cell align="right" col="9" colid="EDUC_TAX" display="normal"/>
+						<cell align="right" col="10" colid="PAY_TAX" display="normal"/>
+						<cell col="11" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="80" Height="3" Id="Shape0" Left="6" LineWidth="0" Right="1261" TabOrder="4" Top="77" Type="Rectangle" Width="1255"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button1" ImageID="btn_7_img_s" Left="1140" LeftMargin="21" OnClick="btn_SingleReport_OnClick1" Style="button" TabOrder="5" Text="재산세&#32;산출내역" Top="41" Width="114"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button31" ImageID="btn_10" Left="984" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="6" Text="재산세&#32;산출내역&#32;과세표" Top="41" Width="153"></Button>
+		<Image Align="Left" Color="blue" Height="18" Id="Image0" ImageID="blt" Left="18" LeftMargin="12" Style="blt_search" TabOrder="10" Text="지사" Top="40" Width="84"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" Left="56" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="8" Top="40" Width="140"></Combo>
+		<Image Align="Left" Color="blue" Height="18" Id="Image3" ImageID="blt" Left="201" LeftMargin="12" Style="blt_search" TabOrder="11" Text="시/구" Top="41" Width="95"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_StrZipNo1" ImeMode="none" Left="244" Style="combo_indis" TabOrder="9" Top="40" Width="140"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802060010F.xml
+* Form 설명  : 재산세 산출내역 RTU상세조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-16
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1802060010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	cob_BranchCd_OnChanged();
+}
+
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));	
+	//-----------------------------------------
+	//  콤보박스의 초기 설정 : 기준년도, 대상구분, 점용시설 순서
+	//----------------------------------------
+	cob_ObjectFlag.Index = 0;
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_ObjectFlag.Value, fn_setDsObject_Comcode("1", "cob_StrZipNo1"));
+    cob_StrZipNo1.Value = "";
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	fn_D1_Find();
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//---------------------------------------------------------
+function fn_CommonSave(){}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find1()
+//   설명  : 등록된 재산세 산출내역이 없을 경우 조회 한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{	
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_PropertyTaxCalcuSpecMgr-service" 
+					    + "&BRANCH_NM=" + cob_ObjectFlag.Text
+	                    + "&GU_NM="     + decode(cob_StrZipNo1.Text, '전체', '', cob_StrZipNo1.Text)
+						;
+						
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_ProTax1=ds_ProTax1";
+	var strArgument     = "find1";
+
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_ProTax1.GetRowCount()==0) Grid2.NoDataText  = gfn_GetMessage("M000009","%AAA%","조회를");
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Save()
+//   설명  : 재산세 산출내역을 조회 한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Button0_OnClick(obj)
+{
+	gfn_Dialog("D10","D1802010010U","",1005,560,true,-1,-1);
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_SingleReport_OnClick()
+// 설명: 공통 레포트 팝업 함수를 호출한다(단일 보고서)
+// return 내용: 없음
+//-------------------------------------------------------------------------------
+function btn_SingleReport_OnClick1(obj)
+{
+	if(ds_ProTax1.GetColumn(0, "INSTALL_YESR") == '' || ds_ProTax1.GetColumn(0, "INSTALL_YESR") == null ){
+		alert(gfn_GetMessage("M000022","%AAA%","데이터가"));
+		return;
+	}
+	
+	// 함수 호출용 파라미터를 설정한다
+	var strTitle    = "재산세 산출내역" ;   		  // 출력물 제목
+    var strPart     = "D10" ;         	    		  // 시스템 명 
+	var strReport   = "D1802060010P" ;  	    	  // 출력물 ID 
+	var strParameter= "BRANCH_NM=" + cob_ObjectFlag.Text
+	                + ",GU_NM="    + decode(cob_StrZipNo1.Text, '전체', '', cob_StrZipNo1.Text)
+	                ;
+	
+	//공통 레포트 팝업 함수 호출 
+	gfn_ReportPopup(strTitle,strPart,strReport,strParameter);	
+}]]></Script>
+</Window>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1402060010F" Left="8" OnLoadCompleted="D1402060010F_OnLoadCompleted" PidAttrib="7" Title="GIS데이터&#32;수정의뢰&#32;내역" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Image Align="Left" Height="6" Id="Image5" ImageID="blt" Left="620" LeftMargin="12" Style="blt_search" TabOrder="25" Text="의뢰내역/미입력&#32;:&#32;&#32;&#32;&#32;&#32;&#32;&#32;건/&#32;&#32;&#32;&#32;&#32;&#32;건" Top="80" Width="194"></Image>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1265" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="3" Top="30" Type="RoundRect" Width="1260"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1260" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="35" Type="Rectangle" Width="1250"></Shape>
+		<Image Align="Left" Height="6" Id="Image7" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search" TabOrder="1" Text="지사구분" Top="46" Width="84"></Image>
+		<Image Align="Left" Height="6" Id="Image10" ImageID="blt" Left="201" LeftMargin="12" Style="blt_search" TabOrder="2" Text="의뢰번호" Top="46" Width="84"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="5" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1260">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="Combo0" Left="80" Style="combo" TabOrder="6" Top="39" Width="111"></Combo>
+		<Image Align="Left" Height="6" Id="Image2" ImageID="blt" Left="587" LeftMargin="12" Style="blt_search" TabOrder="7" Text="작성자" Top="46" Width="84"></Image>
+		<Edit Border="Flat" Height="18" Id="Edit6" Left="265" Style="edit" TabOrder="8" Top="40" Width="110"></Edit>
+		<Button Cursor="HAND" Height="17" Id="C3601030040F_T01" ImageID="search" Left="376" OnClick="Button8_OnClick" TabOrder="9" Text="Button8" Top="41" Width="17"></Button>
+		<Edit Border="Flat" Height="18" Id="Edit0" Left="640" Style="edit" TabOrder="10" Top="40" Width="97"></Edit>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="C1302030010F" Left="830" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="11" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="C2502030010F" Left="920" Style="static" TabOrder="12" Text="~" Top="43" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar1" Left="930" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="13" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="6" Id="Image0" ImageID="blt" Left="765" LeftMargin="12" Style="blt_search" TabOrder="14" Text="신청일자" Top="46" Width="84"></Image>
+		<Image Align="Left" Height="6" Id="Image1" ImageID="blt" Left="1029" LeftMargin="12" Style="blt_search" TabOrder="15" Text="진행상태" Top="46" Width="75"></Image>
+		<Combo Border="Flat" Height="18" Id="Combo1" Left="1091" Style="combo" TabOrder="16" Top="39" Width="108"></Combo>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button225" ImageID="btn_6_cadviewer" Left="1160" LeftMargin="21" Style="button" TabOrder="17" Text="CAD뷰어&#32;설치" Top="74" Width="105"></Button>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="513" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="415" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1265" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="18" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1260">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="40"/>
+						<col width="120"/>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="345"/>
+						<col width="105"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="NO"/>
+						<cell col="1" display="text" rowspan="2" text="의뢰번호"/>
+						<cell col="2" display="text" rowspan="2" text="공사유형"/>
+						<cell col="3" display="text" rowspan="2" text="공사명"/>
+						<cell col="4" display="text" rowspan="2" text="시공회사"/>
+						<cell col="5" colspan="3" display="text" text="주소"/>
+						<cell col="8" display="text" rowspan="2" text="진행상태"/>
+						<cell col="5" display="text" row="1" text="우편번호"/>
+						<cell col="6" display="text" row="1" text="시구동"/>
+						<cell col="7" display="text" row="1" text="상세주소"/>
+					</head>
+					<body>
+						<cell col="0" display="text"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text"/>
+						<cell col="3" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="6" display="text"/>
+						<cell col="7" display="text"/>
+						<cell col="8" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="#6cbae1" Bottom="98" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1265" TabOrder="19" Top="95" Type="Rectangle" Width="1260"></Shape>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button2" ImageID="btn_7_Con" Left="821" LeftMargin="21" Style="button" TabOrder="22" Text="준공도&#32;작성기준" Top="74" Width="115"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button220" ImageID="btn_7_Con" Left="940" LeftMargin="21" Style="button" TabOrder="20" Text="준공도&#32;검수기준" Top="74" Width="115"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button223" ImageID="btn_5_Con" Left="1059" LeftMargin="21" Style="button" TabOrder="21" Text="작성방법(예)" Top="74" Width="97"></Button>
+		<Image Align="Left" Height="10" Id="Image4" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="23" Text="수정의뢰&#32;내역" Top="75" Width="195"></Image>
+		<Static Align="Right" Height="13" Id="Static0" Left="736" Style="static" TabOrder="24" Text="000" Top="77" Width="20"></Static>
+		<Static Align="Right" Height="13" Id="Static1" Left="778" Style="static" TabOrder="26" Text="000" Top="77" Width="20"></Static>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="853" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="311" Id="Grid1" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1265" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="27" TabStop="true" Top="542" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1260">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="70"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="104"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="의뢰번호"/>
+						<cell col="1" display="text" text="차수"/>
+						<cell col="2" display="text" text="시공회사"/>
+						<cell col="3" display="text" text="시공담당자"/>
+						<cell col="4" display="text" text="연락처(휴대폰)"/>
+						<cell col="5" display="text" text="준공도&#32;첨부"/>
+						<cell col="6" display="text" text="작성자"/>
+						<cell col="7" display="text" text="등록일자"/>
+						<cell col="8" display="text" text="GIS&#32;접수일자"/>
+						<cell col="9" display="text" text="오류여부"/>
+						<cell col="10" display="text" text="입력일자"/>
+					</head>
+					<body>
+						<cell col="0" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text"/>
+						<cell col="2" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" display="text"/>
+						<cell col="6" display="text"/>
+						<cell col="7" display="text"/>
+						<cell col="8" display="text"/>
+						<cell col="9" display="text"/>
+						<cell col="10" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="#6cbae1" Bottom="542" Height="3" Id="Shape3" Left="5" LineWidth="0" Right="1265" TabOrder="28" Top="539" Type="Rectangle" Width="1260"></Shape>
+		<Image Align="Left" Height="10" Id="Image6" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="29" Text="수정의뢰&#32;상세내역" Top="522" Width="195"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button243" ImageID="btn_5_Amendment" Left="1178" LeftMargin="21" Style="button" TabOrder="30" Text="시설물등록" Top="518" Width="87"></Button>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="404" LeftMargin="12" Style="blt_search" TabOrder="31" Text="공사유형" Top="46" Width="84"></Image>
+		<Combo Border="Flat" Height="18" Id="Combo2" Left="467" Style="combo" TabOrder="32" Top="39" Width="111"></Combo>
+		<Button Cursor="HAND" Height="17" Id="Button0" ImageID="search" Left="738" OnClick="fn_Cost_Calculate" TabOrder="33" Text="Button8" Top="41" Width="17"></Button>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+function D1402060010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+}
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+function fn_Cost_Calculate(obj)
+{
+	var arrList = gfn_Dialog("D10","D1301010010U","",450,400,true,-1,-1);
+	if(arrList.length() > 0)
+	{
+		edt_comCd.text = arrList[0];			// name
+		edt_comName.text = arrList[1];	// 법인 코드
+	}
+}
+
+function fn_Draft_Book(obj)
+{
+	gfn_Dialog("D10","D1301010011U","",450,400,true,-1,-1);
+}
+
+function fn_Request_Book(obj)
+{
+	gfn_Dialog("D10","D1301010012U","",450,400,true,-1,-1);
+}
+
+function fn_Facility_Status(obj)
+{
+	gfn_Dialog("D10","D1301010013U","",450,400,true,-1,-1);
+}
+
+
+]]></Script>
+</Window>

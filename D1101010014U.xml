@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1101010014U" Left="8" OnLoadCompleted="D1101010014U_OnLoadCompleted" OnUnloadCompleted="D1101010014U_OnUnloadCompleted" PidAttrib="7" Title="변경공사&#32;등록_D1101010014U" Top="8" Ver="1.0" Width="750" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_HouseWork">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" type="STRING"/>
+					<colinfo id="WORK_NUM_NEW" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD_NEW" size="256" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" type="STRING"/>
+					<colinfo id="RMK" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM_NEW" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="변경공사&#32;등록" Transparent="TRUE" Width="750"></Image>
+		<Shape BKColor="user16" Bottom="71" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="745" TabOrder="3" Top="68" Type="Rectangle" Width="740"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_HouseWork" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="395" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="324" Id="Grid2" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnExpandEdit="Grid2_OnExpandEdit" Right="745" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="71" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="740">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="100"/>
+						<col width="99"/>
+						<col width="18"/>
+						<col width="100"/>
+						<col width="103"/>
+						<col width="18"/>
+						<col width="100"/>
+						<col width="196"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell col="1" display="text" text="공사번호"/>
+						<cell col="2" colspan="2" display="text" text="변경공사번호"/>
+						<cell col="4" display="text" text="시공업체1"/>
+						<cell col="5" colspan="2" display="text" text="시공업체2"/>
+						<cell col="7" display="text" text="공사일"/>
+						<cell col="8" display="text" edit="normal" text="공사내용"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell col="1" colid="WORK_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="WORK_NUM_NEW" display="text" expandsize="18" limit="11" wordwrap="word"/>
+						<cell col="3" colid="WORK_NUM_NEW_POP" display="text" expandimage="search" expandshow="true"/>
+						<cell col="4" colid="WORK_FIRM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" colid="WORK_FIRM_NM_NEW" display="text" expandsize="18" limit="10" wordwrap="word"/>
+						<cell col="6" colid="WORK_FIRM_POP" display="text" expandimage="search" expandshow="true"/>
+						<cell col="7" colid="INST_YMD" display="date" edit="date" expandimage="calendar" expandshow="true" expandsize="18" wordwrap="word"/>
+						<cell col="8" colid="RMK" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="4" Text="Button8" Top="-134" Width="167"></Button>
+		<Div Height="24" Id="Div0" Left="5" TabOrder="5" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="740">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101010014U.xml
+* Form 설명  : 변경공사 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화
+* 작성일     : 2009-01-09
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+
+
+//-------------------------------------------------------------------------------
+//  fv_NowWorkNum   : 공동주택번호
+//-------------------------------------------------------------------------------
+var fv_faciNum = "";
+	
+// ===============================================================================
+// 함수명: D1101010014U_OnLoadCompleted()
+//   설명: 화면 로드 후 조회 조건 기본 셋팅
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1101010014U_OnLoadCompleted(obj)
+{
+	
+	gfn_LoadForm(obj);
+	
+	if(IsExistVar("FACI_NUM")) {
+		fv_faciNum = FACI_NUM;		
+	}
+	fn_CommonSearch();	
+	
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSearch()
+//  설명: 변경공사 조회 하는 함수
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSearch()
+{	
+	ds_HouseWork.ClearData();
+			
+	var ServiceId     = "fn_D1_Search";
+	var ServicePart     = "D10";
+	var Url             = "handle.do?ServiceName=D1_FacilityInfoMgr-service&FACI_NUM="+fv_faciNum;
+	var InputDsList     = "";
+	var OutputDsList = "ds_HouseWork=ds_HouseWork";
+	var Argument      = "selectWorkNum";
+	gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+
+}
+
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSave()
+//   설명: 공동주택등록 상세 내용를 저장 하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSave()
+{
+	if(ds_HouseWork.GetColumn(0,"WORK_NUM_NEW") != null)
+	{
+		ds_HouseWork.SetColumn(0,"WORK_NUM",ds_HouseWork.GetColumn(0,"WORK_NUM_NEW"));
+	}
+	
+	if(ds_HouseWork.GetColumn(0,"WORK_FIRM_CD_NEW") != null)
+	{
+		ds_HouseWork.SetColumn(0,"WORK_FIRM_CD",ds_HouseWork.GetColumn(0,"WORK_FIRM_CD_NEW"));
+	}
+	
+	if(ds_HouseWork.GetColumn(0,"WORK_NUM_NEW") != null || ds_HouseWork.GetColumn(0,"WORK_FIRM_CD_NEW") != null)
+	{
+		//수정 등록시 셋팅할 사용자 정보
+		ds_HouseWork.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_HouseWork.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+	}
+	
+	var Transition     = "fn_D1_Save";
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName=D1_FacilityInfoMgr-service";
+    var InputDsList     = "ds_HouseWork=ds_HouseWork:u";
+    var OutputDsList = "";
+    var Argument      = "saveWorkNum";
+    
+    gfn_SyncCall(Transition, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    fn_CommonSearch();
+}
+function D1101010014U_OnUnloadCompleted(obj)
+{
+	if(ds_HouseWork.GetUpdate()){
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 내용이 있습니다.종료")))
+		{
+			return false;
+		}
+	}
+}
+
+function Grid2_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+	if("INST_YMD" == Grid2.GetCellProp("body",nCell,"ColId"))
+	{
+		gfn_SetCalendar(obj, nRow, nCell);
+	}
+	else if("WORK_FIRM_POP" == Grid2.GetCellProp("body",nCell,"ColId"))
+	{
+		var retValue = gfn_Dialog("B20","B2203050011U","",450,400,true,-1,-1);
+		if(retValue != null)
+		{
+			ds_HouseWork.SetColumn(nRow,"WORK_FIRM_CD",Trim(retValue[0]));
+			ds_HouseWork.SetColumn(nRow,"WORK_FIRM_NM_NEW",retValue[1]);
+		}
+	}
+	else if("WORK_NUM_NEW_POP" == Grid2.GetCellProp("body",nCell,"ColId"))
+	{
+		var retValue = gfn_Dialog("B20","B2202010012U","",450,400,true,-1,-1);
+		if(retValue != null)
+		{
+			ds_HouseWork.SetColumn(nRow,"WORK_NUM_NEW",retValue[0]);
+		}
+	}
+}
+
+
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}]]></Script>
+</Window>

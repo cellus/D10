@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1605060010F" Left="8" OnLoadCompleted="D1605060010F_OnLoadCompleted" PidAttrib="7" Title="자재출고내역&#32;조회_D1605060010F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="MAINTER_NUM" size="256" type="STRING"/>
+					<colinfo id="MATERIAL_CD" size="256" type="STRING"/>
+					<colinfo id="MATERIAL_NM" size="256" type="STRING"/>
+					<colinfo id="MATER_FLAG" size="256" type="STRING"/>
+					<colinfo id="UNIT_CD" size="256" type="STRING"/>
+					<colinfo id="DELI_PLAN_QTY" size="256" type="STRING"/>
+					<colinfo id="MATERIAL_STD" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static46" Left="650" Style="table" TabOrder="14" Top="554" VAlign="Middle" Width="350" WordWrap="TRUE"></Static>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1000" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="7" Top="30" Type="RoundRect" Width="995"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="995" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="8" Top="35" Type="Rectangle" Width="985"></Shape>
+		<Image Align="Left" Height="6" Id="Image7" ImageID="blt" Left="265" LeftMargin="12" Style="blt_search_1" TabOrder="1" Text="정비번호" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image5" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="2" Text="지사" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="179" LeftMargin="12" Style="blt_search_1" TabOrder="3" Text="월" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image4" ImageID="blt" Left="471" LeftMargin="12" Style="blt_search_1" TabOrder="4" Text="시공업체" Top="46" Width="59"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="5" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="995">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="Combo4" Left="533" Style="combo" TabOrder="6" Top="39" Width="114"></Combo>
+		<Edit Border="Flat" Height="18" Id="Edit12" ImeMode="none" Left="206" Style="edit" TabOrder="9" Top="40" Width="49"></Edit>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="MAINTER_NUM" Height="18" Id="mainter_num" ImeMode="none" Left="329" Style="edit" TabOrder="10" Top="40" Width="114"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button3" ImageID="search" Left="444" OnClick="Button8_OnClick" TabOrder="11" Text="Button8" Top="41" Width="17"></Button>
+		<Shape BKColor="#6cbae1" Bottom="77" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1000" TabOrder="13" Top="74" Type="Rectangle" Width="995"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="549" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="472" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1000" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="12" TabStop="true" Top="77" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="30"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="checkbox"/>
+						<cell col="1" display="text" text="정비번호"/>
+						<cell col="2" display="text" text="출고일자"/>
+						<cell col="3" display="text" text="자재코드"/>
+						<cell col="4" display="text" text="자재명"/>
+						<cell col="5" display="text" text="재질"/>
+						<cell col="6" display="text" text="규격"/>
+						<cell col="7" display="text" text="단위"/>
+						<cell col="8" display="text" text="수량"/>
+						<cell col="9" display="text" text="단가"/>
+						<cell col="10" display="text" text="금액"/>
+						<cell col="11" display="text" text="단가기준일"/>
+					</head>
+					<body>
+						<cell col="0" display="normal" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="MAINTER_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text"/>
+						<cell col="3" colid="MATERIAL_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="MATERIAL_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" colid="MATER_FLAG" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="6" colid="MATERIAL_STD" display="text"/>
+						<cell col="7" colid="UNIT_CD" display="text"/>
+						<cell col="8" colid="DELI_PLAN_QTY" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="9" display="text"/>
+						<cell col="10" display="text"/>
+						<cell col="11" display="text"/>
+					</body>
+					<summary>
+						<cell align="center" bkcolor="user14" col="0" colspan="8" display="text" text="출고일자별&#32;소계"/>
+						<cell align="center" bkcolor="user14" col="8" display="text"/>
+						<cell align="center" bkcolor="user14" col="9" display="text"/>
+						<cell align="center" bkcolor="user14" col="10" display="text"/>
+						<cell align="center" bkcolor="user14" col="11" display="text"/>
+						<cell align="center" bkcolor="user13" col="0" colspan="8" display="text" row="1" text="합계"/>
+						<cell align="center" bkcolor="user13" col="8" display="text" row="1"/>
+						<cell align="center" bkcolor="user13" col="9" display="text" row="1"/>
+						<cell align="center" bkcolor="user13" col="10" display="text" row="1"/>
+						<cell align="center" bkcolor="user13" col="11" display="text" row="1"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static52" Left="541" Style="table" TabOrder="15" Text="전월자재&#32;소요금액" Top="554" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit21" ImeMode="none" Left="654" Style="edit" TabOrder="16" Top="556" Width="113"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit0" ImeMode="none" Left="883" Style="edit" TabOrder="18" Top="556" Width="113"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static0" Left="770" Style="table" TabOrder="17" Text="금월공제액" Top="554" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" INDEX="0" Left="53" Style="combo" TabOrder="19" Top="39" Width="114"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1605060010F.xml
+* Form 설명  : 자재출고내역 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2008-12-11
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+//---------------------------------------------------------
+function D1605060010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_SetComboBox_Comcode("B10037",gfn_setDsObject_Comcode("cob_BranchCd"));
+	//-----------------------------------------
+	//  콤보박스의 초기 설정
+	//-----------------------------------------
+	cob_BranchCd.Value = 0;
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	fn_D1_FindList();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FindGov()
+//   설명:  자재출고내역 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FindList()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_MaterialsDelivSpecSearMgr-service"
+			   + "&BRANCH_CD=" +cob_BranchCd.Value 
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "findGo";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ds_Multi.GetRowCount()==0) trace("조회결과가 없습니다.");
+	trace(ds_Multi.SaveXML());
+}
+
+function Button8_OnClick(obj)
+{
+	
+}
+]]></Script>
+</Window>

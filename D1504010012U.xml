@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1504010012U" Left="8" OnLoadCompleted="D1504010012U_OnLoadCompleted" PidAttrib="7" Title="위험작업조회(GIS)_D1504010012U" Top="8" Ver="1.0" Width="1005" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_YMD_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_KIND_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_REQ_YMD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_POSITION" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECOND_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_NM1" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="75" Height="43" Id="Shape1" Left="1" LineColor="user7" Right="996" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="9" Top="32" Type="RoundRect" Width="995"></Shape>
+		<Shape BKColor="user8" Bottom="69" Height="32" Id="Shape2" Left="6" LineWidth="0" Right="991" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="10" Top="37" Type="Rectangle" Width="985"></Shape>
+		<Image Align="Left" Height="18" Id="Image10" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_Indis" TabOrder="1" Text="지사" Top="42" Width="59"></Image>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="186" LeftMargin="12" Style="blt_search" TabOrder="2" Text="시/구" Top="42" Width="71"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="53" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="3" Top="42" Width="120"></Combo>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="361" LeftMargin="12" Style="blt_search" TabOrder="4" Text="요청일자" Top="42" Width="73"></Image>
+		<Combo Border="Flat" Height="18" Id="edt_ZipNo1" Left="229" Style="combo" TabOrder="5" Top="42" Width="120"></Combo>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="req_day_start" Left="426" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="6" Top="42" WeeksFont="Default,-1" Width="120"></Calendar>
+		<Static Height="13" Id="Static10" Left="555" Style="static" TabOrder="7" Text="~" Top="42" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="req_day_end" Left="573" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="8" Top="42" WeeksFont="Default,-1" Width="120"></Calendar>
+		<Shape BKColor="#6cbae1" Bottom="103" Height="3" Id="Shape0" Left="1" LineWidth="0" Right="996" TabOrder="12" Top="100" Type="Rectangle" Width="995"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="575" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="472" Id="grd_List" InputPanel="FALSE" Left="1" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellDBLClick="grd_list_OnCellDblClick" Right="996" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="11" TabStop="true" Top="103" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="30"/>
+						<col width="120"/>
+						<col width="270"/>
+						<col width="500"/>
+						<col width="120"/>
+						<col width="120"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="위험작업코드"/>
+						<cell col="2" display="text" text="공사명"/>
+						<cell col="3" display="text" text="작업위치"/>
+						<cell col="4" display="text" text="작업구분"/>
+						<cell col="5" display="text" text="작업요청일"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="1" colid="DANGER_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="2" colid="JOB_NM1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="JOB_POSITION" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="DANGER_JOB_FLAG_NM" display="text"/>
+						<cell align="center" col="5" colid="JOB_REQ_YMD1" display="text" Mask="####-##-##"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Div Height="24" Id="Div0" TabOrder="13" Text="Div0" Top="1" Url="globals::ComButton.xml" Width="1002">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="10" Id="Image2" ImageID="blt_8" Left="10" LeftMargin="12" Style="text_title" TabOrder="14" Text="위험작업" Top="82" Width="70"></Image>
+		<Edit AutoSelect="TRUE" BKColor="white" Border="None" Height="20" Id="Edit0" ImeMode="none" Left="81" MaxLength="10" Style="static" TabOrder="17" Text="(" Top="77" Width="7"></Edit>
+		<Image Align="Left" Height="6" Id="Image18" ImageID="blt" Left="109" LeftMargin="12" Style="blt_search" TabOrder="18" Text="건" Top="84" Width="30"></Image>
+		<Edit Align="CENTER" AutoSelect="TRUE" BKColor="white" Border="None" DisableBKColor="white" Height="20" Id="edt_Count" ImeMode="none" Left="91" MaxLength="10" Number="TRUE" Readonly="TRUE" Style="static" TabOrder="15" Top="77" Width="30"></Edit>
+		<Edit AutoSelect="TRUE" BKColor="white" Border="None" Height="20" Id="Edit3" ImeMode="none" Left="138" MaxLength="10" Style="static" TabOrder="16" Text=")" Top="77" Width="7"></Edit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1504010012F.xml
+* Form 설명  : 위험작업조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2008-12-16
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONA10005.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONA10008.js";
+#include "JS::COMMONE20001.js";
+//---------------------------------------------------------
+function D1504010012U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+
+	fn_Init();
+}
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+	fn_SetComboBox_Comcode("1", cob_BranchCd.Value, fn_setDsObject_Comcode("1", "edt_ZipNo1"));
+	//-----------------------------------------
+	//  콤보박스의 초기 설정
+	//-----------------------------------------
+	cob_BranchCd.Index = 0;
+	cob_BranchCd_OnChanged();
+}
+/********************************************************************************
+* 기      능   :  지사_구 콤보 
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+    fn_SetComboBox_Comcode("1", cob_BranchCd.Value, fn_setDsObject_Comcode("1", "edt_ZipNo1"));
+    if(cob_BranchCd.Value = "100584"){							//서부
+		edt_ZipNo1.Index = 3;
+	}else if(cob_BranchCd.Value = "100664"){					//강북
+		edt_ZipNo1.Index = 5;
+	}else if(cob_BranchCd.Value = "100591"){					//남부
+		edt_ZipNo1.Index = 3;
+	}else if(cob_BranchCd.Value = "101500"){					//경기
+		edt_ZipNo1.Index = 5;
+	}
+}
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	if(!fn_DateCheck(req_day_start,req_day_end))
+	 {
+		return;
+	 }	
+	fn_D1_FindList();
+	edt_Count.Text = ds_Multi.GetRowCount();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명     : fn_D1_FindList()
+// 설명       : 위험작업을 조회한다.
+// arguments
+// return 내용: 
+//------------------------------------------------------------------------------- 
+function fn_D1_FindList()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_DangerWorkSearMgr_Popup-service"
+			   + "&BRANCH_CD=" +cob_BranchCd.Value
+			   + "&ZIP_NO1=" +edt_ZipNo1.Value
+			   + "&REQ_DAY_START=" +req_day_start.Value
+			   + "&REQ_DAY_END=" +req_day_end.Value
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument  = "findGo";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	grd_List.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");
+}
+
+function fn_CommonSelect()
+{
+	grd_list_OnCellDblClick();
+}
+
+/********************************************************************************
+* 기      능   :  부모창으로 인자값 보내기
+********************************************************************************/
+function grd_list_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	 var arrList = array();
+	 arrList[0] = ds_Multi.getcolumn(grd_List.ClickedRow, "DANGER_NUM") ; 	   //위험작업번호
+	 arrList[1] = ds_Multi.getcolumn(grd_List.ClickedRow, "DANGER_JOB_FLAG") ; //지사코드
+	 arrList[2] = ds_Multi.getcolumn(grd_List.ClickedRow, "BRANCH_CD") ; 	   //지사코드
+	 arrList[3] = ds_Multi.getcolumn(grd_List.ClickedRow, "JOB_NM1");	  	   //작업명
+     arrList[4] = ds_Multi.getcolumn(grd_List.ClickedRow, "ZIP_NO1"); 		   //우편번호1
+     arrList[5] = ds_Multi.getcolumn(grd_List.ClickedRow, "ZIP_NO2") ;		   //우편번호2
+     arrList[6] = ds_Multi.getcolumn(grd_List.ClickedRow, "ZIP_SEQ");  	       //우편번호 seq
+     arrList[7] = ds_Multi.getcolumn(grd_List.ClickedRow, "HILL");	           //산번지
+     arrList[8] = ds_Multi.getcolumn(grd_List.ClickedRow, "ADDR_M") ;		   //본번지
+     arrList[9] = ds_Multi.getcolumn(grd_List.ClickedRow, "ADDR_S") ;
+     arrList[10] = ds_Multi.getcolumn(grd_List.ClickedRow, "SECOND_ADDR") ;
+     arrList[11] = ds_Multi.getcolumn(grd_List.ClickedRow, "BLD_DONG") ;
+     arrList[12] = ds_Multi.getcolumn(grd_List.ClickedRow, "HOSU") ;
+     arrList[13] = ds_Multi.getcolumn(grd_List.ClickedRow, "LOT_NUM_UNION") ;
+     arrList[14] = ds_Multi.getcolumn(grd_List.ClickedRow, "GU_NM") ;
+     Close(arrList);	 
+}
+
+
+function bt_d1_sanction(obj)
+{
+	fn_CommonSearch();
+}
+//-------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 인쇄
+//-------------------------------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+]]></Script>
+</Window>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1202010036U" Left="8" OnLoadCompleted="D1202010036U_OnLoadCompleted" PidAttrib="7" Title="가스누설이력조회_D1202010036U" Top="8" Ver="1.0" Width="840" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_codem"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Find">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_PATROL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_PATROL_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="3" Text="가스누설&#32;이력조회" Transparent="TRUE" Width="840"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_codem" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="395" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="295" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" Right="832" SelColor="MENU" Style="grid_pop" TabOrder="4" TabStop="true" Top="100" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="827">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="34"/>
+						<col width="73"/>
+						<col width="116"/>
+						<col width="176"/>
+						<col width="157"/>
+						<col width="75"/>
+						<col width="72"/>
+						<col width="70"/>
+						<col width="183"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell col="1" display="text" text="순찰일자"/>
+						<cell col="2" display="text" text="점검구간"/>
+						<cell col="3" display="text" text="순찰지역"/>
+						<cell col="4" display="normal" text="누설지점"/>
+						<cell col="5" display="text" text="검지농도(%)"/>
+						<cell col="6" display="text" text="인수자" TrimType="Left"/>
+						<cell col="7" display="text" text="인계일자"/>
+						<cell col="8" display="text" text="인계내역"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expr="rowindex+1"/>
+						<cell col="1" colid="PATROL_YMD" display="date"/>
+						<cell col="2" colid="BLOCK_NM" display="text"/>
+						<cell col="3" colid="DONG_NM" display="text"/>
+						<cell align="left" col="4" colid="LK_BRANCH" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="5" colid="CHK_DENSITY" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="6" colid="UNDERTAKE_EMPID_NM" display="text"/>
+						<cell col="7" colid="HANDOVER_YMD" display="date"/>
+						<cell col="8" colid="HANDOVER_DESC" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="100" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="832" TabOrder="5" Top="97" Type="Rectangle" Width="827"></Shape>
+		<Div Height="29" Id="Div0" TabOrder="6" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="840">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="0" LineColor="user10" Right="840" TabOrder="7" Top="68" Type="Rectangle" Width="840"></Shape>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search" TabOrder="8" Text="순찰일자" Top="72" Transparent="TRUE" Width="66"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PatrolStYmd" Left="80" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="1" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="C2502030010F" Left="170" Style="static" TabOrder="9" Text="~" Top="75" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PatrolEdYmd" Left="184" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="2" Top="72" WeeksFont="Default,-1" Width="88"></Calendar>
+	</Form>
+	<Script><![CDATA[/*************************************************************************************************** 
+* FormID     : D1202010036U.xml
+* Form 설명  : 누출이력조회(바디)(POPUP)
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 임병태 
+* 작성일     : 2008-09-03 
+* 변경내용   : 변경일자, 변경내용,변경자 
+****************************************************************************************************/ 
+#include "JS::COMMONA10001.js";
+#include "JS::COMMOND10001.js";
+
+
+//---------------------------------------------------------
+//	화면초기화함수
+//---------------------------------------------------------
+function D1202010036U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_D1_SetGrid_Sort(grd_List);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	cal_PatrolStYmd.Text = substr(today(), 0, 4) + "01" + "01";
+	cal_PatrolEdYmd.Text = today();    
+}
+
+//-------------------------------------------------------------------------------
+// 엑셀 버튼 실행
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	grd_List.ExportExcelEx("sheet1");
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - Print
+//---------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+//-------------------------------------------------------------------------------
+// 조회 버튼 실행
+//-------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	ds_codem.ClearData();
+	
+	ds_Find.ClearData();
+	
+	var row = ds_Find.AddRow();
+
+	ds_Find.SetColumn(row,"BRANCH_CD",cob_PBranchCd.Value);
+	ds_Find.SetColumn(row,"STR_PATROL_YMD",cal_PatrolStYmd.Value);
+	ds_Find.SetColumn(row,"END_PATROL_YMD",cal_PatrolEdYmd.Value);
+	
+	var strSvcID = "find";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1202010036U-service";
+	var strInDatasets  = "ds_Find=ds_Find";
+	var strOutDatasets  = "ds_codem=ds_codem";
+	var strArgument  = "find=1";			
+
+	gfn_SyncCall( 
+					 strSvcID 
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+}]]></Script>
+</Window>

@@ -1,0 +1,2723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="623" Id="D1501010012U" Left="8" OnLoadCompleted="D1501010012U_OnLoadCompleted" PidAttrib="7" Title="중폐지-가정관&#32;등록_D1501010012U" Top="8" Ver="1.0" Width="1089" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_BranchCd">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_CallBpmOut">
+				<Contents>
+					<colinfo id="activityName" size="256" summ="default" type="STRING"/>
+					<colinfo id="branchNm" size="256" summ="default" type="STRING"/>
+					<colinfo id="workNumPK" size="256" summ="default" type="STRING"/>
+					<colinfo id="workType" size="256" summ="default" type="STRING"/>
+					<colinfo id="zipAddress" size="256" summ="default" type="STRING"/>
+					<colinfo id="dealNm" size="256" summ="default" type="STRING"/>
+					<colinfo id="bpmMonitorLink" size="256" summ="default" type="STRING"/>
+					<colinfo id="systemId" size="256" summ="default" type="STRING"/>
+					<colinfo id="displayId" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DangerEqup">
+				<Contents>
+					<colinfo id="EQUP1" size="256" summ="default" type="STRING"/>
+					<colinfo id="EA1" size="256" summ="default" type="STRING"/>
+					<colinfo id="EQUP2" size="256" summ="default" type="STRING"/>
+					<colinfo id="EA2" size="256" summ="default" type="STRING"/>
+					<record>
+						<EA1></EA1>
+						<EA2></EA2>
+						<EQUP1>소&#32;화&#32;기</EQUP1>
+						<EQUP2>조명장비</EQUP2>
+					</record>
+					<record>
+						<EA1></EA1>
+						<EA2></EA2>
+						<EQUP1>절&#32;단&#32;기</EQUP1>
+						<EQUP2>가스검지기(SCG)</EQUP2>
+					</record>
+					<record>
+						<EA1></EA1>
+						<EA2></EA2>
+						<EQUP1>산소농도측정기(SCG)</EQUP1>
+						<EQUP2>휀&#32;스</EQUP2>
+					</record>
+					<record>
+						<EA1></EA1>
+						<EA2></EA2>
+						<EQUP1>질&#32;소</EQUP1>
+						<EQUP2>유도표지</EQUP2>
+					</record>
+					<record>
+						<EA1></EA1>
+						<EA2></EA2>
+						<EQUP1>천공장비</EQUP1>
+						<EQUP2>기타</EQUP2>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DangerEqup01">
+				<Contents>
+					<colinfo id="EQUIP_QTY" size="256" summ="default" type="STRING"/>
+					<colinfo id="EQUIP_CD" size="256" summ="default" type="STRING"/>
+					<record>
+						<EQUIP_CD>01</EQUIP_CD>
+						<EQUIP_QTY></EQUIP_QTY>
+					</record>
+					<record>
+						<EQUIP_CD>02</EQUIP_CD>
+						<EQUIP_QTY></EQUIP_QTY>
+					</record>
+					<record>
+						<EQUIP_CD>03</EQUIP_CD>
+						<EQUIP_QTY></EQUIP_QTY>
+					</record>
+					<record>
+						<EQUIP_CD>04</EQUIP_CD>
+						<EQUIP_QTY></EQUIP_QTY>
+					</record>
+					<record>
+						<EQUIP_CD>05</EQUIP_CD>
+						<EQUIP_QTY></EQUIP_QTY>
+					</record>
+					<record>
+						<EQUIP_CD>06</EQUIP_CD>
+						<EQUIP_QTY></EQUIP_QTY>
+					</record>
+					<record>
+						<EQUIP_CD>07</EQUIP_CD>
+						<EQUIP_QTY></EQUIP_QTY>
+					</record>
+					<record>
+						<EQUIP_CD>08</EQUIP_CD>
+						<EQUIP_QTY></EQUIP_QTY>
+					</record>
+					<record>
+						<EQUIP_CD>09</EQUIP_CD>
+						<EQUIP_QTY></EQUIP_QTY>
+					</record>
+					<record>
+						<EQUIP_CD>10</EQUIP_CD>
+						<EQUIP_QTY></EQUIP_QTY>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DangerEqup02">
+				<Contents>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="EQUIP_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EQUIP_QTY" size="256" summ="default" type="STRING"/>
+					<colinfo id="EQUIP_USER_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DangerJob" OnColumnChanged="ds_DangerJob_OnColumnChanged">
+				<Contents>
+					<colinfo id="JOB_STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_END_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_PLAN_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_SCG_PLAN_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_APPRO_STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_APPRO_END_TIME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DangerJobFlag">
+				<Contents>
+					<colinfo id="NAME" size="256" type="STRING"/>
+					<colinfo id="VALUE" size="256" type="STRING"/>
+					<record>
+						<NAME>투자.외부</NAME>
+						<VALUE>10</VALUE>
+					</record>
+					<record>
+						<NAME>가정관</NAME>
+						<VALUE>20</VALUE>
+					</record>
+					<record>
+						<NAME>중폐지</NAME>
+						<VALUE>30</VALUE>
+					</record>
+					<record>
+						<NAME>정압기</NAME>
+						<VALUE>40</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DecideReq">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RTURN_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DecideReqConf">
+				<Contents>
+					<colinfo id="CHG_APPRO_REQ_CONF_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Delete">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DELETE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<record>
+						<DANGER_JOB_FLAG></DANGER_JOB_FLAG>
+						<DANGER_JOB_STS_FLAG></DANGER_JOB_STS_FLAG>
+						<DANGER_NUM></DANGER_NUM>
+						<DELETE_FLAG></DELETE_FLAG>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FileList">
+				<Contents>
+					<colinfo id="FILE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_PATH" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="FILE_PATH" size="256" summ="default" type="STRING"/>
+					<colinfo id="FILE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="FILE_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORG_FILE_NAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Max">
+				<Contents>
+					<colinfo id="MAX" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_YMD_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_KIND_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_NM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="HILL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_S" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECOND_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLD_DONG" size="256" summ="default" type="STRING"/>
+					<colinfo id="HOSU" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_REQ_YMD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_END_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="BEFO_MATER_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_MATER_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_METHOD_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MID_PRESS_CROSS_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ML_PRESS_M_PRESS" size="256" summ="default" type="STRING"/>
+					<colinfo id="ML_PRESS_L_PRESS" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_MANAGER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_MANAGER_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_MANAGER_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_MANAGER_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEED_PERS" size="256" summ="default" type="STRING"/>
+					<colinfo id="SCG_JOIN_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="SCG_JOIN_PERS" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_AMT_PAY_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADMIT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADMIT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIR_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="IND_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LICENSE_TAX" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPRO_PERIOD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPRO_PERIOD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_FIRM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="NOT_PERMIT_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_OPINI" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RTURN_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_REQ_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_EXT_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_REQ_STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_REQ_END_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SCG_JOIN_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROCATION" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Data1">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADMIT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADMIT_PERIOD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADMIT_PERIOD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADMIT_DOCU_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Data2">
+				<Contents>
+					<colinfo id="DIG_LENG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Data3">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIR_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="IND_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_AMT_TEMPOR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_AMT_CONTI" size="256" summ="default" type="STRING"/>
+					<colinfo id="LICENSE_TAX" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_LEASE_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_AMT_PAY_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Re" OnColumnChanged="ds_Multi_Re_OnColumnChanged">
+				<Contents>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_YMD_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_KIND_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_NM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="HILL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_S" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECOND_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLD_DONG" size="256" summ="default" type="STRING"/>
+					<colinfo id="HOSU" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_REQ_YMD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_END_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="BEFO_MATER_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_MATER_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_METHOD_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MID_PRESS_CROSS_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ML_PRESS_M_PRESS" size="256" summ="default" type="STRING"/>
+					<colinfo id="ML_PRESS_L_PRESS" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_MANAGER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_MANAGER_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_MANAGER_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_MANAGER_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEED_PERS" size="256" summ="default" type="STRING"/>
+					<colinfo id="SCG_JOIN_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="SCG_JOIN_PERS" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_AMT_PAY_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADMIT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADMIT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIR_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="IND_RC_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LICENSE_TAX" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPRO_PERIOD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPRO_PERIOD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_FIRM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="NOT_PERMIT_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_OPINI" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RTURN_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_REQ_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_EXT_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_CONF_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_REQ_STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_REQ_END_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SCG_JOIN_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROCATION" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_ADDR_BLD_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_HOSU" size="256" summ="default" type="STRING"/>
+					<colinfo id="NEW_ADDR_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_RESULT" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_RESULT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOTAL_SUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Re1">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_RESULT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_RESULT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_User">
+				<Contents>
+					<colinfo id="EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="POS_RNK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEPT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEPT_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="POS_RNK_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ReqChange">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_REQ_YMD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Review">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_OPINI" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_EMPID_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team_01">
+				<Contents>
+					<colinfo id="KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_WorkFirmCd">
+				<Contents>
+					<colinfo id="DEAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_WorkFrimCd">
+				<Contents>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_sKey">
+				<Contents>
+					<colinfo id="userId" size="256" summ="default" type="STRING"/>
+					<colinfo id="processDefName" size="256" summ="default" type="STRING"/>
+					<colinfo id="activityName" size="256" summ="default" type="STRING"/>
+					<colinfo id="dangerNumPK" size="256" summ="default" type="STRING"/>
+					<colinfo id="dangerJobFlag" size="256" summ="default" type="STRING"/>
+					<colinfo id="jobReqYmd1" size="256" summ="default" type="STRING"/>
+					<colinfo id="dangerJobStsFlag" size="256" summ="default" type="STRING"/>
+					<colinfo id="interfacetype" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_sKeyUp">
+				<Contents>
+					<colinfo id="userId" size="256" summ="default" type="STRING"/>
+					<colinfo id="processDefName" size="256" summ="default" type="STRING"/>
+					<colinfo id="dangerNumPK" size="256" summ="default" type="STRING"/>
+					<colinfo id="dangerJobFlag" size="256" summ="default" type="STRING"/>
+					<colinfo id="branchCode" size="256" summ="default" type="STRING"/>
+					<colinfo id="workFirmUserId" size="256" summ="default" type="STRING"/>
+					<colinfo id="scUserId" size="256" summ="default" type="STRING"/>
+					<colinfo id="csUserId" size="256" summ="default" type="STRING"/>
+					<colinfo id="zipNo2" size="256" summ="default" type="STRING"/>
+					<colinfo id="dealNm" size="256" summ="default" type="STRING"/>
+					<colinfo id="workNumPK" size="256" summ="default" type="STRING"/>
+					<colinfo id="interfacetype" size="256" summ="default" type="STRING"/>
+					<colinfo id="jobNm" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static86" Left="448" Style="table" TabOrder="182" Top="301" VAlign="Middle" Width="387" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static87" Left="448" Style="table" TabOrder="183" Top="280" VAlign="Middle" Width="387" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="11" Id="Static41" Left="901" Style="table" TabOrder="180" Top="312" VAlign="Middle" Width="185" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static76" Left="448" Style="table" TabOrder="80" Top="364" VAlign="Middle" Width="570" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static44" Left="448" Style="table" TabOrder="138" Top="385" VAlign="Middle" Width="570" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static123" Left="785" Style="table_indis" TabOrder="169" Top="385" VAlign="Middle" Width="301" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static122" Left="785" Style="table_indis" TabOrder="168" Top="364" VAlign="Middle" Width="301" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static45" Left="54" Style="table" TabOrder="139" Top="120" VAlign="Middle" Width="962" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static43" Left="901" Style="table" TabOrder="134" Top="291" VAlign="Middle" Width="185" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static139" Left="54" Style="table" TabOrder="73" Top="99" VAlign="Middle" Width="1033" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static30" Left="77" Style="table" TabOrder="33" Top="55" VAlign="Middle" Width="1010" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static32" Left="54" Style="table" TabOrder="35" Top="78" VAlign="Middle" Width="1033" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static31" Left="5" Style="table_indis" TabOrder="32" Text="위험작업번호" Top="55" VAlign="Middle" Width="77" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_Multi_Re" Border="Flat" Column="DANGER_NUM" Enable="FALSE" Height="18" Id="edt_DangerNum" ImeMode="none" Left="83" MaxLength="10" Style="edit" TabOrder="36" Top="57" Width="90"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static89" Left="448" Style="table" TabOrder="37" Top="322" VAlign="Middle" Width="638" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static91" Left="438" Style="table_indis" TabOrder="38" Text="시공회사" Top="280" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static92" Left="438" Style="table" TabOrder="39" Text="대표자" Top="301" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static93" Left="438" Style="table" TabOrder="40" Text="시공관리자" Top="322" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="44" Id="Static94" Left="785" Style="table_indis" TabOrder="41" Text="전화번호" Top="280" VAlign="Middle" Width="117" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static96" Left="785" Style="table_indis" TabOrder="42" Text="휴대전화번호" Top="322" VAlign="Middle" Width="117" WordWrap="TRUE"></Static>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" CheckLength="Byte" Column="REQ_NM" Height="18" Id="edt_ReqNm" ImeMode="none" Left="576" MaxLength="50" Style="edit" TabOrder="14" Top="303" Width="208"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" CheckLength="Byte" Column="WORK_MANAGER_NM" Height="18" Id="edt_WorkManagerNm" ImeMode="none" Left="576" MaxLength="10" Style="edit" TabOrder="15" Top="324" Width="208"></Edit>
+		<Static Height="13" Id="Static10" Left="963" Style="static" TabOrder="44" Text="-" Top="295" Width="10"></Static>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_FIRM_TEL_EXN" Height="18" Id="ect_WorkFirmTelExn" ImeMode="none" Left="971" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="12" Top="293" Width="51"></Edit>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_FIRM_TEL_DDD" Height="18" Id="cob_WorkFirmTelDdd" Left="902" Style="combo_indis" TabOrder="11" Top="292" Width="61"></Combo>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_FIRM_TEL_NUM" Height="18" Id="edt_WorkFirmTelNum" ImeMode="none" Left="1032" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="13" Top="293" Width="52"></Edit>
+		<Static Height="13" Id="Static116" Left="1023" Style="static" TabOrder="45" Text="-" Top="295" Width="10"></Static>
+		<Static Height="13" Id="Static119" Left="963" Style="static" TabOrder="46" Text="-" Top="326" Width="10"></Static>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_MANAGER_TEL_EXN" Height="18" Id="edt_WorkManagerTelExn" ImeMode="none" Left="971" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="17" Top="324" Width="51"></Edit>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_MANAGER_TEL_DDD" Height="18" Id="cob_WorkManagerTelDdd" Left="902" Style="combo_indis" TabOrder="16" Top="323" Width="61"></Combo>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_MANAGER_TEL_NUM" Height="18" Id="edt_WorkManagerTelNum" ImeMode="none" Left="1032" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="18" Top="324" Width="52"></Edit>
+		<Static Height="13" Id="Static120" Left="1023" Style="static" TabOrder="47" Text="-" Top="326" Width="10"></Static>
+		<Image Align="Left" Height="10" Id="Image6" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="48" Text="위헙작업내역&#32;등록" Top="40" Width="210"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_DangerWork" ImageID="btn_8_Inquiry01" Left="956" LeftMargin="21" OnClick="btn_DangerWork_OnClick" Style="button" TabOrder="49" Text="위험작업&#32;허가기준" Top="33" Width="128"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Btn_Danger_Req" ImageID="btn_6_reg" Left="1093" LeftMargin="21" OnClick="Btn_Danger_Req_OnClick" Style="button" TabOrder="50" Text="위험작업요청" Top="33" Visible="FALSE" Width="100"></Button>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static110" Left="174" Style="table_indis" TabOrder="51" Text="진행상태" Top="55" VAlign="Middle" Width="55" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="REVIEW_YMD" Dateformat="LONGDATE" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_DecideYmd1" Left="800" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="52" Top="122" WeeksFont="Default,-1" Width="160"></Calendar>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static4" Left="253" Style="table" TabOrder="54" Text="공사명" Top="78" VAlign="Middle" Width="93" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static35" Left="54" Style="table_indis" TabOrder="55" Text="압력" Top="120" VAlign="Middle" Width="89" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="64" Id="Static33" Left="5" Style="table" TabOrder="34" Text="구분" Top="78" VAlign="Middle" Width="50" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static140" Left="579" Style="table_indis" TabOrder="56" Text="작업위치(기존)" Top="78" VAlign="Middle" Width="91" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static147" Left="253" Style="table" TabOrder="57" Text="중압관경" Top="120" VAlign="Middle" Width="93" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="MID_PRESS_CROSS_YN" Height="18" Id="cob_MidPressCrossYn" Left="346" OnChanged="cob_MidPressCrossYn_OnChanged" Style="combo_indis" TabOrder="5" Top="100" Width="122"></Combo>
+		<Image Align="Left" Height="10" Id="Image11" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="59" Text="안전장비" Top="265" Width="210"></Image>
+		<Shape BKColor="#6cbae1" Bottom="283" Height="3" Id="Shape4" Left="5" LineWidth="0" Right="435" TabOrder="58" Top="280" Type="Rectangle" Width="430"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_DangerEqup" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="394" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="111" Id="Grid2" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="435" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="10" TabStop="true" Top="283" UseDBuff="true" UsePopupMenu="true" UseSelColor="FALSE" Visible="true" VLineColor="default" WheelScrollRow="1" Width="430">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="150"/>
+						<col width="95"/>
+						<col width="150"/>
+						<col width="95"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="장비명"/>
+						<cell col="1" display="text" text="수량"/>
+						<cell col="2" display="text" text="장비명"/>
+						<cell col="3" display="text" text="수량"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="EQUP1" display="text"/>
+						<cell align="right" col="1" colid="EA1" display="number" edit="number" expandsize="18" limit="3" wordwrap="word"/>
+						<cell align="center" col="2" colid="EQUP2" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="3" colid="EA2" display="number" edit="number" limit="3"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image12" ImageID="blt_8" Left="438" LeftMargin="12" Style="text_title" TabOrder="60" Text="작업수행&#32;및&#32;비상연락망" Top="265" Width="210"></Image>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static1" Left="5" Style="table_indis" TabOrder="61" Text="포장종류" Top="416" VAlign="Middle" Width="123" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="5" Style="table" TabOrder="62" Top="437" VAlign="Middle" Width="123" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static15" Left="127" Style="table" TabOrder="64" Top="437" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static16" Left="127" Style="table_indis" TabOrder="63" Text="연장(m)" Top="416" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static17" Left="725" Style="table" TabOrder="68" Top="479" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static18" Left="725" Style="table_indis" TabOrder="67" Text="허가번호" Top="458" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static19" Left="246" Style="table" TabOrder="66" Top="437" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static20" Left="246" Style="table_indis" TabOrder="65" Text="굴착신청일자" Top="416" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static21" Left="485" Style="table" TabOrder="70" Top="437" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static22" Left="485" Style="table_indis" TabOrder="69" Text="직접복구비(원)" Top="416" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="10" Id="Image15" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="71" Text="첨부문서" Top="630" Visible="FALSE" Width="210"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static25" Left="5" Style="table" TabOrder="72" Top="646" VAlign="Middle" Visible="FALSE" Width="1077" WordWrap="TRUE"></Static>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="ADMIT_NUM" Height="18" Id="edt_AdmitNum" ImeMode="none" Left="727" MaxLength="10" Style="edit_Indis" TabOrder="26" Top="481" Width="117"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="JOB_NM1" Enable="FALSE" Height="18" Id="edt_JobNm1" ImeMode="none" Left="347" Style="edit" TabOrder="74" Top="80" Width="231"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static65" Left="253" Style="table_indis" TabOrder="75" Text="중저압병행" Top="99" VAlign="Middle" Width="93" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static73" Left="468" Style="table" TabOrder="76" Text="저압관경" Top="120" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static74" Left="662" Style="table_indis" TabOrder="77" Text="작업요청일자" Top="55" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static75" Left="709" Style="table" TabOrder="78" Text="검토일자" Top="120" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="JOB_REQ_YMD1" Dateformat="LONGDATE" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_JobReqYmd1" Left="753" OnChanged="cal_JobReqYmd1_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="2" Top="57" WeeksFont="Default,-1" Width="160"></Calendar>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="PRESS_FLAG" Height="18" Id="cob_PressFlag" Left="144" Style="combo_indis" TabOrder="6" Top="121" Width="109"></Combo>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_DangerJob" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="254" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="81" Id="grd_DangerJob" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="1086" SelColor="BACKGROUND" Style="grid" TabOrder="9" TabStop="true" Top="173" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="3" Width="1081">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="30"/>
+						<col fix="left" width="70"/>
+						<col fix="left" width="20"/>
+						<col fix="left" width="70"/>
+						<col fix="left" width="888"/>
+					</columns>
+					<head>
+						<cell align="center" col="0" display="text" text="NO"/>
+						<cell bkcolor="user11" col="1" colspan="3" display="text" text="요청시간"/>
+						<cell bkcolor="user11" col="4" display="text" text="작업내용"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expr="rowindex+1"/>
+						<cell align="center" col="1" colid="JOB_STR_TIME" display="text" edit="mask" Mask="##:##"/>
+						<cell align="center" col="2" display="text" text="~"/>
+						<cell align="center" col="3" colid="JOB_END_TIME" display="text" edit="mask" expandsize="18" Mask="##:##" wordwrap="word"/>
+						<cell col="4" colid="DANGER_JOB_PLAN_CD" display="combo" edit="combo" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="79" Text="작업계획(시공사)" Top="154" Width="210"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static77" Left="448" Style="table" TabOrder="81" Top="343" VAlign="Middle" Width="638" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static79" Left="438" Style="table" TabOrder="82" Text="현장소장" Top="343" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static80" Left="438" Style="table_indis" TabOrder="83" Text="소요인원" Top="364" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static82" Left="785" Style="table_indis" TabOrder="84" Text="휴대전화번호" Top="343" VAlign="Middle" Width="117" WordWrap="TRUE"></Static>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" CheckLength="Byte" Column="SITE_CHIEF_NM" Height="18" Id="edt_SiteChiefNm" ImeMode="none" Left="576" MaxLength="10" Style="edit" TabOrder="19" Top="345" Width="208"></Edit>
+		<Static Height="13" Id="Static85" Left="963" Style="static" TabOrder="85" Text="-" Top="347" Width="10"></Static>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="SITE_CHIEF_TEL_EXN" Height="18" Id="edt_SiteChiefTelExn" ImeMode="none" Left="971" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="21" Top="345" Width="51"></Edit>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="SITE_CHIEF_TEL_DDD" Height="18" Id="cob_SiteChiefTelDdd" Left="902" Style="combo_indis" TabOrder="20" Top="344" Width="61"></Combo>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="SITE_CHIEF_TEL_NUM" Height="18" Id="edt_SiteChiefTelNum" ImeMode="none" Left="1032" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="22" Top="345" Width="52"></Edit>
+		<Static Height="13" Id="Static88" Left="1023" Style="static" TabOrder="86" Text="-" Top="347" Width="10"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static84" Left="438" Style="table" TabOrder="87" Text="당사입회자" Top="385" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="SCG_JOIN_EMPID_NM" Enable="FALSE" Height="18" Id="edt_ScgJoinEmpidNm" ImeMode="none" Left="576" MaxLength="9" Style="edit" TabOrder="23" Top="387" Width="87"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="365" Style="table" TabOrder="89" Top="437" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="RC_AMT_PAY_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_RcAmtPayYmd" Left="367" OnChanged="cal_RcAmtPayYmd_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="25" Top="439" WeeksFont="Default,-1" Width="117"></Calendar>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static78" Left="365" Style="table_indis" TabOrder="88" Text="복구비납부일" Top="416" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static81" Left="605" Style="table" TabOrder="91" Top="479" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static97" Left="605" Style="table_indis" TabOrder="90" Text="허가일자" Top="458" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static98" Left="605" Style="table" TabOrder="93" Top="437" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static99" Left="605" Style="table_indis" TabOrder="92" Text="간접복구비(원)" Top="416" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static100" Left="725" Style="table" TabOrder="95" Top="437" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static101" Left="845" Style="table" TabOrder="97" Top="437" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static102" Left="845" Style="table_indis" TabOrder="96" Text="점용료(원)" Top="416" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static103" Left="964" Style="table" TabOrder="99" Top="437" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static104" Left="964" Style="table" TabOrder="98" Text="합계(원)" Top="416" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static105" Left="725" Style="table_indis" TabOrder="94" Text="면허세(원)" Top="416" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static107" Left="5" Style="table_indis" TabOrder="100" Text="승인기간" Top="458" VAlign="Middle" Width="242" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static108" Left="5" Style="table" TabOrder="101" Top="479" VAlign="Middle" Width="242" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static111" Left="246" Style="table" TabOrder="103" Top="479" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static112" Left="246" Style="table" TabOrder="102" Text="복구업체" Top="458" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static115" Left="365" Style="table" TabOrder="105" Top="479" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static121" Left="365" Style="table_indis" TabOrder="104" Text="복구형태" Top="458" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static124" Left="485" Style="table" TabOrder="107" Top="479" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="RC_PLAN_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_RcPlanYmd" Left="487" OnChanged="cal_RcPlanYmd_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="29" Top="481" WeeksFont="Default,-1" Width="117"></Calendar>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static125" Left="485" Style="table_indis" TabOrder="106" Text="복구예정일자" Top="458" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static130" Left="605" Style="table" TabOrder="109" Top="521" VAlign="Middle" Width="480" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static134" Left="605" Style="table" TabOrder="108" Text="기타사항" Top="500" VAlign="Middle" Width="480" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="10" Id="Image18" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="110" Text="특기사항" Top="551" Width="210"></Image>
+		<TextArea BindDataset="ds_Multi_Re" Border="Flat" CheckLength="Byte" Column="RMK" Height="54" Id="edt_Rmk" Left="5" MaxLength="300" Style="textarea" TabOrder="31" Top="564" VScroll="TRUE" Width="1080"></TextArea>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="ZIP_NO1" Enable="FALSE" Height="18" Id="edt_Zip1" Left="1429" MaxLength="3" Readonly="TRUE" Style="edit" TabOrder="111" Top="53" Visible="FALSE" Width="40"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="ZIP_NO2" Enable="FALSE" Height="18" Id="edt_Zip2" Left="1484" MaxLength="3" Readonly="TRUE" Style="edit" TabOrder="112" Top="53" Visible="FALSE" Width="40"></Edit>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="APPRO_PERIOD_FROM" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ApproPeriodFrom" Left="7" OnChanged="cal_ApproPeriodFrom_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="27" Top="481" WeeksFont="Default,-1" Width="113"></Calendar>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="APPRO_PERIOD_TO" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ApproPeriodTo" Left="132" OnChanged="cal_ApproPeriodTo_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="28" Top="481" WeeksFont="Default,-1" Width="113"></Calendar>
+		<Static Height="13" Id="Static8" Left="121" Style="static" TabOrder="113" Text="~" Top="485" Width="10"></Static>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="PAVEMENT_KIND" Height="18" Id="cob_PavementKind" Left="6" Style="combo_indis" TabOrder="24" Top="438" Width="121"></Combo>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static34" Left="351" Style="table_indis" TabOrder="114" Text="지사" Top="55" VAlign="Middle" Width="40" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="BRANCH_CD" Editable="TRUE" Enable="FALSE" Height="18" Id="cob_BranchCd01" Left="391" OnChanged="cob_BranchCd01_OnChanged" Style="combo_indis" TabOrder="115" Top="56" Width="100"></Combo>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Safety" ImageID="btn_5_From" Left="998" LeftMargin="21" OnClick="btn_Safety_OnClick" Style="button" TabOrder="116" Text="안&#32;전&#32;수&#32;칙" Top="258" Visible="FALSE" Width="87"></Button>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="DANGER_JOB_STS_FLAG" Enable="FALSE" Height="18" Id="edt_DangerJobStsFlag" ImeMode="none" Left="1274" MaxLength="2" Number="TRUE" Style="edit" TabOrder="118" Top="8" Visible="FALSE" Width="50"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Multi_Re" Border="Flat" Column="DANGER_JOB_STS_FLAG_NM" Enable="FALSE" Height="18" Id="edt_DangerJobStsFlagNm" ImeMode="none" Left="230" Style="edit" TabOrder="53" Top="57" Width="120"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static39" Left="914" Style="table_indis" TabOrder="119" Text="작업요청시간" Top="55" VAlign="Middle" Width="78" WordWrap="TRUE"></Static>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_RowAdd01" ImageID="btn_add" Left="980" LeftMargin="20" OnClick="btn_RowAdd01_OnClick" Style="button" TabOrder="120" Text="추가" Top="149" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_RowDel01" ImageID="btn_delete" Left="1035" LeftMargin="20" OnClick="btn_RowDel01_OnClick" Style="button" TabOrder="121" Text="삭제" Top="149" Width="50"></Button>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_WorkFirm" ImeMode="none" Left="1328" Style="edit" TabOrder="122" Top="8" Visible="FALSE" Width="110"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_FIRM_CD" Enable="FALSE" Height="18" Id="edt_WorkFirmCd" ImeMode="none" Left="576" Style="edit_Indis" TabOrder="117" Top="282" Width="179"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_FIRM_NM" Enable="FALSE" Height="18" Id="edt_WorkFirmCdNm" ImeMode="none" Left="576" Style="edit_Indis" TabOrder="43" Top="282" Width="208"></Edit>
+		<Edit AutoSelect="TRUE" Border="Flat" Enable="FALSE" Height="18" Id="edtFileList" ImeMode="none" Left="7" Style="edit" TabOrder="123" Top="648" Visible="FALSE" Width="995"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_FileFolder" ImageID="btn_4_fileadd" Left="1004" LeftMargin="21" OnClick="btn_FileFolder_OnClick" Style="button" TabOrder="30" Text="파일첨부&#32;" Top="648" Visible="FALSE" Width="76"></Button>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_WorkFirmCdNm01" ImeMode="none" Left="1440" Style="edit" TabOrder="124" Top="7" Visible="FALSE" Width="110"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="WORK_NUM" Enable="FALSE" Height="18" Id="edt_WorkNum" ImeMode="none" Left="145" Style="edit" TabOrder="125" Top="80" Width="89"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_WorkNumButton" ImageID="search" Left="235" OnClick="btn_WorkNumButton_OnClick" TabOrder="126" Text="Button8" Top="81" Width="17"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static26" Left="54" Style="table_indis" TabOrder="127" Text="공사번호" Top="78" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<MaskEdit BindDataset="ds_Multi_Re" Border="Flat" ClipMode="IncludeSpace" Column="JOB_REQ_STR_TIME" DecimalLen="0" DigitLen="0" Height="18" Id="edt_JobReqStrTime" Left="993" Mask="&#32;##:##&#32;" Style="edit_Indis" TabOrder="3" Top="57" Type="STRING" Width="40"></MaskEdit>
+		<Static Height="13" Id="Static37" Left="1035" Style="static" TabOrder="128" Text="~" Top="61" Width="10"></Static>
+		<MaskEdit BindDataset="ds_Multi_Re" Border="Flat" ClipMode="IncludeSpace" Column="JOB_REQ_END_TIME" DecimalLen="0" DigitLen="0" Height="18" Id="edt_JobReqEndTime" Left="1045" Mask="&#32;##:##&#32;" Style="edit_Indis" TabOrder="4" Top="57" Type="STRING" Width="40"></MaskEdit>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" CodeColumn="CODE" Column="TEAM_CD" DataColumn="KITEM" Height="18" Id="cob_TeamCd" InnerDataset="ds_Team_01" Left="531" Style="combo" TabOrder="1" Top="56" Width="131"></Combo>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static38" Left="491" Style="table_indis" TabOrder="129" Text="팀" Top="55" VAlign="Middle" Width="40" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="ML_PRESS_M_PRESS" Height="18" Id="cob_MlPressMPress" Left="346" Style="combo" TabOrder="7" Top="121" Width="122"></Combo>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="ML_PRESS_L_PRESS" Height="18" Id="cob_MlPressLPress" Left="580" Style="combo" TabOrder="8" Top="121" Width="129"></Combo>
+		<Button Cursor="HAND" Height="17" Id="btn_ScgJoinEmpid" ImageID="search" Left="665" OnClick="btn_ScgJoinEmpid_OnClick" TabOrder="130" Text="Button8" Top="388" Width="17"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static40" Left="54" Style="table" TabOrder="131" Text="위치구분" Top="99" VAlign="Middle" Width="90" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="ROCATION" Height="18" Id="cob_Rocation" Left="144" OnChanged="cob_Rocation_OnChanged" Style="combo" TabOrder="132" Top="100" Width="109"></Combo>
+		<Combo BindDataset="ds_Multi_Re" Border="Flat" Column="RC_TYPE" Height="18" Id="cob_RcType" Left="366" Style="combo_indis" TabOrder="133" Top="480" Width="119"></Combo>
+		<Static Align="Center" Border="Flat" Height="12" Id="Static42" Left="901" Style="table" TabOrder="135" Top="280" VAlign="Middle" Width="185" WordWrap="TRUE"></Static>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_GulChak" ImageID="btn_5_From" Left="907" LeftMargin="21" OnClick="btn_GulChak_OnClick" Style="button" TabOrder="136" Text="굴&#32;착&#32;확&#32;인" Top="258" Visible="FALSE" Width="87"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" EscapeButton="TRUE" Height="19" Id="btn_gis" ImageID="btn_5_gis" Left="854" LeftMargin="21" OnClick="btn_gis_OnClick" Style="button" TabOrder="137" TabStop="FALSE" Text="GIS&#32;위치보기" Top="33" Visible="FALSE" Width="98"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static46" Left="579" Style="table" TabOrder="140" Text="작업위치(신)" Top="99" VAlign="Middle" Width="91" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="ZIP_SEQ" Height="18" Id="edt_Zip_Seq" Left="1275" MaxLength="160" Style="edit" TabOrder="147" Top="32" Visible="FALSE" Width="40"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="ADDR_M" Height="18" Id="edt_Addr_M" Left="1323" MaxLength="160" Style="edit" TabOrder="148" Top="51" Visible="FALSE" Width="40"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="HILL" Height="18" Id="edt_Hill" Left="1323" MaxLength="160" Style="edit" TabOrder="141" Top="32" Visible="FALSE" Width="40"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="ADDR_S" Height="18" Id="edt_Addr_S" Left="1371" MaxLength="160" Style="edit" TabOrder="142" Top="32" Visible="FALSE" Width="40"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="SECOND_ADDR" Height="18" Id="edt_SecondAddr" Left="1419" MaxLength="160" Style="edit" TabOrder="143" Top="32" Visible="FALSE" Width="40"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="BLD_DONG" Height="18" Id="edt_Bld_Ding" Left="1467" MaxLength="160" Style="edit" TabOrder="144" Top="32" Visible="FALSE" Width="40"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="NEW_ADDR_BLD_SEQ" Height="18" Id="edt_New_Addr_Bld_Seq" Left="1515" MaxLength="160" Style="edit" TabOrder="145" Top="32" Visible="FALSE" Width="40"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="NEW_HOSU" Height="18" Id="edt_New_Hosu" Left="1563" MaxLength="160" Style="edit" TabOrder="146" Top="32" Visible="FALSE" Width="40"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_AddrSearch" ImageID="search" Left="1068" OnClick="btn_AddrSearch_OnClick" TabOrder="149" Text="Button8" Top="81" Width="17"></Button>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="NEW_ADDR_UNION" Enable="FALSE" Height="18" Id="edt_Addr_Union" ImeMode="none" Left="671" Readonly="TRUE" Style="edit" TabOrder="151" Top="101" Width="414"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="LOT_NUM_UNION" Enable="FALSE" Height="18" Id="edt_LotNumUnion" ImeMode="none" Left="671" Readonly="TRUE" Style="edit" TabOrder="150" Top="80" Width="396"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="HOSU" Height="18" Id="edt_Hosu" Left="1371" MaxLength="160" Style="edit" TabOrder="152" Top="51" Visible="FALSE" Width="40"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static114" Left="5" Style="table" TabOrder="153" Text="불가사유" Top="500" VAlign="Middle" Width="601" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="ADMIT_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_AdmitYmd" Left="607" OnChanged="cal_AdmitYmd_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="154" Top="481" WeeksFont="Default,-1" Width="117"></Calendar>
+		<Calendar BindDataset="ds_Multi_Re" Border="Flat" Column="DIG_REQ_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_DigReqYmd" Left="248" OnChanged="cal_DigReqYmd_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="155" Top="439" WeeksFont="Default,-1" Width="116"></Calendar>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" CheckLength="Byte" Column="RC_FIRM" Height="18" Id="edt_RcFirm" ImeMode="none" Left="248" MaxLength="30" Style="edit" TabOrder="156" Top="481" Width="116"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static113" Left="5" Style="table" TabOrder="157" Top="521" VAlign="Middle" Width="601" WordWrap="TRUE"></Static>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" CheckLength="Byte" Column="NOT_PERMIT_WHY" Height="18" Id="edt_NotPermitWhy" ImeMode="none" Left="7" MaxLength="30" Style="edit" TabOrder="158" Top="523" Width="597"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" CheckLength="Byte" Column="ETC_RMK" Height="18" Id="edt_EtcRmk" ImeMode="none" Left="607" MaxLength="40" Style="edit" TabOrder="159" Top="523" Width="476"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static55" Left="468" Style="table" TabOrder="161" Top="99" VAlign="Middle" Width="112" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static95" Left="961" Style="table" TabOrder="162" Top="120" VAlign="Middle" Width="126" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static90" Left="684" Style="table" TabOrder="163" Text="외" Top="385" VAlign="Middle" Width="30" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static106" Left="768" Style="table" TabOrder="164" Text="명" Top="385" VAlign="Middle" Width="18" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static83" Left="768" Style="table_indis" TabOrder="165" Text="명" Top="364" VAlign="Middle" Width="18" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static117" Left="684" Style="table_indis" TabOrder="166" Text="외" Top="364" VAlign="Middle" Width="30" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static118" Left="572" Style="table" TabOrder="167" Text="용접/융착공" Top="364" VAlign="Middle" Width="113" WordWrap="TRUE"></Static>
+		<MaskEdit BindDataset="ds_Multi_Re" Border="Flat" Column="DIR_RC_AMT" Height="18" Id="cob_DirRcAmt" Left="487" MaxLength="15" OnCharChanged="cob_DirRcAmt_OnCharChanged" Style="edit_Indis" TabOrder="170" Top="439" Value="MaskEdit0" Width="117"></MaskEdit>
+		<MaskEdit BindDataset="ds_Multi_Re" Border="Flat" Column="IND_RC_AMT" Height="18" Id="edt_IndRcAmt" Left="607" MaxLength="15" OnCharChanged="edt_IndRcAmt_OnCharChanged" Style="edit_Indis" TabOrder="171" Top="439" Value="MaskEdit0" Width="117"></MaskEdit>
+		<MaskEdit BindDataset="ds_Multi_Re" Border="Flat" Column="LICENSE_TAX" Height="18" Id="edt_LicenseTax" Left="727" MaxLength="9" OnCharChanged="edt_LicenseTax_OnCharChanged" Style="edit_Indis" TabOrder="172" Top="439" Value="MaskEdit0" Width="117"></MaskEdit>
+		<MaskEdit BindDataset="ds_Multi_Re" Border="Flat" Column="LEASE_AMT" Height="18" Id="edt_LeaseAmt" Left="847" MaxLength="9" OnCharChanged="edt_LeaseAmt_OnCharChanged" Style="edit_Indis" TabOrder="173" Top="439" Value="MaskEdit0" Width="116"></MaskEdit>
+		<MaskEdit BindDataset="ds_Multi_Re" Border="Flat" Column="TOTAL_SUM" Enable="FALSE" Height="18" Id="edt_Sum" Left="966" OnCharChanged="edt_Sum_OnCharChanged" Style="edit" TabOrder="174" Top="439" Value="MaskEdit0" Width="117"></MaskEdit>
+		<MaskEdit BindDataset="ds_Multi_Re" Border="Flat" Column="LENG" Height="18" Id="edt_Leng" Left="129" MaxLength="10" Style="edit_Indis" TabOrder="175" Top="439" Width="116"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="NEED_PERS" Height="18" Id="edt_NeedPers" Left="715" MaxLength="2" OnCharChanged="edt_IndRcAmt_OnCharChanged" Style="edit_Indis" TabOrder="176" Top="366" Value="MaskEdit0" Width="52"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="SCG_JOIN_PERS" Height="18" Id="edt_ScgJoinPers" Left="715" MaxLength="3" OnCharChanged="edt_IndRcAmt_OnCharChanged" Style="edit_Indis" TabOrder="177" Top="387" Value="MaskEdit0" Width="52"></MaskEdit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_ChangeFlag" ImageID="btn_10" Left="822" LeftMargin="21" OnClick="btn_ChangeFlag_OnClick" Style="button" TabOrder="178" Text="위험작업&#32;요청내용변경" Top="149" Visible="FALSE" Width="153"></Button>
+		<Shape BKColor="#6cbae1" Bottom="174" Height="3" Id="Shape5" Left="5" LineWidth="0" Right="1087" TabOrder="179" Top="171" Type="Rectangle" Width="1082"></Shape>
+		<Static Height="13" Id="Static54" Left="81" Style="static" TabOrder="160" Text="※&#32;배관도면,&#32;복구비&#32;납부&#32;영수증&#32;사본,&#32;도로굴착복구비&#32;승인서&#32;사본,&#32;지적도,&#32;토지대장" Top="629" Visible="FALSE" Width="759"></Static>
+		<Edit Align="CENTER" AutoSelect="TRUE" BindDataset="ds_Multi_Re" Border="Flat" Column="SCG_JOIN_EMPID" Enable="FALSE" Height="18" Id="edt_ScgJoinEmpid" ImeMode="none" Left="440" MaxLength="9" Style="edit" TabOrder="181" Top="387" Width="67"></Edit>
+		<Static Align="Center" Border="Flat" Height="43" Id="Static3" Left="845" Style="table_indis" TabOrder="184" Top="458" VAlign="Middle" Width="240" WordWrap="TRUE"></Static>
+		<Div DisableBKColor="white" Height="29" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="185" Text="Div0" Url="globals::ComButton.xml" Visible="FALSE" Width="1081">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1501010011F.xml
+* Form 설명  : 위험작업 요청_등록 가정관
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정대권 
+* 작성일     : 2008-01-16
+* 변경내용   : - 2009-09-07 황재혁
+               1. 화면조회시 선택된 로우 보여주기.
+               2. 정비보수번호 SQL변경 
+               3. 필수컬럼체크 정리
+               4. 화면 권한 정리
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+#include "js::COMMONA10008.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+var fv_FindRow_ShowRow = -1; 		  // 조회후 보여줄 컬럼 체크변수
+var fv_FindRow_ShowKey = -1;          // KEY값
+
+var danger_num = "";							//위험작업번호
+var danger_Value = "";
+var danger_job_sts_flag = "";					//위험작업상태값 구분
+var danger_job_flag = "";						//위험작업구분	
+
+var StopNum = "";
+var StopFalg = "";
+
+var fv_COM_ID = "";
+var fv_COOP_YN = false;  // 협력사여부
+
+var fv_emp_id = "";
+var fv_emp_nm = "";
+
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1501010012U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	
+	fv_emp_id = gfn_GetGlobalValue("G_USER_NO");
+	fv_emp_nm = gfn_GetGlobalValue("G_NAME");
+
+	fv_COM_ID = gfn_GetGlobalValue("G_COM_ID");
+	if(fv_COM_ID == "92") // 시공사-협력사 여부
+	{
+		fv_COOP_YN = true;
+	}	
+	edt_DangerNum.Text = "";
+	edt_DangerJobStsFlagNm.Text = "";
+	btn_DangerWork.Enable = false;
+	Btn_Danger_Req.Enable = false;
+	btn_RowAdd01.Enable = false;
+	btn_RowDel01.Enable = false;
+	btn_Safety.Enable = false;
+	
+	
+	btn_GulChak.Enable = false;
+	btn_ScgJoinEmpid.Enable = false;
+	//fn_D10_Common7();
+	
+	btn_gis.Enable = false;
+	
+	fn_CommonAddRow();
+	danger_Value = DANGER_FLAG;		// 중폐지 관리번호 
+}
+
+function fn_Init()
+{
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd01"));				//지사코드
+	//gfn_SetComboBox_Comcode("B30007",gfn_setDsObject_Comcode("cob_MlPressMPress")); 		//관경코드(중압)
+	gfn_D1_NULL_SetComboBox_Comcode("B30007",gfn_setDsObject_Comcode("cob_MlPressMPress"));
+	//gfn_SetComboBox_Comcode("B30007",gfn_setDsObject_Comcode("cob_MlPressLPress")); 		//관경코드(저압)
+	gfn_D1_NULL_SetComboBox_Comcode("B30007",gfn_setDsObject_Comcode("cob_MlPressLPress"));
+	
+	gfn_SetComboBox_Comcode("D10034",gfn_setDsObject_Comcode("cob_PressFlag")); 			//압력구분
+	//gfn_SetComboBox_Comcode("D10228",gfn_setDsObject_Comcode("cob_Rocation")); 				//위치구분
+	gfn_D1_NULL_SetComboBox_Comcode("D10228",gfn_setDsObject_Comcode("cob_Rocation"));
+	gfn_SetComboBox_Comcode("B20022",gfn_setDsObject_Comcode("cob_RcType")); 				//복구형태
+	gfn_SetComboBox_Comcode("D10225",gfn_setDsObject_Comcode("cob_MidPressCrossYn")); 		//중저압병행
+	gfn_D1_SetComboBox_Comcode("A10110",gfn_setDsObject_Comcode("cob_WorkFirmTelDdd"),"010#011#016#017#018#019"); 	//식별번호(시공회사전화)
+	gfn_D1_SetComboBox_Comcode("A10110",gfn_setDsObject_Comcode("cob_WorkManagerTelDdd"),"0130#02#031#032#033#041#042#043#0502#0505#051#052#053#054#055#061#062#063#064");  //식별번호(시공관리지전화)
+	gfn_D1_SetComboBox_Comcode("A10110",gfn_setDsObject_Comcode("cob_SiteChiefTelDdd"),"0130#02#031#032#033#041#042#043#0502#0505#051#052#053#054#055#061#062#063#064");    //식별번호(현장소장전화)
+	gfn_SetComboBox_Comcode("B20041",gfn_setDsObject_Comcode("cob_PavementKind")); 			//포장종류
+	edt_WorkFirmCdNm01.Text = gfn_GetGlobalValue("G_COM_NAME");	
+	}
+}
+
+//--------------------------------------------------------------------------------------------------
+//	서비스 CallBack
+//--------------------------------------------------------------------------------------------------
+function fn_D1_CallBack(SrvID,ErrorCode,ErrorMsg)
+{
+
+	if(ErrorCode < 0) {
+	
+		alert(ErrorMsg);
+		//에러시 초기화
+		fv_FindRow_ShowRow = -1;
+		return;
+	}
+	
+    switch(SrvID){
+
+		//상세 조회
+        case "findDetail":
+        
+			gfn_D1_SetComboBox_Teamcd01("ds_Team_01",cob_BranchCd01);        
+			cob_MidPressCrossYn_OnChanged(); // 중저압병행
+	        
+			edt_Sum.Value = ParseInt(cob_DirRcAmt.Value)+ParseInt(edt_IndRcAmt.Value)+ParseInt(edt_LicenseTax.Value)+ParseInt(edt_LeaseAmt.Value);	        
+	        
+			ds_DangerEqup.SetColumn(0,"EA1",ds_DangerEqup02.GetColumn(0,"EQUIP_QTY")); 
+			ds_DangerEqup.SetColumn(0,"EA2",ds_DangerEqup02.GetColumn(1,"EQUIP_QTY")); 
+			ds_DangerEqup.SetColumn(1,"EA1",ds_DangerEqup02.GetColumn(2,"EQUIP_QTY")); 
+			ds_DangerEqup.SetColumn(1,"EA2",ds_DangerEqup02.GetColumn(3,"EQUIP_QTY")); 
+			ds_DangerEqup.SetColumn(2,"EA1",ds_DangerEqup02.GetColumn(4,"EQUIP_QTY")); 
+			ds_DangerEqup.SetColumn(2,"EA2",ds_DangerEqup02.GetColumn(5,"EQUIP_QTY")); 
+			ds_DangerEqup.SetColumn(3,"EA1",ds_DangerEqup02.GetColumn(6,"EQUIP_QTY")); 
+			ds_DangerEqup.SetColumn(3,"EA2",ds_DangerEqup02.GetColumn(7,"EQUIP_QTY")); 	
+			ds_DangerEqup.SetColumn(4,"EA1",ds_DangerEqup02.GetColumn(8,"EQUIP_QTY")); 
+			ds_DangerEqup.SetColumn(4,"EA2",ds_DangerEqup02.GetColumn(9,"EQUIP_QTY")); 	
+	
+			fn_D1_OnRowPosChanged();
+        
+        
+			// 로우선택하기
+			if(fv_FindRow_ShowRow > 0)
+			{
+				var nFocusRow = ds_Multi.FindRow("DANGER_NUM",fv_FindRow_ShowKey);
+				if (nFocusRow != -1)
+				{
+					ds_Multi.row = nFocusRow;
+				}	
+				fv_FindRow_ShowRow = -1;
+			}
+        	break;	
+
+        default:
+
+    }
+}
+
+
+
+//---------------------------------------------------------------------------------------------------
+// 기      능   :  공통 저장 (2009.01.17 현재 검토(접수/반려) 부분까지 ==> 결재후 승인/반려 SELECT 
+//---------------------------------------------------------------------------------------------------
+function fn_CommonSave()
+{	
+//	danger_job_sts_flag = edt_DangerJobStsFlag.Text;
+
+
+// 위험작업 요청전	00
+// 위험작업 요청	01
+// 반려	            02
+// 변경요청	        03
+// 승인         	04
+// 결재반려	        05
+// 변경요청반려	    06
+// 결재승인	        07
+// 변경요청승인	    08	
+
+	// if( fv_COOP_YN ) // 협력사이면 수정가능
+	// {
+		// if(danger_job_sts_flag == "00" || danger_job_sts_flag == "02")
+		// {
+		// }
+		// else
+		// {
+			// alert("[시공사] 저장할 수 없습니다. 수정가능한 진행상태까지 기다려 주십시오.");
+			// return;
+		// }
+
+	// }
+	// else // SCG
+	// {
+		// if(danger_job_sts_flag == "01" || danger_job_sts_flag == "05" ||  danger_job_sts_flag == "07"  || danger_job_sts_flag == "08")
+		// {
+		// }
+		// else
+		// {		
+			// alert("[SCG] 저장할 수 없습니다. 수정가능한 진행상태까지 기다려 주십시오. \n- <<  >>");		
+			// return;
+		// }
+		
+	// }	
+
+	// if(danger_job_sts_flag == "00" || danger_job_sts_flag == "02") // 요청전(00), 반려(02)
+	// {
+		// var chk01 = fn_D11_Validation01();
+		// if(chk01 == "1")
+		// {
+			// return;
+		// }
+		// else
+		// {
+			fn_D10_Save1();  //위험작업 작업내용	
+		// }
+		
+	// }
+}
+//-------------------------------------------------------------------------------
+// 기      능   :  공통 추가
+//-------------------------------------------------------------------------------
+function fn_CommonAddRow()
+{ 
+	// if(!fv_COOP_YN)
+	// {
+		// alert(" 시공사만 등록 가능합니다.");
+		// return;
+	// }
+	
+	fn_D10_Common7();
+	
+	btn_DangerWork.Enable = true;
+	Btn_Danger_Req.Enable = false;
+	btn_RowAdd01.Enable = true;
+	btn_RowDel01.Enable = true;
+	btn_Safety.Enable = true;	
+			
+	btn_ScgJoinEmpid.Enable = true;
+	cob_TeamCd.Enable = false;
+	btn_gis.Enable = false;
+	
+	fn_D10_Common8();
+	edt_Zip1.Text = "";
+	edt_Zip2.Text = "";
+	edt_LotNumUnion.Text = "";		
+
+	ds_Multi_Re.ClearData();
+	ds_Multi_Re.AddRow();
+	
+	if(gfn_GetGlobalValue("G_COM_ID") == "10"){
+		edt_WorkFirmCd.Text = "";
+		edt_WorkFirmCdNm.Text = "";
+	}else{
+		edt_WorkFirmCd.Text = gfn_GetGlobalValue("G_COM_ID");		  
+		edt_WorkFirmCdNm.Text = gfn_GetGlobalValue("G_COM_NAME"); 
+	}
+
+	edt_DangerNum.Text = "";  					// 새로 등록할 위험작업번호 보여주기
+	edt_DangerJobStsFlag.Text = "00";
+	edt_DangerJobStsFlagNm.Text = "위험작업요청전";	
+
+	ds_DangerEqup02.ClearData();
+	ds_DangerJob.ClearData();
+	
+	grd_DangerJob.SetCellProp("body",1,"Edit","mask");
+	grd_DangerJob.SetCellProp("body",3,"Edit","mask");
+	grd_DangerJob.SetCellProp("body",4,"Edit","combo");
+	// grd_DangerJob.SetCellProp("body",6,"Edit","none");
+	// grd_DangerJob.SetCellProp("body",8,"Edit","none");
+	// grd_DangerJob.SetCellProp("body",9,"Edit","none");
+	// grd_DangerJob.SetCellProp("body",10,"Edit","none");	
+
+	edtFileList.Text = "";						// 첨부파일 초기화 
+	edt_Sum.Text = "";							// 합계 초기화 
+	ds_Review.ClearData();
+	ds_ReqChange.ClearData();
+	ds_DecideReq.ClearData();
+	
+	cob_MidPressCrossYn.Value = "20";
+	cob_MidPressCrossYn_OnChanged();  // 중저압병행
+}
+//-------------------------------------------------------------------------------
+// 기      능   :  시공사 등록
+//-------------------------------------------------------------------------------
+function fn_D10_Save1()
+{	
+
+	if(ds_Multi_Re.GetRowType(0) == "insert")
+	{
+		//위험작업번호 max 값 불러오기	
+		fn_max();
+		var strMax = ds_Max.GetColumn(0, "MAX");
+		ds_Multi_Re.SetColumn(0,"DANGER_NUM",strMax);
+	}
+	
+	danger_num = ds_Multi_Re.GetColumn(0,"DANGER_NUM");
+		
+	ds_Multi_Re.SetColumn(0,"DANGER_JOB_STS_FLAG",edt_DangerJobStsFlag.Text);
+	
+	ds_Multi_Re.SetColumn(0,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_Multi_Re.SetColumn(0,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+	ds_Multi_Re.SetColumn(0,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+	ds_Multi_Re.SetColumn(0,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+		
+	ds_Multi_Re.SetColumn(0,"DANGER_JOB_FLAG","20");
+	
+	// 2. 작업계획
+	for(var i=0; i<ds_DangerJob.RowCount(); i++)
+	{	
+		ds_DangerJob.SetColumn(i,"DANGER_JOB_FLAG","20");
+		
+		// 추가된 로우 셋팅
+		if (ds_DangerJob.GetRowType(i) == "insert") {
+
+			ds_DangerJob.SetColumn(i, "DANGER_NUM",  danger_num);
+			ds_DangerJob.SetColumn(i, "CRT_EMPID",   gfn_GetGlobalValue("G_USER_NO"));
+			ds_DangerJob.SetColumn(i, "CRT_IP",      gfn_GetLocalIpAddress()); 
+			ds_DangerJob.SetColumn(i, "UPD_EMPID",   gfn_GetGlobalValue("G_USER_NO"));	
+			ds_DangerJob.SetColumn(i, "UPD_IP",      gfn_GetLocalIpAddress()); 
+		}
+		
+		// 수정된 로우 셋팅
+		if (ds_DangerJob.GetRowType(i) == "update") {
+
+			ds_DangerJob.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_DangerJob.SetColumn(i, "UPD_IP",    gfn_GetLocalIpAddress());
+		
+		}	// update end	
+
+	}
+	
+	fn_D10_DangerEqup(); //안전장비(값 넘겨주기)
+	
+	// 3. 안전장비
+	for(var i=0; i<ds_DangerEqup01.RowCount(); i++)
+	{
+		if(ds_DangerEqup02.GetColumn(i,"EQUIP_QTY") == "" ||ds_DangerEqup02.GetColumn(i,"EQUIP_QTY") == null){
+			ds_DangerEqup02.SetRowType(i,"insert");
+			ds_DangerEqup02.AddRow();
+		}else{
+			ds_DangerEqup02.SetRowType(i,"update");
+		}	
+		ds_DangerEqup02.SetColumn(i,"EQUIP_QTY",ds_DangerEqup01.GetColumn(i,"EQUIP_QTY"));
+		ds_DangerEqup02.SetColumn(i,"EQUIP_CD",ds_DangerEqup01.GetColumn(i,"EQUIP_CD"));
+			
+		if(ds_DangerEqup02.GetRowType(i) == "insert"){  
+				ds_DangerEqup02.SetColumn(i,"DANGER_NUM",danger_num);
+		}			
+		ds_DangerEqup02.SetColumn(i,"DANGER_JOB_FLAG","20");
+		ds_DangerEqup02.SetColumn(i,"EQUIP_USER_FLAG","01");
+		ds_DangerEqup02.SetColumn(i,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS"));	
+		ds_DangerEqup02.SetColumn(i,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));	
+		ds_DangerEqup02.SetColumn(i,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));	
+		ds_DangerEqup02.SetColumn(i,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));	
+	}
+	
+	fv_FindRow_ShowRow = 1;
+	fv_FindRow_ShowKey = danger_num; //위험작업번호
+
+	var strSvcID = "fn_D10_Save1";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";
+	var strInDatasets  = "ds_Multi_Re=ds_Multi_Re:u ds_DangerJob=ds_DangerJob:u ds_DangerEqup02=ds_DangerEqup02:u";
+	var strOutDatasets  = "";
+	var strArgument  = "save1=1";	
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+		fn_CommonSearch();	
+	}				  
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_max()
+//   설명: Insert 하기전 정비보수번호 자동부여
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_max()
+{
+	var strSvcID = "findMax";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Max=ds_Max";
+	var strArgument  = "max=1";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+function fn_D10_DangerEqup()
+{	
+	ds_DangerEqup01.SetColumn(0,"EQUIP_QTY",Grid2.GetCellValue(0,1));
+	ds_DangerEqup01.SetColumn(1,"EQUIP_QTY",Grid2.GetCellValue(0,3));
+	ds_DangerEqup01.SetColumn(2,"EQUIP_QTY",Grid2.GetCellValue(1,1));
+	ds_DangerEqup01.SetColumn(3,"EQUIP_QTY",Grid2.GetCellValue(1,3));
+	ds_DangerEqup01.SetColumn(4,"EQUIP_QTY",Grid2.GetCellValue(2,1));
+	ds_DangerEqup01.SetColumn(5,"EQUIP_QTY",Grid2.GetCellValue(2,3));
+	ds_DangerEqup01.SetColumn(6,"EQUIP_QTY",Grid2.GetCellValue(3,1));
+	ds_DangerEqup01.SetColumn(7,"EQUIP_QTY",Grid2.GetCellValue(3,3));	
+	ds_DangerEqup01.SetColumn(8,"EQUIP_QTY",Grid2.GetCellValue(4,1));
+	ds_DangerEqup01.SetColumn(9,"EQUIP_QTY",Grid2.GetCellValue(4,3));	
+}
+
+//--------------------------------------------------------------------------------------------------
+//	scg- 저장
+//--------------------------------------------------------------------------------------------------
+function fn_D10_Save2()
+{	
+	
+	if( ! ds_DangerJob.GetUpdate() )
+	{
+		//변경된 내용이 없습니다.
+		alert(gfn_GetMessage("M000008", "%AAA%", "변경된 내용이"));		
+		return;
+	}
+		
+	danger_num = ds_Multi_Re.GetColumn(0,"DANGER_NUM");
+		
+	// 2. 작업계획
+	for(var i=0; i<ds_DangerJob.RowCount(); i++)
+	{	
+		ds_DangerJob.SetColumn(i,"DANGER_JOB_FLAG","20");
+		
+		// 추가된 로우 셋팅
+		if (ds_DangerJob.GetRowType(i) == "insert") {
+
+			ds_DangerJob.SetColumn(i, "DANGER_NUM",  danger_num);
+			ds_DangerJob.SetColumn(i, "CRT_EMPID",   gfn_GetGlobalValue("G_USER_NO"));
+			ds_DangerJob.SetColumn(i, "CRT_IP",      gfn_GetLocalIpAddress()); 
+			ds_DangerJob.SetColumn(i, "UPD_EMPID",   gfn_GetGlobalValue("G_USER_NO"));	
+			ds_DangerJob.SetColumn(i, "UPD_IP",      gfn_GetLocalIpAddress()); 
+		}
+		
+		// 수정된 로우 셋팅
+		if (ds_DangerJob.GetRowType(i) == "update") {
+
+			ds_DangerJob.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_DangerJob.SetColumn(i, "UPD_IP",    gfn_GetLocalIpAddress());
+		
+		}	// update end	
+
+	}
+	
+	fv_FindRow_ShowRow = 1;
+	fv_FindRow_ShowKey = danger_num; //위험작업번호
+
+	var strSvcID = "fn_D10_Save2";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";
+	var strInDatasets  = "ds_DangerJob=ds_DangerJob:u";
+	var strOutDatasets  = "";
+	var strArgument  = "save2=1";	
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+		fn_CommonSearch();	
+	}				  
+}
+
+/*===============================================================================
+ * 기      능   :  지사내의 팀장조회
+===============================================================================*/
+function fn_D1_SearchDetailTeamUserList()	
+{	
+	var strSvcID = "fn_D1_SearchDetailTeamUserList";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi_User=ds_Multi_User";
+	var strArgument  = "user=1";
+	    strArgument += " BRANCH_CD=" +quote(cob_BranchCd01.Value);
+	    
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+//-------------------------------------------------------------------------------
+// 기      능   :  파일첨부 조회
+//-------------------------------------------------------------------------------
+function fn_File_List()
+{	
+
+	ds_FileList.ClearData();
+	
+	var strWORK_FLAG = "10";	
+	
+	var strSvcID = "findFile";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";  
+	var strInDatasets  = "";
+	var strOutDatasets = "ds_FileList=ds_FileList";
+	var strArgument    = "findFile=1";
+	    strArgument   += " DANGER_NUM=" + quote(danger_num);
+		strArgument	  += " DANGER_JOB_FLAG=" +quote(danger_job_flag);
+		strArgument	  += " WORK_FLAG=" + quote(strWORK_FLAG);
+			
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	edtFileList.text = "";
+	for(var i=0; i<ds_FileList.RowCount(); i++)
+	{
+		edtFileList.text += ds_FileList.GetColumn(i,"ORG_FILE_NAME");
+		if(ds_FileList.RowCount()-1 != i) edtFileList.text += "/";
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 기      능   :  위험작업 요청(버튼 클릭시 상태값 강제 01) 변경
+//-------------------------------------------------------------------------------
+function Btn_Danger_Req_OnClick(obj)
+{   
+	danger_job_str_flag = ds_Multi_Re.GetColumn(0,"DANGER_JOB_STS_FLAG");
+
+	if(danger_job_str_flag == "00" || danger_job_str_flag == "02" )
+	{	
+		if(Confirm("위험작업 요청을 하시겠습니까? ") == true)
+		{
+			ds_Multi_Re.UpdateControl = false;
+			ds_Multi_Re.SetRowType(0,"update");
+			
+			ds_Multi_Re.SetColumn(0,"DANGER_JOB_STS_FLAG","01");
+			ds_Multi_Re.SetColumn(0,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));   
+			ds_Multi_Re.SetColumn(0,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));   
+			ds_Multi_Re.SetColumn(0,"DANGER_NUM",danger_num);  
+			ds_Multi_Re.SetColumn(0,"DANGER_JOB_FLAG","20");
+				
+			fv_FindRow_ShowRow = 1;
+			fv_FindRow_ShowKey = ds_Multi_Re.GetColumn(0,"DANGER_NUM"); //위험작업번호
+			
+			var strSvcID = "Btn_Danger_Req_OnClick";
+			var strPart = "D10";
+			var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";
+			var strInDatasets  = "ds_Multi_Re=ds_Multi_Re:u";
+			var strOutDatasets  = "";
+			var strArgument  = "updateflag=1";
+			
+			gfn_SyncCall(
+							 strSvcID
+						   , strPart
+						   , strURL
+						   , strInDatasets
+						   , strOutDatasets
+						   , strArgument
+						  );
+						  
+			fn_D10_BpmSearchStr();						//BPM 신청
+			
+			if(ErrorCode < 0)
+			{    
+				alert(ErrorMsg);
+				return;
+			}else{
+				gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+				fn_CommonSearch();	
+			}		
+		}
+	}else{
+		alert("이미 위험작업 요청을 하였습니다.");
+		return;
+	}
+}
+
+//--------------------------------------------------------------------------------------------
+//   신청(등록)후 BPM 값 보내기 
+//--------------------------------------------------------------------------------------------
+function fn_D10_BpmSearchStr()
+{
+	ds_sKeyUp.ClearData();
+	ds_sKeyUp.AddRow();
+	//ds_sKeyUp.SetColumn(0,"userId","920090001");										//사용자아이디
+	ds_sKeyUp.SetColumn(0,"userId",gfn_GetGlobalValue("G_USER_NO"));					//사용자아이디
+	ds_sKeyUp.SetColumn(0,"processDefName","SS_DW");									//SS_DW
+	ds_sKeyUp.SetColumn(0,"dangerNumPK",ds_Multi_Re.GetColumn(0,"DANGER_NUM"));			//위험작업번호
+	ds_sKeyUp.SetColumn(0,"dangerJobFlag",ds_Multi_Re.GetColumn(0,"DANGER_JOB_FLAG"));  //공사구분
+	ds_sKeyUp.SetColumn(0,"branchCode",ds_Multi_Re.GetColumn(0,"BRANCH_CD"));			//지사코드
+	
+	ds_sKeyUp.SetColumn(0,"branchNm",ds_Multi_Re.GetColumn(0,"BRANCH_CD_NM"));			//지사코드명   			(03.16.월)추가
+	
+	//ds_sKeyUp.SetColumn(0,"teamCode",ds_Multi_Re.GetColumn(0,"TEAM_CD"));				//팀코드   				(03.16.월)추가
+	ds_sKeyUp.SetColumn(0,"teamCode",gfn_GetGlobalValue("G_DEPT_CODE"));				//팀코드
+	
+	//ds_sKeyUp.SetColumn(0,"teamNm",ds_Multi_Re.GetColumn(0,"TEAM_CD_NM"));			//팀코드명   			(03.16.월)추가
+	ds_sKeyUp.SetColumn(0,"teamNm",gfn_GetGlobalValue("G_DEPT_NAME"));					//팀코드명   			(03.16.월)추가
+	
+	ds_sKeyUp.SetColumn(0,"workFirmUserId","920090001");								//접수담당자(시공사)ID
+	ds_sKeyUp.SetColumn(0,"scUserId","199643547");										//영업공사담당자ID
+	ds_sKeyUp.SetColumn(0,"csUserId","198540269");										//고객지원담당자ID
+	ds_sKeyUp.SetColumn(0,"zipNo2",ds_Multi_Re.GetColumn(0,"ZIP_NO2"));					//지역명(동)
+	ds_sKeyUp.SetColumn(0,"jobNm",ds_Multi_Re.GetColumn(0,"JOB_NM1"));					//공사명
+	ds_sKeyUp.SetColumn(0,"dealNm",ds_Multi_Re.GetColumn(0,"WORK_FIRM_NM"));			//시공사명
+	ds_sKeyUp.SetColumn(0,"workNumPK",ds_Multi_Re.GetColumn(0,"WORK_NUM"));				//공사번호
+	ds_sKeyUp.SetColumn(0,"interfacetype","Type3");
+	
+	// 검색 문자열을 생성한다 
+	var strSvcID = "fn_D10_BpmSearchStr";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service&findBpmUp=1";
+	var strInDatasets  = "ds_sKeyUp=ds_sKeyUp";
+	var strOutDatasets  = "";
+		strOutDatasets  = "";
+	var strArgument  = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+
+//-------------------------------------------------------------------------------------------------------
+//	  기 능 : 위험작업 요청전으로 되돌리기 
+//-------------------------------------------------------------------------------------------------------
+function btn_ChangeFlag_OnClick(obj)
+{
+	if(confirm("시공사의 위험작업 요청내용을 수정 가능하도록 하시겠습니까? "))
+	{
+		ds_Multi_Re.UpdateControl = false;
+		ds_Multi_Re.SetRowType(0,"update");
+	
+		ds_Multi_Re.SetColumn(0,"DANGER_JOB_STS_FLAG","00");	
+		ds_Multi_Re.SetColumn(0,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_Multi_Re.SetColumn(0,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));     
+		ds_Multi_Re.SetColumn(0,"DANGER_NUM",danger_num);
+		ds_Multi_Re.SetColumn(0,"DANGER_JOB_FLAG","20");
+			
+		fv_FindRow_ShowRow = 1;
+		fv_FindRow_ShowKey = ds_Multi_Re.GetColumn(0,"DANGER_NUM"); //위험작업번호
+		
+		var strSvcID = "updateflag";
+		var strPart = "D10";
+		var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";
+		var strInDatasets  = "ds_Multi_Re=ds_Multi_Re:u";
+		var strOutDatasets  = "";
+		var strArgument  = "updateflag=1";
+		
+		gfn_SyncCall(
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+					  );
+					  
+		if(ErrorCode < 0)
+		{    
+			return;
+		}else{
+			gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+			fn_CommonSearch();
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 기      능   :  접수,검토시 업데이트 (검토시 04, 반려시 02)
+//-------------------------------------------------------------------------------
+function fn_update2()
+{   
+	danger_num = ds_Multi_Re.GetColumn(0,"DANGER_NUM");	
+	
+	ds_Review.UpdateControl = false;
+	ds_Review.SetRowType(0,"update");
+	
+	if(chk_Change2.Value == 1 && chk_Change3.Value == 0){	
+		ds_Review.SetColumn(0,"DANGER_JOB_STS_FLAG","04");
+		ds_Review.SetColumn(0,"REVIEW_FLAG","Y");
+	}else if(chk_Change2.Value == 0 && chk_Change3.Value == 1){
+		ds_Review.SetColumn(0,"DANGER_JOB_STS_FLAG","02");
+		ds_Review.SetColumn(0,"REVIEW_FLAG","N");
+	}
+	ds_Review.SetColumn(0,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));   
+	ds_Review.SetColumn(0,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));  
+	ds_Review.SetColumn(0,"DANGER_NUM",danger_num); 
+	ds_Review.SetColumn(0,"DANGER_JOB_FLAG","20");
+		
+	fv_FindRow_ShowRow = 1;
+	fv_FindRow_ShowKey = danger_num; //위험작업번호	
+	
+	var strSvcID = "update2";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";
+	var strInDatasets  = "ds_Review=ds_Review:u";
+	var strOutDatasets  = "";
+	var strArgument  = "update2=1";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+				  
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}else{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+		fn_CommonSearch();	
+	}				  
+}
+
+/********************************************************************************
+* 기      능   :  작업계획(위험작업내용(SCG) INSERT & UPDATE)
+********************************************************************************/
+function fn_D10_Save4()
+{
+	for(var i=0; i<ds_DangerJob.RowCount(); i++)
+	{
+		if(ds_DangerJob.GetRowType(i) == "insert"){
+			ds_DangerJob.SetColumn(i,"DANGER_NUM",danger_num);
+		}		
+		ds_DangerJob.SetColumn(i,"DANGER_JOB_FLAG","20");
+		ds_DangerJob.SetColumn(i,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS"));	//gfn_GetGlobalValue("G_IPADDRESS")); 
+		ds_DangerJob.SetColumn(i,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));		//gfn_GetGlobalValue("G_USER_NO"));
+		ds_DangerJob.SetColumn(i,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));	//gfn_GetGlobalValue("G_IPADDRESS")); 
+		ds_DangerJob.SetColumn(i,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));		//gfn_GetGlobalValue("G_USER_NO"));0	
+	}
+	
+	var strSvcID = "fn_D10_Save4";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";
+	var strInDatasets  = "ds_DangerJob=ds_DangerJob:u";
+	var strOutDatasets  = "";
+	var strArgument  = "save2=1";	
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+	}				  
+}
+
+//-------------------------------------------------------------------------------
+// 기      능   :  변경 승인 요청시 업데이트 (상태값 03 변경)
+//-------------------------------------------------------------------------------
+function fn_D10_ReqChange()
+{
+	ds_ReqChange.UpdateControl = false;
+	ds_ReqChange.SetRowType(0,"update");
+	
+	ds_ReqChange.SetColumn(0,"DANGER_JOB_STS_FLAG","03");
+	ds_ReqChange.SetColumn(0,"CHG_APPRO_REQ_FLAG","Y"); // 변경 체크 할경우 Y 값 강제 넣기
+	ds_ReqChange.SetColumn(0,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_ReqChange.SetColumn(0,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+	ds_ReqChange.SetColumn(0,"DANGER_NUM",danger_num);  
+	ds_ReqChange.SetColumn(0,"DANGER_JOB_FLAG","20");
+	
+	var strSvcID = "update2";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";
+	var strInDatasets  = "ds_ReqChange=ds_ReqChange:u";
+	var strOutDatasets  = "";
+	var strArgument  = "update2=1";	
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+				  
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+	}
+}
+//---------------------------------------------------------------------------------------------------------------------------5월 15일---------------
+// 함수명   : fn_updateResult()
+// 설명     : 결재완료시 결과등록
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function fn_updateResult()
+{   
+
+	danger_num = ds_Multi_Re.GetColumn(0,"DANGER_NUM");	
+	
+	ds_Multi_Re1.UpdateControl = false;
+	ds_Multi_Re1.SetRowType(0,"update");
+	
+	ds_Multi_Re1.SetColumn(0,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_Multi_Re1.SetColumn(0,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+	ds_Multi_Re1.SetColumn(0,"DANGER_NUM",danger_num);
+	ds_Multi_Re1.SetColumn(0,"DANGER_JOB_FLAG","20");
+		
+	fv_FindRow_ShowRow = 1;
+	fv_FindRow_ShowKey = danger_num; //위험작업번호	
+			
+	var strSvcID = "updateResult";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";
+	var strInDatasets  = "ds_Multi_Re1=ds_Multi_Re1:u";
+	var strOutDatasets  = "";
+	var strArgument  = "updateResult=1";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}else{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+		fn_CommonSearch();
+	}				  
+}
+
+/********************************************************************************
+* 기      능   :  승인 (반려06 승인시08) 등록 
+********************************************************************************/
+function fn_update4()
+{
+	ds_DecideReqConf.UpdateControl = false;
+	ds_DecideReqConf.SetRowType(0,"update");
+
+	if((chk_Change6.Value == 1 && chk_Change7.Value == 0)){
+		ds_DecideReqConf.SetColumn(0,"DANGER_JOB_STS_FLAG","08");
+		ds_DecideReqConf.SetColumn(0,"CHG_APPRO_REQ_CONF_FLAG","Y");
+	}else if(chk_Change6.Value == 0 && chk_Change7.Value == 1){
+		ds_DecideReqConf.SetColumn(0,"DANGER_JOB_STS_FLAG","06");
+		ds_DecideReqConf.SetColumn(0,"CHG_APPRO_REQ_CONF_FLAG","N");
+	}
+	ds_DecideReqConf.SetColumn(0,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+	ds_DecideReqConf.SetColumn(0,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));	
+	ds_DecideReqConf.SetColumn(0,"DANGER_NUM",danger_num);
+	ds_DecideReqConf.SetColumn(0,"DANGER_JOB_FLAG","20");
+		
+	fv_FindRow_ShowRow = 1;
+	fv_FindRow_ShowKey = danger_num; //위험작업번호	
+	
+	var strSvcID = "update4";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";
+	var strInDatasets  = "ds_DecideReqConf=ds_DecideReqConf:u";
+	var strOutDatasets  = "";
+	var strArgument  = "update4=1";	
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+				  
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}else{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+		fn_CommonSearch();
+	}				  
+}
+//-------------------------------------------------------------------------------
+// 기      능   :  주소검색 등록
+//-------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------
+// 함수명   : fn_ZipSearch()
+// 설명     : 주소 검색 팝업
+// return 내용 : 
+//-------------------------------------------------------------------------------	
+function fn_ZipSearch(obj)
+{
+	var arrList = gfn_Dialog("A10", "A1101020010U", "", 1100, 600, true, -1, -1);
+	if(arrList == "" || arrList == null || arrList ==0){
+		return;
+	} 
+	
+	//지번주소
+	edt_Zip_Seq    .Text = arrList[0];            // "주소일련번호"
+	edt_Zip1 	   .Text = arrList[2];            // "우편번호1"
+	edt_Zip2 	   .Text = arrList[3];            // "우편번호2"
+	edt_Hill	   .Text = arrList[10];           // "산번지"
+	edt_Addr_M     .Text = arrList[11];           // "본번"
+	edt_Addr_S     .Text = arrList[12];           // "지번"
+	
+	edt_SecondAddr .Text = arrList[13];     	  // "보조주소"
+	edt_Bld_Ding   .Text = arrList[14];           // "동"
+	edt_Hosu       .Text = arrList[15];           // "호수"
+	edt_LotNumUnion.Text = arrList[17];           // "지번주소조합";
+			
+	//새주소
+	edt_New_Addr_Bld_Seq.Text	= arrList[18];    // "주소일련번호";
+	edt_New_Hosu	    .Text   = arrList[21];    // "호수";
+	edt_Addr_Union	    .Text	= arrList[23];    // "새주소조합";
+	  
+}
+function btn_AddrSearch_OnClick(obj)
+{
+	fn_ZipSearch(obj);
+	// fn_D1_FindBranchCd();
+	// cob_BranchCd01.Value = ds_BranchCd.GetColumn(0,"BRANCH_CD");
+	// cob_BranchCd01_OnChanged();
+	// cob_TeamCd.Enable = true;
+}
+//-------------------------------------------------------------------------------
+// 함수명   : fn_D1_FindBranchCd()
+// 설명     : 지사코드 가져오기 
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function fn_D1_FindBranchCd()
+{	
+	var strSvcID = "findbranchcd";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_BranchCd=ds_BranchCd";
+	var strArgument  = "branchcd=1";
+		strArgument	+= " CODE_ITEM=" + quote(edt_Zip1.Text);
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+
+
+//-------------------------------------------------------------------------------
+// 기      능   :  위험작업 허가기준 보기(POPUP)
+//-------------------------------------------------------------------------------
+function btn_DangerWork_OnClick(obj)
+{
+	gfn_Dialog("D10","D1502010013U","",660,376,true,-1,-1);
+}
+
+	
+function fn_D10_Common6()				//위험작업 내역 비활성화
+{
+	cob_MidPressCrossYn.Enable = false;				
+	cob_PressFlag.Enable = false;
+	cob_MlPressMPress.Enable = false;
+	cob_MlPressLPress.Enable = false;
+
+	btn_WorkNumButton.Enable = false;
+	btn_AddrSearch.Enable = false;	
+	edt_SecondAddr.Enable = false;
+	cob_Rocation.Enable = false;
+	cob_TeamCd.Enable = false;
+	cal_JobReqYmd1.Enable = false;
+	edt_JobReqStrTime.Enable = false;
+	edt_JobReqEndTime.Enable = false;
+	
+	Grid2.Enable = false;
+	btn_ScgJoinEmpid.Enable = false;
+	cob_WorkFirmTelDdd.Enable = false;
+	ect_WorkFirmTelExn.Enable = false;
+	edt_WorkFirmTelNum.Enable = false;
+	edt_ReqNm.Enable = false;
+	edt_WorkManagerNm.Enable = false;
+	cob_WorkManagerTelDdd.Enable = false;
+	edt_WorkManagerTelExn.Enable = false;
+	edt_WorkManagerTelNum.Enable = false;
+	edt_SiteChiefNm.Enable = false;
+	cob_SiteChiefTelDdd.Enable = false;
+	edt_SiteChiefTelExn.Enable = false;
+	edt_SiteChiefTelNum.Enable = false;
+	edt_NeedPers.Enable = false;
+	edt_ScgJoinPers.Enable = false;
+	cob_PavementKind.Enable = false;
+	edt_Leng.Enable = false;
+	cal_DigReqYmd.Enable = false;
+	cal_RcAmtPayYmd.Enable = false;
+	cal_AdmitYmd.Enable = false;
+	edt_AdmitNum.Enable = false;
+	cob_DirRcAmt.Enable = false;
+	edt_IndRcAmt.Enable = false;
+	edt_LicenseTax.Enable = false;
+	edt_LeaseAmt.Enable = false;
+	cal_ApproPeriodFrom.Enable = false;
+	cal_ApproPeriodTo.Enable = false;
+	edt_RcFirm.Enable = false;
+	cob_RcType.Enable = false;
+	cal_RcPlanYmd.Enable = false;
+	edt_NotPermitWhy.Enable = false;
+	edt_EtcRmk.Enable = false;
+	//btn_FileFolder.Enable = false;			//-----------------------------첨부문서
+	edt_Rmk.Enable = false;
+}
+function fn_D10_Common7()				//위험작업 내역 활성화
+{
+	cob_MidPressCrossYn.Enable = true;		
+	cob_PressFlag.Enable = true;
+	//cob_MlPressMPress.Enable = true;
+	cob_MlPressLPress.Enable = true;
+	btn_WorkNumButton.Enable = true;
+	btn_AddrSearch.Enable = true;
+	edt_SecondAddr.Enable = true;
+	cob_Rocation.Enable = true;
+	cob_TeamCd.Enable = true;
+	cal_JobReqYmd1.Enable = true;
+	edt_JobReqStrTime.Enable = true;
+	edt_JobReqEndTime.Enable = true;
+	
+	Grid2.Enable = true;
+	btn_ScgJoinEmpid.Enable = true;
+	cob_WorkFirmTelDdd.Enable = true;
+	ect_WorkFirmTelExn.Enable = true;
+	edt_WorkFirmTelNum.Enable = true;
+	edt_ReqNm.Enable = true;
+	edt_WorkManagerNm.Enable = true;
+	cob_WorkManagerTelDdd.Enable = true;
+	edt_WorkManagerTelExn.Enable = true;
+	edt_WorkManagerTelNum.Enable = true;
+	edt_SiteChiefNm.Enable = true;
+	cob_SiteChiefTelDdd.Enable = true;
+	edt_SiteChiefTelExn.Enable = true;
+	edt_SiteChiefTelNum.Enable = true;
+	edt_NeedPers.Enable = true;
+	edt_ScgJoinPers.Enable = true;
+	cob_PavementKind.Enable = true;
+	edt_Leng.Enable = true;
+	cal_DigReqYmd.Enable = true;
+	cal_RcAmtPayYmd.Enable = true;
+	cal_AdmitYmd.Enable = true;
+	edt_AdmitNum.Enable = true;
+	cob_DirRcAmt.Enable = true;
+	edt_IndRcAmt.Enable = true;
+	edt_LicenseTax.Enable = true;
+	edt_LeaseAmt.Enable = true;
+	cal_ApproPeriodFrom.Enable = true;
+	cal_ApproPeriodTo.Enable = true;
+	edt_RcFirm.Enable = true;
+	cob_RcType.Enable = true;
+	cal_RcPlanYmd.Enable = true;
+	edt_NotPermitWhy.Enable = true;
+	edt_EtcRmk.Enable = true;
+	//btn_FileFolder.Enable = true;			//-----------------------------첨부문서
+	edt_Rmk.Enable = true;
+}
+function fn_D10_Common8()				//위험장비 초기값 ""잡기
+{
+	ds_DangerEqup.SetColumn(0,"EA1",""); 
+	ds_DangerEqup.SetColumn(1,"EA1",""); 
+	ds_DangerEqup.SetColumn(2,"EA1",""); 
+	ds_DangerEqup.SetColumn(3,"EA1","");
+	ds_DangerEqup.SetColumn(4,"EA1","");
+	ds_DangerEqup.SetColumn(0,"EA2",""); 
+	ds_DangerEqup.SetColumn(1,"EA2","");
+	ds_DangerEqup.SetColumn(2,"EA2","");
+	ds_DangerEqup.SetColumn(3,"EA2","");
+	ds_DangerEqup.SetColumn(4,"EA2","");
+}	
+//-------------------------------------------------------------------------------
+// 설명     :   validation check
+//-------------------------------------------------------------------------------
+function fn_D11_Validation01()
+{
+	if(edt_DangerJobStsFlagNm.Text == "" || edt_DangerJobStsFlagNm.Text == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","진행상태는 "));
+		return 1;
+	}
+	if(cob_BranchCd01.Value == "" || cob_BranchCd01.Value == NULL){		
+		alert(gfn_GetMessage("M000015","%AAA%","지사는 "));
+		return 1;
+	}	
+	if(cob_TeamCd.Value == "" || cob_TeamCd.Value == NULL){				
+		alert(gfn_GetMessage("M000015","%AAA%","팀은 "));
+		return 1;
+	}		
+	if(cal_JobReqYmd1.Value == "" || cal_JobReqYmd1.Value == NULL){			
+		alert(gfn_GetMessage("M000015","%AAA%","작업요청일자는 "));
+		return 1;
+	 }
+	if(edt_JobReqStrTime.Value == "" || edt_JobReqStrTime.Value == NULL){             
+		alert(gfn_GetMessage("M000015","%AAA%","작업요청시작시간은 "));
+		return 1;
+	 }	
+	if(edt_JobReqEndTime.Value == "" || edt_JobReqEndTime.Value == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","작업요청종료시간은 "));
+		return 1;
+	 }		
+	if(edt_LotNumUnion.Text == "" || edt_LotNumUnion.Text == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","기존 작업위치는 "));
+		return 1;
+	 }
+	if(cob_MidPressCrossYn.Value == "" || cob_MidPressCrossYn.Value == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","중저압병행은 "));
+		return 1;
+	 }	 	  	 
+	if(cob_PressFlag.Value == "" || cob_PressFlag.Value == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","압력은 "));
+		return 1;
+	 }
+	if(ds_DangerJob.GetColumn(0,"DANGER_JOB_PLAN_CD") == "" || ds_DangerJob.GetColumn(0,"DANGER_JOB_PLAN_CD") = NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","작업내용은 "));
+		return 1;
+	}
+	if(edt_WorkFirmCdNm.Text == "" || edt_WorkFirmCdNm.Text == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","시공사는 "));
+		return 1;
+	 }
+	if(cob_WorkFirmTelDdd.Value == "" || cob_WorkFirmTelDdd.Value == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","시공사전화번호는 "));
+		return 1;
+	 }	 
+	if(ect_WorkFirmTelExn.Text == "" || ect_WorkFirmTelExn.Text == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","시공사전화번호는 "));
+		return 1;
+	 }	
+	if(edt_WorkFirmTelNum.Text == "" || edt_WorkFirmTelNum.Text == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","시공사전화번호는 "));
+		return 1;
+	 }		 	 	 	 	 	 	 
+	if(cob_WorkManagerTelDdd.Value == "" || cob_WorkManagerTelDdd.Value == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","시공관리자전화번호는 "));
+		return 1;
+	 }	
+	if(edt_WorkManagerTelExn.Text == "" || edt_WorkManagerTelExn.Text == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","시공관리자전화번호는 "));
+		return 1;
+	 }
+	if(edt_WorkManagerTelNum.Text == "" || edt_WorkManagerTelNum.Text == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","시공관리자전화번호는 "));
+		return 1;
+	 }
+	if(cob_SiteChiefTelDdd.Value == "" || cob_SiteChiefTelDdd.Value == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","현장소장전화번호는 "));
+		return 1;
+	 }	
+	if(edt_SiteChiefTelExn.Text == "" || edt_SiteChiefTelExn.Text == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","현장소장전화번호는 "));
+		return 1;
+	 }
+	if(edt_SiteChiefTelNum.Text == "" || edt_SiteChiefTelNum.Text == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","현장소장전화번호는 "));
+		return 1;
+	 }	 	 
+	if(edt_NeedPers.Value == "" || edt_NeedPers.Value == NULL){
+		alert(gfn_GetMessage("M000015","%AAA%","소요인원은 "));
+		return 1;
+	 }
+	 // 단지외(20)	
+	 if(cob_Rocation.Value == "20"){
+	 
+		if(cob_PavementKind.Value == "" || cob_PavementKind.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","포장종류는 "));
+			return 1;
+		 }	
+		if(edt_Leng.Value == "" || edt_Leng.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","연장은 "));
+			return 1;
+		 }	
+		if(cal_DigReqYmd.Value == "" || cal_DigReqYmd.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","굴착신청일자는 "));
+			return 1;
+		 }	
+		if(cal_RcAmtPayYmd.Value == "" || cal_RcAmtPayYmd.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","복구비납부일은 "));
+			return 1;
+		 }	
+		if(cal_AdmitYmd.Value == "" || cal_AdmitYmd.Value== NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","허가일자는 "));
+			return 1;
+		 }
+		if(edt_AdmitNum.Text == "" || edt_AdmitNum.Text == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","허가번호는 "));
+			return 1;
+		 }	
+		if(cob_DirRcAmt.Value == "" || cob_DirRcAmt.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","직접복구비는 "));
+			return 1;
+		 }	
+		if(edt_IndRcAmt.Value == "" || edt_IndRcAmt.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","간접복구비는 "));
+			return 1;
+		 }	
+		if(edt_LicenseTax.Value == "" || edt_LicenseTax.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","면허세는 "));
+			return 1;
+		 }	
+		 if(edt_LeaseAmt.Value == "" || edt_LeaseAmt.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","점용료는 "));
+			return 1;
+		 }	
+		if(cal_ApproPeriodFrom.Value == "" || cal_ApproPeriodFrom.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","승인기간은 "));
+			return 1;
+		 }	
+		if(cal_ApproPeriodTo.Value == "" || cal_ApproPeriodTo.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","승인기간은 "));
+			return 1;
+		 }	
+		if(cob_RcType.Value == "" || cob_RcType.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","복구형태는 "));
+			return 1;
+		 }	
+		if(cal_RcPlanYmd.Value == "" || cal_RcPlanYmd.Value == NULL){
+			alert(gfn_GetMessage("M000015","%AAA%","복구예정일자는 "));
+			return 1;
+		 }
+		 
+	 // 단지내(10)	
+	}else if(cob_Rocation.Value == "10"){
+		
+	}
+}
+
+function fn_D11_Validation02()
+{ 
+	for(i=0;  i < ds_DangerJob.GetRowCount() ; i++)
+	{
+		if( gfn_isNull( ds_DangerJob.GetColumn(i,"JOB_APPRO_STR_TIME") ) ){
+			alert(gfn_GetMessage("M000015","%AAA%","SCG 작업계획의 승인시작시간은 "));
+			return 1;
+		}
+		if(  gfn_isNull( ds_DangerJob.GetColumn(i,"JOB_APPRO_END_TIME") ) ){
+			alert(gfn_GetMessage("M000015","%AAA%","SCG 작업계획의 승인종료시간은"));
+			return 1;
+		}
+		if(  gfn_isNull( ds_DangerJob.GetColumn(i,"DANGER_SCG_PLAN_CD") ) ){
+			alert(gfn_GetMessage("M000015","%AAA%","SCG 작업계획의 작업내용은 "));
+			return 1;
+		}
+	}
+	
+}	 
+
+function btn_AddrSearch01_OnClick(obj)
+{
+	var nameList = gfn_Dialog("B20","B2203050011U","",450,400,true,-1,-1);
+
+	edt_WorkFirmCd.Text = nameList[0];
+	edt_WorkFirmCdNm.Text = nameList[1];
+}
+
+function btn_Safety_OnClick(obj)
+{
+	var strDangerNum = ds_Multi_Re.GetColumn(0,"DANGER_NUM");
+	var strDANGER_JOB_FLAG = "20";
+	
+	args = "WORK_FIRM_CD=" + quote(edt_WorkFirmCdNm.Text)
+	     + " SITE_CHIEF_NM=" + quote(edt_SiteChiefNm.Text)
+	     + " DANGER_NUM=" + quote(strDangerNum);
+	     + " DANGER_JOB_FLAG=" + quote(strDANGER_JOB_FLAG);
+	     
+	gfn_Dialog("D10","D1503010012U",args,660,280,true,-1,-1);
+}
+
+
+function btn_RowAdd01_OnClick(obj)
+{
+	gfn_SetGrdComboBox_Comcode ("grd_DangerJob",4,"D10156");
+	//gfn_SetGrdComboBox_Comcode ("grd_DangerJob",9,"D10153");	
+	grd_DangerJob.Enable = true;
+	ds_DangerJob.AddRow();
+		grd_DangerJob.SetCellProp("body",1,"Edit","mask");
+		grd_DangerJob.SetCellProp("body",3,"Edit","mask");
+		grd_DangerJob.SetCellProp("body",4,"Edit","combo");
+		// grd_DangerJob.SetCellProp("body",6,"Edit","none");
+		// grd_DangerJob.SetCellProp("body",8,"Edit","none");
+		// grd_DangerJob.SetCellProp("body",9,"Edit","none");
+		// grd_DangerJob.SetCellProp("body",10,"Edit","none");		
+	if(ds_DangerJob.GetRowCount() == 1){
+		return;
+	}else{
+		ds_DangerJob.SetColumn(ds_DangerJob.row,"JOB_STR_TIME",ds_DangerJob.GetColumn(ds_DangerJob.row-1,"JOB_END_TIME"));
+	}
+}
+
+function btn_RowDel01_OnClick(obj)
+{
+	var strtime = ds_DangerJob.GetColumn(ds_DangerJob.RowCount()-1,"JOB_STR_TIME");
+	var endtime = ds_DangerJob.GetColumn(ds_DangerJob.RowCount()-1,"JOB_END_TIME");
+	var dangerJPC = ds_DangerJob.GetColumn(ds_DangerJob.RowCount()-1,"DANGER_JOB_PLAN_CD");
+	var rmk = ds_DangerJob.GetColumn(ds_DangerJob.RowCount()-1,"RMK");
+	
+	if(ds_DangerJob.GetRowType(ds_DangerJob.RowCount()-1) == "insert")
+	{
+		if((strtime==""||strtime==null) && (endtime==""||endtime==null) && (dangerJPC==""||dangerJPC==null) && (rmk==""||rmk==null))
+		{
+			ds_DangerJob.DeleteRow(ds_DangerJob.row);
+		}else if(confirm("작성된 내용이 있습니다. 그래도 삭제하시겠습니까?"))
+		{
+			ds_DangerJob.DeleteRow(ds_DangerJob.row);
+		}
+	}else if(confirm("등록된 작업계획을 삭제하시겠습니까?"))
+	{
+		fn_D1_WorkJobDelete(ds_DangerJob.row);
+	}
+}
+//----------------------------------------------------------------------------------------------
+// 함수명: fn_D1_WorkJobDelete()
+// 설명:   인건비 내역 삭제
+// arguments
+// return 내용: 없음
+//----------------------------------------------------------------------------------------------
+function fn_D1_WorkJobDelete(row)
+{    
+	ds_DangerJob.DeleteRow(row);
+
+	var strSvcID = "fn_D1_WorkJobDelete";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service&delete=1";  
+	var strInDatasets  = "ds_DangerJob=ds_DangerJob:u";
+	var strOutDatasets  = "";
+	var strArgument  = "";	
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+				  
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 삭제를"),"black",true); 
+	}					  
+}
+function cob_DirRcAmt_OnCharChanged(obj,strPreText,strPostText)
+{	
+	var sum = parseInt(cob_DirRcAmt.Value)+parseInt(edt_IndRcAmt.Value)+parseInt(edt_LicenseTax.Value)+parseInt(edt_LeaseAmt.Value);
+	edt_Sum.Value = sum;
+}
+function edt_IndRcAmt_OnCharChanged(obj,strPreText,strPostText)
+{
+	var sum = parseInt(cob_DirRcAmt.Value)+parseInt(edt_IndRcAmt.Value)+parseInt(edt_LicenseTax.Value)+parseInt(edt_LeaseAmt.Value);
+	edt_Sum.Value = sum;	
+}
+function edt_LicenseTax_OnCharChanged(obj,strPreText,strPostText)
+{
+	var sum = parseInt(cob_DirRcAmt.Value)+parseInt(edt_IndRcAmt.Value)+parseInt(edt_LicenseTax.Value)+parseInt(edt_LeaseAmt.Value);
+	edt_Sum.Value = sum;	
+}
+function edt_LeaseAmt_OnCharChanged(obj,strPreText,strPostText)
+{
+	var sum = parseInt(cob_DirRcAmt.Value)+parseInt(edt_IndRcAmt.Value)+parseInt(edt_LicenseTax.Value)+parseInt(edt_LeaseAmt.Value);
+	edt_Sum.Value = sum;	
+}
+function edt_Sum_OnCharChanged(obj,strPreText,strPostText)
+{
+	edt_Sum.Value = gfn_D1_SetComma(edt_Sum.Value);
+}
+
+//파일첨부 
+function btn_FileFolder_OnClick(obj)
+{
+	if(gfn_IsNull(edt_DangerNum.Text)){
+		alert("등록된 위험작업이 없습니다. 등록먼저 해주세요.");
+		return;
+	}else{
+
+		var arg = "fa_Url=handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service&DANGER_NUM="+danger_num+"&DANGER_JOB_FLAG=20&WORK_FLAG=10 fa_Part=D10";
+		var arrList = gfn_Dialog("D10","D1101010018U",arg,450,280,true,-1,-1);
+		edtFileList.text = "";
+		for(var i=0; i<arrList.length; i++)
+		{
+			edtFileList.text += arrList[i];
+			if(arrList.length-1 != i) edtFileList.text += "/";
+		}	
+	}
+}
+
+
+//--------------------------------------------------------------------------------------------
+//  공사번호 가져오기 
+//--------------------------------------------------------------------------------------------
+function btn_WorkNumButton_OnClick(obj)
+{
+	var workNumList = gfn_Dialog("B20","B2202010012U","",675,424,true,-1,-1);
+	if(workNumList == "" || workNumList == null || workNumList == 0){
+		return;
+	}
+	edt_WorkNum.Text 			= workNumList[0];
+	edt_JobNm1.Text 			= workNumList[1];
+	cob_BranchCd01.Value 		= workNumList[2];		// 지사 가져오기 
+	edt_WorkFirmCdNm.Text 		= workNumList[5];
+	cob_TeamCd.Text  	    	= workNumList[6];		//팀
+		
+	fn_D1_FindSearchList1();
+	fn_D1_FindSearchList2();
+	fn_D1_FindSearchList3();
+	
+	cal_DigReqYmd.Value 		=	ds_Multi_Data1.GetColumn(0,"RECEIVE_YMD");			//신청일자
+	edt_AdmitNum.Text 			=	ds_Multi_Data1.GetColumn(0,"ADMIT_DOCU_NUM");		//허가번호	
+	cal_AdmitYmd.Text 			=	ds_Multi_Data1.GetColumn(0,"ADMIT_YMD");			//허가일자
+	cal_ApproPeriodFrom.Value 	=	ds_Multi_Data1.GetColumn(0,"ADMIT_PERIOD_FROM");	//승인기간
+	cal_ApproPeriodTo.Value 	=	ds_Multi_Data1.GetColumn(0,"ADMIT_PERIOD_TO");		//승인기간
+	edt_Leng.Value 				=	ds_Multi_Data2.GetColumn(0,"DIG_LENG");				//연장
+	cal_RcAmtPayYmd.Value 		=	ds_Multi_Data3.GetColumn(0,"RC_AMT_PAY_YMD");		//복구납부일자	
+	cob_DirRcAmt.Value 			= 	ds_Multi_Data3.GetColumn(0,"DIR_RC_AMT");			//직접복구비
+	edt_IndRcAmt.Value			=	ds_Multi_Data3.GetColumn(0,"DIR_RC_AMT");			//간접복구비
+	edt_LicenseTax.Value 		=	ds_Multi_Data3.GetColumn(0,"LICENSE_TAX");			//면허세
+	edt_LeaseAmt.Value 			=	ds_Multi_Data3.GetColumn(0,"TOT_LEASE_AMT");		//점용료	
+
+	cob_DirRcAmt_OnCharChanged();
+	edt_IndRcAmt_OnCharChanged();
+	edt_LicenseTax_OnCharChanged();
+	edt_LeaseAmt_OnCharChanged();
+	edt_Sum_OnCharChanged();	
+	
+	if(edt_WorkNum.Text != "" || edt_WorkNum.Text != null){
+		btn_GulChak.Enable = true;
+	}	
+
+	cob_BranchCd01_OnChanged();
+	cob_TeamCd.Enable = true;
+	
+	// fn_D10_WorkFirmCd_Search();												// 시공사코드 및 명 가져오기
+	// edt_WorkFirmCd.Text = ds_WorkFrimCd.GetColumn(0,"WORK_FIRM_CD");			// 시공사코드
+	// edt_WorkFirmCdNm.Text = ds_WorkFrimCd.GetColumn(0,"DEAL_NM");			// 시공사명 
+}
+
+function Button0_OnClick(obj)
+{
+	var dangernum = ds_Multi_Re.GetColumn(ds_Multi_Re.row,"DANGER_NUM");
+	var dangerjobflag = ds_Multi_Re.GetColumn(ds_Multi_Re.row,"DANGER_JOB_FLAG");
+	var dangerjobstsflag = ds_Multi_Re.GetColumn(ds_Multi_Re.row,"DANGER_JOB_STS_FLAG");
+	gfv_callGWInfo("fmD17","d10","",2,dangernum+','+dangerjobflag+','+dangerjobstsflag);
+}
+
+//-------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 인쇄
+//-------------------------------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+//-------------------------------------------------------------------------------
+// 설명     :   시간대별 작업계획 중복 체크
+//-------------------------------------------------------------------------------
+function ds_DangerJob_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	if(strColumnID == "DANGER_JOB_PLAN_CD")
+	{
+		var DangerJobPlanCd = ds_DangerJob.GetColumn(ds_DangerJob.row,"DANGER_JOB_PLAN_CD");
+		for(var i=0; ds_DangerJob.GetRowCount()>i; i++)
+		{
+			if(DangerJobPlanCd == ds_DangerJob.GetColumn(i, "DANGER_JOB_PLAN_CD") && i != ds_DangerJob.row)
+			{
+				alert("이미 작성된 작업내용 입니다. 재입력 해주세요");
+				ds_DangerJob.SetColumn(ds_DangerJob.row,"DANGER_JOB_PLAN_CD","");
+				return;
+			}
+		}		
+	}else if(strColumnID == "DANGER_SCG_PLAN_CD")
+	{
+		var DangerJobPlanCd = ds_DangerJob.GetColumn(ds_DangerJob.row,"DANGER_SCG_PLAN_CD");
+		for(var i=0; ds_DangerJob.GetRowCount()>i; i++)
+		{
+			if(DangerJobPlanCd == ds_DangerJob.GetColumn(i, "DANGER_SCG_PLAN_CD") && i != ds_DangerJob.row)
+			{
+				alert("이미 작성된 작업내용 입니다. 재입력 해주세요");
+				ds_DangerJob.SetColumn(ds_DangerJob.row,"DANGER_SCG_PLAN_CD","");
+				return;
+			}
+		}		
+	}	
+}
+//-------------------------------------------------------------------------------
+// 설명     :   FROM ~ TO 체크 (내역)
+//-------------------------------------------------------------------------------
+function cal_ApproPeriodFrom_OnChanged(obj,strOldText,strNewText)
+{
+	if(cal_ApproPeriodFrom.Value < today() && !gfn_IsNull(cal_ApproPeriodFrom.Value)){
+		alert("승인기간 시작일자는 오늘날짜보다 작을 수 없습니다. 수정해주세요.");
+		cal_ApproPeriodFrom.Value = "";
+		return;	
+	}
+	if(cal_ApproPeriodFrom.Value !="" && cal_ApproPeriodTo.Value !="" && cal_ApproPeriodFrom.Value > cal_ApproPeriodTo.Value){	
+		alert("TO 날짜는 FROM 날짜보다 같거나 큰값을 입력하세요.");
+		cal_ApproPeriodFrom.SetFocus();
+		cal_ApproPeriodFrom.value = "";
+		cal_ApproPeriodTo.value = "";
+		return;
+	}
+}
+
+function cal_ApproPeriodTo_OnChanged(obj,strOldText,strNewText)
+{
+	if(cal_ApproPeriodTo.Value < today() && !gfn_IsNull(cal_ApproPeriodTo.Value)){
+		alert("승인기간 종료일자는 오늘날짜보다 작을 수 없습니다. 수정해주세요.");
+		cal_ApproPeriodTo.Value = "";
+		return;	
+	}
+	if(cal_ApproPeriodFrom.Value !="" && cal_ApproPeriodTo.Value !="" && cal_ApproPeriodFrom.Value > cal_ApproPeriodTo.Value){	
+		alert("TO 날짜는 FROM 날짜보다 같거나 큰값을 입력하세요.");
+		cal_ApproPeriodFrom.SetFocus();
+		cal_ApproPeriodFrom.value = "";
+		cal_ApproPeriodTo.value = "";		
+		return;
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : D1501010010F_OnUnloadCompleted()
+// 설명     : 닫기 버튼 클릭시 실행 
+// return 내용 : 
+//-------------------------------------------------------------------------------
+function D1501010010F_OnUnloadCompleted(obj)
+{	
+	if(ds_Multi.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 값이 있습니다. 종료")))
+		{
+			return false;
+		} 
+	}
+}
+//-------------------------------------------------------------------------------
+// 설명     :   지사에 따른 팀코드 셋팅해주기
+//-------------------------------------------------------------------------------
+function cob_BranchCd01_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	gfn_D1_SetComboBox_Teamcd01("ds_Team_01",cob_BranchCd01);
+
+}
+
+function cob_MidPressCrossYn_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	if(cob_MidPressCrossYn.Value == "10"){
+		cob_MlPressMPress.Enable = true;
+		cob_MlPressLPress.Enable = true;
+	}else if(cob_MidPressCrossYn.Value == "20"){
+		cob_MlPressMPress.Value = "";	
+		cob_MlPressMPress.Enable = false;
+		cob_MlPressLPress.Enable = true;	
+	}
+}
+
+
+// SCG 입회자
+function btn_ScgJoinEmpid_OnClick(obj)
+{
+	
+	if(gfn_IsNull(cob_BranchCd01.value))
+	{
+		alert("먼저 지사를 선택하여 주십시오.");
+		return;
+	}
+	
+	if(gfn_IsNull(cob_TeamCd.value))
+	{
+		alert("먼저 팀을 선택하여 주십시오.");
+		return;
+	}
+		
+	var args = "BRANCH_CD=" + cob_BranchCd01.value
+			 + " TEAM_CD="  + cob_TeamCd.value 
+			 + " SFALG=Y";
+					 
+	var arrList = gfn_Dialog("D10","D1101020014U",args,700,400,true,-1,-1);
+	if( length( arrList ) > 0 )
+	{
+
+		edt_ScgJoinEmpid.Text = arrList[0];
+		edt_ScgJoinEmpidNm.Text = arrList[1];
+		
+	}
+	
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FindSearchList()
+//   설명:  등록할 항목 불러오기 (외부)
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FindSearchList1()
+{
+	var strSvcID = "searchList1";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi_Data1=ds_Multi_Data1";
+	var strArgument  = "searchList1=1";
+		strArgument	+= " WORK_NUM=" + quote(edt_WorkNum.Text);
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+function fn_D1_FindSearchList2()
+{
+	var strSvcID = "searchList2";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi_Data2=ds_Multi_Data2";
+	var strArgument  = "searchList2=1";
+		strArgument	+= " WORK_NUM=" + quote(edt_WorkNum.Text);
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+function fn_D1_FindSearchList3()
+{
+	var strSvcID = "searchList3";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_DangerWorkRequiRegisHmppMgr-service";  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_Multi_Data3=ds_Multi_Data3";
+	var strArgument  = "searchList3=1";
+		strArgument	+= " WORK_NUM=" + quote(edt_WorkNum.Text);
+		
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+// 굴착확인 이동
+function btn_GulChak_OnClick(obj)		
+{
+	//굴착확인 MAIN 이동
+	var strArg = "";
+	gfn_NewWindow("B20","B2303010010F",strArg) ;	
+	
+}
+//-------------------------------------------------------------------------------
+//	  GIS 위치보기 
+//-------------------------------------------------------------------------------
+function btn_gis_OnClick(obj)
+{
+	var args="";
+
+        args  = "BUNGI=01";
+        
+        args += " GU_NM="      + ds_Multi_Re.GetColumn(0, "ZIP_NO1_NM") ;
+	    args += " DONG_NM_H="  + ds_Multi_Re.GetColumn(0, "BLD_DONG"  ) ;
+	    args += " FNU=" 	   + ds_Multi_Re.GetColumn(0, "ADDR_M"    ) ;
+	    args += " SNU=" 	   + ds_Multi_Re.GetColumn(0, "ADDR_S"    ) ;
+	 	
+	    gfn_Dialog("D10","D1402060011U",args,1208,840,"Scroll",-1,-1);	 	
+}
+
+function cal_JobReqYmd1_OnChanged    (obj,strOldText,strNewText){			// 작업요청일 체크 
+	if(cal_JobReqYmd1.Value < today() && !gfn_IsNull(cal_JobReqYmd1.Value)){
+		alert("작업요청일자가 오늘날짜보다 작을 수 없습니다. 수정해주세요.");
+		cal_JobReqYmd1.Value = "";
+		return;	
+	}	
+}
+function cal_RcPlanYmd_OnChanged	 (obj,strOldText,strNewText){			// 복구예정일 체크 
+	if(cal_RcPlanYmd.Value < today() && !gfn_IsNull(cal_RcPlanYmd.Value)){
+		alert("복구예정일이 오늘날짜보다 작을 수 없습니다. 수정해주세요.");
+		cal_RcPlanYmd.Value = "";
+		return;	
+	}	
+}
+function cal_ReviewYmd_OnChanged(obj,strOldText,strNewText){										// 검토일자 체크 
+	if(gfn_IsNull(cal_ReviewYmd.Value)){
+		return;
+	}else{
+		fn_DateCheckTodayOver(obj,"검토일자");
+	}	
+}				
+function cal_ChgApproReqYmd_OnChanged(obj,strOldText,strNewText){									// 변경승인일자 체크 
+	if(gfn_IsNull(cal_ChgApproReqYmd.Value)){
+		return;
+	}else{
+		fn_DateCheckTodayOver(obj,"변경승인일자");
+	}	
+}			
+function cal_DigReqYmd_OnChanged(obj,strOldText,strNewText){										// 굴착신청일 체크 
+	if(cal_DigReqYmd.Value > today() && !gfn_IsNull(cal_DigReqYmd.Value)){
+		alert("굴착신청일이 오늘날짜보다 클 수 없습니다. 수정해주세요.");
+		cal_DigReqYmd.Value = "";
+		return;
+	}
+}			
+function cal_RcAmtPayYmd_OnChanged(obj,strOldText,strNewText){										// 복구납부일 체크 
+	if(cal_RcAmtPayYmd.Value > today() && !gfn_IsNull(cal_RcAmtPayYmd.Value)){
+		alert("복구납부일이 오늘날짜보다 클 수 없습니다. 수정해주세요.");
+		cal_RcAmtPayYmd.Value = "";
+		return;	
+	}
+}			
+function cal_AdmitYmd_OnChanged(obj,strOldText,strNewText){											// 허가일 체크 
+	if(cal_AdmitYmd.Value > today() && !gfn_IsNull(cal_AdmitYmd.Value)){
+		alert("허가일자가 오늘날짜보다 클 수 없습니다. 수정해주세요.");
+		cal_AdmitYmd.Value = "";
+		return;		
+	}
+}
+
+
+
+
+function ds_Multi_Re_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	if(strColumnID == 'JOB_REQ_STR_TIME'){
+		
+		if(edt_JobReqStrTime.Value == '' || edt_JobReqStrTime.Value == null){ return;}				
+		if(substr(edt_JobReqStrTime.Value,0,2) > "24"){
+			alert("25시 이상 입력할 수 없습니다. ");
+			edt_JobReqStrTime.Value = '';
+			edt_JobReqStrTime.SetFocus();
+			return;
+		}
+		if(substr(edt_JobReqStrTime.Value,2,2) > "59"){
+			alert("60분 이상 입력할 수 없습니다. ");
+			edt_JobReqStrTime.Value = '';
+			edt_JobReqStrTime.SetFocus();
+			return;
+		}		
+		if(edt_JobReqEndTime.value != ''){
+			if(edt_JobReqStrTime.Value > edt_JobReqEndTime.Value){
+				alert("작업요청 종료시간보다 클 수 없습니다. ");
+				edt_JobReqStrTime.Value = '';
+				edt_JobReqStrTime.SetFocus();
+				return;
+			}
+		}
+	}
+	
+	if(strColumnID == 'JOB_REQ_END_TIME'){
+				
+		if(edt_JobReqEndTime.Value == '' || edt_JobReqEndTime.Value == null){
+			return;
+		}
+		
+		if(substr(edt_JobReqEndTime.Value,0,2) > "24"){
+			alert("25시 이상 입력할 수 없습니다. ");
+			edt_JobReqEndTime.Value = '';
+			edt_JobReqEndTime.SetFocus();
+			return;
+		}
+		if(substr(edt_JobReqEndTime.Value,2,2) > "59"){
+			alert("60분 이상 입력할 수 없습니다. ");
+			edt_JobReqEndTime.Value = '';
+			edt_JobReqEndTime.SetFocus();
+			return;
+		}
+		
+		if(edt_JobReqStrTime.value != ''){
+			if(edt_JobReqStrTime.Value > edt_JobReqEndTime.Value){
+				alert("작업요청 시작시간보다 작을 수 없습니다. ");
+				edt_JobReqEndTime.Value = '';
+				edt_JobReqEndTime.SetFocus();
+				return;
+			}
+		}
+	}	
+}
+
+
+
+// 위치구분 변경시
+function cob_Rocation_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+
+//trace ("cob_Rocation_OnChanged: "+cob_Rocation.Value);
+	// 단지내(10)	
+	if(length(trim(cob_Rocation.Value)) == 0 || cob_Rocation.Value == "10" ){
+	
+	
+//trace ("10 cob_Rocation_OnChanged: "+cob_Rocation.Value);
+	
+		cob_PavementKind.Enable = false;
+		edt_Leng.Enable = false;
+		cal_DigReqYmd.Enable = false;
+		cal_RcAmtPayYmd.Enable = false;
+		cal_AdmitYmd.Enable = false;
+		edt_AdmitNum.Enable = false;
+		cob_DirRcAmt.Enable = false;
+		edt_IndRcAmt.Enable = false;
+		edt_LicenseTax.Enable = false;
+		edt_LeaseAmt.Enable = false;
+		edt_Sum.Enable = false;
+		cal_ApproPeriodFrom.Enable = false;
+		cal_ApproPeriodTo.Enable = false;
+		edt_RcFirm.Enable = false;
+		cob_RcType.Enable = false;
+		cal_RcPlanYmd.Enable = false;
+		edt_NotPermitWhy.Enable = false;
+		edt_EtcRmk.Enable = false;
+		
+		
+	// 단지외(20)	
+	}else if(cob_Rocation.Value == "20")
+	{
+	
+//trace ("20 cob_Rocation_OnChanged: "+cob_Rocation.Value);
+		cob_PavementKind.Enable = true;
+		edt_Leng.Enable = true;
+		cal_DigReqYmd.Enable = true;
+		cal_RcAmtPayYmd.Enable = true;
+		cal_AdmitYmd.Enable = true;
+		edt_AdmitNum.Enable = true;
+		cob_DirRcAmt.Enable = true;
+		edt_IndRcAmt.Enable = true;
+		edt_LicenseTax.Enable = true;
+		edt_LeaseAmt.Enable = true;
+		edt_Sum.Enable = true;
+		cal_ApproPeriodFrom.Enable = true;
+		cal_ApproPeriodTo.Enable = true;
+		edt_RcFirm.Enable = true;
+		cob_RcType.Enable = true;
+		cal_RcPlanYmd.Enable = true;
+		edt_NotPermitWhy.Enable = true;
+		edt_EtcRmk.Enable = true;	
+	}
+}
+
+]]></Script>
+</Window>

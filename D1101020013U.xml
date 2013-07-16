@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="288" Id="D1101020013U" Left="8" OnLoadCompleted="D1101020013U_OnLoadCompleted" PidAttrib="7" Title="정압기선택_D1101020013U" Top="8" Ver="1.0" Width="688" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_list">
+				<Contents>
+					<colinfo id="CHK" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="GOV_ROOM_NM" size="256" type="STRING"/>
+					<colinfo id="GOV_NUM" size="256" type="STRING"/>
+					<colinfo id="GOV_MODEL_NM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Div Height="29" Id="Div0" TabOrder="1" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="683">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="2" Text="정압기선택" Transparent="TRUE" Width="688"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_list" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="280" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="204" Id="grd_list" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="683" SelColor="MENU" Style="grid_pop" TabOrder="3" TabStop="true" Top="76" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="678">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="50"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="120"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="선택"/>
+						<cell col="1" display="text" text="정압실번호"/>
+						<cell col="2" display="text" text="정압기번호"/>
+						<cell col="3" display="text" text="정압실명"/>
+						<cell col="4" display="text" text="정압기명"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHK" cursor="hand" display="checkbox" edit="checkbox"/>
+						<cell align="center" col="1" colid="FACI_NUM" display="text"/>
+						<cell align="center" col="2" colid="GOV_NUM" combodataset="ds_Block" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="3" colid="GOV_ROOM_NM" display="text"/>
+						<cell align="left" col="4" colid="GOV_MODEL_NM" combodataset="ds_Block" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="75" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="683" TabOrder="4" Top="72" Type="Rectangle" Width="678"></Shape>
+	</Form>
+	<Script><![CDATA[/*******************************************************************************
+* FormID     : D1101020013U.xml
+* Form 설명  : 정압기조회
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 김태화
+* 작성일     : 2009-01-20
+* 변경내용   : 
+*******************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+//---------------------------------------------------------
+//	화면변수선언 
+//---------------------------------------------------------
+var strBranchCd = "";
+var strZipNo1 = "";
+function D1101020013U_OnLoadCompleted(obj) 
+{
+	gfn_LoadForm(obj);
+	fn_initData();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_initData()
+{  
+    if (IsExistVar("BRANCH_CD", "true")) {
+		strBranchCd = BRANCH_CD;
+		strZipNo1 = ZIP_N01;
+		
+		 fn_CommonSearch();
+    }   
+}
+
+//-------------------------------------------------------------------------------
+// 조회 버튼 실행 
+//-------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+
+	var ServiceId 		= "";
+    var ServicePart 	= "D10";
+    var Url 			= "handle.do?ServiceName=D1101020013U-service"
+                        + "&BRANCH_CD=" + strBranchCd + "&ZIP_N01=" + strZipNo1;
+
+    var InputDsList 	= "";
+    var OutputDsList 	= "ds_list=ds_list";
+    var Argument 		= "search";
+	
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 선택
+//---------------------------------------------------------
+function fn_CommonSelect()
+{
+	var args = "";
+	
+	for (var i = 0; i < ds_list.RowCount(); i++) {
+	    
+	    if (ds_list.GetColumn(i, "CHK") == 1) {
+	        if (args == "" || args == null) {
+	            args += ds_list.GetColumn(i, "FACI_NUM") + "#";
+	            args += trim(ds_list.GetColumn(i, "GOV_ROOM_NM")) + "#";
+	            args += ds_list.GetColumn(i, "GOV_NUM") + "#";
+	            args += trim(ds_list.GetColumn(i, "GOV_MODEL_NM")) + "#";
+	        } else {
+				args += "#" +ds_list.GetColumn(i, "FACI_NUM") + "#";
+	            args += ds_list.GetColumn(i, "GOV_ROOM_NM") + "#";
+	            args += ds_list.GetColumn(i, "GOV_NUM") + "#";
+	            args += ds_list.GetColumn(i, "GOV_MODEL_NM") + "#";
+			}
+		}
+	}			
+	if (args == "" || args == null) {
+		args = "0";
+	}
+	this.Close(args);
+}
+]]></Script>
+</Window>

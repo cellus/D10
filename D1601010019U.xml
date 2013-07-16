@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="592" Id="D1601010019U" Left="8" OnLoadCompleted="D1601010019U_OnLoadCompleted" PidAttrib="7" Title="정비단가조회_D1601010019U" Top="8" Ver="1.0" Width="792" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_CalcuDegreeSearch">
+				<Contents>
+					<colinfo id="CALCU_DEGREE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BaseYmdSearchTop">
+				<Contents>
+					<colinfo id="BASE_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="CalcuDegree" size="256" summ="default" type="STRING"/>
+					<colinfo id="BaseYmd" size="256" summ="default" type="STRING"/>
+					<colinfo id="Prod" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_JOB_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FindSearchTop">
+				<Contents>
+					<colinfo id="BaseYmd" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_List">
+				<Contents>
+					<colinfo id="UNIT_PRC_NUM" size="11" summ="default" type="CHAR"/>
+					<colinfo id="CALCU_DEGREE" size="6" summ="default" type="CHAR"/>
+					<colinfo id="UPD_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="UPD_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="UPD_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="CRT_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="CRT_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="PRICE_WORK_FLAG" size="2" summ="default" type="CHAR"/>
+					<colinfo id="UNIT_PRC_WORK_TYPE" size="3" summ="default" type="CHAR"/>
+					<colinfo id="PROD_NM_ID" size="6" summ="default" type="CHAR"/>
+					<colinfo id="PROD_NM_CD" size="3" summ="default" type="CHAR"/>
+					<colinfo id="STD_ID" size="6" summ="default" type="CHAR"/>
+					<colinfo id="STD_CD" size="3" summ="default" type="CHAR"/>
+					<colinfo id="UNIT_PRC_NM" size="100" summ="default" type="STRING"/>
+					<colinfo id="PIPE_MATER_FLAG" size="3" summ="default" type="CHAR"/>
+					<colinfo id="OFFICE_FLAG" size="3" summ="default" type="CHAR"/>
+					<colinfo id="DAY_NIGHT_FLAG" size="2" summ="default" type="CHAR"/>
+					<colinfo id="UPPER_WIDTH_CD" size="3" summ="default" type="CHAR"/>
+					<colinfo id="PAVEMENT_KIND" size="3" summ="default" type="CHAR"/>
+					<colinfo id="UNIT_CD" size="3" summ="default" type="CHAR"/>
+					<colinfo id="OK_BID_RT" size="5" summ="default" type="DECIMAL"/>
+					<colinfo id="UNIT_PRC" size="15" summ="default" type="DECIMAL"/>
+					<colinfo id="AMT_CUT_FLAG" size="2" summ="default" type="CHAR"/>
+					<colinfo id="BASE_YMD" size="8" summ="default" type="CHAR"/>
+					<colinfo id="CONF_YN" size="1" summ="default" type="CHAR"/>
+					<colinfo id="STD_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_L_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ProdSearchTop">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="2" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="2" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="787">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user9" Bottom="96" Height="24" Id="Shape2" Left="5" LineColor="user10" Right="784" TabOrder="3" Top="72" Type="Rectangle" Width="779"></Shape>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="정비단가조회" Transparent="TRUE" Width="791"></Image>
+		<Shape BKColor="#6cbae1" Bottom="109" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="784" TabOrder="4" Top="106" Type="Rectangle" Width="779"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_List" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="576" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="467" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" NoDataText="조회된&#32;내역이&#32;없습니다." OnCellDBLClick="grd_List_OnCellDblClick" OnHeadClick="grd_List_OnHeadClick" OnMouseOver="grd_List_OnMouseOver" Right="784" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="5" TabStop="true" Top="109" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="779">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="90"/>
+						<col width="81"/>
+						<col width="201"/>
+						<col width="59"/>
+						<col width="63"/>
+						<col width="75"/>
+						<col width="41"/>
+						<col width="41"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="단가번호"/>
+						<cell col="1" display="text" text="대분류"/>
+						<cell col="2" display="text" text="품명"/>
+						<cell col="3" display="text" text="포종"/>
+						<cell col="4" display="text" text="재질"/>
+						<cell col="5" display="text" text="규격"/>
+						<cell col="6" display="text" text="주/야"/>
+						<cell col="7" display="text" text="단위"/>
+						<cell col="8" display="text" text="단가"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="UNIT_PRC_NUM" display="text"/>
+						<cell col="1" colid="WORK_L_FLAG" display="text"/>
+						<cell col="2" colid="PROD_NM_CD" display="text"/>
+						<cell align="center" col="3" colid="PAVEMENT_KIND" display="text"/>
+						<cell align="center" col="4" colid="PIPE_MATER_FLAG" display="text"/>
+						<cell align="center" col="5" colid="STD_NAME" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="6" colid="DAY_NIGHT_FLAG" display="text"/>
+						<cell align="center" col="7" colid="UNIT_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="8" colid="UNIT_PRC" display="number"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="173" LeftMargin="12" Style="blt_search_1" TabOrder="7" TabStop="FALSE" Text="단가기준일자" Top="75" Transparent="TRUE" Width="109"></Image>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="361" LeftMargin="12" Style="blt_search_Indis" TabOrder="8" TabStop="FALSE" Text="시산차수" Top="75" Transparent="TRUE" Width="64"></Image>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="523" LeftMargin="12" Style="blt_search" TabOrder="9" TabStop="FALSE" Text="품명" Top="75" Transparent="TRUE" Width="79"></Image>
+		<Combo Border="Flat" CodeColumn="CODE_ITEM" DataColumn="ITEM_KNAME" Height="18" Id="cob_ProdSearchTop" InnerDataset="ds_ProdSearchTop" Left="564" ResetIndex="FIRST" Style="combo" TabOrder="6" Top="74" Width="201"></Combo>
+		<Calendar Border="Flat" Enable="FALSE" Height="18" Id="cal_REAL_JOB_YMD" Left="75" SaturdayTextColor="blue" SelDayStyle="calendar" Style="calendar" SundayTextColor="red" TabOrder="11" Top="75" Width="85"></Calendar>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="10" LeftMargin="12" Style="blt_search_1" TabOrder="10" Text="조치일자" Top="75" Transparent="TRUE" Width="70"></Image>
+		<Calendar Border="Flat" Enable="FALSE" Height="18" Id="cal_BaseYmd" Left="261" SaturdayTextColor="blue" SelDayStyle="calendar" Style="calendar" SundayTextColor="red" TabOrder="12" Top="76" Width="85"></Calendar>
+		<Edit Align="CENTER" Border="Flat" Enable="FALSE" Height="18" Id="edt_CalcuDegree" ImeMode="none" Left="427" OnChar="edt_WorkFirmCdSearch_OnChar" Style="edit" TabOrder="13" Top="75" Width="80"></Edit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1601010019U.xml
+* Form 설명  : 정비보수 업체정보
+* 시스템 명  : 안전공급 (D1)
+* 작성자     :  
+* 작성일     : 2010-01-19
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONB30001.js";
+#include "JS::COMMOND10001.js";
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+function D1601010019U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+
+	cal_REAL_JOB_YMD.Value = REAL_JOB_YMD;
+		
+	gfn_SetComboBox_Comcode("B20107","ds_ProdSearchTop");
+		
+	gfn_MakeComboAll("cob_ProdSearchTop","CODE_ITEM","ITEM_KNAME");	
+
+	ds_Search.ClearData();
+	ds_Search.AddRow();
+	
+	ds_Search.SetColumn(0,"REAL_JOB_YMD"  , cal_REAL_JOB_YMD.Value); 
+	 
+	var strSvcID = "init";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1601010019U-service";
+ 	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets = "ds_BaseYmdSearchTop=ds_BaseYmdSearchTop ds_CalcuDegreeSearch=ds_CalcuDegreeSearch";
+	var strArgument  = "init=1";
+			   	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );			     
+
+	cal_BaseYmd.Value = ds_BaseYmdSearchTop.GetColumn(0,"BASE_YMD");	   
+	edt_CalcuDegree.Text = ds_CalcuDegreeSearch.GetColumn(0,"CALCU_DEGREE");
+			   
+	cob_ProdSearchTop.Value = ""; // 품셈분류
+		
+	gfn_SetGrdComboBox_Comcode ("grd_List",1,"D10117");		//대분류
+	gfn_SetGrdComboBox_Comcode ("grd_List",2,"B20107");		//품명
+	gfn_SetGrdComboBox_Comcode ("grd_List",3,"B20041");		//포종
+	gfn_SetGrdComboBox_Comcode ("grd_List",4,"B20087");		//재질
+	gfn_SetGrdComboBox_Comcode ("grd_List",6,"B20031");		//주간야간 구분
+	gfn_SetGrdComboBox_Comcode ("grd_List",7,"A10120");		//단위	
+				
+	fn_CommonSearch();			   
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+    ds_List.ClearData();
+	gfn_SetHeadClearAll(grd_List);
+
+	ds_Search.ClearData();
+	ds_Search.AddRow();	
+	ds_Search.SetColumn(0, "BaseYmd", cal_BaseYmd.Value);
+	ds_Search.SetColumn(0, "CalcuDegree", edt_CalcuDegree.text);
+	ds_Search.SetColumn(0, "Prod", cob_ProdSearchTop.Value);	
+
+	var strSvcID = "find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1601010019U-service";
+ 	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets = "ds_List=ds_List";
+	var strArgument  = "find=1";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );			     
+}
+
+//--------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 선택
+//--------------------------------------------------------------------------------------------------
+function fn_CommonSelect()
+{
+	return;	
+}
+
+//--------------------------------------------------------------------------------------------------
+//	더블 클릭시
+//--------------------------------------------------------------------------------------------------
+function grd_list_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	var arrList = array();
+	var nRow = ds_List.row;   
+
+	arrList[0]  = ds_List.GetColumn(nRow, "PROD_NM_CD");       // 품명
+	arrList[1]  = ds_List.GetColumn(nRow, "PAVEMENT_KIND");    // 포종
+	arrList[2]  = ds_List.GetColumn(nRow, "PIPE_MATER_FLAG");  // 재질
+	arrList[3]  = ds_List.GetColumn(nRow, "STD_CD");           // 규격
+	arrList[4]  = ds_List.GetColumn(nRow, "UNIT_PRC");         // 단가
+	
+	arrList[5]  = ds_List.GetColumn(nRow, "WORK_L_FLAG");      // 대분류 
+	arrList[6]  = ds_List.GetColumn(nRow, "DAY_NIGHT_FLAG");      // 주/야
+	   
+    Close(arrList);			
+}
+
+function fn_CommonExcelExport(Obj)
+{    
+	var SearchCondition= "";
+
+	SearchCondition  = "기준일자 : " + RPad(cal_BaseYmd.Value," ",20) +
+	                   "시산차수 : " + RPad(edt_CalcuDegree.text," ",20) +
+	                   "품명 : " + RPad(cob_ProdSearchTop.text," ",20);
+	                   
+	gfn_ExportExcel("정비단가", 5, SearchCondition,"grd_List");
+}
+
+function grd_List_OnMouseOver(obj,nPosX,nPosY,nRow,nCell,nPivotIndex)
+{
+	//------------------------------------------------------------------------------- 
+	//	풍선 도움말 (tooltip) 처리 - Master Grid
+	//-------------------------------------------------------------------------------
+	if(nRow < 0 || nCell < 0) {obj.ToolTipText = ""; return;}
+	obj.ToolTipText = obj.GetCellText("body",nRow,nCell);
+}
+
+function grd_List_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_SetGridSort(obj, nCell);
+}]]></Script>
+</Window>

@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="768" Id="D1903010010F_T04" Left="8" PidAttrib="7" Title="ECDA구간실적_D1903010010F_T04" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Ecda" OnLoadCompleted="ds_Ecda_OnLoadCompleted" OnRowPosChanged="ds_Ecda_OnRowPosChanged">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DCVG_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_END_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_END_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Excel" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME3" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="GAP_DISTANCE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME6" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Decide">
+				<Contents>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PlnYn">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_sts">
+				<Contents>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaArRst" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BASE_YEAR" MapValue="KEY" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" MapValue="KEY" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="EXPLOR_RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" MapValue="KEY" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" MapValue="KEY" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="PIPE_ID" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="DECIMAL"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="OLD_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user15" Bottom="24" Height="3" Id="Shape0" Left="8" LineWidth="0" Right="1257" TabOrder="5" Top="21" Type="Rectangle" Width="1249"></Shape>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="6" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="0" Text="ECDA실적등록" Top="5" Width="117"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_EcdaArRst" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="616" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="193" Id="Grid" InputPanel="FALSE" Left="4" LineColor="silver" LineType="ExVERT" MinWidth="100" NoDataText="조회내역이&#32;없습니다." OnCellClick="Grid_OnCellClick" Right="1253" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="2" TabStop="true" Top="423" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="77"/>
+						<col width="75"/>
+						<col width="79"/>
+						<col width="248"/>
+						<col width="256"/>
+						<col width="92"/>
+						<col width="340"/>
+						<col width="72"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="배관_ID"/>
+						<cell col="1" display="text" text="연장(m)"/>
+						<cell bkcolor="user11" col="2" display="text" text="탐사연장(m)"/>
+						<cell col="3" display="text" text="시점"/>
+						<cell col="4" display="text" text="종점"/>
+						<cell bkcolor="user11" col="5" display="text" text="탐사일자"/>
+						<cell col="6" display="text" text="비고"/>
+						<cell col="7" display="text" text="결재여부"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MPIPE_ID" display="text"/>
+						<cell align="right" col="1" colid="SYS_LENG" display="text"/>
+						<cell align="right" col="2" colid="EXPLOR_LENG" display="number" displaymaskchar="#" edit='expr:iif(DECIDE_PROC_STS==&quot;0&quot;&#32;||&#32;DECIDE_PROC_STS==&quot;1&quot;&#32;||&#32;DECIDE_PROC_STS==&quot;2&quot;&#32;,&quot;none&quot;&#32;,&#32;&quot;masknumber&quot;)' limit="5" LimitDec="0" Mask="##0.##"/>
+						<cell align="left" col="3" colid="EXPLOR_STR_ADDR" display="text"/>
+						<cell align="left" col="4" colid="EXPLOR_END_ADDR" display="text"/>
+						<cell align="center" col="5" colid="EXPLOR_YMD" display="date" expandimage="expr:decode(rowtype,&apos;insert&apos;,&apos;calendar&apos;,&apos;&apos;)" expandshow="expr:decode(rowtype,&apos;insert&apos;,&apos;true&apos;,&apos;false&apos;)"/>
+						<cell align="left" col="6" colid="EXPLOR_RMK" display="text" edit='expr:iif(DECIDE_PROC_STS==&quot;0&quot;&#32;||&#32;DECIDE_PROC_STS==&quot;1&quot;&#32;||&#32;DECIDE_PROC_STS==&quot;2&quot;&#32;||&#32;&#32;strEcdaEndYn&#32;==&#32;&quot;3&quot;,&quot;none&quot;&#32;,&#32;&quot;normal&quot;)'/>
+						<cell align="center" col="7" colid="DECIDE_PROC_STS" display="text"/>
+					</body>
+					<summary>
+						<cell align="center" bkcolor="greenyellow" col="0" display="text" text="계"/>
+						<cell align="right" bkcolor="greenyellow" col="1" display="number" expr='SumNF(&quot;SYS_LENG&quot;)&#32;/&#32;rowcount'/>
+						<cell align="right" bkcolor="greenyellow" col="2" display="number" expr='iif(SumNF(&quot;EXPLOR_LENG&quot;)==&apos;0&apos;,&#32;null,&#32;SumNF(&quot;EXPLOR_LENG&quot;))'/>
+						<cell align="center" bkcolor="greenyellow" col="3" display="text"/>
+						<cell bkcolor="greenyellow" col="4" display="text"/>
+						<cell bkcolor="greenyellow" col="5" display="text"/>
+						<cell bkcolor="greenyellow" col="6" display="text"/>
+						<cell bkcolor="greenyellow" col="7" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user15" Bottom="423" Height="3" Id="Shape1" Left="4" LineWidth="0" Right="1253" TabOrder="4" Top="420" Type="Rectangle" Width="1249"></Shape>
+		<Image Align="Left" Height="9" Id="Image0" ImageID="blt_8" Left="6" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="6" Text="EDCA구간&#32;실적등록" Top="401" Width="182"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button231" ImageID="btn_8_Search" Left="1122" LeftMargin="21" OnClick="Button231_OnClick" Style="button" TabOrder="7" Text="DCVG탐사이력조회" Top="209" Width="132"></Button>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Ecda" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="391" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="367" Id="Grid1" InputPanel="FALSE" Left="8" LineColor="silver" LineType="ExVERT" MinWidth="100" NoDataText="조회내역이&#32;없습니다." OnHeadClick="Grid1_OnHeadClick" Right="1257" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="24" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="60"/>
+						<col width="80"/>
+						<col width="200"/>
+						<col width="200"/>
+						<col width="60"/>
+						<col width="58"/>
+						<col width="64"/>
+						<col width="75"/>
+						<col width="80"/>
+						<col width="70"/>
+						<col width="80"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="60"/>
+						<col width="60"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="기준년도"/>
+						<cell col="1" display="text" text="배관_ID"/>
+						<cell col="2" display="text" text="시점"/>
+						<cell col="3" display="text" text="종점"/>
+						<cell col="4" display="text" text="연장(m)"/>
+						<cell col="5" display="text" text="압력"/>
+						<cell col="6" display="text" text="관경(A)"/>
+						<cell col="7" display="text" text="설치일자"/>
+						<cell col="8" display="text" text="공사코드"/>
+						<cell col="9" display="text" text="지사"/>
+						<cell col="10" display="text" text="시/구"/>
+						<cell col="11" display="text" text="DCVG탐사일자"/>
+						<cell col="12" display="text" text="ECDA탐사일자"/>
+						<cell col="13" display="text" text="완료여부"/>
+						<cell col="14" display="text" text="탐사구분"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="BASE_YEAR" display="text" limit="4"/>
+						<cell align="center" col="1" colid="MPIPE_ID" display="text"/>
+						<cell align="left" col="2" colid="STR_POINT" display="text"/>
+						<cell align="left" col="3" colid="END_POINT" display="text"/>
+						<cell align="right" col="4" colid="LENG" display="text"/>
+						<cell align="center" col="5" colid="PRESS_NM" display="text"/>
+						<cell align="right" col="6" colid="PIPE_DIAM_NM" display="text"/>
+						<cell align="center" col="7" colid="COMPL_YMD" display="date"/>
+						<cell align="center" col="8" colid="WORK_NUM" display="text"/>
+						<cell align="center" col="9" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="10" colid="GU_NM" display="text"/>
+						<cell align="center" col="11" colid="DCVG_EXPLOR_YMD" display="text" Mask="####-##-##"/>
+						<cell align="center" col="12" colid="ECDA_EXPLOR_YMD" display="text" Mask="####-##-##"/>
+						<cell align="center" col="13" colid="ECDA_END_NM" display="text"/>
+						<cell align="center" col="14" colid="EXPLOR_FLAG_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button ButtonStyle="TRUE" Height="19" Id="btn_CarOperat" ImageID="btn_4_Putson" Left="1179" LeftMargin="21" OnClick="Button91_OnClick" Style="button" TabOrder="8" Text="차량운행" Top="1" Width="76"></Button>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802030010F.xml
+* Form 설명  : DCVG탐사 계획/구간/결과 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-23
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+
+var strbase_year = '';
+var strmpipe_id = '';
+var	strexplor_ymd = '';
+var	strexplor_block_seq = '';
+var iGridPos = '';
+var strEcdaEndYn;
+var arryKey = array();
+var sGrdPosExpr;
+var sOnloadNm;
+var iGridPos;
+
+function D1903010010F_T04_OnLoadCompleted(obj)
+{	
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	//gfn_SetGrdComboBox_Comcode("Grid2",6,"D10040");
+	gfn_SetGrdComboBox_Comcode("Grid",7,"A10411");
+	Grid.SetCellProp("body",7,"Edit","none");
+	
+}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_addRow()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_addRow(){
+
+	if(ds_Ecda.GetRowCount() == '0')
+	{	
+		return;
+	}
+
+	if (ds_Ecda.GetColumn(ds_Ecda.row,"ECDA_END_YN") == '3')
+	{
+		alert("탐사완료건으로 추가하실 수 없습니다.");
+		return;
+	}
+	
+	var nRow = ds_EcdaArRst.AddRow();
+
+	ds_EcdaArRst.SetColumn(nRow,"MPIPE_ID",ds_Ecda.GetColumn(ds_Ecda.row,"MPIPE_ID"));
+	ds_EcdaArRst.SetColumn(nRow,"PIPE_ID",ds_Ecda.GetColumn(ds_Ecda.row,"PIPE_ID"));
+	ds_EcdaArRst.SetColumn(nRow,"SYS_LENG",ds_Ecda.GetColumn(ds_Ecda.row,"LENG"));
+	ds_EcdaArRst.SetColumn(nRow,"EXPLOR_STR_ADDR",ds_Ecda.GetColumn(ds_Ecda.row,"STR_POINT"));
+	ds_EcdaArRst.SetColumn(nRow,"EXPLOR_END_ADDR",ds_Ecda.GetColumn(ds_Ecda.row,"END_POINT"));
+	
+	ds_EcdaArRst.SetColumn(nRow,"EXPLOR_YMD",gfn_GetServerDate());
+	
+	
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_addRow()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_deleteRow()
+{
+	if(ds_EcdaArRst.GetRowType(ds_EcdaArRst.row) == "insert"){
+		ds_EcdaArRst.DeleteRow(ds_EcdaArRst.row);
+		return;
+	}
+
+	if(ds_EcdaArRst.GetRowCount() == 0)
+	{
+		return;
+	}
+	
+	
+	if(ds_Ecda.GetColumn(ds_Ecda.row,"ECDA_END_YN") == "3"){
+		
+		alert("탐사완료건으로 삭제가 불가능합니다...");
+		return;
+	}
+	
+	if(ds_EcdaArRst.GetColumn(ds_EcdaArRst.row, "DECIDE_PROC_STS") == '0' || ds_EcdaArRst.GetColumn(ds_EcdaArRst.row, "DECIDE_PROC_STS") == '1'
+		|| ds_EcdaArRst.GetColumn(ds_EcdaArRst.row, "DECIDE_PROC_STS") == '2' )
+	{
+		alert("결재 진행/완료건으로 삭제가 불가능합니다...");
+		return;
+	}
+	
+	// for(var i =0; i<ds_EcdaRst.GetRowCount();i++)
+	// { 	
+		// if (ds_EcdaArRst.GetColumn(ds_EcdaArRst.row, "EXPLOR_YMD") == ds_EcdaRst.GetColumn(i, "EXPLOR_YMD"))
+		// {
+			// alert("해당 탐사일자에 DCVG탐사결과(손상부) 내역이 존재합니다. \nDCVG탐사결과(손상부)내역 삭제 후 삭제 하십시요..");
+			// return;
+		// }	
+	// }
+	var sMpipeId 	= ds_EcdaArRst.GetColumn(ds_EcdaArRst.row,"MPIPE_ID");
+	var nExplorLeng = ds_EcdaArRst.GetColumn(ds_EcdaArRst.row,"EXPLOR_LENG");
+	var sExplorYmd 	= ds_EcdaArRst.GetColumn(ds_EcdaArRst.row,"EXPLOR_YMD");
+	sExplorYmd = left(sExplorYmd,4) +  "-" + mid(sExplorYmd,4,2) +  "-" + right(sExplorYmd,2);
+	
+	if(confirm("(배관id:"+sMpipeId+", 탐사연장:"+nExplorLeng+"m, 탐사일자:"+sExplorYmd+") 삭제하시겠습니까?"))
+	{
+			fn_DeleteArRst();
+	}	
+}
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonDeleteRow()
+// 설명: 접수행을 삭제 한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_DeleteArRst()
+{	
+	// ds_PlnYn.ClearData();
+	// ds_PlnYn.AddRow();			
+	// ds_PlnYn.UpdateControl = false ;
+	// ds_PlnYn.SetRowType(0, "update");
+	// ds_PlnYn.SetColumn(0,"BASE_YEAR",ds_EcdaArRst.GetColumn(ds_EcdaArRst.row, "BASE_YEAR"));
+	// ds_PlnYn.SetColumn(0,"MPIPE_ID",ds_EcdaArRst.GetColumn(ds_EcdaArRst.row, "MPIPE_ID"));		
+	// ds_PlnYn.SetColumn(0,"UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+	// ds_PlnYn.SetColumn(0,"UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP			
+
+	ds_EcdaArRst.DeleteRow(ds_EcdaArRst.row);
+
+    var strSvcID        = "save_EcdaArRst_Pln";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service"
+						;
+												
+	var strInDatasets   = "ds_EcdaArRst=ds_EcdaArRst:u";
+	var strOutDatasets  = "";
+	var strArgument     = "save_EcdaArRst_Pln";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+	
+	//탐사실적 완료 여부 저장
+	//fn_D1_Modify();
+
+	alert("정상 삭제 되었습니다.");
+	
+	fn_D1_find1(ds_Ecda.GetColumn(ds_Ecda.row,"BASE_YEAR"),ds_Ecda.GetColumn(ds_Ecda.row,"MPIPE_ID"));
+}
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_SAVE
+//   설명  : 구간 실적 등록된 내용을 저장한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------
+//  Transition   : Service id
+//  ServicePart   : Service part
+//  Url          : Server url
+//  InputDsList   : Input Dataset List
+//  OutputDsList   : Output Dataset List
+//  Argument   :  Argument
+//-------------------------------------------------------------------------------
+function fn_D1_save()
+{		
+	var sys_len = ds_EcdaArRst.GetColumn(0, "SYS_LENG");
+	var	sum_len = ds_EcdaArRst.SUM("EXPLOR_LENG");
+	
+	if(ds_Ecda.GetColumn(ds_Ecda.row,"ECDA_END_YN") == "3"){
+		if(today() > 20130628){
+			alert("탐사완료된 건입니다. 수정/삭제 하실 수 없습니다.");
+			return;
+		}
+	}
+	// ds_PlnYn.ClearData();
+	// ds_PlnYn.AddRow();			
+	// ds_PlnYn.UpdateControl = false ;
+	// ds_PlnYn.SetRowType(0, "update");
+	// ds_PlnYn.SetColumn(0,"BASE_YEAR",ds_Ecda.GetColumn(0,"BASE_YEAR"));
+	// ds_PlnYn.SetColumn(0,"MPIPE_ID",ds_EcdaArRst.GetColumn(0, "MPIPE_ID"));		
+	// ds_PlnYn.SetColumn(0,"UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+	// ds_PlnYn.SetColumn(0,"UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP			
+	for(var i =0; i<ds_EcdaArRst.GetRowCount();i++)
+	{ 
+		if (sys_len < sum_len)
+		{
+			alert("계획연장 초과 탐사연장입니다..\n탐사연장을 확인하세요..");
+			return;
+		}
+	
+		if (ds_EcdaArRst.GetRowType(i) == 'insert' || ds_EcdaArRst.GetRowType(i) == 'update')
+		{	
+			if(ds_EcdaArRst.GetColumn(i, "EXPLOR_YMD") == '' || ds_EcdaArRst.GetColumn(i, "EXPLOR_YMD") == null)
+			{
+				alert("배관탐사일자를 지정하세요. ");
+				return;
+			}
+			
+			if(ds_EcdaArRst.GetColumn(i, "EXPLOR_LENG") == '' || ds_EcdaArRst.GetColumn(i, "EXPLOR_LENG") == null)
+			{
+				alert("탐사연장 지정하세요. ");
+				return;
+			}
+			
+			if (ds_EcdaArRst.GetRowType(i) == 'insert')
+			{	
+
+				ds_EcdaArRst.SetColumn(i,"BRANCH_CD",ds_Ecda.GetColumn(ds_Ecda.row,"BRANCH_CD"));
+				ds_EcdaArRst.SetColumn(i,"BASE_YEAR",ds_Ecda.GetColumn(ds_Ecda.row,"BASE_YEAR"));
+				ds_EcdaArRst.SetColumn(i,"UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+				ds_EcdaArRst.SetColumn(i,"UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+				ds_EcdaArRst.SetColumn(i,"CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+				ds_EcdaArRst.SetColumn(i,"CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP
+				ds_EcdaArRst.SetColumn(i,"EXPLOR_FLAG","1"); //계획분(1)
+			}
+			else
+			{
+				if(ds_EcdaArRst.GetColumn(i, "DECIDE_PROC_STS") == '0' || ds_EcdaArRst.GetColumn(i, "DECIDE_PROC_STS") == '1'
+					|| ds_EcdaArRst.GetColumn(i, "DECIDE_PROC_STS") == '2' )
+				{
+					alert("결재 진행/완료건으로 수정이 불가능합니다...");
+					return;
+				}		
+				ds_EcdaArRst.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+				ds_EcdaArRst.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP
+			}			
+		}	
+	}		
+	
+
+	fn_GetGridPosExpr(ds_EcdaArRst);
+	
+	var strSvcID         = "save_EcdaArRst_Pln";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service" ;	
+	var strInDatasets    = "ds_EcdaArRst=ds_EcdaArRst:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_EcdaArRst_Pln";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}
+				
+	//탐사실적 완료 여부 저장
+	//fn_D1_Modify();
+
+	alert("저장/수정이 되었습니다.");
+	iGridPos = Grid1.CurrentRow;
+	
+	fn_D1_find();
+	fn_D1_find1(ds_Ecda.GetColumn(ds_Ecda.row,"BASE_YEAR"),ds_Ecda.GetColumn(ds_Ecda.row,"MPIPE_ID"));
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  EDCA실적조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	ds_Ecda.ClearData();
+	
+	ds_Search.ClearData();
+	var nRow = ds_Search.AddRow();
+	//Search Parameter Setting
+	ds_Search.SetColumn(nRow, "BASE_YEAR", sp_Year.Value);
+	ds_Search.SetColumn(nRow, "BRANCH_CD", cob_ObjectFlag.Value);
+	ds_Search.SetColumn(nRow, "ZIP_NO1",cob_CountyFlag.Value);
+	ds_Search.SetColumn(nRow, "MPIPE_ID",trim(edt_MpipeSearch.Text));
+	ds_Search.SetColumn(nRow, "EXPLOR_FLAG","1");
+	ds_Search.SetColumn(nRow, "EXPLOR_END_YN","");
+	
+    var strSvcID        = "view_Pln";
+	var strPart         = "D10";	             
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Ecda=ds_Ecda";
+	var strArgument     = "view_Pln";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	//if(ds_Ecda.GetRowCount()==0) Grid1.NoDataText = gfn_GetMessage("M000009","%AAA%","조회를");
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  구간실적 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find1(strbase_year, strmpipe_id)
+{	
+
+    ds_EcdaArRst.ClearData();
+    
+    ds_Search.ClearData();
+	var nRow = ds_Search.AddRow();
+	//Search Parameter Setting
+	ds_Search.SetColumn(nRow, "BASE_YEAR", strbase_year);
+	ds_Search.SetColumn(nRow, "MPIPE_ID",trim(strmpipe_id));
+
+    var strSvcID        = "view_EcdaArRst_Pln";
+	var strPart         = "D10";	             
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_EcdaArRst=ds_EcdaArRst";
+	var strArgument     = "view_EcdaArRst_Pln";
+	 	 
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Modify()
+//   설명  :  탐사 여부 수정
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Modify()
+{	
+	var strSvcID         = "Pln_Yn";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeMgr-service";					
+	var strInDatasets    = "ds_PlnYn=ds_PlnYn:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "Pln_Yn=1";
+
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );			 	 			 	 
+	}
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: grd_MultiSave_OnExpandEdit()
+//   설명  :  달력 기능과 사원번호 팝업
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+//탐사이력 조회
+function Button231_OnClick(obj)
+{	
+	 var strPrefix = "D10";
+	 var strFormid = "D1902010014F";
+	 var strArg    = "" ;
+		 strArg    = "BASE_YEAR="        + substr(today(),0,4);
+		 strArg	  += " BRANCH_CD="       + quote(cob_ObjectFlag.Value) ;
+		 strArg	  += " EXPLOR_YMD_FROM=" + quote(substr(today(),0,4) + '0101');
+		 strArg	  += " EXPLOR_YMD_TO="   + quote(today().Value) ;
+		 strArg	  += " EXPLOR_FLAG="     + '1';
+	 
+	gfn_NewWindow(strPrefix, strFormid, strArg, "DCVG 탐사이력 조회", strFormid, "", 0, "");
+	 
+	 //gfn_Dialog("D10","D1902010014F",strArg,1005,557,true,-1,-1);
+}
+
+// 차량 운행일지 팝업
+function Button91_OnClick(obj)
+{
+	//gfn_Dialog("E30","E3201080010F","",1005,557,true,-1,-1);
+	 var strPrefix = "E30";
+	 var strFormid = "E3201080010F";
+	 var strArg    = "" ;
+	 gfn_NewWindow(strPrefix, strFormid, strArg, "차량 운행기록", strFormid, "", 0, "");
+} 
+
+function fn_D1_Excel(){
+
+	var SearchCondition= "";
+    
+	SearchCondition = SearchCondition + "지사 : " +     RPad(cob_ObjectFlag.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 : " +    RPad(cob_CountyFlag.Text," ",20);
+    SearchCondition = SearchCondition + "기준년도 : " + RPad(sp_Year.Value," ",20);
+	SearchCondition = SearchCondition + "배관번호 : " + RPad(edt_MpipeSearch.Text," ",20);
+        
+    gfn_ExportExcel("배관진단실적등록_ECDA구간실적", 5, SearchCondition, "Grid1");            
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명  : 탐사일지 장표를 출력한다. 
+// arguments 없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_D1_Print()
+{
+	PrintScreen();
+}
+
+function ds_Ecda_OnRowPosChanged(obj,nOldRow,nRow)
+{	
+	ds_EcdaArRst.ClearData();
+	
+	if(obj.rowcount < 1) return;
+	
+	strbase_year  = ds_Ecda.GetColumn(nRow,"BASE_YEAR");
+	strmpipe_id   = ds_Ecda.GetColumn(nRow,"MPIPE_ID");
+	strEcdaEndYn  = ds_Ecda.GetColumn(nRow,"ECDA_END_YN");
+	
+	fn_D1_find1(strbase_year,strmpipe_id);
+}
+
+
+
+function Grid_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if("EXPLOR_YMD" == Grid.GetCellProp("body",nCell,"ColId"))
+	{
+		if(today() > 20130628){
+			if(object(obj.BindDataset).GetRowType(nRow) == 'insert'){
+					gfn_SetCalendar(obj, nRow, nCell);
+			}
+		}else{
+			gfn_SetCalendar(obj, nRow, nCell);
+		}
+		if(ds_Ecda.GetColumn(Grid1.CurrentRow,"DCVG_EXPLOR_YMD") > object(obj.BindDataset).GetColumn(nRow,"EXPLOR_YMD")){
+			alert("ECDA 탐사일자는 DCVG 탐사일자 이후 여야합니다.");
+			ds_EcdaArRst.SetColumn(nRow,"EXPLOR_YMD",today());
+		}
+	}
+}
+	   
+function Grid1_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_GetDecideSts()
+//   설명  : 해당탐사일자의 탐사구간의 결재여부를 조회
+//   arguments
+//   return 내용: 결재여부 값을 리턴
+//------------------------------------------------------------------------------- 
+function fn_GetDecideSts(sBaseYear,sBranchCd,sExplorYmd)
+{	
+	ds_sts.ClearData();
+	
+	ds_Search.ClearData();
+	var nRow = ds_Search.AddRow();
+	//Search Parameter Setting
+	ds_Search.SetColumn(nRow, "BASE_YEAR", sBaseYear);
+	ds_Search.SetColumn(nRow, "BRANCH_CD", sBranchCd);
+	ds_Search.SetColumn(nRow, "EXPLOR_YMD",sExplorYmd);
+	
+    var strSvcID        = "c";
+	var strPart         = "D10";	             
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_sts=ds_sts";
+	var strArgument     = "view_DecideSts";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+   
+	return ds_sts.GetColumn(0,"DECIDE_PROC_STS");
+}
+
+
+function ds_EcdaArRst_CanColumnChange(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{	
+	
+	if(strColumnID == "EXPLOR_YMD"){
+		
+		var sBaseYear = ds_Ecda.GetColumn(ds_Ecda.row,"BASE_YEAR");
+		var sBranchCd = ds_Ecda.GetColumn(ds_Ecda.row,"BRANCH_CD");	
+		var sDecideSts = fn_GetDecideSts(sBaseYear,sBranchCd,varNewValue);
+
+		//결재여부가 Null, 반려(5) 일때만 탐사일자 변경가능
+		if(!gfn_isNull(sDecideSts) && sDecideSts != "5"){
+				return false;
+		}
+	}
+}
+
+function fn_GetGridPosExpr(objDs){
+	
+	var nRow = objDs.row;
+	if(nRow == -1) return 0;
+	
+	var sSeqColNm;
+	var nCurrMaxSeq;
+
+	if(arryKey.length < 1){
+
+		for(var i = 0 ; i < objDs.colcount ; i++){
+			
+			var sColId = objDs.GetColID(objDs.GetColIDXbyorder(i));
+			var sMapValue = objDs.GetColMapValue(sColId);
+
+			if(toUpper(sMapValue) != "KEY") continue;
+
+			arryKey[arryKey.length] = sColId;
+		}
+		
+	}
+	
+	sGrdPosExpr = "1==1";
+	
+	for(var i = 0 ; i < arryKey.length ; i++){
+		
+		var sKeyValue = objDs.GetColumn(nRow,arryKey[i]);
+		
+		if(!gfn_isNull(sKeyValue)){
+			
+			sGrdPosExpr += " AND ";
+			sGrdPosExpr += arryKey[i]+"=="+quote(sKeyValue);
+		}
+		else{
+		
+			sSeqColNm = arryKey[i];
+			
+			//null이 있으면 Max값이 반환되지 않는다.  
+			var nInsertRow = -1;
+			for(var j = 0 ; j < objDs.rowcount ; j++){
+				
+				nInsertRow = objDs.SearchRow("ROWTYPE=='insert'",nInsertRow+1);
+				
+				if(nInsertRow == -1) break;
+				
+				objDs.SetColumn(nInsertRow,sSeqColNm,0);	
+			}
+			
+		}
+	}
+	
+	if(!gfn_isNull(sSeqColNm)){	
+		
+		nCurrMaxSeq = objDs.CaseMax(sGrdPosExpr,sSeqColNm);	//데이타셋 해당 필드의 Type은 숫자형이어야 한다
+		sGrdPosExpr += " AND " + sSeqColNm + ">" + nCurrMaxSeq;	//seq는 순차적으로 들어간다고 가정 , 2건이상 동시 인서트시는 정렬순서에 따라 최초에 서치되는 항목을 찾아가겠지..
+		
+	}
+	
+	//이미 존재하는 OnLoadCompleted 함수를 실행하기 위함
+	sOnloadNm = objDs.OnLoadCompleted;
+	objDs.OnLoadCompleted = "fn_SearchRowPos";
+}
+
+function fn_SearchRowPos(obj,nErrorCode,strErrorMsg,nReason)
+{
+	if(nreason == 0) 
+	{	
+		obj.row = iif(gfn_isNull(sGrdPosExpr),0,obj.SearchRow(sGrdPosExpr));
+		sGrdPosExpr = "";
+		
+		if(!gfn_isNull(sOnloadNm) && sOnloadNm != obj.OnLoadCompleted){
+	
+			eval(sOnloadNm+"(obj,nErrorCode,strErrorMsg,nReason)");
+			obj.OnLoadCompleted = sOnloadNm;
+		}
+		
+		sOnloadNm = "";
+	}
+}
+
+function ds_Ecda_OnLoadCompleted(obj,nErrorCode,strErrorMsg,nReason)
+{
+	if(nreason == 0) //반드시 0에서 로직 처리 0인경우가 DataSet을 모부 받은 경우입니다.
+	{
+		Grid1.SetFocus();
+		ds_Ecda.row = iGridPos;
+	}	
+}
+]]></Script>
+</Window>

@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="728" Id="D1902030010F_T05" Left="8" PidAttrib="7" Title="ECDA실적_D1902030010F_T05" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME3" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME4" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME5" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESECH_NAME6" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Press">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Pipe">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaRst" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BASE_YEAR" MapValue="KEY" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" MapValue="KEY" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" MapValue="KEY" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="GAP_DISTANCE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RST_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DamageFlag">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_RepairFlag">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaRstI">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="GAP_DISTANCE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RST_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="ECDA_EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_EcdaRstD">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_BLOCK_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_RSLT_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="GAP_DISTANCE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAVEMENT_KIND_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAMAGE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPAIR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RST_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="9" Id="Image4" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="2" Text="ECDA등록" Top="5" Width="182"></Image>
+		<Shape BKColor="user15" Bottom="24" Height="3" Id="Shape5" Left="8" LineWidth="0" Right="1254" TabOrder="1" Top="21" Type="Rectangle" Width="1246"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_EcdaRst" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="616" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="592" Id="Grid" InputPanel="FALSE" Left="8" LineColor="silver" LineType="ExVERT" MinWidth="100" NoDataText="조회내역이&#32;없습니다." OnCellClick="Grid_OnCellClick" OnHeadClick="Grid_OnHeadClick" Right="1254" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="24" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="166"/>
+						<col width="87"/>
+						<col width="87"/>
+						<col width="80"/>
+						<col width="335"/>
+						<col width="60"/>
+						<col width="60"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="61"/>
+						<col width="90"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="관리번호"/>
+						<cell col="1" display="text" text="탐사일자"/>
+						<cell col="2" display="text" text="배관ID"/>
+						<cell col="3" colspan="2" display="text" text="손상위치"/>
+						<cell col="5" display="text" text="압력"/>
+						<cell col="6" display="text" text="관경(A)"/>
+						<cell col="7" display="text" text="손상여부"/>
+						<cell col="8" display="text" text="평가"/>
+						<cell col="9" display="text" text="포장종류"/>
+						<cell col="10" display="text" text="ECDA분석카드"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MANAGE_NUM" display="text"/>
+						<cell align="center" col="1" colid="ECDA_EXPLOR_YMD" cursor="hand" display="date" expandimage="calendar" expandshow="true"/>
+						<cell align="center" col="2" colid="MPIPE_ID" display="text"/>
+						<cell align="center" col="3" colid="ZIP_NO" display="text"/>
+						<cell align="left" col="4" colid="DAMAGE_ADDR" display="text" limit="50"/>
+						<cell align="center" col="5" colid="PRESS_NM" display="text"/>
+						<cell align="right" col="6" colid="PIPE_DIAM_NM" display="text"/>
+						<cell align="center" col="7" colid="DAMAGE_FLAG" combocol="CODE_ITEM" combodataset="ds_DamageFlag" combotext="ITEM_KNAME" display="combo" edit="combo"/>
+						<cell align="center" col="8" colid="REPAIR_FLAG" combocol="CODE_ITEM" combodataset="ds_RepairFlag" combotext="ITEM_KNAME" display="combo" edit="combo"/>
+						<cell align="center" col="9" colid="PAVEMENT_KIND_NM" display="text"/>
+						<cell bkcolor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;User&#32;Color&#32;6&apos;&#32;,&#32;&apos;default&apos;&#32;)" col="10" colid="DAMAGE_FLAG" cursor="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;hand&apos;,&#32;&apos;arrow&apos;)" display="text" expandimage="popup" expandshow="expr:decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;True&#32;,&#32;False&#32;)" expr="decode(&#32;DAMAGE_FLAG&#32;,&#32;1&#32;,&#32;&apos;&#32;분석카드&#32;&apos;&#32;,&#32;&apos;&apos;&#32;)"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1903010010F_T05.xml
+* Form 설명  : ECDA실적등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 최재영 
+* 작성일     : 2013-04-08
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10008.js";
+
+var nRow_Pln         = "0"; // 계획내역 nRow Number
+var nRow_ArRst       = "0"; // 구간실적 nRow Number
+var Dcvg_RCount      = "" ;
+var DcvgArRst_RCount = "" ;
+var nCount           = 0  ;
+var nCount1          = 0  ;
+var iGridPos = '';
+var arryKey = array();
+var sGrdPosExpr;
+var sOnloadNm;
+
+function D1903010010F_T05_OnLoadCompleted(obj)
+{	
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	gfn_SetComboBox_Comcode("D10034","ds_Press");	// 압력구분
+	gfn_SetComboBox_Comcode("B30007","ds_Pipe");	// 관경구분
+	gfn_SetComboBox_Comcode("D10084","ds_DamageFlag");	// 손상여부
+	gfn_SetComboBox_Comcode("D10085","ds_RepairFlag");	// 보수여부
+	
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  ECDA실적 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	ds_EcdaRst.ClearData();
+	
+	ds_Search.ClearData();
+	var nRow = ds_Search.AddRow();
+	//Search Parameter Setting
+	ds_Search.SetColumn(nRow, "BASE_YEAR", sp_Year.Value);
+	ds_Search.SetColumn(nRow, "BRANCH_CD", cob_ObjectFlag.Value);
+	
+    var strSvcID        = "view_EcdaRst";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_EcdaRst=ds_EcdaRst ds_EcdaRstD=ds_EcdaRst";
+	var strArgument     = "view_EcdaRst";
+	 
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_SAVE
+//   설명  : 구간 실적 등록된 내용을 저장한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------
+//  Transition   : Service id
+//  ServicePart   : Service part
+//  Url          : Server url
+//  InputDsList   : Input Dataset List
+//  OutputDsList   : Output Dataset List
+//  Argument   :  Argument
+//-------------------------------------------------------------------------------
+function fn_D1_save()
+{	
+
+	if (!ds_EcdaRst.GetUpdate())
+	{
+		alert("변경된 내용이 없습니다.");
+		return;
+	}
+	
+	// var arryCheck = gfn_CheckGridNotNullColumn(Grid);
+	
+	// if(arryCheck.length > 0){
+		
+		// alert("구분을 입력해주세요.");
+		// ds_EcdaRst.row = arryCheck[7];
+		// Grid.SetCellPos(arryCheck[1]);
+		// Grid.ShowEditor(true);
+		// return;
+	// } 
+	
+	ds_EcdaRstI.ClearData();
+	
+	var bEcdaDelYn = false;	//ECDA카드 삭제여부
+	
+	for(var i = 0 ; i < ds_EcdaRst.rowcount ; i++){
+				
+		if(gfn_IsNull(ds_EcdaRst.GetColumn(i,"ECDA_EXPLOR_YMD")) && ds_EcdaRst.GetRowType(i) == "update") 
+		{
+			alert("탐사일자를 입력하세요");
+			return false;
+		}	
+		
+		if (ds_EcdaRst.GetColumn(i,"REPAIR_FLAG") != null && length(trim(ds_EcdaRst.GetColumn(i,"REPAIR_FLAG"))) > 0)
+		{
+			if(gfn_IsNull(ds_EcdaRst.GetColumn(i,"DAMAGE_FLAG")))
+			{
+				alert("선택한 평가의 손상여부를 선택해주세요.");
+				ds_EcdaRst.row = i;  
+				Grid.SetCellPos(7);
+				Grid.ShowEditor(true);
+				return false;
+			}
+		}
+		
+	
+		if(ds_EcdaRst.GetColumn(i,"DAMAGE_FLAG")==1 && gfn_IsNull(ds_EcdaRst.GetColumn(i,"REPAIR_FLAG"))){
+			alert("선택한 손상여부의 평가를 선택해주세요.");
+			ds_EcdaRst.row = i;  
+			Grid.SetCellPos(8);
+			Grid.ShowEditor(true);
+			return false;
+		}
+
+		
+		if(ds_EcdaRst.GetRowType(i) != "update") continue;
+		
+		var bRstYn = ds_EcdaRst.GetColumn(i,"RST_YN"); //신규생성인지 업데이트인지 판단
+		
+		if(bRstYn){
+	
+			ds_EcdaRst.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_EcdaRst.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));	//수정자 IP	
+			ds_EcdaRst.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+			ds_EcdaRst.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//등록자 IP		
+			
+			if(bEcdaDelYn) continue;
+			
+			var sNewBaseYear = ds_EcdaRst.GetColumn(i,"BASE_YEAR");
+			var sNewMpipeID = ds_EcdaRst.GetColumn(i,"MPIPE_ID");
+			var sNewSeq 	= ds_EcdaRst.GetColumn(i,"EXPLOR_RSLT_SEQ");
+			
+			var nOldRow = -1;
+			for(var j = 0 ; j < ds_EcdaRst.GetOrgBuffCount() ; j++){
+				
+				var sOldBaseYear = ds_EcdaRst.GetOrgBuffColumn(j,"BASE_YEAR");
+				var sOldMpipeID = ds_EcdaRst.GetOrgBuffColumn(j,"MPIPE_ID");
+				var sOldSeq 	= ds_EcdaRst.GetOrgBuffColumn(j,"EXPLOR_RSLT_SEQ");
+				
+				if(sNewBaseYear==sOldBaseYear && sNewMpipeID==sOldMpipeID && sNewSeq==sOldSeq){
+					nOldRow = j;
+					break;
+				}
+			}
+			
+			var sOldDamageFlag = ds_EcdaRst.GetOrgBuffColumn(nOldRow,"DAMAGE_FLAG");
+			var sNewDamageFlag = ds_EcdaRst.GetColumn(i,"DAMAGE_FLAG");
+			
+			if(sOldDamageFlag != sNewDamageFlag){ //손상구분 다를때
+				if(sOldDamageFlag =="1" && sNewDamageFlag == "2"){	//손상 -- > 간섭
+					bEcdaDelYn = true;
+					ds_EcdaRstD.DeleteRow(i);
+				}
+			}
+
+		}
+		else{
+
+			var nInsertRow = ds_EcdaRstI.AddRow();
+			ds_EcdaRstI.CopyRow(nInsertRow,ds_EcdaRst,i);
+			
+			ds_EcdaRstI.SetColumn(nInsertRow, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//수정자사번
+			ds_EcdaRstI.SetColumn(nInsertRow, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//수정자 IP		
+			ds_EcdaRstI.SetColumn(nInsertRow, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+			ds_EcdaRstI.SetColumn(nInsertRow, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));		//등록자 IP			
+		}
+	}
+	
+	if(bEcdaDelYn){
+		
+		if(!confirm("ECDA등록카드가 있다면 전부 삭제 됩니다. 계속 진행하시겠습니까?")){
+			return;
+		}
+	}
+	
+	fn_GetGridPosExpr(ds_EcdaRst);
+	
+	var strSvcID         = "saveEcdaRst";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_DCVGSechActualResultPlanPipeAMgr-service" ;	
+	var strInDatasets    = "ds_EcdaRst=ds_EcdaRst:u ds_EcdaRstI=ds_EcdaRstI:u ds_EcdaRstD=ds_EcdaRstD:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "saveEcdaRst";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}			   
+
+	alert("저장/수정이 되었습니다.");
+	
+	fn_D1_find();
+}
+
+
+function fn_D1_Excel(){
+
+	var SearchCondition= "";
+    
+	SearchCondition = SearchCondition + "지사 : " +     RPad(cob_ObjectFlag.Text," ",20);
+    SearchCondition = SearchCondition + "기준년도 : " + RPad(sp_Year.Value," ",20);
+        
+    gfn_ExportExcel("배관진단실적등록_ECDA실적", 5, SearchCondition, "Grid");            
+}
+
+function fn_D1_Print(){
+	PrintScreen();
+}
+
+
+function Grid_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+		//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	gfn_SetGridSort(obj, nCell);
+}
+
+function fn_GetGridPosExpr(objDs){
+	
+	var nRow = objDs.row;
+	if(nRow == -1) return 0;
+	
+	var sSeqColNm;
+	var nCurrMaxSeq;
+
+	if(arryKey.length < 1){
+
+		for(var i = 0 ; i < objDs.colcount ; i++){
+			
+			var sColId = objDs.GetColID(objDs.GetColIDXbyorder(i));
+			var sMapValue = objDs.GetColMapValue(sColId);
+
+			if(toUpper(sMapValue) != "KEY") continue;
+
+			arryKey[arryKey.length] = sColId;
+		}
+		
+	}
+	
+	sGrdPosExpr = "1==1";
+	
+	for(var i = 0 ; i < arryKey.length ; i++){
+		
+		var sKeyValue = objDs.GetColumn(nRow,arryKey[i]);
+		
+		if(!gfn_isNull(sKeyValue)){
+			
+			sGrdPosExpr += " AND ";
+			sGrdPosExpr += arryKey[i]+"=="+quote(sKeyValue);
+		}
+		else{
+		
+			sSeqColNm = arryKey[i];
+			
+			//null이 있으면 Max값이 반환되지 않는다.  
+			var nInsertRow = -1;
+			for(var j = 0 ; j < objDs.rowcount ; j++){
+				
+				nInsertRow = objDs.SearchRow("ROWTYPE=='insert'",nInsertRow+1);
+				
+				if(nInsertRow == -1) break;
+				
+				objDs.SetColumn(nInsertRow,sSeqColNm,0);	
+			}
+			
+		}
+	}
+	
+	if(!gfn_isNull(sSeqColNm)){	
+		
+		nCurrMaxSeq = objDs.CaseMax(sGrdPosExpr,sSeqColNm);	//데이타셋 해당 필드의 Type은 숫자형이어야 한다
+		sGrdPosExpr += " AND " + sSeqColNm + ">" + nCurrMaxSeq;	//seq는 순차적으로 들어간다고 가정 , 2건이상 동시 인서트시는 정렬순서에 따라 최초에 서치되는 항목을 찾아가겠지..
+		
+	}
+	
+	//이미 존재하는 OnLoadCompleted 함수를 실행하기 위함
+	sOnloadNm = objDs.OnLoadCompleted;
+	objDs.OnLoadCompleted = "fn_SearchRowPos";
+}
+
+
+function fn_SearchRowPos(obj,nErrorCode,strErrorMsg,nReason)
+{
+	if(nreason == 0) 
+	{	
+		obj.row = iif(gfn_isNull(sGrdPosExpr),0,obj.SearchRow(sGrdPosExpr));
+		sGrdPosExpr = "";
+		
+		if(!gfn_isNull(sOnloadNm) && sOnloadNm != obj.OnLoadCompleted){
+	
+			eval(sOnloadNm+"(obj,nErrorCode,strErrorMsg,nReason)");
+			obj.OnLoadCompleted = sOnloadNm;
+		}
+		
+		sOnloadNm = "";
+	}
+}
+
+function Grid_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(10 == nCell){
+		var objDs = object(obj.BindDataset);
+		var bRstYn = objDs.GetColumn(nRow,"RST_YN");
+		var sDamageFlag = objDs.GetColumn(nRow,"DAMAGE_FLAG");
+		if(bRstYn && sDamageFlag=="1"){
+			
+			var strArg  = "" ;
+			strArg    += " F_BASE_YEAR=" 		+ quote(objDs.GetColumn(nRow, "BASE_YEAR" )); 
+			strArg    += " F_MPIPE_ID="  		+ quote(objDs.GetColumn(nRow, "MPIPE_ID"));
+			strArg    += " F_EXPLOR_RSLT_SEQ="  + quote(objDs.GetColumn(nRow, "EXPLOR_RSLT_SEQ"));
+			
+			var arrList = gfn_Dialog("D10", "D1903010010U", strArg , 1245, 520, false, -1, -1);
+			
+			if(arrList == 0){
+				return;
+			}		
+			
+			if (arrList != "" && arrList != null) {
+				
+				// if (ds_Ecda.GetColumn(ds_Ecda.row, "ZIP_NO1") != arrList[2]) {
+					 // alert("해당 시/구를 선택해주세요.");
+					 // return;
+				// }
+				// ds_EcdaRst.SetColumn(nRow, "ZIP_NO1"   , arrList[2]) ;
+				// ds_EcdaRst.SetColumn(nRow, "ZIP_NO2"   , arrList[3]) ;
+				// ds_EcdaRst.SetColumn(nRow, "DAMAGE_ADDR", arrList[17]) ;
+				// ds_EcdaRst.SetColumn(nRow, "ZIP_NO", "(" + arrList[2] + "-" + arrList[3] + ")") ;				
+			}	
+			
+			G_ACTIVEWIN = parent.id;
+		}
+	}
+	else if("ECDA_EXPLOR_YMD" == Grid.GetCellProp("body",nCell,"ColId"))
+	{
+		gfn_SetCalendar(obj, nRow, nCell);
+	}
+}
+]]></Script>
+</Window>

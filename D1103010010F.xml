@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1103010010F" Left="8" OnLoadCompleted="D1103010010F_OnLoadCompleted" OnUnloadCompleted="D1103010010F_OnUnloadCompleted" PidAttrib="7" Title="안전투자비&#32;계획등록_D1103010010F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_InvPln" OnColumnChanged="ds_InvPln_OnColumnChanged">
+				<Contents>
+					<colinfo id="INSPECT_YEAR" size="256" type="STRING"/>
+					<colinfo id="SAFE_MANAGE_ITEM" size="256" type="STRING"/>
+					<colinfo id="SAFE_MANAGE_OBJ_YN" size="256" type="STRING"/>
+					<colinfo id="DETA_DESC_TITACNT_ITEM_CD" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="RMK" size="256" type="STRING"/>
+					<colinfo id="RELAT_DEPT_CD" size="256" type="STRING"/>
+					<colinfo id="BASIC_JAN" size="256" type="STRING"/>
+					<colinfo id="BASIC_FEB" size="256" type="STRING"/>
+					<colinfo id="BASIC_MAR" size="256" type="STRING"/>
+					<colinfo id="BASIC_APR" size="256" type="STRING"/>
+					<colinfo id="BASIC_MAY" size="256" type="STRING"/>
+					<colinfo id="BASIC_JUN" size="256" type="STRING"/>
+					<colinfo id="BASIC_JUL" size="256" type="STRING"/>
+					<colinfo id="BASIC_AUG" size="256" type="STRING"/>
+					<colinfo id="BASIC_SEP" size="256" type="STRING"/>
+					<colinfo id="BASIC_OCT" size="256" type="STRING"/>
+					<colinfo id="BASIC_NOV" size="256" type="STRING"/>
+					<colinfo id="BASIC_DEC" size="256" type="STRING"/>
+					<colinfo id="BASIC_TOT" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_InvPlnReg"></Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1000" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="12" Top="30" Type="RoundRect" Width="995"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="995" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="13" Top="35" Type="Rectangle" Width="985"></Shape>
+		<Image Align="Left" Height="6" Id="Image7" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search_Indis" TabOrder="6" Text="항목" Top="46" Width="84"></Image>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="317" LeftMargin="12" Style="blt_search" TabOrder="7" Text="대상" Top="46" Width="95"></Image>
+		<Shape BKColor="#6cbae1" Bottom="95" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1000" TabOrder="9" Top="92" Type="Rectangle" Width="995"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_InvPln" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="578" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="482" Id="grd_InvPln" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_InvPln_OnCellClick" Right="1003" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="8" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="150"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="normal" text="대상"/>
+						<cell bkcolor="user11" col="1" display="text" text="세부내용"/>
+						<cell bkcolor="user6" col="2" display="text" text="관련부서"/>
+						<cell bkcolor="user6" col="3" display="text" text="적요"/>
+						<cell bkcolor="user6" col="4" display="text" text="1월"/>
+						<cell bkcolor="user6" col="5" display="text" text="2월"/>
+						<cell bkcolor="user6" col="6" display="text" text="3월"/>
+						<cell bkcolor="user6" col="7" display="text" text="4월"/>
+						<cell bkcolor="user6" col="8" display="text" text="5월"/>
+						<cell bkcolor="user6" col="9" display="text" text="6월"/>
+						<cell bkcolor="user6" col="10" display="text" text="7월"/>
+						<cell bkcolor="user6" col="11" display="text" text="8월"/>
+						<cell bkcolor="user6" col="12" display="text" text="9월"/>
+						<cell bkcolor="user6" col="13" display="text" text="10월"/>
+						<cell bkcolor="user6" col="14" display="text" text="11월"/>
+						<cell bkcolor="user6" col="15" display="text" text="12월"/>
+						<cell bkcolor="user6" col="16" display="text" text="계"/>
+					</head>
+					<body>
+						<cell col="0" colid="SAFE_MANAGE_OBJ_YN" display="normal" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="DETA_DESC_TITACNT_ITEM_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="RELAT_DEPT_CD" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="RMK" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="BASIC_JAN" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="5" colid="BASIC_FEB" display="text" edit="normal"/>
+						<cell col="6" colid="BASIC_MAR" display="text" edit="normal"/>
+						<cell col="7" colid="BASIC_APR" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="8" colid="BASIC_MAY" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="9" colid="BASIC_JUN" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="10" colid="BASIC_JUL" display="text" edit="normal"/>
+						<cell col="11" colid="BASIC_AUG" display="text" edit="normal"/>
+						<cell col="12" colid="BASIC_SEP" display="text" edit="normal"/>
+						<cell col="13" colid="BASIC_OCT" display="text" edit="normal"/>
+						<cell col="14" colid="BASIC_NOV" display="text" edit="normal"/>
+						<cell col="15" colid="BASIC_DEC" display="text" edit="normal"/>
+						<cell col="16" colid="BASIC_TOT" display="text"/>
+					</body>
+					<summary>
+						<cell align="center" bkcolor="user13" col="0" colspan="4" display="text" text="총계"/>
+						<cell align="center" bkcolor="user13" col="4" display="text" expr='SumNF(&quot;BASIC_JAN&quot;)'/>
+						<cell align="center" bkcolor="user13" col="5" display="text" expr='SumNF(&quot;BASIC_FEB&quot;)'/>
+						<cell align="center" bkcolor="user13" col="6" display="text" expr='SumNF(&quot;BASIC_MAR&quot;)'/>
+						<cell align="center" bkcolor="user13" col="7" display="text" expr='SumNF(&quot;BASIC_APR&quot;)'/>
+						<cell align="center" bkcolor="user13" col="8" display="text" expr='SumNF(&quot;BASIC_MAY&quot;)'/>
+						<cell align="center" bkcolor="user13" col="9" display="text" expr='SumNF(&quot;BASIC_JUN&quot;)'/>
+						<cell align="center" bkcolor="user13" col="10" display="text" expr='SumNF(&quot;BASIC_JUL&quot;)'/>
+						<cell align="center" bkcolor="user13" col="11" display="text" expr='SumNF(&quot;BASIC_AUG&quot;)'/>
+						<cell align="center" bkcolor="user13" col="12" display="text" expr='SumNF(&quot;BASIC_SEP&quot;)'/>
+						<cell align="center" bkcolor="user13" col="13" display="text" expr='SumNF(&quot;BASIC_OCT&quot;)'/>
+						<cell align="center" bkcolor="user13" col="14" display="text" expr='SumNF(&quot;BASIC_NOV&quot;)'/>
+						<cell align="center" bkcolor="user13" col="15" display="text" expr='SumNF(&quot;BASIC_DEC&quot;)'/>
+						<cell align="center" bkcolor="user13" col="16" display="text" expr='SumNF(&quot;BASIC_TOT&quot;)'/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="10" Text="1.&#32;안전관리를&#32;위한&#32;R&amp;D&#32;투자비" Top="75" Width="210"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_SafeManageObjYn" Left="357" Style="combo" TabOrder="3" Top="39" Width="140"></Combo>
+		<Image Align="Left" Height="6" Id="Image10" ImageID="blt" Left="507" LeftMargin="12" Style="blt_search" TabOrder="11" Text="세부내용" Top="46" Width="84"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="14" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="995">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="cob_SafeManageItem" ImeMode="none" Left="56" Style="combo_indis" TabOrder="1" Top="39" Width="140"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_DetaDescTitacntItemCd" Left="571" Style="combo" TabOrder="4" Top="39" Width="140"></Combo>
+		<Spin Border="Flat" Height="18" Id="sp_Year" Left="246" Style="spin_indis" TabOrder="2" Text="2008" Top="41" Width="54"></Spin>
+		<Image Align="Left" Height="6" Id="Image2" ImageID="blt" Left="206" LeftMargin="12" Style="blt_search_Indis" TabOrder="5" Text="년도" Top="48" Width="84"></Image>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1103010010F.xml
+* Form 설명  : 안전투자비 계획등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2009-01-13
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+function D1103010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_SetComboBox_Comcode("D10005",gfn_setDsObject_Comcode("cob_SafeManageItem"));  //항목
+	gfn_SetComboBox_Comcode("D10034",gfn_setDsObject_Comcode("cob_SafeManageObjYn")); //대상
+	gfn_SetComboBox_Comcode("D10095",gfn_setDsObject_Comcode("cob_DetaDescTitacntItemCd")); //세부내용
+	
+	cob_SafeManageItem.Index = 0;
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSearch()
+//   설명: 안전투자비 계획등록 조회
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSearch()
+{
+	f1_D1_SetComboInit();
+	fn_D1_InvPln();
+}
+
+function fn_D1_InvPln()
+{
+	var strSvcID = "fn_D1_InvPln";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_SafetyMangeInvestCostMgr-service&INSPECT_YEAR="+sp_Year.Value+"&SAFE_MANAGE_ITEM="+cob_SafeManageItem.Value+"&SAFE_MANAGE_OBJ_YN="+cob_SafeManageObjYn.Value+"&DETA_DESC_TITACNT_ITEM_CD="+cob_DetaDescTitacntItemCd.Value;
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_InvPln=ds_InvPln";
+	var strArgument  = "findPlan";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: f1_D1_SetComboInit()
+//   설명: 안전투자비 계획등록 그리드 관련 콤보박스 초기화
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function f1_D1_SetComboInit()
+{
+	gfn_SetGrdComboBox_Comcode("grd_InvPln",0,"D10034"); //대상
+	gfn_SetGrdComboBox_Comcode("grd_InvPln",1,"D10095"); //세부내용
+	gfn_SetGrdComboBox_Comcode("grd_InvPln",2,"A10414"); //관련부서
+	grd_InvPln.SetCellProp("body",0,"Edit","none");
+	grd_InvPln.SetCellProp("body",1,"Edit","none");
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonAddRow()
+   설명: 안전투자비 계획등록 레코드에 한줄 추가
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonAddRow()
+{
+	f1_D1_SetComboInit();
+	ds_InvPln.AddRow();
+	ds_InvPln.SetColumn(ds_InvPln.RowCount()-1,"SAFE_MANAGE_OBJ_YN","L");
+	ds_InvPln.SetColumn(ds_InvPln.RowCount()-1,"DETA_DESC_TITACNT_ITEM_CD","100");
+	ds_InvPln.SetColumn(ds_InvPln.RowCount()-1,"RELAT_DEPT_CD","10");
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_CommonSave()
+//   설명: 안전투자비 계획을 등록하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSave()
+{
+	fn_D1_SaveInvPln();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SaveInvPln()
+//   설명: 안전투자비 계획을 등록하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SaveInvPln()
+{
+	
+	for(var i=0;i<ds_InvPln.RowCount();i++)
+	{
+		if(ds_InvPln.GetRowType(i) == "insert")
+		{
+			
+			var strChkFlag = fn_D1_CheckReg(ds_InvPln.GetColumn(i,"SAFE_MANAGE_OBJ_YN"),ds_InvPln.GetColumn(i,"DETA_DESC_TITACNT_ITEM_CD"));
+			
+			if(!strChkFlag) 
+			{
+				alert('이미 등록된 계획등록입니다.');
+				return;
+			}
+
+			//등록시 셋팅할 사용자 정보
+			ds_InvPln.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_InvPln.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+			ds_InvPln.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_InvPln.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+			ds_InvPln.SetColumn(i, "INSPECT_YEAR", sp_Year.Text);
+			ds_InvPln.SetColumn(i, "SAFE_MANAGE_ITEM", cob_SafeManageItem.Value);
+		}else if(ds_InvPln.GetRowType(i) == "update")
+		{
+			//수정시 셋팅할 사용자 정보
+			ds_InvPln.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_InvPln.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+			ds_InvPln.SetColumn(i, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_InvPln.SetColumn(i, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		}
+	}
+	
+	var strSvcID = "savePipe";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_SafetyMangeInvestCostMgr-service";
+	var strInDatasets  = "ds_InvPln=ds_InvPln:u";
+	var strOutDatasets  = "";
+	var strArgument  = "savaPlan";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	fn_CommonSearch();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_CheckReg()
+//   설명: 등록을 하기 전 기 등록 여부 확인
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_CheckReg(SAFE_MANAGE_OBJ_YN,DETA_DESC_TITACNT_ITEM_CD)
+{	
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+    var strSvcID     = "fn_D1_CheckReg";
+    var strPart     = "D10";
+    var strURL = "handle.do?ServiceName=D1_SafetyMangeInvestCostMgr-service&INSPECT_YEAR="+sp_Year.Value+"&SAFE_MANAGE_ITEM="+cob_SafeManageItem.Value+"&SAFE_MANAGE_OBJ_YN="+SAFE_MANAGE_OBJ_YN+"&DETA_DESC_TITACNT_ITEM_CD="+DETA_DESC_TITACNT_ITEM_CD;
+    var strInDatasets     = "";
+    var strOutDatasets = "ds_InvPlnReg=ds_InvPlnReg";
+    var strArgument      = "findRegFlag";   
+    
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	if(ds_InvPlnReg.RowCount() != 0) return false;
+	return true;
+}
+
+
+function grd_InvPln_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(("SAFE_MANAGE_OBJ_YN" == grd_InvPln.GetCellProp("body",nCell,"ColId") || "DETA_DESC_TITACNT_ITEM_CD" == grd_InvPln.GetCellProp("body",nCell,"ColId")) && ds_InvPln.GetRowType(nRow) == "insert")
+	{
+			grd_InvPln.SetCellProp("body",0,"Edit","combo");
+			grd_InvPln.SetCellProp("body",1,"Edit","combo");
+	}else{
+		grd_InvPln.SetCellProp("body",0,"Edit","none");
+		grd_InvPln.SetCellProp("body",1,"Edit","none");
+	}	
+}
+function ds_InvPln_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	var srtTot = 0;
+	
+	srtTot = ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_JAN")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_FEB")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_MAR")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_APR")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_MAY")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_JUN")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_JUL")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_AUG")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_SEP")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_OCT")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_NOV")) 
+		   + ParseInt(ds_InvPln.GetColumn(nRow,"BASIC_DEC")) ;
+	if(varOldValue != varNewValue)ds_InvPln.SetColumn(nRow,"BASIC_TOT",srtTot);
+}
+
+function D1103010010F_OnUnloadCompleted(obj)
+{
+	if(ds_InvPln.GetUpdate()){
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 내용이 있습니다.종료")))
+		{
+			return false;
+		}
+	}
+}
+]]></Script>
+</Window>

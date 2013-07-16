@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1402070010F" Left="8" OnLoadCompleted="D1402070010F_OnLoadCompleted" PidAttrib="7" Title="굴착공사조회_D1402070010F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Dig">
+				<Contents>
+					<colinfo id="EOCS_NUM" size="255" type="STRING"/>
+					<colinfo id="WORK_PROC_STS" size="255" type="STRING"/>
+					<colinfo id="DIG_NM" size="255" type="DATE"/>
+					<colinfo id="DIG_STR_LOC" size="255" type="STRING"/>
+					<colinfo id="DIG_END_LOC" size="255" type="STRING"/>
+					<colinfo id="DIG_KIND" size="255" type="DATE"/>
+					<colinfo id="JOB_TYPE_CD" size="255" type="STRING"/>
+					<colinfo id="WORK_END_YMD" size="255" type="STRING"/>
+					<colinfo id="XY" size="255" type="STRING"/>
+					<colinfo id="DIG_PLAN" size="256" type="STRING"/>
+					<colinfo id="JOB_TYPE" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents></Contents>
+			</Dataset>
+		</Datasets>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="1" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="995">
+			<Contents></Contents>
+		</Div>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Dig" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="572" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="478" Id="Grid0" InputPanel="FALSE" Left="7" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1002" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="2" TabStop="true" Top="94" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="995">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="EOCS번호"/>
+						<cell col="2" display="text" text="진행상태"/>
+						<cell col="3" display="text" text="굴착공사명"/>
+						<cell col="4" display="text" text="공사시점"/>
+						<cell col="5" display="text" text="공사종점"/>
+						<cell col="6" display="text" text="굴착종류"/>
+						<cell col="7" display="text" text="작업종류"/>
+						<cell col="8" display="text" text="굴착기간"/>
+						<cell col="9" display="text" text="위치보기"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expandsize="18" expr="ROWINDEX+1" wordwrap="word"/>
+						<cell col="1" colid="EOCS_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="WORK_PROC_STS" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="DIG_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="DIG_STR_LOC" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" colid="DIG_END_LOC" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="6" colid="DIG_KIND" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="7" colid="JOB_TYPE" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="8" colid="DIG_PLAN" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="9" colid="XY" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="#6cbae1" Bottom="94" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1000" TabOrder="3" Top="91" Type="Rectangle" Width="995"></Shape>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1000" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="18" Top="30" Type="RoundRect" Width="995"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="995" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="19" Top="35" Type="Rectangle" Width="985"></Shape>
+		<Image Align="Left" Height="6" Id="Image7" ImageID="blt" Left="266" LeftMargin="12" Style="blt_search_1" TabOrder="4" Text="굴착종류" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image5" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="5" Text="지사" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="146" LeftMargin="12" Style="blt_search_1" TabOrder="6" Text="구" Top="46" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Branc" Left="54" Style="combo" TabOrder="7" Top="38" Width="84"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_Area" Left="173" Style="combo" TabOrder="8" Top="39" Width="84"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_DigKind" Left="330" Style="combo" TabOrder="9" Top="39" Width="104"></Combo>
+		<Image Align="Left" Height="6" Id="Image1" ImageID="blt" Left="443" LeftMargin="12" Style="blt_search_1" TabOrder="10" Text="작업종류" Top="46" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_WorkKind" Left="507" Style="combo" TabOrder="11" Top="39" Width="89"></Combo>
+		<Image Align="Left" Height="6" Id="Image2" ImageID="blt" Left="605" LeftMargin="12" Style="blt_search_1" TabOrder="12" Text="진행상태" Top="46" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Status" Left="667" Style="combo" TabOrder="13" Top="37" Width="81"></Combo>
+		<Image Align="Left" Height="6" Id="Image6" ImageID="blt" Left="755" LeftMargin="12" Style="blt_search_1" TabOrder="14" Text="접수일자" Top="47" Width="61"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_StartDate" Left="820" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="15" Top="40" WeeksFont="Default,-1" Width="83"></Calendar>
+		<Static Height="13" Id="Static0" Left="904" Style="static" TabOrder="16" Text="~" Top="43" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_EndDate" Left="914" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="17" Top="40" WeeksFont="Default,-1" Width="83"></Calendar>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="20" Text="굴착공사&#32;조회" Top="75" Width="117"></Image>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+/*===============================================================================
+ * 함수명: D1402070010F_OnLoadCompleted()
+   설명: 화면 로드 후 조회 조건 기본 셋팅
+   return 내용: 없음
+===============================================================================*/ 
+function D1402070010F_OnLoadCompleted(obj)
+{
+	
+	gfn_LoadForm(obj);
+	gfn_CatchComponents(obj);
+	
+	//	조회조건 
+	gfn_SetComboBox_Comcode("B10037",gfn_setDsObject_Comcode("cob_Branc"));			//	지사
+	gfn_SetComboBox_Comcode("B10004",gfn_setDsObject_Comcode("cob_Area"));			//	구
+	gfn_SetComboBox_Comcode("D10165",gfn_setDsObject_Comcode("cob_DigKind"));		//	굴착종류
+	gfn_SetComboBox_Comcode("D10166",gfn_setDsObject_Comcode("cob_WorkKind"));		//	작업종류
+	//gfn_SetComboBox_Comcode("D10157",gfn_setDsObject_Comcode("cob_Status"));		//	진행상태
+	cal_StartDate.Text = today(); //today();										//	기간
+	var endDay = "28";
+	switch(substr(today(),4,2)){
+		case "1":	endDay = "31";	break;
+		case "3":	endDay = "31";	break;
+		case "5":	endDay = "31";	break;
+		case "7":	endDay = "31";	break;
+		case "8":	endDay = "31";	break;
+		case "10":	endDay = "31";	break;
+		case "12":	endDay = "31";	break;
+		case "2":	endDay = "28";	break;
+		case "4":	endDay = "30";	break;
+		case "6":	endDay = "30";	break;
+		case "9":	endDay = "30";	break;
+		case "11":	endDay = "30";	break;
+        default:
+    }
+    cal_EndDate.Text = substr(today(),0,6)+endDay ; //today();
+	//	cob_Branc.Index = 0;
+}
+
+
+/*===============================================================================
+ * 함수명: fn_D1_Search()
+   설명: 조회 
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonSearch(){	
+
+	/*
+	//  ds_Search 구성
+	ds_Search.ClearData();
+    ds_Search.AddColumn("BRANCH_CD","STR",255);
+    ds_Search.AddColumn("ZIP_NO1","STR",255);
+    ds_Search.AddColumn("DIG_KIND","STR",255);
+    ds_Search.AddColumn("JOB_TYPE_CD","STR",255);
+    ds_Search.AddColumn("WORK_PROC_STS","STR",255);
+    ds_Search.AddColumn("RECEIV_YMD1","STR",255);
+    ds_Search.AddColumn("RECEIV_YMD2","STR",255);
+   
+    ds_Search.InsertRow(0);
+    ds_Search.SetColumn(0,"BRANCH_CD", cob_Branc.Value );
+    ds_Search.SetColumn(0,"ZIP_NO1", cob_Area.Value );
+    ds_Search.SetColumn(0,"DIG_KIND", cob_DigKind.Value );
+    ds_Search.SetColumn(0,"JOB_TYPE_CD", cob_WorkKind.Value );
+    ds_Search.SetColumn(0,"WORK_PROC_STS", cob_Status.Value );
+    ds_Search.SetColumn(0,"RECEIV_YMD1", cal_StartDate.Value );
+    ds_Search.SetColumn(0,"RECEIV_YMD2", cal_EndDate.Value );
+
+	 */
+
+	//	Trace(ds_Search.SaveXML());
+    var ServiceId     = "find";
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName=D1402070010F-service&BRANCH_CD="+cob_Branc.Value+"&ZIP_NO1="+cob_Area.Value +"&DIG_KIND="+cob_DigKind.Value +"&JOB_TYPE_CD="+cob_WorkKind.Value +"&WORK_PROC_STS="+cob_Status.Value+"&RECEIV_YMD1="+cal_StartDate.Value +"&RECEIV_YMD2="+cal_EndDate.Value;
+	//	var Url             = "handle.do?ServiceName=D1_ DiggingWorkHistoryMgr-service&RECEIV_YMD1="+cal_StartDate.Value +"&RECEIV_YMD2="+cal_EndDate.Value;                          
+    //	trace(Url);
+    var InputDsList     = "";
+    var OutputDsList = "ds_Dig=ds_Dig";
+    var Argument      = "find";
+    var CallBack     = "fn_D1_CallBack";
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+    
+    if(ds_Dig.GetRowCount()==0)
+        Grid0.NoDataText="조회결과가 없습니다.";
+    
+}]]></Script>
+</Window>

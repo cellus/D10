@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="729" Id="D1302040010F" Left="8" OnLoadCompleted="D1302040010F_OnLoadCompleted" OnUnloadCompleted="D1202020010F_OnUnloadCompleted" PidAttrib="7" Top="8" Ver="1.0" Width="1260" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PipeList">
+				<Contents>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALVE_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TB_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="WTDR_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YMD_PRI1" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_POINT" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeResult">
+				<Contents>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_END_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_RSLT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SELF_INSPECT_REG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPNM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="DRAFTER_EMPID&#32;" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeRegFlag">
+				<Contents>
+					<colinfo id="CODE" size="256" type="STRING"/>
+					<colinfo id="ITEM" size="256" type="STRING"/>
+					<record>
+						<CODE>10</CODE>
+						<ITEM>등록</ITEM>
+					</record>
+					<record>
+						<CODE>20</CODE>
+						<ITEM>미등록</ITEM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeRstFlag"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeListExcel">
+				<Contents>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="KOPIPE_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALVE_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TB_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="WTDR_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YMD_PRI1" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeResultD">
+				<Contents>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_END_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_RSLT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SELF_INSPECT_REG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BLOCK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPNM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_NM_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="DRAFTER_EMPID&#32;" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PipeRstFlag1"></Dataset>
+		</Datasets>
+		<Shape BKColor="#6cbae1" Bottom="29" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1243" TabOrder="2" Top="26" Type="Rectangle" Width="1238"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_PipeList" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="541" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="512" Id="grd_PipeList" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_PipeList_OnCellClick" Right="1243" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="29" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1238">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="50"/>
+						<col width="120"/>
+						<col width="150"/>
+						<col width="0"/>
+						<col width="200"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="시/구"/>
+						<cell col="2" display="text" text="팀"/>
+						<cell col="3" display="text" text="구간번호"/>
+						<cell col="4" display="text" text="구간"/>
+						<cell col="5" display="text" text="본관연장(m)"/>
+						<cell col="6" display="text" text="공급관연장(m)"/>
+						<cell col="7" display="text" text="밸브수량(개소)"/>
+						<cell col="8" display="text" text="TB수량(개소)"/>
+						<cell col="9" display="text" text="수취기수량(개소)"/>
+						<cell align="center" col="10" display="text" text="결재일자"/>
+					</head>
+					<body>
+						<cell align="right" col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="1" colid="ZIP_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="TEAM_NM" display="text"/>
+						<cell align="center" col="3" colid="BLOCK_NM" display="text"/>
+						<cell align="left" col="4" colid="BLOCK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="5" colid="KOPIPE_LENG" display="number"/>
+						<cell align="right" col="6" colid="MPIPE_LENG" display="number"/>
+						<cell align="right" col="7" colid="VALVE_CNT" display="number"/>
+						<cell align="right" col="8" colid="TB_CNT" display="number"/>
+						<cell align="right" col="9" colid="WTDR_CNT" display="number"/>
+						<cell align="center" col="10" colid="DECIDE_YMD" display="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image0" ImageID="blt_8" LeftMargin="12" Style="text_title" TabOrder="5" Text="자율검사결과&#32;등록" Top="552" Width="210"></Image>
+		<Shape BKColor="#6cbae1" Bottom="571" Height="3" Id="Shape3" Left="5" LineWidth="0" Right="1243" TabOrder="4" Top="568" Type="Rectangle" Width="1238"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_PipeResult" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="720" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="149" Id="grd_PipeRst" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnExpandEdit="grd_PipeRst_OnCellClick" Right="1243" SelColor="BACKGROUND" Style="grid" TabOrder="3" TabStop="true" Top="571" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1238">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="50"/>
+						<col width="244"/>
+						<col width="100"/>
+						<col width="122"/>
+						<col width="100"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="350"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="normal" text="구간"/>
+						<cell col="2" display="text" text="검사일자"/>
+						<cell col="3" display="text" text="자율검사서"/>
+						<cell col="4" display="text" text="검사결과"/>
+						<cell col="5" display="text" text="결재일자"/>
+						<cell col="6" display="text" text="결재자"/>
+						<cell col="7" display="text" text="부적합&#32;사유"/>
+						<cell col="8" display="text" text="검사자&#32;1"/>
+						<cell col="9" display="text" text="검사자&#32;2"/>
+						<cell align="center" col="10" display="text" text="정비보수번호"/>
+					</head>
+					<body>
+						<cell align="right" col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="left" col="1" colid="BLOCK_NM" display="normal" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="INSPECT_STR_YMD" display="date" expandimage="Calendar" expandshow="true"/>
+						<cell align="center" col="3" colid="SELF_INSPECT_REG" combocol="CODE" combodataset="ds_PipeRegFlag" combotext="ITEM" display="combo" expandimage="search" expandshow="true"/>
+						<cell align="center" col="4" colid="INSPECT_RSLT_CD" display="combo"/>
+						<cell align="center" col="5" colid="DECIDE_YMD" display="date"/>
+						<cell align="center" col="6" colid="DRAFTER_EMPNM" display="text"/>
+						<cell align="left" col="7" colid="NOT_PASS_WHY" display="text" edit="expr:iif((DECIDE_YMD&#32;==&#32;&apos;&apos;&#32;||&#32;DECIDE_YMD&#32;==&#32;null)&#32;&amp;&amp;&#32;INSPECT_RSLT_CD&#32;==&#32;&apos;20&apos;,&#32;&apos;normal&apos;,&#32;&apos;none&apos;)" limit="30"/>
+						<cell align="center" col="8" colid="INSPECT_NM_1" display="text"/>
+						<cell align="center" col="9" colid="INSPECT_NM_2" display="text"/>
+						<cell align="center" col="10" colid="MAINTER_NUM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="6" Text="자율검사대상(배관)" Top="5" Width="210"></Image>
+		<Grid AutoEnter="TRUE" BindDataset="ds_PipeListExcel" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="792" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="45" Id="grd_Excel" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnCellClick="grd_PipeRst_OnCellClick" Right="1440" SelColor="BACKGROUND" Style="grid" TabOrder="7" TabStop="true" Top="747" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1435">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="200"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="150"/>
+						<col width="172"/>
+						<col width="149"/>
+						<col width="149"/>
+						<col width="122"/>
+						<col width="100"/>
+						<col width="399"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="구간코드"/>
+						<cell col="1" display="text" text="시/구"/>
+						<cell col="2" display="text" text="팀"/>
+						<cell col="3" display="text" text="구간"/>
+						<cell col="4" display="text" text="본관연장(m)"/>
+						<cell col="5" display="text" text="공급관연장(m)"/>
+						<cell col="6" display="text" text="밸브수량(개소)"/>
+						<cell col="7" display="text" text="TB수량(개소)"/>
+						<cell col="8" display="text" text="수취기수량(개소)"/>
+						<cell col="9" display="text" text="자율계획일자"/>
+						<cell col="10" display="text" text="검사일자"/>
+						<cell col="11" display="text" text="자율검사서등록&#32;여부"/>
+						<cell col="12" display="text" text="검사결과"/>
+						<cell col="13" display="text" text="부적합&#32;사유"/>
+						<cell col="14" display="text" text="검사자&#32;1"/>
+						<cell col="15" display="text" text="검사자&#32;2"/>
+						<cell col="16" display="text" text="정비보수번호"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="BLOCK_CD" display="text"/>
+						<cell align="center" col="1" colid="ZIP_NO1" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="TEAM_NM" display="text"/>
+						<cell align="center" col="3" colid="BLOCK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="4" colid="KOPIPE_LENG" display="number"/>
+						<cell align="right" col="5" colid="MPIPE_LENG" display="number"/>
+						<cell align="right" col="6" colid="VALVE_CNT" display="number"/>
+						<cell align="right" col="7" colid="TB_CNT" display="number"/>
+						<cell align="right" col="8" colid="WTDR_CNT" display="number"/>
+						<cell align="center" col="9" colid="SELF_INSPECT_PLAN_YMD" display="date" expandimage="Calendar" expandshow="true"/>
+						<cell align="center" col="10" colid="INSPECT_STR_YMD" display="date" expandimage="Calendar" expandshow="true"/>
+						<cell align="center" col="11" colid="SELF_INSPECT_REG" display="combo" expandimage="search" expandshow="true"/>
+						<cell align="center" col="12" colid="INSPECT_RSLT_CD" display="combo"/>
+						<cell align="left" col="13" colid="NOT_PASS_WHY" display="text"/>
+						<cell align="center" col="14" colid="INSPECT_NM_1" display="text"/>
+						<cell align="center" col="15" colid="INSPECT_NM_2" display="text"/>
+						<cell align="center" col="16" colid="MAINTER_NUM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" BindDataset="ds_Multi" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="grd_list" ImageID="btn_6_reg" Left="1143" LeftMargin="21" OnClick="fn_Maint_Repai_Reque" Style="button" TabOrder="8" Text="정비보수의뢰" Top="546" Width="100"></Button>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1302040010F.xml
+* Form 설명  : 자율 검사 배관 결과를 조회 , 등록 , 수정
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2009-01-05
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+//자율검사대상 시설에서 선택한 배관에 대한 기본 정보
+var StrInspectYear    = "";
+var strBlockCd        = "";
+var strBlockNm        = "";
+var strValveCnt       = "";
+var strTbCnt          = "";
+var strWtdrCnt        = "";
+var strInspectYmdPri1 = "";
+var strStrPoint 	  = "";
+var strEndPoint 	  = "";
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_Maint_Repai_Reque()
+//   설명:  정비보수의뢰 팝업을 오픈 한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_Maint_Repai_Reque(obj)
+{
+	var str_MAINTER_NUM  = trim(ds_PipeResult.GetColumn(ds_PipeResult.row,"MAINTER_NUM")) ;
+	
+	var str_INSPECT_YEAR      = ds_PipeResult.GetColumn(ds_PipeResult.row, "INSPECT_YEAR");
+	var str_INSPECT_FLAG      = '20';
+	var str_INSPECT_STR_YMD   = ds_PipeResult.GetColumn(ds_PipeResult.row  , "INSPECT_STR_YMD" );
+	var str_BRANCH_CD         = ds_PipeList.GetColumn  (ds_PipeList.row    , "BRANCH_CD"   	   );		
+	var str_ZIP_NO1       	  = ds_PipeList.GetColumn  (ds_PipeList.row    , "ZIP_NO1"     	   );
+	var str_FACI_NUM	      = ds_PipeResult.GetColumn(ds_PipeResult.row  , "BLOCK_CD"    	   );
+	var str_TEAM_CD		      = ds_PipeList.GetColumn  (ds_PipeList.row    , "TEAM_CD"     	   );		
+	
+	// ##############################################
+	// 정비보수 화면 연계
+	// ##############################################	
+	
+	var objDsName = gfn_D10_setDsObject_D1601010010F();
+	
+	eval(objDsName).SetColumn(0,"OPEN_FLAG"         ,"D1302040010F" 	); // 01. 구분 (지정된 화면)  
+	eval(objDsName).SetColumn(0,"MAINTER_NUM"       ,str_MAINTER_NUM	); // 02. 정비보수번호        
+	eval(objDsName).SetColumn(0,"BRANCH_CD"         ,str_BRANCH_CD  	); // 03. 지사코드            
+
+	eval(objDsName).SetColumn(0,"TEAM_CD"           ,str_TEAM_CD      	); // 05. 팀코드              
+	eval(objDsName).SetColumn(0,"WORK_FIRM_CD"      ,""	 				); // 06. 시공사코드
+	eval(objDsName).SetColumn(0,"FACI_NUM"          ,str_FACI_NUM		); // 07. 시설물코드          
+	eval(objDsName).SetColumn(0,"FACI_NM"           ,""					); // 08. 시설물명	
+	eval(objDsName).SetColumn(0,"ZIP_SEQ"           ,""					); // 09. 우편일련번호        
+	eval(objDsName).SetColumn(0,"ZIP_NO1"           ,str_ZIP_NO1		); // 10. 우편번호1           
+	eval(objDsName).SetColumn(0,"ZIP_NO2"           ,""					); // 11. 우편번호2           
+	eval(objDsName).SetColumn(0,"HILL"              ,""					); // 12. 산번지              
+	eval(objDsName).SetColumn(0,"ADDR_M"            ,""					); // 13. 본번                
+	eval(objDsName).SetColumn(0,"ADDR_S"            ,""					); // 14. 부번                
+	eval(objDsName).SetColumn(0,"SECOND_ADDR"       ,""					); // 15. 보조주소            
+	eval(objDsName).SetColumn(0,"BLD_DONG"          ,""					); // 16. 건물동              
+	eval(objDsName).SetColumn(0,"HOSU"              ,""					); // 17. 호수                
+	eval(objDsName).SetColumn(0,"LOT_NUM_UNION"     ,""					); // 18. 지번주소조합        	
+	eval(objDsName).SetColumn(0,"PAVEMENT_KIND"     ,""					); // 19. 포장종류코드
+	eval(objDsName).SetColumn(0,"WORK_REQ_EMPID"    ,""					); // 20. 의뢰자ID            
+	eval(objDsName).SetColumn(0,"WORK_REQ_EMPID_NM" ,""					); // 21. 의뢰자명	 
+	eval(objDsName).SetColumn(0,"KEY1"              ,str_INSPECT_YEAR   ); // 22. PK1                 
+	eval(objDsName).SetColumn(0,"KEY2"              ,str_FACI_NUM	    ); // 23. PK2	
+	eval(objDsName).SetColumn(0,"KEY3"              ,str_INSPECT_FLAG   ); // 25. PK3                 
+	eval(objDsName).SetColumn(0,"KEY4"              ,str_INSPECT_STR_YMD); // 26. PK4	
+	eval(objDsName).SetColumn(0,"KEY5"              ,""				    ); // 26. PK5
+	
+	// 화면 OPEN
+	gfn_Form_D1601010010F(objDsName);
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SearchPlan()
+//   설명:  자율 검사 대상 배관을 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SearchPlan()
+{	
+	var strSvcID       = "fn_D1_Find";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeMgr-service"
+					   + "&BRANCH_CD="    + cob_Branch.Value
+					   + "&ZIP_NO1="      + cob_ZipNo.Value
+					   + "&INSPECT_YEAR=" + sp_Year.Value
+					   + "&TEAM_CD="      + cob_Team.Value
+			           + "&BLOCK_CD="	  + cob_PBlockCd.Value
+					   ;
+					   
+	var strInDatasets  = "";
+	var strOutDatasets = "ds_PipeList=ds_PipeList ds_PipeListExcel=ds_PipeListExcel";
+	var strArgument    = "findPipe";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	StrInspectYear    = "";
+	strBlockCd        = "";
+	strBlockNm        = "";
+	strValveCnt       = "";
+	strTbCnt          = "";
+	strWtdrCnt        = "";
+	strInspectYmdPri1 = "";
+	strEndPoint = "";
+	strRowType = "";
+    ds_PipeResult.ClearData();
+    
+    if(ds_PipeList.GetRowCount()==0)
+	{
+        grd_PipeList.NoDataText="조회결과가 없습니다.";
+        return;
+    }
+    
+    grd_PipeList_OnCellClick("",0,"","","","");
+}
+
+/*===============================================================================
+ * 함수명: fn_D1_DeleteRow()
+   설명: 정기검사 결과등록 레코드 한줄을 삭제한다.
+   return 내용: 없음
+===============================================================================*/ 
+function fn_D1_DeleteRow()
+{	
+	if(ds_PipeResult.GetRowCount() == 0){
+		alert("삭제할 대상이 없습니다. ");
+		return;
+	}
+
+	if(!gfn_IsNull(ds_PipeResult.GetColumn(ds_PipeResult.row, "DECIDE_YMD"))){
+		alert("결재처리된 데이터는 삭제가 불가능합니다. ");
+		return;
+	}
+	
+	var result = Confirm("데이터를 삭제하시겠습니까? ");
+		
+	if(result == '0'){
+			return;
+	}
+	
+	fn_D1_Delete();
+	
+	StrInspectYear    = ds_PipeList.GetColumn(ds_PipeList.row,"INSPECT_YEAR"	 );
+	strBlockCd        = ds_PipeList.GetColumn(ds_PipeList.row,"BLOCK_CD"    	 );
+	strBlockNm        = ds_PipeList.GetColumn(ds_PipeList.row,"BLOCK_NM"    	 );
+	
+	fn_D1_ResultSearch(StrInspectYear, strBlockCd, strBlockNm);	
+}
+
+function fn_D1_Delete(){
+
+	ds_PipeResultD.ClearData();
+	
+	ds_PipeResultD.AddRow();
+	
+	ds_PipeResultD.CopyRow(0, "ds_PipeResult", ds_PipeResult.row, "");	
+	ds_PipeResult.DeleteRow(ds_PipeResult.row);
+				
+	ds_PipeResultD.UpdateControl = false;
+	ds_PipeResultD.SetRowType(0, "delete");
+		
+	var strSvcID 	   = "savePipe";
+	var strPart  	   = "D10";
+	var strURL         = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeMgr-service";
+	var strInDatasets  = "ds_PipeResult=ds_PipeResultD:u";
+	var strOutDatasets = "";
+	var strArgument    = "savaPipeRst";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	alert(gfn_GetMessage("M000009","%AAA%","정상적으로 삭제를"),"black",true);
+}
+
+function fn_D1_Delete1(){
+
+	ds_PipeResultD.ClearData();
+	
+	var nCnt = ds_PipeResult.GetRowCount();
+	
+	for(var i=0; i<nCnt; i++){
+		if(ds_PipeResult.GetRowType(i) == 'insert'){
+			var nRow = ds_PipeResultD.AddRow();
+			ds_PipeResultD.CopyRow(nRow, "ds_PipeResult", , "");
+			
+			ds_PipeResultD.UpdateControl = false;
+			ds_PipeResultD.SetRowType(0, "delete");
+		}
+	}	
+		
+	var strSvcID 	   = "savePipe";
+	var strPart  	   = "D10";
+	var strURL  	   = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeMgr-service";
+	var strInDatasets  = "ds_PipeResult=ds_PipeResultD:u";
+	var strOutDatasets = "";
+	var strArgument    = "savaPipeRst";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+}
+
+function grd_PipeList_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	gfn_SetGrdComboBox_Comcode("grd_PipeRst",4,"D10176");
+	
+	grd_PipeRst.SetCellProp("body",4,"Edit","none");
+	grd_PipeRst.SetCellProp("body",5,"Edit","none");
+	
+	StrInspectYear    = ds_PipeList.GetColumn(nRow,"INSPECT_YEAR"	 );
+	strBlockCd        = ds_PipeList.GetColumn(nRow,"BLOCK_CD"    	 );
+	strBlockNm        = ds_PipeList.GetColumn(nRow,"BLOCK_NM"    	 );
+	strValveCnt       = ds_PipeList.GetColumn(nRow,"VALVE_CNT"   	 );
+	strTbCnt          = ds_PipeList.GetColumn(nRow,"TB_CNT"      	 );
+	strWtdrCnt        = ds_PipeList.GetColumn(nRow,"WTDR_CNT"    	 );
+	strStrPoint       = ds_PipeList.GetColumn(nRow,"STR_POINT"   	 );
+	strEndPoint       = ds_PipeList.GetColumn(nRow,"END_POINT"       );
+	strInspectYmdPri1 = ds_PipeList.GetColumn(nRow,"INSPECT_YMD_PRI1");
+	
+	fn_D1_ResultSearch(StrInspectYear, strBlockCd, strBlockNm);
+
+	strRowType = "search";
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_ResultSearch(StrInspectYear, strBlockCd, strBlockNm)
+//   설명: 기검사 결과등록을 조회 하는 함수
+// arguments   
+//          StrInspectYear: 검사년도
+//          strBlockCd: 구간번호
+//          strBlockNm: 구간명
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_ResultSearch(StrInspectYear, strBlockCd, strBlockNm)
+{	
+	ds_PipeResult.ClearData();
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+    var strSvcID       = "fn_D1_ResultSearch";
+    var strPart        = "D10";
+    var strURL         = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeMgr-service&"
+					   + "&BLOCK_CD="     + strBlockCd
+					   + "&BLOCK_NM="     + strBlockNm
+					   + "&INSPECT_YEAR=" +StrInspectYear
+					   ;
+    var strInDatasets  = "";
+    var strOutDatasets = "ds_PipeResult=ds_PipeResult";
+    var strArgument    = "findResult";   
+    
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	if(ds_PipeResult.GetRowCount()==0)
+	{
+        grd_PipeRst.NoDataText="조회결과가 없습니다.";
+        return;
+    }
+}
+
+/*===============================================================================
+ * 함수명: fn_D1_AddRow()
+   설명: 자율검사 결과등록 레코드 한줄을 추가한다.
+   return 내용: 없음
+===============================================================================*/ 
+function fn_D1_AddRow()
+{
+	if(strBlockCd != "")
+	{
+		gfn_SetGrdComboBox_Comcode("grd_PipeRst",4,"D10176");
+		grd_PipeRst.SetCellProp("body",4,"Edit","none");
+		
+		ds_PipeResult.InsertRow(0);
+		strRowType = "insert";
+		
+		ds_PipeResult.SetColumn(0,"BLOCK_CD"	    ,strBlockCd    );
+		ds_PipeResult.SetColumn(0,"BLOCK_NM"	    ,strBlockNm    );
+		ds_PipeResult.SetColumn(0,"INSPECT_YEAR"    ,StrInspectYear);
+		ds_PipeResult.SetColumn(0,"SELF_INSPECT_REG","20"     	   );
+		
+    }else{
+		alert('자율검사대상을 선택해주세요');
+    }
+}
+
+//---------------------------------------------------------
+// 달력 팝업 및 팝업창 열기
+//---------------------------------------------------------
+function grd_PipeRst_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	var str_INSPECT_YEAR = ds_PipeResult.GetColumn(nRow, "INSPECT_YEAR"    );
+	var str_INSPECT_YMD  = ds_PipeResult.GetColumn(nRow, "INSPECT_STR_YMD" );
+	var str_BLOCK_CD     = ds_PipeResult.GetColumn(nRow, "BLOCK_CD"        );
+
+	var nRowtType = ds_PipeResult.GetRowType(nRow);
+
+	if("INSPECT_STR_YMD" == grd_PipeRst.GetCellProp("body",nCell,"ColId"))
+	{
+		if(ds_PipeResult.GetColumn(nRow, "SELF_INSPECT_REG") == 20 && ds_PipeResult.GetRowType(nRow) == 'insert'){
+			gfn_SetCalendar(obj, nRow, nCell);
+		}
+	
+	}else if("SELF_INSPECT_REG" == grd_PipeRst.GetCellProp("body",nCell,"ColId"))
+	{
+		if(ds_PipeResult.GetColumn(nRow,"INSPECT_STR_YMD") == null)
+		{
+			alert('검사일자를 먼저 등록해 주세요');
+			return;
+		} else if(!fn_DateCheckTodayGrid(ds_PipeResult.GetColumn(nRow,"INSPECT_STR_YMD"),"검사일자"))
+		{
+			return;
+		} else if(nRowtType == "insert")
+		{			
+			var temp_1;
+			var temp_2;
+				
+			for(var i=0; i<ds_PipeResult.GetRowCount(); i++){
+		
+				temp_1 = trim(ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD"));	
+			
+				if(temp_1 != '' && temp_1 != null){
+			
+					for(var j=0; j<=i; j++){
+										
+						if(i != j){				
+							
+							temp_2 = trim(ds_PipeResult.GetColumn(j,"INSPECT_STR_YMD"));
+							
+							if(temp_2 != '' && temp_2 != null){							
+								
+								if(temp_1 == temp_2){
+									alert("검사일자가 동일한 경우에는 등록하실 수 없습니다. 검사일자가 중복되지 않도록 선택해 주십시오. ");
+									return;
+								}							
+							}
+						}
+					}
+				}
+			}
+			
+			/*
+			var nCnt = 0;
+			var nRowCount = ds_PipeResult.GetRowCount();
+			
+			for(var i=0; i<nRowCount; i++){
+				if(ds_PipeResult.GetRowType(i) == 'insert'){
+					nCnt = toNumber(nCnt) + 1;
+				}
+			}
+			
+			if(nCnt > 0){
+				alert("자율검사결과 정보를 먼저 등록하신 후 자율검사서를 작성하십시오. ");
+				return;
+			}			
+						
+			var strChkFlag = fn_D1_CheckReg(str_INSPECT_YEAR, str_INSPECT_YMD, str_BLOCK_CD);
+		
+			if(!strChkFlag) 
+			{
+				var str_CRTDTM = ds_PipeRstFlag.GetColumn(0, "CRT_TIME" );
+				var str_CRTNM  = ds_PipeRstFlag.GetColumn(0, "CRT_EMPNM");
+			
+				var str_INSPECT_YMD1     = substr(ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD"), 0, 4);
+					str_INSPECT_YMD1	+= "년 ";
+					str_INSPECT_YMD1	+= substr(ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD"), 4, 2);
+					str_INSPECT_YMD1	+= "월 ";
+					str_INSPECT_YMD1	+= substr(ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD"), 6, 2);
+					str_INSPECT_YMD1	+= "일";
+			
+					alert("검사일자 " + str_INSPECT_YMD1 + "에 대한 결과 데이터는 \n" + str_CRTNM + "님께서 " + str_CRTDTM + "에 이미 등록하신 데이터입니다. \n데이터를 조회합니다. ");
+					return;
+			}*/
+		}
+		
+		fn_D1_SavePipeRst('popup');
+		
+		fn_D1_CheckReg1(str_INSPECT_YEAR, str_INSPECT_YMD, str_BLOCK_CD);
+		
+		var str_CrtTime = ds_PipeRstFlag1.GetColumn(0, "CRT_TIME" );
+		var str_CrtNm   = ds_PipeRstFlag1.GetColumn(0, "CRT_EMPNM");
+				
+		var strRowType = '';
+		
+		if(ds_PipeRstFlag1.GetRowCount() <= 0){		
+			strRowType = 'insert';
+		}else{
+			strRowType = 'search';
+		}
+				
+		var retValue = parent.fn_Maint_Repai_Reque(ds_PipeResult.GetColumn(nRow,"INSPECT_STR_YMD"), strValveCnt, strTbCnt, strWtdrCnt, strInspectYmdPri1,
+		               Replace(strBlockNm," ","&"), strBlockCd, StrInspectYear, strStrPoint, strEndPoint, strRowType, str_CrtTime, str_CrtNm, ds_PipeResult.GetColumn(nRow,"DECIDE_YMD"), ds_PipeResult.GetColumn(nRow,"DECIDE_PROC_STS"));
+		               
+		if(retValue == null || retValue == 0)
+		{
+			return;
+		}
+
+		if(retValue[2] == "savePass")
+		{
+			ds_PipeResult.SetColumn(nRow,"SELF_INSPECT_REG","10"	   );
+			ds_PipeResult.SetColumn(nRow,"INSPECT_RSLT_CD" ,"10"	   );
+			ds_PipeResult.SetColumn(nRow,"INSPECT_NM_1"	   ,retValue[0]);
+			ds_PipeResult.SetColumn(nRow,"INSPECT_NM_2"	   ,retValue[1]);
+			ds_PipeResult.SetColumn(nRow,"NOT_PASS_WHY"	   ,""         );
+			
+		}else if(retValue[2] == "saveNotPass")
+		{
+			ds_PipeResult.SetColumn(nRow,"SELF_INSPECT_REG","10");
+			ds_PipeResult.SetColumn(nRow,"INSPECT_RSLT_CD" ,"20");
+			ds_PipeResult.SetColumn(nRow,"INSPECT_NM_1"    ,retValue[0]);
+			ds_PipeResult.SetColumn(nRow,"INSPECT_NM_2"    ,retValue[1]);			
+		}else{
+			ds_PipeResult.SetColumn(nRow,"SELF_INSPECT_REG","20");
+			ds_PipeResult.SetColumn(nRow,"INSPECT_RSLT_CD" ,""  );
+		}
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SaveReg()
+//   설명: 자율검사 결과등록하는 함수
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SaveReg()
+{
+	fn_D1_SavePipeRst('btn');
+	
+	fn_D1_ResultSearch(StrInspectYear, strBlockCd, strBlockNm);
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SavePipeRst()
+//   설명: 자율검사계획 결과등록 내용을 등록 및 수정한다.
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SavePipeRst(flag)
+{	
+	if(strBlockCd != "")
+	{
+		var temp_1;
+		var temp_2;
+			
+		for(var i=0; i<ds_PipeResult.GetRowCount(); i++){
+	
+			temp_1 = trim(ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD"));	
+		
+			if(temp_1 != '' && temp_1 != null){
+		
+				for(var j=0; j<=i; j++){
+									
+					if(i != j){				
+						
+						temp_2 = trim(ds_PipeResult.GetColumn(j,"INSPECT_STR_YMD"));
+						
+						if(temp_2 != '' && temp_2 != null){							
+							if(temp_1 == temp_2){
+								alert("검사일자가 동일한 경우에는 등록하실 수 없습니다. 검사일자가 중복되지 않도록 선택해 주십시오. ");
+								return;
+							}							
+						}
+					}
+				}
+			}
+		}
+	}
+
+	var saveFlag = 0;
+	
+	if(strBlockCd != "")
+	{
+		for(var i=0; i<ds_PipeResult.RowCount(); i++)
+		{		
+			if(ds_PipeResult.GetRowType(i) == "insert"){
+				
+				var str_INSPECT_YEAR = ds_PipeResult.GetColumn(i, "INSPECT_YEAR"    );
+				var str_INSPECT_YMD  = ds_PipeResult.GetColumn(i, "INSPECT_STR_YMD" );
+				var str_BLOCK_CD     = ds_PipeResult.GetColumn(i, "BLOCK_CD"        );
+				
+				var strChkFlag = fn_D1_CheckReg(str_INSPECT_YEAR, str_INSPECT_YMD, str_BLOCK_CD);
+				
+				if(!strChkFlag) 
+				{
+					var str_CRTDTM = ds_PipeRstFlag.GetColumn(0, "CRT_TIME" );
+					var str_CRTNM  = ds_PipeRstFlag.GetColumn(0, "CRT_EMPNM");
+				
+					var str_INSPECT_YMD1   = substr(ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD"), 0, 4);
+						str_INSPECT_YMD1  += "년 ";
+						str_INSPECT_YMD1  += substr(ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD"), 4, 2);
+						str_INSPECT_YMD1  += "월 ";
+						str_INSPECT_YMD1  += substr(ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD"), 6, 2);
+						str_INSPECT_YMD1  += "일";
+		
+					alert("검사일자 " + str_INSPECT_YMD1 + "에 대한 결과 데이터는 \n" + str_CRTNM + "님께서 " + str_CRTDTM + "에 이미 등록하신 데이터입니다. \n데이터를 조회해 주십시오. ");
+					return;
+				}
+				
+				if(ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD") == "" || ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD") == null)
+				{
+					alert(gfn_GetMessage("M000011","%AAA%","검사일자를"));
+					return;
+				}
+				
+				if(!fn_DateCheckTodayGrid(ds_PipeResult.GetColumn(i,"INSPECT_STR_YMD"),"검사일자"))
+				{
+					return;
+				}
+				
+				//수정 등록시 셋팅할 사용자 정보
+				ds_PipeResult.SetColumn(i, "UPD_EMPID"		, gfn_GetGlobalValue("G_USER_NO"             ));
+				ds_PipeResult.SetColumn(i, "UPD_IP"		    , gfn_GetGlobalValue("G_IPADDRESS"           ));
+				ds_PipeResult.SetColumn(i, "CRT_EMPID"	    , gfn_GetGlobalValue("G_USER_NO"             ));
+				ds_PipeResult.SetColumn(i, "CRT_IP"         , gfn_GetGlobalValue("G_IPADDRESS"           ));
+				ds_PipeResult.SetColumn(i, "INSPECT_END_YMD", ds_PipeResult.GetColumn(0,"INSPECT_STR_YMD"));
+				
+				saveFlag = 1;
+				
+			}else if(ds_PipeResult.GetRowType(i) == "update"){
+			
+				 //수정 등록시 셋팅할 사용자 정보
+				ds_PipeResult.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+				ds_PipeResult.SetColumn(i, "UPD_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));
+				
+				saveFlag = 1;
+			}
+		}
+	}else{
+		return;
+	}	
+	
+	var strSvcID 		= "savePipe";
+	var strPart 	    = "D10";
+	var strURL 			= "handle.do?ServiceName=D1_SelfTestRsltRegisPipeMgr-service";
+	var strInDatasets   = "ds_PipeResult=ds_PipeResult:u";
+	var strOutDatasets  = "";
+	var strArgument     = "savaPipeRst";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{    
+		return false;
+	}
+	
+	if(ds_PipeResult.RowCount() == 0)
+	{
+		return false;
+	}
+	
+	if(saveFlag == 0)
+	{
+		return false;
+	}
+	
+	if(flag == 'btn'){
+		alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true);
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_CheckReg()
+//   설명: 자율검사 결과등록을 하기 전 등록 여부 확인
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_CheckReg(str_INSPECT_YEAR, str_INSPECT_STR_YMD, str_BLOCK_CD)
+{	
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+    ds_PipeRstFlag.ClearData();
+    
+    var strSvcID       = "fn_D1_CheckReg";
+    var strPart        = "D10";
+    var strURL         = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeMgr-service";			  
+		strURL		   += "&INSPECT_YEAR="    + str_INSPECT_YEAR    ;
+		strURL		   += "&BLOCK_CD="        + str_BLOCK_CD        ;
+		strURL		   += "&INSPECT_STR_YMD=" + str_INSPECT_STR_YMD ;
+					  					  
+    var strInDatasets  = "";
+    var strOutDatasets = "ds_PipeRstFlag=ds_PipeRstFlag";
+    var strArgument    = "findRstFlag";   
+    
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_PipeRstFlag.RowCount() != 0) return false;
+	return true;
+}
+
+//------------------------------------------------------------------------------- 
+//  함수명: fn_D1_CheckReg1()
+//  설명: 자율검사 결과등록을 하기 전 장표 등록 여부 확인
+//  arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_CheckReg1(str_INSPECT_YEAR, str_INSPECT_STR_YMD, str_BLOCK_CD)
+{	
+	//-------------------------------------------------------------------------------
+	//  Transition   : Service id
+	//  ServicePart   : Service part
+	//  Url   : Server url
+	//  InputDsList   : Input Dataset List
+	//  OutputDsList   : Output Dataset List;
+	//  Argument   :  Argument
+	//-------------------------------------------------------------------------------
+    var strSvcID       = "fn_D1_CheckReg1";
+    var strPart        = "D10";
+    var strURL         = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeMgr-service";			  
+		strURL		   += "&INSPECT_YEAR="    + str_INSPECT_YEAR    ;
+		strURL		   += "&BLOCK_CD="        + str_BLOCK_CD        ;
+		strURL		   += "&INSPECT_STR_YMD=" + str_INSPECT_STR_YMD ;
+					  
+    var strInDatasets  = "";
+    var strOutDatasets = "ds_PipeRstFlag1=ds_PipeRstFlag1";
+    var strArgument    = "findRstFlag1";   
+    
+    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+function D1202020010F_OnUnloadCompleted(obj)
+{
+	if(ds_PipeResult.GetUpdate()){
+			
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 내용이 있습니다. 종료")))
+		{			
+			return false;
+		}else{
+			//fn_D1_Delete();
+		}	
+	}
+}
+
+function fn_D1_ExcelExport()
+{
+	var SearchCondition= "";
+
+    SearchCondition = SearchCondition + "지사 :"  + RPad(cob_Branch.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo.Text ," ",20);
+    SearchCondition = SearchCondition + "년도 :"  + RPad(sp_Year.Text   ," ",20);
+	gfn_ExportExcel("자율검사결과조회 배관 ", 5, SearchCondition, "grd_Excel"); 
+}
+function D1302040010F_OnLoadCompleted(obj)
+{
+	gfn_D1_SetGrid_Sort(grd_PipeList);
+	gfn_D1_SetGrid_Sort(grd_PipeRst);
+	
+	// 포틀릿
+	if (IsExistVar("PORTLET_FLAG", true)) {
+		if (PORTLET_FLAG == "p") {
+			fn_D1_SearchPlanPortlet(INSPECT_YEAR, BRANCH_CD, ZIP_NO1);
+		}
+	}
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_SearchPlanPortlet()
+//   설명:  포틀릿을 통한 자율 검사 대상 배관을 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_SearchPlanPortlet(strYear, strBranchCd, strZipNo)
+{	
+	var strFaciNum = "";
+	
+	if(IsExistVar("FACI_NUM",true)){
+		strFaciNum = FACI_NUM;
+	}
+	
+	var strSvcID = "fn_D1_FindPortlet";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_SelfTestRsltRegisPipeMgr-service"
+				 + "&BRANCH_CD="    + strBranchCd
+				 + "&ZIP_NO1="      + strZipNo
+				 + "&INSPECT_YEAR=" + strYear
+				 + "&BLOCK_CD="     + strFaciNum 
+				 ;
+				 	
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_PipeList=ds_PipeList ds_PipeListExcel=ds_PipeListExcel";
+	var strArgument  = "findPipe";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	StrInspectYear 	  = "";
+	strBlockCd 	  	  = "";
+	strBlockNm 		  = "";
+	strValveCnt 	  = "";
+	strTbCnt 		  = "";
+	strWtdrCnt 		  = "";
+	strInspectYmdPri1 = "";
+	strEndPoint 	  = "";
+	strRowType        = "";
+    ds_PipeResult.ClearData();
+    
+    if(ds_PipeList.GetRowCount()==0)
+	{
+        grd_PipeList.NoDataText="조회결과가 없습니다.";
+        return;
+    }
+    
+    grd_PipeList_OnCellClick("",0,"","","","");
+}
+]]></Script>
+</Window>

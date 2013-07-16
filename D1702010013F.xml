@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1702010013F" Left="8" OnLoadCompleted="D1702010013F_OnLoadCompleted" PidAttrib="7" Title="D1702010013F_이설보수_입금확인내역" TooltipFont=",0" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Receipt">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIPT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STS_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIPT_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIPT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACNT_TITACNT_CD_DR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACNT_TITACNT_CD_CR" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK" size="256" summ="default" type="STRING"/>
+					<colinfo id="VAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACNT_TITACNT_CD_DR1" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIPT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIPT_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BNK_NUMBER" size="256" summ="default" type="STRING"/>
+					<colinfo id="BNK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_APPRO_YN" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Modify">
+				<Contents>
+					<colinfo id="BILL_APPRO_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_ID" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BillDetail">
+				<Contents>
+					<colinfo id="COM_ID" size="255" summ="default" type="STRING"/>
+					<colinfo id="BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPNM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="255" summ="default" type="STRING"/>
+					<colinfo id="DRCR_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="TITACNT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="TITACNT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="NO_APPRO_BILL_AMT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="APPLY" size="255" summ="default" type="STRING"/>
+					<colinfo id="FIRM_DEPT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEPART_DPT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="PASS_DEPT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PASS_DEPT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="EST_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BNK_BRANCH_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEPST_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="OTHER_YN" size="255" summ="default" type="STRING"/>
+					<colinfo id="CHECK_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="QTY_PERS" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="UNIT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="INT_RT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="CAPI_SUPPLY_VAL" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="CURCY_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCHG_RT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="FORGCURCY_AMT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="PERIOD_FROM_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PERIOD_TO" size="255" summ="default" type="STRING"/>
+					<colinfo id="NO_CLOSE_ACNT_UNITY_YN" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_BILL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PAY_WAY" size="255" summ="default" type="STRING"/>
+					<colinfo id="PAY_ACCOUNT_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="EVIDENCE_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="CARD_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_KIND" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_NO" size="255" summ="default" type="STRING"/>
+					<colinfo id="PUBL_PROPO_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_STS_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_PUBL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_EXPIRE_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_CD_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SITE_CD_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CONST_ASSET_COST_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="ASSET_CHG_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="ASSET_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PROJECT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BUY_SALES_VAT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BUY_NOEXEC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SALES_VAT_CLASS_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="VAT_BIZPLC" size="255" summ="default" type="STRING"/>
+					<colinfo id="SUSPENSE_TXBILL_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="RCV_BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="FND_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOAN_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOAN_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_PLAN_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_PLAN_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_APPRO_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BACK_YEAR" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BillDetailDelete"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BillHeader">
+				<Contents>
+					<colinfo id="COM_ID" size="255" type="STRING"/>
+					<colinfo id="BIZPLC_CD" size="255" type="STRING"/>
+					<colinfo id="BILL_YMD" size="255" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="255" type="STRING"/>
+					<colinfo id="UPD_DTM" size="255" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="255" type="STRING"/>
+					<colinfo id="UPD_IP" size="255" type="STRING"/>
+					<colinfo id="CRT_DTM" size="255" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="255" type="STRING"/>
+					<colinfo id="CRT_IP" size="255" type="STRING"/>
+					<colinfo id="APPRO_YN" size="255" type="STRING"/>
+					<colinfo id="ACNT_YMD" size="255" type="STRING"/>
+					<colinfo id="ACNT_BILL_SEQ" size="255" type="STRING"/>
+					<colinfo id="TOT_LN_NUM" size="255" type="DECIMAL"/>
+					<colinfo id="FINL_LN_NUM" size="255" type="STRING"/>
+					<colinfo id="DR_SUM_AMT" size="255" type="DECIMAL"/>
+					<colinfo id="CR_SUM_AMT" size="255" type="DECIMAL"/>
+					<colinfo id="BILL_WRITE_DEPT_CD" size="255" type="STRING"/>
+					<colinfo id="BILL_KIND" size="255" type="STRING"/>
+					<colinfo id="SYS_FLAG" size="255" type="STRING"/>
+					<colinfo id="BILL_FLAG" size="255" type="STRING"/>
+					<colinfo id="BILL_CRT_INFO" size="255" type="STRING"/>
+					<colinfo id="ACNT_FLAG" size="255" type="STRING"/>
+					<colinfo id="DEL_YN" size="255" type="STRING"/>
+					<colinfo id="ADJ_CNT" size="255" type="DECIMAL"/>
+					<colinfo id="OUTPUT_CNT" size="255" type="DECIMAL"/>
+					<colinfo id="BILL_OUTPUT_DTM" size="255" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Com">
+				<Contents>
+					<colinfo id="LOAN_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="FNC_PROD_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Bnk">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BNK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BNK_NUMBER" size="256" summ="default" type="STRING"/>
+					<colinfo id="BNK_CD" size="256" summ="default" type="STRING"/>
+					<record>
+						<BNK_CD>0053918</BNK_CD>
+						<BNK_NM>외환은행</BNK_NM>
+						<BNK_NUMBER>0912203034-0</BNK_NUMBER>
+						<BRANCH_CD>100664</BRANCH_CD>
+					</record>
+					<record>
+						<BNK_CD>0053918</BNK_CD>
+						<BNK_NM>외환은행</BNK_NM>
+						<BNK_NUMBER>0912203036-6</BNK_NUMBER>
+						<BRANCH_CD>100591</BRANCH_CD>
+					</record>
+					<record>
+						<BNK_CD>0053918</BNK_CD>
+						<BNK_NM>외환은행</BNK_NM>
+						<BNK_NUMBER>0912203035-8</BNK_NUMBER>
+						<BRANCH_CD>100584</BRANCH_CD>
+					</record>
+					<record>
+						<BNK_CD>0053918</BNK_CD>
+						<BNK_NM>외환은행</BNK_NM>
+						<BNK_NUMBER>0912203033-1</BNK_NUMBER>
+						<BRANCH_CD>101500</BRANCH_CD>
+					</record>
+					<record>
+						<BNK_CD>0053918</BNK_CD>
+						<BNK_NM>외환은행</BNK_NM>
+						<BNK_NUMBER>0912203038-2</BNK_NUMBER>
+						<BRANCH_CD>100598</BRANCH_CD>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BillDelete">
+				<Contents>
+					<colinfo id="COM_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BIZPLC_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_LINE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BillDetail2">
+				<Contents>
+					<colinfo id="COM_ID" size="255" summ="default" type="STRING"/>
+					<colinfo id="BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="255" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPNM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="255" summ="default" type="STRING"/>
+					<colinfo id="DRCR_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="TITACNT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="TITACNT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="NO_APPRO_BILL_AMT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="APPLY" size="255" summ="default" type="STRING"/>
+					<colinfo id="FIRM_DEPT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEPART_DPT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="PASS_DEPT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PASS_DEPT_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="EST_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BNK_BRANCH_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEPST_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="OTHER_YN" size="255" summ="default" type="STRING"/>
+					<colinfo id="CHECK_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="QTY_PERS" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="UNIT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="INT_RT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="CAPI_SUPPLY_VAL" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="CURCY_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCHG_RT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="FORGCURCY_AMT" size="255" summ="default" type="DECIMAL"/>
+					<colinfo id="PERIOD_FROM_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PERIOD_TO" size="255" summ="default" type="STRING"/>
+					<colinfo id="NO_CLOSE_ACNT_UNITY_YN" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_ACNT_BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="ALT_OBJ_BILL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PAY_WAY" size="255" summ="default" type="STRING"/>
+					<colinfo id="PAY_ACCOUNT_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="EVIDENCE_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="CARD_NUM" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_KIND" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_NO" size="255" summ="default" type="STRING"/>
+					<colinfo id="PUBL_PROPO_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_STS_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_PUBL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="NOTE_EXPIRE_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_CD_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SITE_CD_NM" size="255" summ="default" type="STRING"/>
+					<colinfo id="CONST_ASSET_COST_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="ASSET_CHG_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="ASSET_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="PROJECT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BUY_SALES_VAT_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="BUY_NOEXEC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SALES_VAT_CLASS_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="VAT_BIZPLC" size="255" summ="default" type="STRING"/>
+					<colinfo id="SUSPENSE_TXBILL_FLAG" size="255" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="RCV_BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_BIZPLC_CD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_YMD" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_BILL_SEQ" size="255" summ="default" type="STRING"/>
+					<colinfo id="SND_ACNT_BILL_LINE" size="255" summ="default" type="STRING"/>
+					<colinfo id="DEAL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="FND_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOAN_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOAN_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_PLAN_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_PLAN_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_APPRO_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BACK_YEAR" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="77" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1257" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="15" Top="38" Type="RoundRect" Width="1252"></Shape>
+		<Shape BKColor="user8" Bottom="72" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1252" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="16" Top="43" Type="Rectangle" Width="1242"></Shape>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="610" LeftMargin="12" Style="blt_search" TabOrder="11" Text="업체명" Top="48" Width="75"></Image>
+		<Shape BKColor="#6cbae1" Bottom="105" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1258" TabOrder="13" Top="102" Type="Rectangle" Width="1253"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Receipt" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="848" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="743" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnExpandEdit="Grid0_OnExpandEdit" OnHeadClick="Grid0_OnHeadClick" Right="1258" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="12" TabStop="true" Top="105" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1253">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="30"/>
+						<col fix="left" width="30"/>
+						<col width="75"/>
+						<col width="150"/>
+						<col width="110"/>
+						<col width="80"/>
+						<col width="70"/>
+						<col width="0"/>
+						<col width="70"/>
+						<col width="0"/>
+						<col width="0"/>
+						<col width="100"/>
+						<col width="90"/>
+						<col width="100"/>
+						<col width="0"/>
+						<col width="70"/>
+						<col width="90"/>
+						<col width="60"/>
+						<col width="80"/>
+						<col width="250"/>
+						<col width="70"/>
+					</columns>
+					<head>
+						<cell col="0" display="checkbox" edit="checkbox" rowspan="2"/>
+						<cell col="1" display="text" rowspan="2" text="순번"/>
+						<cell col="2" display="text" rowspan="2" text="업체코드"/>
+						<cell col="3" display="text" rowspan="2" text="업체명"/>
+						<cell align="center" col="4" display="text" rowspan="2" text="계좌번호"/>
+						<cell align="center" col="5" display="text" rowspan="2" text="은행명"/>
+						<cell col="6" display="text" rowspan="2" text="지사"/>
+						<cell align="center" col="7" display="text" rowspan="2" text="시/구"/>
+						<cell col="8" display="text" rowspan="2" text="청구일자"/>
+						<cell col="9" display="text" rowspan="2" text="산정금액(원)"/>
+						<cell align="center" col="10" display="normal" rowspan="2" text="부가세(원)"/>
+						<cell col="11" display="text" rowspan="2" text="청구금액"/>
+						<cell bkcolor="user11" col="12" display="text" rowspan="2" text="입금일자"/>
+						<cell bkcolor="user11" col="13" display="text" rowspan="2" text="입금금액(원)"/>
+						<cell col="14" display="text" rowspan="2"/>
+						<cell col="15" display="text" rowspan="2" text="입금처리자"/>
+						<cell col="16" colspan="2" display="text" text="전표정보"/>
+						<cell col="18" display="text" rowspan="2" text="이설보수번호"/>
+						<cell col="19" display="text" rowspan="2" text="공사명"/>
+						<cell col="20" display="text" rowspan="2" text="접수일자"/>
+						<cell col="16" display="text" row="1" text="전표발행일자"/>
+						<cell col="17" display="text" row="1" text="전표번호"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHK" display="checkbox" edit="checkbox"/>
+						<cell align="center" col="1" display="text" expr="rowIndex+1"/>
+						<cell align="center" col="2" colid="DEAL_CD" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="3" colid="DEAL_NM" display="text" expandsize="18"/>
+						<cell align="center" col="4" colid="BNK_NUMBER" display="text" expandimage="search" expandshow="true"/>
+						<cell align="center" col="5" colid="BNK_NM" display="text"/>
+						<cell align="center" col="6" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="7" colid="GU_NM" display="text"/>
+						<cell col="8" colid="REQ_YMD" display="date"/>
+						<cell align="right" col="9" colid="REQ_AMT" display="number"/>
+						<cell align="right" col="10" colid="VAT" display="number"/>
+						<cell align="right" col="11" colid="RESULT_AMT" display="number"/>
+						<cell col="12" colid="RECEIPT_YMD" display="date" expandimage="Calendar" expandshow="true"/>
+						<cell align="right" col="13" colid="RECEIPT_AMT" display="number" edit="expr:iif(BILL_YMD==&apos;&apos;,&#32;number,&#32;none)"/>
+						<cell align="center" col="14" colid="RECEIPT_EMPID" display="text"/>
+						<cell align="center" col="15" colid="RECEIPT_NAME" display="text" expandimage="search" expandshow="true"/>
+						<cell align="center" col="16" colid="BILL_YMD" display="date"/>
+						<cell align="center" col="17" colid="BILL_SEQ" display="text"/>
+						<cell align="center" col="18" colid="MOVE_REPAIR_NUM" display="text"/>
+						<cell col="19" colid="MOVE_REPAIR_WORK_NM" display="text"/>
+						<cell col="20" colid="RECEIVE_YMD" display="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="18" Id="Image10" ImageID="blt" Left="445" LeftMargin="12" Style="blt_search" TabOrder="14" Text="입금여부" Top="48" Width="84"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ReceiptYn" Left="508" Style="combo" TabOrder="4" Top="48" Width="90"></Combo>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_MoveRepairWorkNm" Left="660" Style="edit" TabOrder="17" Top="48" Width="85"></Edit>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ReceiptYmdStr" Left="83" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="1" Top="48" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="18" LeftMargin="12" Style="blt_search" TabOrder="18" Text="청구일자" Top="48" Width="75"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="19" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1251">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="13" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="20" Text="입금확인내역" Top="85" Width="127"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button0" ImageID="btn_4_billreg" Left="1105" LeftMargin="21" OnClick="btn_bill_OnClick" Style="button" TabOrder="9" Text="전표등록" Top="80" Width="76"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_billDel" ImageID="btn_4_Close&#32;cancellation" Left="1182" LeftMargin="21" OnClick="btn_billDel_OnClick" Style="button" TabOrder="10" Text="전표취소" Top="80" Width="76"></Button>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ReceiptYmdEnd" Left="184" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="2" Top="48" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static BindDataset="ds_DcvgRst1" Height="13" Id="Static10" Left="173" Style="static" TabOrder="21" Text="~" Top="52" Width="10"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit0" Left="746" Style="edit" TabOrder="22" Top="48" Width="125"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="872" OnClick="btn_BizCd" TabOrder="5" Text="Button8" Top="49" Width="17"></Button>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" Left="321" Style="combo" TabOrder="3" Top="47" Width="114"></Combo>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="284" LeftMargin="12" Style="blt_search" TabOrder="23" Text="지사" Top="48" Width="84"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_BillYmd" Left="1015" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="8" Top="80" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="16" Id="Image2" ImageID="blt" Left="925" LeftMargin="12" Style="blt_search" TabOrder="24" Text="전표발행일자" Top="82" Width="84"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_PFndKind" Left="111" MaxLength="13" Style="edit" TabOrder="26" Top="-461" Width="51"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button2" ImageID="search" Left="163" OnClick="Button8_OnClick" TabOrder="27" Text="Button8" Top="-461" Width="17"></Button>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_PFndNm" Left="181" MaxLength="10" Style="edit_1" TabOrder="25" Top="-461" Width="88"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_ProdCode" Left="656" MaxLength="13" Style="edit" TabOrder="6" Top="81" Width="116"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button3" ImageID="search" Left="900" OnClick="Button8_OnClick" TabOrder="7" Text="Button8" Top="81" Width="17"></Button>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_ProdName" Left="773" MaxLength="10" Style="edit_1" TabOrder="28" Top="81" Width="126"></Edit>
+		<Image Align="Left" Height="16" Id="Image4" ImageID="blt" Left="603" LeftMargin="12" Style="blt_search" TabOrder="29" Text="예적금" Top="82" Width="49"></Image>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1702010013F.xml
+* Form 설명  : 이설보수 청구내역 입금확인
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2009-01-31
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONE50001.js";
+#include "JS::COMMONE30001.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1702010013F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+		
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	// 지사코드, 영업구코드
+	//-----------------------------------------
+	gfn_D1_All_SetComboBox_Comcode1("A10200", gfn_setDsObject_Comcode("cob_ReceiptYn" ), "A10200", ""  , "전체");
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));
+	cob_ObjectFlag.Index = 5;
+	cob_ReceiptYn.Index = 0;
+	
+	 cal_ReceiptYmdStr.Value = substr(today(), 0, 6) + '01';
+	 cal_ReceiptYmdEnd.Value   = today();
+}	
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	fn_D1_find()  ;
+}
+
+function fn_CommonSave()
+{
+	fn_D1_save()  ;
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport(){
+	Grid0.ExportExcel("sheet1"); 
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  이설보수접수내역 입금내역 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+
+	ds_Receipt.ClearData();
+	
+    var strSvcID        = "search_receipt";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_MoveingRepairRequeMgr-service";
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Receipt=ds_Receipt";
+	var strArgument     = "search_receipt=1";
+		strArgument	   += " DEAL_CD="       + quote(edt_MoveRepairWorkNm.Text);
+		strArgument	   += " REQ_YMD_START=" + quote(cal_ReceiptYmdStr.Value);
+		strArgument	   += " REQ_YMD_END="   + quote(cal_ReceiptYmdEnd.Value);
+		strArgument	   += " RECEIPT_YN="    + quote(cob_ReceiptYn.Value);
+		strArgument	   += " BRANCH_CD="		+ quote(cob_ObjectFlag.Value);
+							 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_Receipt.GetRowCount()==0) { Grid0.NoDataText = "조회결과가 없습니다." ; }
+	
+	// 조회결과가 없을경우 입금처리자는 세션정보로 기본 세팅
+	for(var i=0; i<ds_Receipt.rowcount; i++){
+		if(ds_Receipt.GetColumn(i, "BNK_NUMBER") == null || ds_Receipt.GetColumn(i, "BNK_NUMBER") == ''){
+		
+			var result = ds_Receipt.GetColumn(i, "BRANCH_CD");
+			
+			switch (result) {
+			case "100664"   :
+				ds_Receipt.SetColumn(i, "BNK_NUMBER", ds_Bnk.GetColumn(0, "BNK_NUMBER"));
+				ds_Receipt.SetColumn(i, "BNK_NM"    , ds_Bnk.GetColumn(0, "BNK_NM"    ));
+				ds_Receipt.SetColumn(i, "BNK_CD"    , ds_Bnk.GetColumn(0, "BNK_CD"    ));
+				break;
+			
+			case "100591"   :
+				ds_Receipt.SetColumn(i, "BNK_NUMBER", ds_Bnk.GetColumn(1, "BNK_NUMBER"));
+				ds_Receipt.SetColumn(i, "BNK_NM"    , ds_Bnk.GetColumn(1, "BNK_NM"    ));
+				ds_Receipt.SetColumn(i, "BNK_CD"    , ds_Bnk.GetColumn(1, "BNK_CD"    ));
+				break;
+			
+			case "100584"   :
+				ds_Receipt.SetColumn(i, "BNK_NUMBER", ds_Bnk.GetColumn(2, "BNK_NUMBER"));
+				ds_Receipt.SetColumn(i, "BNK_NM"    , ds_Bnk.GetColumn(2, "BNK_NM"    ));
+				ds_Receipt.SetColumn(i, "BNK_CD"    , ds_Bnk.GetColumn(2, "BNK_CD"    ));
+				break;
+			
+			case "101500"   :
+				ds_Receipt.SetColumn(i, "BNK_NUMBER", ds_Bnk.GetColumn(3, "BNK_NUMBER"));
+				ds_Receipt.SetColumn(i, "BNK_NM"    , ds_Bnk.GetColumn(3, "BNK_NM"    ));
+				ds_Receipt.SetColumn(i, "BNK_CD"    , ds_Bnk.GetColumn(3, "BNK_CD"    ));
+				break;
+			
+			case "100598"   :
+				ds_Receipt.SetColumn(i, "BNK_NUMBER", ds_Bnk.GetColumn(4, "BNK_NUMBER"));
+				ds_Receipt.SetColumn(i, "BNK_NM"    , ds_Bnk.GetColumn(4, "BNK_NM"    ));
+				ds_Receipt.SetColumn(i, "BNK_CD"    , ds_Bnk.GetColumn(4, "BNK_CD"    ));
+				break;
+			}
+		}	
+			
+		if( ds_Receipt.GetColumn(i, "RECEIPT_EMPID") == null || ds_Receipt.GetColumn(i, "RECEIPT_EMPID") == '')
+		{
+			ds_Receipt.SetColumn(i, "RECEIPT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_Receipt.SetColumn(i, "RECEIPT_NAME" , gfn_GetGlobalValue("G_NAME"));
+		}
+	}
+ }
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Save()
+//   설명  :  이설보수접수내역 입금내역 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_save()
+{
+	
+	for(var i=0; i<ds_Receipt.GetRowCount(); i++)
+	{
+		if(ds_Receipt.GetColumn(i,"CHK") == "1")
+		{
+			if(ds_Receipt.GetRowType(i) == 'normal')
+			{
+				alert("변경된 내역이 없습니다. ");
+				return;
+			}
+			
+			if(ds_Receipt.GetColumn(i, "RECEIPT_YMD") == null || ds_Receipt.GetColumn(i, "RECEIPT_YMD") == ''){
+				alert("입금일자를 입력하세요. ");
+				return;
+			}
+			
+			if(ds_Receipt.GetColumn(i, "RECEIPT_AMT") == null || ds_Receipt.GetColumn(i, "RECEIPT_AMT") == ''){
+				alert("입금금액을 입력하세요. ");
+				return;
+			}
+			
+			if(ds_Receipt.GetColumn(i, "REQ_YMD") > ds_Receipt.GetColumn(i, "RECEIPT_YMD"))
+			{
+				alert("청구일자 이상을 선택하세요. ");
+				return;
+			}
+			
+			if(ds_Receipt.GetColumn(i, "RESULT_AMT") != ds_Receipt.GetColumn(i, "RECEIPT_AMT"))
+			{
+				alert("청구금액과 입금금액은 동일해야 합니다. ");
+				return;
+			}
+		}
+	}
+	
+	var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;            // SESSION ID
+	var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");            // SESSION IP
+	
+	ds_Receipt.SetColumn(ds_Receipt.row, "UPD_EMPID" , USER_ID );
+	ds_Receipt.SetColumn(ds_Receipt.row, "UPD_IP"    , USER_IP );
+	
+	for(var i=0; i<ds_Receipt.GetRowCount(); i++){
+		if( ds_Receipt.GetColumn(i, "RECEIPT_YMD") != ''   &&
+		    ds_Receipt.GetColumn(i, "RECEIPT_YMD") != null && 
+		  ( ds_Receipt.GetColumn(i, "RECEIPT_AMT") != '0'  ||
+		    ds_Receipt.GetColumn(i, "RECEIPT_AMT") != ''  )&&
+		    ds_Receipt.GetColumn(i, "RECEIPT_AMT") != null
+		  )
+		{
+			ds_Receipt.SetColumn(i, "PROC_STS_CD", "30"); // 입금 진행 코드
+			ds_Receipt.SetColumn(i, "RECEIPT_YN", 'Y');
+		}else{
+			ds_Receipt.SetColumn(i, "PROC_STS_CD", "20"); // 청구 진행 코드
+			ds_Receipt.SetColumn(i, "RECEIPT_YN", 'N');
+		}
+	}
+    		
+	var strSvcID        = "modify_receipt";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_MoveingRepairRequeMgr-service"; 
+	var strInDatasets   = "ds_Receipt=ds_Receipt:u";
+	var strOutDatasets  = "";
+	var strArgument     = "modify_receipt=1";
+		 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	else
+	{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+		alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"));
+		fn_D1_find();
+	}
+				   
+
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Save()
+//   설명  :  이설보수접수내역 달력 POPUP
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Grid0_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+	if (nCell == '4') 
+	{
+		gfn_Dialog("D10","D1702010013U","",464,200,true,-1,-1);
+	}
+	
+	if (nCell == '12') 
+	{
+		gfn_SetCalendar(obj, nRow, nCell);
+	}
+	
+	if(nCell == '15')
+	{
+		 retValue = gfn_E2_SearchOutEmplDialog();
+		 		 
+		 if(retValue != null)
+		{
+			 ds_Receipt.SetColumn(ds_Receipt.row, "RECEIPT_EMPID", retValue[0]);
+			 ds_Receipt.SetColumn(ds_Receipt.row, "RECEIPT_NAME" , retValue[1]);
+		 } 
+	 }	 
+	 
+}
+
+function Grid0_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_D1_SetGrid_Sort(Grid0);
+}
+
+//-----------------------
+//  체크박스 체크
+//-----------------------
+function grd_List_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_GridSelChk(obj, "CHK");
+}
+
+/*===============================================================================
+ * 전표처리
+===============================================================================*/ 
+//-------------------------------------------------------------------------------
+// 함수명: btn_Bill_OnClick()
+//   설명: 전표 처리
+// arguments   
+//          obj: 사용된 객체를 전달 한다.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function btn_bill_OnClick(obj)
+{
+	//-------------------------------------------------------------------------------
+	// 함수명   : btn_bill_OnClick()
+	// 설명     : 저장 트렌젝션을 처리 fn_E4_CallBack으로 결과를 넘김.
+	// return 내용 : 없음
+	//-------------------------------------------------------------------------------	
+	
+	// 2009-12-21 마감체크 추가 
+	var strComId = gfn_GetGlobalValue("G_COM_ID");
+	var strBizplc = gfn_GetGlobalValue("G_BIZPLACE");
+	var strClsYmd = cal_BillYmd.Value;
+	var massageYn = "Y";
+	
+	var Result  = gfn_E5_checkClsYn( strComId , strBizplc , strClsYmd , massageYn);
+	
+	if(Result == "1")
+	{
+		return;
+	}
+	
+	if(!fn_D1_PreBill())
+	{
+		return false;
+	}
+	
+	var strSvcID = "btn_bill_OnClick";
+	var strPart  = "E50";
+	var strURL   = "handle.do?ServiceName=E5_AutoBillCreateMgr-service";
+	var strInDatasets   = "ds_Multi=ds_BillDetail:u ds_Single=ds_BillHeader:u";
+	var strOutDatasets  = "ds_BillDetail2=ds_Multi ds_BillHeader=ds_Single";
+	var strArgument     = "insert=1";
+	var strCallbackFunc = "fn_D1_CallBack";
+	
+	gfn_AsyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument,
+	              strCallbackFunc);
+}
+
+function fn_D1_PreBill()
+{     
+	var cnt   = 0;
+    var ccnt  = 0;
+    var cccnt = 0;
+    
+    var str_ReceiptYmd = 0;
+    var str_rowType    = 0;
+	
+    for(var i=0;i<ds_Receipt.rowcount;i++)
+    {
+	
+		if(ds_Receipt.GetColumn(i,"CHK") == "1")
+		{
+						
+			cnt++;	
+												
+			if(!gfn_IsNull(ds_Receipt.GetColumn(i,"BILL_YMD")))
+			{
+				ccnt++;
+			}
+			
+			for(var j=0; j<ds_Receipt.rowcount;j++)
+			{
+				if(ds_Receipt.GetColumn(j,"CHK") == "1")
+				{
+					if(ds_Receipt.GetColumn(i,"BRANCH_CD") != ds_Receipt.GetColumn(j,"BRANCH_CD"))
+					{
+						cccnt++;
+					}
+				}
+			}
+			
+			if(gfn_IsNull(ds_Receipt.GetColumn(i,"RECEIPT_YMD"))){
+				str_ReceiptYmd ++ ;
+			}
+		}		
+    }    
+    
+	if(cnt < 0 || cnt == 0 ){
+		alert("체크된 항목이 없습니다. ");
+		return false;
+	}
+	
+	if(str_ReceiptYmd > 0){
+		alert("입금일자는 필수 항목입니다. ");
+		return false;
+	}
+	
+	if(ds_Receipt.GetColumn(nRow, "RECEIPT_YN") == 'N' && str_ReceiptYmd <= 0){
+		alert("변경내역을 저장 후 전표 발행 가능합니다. ");
+		return false;
+	}	
+	
+	if(ccnt > 0){
+		alert("이미 전표생성된 자료가 포함되어있습니다");
+		return false;
+	}
+	if(cccnt > 0){
+		alert("동일한 지사인 경우에만 일괄 처리 가능합니다. ");
+		return false;
+	}
+
+	if(cal_BillYmd.Value == '' ||  cal_BillYmd.Value = null){
+			alert("전표발행일자를 지정하세요. ");
+			return false;
+	}
+	
+	if(edt_ProdCode.Text == '' || edt_ProdCode.Text == null){
+		alert("예적금코드를 입력하세요. ");
+		    return false;
+	}
+    
+    fn_D1_MakeBillData();
+    
+	return true;
+}
+
+function fn_D1_MakeBillData()
+{
+
+	var comId		= gfn_GetGlobalValue("G_COM_ID");
+	var bizplcCd 	= gfn_GetGlobalValue("G_BIZPLACE");
+	var billYmd  	= cal_BillYmd.Value;
+	var billSeq  	= fn_D1_Tr_getBillSeq(comId,bizplcCd,billYmd);
+	
+	fn_D1_MakeBillDetail(comId,bizplcCd,billYmd,billSeq);
+	fn_D1_MakeBillHeader(comId,bizplcCd,billYmd,billSeq);			   
+}
+
+function fn_D1_Tr_getBillSeq(ComId,bizplcCd,billYmd)
+{
+	//-------------------------------------------------------------------------------
+	// 함수명   : fn_D1_getBillSeq(ComId,bizplcCd,billYmd)
+	// 설명     : 전표번호를 리턴.
+	// return 내용 : 4자리 문자형태의 전표번호 
+	//-------------------------------------------------------------------------------
+		
+	var strSvcID = "fn_D1_Tr_find";
+	var strPart  = "E50";
+	var strURL   = "handle.do?ServiceName=E5_NonBillCreateMgr-service";
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Com=ds_Multi";
+	var strArgument     = "seqSelect=1";
+        strArgument    += " COM_ID="	+ quote(ComId);		//회사구분
+	    strArgument    += " BIZPLC_CD="	+ quote(bizplcCd);	//사업장코드
+	    strArgument    += " NUMB_YMD=" 	+ quote(billYmd);	//전표일자
+	    strArgument    += " NUMB_FLAG=" + "10";		
+	             
+	gfn_SyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument);
+	              
+	if (ErrorCode<0 )
+	{
+		return false;
+		
+	}
+	else
+	{
+		if(ds_Com.RowCount()==0) {
+			return "0001";	
+		}else{
+			return ds_Com.GetColumn(0,"BILL_SEQ");
+		}
+	}
+}
+
+function fn_D1_MakeBillDetail(strComId,strBizplcCd,strBillYmd,strBillSeq)
+{
+	var count    = 0;												//선택된 row만 체크하여 전표BILL_LINE생성해주기위한 변수
+	var sumvalue = 0;												//선택된 row만 체크하여 발행금액합계를 구하기위한 변수
+												
+	ds_BillDetail.ClearData();
+											//실행되기전 데이터셋내의 모든 데이터를 삭제함.
+	for(var i=0; i<ds_Receipt.rowcount; i++)					
+	{	
+		if(ds_Receipt.GetColumn(i,"CHK") == "1") {						//ds_Receipt 선택된 row만 골라서 ds_BillDetail으로 복사.
+	
+			gfn_E5_DatasetAddRow(ds_BillDetail);
+			
+			//공통(차변) : 원인자이설비입금			
+			ds_BillDetail.SetColumn(ds_BillDetail.row, "COM_ID"    , strComId             );											 //회사구분               
+			ds_BillDetail.SetColumn(ds_BillDetail.row, "BIZPLC_CD" , strBizplcCd          );   											 //사업장코드             
+			ds_BillDetail.SetColumn(ds_BillDetail.row, "BILL_YMD"  , strBillYmd           );   											 //전표일자               
+			ds_BillDetail.SetColumn(ds_BillDetail.row, "BILL_SEQ"  , strBillSeq           );   											 //전표SEQ                
+			ds_BillDetail.SetColumn(ds_BillDetail.row, "BILL_LINE" ,LPAD((count+1),'0',4 ));						       				 //전표lINE
+			ds_BillDetail.SetColumn(ds_BillDetail.row, "DRCR_FLAG" , "1"                  );					 						 //차변으로 세팅
+			ds_BillDetail.SetColumn(ds_BillDetail.row, "TITACNT_CD", ds_Receipt.GetColumn(i, "ACNT_TITACNT_CD_CR"));		 //계정코드		
+			ds_BillDetail.SetColumn(ds_BillDetail.row, "APPLY"     , substr(ds_Receipt.GetColumn(i, "BRANCH_NM"), 0, 2)
+																		  + ', 원인자 이설비용 - ' + ds_Receipt.GetColumn(i, "MOVE_REPAIR_WORK_NM"));//적요																																		
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"FIRM_DEPT_CD"     ,gfn_GetGlobalValue("G_DEPT_CODE"));         
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"PASS_DEPT_CD"     ,gfn_GetGlobalValue("G_DEPT_CODE"));
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"VAT_BIZPLC"       ,""                               );        //부가세사업장		
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"NO_APPRO_BILL_AMT",ds_Receipt.GetColumn(i, "RECEIPT_AMT"));
+			sumvalue += toNumber(ds_Receipt.GetColumn(i, "RECEIPT_AMT"));
+			//공통(차변)
+			
+			//계정별관리항목에서 가져오는 선택값(차변) STSRT
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"DEAL_FLAG"    , ds_Receipt.GetColumn(i, "DEAL_FLAG" )); // 거래처구분
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"DEAL_CD"      , ds_Receipt.GetColumn(i, "DEAL_CD"   )); // 거래처
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"BNK_BRANCH_CD", ds_Receipt.GetColumn(i, "BNK_CD"    )); // 은행지점코드
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"DEPST_CD"     , edt_ProdCode.Text					); // 예적금코드
+			//계정별관리항목에서 가져오는 선택값(차변)) END
+	
+			count++;
+			
+			//공통(대변) : 원인자이설비예수금
+			gfn_E5_DatasetAddRow(ds_BillDetail);
+			
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"COM_ID"           ,strComId   );           										       //회사구분               
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"BIZPLC_CD"        ,strBizplcCd);	         										       //사업장코드             
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_YMD"         ,strBillYmd );            										       //전표일자               
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_SEQ"         ,strBillSeq );            										       //전표SEQ                
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"BILL_LINE"        ,LPAD((count+1),'0',4));											   //전표lINE			
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"TITACNT_CD"       ,ds_Receipt.GetColumn(i,"ACNT_TITACNT_CD_DR"));	      			   //계정코드
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"DRCR_FLAG"        ,"2");													   		       //대변으로 세팅						
+			ds_BillDetail.SetColumn(ds_BillDetail.row, "APPLY"           , substr(ds_Receipt.GetColumn(i, "BRANCH_NM"), 0, 2)
+																				 + ', 원인자 이설비용 - ' + ds_Receipt.GetColumn(i, "MOVE_REPAIR_WORK_NM"));//적요
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"FIRM_DEPT_CD"     ,gfn_GetGlobalValue("G_DEPT_CODE"));          
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"PASS_DEPT_CD"     ,gfn_GetGlobalValue("G_DEPT_CODE"));    			
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"NO_APPRO_BILL_AMT",ds_Receipt.GetColumn(i, "RECEIPT_AMT"));				      		   //미승인전표금액(입금금액)
+			ds_BillDetail.SetColumn(ds_BillDetail.row,"VAT_BIZPLC"       ,""      );   				                           				   //부가세사업장											           
+			
+			count++;
+				
+		}
+	}	
+}
+
+function fn_D1_MakeBillHeader(comId,bizplcCd,billYmd,billSeq)
+{
+    //헤더추가
+    ds_BillHeader.ClearData();
+    
+	gfn_E5_DatasetAddRow(ds_BillHeader);
+	
+	var DR_sum = 0;
+	var CR_sum = 0;
+	
+	// 공통
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"COM_ID"    , comId   );  //회사구분
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BIZPLC_CD" , bizplcCd);  //사업장
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_YMD"  , billYmd );  //전표일자 
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_SEQ"  , billSeq );  //전표번호                        
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"APPRO_YN"  , "N"     );  //승인여부
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_WRITE_DEPT_CD" ,gfn_GetGlobalValue("G_DEPT_CODE")); 
+																		//입력부서코드
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_KIND" ,"1");        //전표종류 3:대체	
+	 // 공통
+	
+	 //변경되는부분
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"SYS_FLAG"      ,"D1");           //시스템구분 D1:안전공급 
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_FLAG"     ,"411");          //전표구분   000:수전표
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"BILL_CRT_INFO" ,"D1702010013F"); //전표생성정보 D1801020010F : 전표등록프로그램
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"ACNT_FLAG"     ,'3');            //회계구분 3:공통         
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"DEL_YN"        ,"N");            //삭제구분 
+	//여기까지변경되는부분
+	
+	for (var i=0 ; i<ds_BillDetail.rowcount ; i++)
+	{
+	
+		drcrFlag = ds_BillDetail.GetColumn(i,"DRCR_FLAG");						//차변		
+		noApprAmt= toNumber(ds_BillDetail.GetColumn(i,"NO_APPRO_BILL_AMT"));	//미승인전표금액 입금금액
+	    
+	    if(drcrFlag=="1"){
+			DR_sum+=noApprAmt;													//차변금액합계
+	    }else{
+			CR_sum+=noApprAmt;													//대변금액합계
+	    }
+		
+	}
+	
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"TOT_LN_NUM"  ,ds_BillDetail.rowcount);			//총행수
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"FINL_LN_NUM" ,ds_BillDetail.Max("BILL_LINE"));	//최종행수	
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"DR_SUM_AMT"  ,DR_sum);							//차변합계금액
+	ds_BillHeader.SetColumn(ds_BillHeader.row,"CR_SUM_AMT"  ,CR_sum);							//대변합계금액                       
+}
+
+//-------------------------------------------------------------------------------
+// 함수명   : btn_billDel_OnClick()
+// 설명     : 전표취소//조회 트렌젝션을 처리 fn_D1_CallBack으로 결과를 넘김.
+// return 내용 : 없음
+//-------------------------------------------------------------------------------
+function btn_billDel_OnClick(obj)
+{
+ 
+    if(!confirm("발행된 전표를를 정말로 취소하시겠습니까? "))
+    {
+		return false;
+	}
+    
+    var cnt   = 0;
+    var ccnt  = 0;
+    var cccnt = 0;
+    
+    for(var i=0;i<ds_Receipt.rowcount;i++){
+	
+		if(ds_Receipt.GetColumn(i,"CHK") == "1"){
+						
+			cnt++;		
+	
+			if(!gfn_IsNull(ds_Receipt.GetColumn(i,"BILL_YMD"))){
+				ccnt++;
+			}
+			
+			if(ds_Receipt.GetColumn(i,"BILL_APPRO_YN") == '1'){
+				cccnt++;
+			}
+		}
+    }    
+    
+	if(cnt > 0 && ccnt > 0){
+		    fn_D1_billDelete();
+	}else{
+	
+		if(cnt < 0 || cnt == 0 ){
+			alert("체크된 항목이 없습니다. ");
+			return false;
+		}
+		
+		if(ccnt < 0 || ccnt == 0 ){
+			alert("이미 취소되거나 전표를 발행하지 않은 자료가 포함되어있습니다");
+			return false;
+		}
+		
+		if(cccnt < 0 || cccnt == 0 ){
+			alert("이미 전표가 승인되어 취소할 수 없는 자료가 포함되어 있습니다. ");
+			return false;
+		}			
+	}           
+}
+
+function fn_D1_billDelete()
+{
+
+	var comId		= gfn_GetGlobalValue("G_COM_ID");
+	var bizplcCd 	= gfn_GetGlobalValue("G_BIZPLACE");
+    
+	ds_BillDelete.ClearData();
+	
+	ds_BillDelete.AddColumn("COM_ID"    	   , "STRING"   , 256);
+	ds_BillDelete.AddColumn("BIZPLC_CD"    	   , "STRING"   , 256);	
+	ds_BillDelete.AddColumn("BILL_YMD"     	   , "STRING"   , 256);
+	ds_BillDelete.AddColumn("BILL_SEQ"     	   , "STRING"   , 256);
+	ds_BillDelete.AddColumn("SYS_FLAG"     	   , "STRING"   , 256);
+
+	for(var i=0; i<ds_Receipt.GetRowCount(); i++){
+	
+		if(ds_Receipt.GetColumn(i,"CHK") == "1"){
+				
+			ds_BillDelete.AddRow();
+				
+			if(gfn_IsNull(trim(ds_Receipt.GetColumn(i,"BILL_YMD")))){
+				alert("이미 취소되거나 전표를 발행하지 않은 자료가 포함되어있습니다");
+				return;
+			}else if(ds_Receipt.GetColumn(i,"BILL_APPRO_YN") == '1'){
+				alert("이미 전표가 승인되어 취소할 수 없는 자료가 포함되어 있습니다. ");
+				return;
+			}else{
+				
+				ds_BillDelete.SetColumn(ds_BillDelete.row,"COM_ID"    , comId);         							//회사구분
+				ds_BillDelete.SetColumn(ds_BillDelete.row,"BIZPLC_CD" , bizplcCd);         							//사업장
+				ds_BillDelete.SetColumn(ds_BillDelete.row,"BILL_YMD"  , ds_Receipt.GetColumn(i,"BILL_YMD"));  		//전표일자 
+				ds_BillDelete.SetColumn(ds_BillDelete.row,"BILL_SEQ"  , ds_Receipt.GetColumn(i,"BILL_SEQ"));   		//전표번호 
+				ds_BillDelete.SetColumn(ds_BillDelete.row,"SYS_FLAG"  ,"D1");   									//지급여부
+			}
+		}
+	}			
+	
+	var strSvcID = "fn_D1_Tr_delete";
+	var strPart  = "E50";
+	var strURL   = "handle.do?ServiceName=E5_AutoBillCreateMgr-service";	 
+	var strInDatasets   = "ds_Single=ds_BillDelete:u ";
+	var strOutDatasets  = "";
+	var strArgument     = "delete=1";
+	var strCallbackFunc = "fn_D1_CallBack";	
+	
+	gfn_AsyncCall(strSvcID,
+	              strPart,
+	              strURL,
+	              strInDatasets,
+	              strOutDatasets,
+	              strArgument,
+	              strCallbackFunc
+	);
+	
+	if(ErrorCode<0)
+	{
+		return false;
+	}
+		return true;
+}
+
+function fn_D1_billUpdate(rowtype)
+{
+		
+		ds_Modify.ClearData();
+		
+		var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;            // SESSION ID
+		var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");            // SESSION IP
+		
+		ds_Modify.AddColumn("UPD_EMPID"		 );
+		ds_Modify.AddColumn("UPD_IP"	     );
+		ds_Modify.AddColumn("BILL_APPRO_YN"  );
+		ds_Modify.AddColumn("BILL_YMD"		 );
+		ds_Modify.AddColumn("BILL_SEQ"		 );
+		ds_Modify.AddColumn("MOVE_REPAIR_NUM");
+		
+		ds_Modify.UpdateControl = false;
+			
+		if(rowtype == 'update'){
+			for(var i=0; i<ds_Receipt.GetRowCount(); i++){				
+				if(ds_Receipt.GetColumn(i, "CHK") == '1'){
+				
+					ds_Modify.AddRow();
+					ds_Modify.SetColumn(ds_Modify.row, "UPD_EMPID"      , USER_ID);
+					ds_Modify.SetColumn(ds_Modify.row, "UPD_IP"         , USER_IP);
+									
+						ds_Modify.SetColumn(ds_Modify.row, "BILL_APPRO_YN"  , 'N' );
+						ds_Modify.SetColumn(ds_Modify.row, "BILL_YMD"       , ds_BillDetail2.GetColumn(0, "BILL_YMD"    ));
+						ds_Modify.SetColumn(ds_Modify.row, "BILL_SEQ"       , ds_BillDetail2.GetColumn(0, "BILL_SEQ"    ));
+					
+					
+					ds_Modify.SetColumn(ds_Modify.row, "MOVE_REPAIR_NUM", ds_Receipt.GetColumn(i, "MOVE_REPAIR_NUM"));
+				}
+			}			
+		}else{
+			for(var i=0; i<ds_Receipt.GetRowCount(); i++){				
+				
+				if(ds_Receipt.GetColumn(i, "CHK") == '1'){
+				
+					for(var j=0; j<ds_Receipt.GetRowCount(); j++){				
+						if(
+							(ds_Receipt.GetColumn(i, "BILL_YMD") == ds_Receipt.GetColumn(j, "BILL_YMD")) &&
+							(ds_Receipt.GetColumn(i, "BILL_SEQ") == ds_Receipt.GetColumn(j, "BILL_SEQ"))
+						){						
+						
+							ds_Modify.AddRow();
+							ds_Modify.SetColumn(ds_Modify.row, "UPD_EMPID"      , USER_ID);
+							ds_Modify.SetColumn(ds_Modify.row, "UPD_IP"         , USER_IP);
+											
+							ds_Modify.SetColumn(ds_Modify.row, "BILL_APPRO_YN"  , ''  );
+							ds_Modify.SetColumn(ds_Modify.row, "BILL_YMD"       , ''  );
+							ds_Modify.SetColumn(ds_Modify.row, "BILL_SEQ"       , ''  );
+						
+							ds_Modify.SetColumn(ds_Modify.row, "MOVE_REPAIR_NUM", ds_Receipt.GetColumn(j, "MOVE_REPAIR_NUM"));
+						}
+					}
+				}
+			}			
+		}
+				
+		for(var i=0; i<ds_Modify.GetRowCount(); i++)
+		{
+			ds_Modify.SetRowType(i, "update");
+		}
+						
+		var strSvcID         = "billUpdate";
+		var strPart          = "D10";	
+		var strURL           = "handle.do?ServiceName=D1_MoveingRepairRequeMgr-service" ;					
+		var strInDatasets    = "ds_Modify=ds_Modify:u";
+		var strOutDatasets   = "";		
+		var strArgument      = "billUpdate=1";
+				
+		gfn_SyncCall( 
+						 strSvcID
+					   , strPart  	 
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+
+	if(ErrorCode<0)
+	{
+		return false;
+	}
+		return true;
+	
+}
+
+function fn_D1_CallBack(svcId, ErrorCode, ErrorMsg)
+{    
+	//-------------------------------------------------------------------------------
+	// 함수명   : fn_D1_CallBack(svcid, errcd, errmsg)
+	// 설명     : 각 트렌젝션의 결과를 처리 .
+	// return 내용 : 없음
+	//-------------------------------------------------------------------------------
+	//-------------------------------------------------------------------------------
+    // svcid, errcd, errmsg 값 Transaction 함수에서 넘겨받음
+    //-------------------------------------------------------------------------------
+	if ( ErrorCode <0 ){
+	
+		return;
+	}
+	if ( ErrorCode <0 ){
+	
+		var tr_name;
+		var tr_kname;
+		
+		switch(svcId){
+			
+			//조회 실패시
+			case "fn_D1_Tr_find": 
+				tr_name  ="find";
+				tr_kname ="조회";
+			break;	
+		}
+		
+		//트렌젝션 메세지 출력
+		alert(gfn_E5_GetDBErrorMsg(tr_name, ErrorMsg,tr_kname));
+		return;
+	}
+	
+	switch(svcId){	
+	    case "fn_D1_Tr_find":	    
+			//조회 성공메세지 출력
+			if (ds_Receipt.RowCount() > 0) {
+				gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","조회를"),"black",true);				//"조회를 완료하였습니다."
+			} else {
+				gfn_SetStatusMsg(gfn_GetMessage("M000008","%AAA%","조회결과 데이터가"),"black",true);	//"조회결과데이터가없습니다."
+			}
+			break;	
+			
+		case "btn_bill_OnClick": //전표생성후
+			alert("전표가 발행되었습니다. ");
+			fn_D1_billUpdate('update');
+			fn_D1_Find();
+			break;	
+		case "fn_D1_Tr_delete": //업데이트 성공시 조회가 들어가므로 조회와 똑같이 처리 
+			alert("전표가 취소되었습니다");
+			fn_D1_billUpdate('delete'); 			
+			fn_D1_Find();
+			break;							
+	}
+}
+
+//---------------------------------------
+//  코드정보를 추충하는 부분(시설물 항목 추가)  
+//  Parameter : Input : 코드ID, Dataset Name
+//---------------------------------------
+function gfn_D1_All_SetComboBox_Comcode1(strCodeGrp,objComboDs,val, val1, val2)
+{
+		var strSvcID = strCodeGrp;
+		var strPart = "A10";
+		var strURL = "handle.do?ServiceName=A1101010021U-service&find1=1&CODE_ID="+strCodeGrp;
+		var strInDatasets  = "";
+		var strOutDatasets  = objComboDs+"=ds_CodeItems";
+		var strArgument  = "";
+
+	    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets   
+				   , strArgument
+			   );
+		    
+		if (  ErrorCode<0 )   
+		{
+			return;
+		}else{
+		    
+		    var cnt = eval(objComboDs).rowcount();
+		    eval(objComboDs).addrow();
+		    eval(objComboDs).setcolumn(cnt, "CODE_ID"   , val   );
+		    eval(objComboDs).setcolumn(cnt, "CODE_ITEM" , val1  );
+		    eval(objComboDs).setcolumn(cnt, "ITEM_KNAME", val2  );
+			
+			return;
+		}
+}
+
+function btn_BizCd(obj)//
+{
+ //-------------------------------------------------------------------------------
+ // 함수명   : btn_BizCd()
+ // 설명     : 거래처코드 팝업
+ // return 내용 : 없음
+ //-------------------------------------------------------------------------------
+	 var retValue=gfn_E5_CodePopup("","","DEAL_CD"); 
+	 edt_MoveRepairWorkNm.Text=retValue[0]; 
+	 Edit0.Text=retValue[1];	 
+}
+
+
+function Button8_OnClick(obj)
+{
+ //-------------------------------------------------------------------------------
+ // 함수명   : Button8_OnClick()
+ // 설명     : 예적금코드 팝업
+ // return 내용 : 없음
+ //-------------------------------------------------------------------------------
+		var arrayList = gfn_Dialog("E40","E4501210010U","",535,420,true,-1,-1);	
+		
+		edt_ProdCode.Text = arrayList[0];
+		edt_ProdName.Text = arrayList[1];
+}
+]]></Script>
+</Window>

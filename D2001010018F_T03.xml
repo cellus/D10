@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="740" Id="D2001010018F_T03" Left="8" OnLoadCompleted="D2001010018F_T03_OnLoadCompleted" PidAttrib="7" Title="D2001010018F_T03_전자결재&#32;준공도&#32;집계표" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Grid AutoFit="TRUE" BindDataset="ds_Analyze" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="720" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" Height="720" Id="grd_Analyze" InputPanel="FALSE" LineColor="default" MinWidth="100" Right="1256" Style="grid" TabOrder="1" TabStop="true" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1256">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="지사구분"/>
+						<cell col="1" display="text" rowspan="2" text="공사구분"/>
+						<cell col="2" display="text" rowspan="2" text="대상"/>
+						<cell col="3" colspan="2" display="text" text="협력사&#32;제출기한&#32;초과"/>
+						<cell col="3" display="text" row="1" text="건수"/>
+						<cell col="4" display="text" row="1" text="%"/>
+						<cell col="5" colspan="2" display="text" text="공사담당&#32;검수기한&#32;초과"/>
+						<cell col="5" display="text" row="1" text="건수"/>
+						<cell col="6" display="text" row="1" text="%"/>
+						<cell col="7" colspan="2" display="text" text="GIS&#32;입력기한&#32;초과"/>
+						<cell col="7" display="text" row="1" text="건수"/>
+						<cell col="8" display="text" row="1" text="%"/>
+						<cell col="9" colspan="2" display="text" text="전체&#32;처리기한&#32;초과"/>
+						<cell col="9" display="text" row="1" text="건수"/>
+						<cell col="10" display="text" row="1" text="%"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="BRANCH_CD" combocol="BRANCH_CD" combodataset="ds_SearchBRANCH_CD" combotext="BRANCH_NM" display="combo" suppress="1" SuppressAlign="Middle"/>
+						<cell align="center" col="1" colid="WORK_FLAG" combocol="CODE_ITEM" combodataset="ds_SearchD10200" combotext="ITEM_KNAME" display="combo"/>
+						<cell align="right" col="2" colid="WORK_CNT" display="numberexp"/>
+						<cell align="right" col="3" colid="REG_DELAY_SUM" display="numberexp" expr="iif(REG_DELAY_SUM&lt;0,&#32;0,&#32;REG_DELAY_SUM)"/>
+						<cell align="right" col="4" colid="REG_DELAY_SUM" display="numberexp" expr="iif(WORK_CNT==0,&#32;&apos;-&apos;,&#32;round(REG_DELAY_SUM/WORK_CNT*100,1))"/>
+						<cell align="right" col="5" colid="REVIEW_DELAY_SUM" display="numberexp" expr="iif(REVIEW_DELAY_SUM&lt;0,&#32;0,&#32;REVIEW_DELAY_SUM)"/>
+						<cell align="right" col="6" colid="REVIEW_DELAY_SUM" display="numberexp" expr="iif(WORK_CNT==0,&#32;&apos;-&apos;,&#32;round(REVIEW_DELAY_SUM/WORK_CNT*100,1))"/>
+						<cell align="right" col="7" colid="GIS_TREAT_DELAY_SUM" display="numberexp" expr="iif(GIS_TREAT_DELAY_SUM&lt;0,&#32;0,&#32;GIS_TREAT_DELAY_SUM)"/>
+						<cell align="right" col="8" colid="GIS_TREAT_DELAY_SUM" display="numberexp" expr="iif(WORK_CNT==0,&#32;&apos;-&apos;,&#32;round(GIS_TREAT_DELAY_SUM/WORK_CNT*100,1))"/>
+						<cell align="right" col="9" colid="TOT_DELAY_SUM" display="numberexp" expr="iif(TOT_DELAY_SUM&lt;0,&#32;0,&#32;TOT_DELAY_SUM)"/>
+						<cell align="right" col="10" colid="TOT_DELAY_SUM" display="numberexp" expr="iif(WORK_CNT==0,&#32;&apos;-&apos;,&#32;round(TOT_DELAY_SUM/WORK_CNT*100,1))"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script></Script>
+</Window>

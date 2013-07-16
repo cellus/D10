@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1205010020F" Left="8" OnLoadCompleted="D1205010020F_OnLoadCompleted" PidAttrib="7" Title="전기방식&#32;순찰실적등록" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_END_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Team">
+				<Contents>
+					<colinfo id="KITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="-1" Height="39" Id="Shape1" Left="-88" LineColor="user7" Right="907" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="1" Top="-40" Type="RoundRect" Width="995"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="2" TabStop="FALSE" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1274">
+			<Contents></Contents>
+		</Div>
+		<Tab Border="Flat" FixedImage="FALSE" Height="825" Id="tab_FaciReg" Left="8" Style="tab" TabOrder="3" TabStop="FALSE" Top="28" Width="1263">
+			<Contents>
+				<TabPage Height="795" Id="tab11" ImageID="tab" Left="2" TabOrder="1" Text="정류기" Top="28" Url="D10::D1205010020F_T02.xml" Width="1259"></TabPage>
+				<TabPage Height="795" Id="tab12" ImageID="tab" Left="2" TabOrder="1" Text="배류기" Top="28" Url="D10::D1205010020F_T03.xml" Width="1259"></TabPage>
+				<TabPage Height="795" Id="tab13" ImageID="tab" Left="2" TabOrder="7" Text="특별관리시설-전기방식불량시설" Top="28" Url="D10::D1205010020F_T04.xml" Width="1259"></TabPage>
+				<TabPage Height="795" Id="tab10" ImageID="tab" Left="2" TabOrder="1" Text="특별관리시설-PLP단구간" Top="28" Url="D10::D1205010020F_T01.xml" Width="1259"></TabPage>
+			</Contents>
+		</Tab>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1205010020F.xml
+* Form 설명  : 전기방식 술찰실적 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 이건민
+* 작성일     : 2012-06-25
+* 변경내용   :
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+
+/*===============================================================================
+ * 함수명: D1205010020F_OnLoadCompleted()
+   설명: 화면 로드 후 조회 조건 기본 셋팅
+   return 내용: 없음
+===============================================================================*/ 
+function D1205010020F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_CatchComponents(obj);
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSearch()
+   설명: 공통 조회 클릭시 조회 업무  수행 
+   return 내용: 없음
+===============================================================================*/ 
+
+function fn_CommonSearch()
+{
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_Search();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonAddRow()
+   설명: 탭별  내용를 신규 추가 하는 모드로 변경 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonAddRow()
+{
+    tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_CommonAddRow();
+} 
+
+/*===============================================================================
+ * 함수명: fn_CommonSave()
+   설명: 탭별 상세 내용를 저장 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonSave()
+{
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_CommonSave();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonDeleteRow()
+   설명: 탭별 삭제 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonDeleteRow()
+{
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_CommonDeleteRow();
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonExcelExport()
+//   설명  :  엑셀다운 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_CommonExcelExport()
+{
+	tab_FaciReg.GetItem(tab_FaciReg.TabIndex).fn_D1_ExcelExport();
+}
+
+function tab_FaciReg_OnChanged(obj,nOldIndex,nNewindex)
+{
+	var strBtnAuth = "";
+	var nRow = GDS_MENULIST.FindRowNF("FORM_ID","D1101010010F");
+	if( nRow != -1 )
+	{
+		strBtnAuth = GDS_MENULIST.GetColumnNF(nRow,"BTN_AUTH");
+	}
+
+	if( length(strBtnAuth) == 8)
+	{
+		var strDelAuth = "";
+		
+		// 공동주택
+		if(tab_FaciReg.TabIndex == 6)
+		{
+			// 삭제버트활성화
+			strDelAuth = substr(strBtnAuth,0,1) + "1" + substr(strBtnAuth,2,8);
+		}
+		else
+		{
+			strDelAuth = substr(strBtnAuth,0,1) + "0" + substr(strBtnAuth,2,8);
+		}
+		
+		gfn_SetForceButton(strDelAuth);
+	}
+	
+}]]></Script>
+</Window>

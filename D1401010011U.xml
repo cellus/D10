@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1401010011U" Left="8" OnLoadCompleted="D1401010011U_OnLoadCompleted" PidAttrib="7" Title="D1401010011U_유관기관&#32;조회" Top="8" Ver="1.0" Width="680" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_reIns"></Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="유관기관&#32;조회" Transparent="TRUE" Width="680"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="92"></Button>
+		<Div Height="24" Id="Div0" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="675">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user16" Bottom="115" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="675" TabOrder="5" Top="112" Type="Rectangle" Width="670"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_reIns" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="392" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="275" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellDBLClick="grd_List_OnCellDblClick" Right="672" SelColor="MENU" Style="grid_pop" TabOrder="4" TabStop="true" Top="117" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="667">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="85"/>
+					</columns>
+					<head>
+						<cell col="0" text="기관명"/>
+						<cell col="1" text="직책"/>
+						<cell col="2" text="담당자"/>
+						<cell col="3" text="직급"/>
+						<cell col="4" text="업무"/>
+						<cell col="5" text="연락처"/>
+						<cell col="6" text="비고"/>
+					</head>
+					<body>
+						<cell col="0" colid="FIRM_NM" combodataset="ds_reIns" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="POS_CLS_CD" combodataset="ds_reIns" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="OBJ_PERSON_NM" combodataset="ds_reIns" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="POS_CLS_CD" combodataset="ds_reIns" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" combodataset="ds_reIns" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" colid="TEL_NO" combodataset="ds_reIns" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="6" colid="ETC_REMARK" combodataset="ds_reIns" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user9" Bottom="111" Height="46" Id="Shape0" Left="5" LineColor="user10" Right="672" TabOrder="6" Top="65" Type="Rectangle" Width="667"></Shape>
+		<Image Align="Left" Height="5" Id="Image1" ImageID="blt" Left="23" LeftMargin="12" Style="blt_search_1" TabOrder="7" Text="유관기관명" Top="75" Transparent="TRUE" Width="81"></Image>
+		<Edit Border="Flat" Height="16" Id="edt_FirmNm" Left="99" MaxLength="11" Style="edit_Indis" TabOrder="8" Top="70" Width="186"></Edit>
+		<Image Align="Left" Height="5" Id="Image2" ImageID="blt" Left="307" LeftMargin="12" Style="blt_search_1" TabOrder="9" Text="담당자명" Top="75" Transparent="TRUE" Width="81"></Image>
+		<Edit Border="Flat" Height="16" Id="edt_ObjPersonNm" Left="369" MaxLength="11" Style="edit_Indis" TabOrder="10" Top="70" Width="186"></Edit>
+		<Image Align="Left" Height="5" Id="Image3" ImageID="blt" Left="307" LeftMargin="12" Style="blt_search_1" TabOrder="11" Text="전화번호" Top="95" Transparent="TRUE" Width="81"></Image>
+		<Edit Border="Flat" Height="16" Id="edt_TelNum" Left="369" MaxLength="11" Style="edit_Indis" TabOrder="12" Top="90" Width="186"></Edit>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+//---------------------------------------------------------
+//	화면변수선언 
+//---------------------------------------------------------
+var	strFirmNm;
+var	strObjPersonNm;
+var	strTelNum;
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function D1401010011U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();	
+}
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	gfn_SetButton("0001111");
+	
+}
+
+//-------------------------------------------------------------------------------
+// 조회 버튼 실행 
+//-------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	//sorting - Sort Mark를 제거 
+	
+	gfn_SetHeadClearAll(grd_List);
+	
+	var strSvcID = "CommonSearch";
+	var strPart = "D10";
+	var strURL = "";
+	var checkOpt = "find1";				    // 기본적인 검색경로 
+	
+	strComId = "01";
+
+	strFirmNm = edt_FirmNm.Text;
+	strObjPersonNm = edt_ObjPersonNm.Text;
+	strTelNum = edt_TelNum.Text;
+
+	
+	strURL = "handle.do?ServiceName=d1401010011u-service&"+checkOpt+"=1&COM_ID=" + strComId;
+	
+	strURL = strURL + "&FIRM_NM=" + strFirmNm;
+	strURL = strURL + "&OBJ_PERSON_NM=" + strObjPersonNm;
+	strURL = strURL + "&TEL_NUM=" + strTelNum;
+	
+	
+	var strInDatasets  = "";
+	    //strInDatasets += "ds_codem=ds_codem";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_reIns=ds_codem";
+	var strArgument  = "";
+	var strCallbackFunc = "fn_CallBack";
+	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			       , strCallbackFunc
+			   );
+}
+//-------------------------------------------------------------------------------
+// 
+//-------------------------------------------------------------------------------
+function fn_CallBack(srvId,ErrorCode,ErrorMsg)
+{
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+	
+	
+	if(srvId == "CommonSearch")
+	{
+		// 조회 후 처리
+		
+	}
+}
+
+
+//-------------------------------------------------------------------------------
+// 엑셀 버튼 실행 
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	grd_List.ExportExcelEx("sheet1");
+	
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 선택
+//---------------------------------------------------------
+function fn_CommonSelect()
+{
+	var arrList = array();
+	var nRow = ds_codem.row;
+	
+	// 담당자명 
+	
+	arrList[0] = grd_List.GetColumn(nRow,"OBJ_PERSON_NM");		// 담당자명  
+	
+	Close(arrList);
+}
+
+function grd_List_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fn_CommonSelect();
+}
+]]></Script>
+</Window>

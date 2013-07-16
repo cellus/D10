@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="696" Id="D1202010010F_T11" Left="8" OnLoadCompleted="D1202010010F_T11_OnLoadCompleted" OnUnloadCompleted="D1202010010F_T11_OnUnloadCompleted" PidAttrib="7" Title="굴착공사&#32;순찰점검등록_D1202010010F_T11" Top="8" Ver="1.0" Width="1260" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Excav" OnRowPosChanged="ds_Excav_OnRowPosChanged"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_digwork">
+				<Contents>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_NM" size="256" type="STRING"/>
+					<record>
+						<DIG_WORK_PATH_FLAG>1</DIG_WORK_PATH_FLAG>
+						<DIG_WORK_PATH_NM>EOCS</DIG_WORK_PATH_NM>
+					</record>
+					<record>
+						<DIG_WORK_PATH_FLAG>2</DIG_WORK_PATH_FLAG>
+						<DIG_WORK_PATH_NM>긴급</DIG_WORK_PATH_NM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Sbox9">
+				<Contents>
+					<colinfo id="CD_NAME" size="256" type="STRING"/>
+					<colinfo id="CD_CDOE" size="256" type="STRING"/>
+					<record>
+						<CD_CDOE>1</CD_CDOE>
+						<CD_NAME>경보기1</CD_NAME>
+					</record>
+					<record>
+						<CD_CDOE>2</CD_CDOE>
+						<CD_NAME>경보기2</CD_NAME>
+					</record>
+					<record>
+						<CD_CDOE>3</CD_CDOE>
+						<CD_NAME>경보기3</CD_NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Sbox10">
+				<Contents>
+					<colinfo id="CD_NAME" size="256" type="STRING"/>
+					<colinfo id="CD_CODE" size="256" type="STRING"/>
+					<record>
+						<CD_CODE>Y</CD_CODE>
+						<CD_NAME>점검통로설치</CD_NAME>
+					</record>
+					<record>
+						<CD_CODE>N</CD_CODE>
+						<CD_NAME>점검통로미설치</CD_NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_team">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEPRT_NM_KOR" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEPART_DPT_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SampleDsNm">
+				<Contents>
+					<colinfo id="EOCS_NUM" size="13" summ="default" type="CHAR"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="1" summ="default" type="CHAR"/>
+					<colinfo id="PATROL_YMD" size="8" summ="default" type="CHAR"/>
+					<colinfo id="SEQ" size="3" summ="default" type="CHAR"/>
+					<colinfo id="UPD_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="UPD_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="UPD_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="CRT_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="CRT_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="6" summ="default" type="CHAR"/>
+					<colinfo id="TEAM_CD" size="6" summ="default" type="CHAR"/>
+					<colinfo id="SHIFT_WORK_CD" size="2" summ="default" type="CHAR"/>
+					<colinfo id="ZIP_NO1" size="3" summ="default" type="CHAR"/>
+					<colinfo id="ZIP_NO2" size="3" summ="default" type="CHAR"/>
+					<colinfo id="CHK_FLAG" size="2" summ="default" type="CHAR"/>
+					<colinfo id="PLAN_FLAG" size="2" summ="default" type="CHAR"/>
+					<colinfo id="CHK_TIME" size="6" summ="default" type="CHAR"/>
+					<colinfo id="CHK_RSLT" size="160" summ="default" type="STRING"/>
+					<colinfo id="EDU_YN" size="1" summ="default" type="CHAR"/>
+					<colinfo id="GIS_UPD_YN" size="1" summ="default" type="CHAR"/>
+					<colinfo id="MAINTER_REQ_YN" size="1" summ="default" type="CHAR"/>
+					<colinfo id="TAKER_EMPID1" size="9" summ="default" type="CHAR"/>
+					<colinfo id="TAKER_EMPID2" size="9" summ="default" type="CHAR"/>
+					<colinfo id="TAKER_EMPID3" size="9" summ="default" type="CHAR"/>
+					<colinfo id="TABLET_COMM_FLAG" size="2" summ="default" type="CHAR"/>
+					<colinfo id="DIG_KIND" size="2" summ="default" type="CHAR"/>
+					<colinfo id="BLOCK_CD" size="8" summ="default" type="CHAR"/>
+					<colinfo id="TAKER_EMPID1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID2_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID3_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExcavSave">
+				<Contents>
+					<colinfo id="EOCS_NUM" size="13" summ="default" type="CHAR"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="1" summ="default" type="CHAR"/>
+					<colinfo id="PATROL_YMD" size="8" summ="default" type="CHAR"/>
+					<colinfo id="SEQ" size="3" summ="default" type="CHAR"/>
+					<colinfo id="UPD_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="UPD_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="UPD_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="CRT_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="CRT_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="6" summ="default" type="CHAR"/>
+					<colinfo id="TEAM_CD" size="6" summ="default" type="CHAR"/>
+					<colinfo id="SHIFT_WORK_CD" size="2" summ="default" type="CHAR"/>
+					<colinfo id="ZIP_NO1" size="3" summ="default" type="CHAR"/>
+					<colinfo id="ZIP_NO2" size="3" summ="default" type="CHAR"/>
+					<colinfo id="CHK_FLAG" size="2" summ="default" type="CHAR"/>
+					<colinfo id="PLAN_FLAG" size="2" summ="default" type="CHAR"/>
+					<colinfo id="CHK_TIME" size="6" summ="default" type="CHAR"/>
+					<colinfo id="CHK_RSLT" size="160" summ="default" type="STRING"/>
+					<colinfo id="EDU_YN" size="1" summ="default" type="CHAR"/>
+					<colinfo id="GIS_UPD_YN" size="1" summ="default" type="CHAR"/>
+					<colinfo id="MAINTER_REQ_YN" size="1" summ="default" type="CHAR"/>
+					<colinfo id="TAKER_EMPID1" size="9" summ="default" type="CHAR"/>
+					<colinfo id="TAKER_EMPID2" size="9" summ="default" type="CHAR"/>
+					<colinfo id="TAKER_EMPID3" size="9" summ="default" type="CHAR"/>
+					<colinfo id="TABLET_COMM_FLAG" size="2" summ="default" type="CHAR"/>
+					<colinfo id="DIG_KIND" size="2" summ="default" type="CHAR"/>
+					<colinfo id="BLOCK_CD" size="8" summ="default" type="CHAR"/>
+					<colinfo id="TAKER_EMPID1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID2_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID3_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Height="13" Id="Static4" Left="1087" Style="static" TabOrder="2" Text="※점검대상&#32;굴착공사&#32;총&#32;&#32;&#32;&#32;&#32;&#32;개" Top="6" Width="164"></Static>
+		<Static Align="Right" Height="10" Id="st_TotalCnt" Left="1213" Style="static" TabOrder="3" Text="0" Top="6" Width="24"></Static>
+		<Shape BKColor="user15" Bottom="23" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1251" TabOrder="1" Top="20" Type="Rectangle" Width="1246"></Shape>
+		<Image Align="Left" Height="13" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="4" Text="굴착공사&#32;점검등록" Top="542" Width="137"></Image>
+		<Shape BKColor="user15" Bottom="562" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="1251" TabOrder="6" Top="559" Type="Rectangle" Width="1246"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_ExcavSave" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="688" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="126" Id="grd_MultiSave" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_MultiSave_OnCellClick" OnCellPosChanged="grd_MultiSave_OnCellPosChanged" Right="1251" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="5" TabStop="true" Top="562" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="40"/>
+						<col width="106"/>
+						<col width="78"/>
+						<col width="69"/>
+						<col width="74"/>
+						<col width="65"/>
+						<col width="375"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="내용년수"/>
+						<cell col="1" display="text" text="NO"/>
+						<cell col="2" display="text" text="EOCS번호"/>
+						<cell bkcolor="user11" col="3" display="text" text="점검일자"/>
+						<cell col="4" display="text" text="점검시간"/>
+						<cell col="5" display="text" text="결재상태"/>
+						<cell col="6" display="text" text="교육유무"/>
+						<cell col="7" display="text" text="특이사항"/>
+						<cell col="8" display="text" text="점검자&#32;1"/>
+						<cell col="9" display="text" text="점검자&#32;2"/>
+						<cell col="10" display="text" text="점검자&#32;3"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" display="text" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="2" colid="EOCS_NUM" display="text"/>
+						<cell col="3" colid="PATROL_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="CHK_TIME" display="text" Mask="##:##"/>
+						<cell col="5" colid="DECIDE_PROC_STS" display="text"/>
+						<cell align="center" col="6" colid="EDU_YN" display="combo"/>
+						<cell col="7" colid="CHK_RSLT" display="text"/>
+						<cell align="center" col="8" colid="TAKER_EMPID1_NM" display="text"/>
+						<cell align="center" col="9" colid="TAKER_EMPID2_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="10" colid="TAKER_EMPID3_NM" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Excav" BkColor2="default" BoldHead="FALSE" Border="Flat" Bottom="222" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="199" Id="grd_Multi" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_Multi_OnCellClick" Right="1251" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="7" TabStop="true" Top="23" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1246">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="0"/>
+						<col fix="left" width="40"/>
+						<col width="97"/>
+						<col width="91"/>
+						<col width="252"/>
+						<col width="234"/>
+						<col width="208"/>
+						<col width="54"/>
+						<col width="66"/>
+						<col width="67"/>
+						<col width="68"/>
+						<col width="18"/>
+						<col width="20"/>
+						<col width="21"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="내용년수"/>
+						<cell col="1" display="text" rowspan="2" text="NO"/>
+						<cell col="2" display="text" rowspan="2" text="EOCS번호"/>
+						<cell col="3" display="text" rowspan="2" text="굴착종류"/>
+						<cell col="4" display="text" rowspan="2" text="굴착공사명"/>
+						<cell col="5" display="text" rowspan="2" text="공사시점"/>
+						<cell col="6" display="text" rowspan="2" text="공사종점"/>
+						<cell col="7" display="text" rowspan="2" text="연장(m)"/>
+						<cell col="8" display="text" rowspan="2" text="접수일자"/>
+						<cell col="9" colspan="2" display="text" text="굴착기간"/>
+						<cell col="11" colspan="3" display="text" rowspan="2" text="GIS위치"/>
+						<cell col="0" display="text" row="1"/>
+						<cell col="9" display="text" row="1" text="시작일자"/>
+						<cell col="10" display="text" row="1" text="종료일자"/>
+					</head>
+					<body>
+						<cell col="0" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" display="text" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="2" colid="EOCS_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="DIG_KIND_NM" display="text"/>
+						<cell col="4" colid="DIG_WORK_NM" display="text"/>
+						<cell col="5" colid="STR_LOT_NUM_UNION" display="text"/>
+						<cell col="6" colid="END_LOT_NUM_UNION" display="text"/>
+						<cell align="right" col="7" colid="LENG" display="text"/>
+						<cell col="8" colid="RECEIVE_YMD" display="date"/>
+						<cell align="center" col="9" colid="DIG_WORK_STR_YMD" display="date"/>
+						<cell align="center" col="10" colid="DIG_WORK_END_YMD" display="date"/>
+						<cell col="11" colid="GIS_POSITION" colspan="3" display="text">
+							<cell col="0" display="text"/>
+							<cell col="1" display="text" expandimage="search" expandshow="true" expandsize="17"/>
+							<cell col="2" display="text"/>
+						</cell>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button230" ImageID="btn_8_Pastrecord" Left="1124" LeftMargin="21" OnClick="fn_Impor_History" Style="button" TabOrder="8" Text="순찰점검&#32;이력조회" Top="538" Width="127"></Button>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static58" Left="110" Style="table" TabOrder="94" Top="398" VAlign="Middle" Width="1141" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static59" Left="306" Style="table" TabOrder="95" Text="팀" Top="398" VAlign="Middle" Width="49" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static70" Left="96" Style="table" TabOrder="101" Top="448" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static30" Left="96" Style="table" TabOrder="61" Top="248" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static37" Left="621" Style="table" TabOrder="67" Text="굴착종류" Top="248" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static32" Left="96" Style="table" TabOrder="63" Top="269" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static18" Left="96" Style="table" TabOrder="47" Top="311" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static21" Left="5" Style="table" TabOrder="46" Text="연장(m)" Top="311" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static22" Left="96" Style="table" TabOrder="49" Top="332" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static23" Left="5" Style="table" TabOrder="48" Text="굴착업체" Top="332" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static25" Left="96" Style="table" TabOrder="51" Top="469" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static26" Left="5" Style="table" TabOrder="50" Text="담당자&#32;1" Top="469" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static28" Left="96" Style="table" TabOrder="53" Top="490" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="96" Style="table" TabOrder="55" Top="290" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="5" Style="table" TabOrder="54" Text="공사시점" Top="290" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static3" Left="621" Style="table" TabOrder="56" Text="공사종점" Top="290" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static8" Left="306" Style="table" TabOrder="57" Text="굴착예정일자" Top="311" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static20" Left="621" Style="table" TabOrder="58" Text="굴착완료일자" Top="311" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static27" Left="621" Style="table" TabOrder="59" Text="굴착담당자" Top="332" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="DIG_KIND" Enable="FALSE" Height="18" Id="cob_DigKind" Left="758" OnChanged="fn_ChangeLarge" Style="combo_indis" TabOrder="10" Top="249" Width="176"></Combo>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="DIG_WORK_PROC_STS" Enable="FALSE" Height="18" Id="cob_DigWorkProcSts" Left="443" Style="combo_indis" TabOrder="9" Top="249" Width="176"></Combo>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static31" Left="5" Style="table" TabOrder="60" Text="EOCS번호" Top="248" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static33" Left="5" Style="table" TabOrder="62" Text="굴착구분" Top="398" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static35" Left="5" Style="table" TabOrder="64" Text="공사명" Top="269" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static36" Left="306" Style="table" TabOrder="65" Text="진행상태" Top="248" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="EOCS_NUM" Enable="FALSE" Height="18" Id="edt_EocsNum" ImeMode="none" Left="129" MaxLength="11" Style="edit_Indis" TabOrder="66" Top="250" Width="174"></Edit>
+		<Combo BindDataset="ds_Excav" Border="Flat" CodeColumn="DIG_WORK_PATH_FLAG" Column="DIG_WORK_PATH_FLAG" DataColumn="DIG_WORK_PATH_NM" Enable="FALSE" Height="18" Id="cob_DigWorkPathFlag2" InnerDataset="ds_digwork" Left="128" Style="combo_indis" TabOrder="68" Top="399" Width="176"></Combo>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static39" Left="306" Style="table" TabOrder="69" Text="연락처" Top="469" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static14" Left="621" Style="table" TabOrder="70" Text="담당자&#32;2" Top="469" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" BindDataset="ds_Excav" Border="Flat" Column="LENG" Enable="FALSE" Height="18" Id="edt_leng" ImeMode="none" Left="129" MaxLength="5" Number="TRUE" Style="edit_Indis" TabOrder="13" Top="313" Width="174"></Edit>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="DIG_FIRM_NM" Enable="FALSE" Height="18" Id="edt_DigFirmNm" ImeMode="none" Left="129" Style="edit" TabOrder="16" Top="334" Width="489"></Edit>
+		<Combo BindDataset="ds_Excav" Border="Flat" CodeColumn="CD_CDOE" Column="LK_ALARM_FLAG" DataColumn="CD_NAME" Enable="FALSE" Height="18" Id="cob_LkalarmFlag" InnerDataset="ds_Sbox9" Left="443" Style="combo_indis" TabOrder="30" Top="449" Width="100"></Combo>
+		<Edit Align="RIGHT" BindDataset="ds_Excav" Border="Flat" Column="LK_ALARM_CNT" Enable="FALSE" Height="18" Id="edt_LkAlarmCnt" ImeMode="none" Left="543" MaxLength="2" Number="TRUE" Style="edit_Indis" TabOrder="31" Top="450" Width="51"></Edit>
+		<Static Height="13" Id="Static38" Left="594" Style="static" TabOrder="71" Text="개소" Top="454" Width="30"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="DIG_WORK_NM" Enable="FALSE" Height="17" Id="edt_DigWorkNm2" ImeMode="none" Left="129" Style="edit_Indis" TabOrder="12" Top="271" Width="804"></Edit>
+		<Calendar BindDataset="ds_Excav" Border="Flat" Column="DIG_PLAN_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_DigPalnYmd" Left="444" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="14" Top="313" WeeksFont="Default,-1" Width="174"></Calendar>
+		<Calendar BindDataset="ds_Excav" Border="Flat" Column="RECEIVE_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_ReceiveYmd" Left="1074" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="26" Top="311" WeeksFont="Default,-1" Width="174"></Calendar>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="DIG_WORK_TAKER_NM" Enable="FALSE" Height="18" Id="edt_DigWorkTakerNm" ImeMode="none" Left="759" Style="edit" TabOrder="17" Top="334" Width="174"></Edit>
+		<Image Align="Left" Height="12" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="72" Text="EOCS&#32;굴착공사정보" Top="227" Width="147"></Image>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static47" Left="936" Style="table" TabOrder="73" Text="굴착담당자연락처" Top="332" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="JOB_CD" Enable="FALSE" Height="18" Id="cob_JobCd" Left="1073" Style="combo_indis" TabOrder="11" Top="249" Width="176"></Combo>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static48" Left="936" Style="table" TabOrder="75" Text="연락처" Top="469" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static50" Left="936" Style="table" TabOrder="74" Text="작업종류" Top="248" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="STR_ZIP_NO1" Enable="FALSE" Height="18" Id="edt_StrZipNo1" InputPanel="FALSE" Left="129" Readonly="TRUE" Style="edit_Indis" TabOrder="76" Top="292" Width="40"></Edit>
+		<Static Height="13" Id="Static5" Left="170" Style="static" TabOrder="77" Text="-" Top="295" Width="10"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="STR_ZIP_NO2" Enable="FALSE" Height="18" Id="edt_StrZipNo2" Left="178" Readonly="TRUE" Style="edit_Indis" TabOrder="78" Top="292" Width="40"></Edit>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="END_ZIP_NO1" Enable="FALSE" Height="18" Id="edt_EndZipNo1" ImeMode="none" Left="759" Readonly="TRUE" Style="edit_Indis" TabOrder="79" Top="292" Width="40"></Edit>
+		<Static Height="13" Id="Static7" Left="800" Style="static" TabOrder="80" Text="-" Top="295" Width="10"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="END_ZIP_NO2" Enable="FALSE" Height="18" Id="edt_EndZipNo2" Left="808" Readonly="TRUE" Style="edit_Indis" TabOrder="81" Top="292" Width="40"></Edit>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="STR_LOT_NUM_UNION" Enable="FALSE" Height="18" Id="edt_StrLotNumUnion" Left="219" Style="edit_Indis" TabOrder="82" Top="292" Width="399"></Edit>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="END_LOT_NUM_UNION" Enable="FALSE" Height="18" Id="edt_EndLotNumUnion" Left="849" Style="edit_Indis" TabOrder="83" Top="292" Width="398"></Edit>
+		<Calendar BindDataset="ds_Excav" Border="Flat" Column="DIG_END_PLAN_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_DigEndPlanYmd" Left="759" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="15" Top="313" WeeksFont="Default,-1" Width="174"></Calendar>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="DIG_TAKER_TEL_EXN" Enable="FALSE" Height="18" Id="edt_DigTakerTelExn" Left="1140" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="19" Top="334" Width="49"></Edit>
+		<Static Height="13" Id="Static34" Left="1190" Style="static" TabOrder="84" Text="-" Top="337" Width="10"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="DIG_TAKER_TEL_NUM" Enable="FALSE" Height="18" Id="edt_DigTakerTelNum" Left="1198" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="20" Top="334" Width="49"></Edit>
+		<Static Height="13" Id="Static46" Left="1132" Style="static" TabOrder="85" Text="-" Top="337" Width="10"></Static>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="DIG_TAKER_TEL_DDD" Enable="FALSE" Height="18" Id="cob_DigTakerTelDdd" Left="1073" Style="combo_indis" TabOrder="18" Top="333" Width="59"></Combo>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static51" Left="96" Style="table" TabOrder="87" Top="353" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static52" Left="621" Style="table" TabOrder="88" Text="발주담당자" Top="353" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="ORDER_FIRM_NM" Enable="FALSE" Height="18" Id="edt_OrderFirmNm" ImeMode="none" Left="129" Style="edit" TabOrder="21" Top="355" Width="489"></Edit>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="ORDER_TAKER_NM" Enable="FALSE" Height="18" Id="edt_OrderTakerNm" ImeMode="none" Left="759" Style="edit" TabOrder="22" Top="355" Width="174"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static53" Left="936" Style="table" TabOrder="89" Text="발주담당자연락처" Top="353" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="ORDER_FIRM_TEL_EXN" Enable="FALSE" Height="18" Id="edt_OrderFirmTelExn" Left="1140" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="24" Top="355" Width="49"></Edit>
+		<Static Height="13" Id="Static6" Left="1190" Style="static" TabOrder="90" Text="-" Top="358" Width="10"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="ORDER_FIRM_TEL_NUM" Enable="FALSE" Height="18" Id="edt_OrderFirmTelNum" Left="1198" MaxLength="4" Number="TRUE" Style="edit_Indis" TabOrder="25" Top="355" Width="49"></Edit>
+		<Static Height="13" Id="Static55" Left="1132" Style="static" TabOrder="91" Text="-" Top="358" Width="10"></Static>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="ORDER_FIRM_TEL_DDD" Enable="FALSE" Height="18" Id="cob_OrderFirmTelDdd" Left="1073" Style="combo_indis" TabOrder="23" Top="354" Width="59"></Combo>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static56" Left="5" Style="table" TabOrder="86" Text="발주사" Top="353" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="12" Id="Image11" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="92" Text="굴착공사&#32;등록정보" Top="382" Width="147"></Image>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static60" Left="476" Style="table" TabOrder="96" Text="구간" Top="398" VAlign="Middle" Width="49" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static64" Left="936" Style="table" TabOrder="98" Text="굴착공사&#32;완료일자" Top="398" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static62" Left="621" Style="table" TabOrder="97" Text="굴착공사&#32;시작일자" Top="398" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Excav" Border="Flat" Column="DIG_WORK_STR_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_DigWorkStrYmd" Left="759" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="27" Top="400" WeeksFont="Default,-1" Width="174"></Calendar>
+		<Calendar BindDataset="ds_Excav" Border="Flat" Column="DIG_WORK_END_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="cal_DigWorkEndYmd" Left="1074" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="28" Top="400" WeeksFont="Default,-1" Width="173"></Calendar>
+		<Image Align="Left" Height="12" Id="Image13" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="99" Text="대형공사&#32;등록정보" Top="432" Width="147"></Image>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static71" Left="306" Style="table" TabOrder="102" Text="누출경보기" Top="448" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static72" Left="621" Style="table" TabOrder="103" Text="점검통로" Top="448" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static69" Left="5" Style="table" TabOrder="100" Text="안전평가" Top="448" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Excav" Border="Flat" CodeColumn="CD_CODE" Column="CHK_PSWAY" DataColumn="CD_NAME" Enable="FALSE" Height="18" Id="cob_ChkPsway" InnerDataset="ds_Sbox10" Left="758" Style="combo_indis" TabOrder="32" Top="449" Width="100"></Combo>
+		<Edit Align="RIGHT" BindDataset="ds_Excav" Border="Flat" Column="CHK_PSWAY_CNT" Enable="FALSE" Height="18" Id="edt_ChkPswqyCnt" ImeMode="none" Left="858" MaxLength="2" Number="TRUE" Style="edit_Indis" TabOrder="33" Top="450" Width="51"></Edit>
+		<Static Height="13" Id="Static73" Left="909" Style="static" TabOrder="104" Text="개소" Top="454" Width="30"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="BIG_EMPID_1" Enable="FALSE" Height="18" Id="edt_BigEmpid1" ImeMode="none" Left="129" Readonly="TRUE" Style="edit_Indis" TabOrder="34" Top="471" Width="174"></Edit>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="BIG_EMPID_2" Enable="FALSE" Height="18" Id="edt_BigEmpid2" ImeMode="none" Left="759" Readonly="TRUE" Style="edit_Indis" TabOrder="38" Top="471" Width="174"></Edit>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="LARGE_TAKER_2_TEL_EXN" Enable="FALSE" Height="18" Id="edt_LargeTaker2TelExn" ImeMode="none" Left="1140" MaxLength="4" Number="TRUE" Style="edit" TabOrder="40" Top="471" Width="49"></Edit>
+		<Static Height="13" Id="Static74" Left="1190" Style="static" TabOrder="105" Text="-" Top="474" Width="10"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="LARGE_TAKER_2_TEL_NUM" Enable="FALSE" Height="18" Id="edt_LargeTaker2TelNum" ImeMode="none" Left="1198" MaxLength="4" Number="TRUE" Style="edit" TabOrder="41" Top="471" Width="49"></Edit>
+		<Static Height="13" Id="Static75" Left="1132" Style="static" TabOrder="106" Text="-" Top="474" Width="10"></Static>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="LARGE_TAKER_2_TEL_DDD" Enable="FALSE" Height="18" Id="cob_LargeTaker2TelDdd" Left="1073" Style="combo" TabOrder="39" Top="470" Width="59"></Combo>
+		<Static Height="13" Id="Static76" Left="561" Style="static" TabOrder="107" Text="-" Top="474" Width="10"></Static>
+		<Static Height="13" Id="Static77" Left="502" Style="static" TabOrder="108" Text="-" Top="474" Width="10"></Static>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="LARGE_TAKER_1_TEL_DDD" Enable="FALSE" Height="18" Id="cob_LargeTaker1TelDdd" ImeMode="none" Left="443" Style="combo" TabOrder="35" Top="470" Width="59"></Combo>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static19" Left="96" Style="table" TabOrder="109" Top="511" VAlign="Middle" Width="1155" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="43" Id="Static29" Left="5" Style="table" TabOrder="52" Text="배관내역" Top="490" VAlign="Middle" Width="121" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static9" Left="125" Style="table" TabOrder="110" Text="압력" Top="490" VAlign="Middle" Width="182" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static11" Left="125" Style="table" TabOrder="111" Text="차단밸브&#32;위치" Top="511" VAlign="Middle" Width="182" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static16" Left="440" Style="table" TabOrder="112" Text="관경" Top="490" VAlign="Middle" Width="182" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static40" Left="755" Style="table" TabOrder="113" Text="재질구분" Top="490" VAlign="Middle" Width="182" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="CUT_VALVE_LOC" Enable="FALSE" Height="18" Id="edt_CutValveLoc" ImeMode="none" Left="310" Style="edit" TabOrder="45" Top="513" Width="937"></Edit>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="LARGE_TAKER_1_TEL_EXN" Enable="FALSE" Height="18" Id="edt_LargeTaker1TelExn" ImeMode="none" Left="511" MaxLength="4" Number="TRUE" Style="edit" TabOrder="36" Top="471" UpperOnly="TRUE" Width="49"></Edit>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="LARGE_TAKER_1_TEL_NUM" Enable="FALSE" Height="18" Id="edt_LargeTaker1TelNum" ImeMode="none" Left="569" MaxLength="4" Number="TRUE" Style="edit" TabOrder="37" Top="471" UpperOnly="TRUE" Width="49"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static10" Left="936" Style="table" TabOrder="114" Text="지사" Top="269" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="SAFE_VALUA_OBJ_YN" Enable="FALSE" Height="18" Id="edt_SafeValuaObjYn" ImeMode="none" Left="128" ResetIndex="FIRST" Style="combo_indis" TabOrder="29" Top="449" Width="176"></Combo>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="PIPE_PRESS" Enable="FALSE" Height="18" Id="cob_PipePress" ImeMode="none" Left="309" Style="combo" TabOrder="42" Top="491" Width="129"></Combo>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="PIPE_DIAM" Enable="FALSE" Height="18" Id="cob_PipeDiam" ImeMode="none" Left="624" Style="combo" TabOrder="43" Top="491" Width="129"></Combo>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="PIPE_MATER_FLAG" Enable="FALSE" Height="18" Id="cob_PipeMaterFlag" ImeMode="none" Left="939" Style="combo" TabOrder="44" Top="491" Width="131"></Combo>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static57" Left="936" Style="table" TabOrder="93" Text="접수일자" Top="309" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Excav" Border="Flat" Column="BRANCH_CD" Enable="FALSE" Height="18" Id="cob_BranchCd" ImeMode="none" Left="1073" OnChanged="cob_BranchCd2_OnChanged" Style="combo_indis" TabOrder="115" Top="270" Width="175"></Combo>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button116" ImageID="btn_8_reg" Left="1122" LeftMargin="21" OnClick="fn_DigWork_OnClick" Style="button" TabOrder="116" Text="굴착공사정보&#32;수정" Top="227" Width="128"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Gis" ImageID="btn_4_Plan&#32;start" Left="1042" LeftMargin="21" OnClick="btn_Gis_OnClick" Style="button" TabOrder="117" Text="GIS&#32;수정" Top="227" Width="76"></Button>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="TEAM_NM" Enable="FALSE" Height="18" Id="edt_TeamNM" ImeMode="none" Left="357" Readonly="TRUE" Style="edit_Indis" TabOrder="118" Top="400" Width="117"></Edit>
+		<Edit BindDataset="ds_Excav" Border="Flat" Column="BLOCK_NM" Enable="FALSE" Height="18" Id="edt_BlockNm" ImeMode="none" Left="527" Readonly="TRUE" Style="edit_Indis" TabOrder="119" Top="400" Width="92"></Edit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID      : D1201010010F_T11.xml
+* Form 설명   : 굴착공사 순찰점검등록 조회,등록,수정,삭제
+* 시스템 명   : 안전공급(D1)
+* 작성자      : 임성수
+* 작성일      : 2008-12-11
+* 변경내용    : 변경내용없음
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMOND10001.js";
+
+function D1202010010F_T11_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_D1_SetGrid_Sort(grd_Multi);
+	gfn_D1_SetGrid_Sort(grd_MultiSave);
+	fn_D1_Combo_Set();
+}
+
+
+function fn_D1_Combo_Set()
+{
+	gfn_SetGrdComboBox_Comcode("grd_MultiSave",5,"A10411");	
+	grd_MultiSave.SetCellProp("body",5,"Edit","none");
+	gfn_SetGrdComboBox_Comcode("grd_MultiSave",6,"A10190");								//교육유무
+	gfn_SetComboBox_Comcode("D10187",gfn_setDsObject_Comcode("cob_DigWorkProcSts")); 	//굴착 진행상태
+	gfn_SetComboBox_Comcode("D10165",gfn_setDsObject_Comcode("cob_DigKind")); 			//굴착종류 
+	gfn_SetComboBox_Comcode("D10166",gfn_setDsObject_Comcode("cob_JobCd"));				//작업종류
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));			//지사
+	gfn_SetComboBox_Comcode("A10110",gfn_setDsObject_Comcode("cob_DigTakerTelDdd"));	//굴착담당자연락처
+	gfn_SetComboBox_Comcode("A10110",gfn_setDsObject_Comcode("cob_OrderFirmTelDdd"));	//발주담당주연락처
+	gfn_SetComboBox_Comcode("A10190",gfn_setDsObject_Comcode("edt_SafeValuaObjYn"));	//안전평가
+	gfn_SetComboBox_Comcode("A10110",gfn_setDsObject_Comcode("cob_LargeTaker1TelDdd"));	//연락처
+	gfn_SetComboBox_Comcode("A10110",gfn_setDsObject_Comcode("cob_LargeTaker2TelDdd"));	//연락처
+	gfn_SetComboBox_Comcode("B30035",gfn_setDsObject_Comcode("cob_PipePress"));			//압력
+	gfn_SetComboBox_Comcode("B30007",gfn_setDsObject_Comcode("cob_PipeDiam"));			//관경
+	gfn_SetComboBox_Comcode("B30022",gfn_setDsObject_Comcode("cob_PipeMaterFlag"));		//재질구분
+}
+
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_ExcelExport()
+//  설명: 특별관리시설 엑셀로 저장
+// arguments   
+//  return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_ExcelExport()
+{ 
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 :"     + RPad(cob_PBranchCd.Text," ",20);
+    SearchCondition = SearchCondition + "팀 :"       + RPad(cob_PTeamCd.Text," ",20);
+    SearchCondition = SearchCondition + "구간코드 :" + RPad(cob_block.Text," ",20);
+    SearchCondition = SearchCondition + "순찰일자 :" + RPad(cal_PPatrolYmd.Text," ",20);
+    SearchCondition = SearchCondition + "EOCS번호 :" + RPad(edt_PEocsNum.Text," ",20);
+
+	gfn_ExportExcel("굴착공사 순찰점검등록", 5, SearchCondition, "grd_Multi");
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명   : fn_D1_Find()
+// 설명     : 순찰점검 주 계획을 조회한다.
+// return 내용 : 없음
+//-------------------------------------------------------------------------------
+
+function fn_D1_Find()
+{
+	//입력한 날짜가 오늘 보다 클 경우
+	// if(!fn_DateCheckToday(cal_PPatrolYmd))
+	// {
+		// return;
+	// }
+	ds_Excav.ClearData();
+
+	ds_Search.ClearData();
+	var row = ds_Search.AddRow();
+
+	ds_Search.SetColumn(row,"BRANCH_CD",cob_PBranchCd.Value);
+	ds_Search.SetColumn(row,"BLOCK_CD",cob_block.Value);
+	ds_Search.SetColumn(row,"TEAM_CD",cob_PTeamCd.Value);
+	ds_Search.SetColumn(row,"EOCS_NUM",edt_PFaciNum.Text);
+	var str_STATUS = cob_Status.Value; // 진행상태
+    
+	var strSvcID = "find_excav";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1202010010F-service";
+	var strInDatasets  = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Excav=ds_Multi";
+	var strArgument  = "find_excav_"+str_STATUS+"=1";
+				
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );						   			          
+    
+	if(ErrorCode < 0)
+	{
+		return;
+	}			 
+	             	             
+}
+
+
+function grd_Multi_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if("GIS_POSITION" == grd_Multi.GetCellProp("body",nCell,"ColId"))
+	{
+		var args = "BUNGI='14' FACI_NUM="+ds_Multi_T11.GetColumn(nRow,"FACI_NUM");
+		gfn_Dialog("D10","D1402060011U",args,1208,840,true,-1,-1);	//GIS 불러오기
+	}
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_SAVE()
+//   설명  : 굴착공사 실적을 등록 한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save()
+{
+	if(ds_ExcavSave.RowCount() == 0)
+	{
+		return;
+	}else if((gfn_GetGlobalValue("G_BRANCH_CD") == "999999") AND (gfn_GetGlobalValue("G_USER_NO") <> '199443297'))
+    {
+		alert("담당자만 등록이 가능합니다.");
+		return;
+    }
+
+	for(var i =0; i<ds_ExcavSave.GetRowCount();i++)
+	{ 
+		if(ds_ExcavSave.GetRowType(i) == 'insert' || ds_ExcavSave.GetRowType(i) == 'update')
+		{
+			if(ds_ExcavSave.GetColumn(i,"PATROL_YMD") == "" || ds_ExcavSave.GetColumn(i,"PATROL_YMD") == null)
+			{
+				alert(gfn_GetMessage("M000011","%AAA%","순찰일자를"));
+				return;
+			}	
+			if(ds_ExcavSave.GetColumn(i,"CHK_TIME") == "" || ds_ExcavSave.GetColumn(i,"CHK_TIME") == null)
+			{
+				alert(gfn_GetMessage("M000011","%AAA%","점검시간을"));
+				return;
+			}
+			if(ds_ExcavSave.GetColumn(i,"EDU_YN") == "" || ds_ExcavSave.GetColumn(i,"EDU_YN") == null)
+			{
+				alert(gfn_GetMessage("M000011","%AAA%","교육유무를"));
+				return;
+			}
+		
+			//결재여부 확인 루틴//점검일에 결재 유무 확인
+			if (fn_decide(ds_ExcavSave.GetColumn(i, "PATROL_YMD"), ds_ExcavSave.GetColumn(i, "BRANCH_CD"), ds_ExcavSave.GetColumn(i, "TEAM_CD")) == false)
+			{
+				alert("점검일자(" + ds_ExcavSave.GetColumn(i, "PATROL_YMD") +  ")는 결재 진행중입니다...등록/수정 불가 합니다..");
+				return;
+			}
+					
+			if(ds_ExcavSave.GetRowType(i) == 'insert')
+			{		
+				ds_ExcavSave.SetColumn(i, "CRT_EMPID"     ,gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+				ds_ExcavSave.SetColumn(i, "CRT_IP"        ,gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP
+				ds_ExcavSave.SetColumn(i, "UPD_EMPID"     ,gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+				ds_ExcavSave.SetColumn(i, "UPD_IP"        ,gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP			
+			}
+			else 
+			{
+				ds_ExcavSave.SetColumn(i, "UPD_EMPID"     ,gfn_GetGlobalValue("G_USER_NO"));	//등록자사번
+				ds_ExcavSave.SetColumn(i, "UPD_IP"        ,gfn_GetGlobalValue("G_IPADDRESS"));	//등록자 IP			
+			}
+		}	
+	}
+	
+	var strSvcID         = "excav_check";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1202010010F-service";					
+	var strInDatasets    = "ds_ExcavSave=ds_ExcavSave:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "excav_check=1";
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				);
+			   
+	if(ErrorCode<0)
+	{
+		return;
+	}
+
+	alert("저장/수정 되었습니다.");
+	
+//	ds_Excav_OnRowPosChanged();		
+}
+
+//결재유무 check
+function fn_decide(PATROL_YMD, BRANCH_CD, TEAM_CD)
+{
+	ds_Decide.ClearData();
+	
+	var strSvcID        = "decide";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1202010010F-service";
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Decide=ds_Decide";
+	var strArgument     = "decide=1";
+		strArgument		+= " PATROL_YMD="  + PATROL_YMD;
+		strArgument		+= " BRANCH_CD=" + BRANCH_CD;
+		strArgument		+= " TEAM_CD="  + TEAM_CD;
+
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ds_Decide.RowCount() == 0) return true;
+	
+	if(ds_Decide.GetColumn(0,"DECIDE_PROC_STS") == '0' || ds_Decide.GetColumn(0,"DECIDE_PROC_STS") == '1' || ds_Decide.GetColumn(0,"DECIDE_PROC_STS") == '2')
+	{
+		return false;
+	}	
+	else
+	{
+		return true;
+	}	
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Addrowm()
+//   설명  :  구간 행추가 
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Addrowm()
+{
+	if(ds_Excav.GetRowCount()==0) 
+	{
+        return;
+    }
+        
+    if((gfn_GetGlobalValue("G_BRANCH_CD") == "999999") AND (gfn_GetGlobalValue("G_USER_NO") <> '199443297'))
+    {
+		return;
+    }
+    else if(ds_ExcavSave.GetRowType(0)=="insert") 
+    {
+		return;
+    }
+    
+	ds_ExcavSave.InsertRow(0);									//insert시 맨위에 행추가
+	ds_ExcavSave.SetColumn(0, "PATROL_YMD", Today());
+	grd_MultiSave.SetCellProp("body",2,"Edit"   ,"expr:decode(rowtype,'insert','date','none')"); 
+
+    ds_ExcavSave.SetColumn(0,"EOCS_NUM",ds_Excav.GetColumn(ds_Excav.row, "EOCS_NUM"));
+    ds_ExcavSave.SetColumn(0,"DIG_WORK_PATH_FLAG",ds_Excav.GetColumn(ds_Excav.row, "DIG_WORK_PATH_FLAG"));    
+    ds_ExcavSave.SetColumn(0,"BRANCH_CD",ds_Excav.GetColumn(ds_Excav.row, "BRANCH_CD"));
+    ds_ExcavSave.SetColumn(0,"TEAM_CD",ds_Excav.GetColumn(ds_Excav.row, "TEAM_CD"));
+    ds_ExcavSave.SetColumn(0,"DIG_KIND",ds_Excav.GetColumn(ds_Excav.row, "DIG_KIND"));
+    ds_ExcavSave.SetColumn(0,"BLOCK_CD",ds_Excav.GetColumn(ds_Excav.row, "BLOCK_CD"));
+    ds_ExcavSave.SetColumn(0,"SHIFT_WORK_CD",cob_PShiftWorkCd.Value);
+    ds_ExcavSave.SetColumn(0,"CHK_FLAG",'10');
+    ds_ExcavSave.SetColumn(0,"PLAN_FLAG",'10');
+    
+    ds_ExcavSave.SetColumn(0,"TAKER_EMPID1",edt_empid1.text);
+    ds_ExcavSave.SetColumn(0,"TAKER_EMPID2",edt_empid2.text);
+    ds_ExcavSave.SetColumn(0,"TAKER_EMPID3",edt_empid3.text);
+    ds_ExcavSave.SetColumn(0,"TAKER_EMPID1_NM",edt_empnm1.text);
+    ds_ExcavSave.SetColumn(0,"TAKER_EMPID2_NM",edt_empnm2.text);
+    ds_ExcavSave.SetColumn(0,"TAKER_EMPID3_NM",edt_empnm3.text);
+}
+//------------------------------------------------------------------------------- 
+// 함수명: grd_MultiSave_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+//   설명: 그리드의 타입에 따라 순찰일자의 활성화 여부
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function grd_MultiSave_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	//이 화면은 등록만 되고 수정이 안됨, 수정을 하고 싶은면 삭제후 다시 등록 요함. 그래서 insert만 활성화 됨.
+	if(ds_ExcavSave.GetRowType(nRow) == "insert")
+	{
+		grd_MultiSave.SetCellProp("body",3,"Edit","date");		//점검일자
+	}else
+	{
+		grd_MultiSave.SetCellProp("body",3,"Edit","none");		//점검일자
+	}
+	
+	if(ds_ExcavSave.GetColumn(nRow,"DECIDE_PROC_STS") == '0' || ds_ExcavSave.GetColumn(nRow,"DECIDE_PROC_STS") == '1' || ds_ExcavSave.GetColumn(nRow,"DECIDE_PROC_STS") == '2')
+	{
+		grd_MultiSave.SetCellProp("body",4,"Edit","none");		//점검시간
+		grd_MultiSave.SetCellProp("body",6,"Edit","none");		//교육유무
+		grd_MultiSave.SetCellProp("body",7,"Edit","none");		//점검사항
+	}
+	else
+	{
+		grd_MultiSave.SetCellProp("body",4,"Edit","mask");		//점검시간
+		grd_MultiSave.SetCellProp("body",6,"Edit","combo");		//교육유무
+		grd_MultiSave.SetCellProp("body",7,"Edit","normal");	//점검사항
+	}	
+}
+
+
+//---------------------------------------------------------
+// 굴착공사 수정 popup
+//---------------------------------------------------------
+function fn_DigWork_OnClick(obj)
+{  
+	if(ds_Excav.GetColumn(0, "EOCS_NUM") == ""|| ds_Excav.GetColumn(0, "EOCS_NUM") == null && ds_Excav.GetColumn(0, "DIG_WORK_PATH_FLAG") == ""|| ds_Excav.GetColumn(0, "DIG_WORK_PATH_FLAG") == null)
+	{
+		alert("시설물을 선택해 주세요.");
+		return;
+	}	
+
+	var strPrefix = "D10";
+	var strFormid = "D1401010010F";
+	var strArg    = "EOCS_NUM="   + quote(ds_Excav.GetColumn(0,"EOCS_NUM"))
+	              + " BRANCH_CD=" + quote(ds_Excav.GetColumn(0,"BRANCH_CD"))
+	              + " TEAM_CD="   + quote(ds_Excav.GetColumn(0,"TEAM_CD"))
+	              + " DIG_KIND="  + quote(ds_Excav.GetColumn(0,"DIG_KIND"))
+	              + " JOB_CD="    + quote(ds_Excav.GetColumn(0,"JOB_CD"))
+	              + " DIG_WORK_PATH_FLAG=" + quote(ds_Excav.GetColumn(0,"DIG_WORK_PATH_FLAG"))
+	              + " DIG_WORK_PROC_STS="  + quote(ds_Excav.GetColumn(0,"DIG_WORK_PROC_STS"))
+	              + " RECEIVE_YMD="        + quote(ds_Excav.GetColumn(0,"RECEIVE_YMD"))
+	              + " PORTLET_FLAG=" + "p"	              
+	              ;
+	gfn_NewWindow(strPrefix,strFormid,strArg);
+}
+
+
+//---------------------------------------------------------
+// 굴착공사 순찰점검 이력조회 popup
+//---------------------------------------------------------
+function fn_Impor_History(obj)
+{  
+	if(edt_EocsNum == "" || edt_EocsNum == null)
+	{
+		alert('순찰계획을 선택해주세요');
+		return;
+	}
+
+	var args = "EOCS_NUM=" + ds_Excav.GetColumn(ds_Excav.row, "EOCS_NUM");
+	gfn_Dialog("D10","D1202010010U",args,700,400,true,-1,-1);
+}
+
+
+function D1202010010F_T11_OnUnloadCompleted(obj)
+{
+	if(ds_ExcavSave.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변동된 사항이 있습니다. 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+
+// GIS 수정의뢰서 팝업 호출 
+function btn_Gis_OnClick(obj)
+{
+	gfn_Dialog("D10","D1402060010U","",1272,896,true,-1,-1);
+}
+
+
+//-------------------------------------------------------------------------------------
+// 함수명 :  fn_D1_Delete()
+// 내용   :  순찰 실적을 삭제한다.
+// args   : 
+// return : 없음
+//-------------------------------------------------------------------------------------
+function fn_D1_Delete()
+{
+	if (ds_ExcavSave.GetRowCount() == 0)
+	{
+		return;
+	}
+		
+	if(ds_ExcavSave.GetRowType(ds_ExcavSave.row) == "insert")
+	{
+		ds_ExcavSave.DeleteRow(ds_ExcavSave.row);
+		return;
+	}
+
+	if (ds_ExcavSave.GetColumn(ds_ExcavSave.row, "DECIDE_PROC_STS") == '0' || ds_ExcavSave.GetColumn(ds_ExcavSave.row, "DECIDE_PROC_STS") == '1' || ds_ExcavSave.GetColumn(ds_ExcavSave.row, "DECIDE_PROC_STS") == '2') 
+	{	
+		alert("결재(진행/완료)중으로 삭제가 불가합니다...");
+		return;
+    }else if(confirm("삭제하시겠습니까?"))
+    {
+		ds_ExcavSave.DeleteRow(ds_ExcavSave.row);
+
+		var strSvcID         = "excav_check";
+		var strPart          = "D10";	
+		var strURL           = "handle.do?ServiceName=D1202010010F-service";					
+		var strInDatasets    = "ds_ExcavSave=ds_ExcavSave:u";
+		var strOutDatasets   = "";		
+		var strArgument      = "excav_check=1";
+	
+		gfn_SyncCall(
+						 strSvcID
+					   , strPart  	 
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+	
+		if(ErrorCode < 0)
+		{
+			return;
+		}
+		else
+		{
+			alert(gfn_GetMessage("M000009","%AAA%","정상적으로 삭제를"));
+		}		
+			
+	}
+}
+
+function grd_MultiSave_OnCellPosChanged(obj,nRow,nCell,nOldRow,nOldCell,nPivotIndex,nOldPivotIndex)
+{
+
+	if(ds_ExcavSave.GetColumn(0,"PATROL_YMD")>today())
+	{
+		alert("현재일보다 큽니다.");
+		ds_ExcavSave.SetColumn(0,"PATROL_YMD",today());
+	}
+	if(ds_ExcavSave.GetColumn(0,"PATROL_YMD") < cal_DigPalnYmd.Value)
+	{
+		alert("굴착예정일보다 작습니다.");
+		ds_ExcavSave.SetColumn(0,"PATROL_YMD",today());
+	}
+}
+
+function ds_Excav_OnRowPosChanged(obj,nOldRow,nRow)
+{
+	ds_ExcavSave.ClearData();
+	
+    var strSvcID        = "rst_excav";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1202010010F-service";
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_ExcavSave=ds_ExcavSave";
+	var strArgument     = "rst_excav=1";
+		strArgument		+= " EOCS_NUM="    + ds_Excav.GetColumn(nRow,"EOCS_NUM");
+		// 2012.05.08. 권기철 과장님 요청으로 주석처리
+		//strArgument		+= " DIG_WORK_PATH_FLAG="    + ds_Excav.GetColumn(nRow,"DIG_WORK_PATH_FLAG");
+							 	 
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );		
+			   
+	if(ErrorCode < 0)
+	{
+		return;
+	}			              
+
+}
+
+
+]]></Script>
+</Window>

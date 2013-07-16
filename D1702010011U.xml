@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="496" Id="D1702010011U" Left="8" OnLoadCompleted="D1702010011U_OnLoadCompleted" PidAttrib="7" Title="방출량산출" Top="8" Ver="1.0" Width="464" WorkArea="false">
+		<Static Height="280" Id="Static5" Left="20" LineSpacing="8" Style="static" TabOrder="13" Text="[산출기준]&#13;&#10;□&#32;작업시간&#32;산정기준&#32;=&#32;현장실작업[대기]시간&#32;+&#32;이동&#32;및&#32;작업준비시간&#13;&#10;□&#32;노&#32;&#32;무&#32;&#32;비&#32;:&#32;직급별&#32;통상시급&#32;적용&#13;&#10;■&#32;차량장비비&#32;:&#32;2007기준&#32;스타렉스&#32;[&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;],&#32;프라이드&#32;[&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;]&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;구입가격&#32;및&#32;일위대가&#32;적용&#13;&#10;■&#32;가스요금&#32;&#32;&#32;:&#32;서울지역&#32;-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;원,&#32;경기지역&#32;-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;원&#13;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;주택&#32;난방용&#32;및&#32;일반용&#32;평균단가&#32;적용(2007년&#32;7월&#32;1일&#32;기준)&#13;&#10;■&#32;관&#32;&#32;리&#32;&#32;비&#32;:&#32;간접비,&#32;산재고용보험료,&#32;기타경비,&#32;안전관리비,&#32;일반관리비용&#13;&#10;&#10;[가스방출량&#32;계산식]&#13;&#10;▷&#32;체적방출량[밸브차단후&#32;방출시&#32;적용]&#13;&#10;Q&#32;=&#32;(π&#32;×&#32;D2)/4×L×&#32;((P+1.0332)/1.0332)&#13;&#10;[Q&#32;=&#32;㎥,&#32;D=m,&#32;P=kPa,&#32;L=m]&#13;&#10;[MPA=8.5,&#32;MPB=4.0,&#32;RL=0.2,&#32;LP=0.02]&#13;&#10;" Top="76" Width="424" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static43" Left="90" Style="table" TabOrder="7" Top="382" VAlign="Middle" Width="141" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="방출량&#32;산출" Transparent="TRUE" Width="464"></Image>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static14" Left="7" Style="table_1" TabOrder="2" Text="방출량&#32;계산" Top="361" VAlign="Middle" Width="224" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static24" Left="7" Style="table" TabOrder="3" Text="&#32;&#32;관경[m]" Top="382" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static25" Left="7" Style="table" TabOrder="4" Text="&#32;&#32;압력[kPa]" Top="403" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static26" Left="7" Style="table" TabOrder="6" Text="&#32;&#32;방출량[㎥]" Top="445" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static27" Left="7" Style="table" TabOrder="5" Text="&#32;&#32;연장[m]" Top="424" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static1" Left="90" Style="table" TabOrder="8" Top="403" VAlign="Middle" Width="141" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static2" Left="90" Style="table" TabOrder="9" Top="424" VAlign="Middle" Width="141" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static3" Left="90" Style="table" TabOrder="10" Top="445" VAlign="Middle" Width="141" WordWrap="TRUE"></Static>
+		<Static Height="15" Id="Static0" Left="227" TabOrder="11" Text="18,437,443" Top="136" Width="60"></Static>
+		<Static Height="15" Id="Static4" Left="371" TabOrder="12" Text="18,437,443" Top="136" Width="60"></Static>
+		<Static Align="Right" Height="15" Id="Static6" Left="155" TabOrder="14" Text="18,437,443" Top="176" Width="84"></Static>
+		<Static Align="Right" Height="15" Id="Static7" Left="315" TabOrder="15" Text="18,437,443" Top="176" Width="84"></Static>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="1" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="16" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="458">
+			<Contents></Contents>
+		</Div>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user1" Color="user1" DecimalLen="2" Height="18" Id="edt_D" Left="93" MaxLength="7" OnCharChanged="Button18_OnClick" Style="edit_Indis" TabOrder="17" Top="384" Value="MaskEdit0" Width="135"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user1" Color="user1" DecimalLen="2" Height="18" Id="edt_P" Left="93" MaxLength="7" OnCharChanged="Button18_OnClick" Style="edit_Indis" TabOrder="18" Top="405" Value="MaskEdit0" Width="135"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user1" Color="user1" DecimalLen="2" Height="18" Id="edt_L" Left="93" MaxLength="7" OnCharChanged="Button18_OnClick" Style="edit_Indis" TabOrder="19" Top="426" Value="MaskEdit0" Width="135"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user1" Color="user1" Enable="FALSE" Height="18" Id="edt_Q" Left="93" Style="edit_Indis" TabOrder="20" Top="447" Value="MaskEdit0" Width="135"></MaskEdit>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static8" Left="313" Style="table" TabOrder="25" Top="382" VAlign="Middle" Width="141" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static9" Left="230" Style="table_1" TabOrder="21" Text="방출량&#32;계산(1)" Top="361" VAlign="Middle" Width="224" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static10" Left="230" Style="table" TabOrder="22" Text="&#32;&#32;관경[m]" Top="382" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static11" Left="230" Style="table" TabOrder="23" Text="&#32;&#32;압력[kPa]" Top="403" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static13" Left="230" Style="table" TabOrder="24" Text="&#32;&#32;연장[m]" Top="424" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static15" Left="313" Style="table" TabOrder="26" Top="403" VAlign="Middle" Width="141" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static16" Left="313" Style="table" TabOrder="27" Top="424" VAlign="Middle" Width="141" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static17" Left="313" Style="table" TabOrder="28" Top="445" VAlign="Middle" Width="141" WordWrap="TRUE"></Static>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user1" Color="user1" DecimalLen="2" Height="18" Id="edt_D2" Left="316" MaxLength="7" OnCharChanged="Button18_OnClick" Style="edit" TabOrder="29" Top="384" Value="MaskEdit0" Width="135"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user1" Color="user1" DecimalLen="2" Height="18" Id="edt_P2" Left="316" MaxLength="7" OnCharChanged="Button18_OnClick" Style="edit" TabOrder="30" Top="405" Value="MaskEdit0" Width="135"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user1" Color="user1" DecimalLen="2" Height="18" Id="edt_L2" Left="316" MaxLength="7" OnCharChanged="Button18_OnClick" Style="edit" TabOrder="31" Top="426" Value="MaskEdit0" Width="135"></MaskEdit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static12" Left="230" Style="table" TabOrder="32" Text="&#32;&#32;방출량[㎥]" Top="445" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user1" Color="user1" Enable="FALSE" Height="18" Id="edt_Q2" Left="316" Style="edit_Indis" TabOrder="33" Top="447" Value="MaskEdit0" Width="135"></MaskEdit>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static18" Left="7" Style="table" TabOrder="34" Text="&#32;&#32;총&#32;&#32;방출량[㎥]" Top="466" VAlign="Middle" Width="224" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static19" Left="230" Style="table" TabOrder="35" Top="466" VAlign="Middle" Width="224" WordWrap="TRUE"></Static>
+		<MaskEdit AutoSelect="TRUE" Border="Flat" BorderColor="user1" Color="user1" Enable="FALSE" Height="18" Id="edt_Q_Total" Left="233" Mask="###.##" Style="edit_Indis" TabOrder="36" Top="468" Value="MaskEdit0" Width="218"></MaskEdit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802030010F.xml
+* Form 설명  : 이설보수 도관 운영비 방출량 산출
+* 시스템 명  : 안전공급 (D10)
+* 작성자     : 정주혜 
+* 작성일     : 2009-01-14
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+function D1702010011U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+
+	if(PIPE_DIAM_VALUE  == 0){
+		edt_D.Value = decode(PIPE_DIAM_CD, ''   , 0, toNumber(PIPE_DIAM_CD) * 0.001);
+	}else{
+		edt_D.Value = PIPE_DIAM_VALUE;
+	}
+	
+	if(PIPE_DIAM_VALUE2 == 0){
+		edt_D2.Value = decode(PIPE_DIAM_CD2, '', 0, toNumber(PIPE_DIAM_CD2) * 0.001);
+	}else{
+		edt_D2.Value = PIPE_DIAM_VALUE2;
+	}	
+	
+	if(LENG_VALUE == 0){
+		edt_L.Text  = decode(LENG, '', 0, LENG);	
+	}else{
+		edt_L.Value = LENG_VALUE;
+	}
+	
+	if(LENG_VALUE2 == 0){
+		edt_L2.Text  = decode(LENG2, '', 0, LENG2);	
+	}else{
+		edt_L2.Value = LENG_VALUE2;
+	}
+	
+	if(PRESS_VALUE == 0){
+		if(PRESS_FLAG == '1'){
+			edt_P.Value = 0.02 ;
+		}else if(PRESS_FLAG == '2'){
+			edt_P.Value = 8.5 ;
+		}else if(PRESS_FLAG == '3'){
+			edt_P.Value = 4.0 ;
+		}else if(PRESS_FLAG == '4'){
+			edt_P.Value = 0.2 ;
+		}else{
+			edt_P.Value = 0 ;
+		}
+	}else{
+		edt_P.Value = PRESS_VALUE;
+	}
+	
+	if(PRESS_VALUE2 == 0){
+		if(PRESS_FLAG2 == '1'){
+			edt_P2.Value = 0.02 ;
+		}else if(PRESS_FLAG2 == '2'){
+			edt_P2.Value = 8.5 ;
+		}else if(PRESS_FLAG2 == '3'){
+			edt_P2.Value = 4.0 ;
+		}else if(PRESS_FLAG2 == '4'){
+			edt_P2.Value = 0.2 ;
+		}else{
+			edt_P2.Value = 0 ;
+		}
+	}else{
+		edt_P2.Value = PRESS_VALUE2;
+	}
+	
+    Button18_OnClick();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: Button18_OnClick()
+//   설명  : 관경, 압력, 연장값을 입력시 방출량이 산출된다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Button18_OnClick(obj)
+{	
+	var PI = 3.14159265358979;
+	
+	edt_Q.Value  = (PI * Pow(toNumber(edt_D.Value),2))/4*toNumber(edt_L.Value)*((toNumber(edt_P.Value)+1.0332)/1.0332);
+		
+	edt_Q.Value  = ROUND(toNumber(edt_Q.Value), 2);
+	
+	edt_Q2.Value = (PI * Pow(toNumber(edt_D2.Value),2))/4*toNumber(edt_L2.Value)*((toNumber(edt_P2.Value)+1.0332)/1.0332);
+		
+	edt_Q2.Value = ROUND(toNumber(edt_Q2.Value), 2);
+	
+	edt_Q_Total.Value = toNumber(edt_Q.Value) + toNumber(edt_Q2.Value);
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_CommonSelect()
+//   설명  : 관경, 압력, 연장값을 입력시 방출량이 산출된다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSelect()
+{
+	if(edt_D.Value == ''){
+		alert("관경을 입력하세요.(없는 경우 0을 입력하세요 ");
+		return;
+	}
+	
+	if(edt_P.Value == ''){
+		alert("압력을 입력하세요.(없는 경우 0을 입력하세요 ");
+		return;
+	}
+	
+	if(edt_L.Value == ''){
+		alert("연장을 입력하세요.(없는 경우 0을 입력하세요 ");
+		return;
+	}
+
+	 var arrList = array();
+     
+//	 arrList[0]  = edt_Q.Value;
+	 arrList[1]  = edt_D.Value;
+	 arrList[2]  = edt_P.Value;
+	 arrList[3]  = edt_L.Value;
+	
+//	 arrList[4]  = edt_Q2.Value;
+	 arrList[5]  = edt_D2.Value;
+	 arrList[6]  = edt_P2.Value;
+	 arrList[7]  = edt_L2.Value;
+	 
+	 arrList[8]  = edt_Q_Total.Value;
+	  	     
+     Close(arrList);
+}]]></Script>
+</Window>

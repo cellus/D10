@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="664" Id="D1103010015F" Left="8" OnLoadCompleted="D1802030010F_OnLoadCompleted" PidAttrib="7" Title="사유지점용료&#32;지급내역조회" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_FPay">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_ROOM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_AMT_PAY_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="AGREE_SQUARE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PERSO_PUBLIC_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_RT" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_DAY_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CALCU_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="VAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_TOT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEASE_AMT_PAY_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEPOSITOR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BNK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ACCOUNT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1271" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="10" Top="30" Type="RoundRect" Width="1266"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1267" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="11" Top="35" Type="Rectangle" Width="1257"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image7" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search" TabOrder="1" Text="지급년도" Top="40" Width="84"></Image>
+		<Image Align="Left" Color="blue" Height="18" Id="Image3" ImageID="blt" Left="147" LeftMargin="12" Style="blt_search" TabOrder="2" Text="지사" Top="40" Width="95"></Image>
+		<Shape BKColor="#6cbae1" Bottom="94" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1268" TabOrder="3" Top="91" Type="Rectangle" Width="1263"></Shape>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="4" Text="점용료&#32;지급내역" Top="75" Width="270"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" Left="187" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="5" Top="40" Width="140"></Combo>
+		<Image Align="Left" Color="blue" Height="18" Id="Image10" ImageID="blt" Left="337" LeftMargin="12" Style="blt_search" TabOrder="6" Text="시/구" Top="40" Width="84"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" Left="383" Style="combo_indis" TabOrder="7" Top="40" Width="140"></Combo>
+		<Spin Border="Flat" Height="18" Id="cob_BaseYear" Left="80" Style="spin_indis" TabOrder="8" Text="2008" Top="40" Width="54"></Spin>
+		<Grid AutoEnter="TRUE" BindDataset="ds_FPay" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="655" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="561" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnHeadClick="Grid0_OnHeadClick" Right="1268" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="9" TabStop="true" Top="94" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1263">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="50"/>
+						<col fix="left" width="70"/>
+						<col fix="left" width="70"/>
+						<col fix="left" width="100"/>
+						<col fix="left" width="83"/>
+						<col fix="left" width="63"/>
+						<col width="130"/>
+						<col width="101"/>
+						<col width="204"/>
+						<col width="80"/>
+						<col width="83"/>
+						<col width="96"/>
+						<col width="129"/>
+						<col width="128"/>
+						<col width="182"/>
+						<col width="191"/>
+						<col width="154"/>
+						<col width="244"/>
+						<col width="200"/>
+						<col width="93"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="지급년도"/>
+						<cell col="2" display="text" text="소급년도"/>
+						<cell col="3" display="text" text="정압실명"/>
+						<cell col="4" display="text" text="지사"/>
+						<cell col="5" display="text" text="시/구"/>
+						<cell col="6" display="text" text="설치년월"/>
+						<cell col="7" display="text" text="납부시기"/>
+						<cell col="8" display="text" text="공시지가(원)"/>
+						<cell col="9" display="text" text="점용면적(㎡)"/>
+						<cell col="10" display="text" text="점용요율(%)"/>
+						<cell col="11" display="text" text="점용일수"/>
+						<cell col="12" display="text" text="산정금액(원)"/>
+						<cell col="13" display="text" text="부가세(%)"/>
+						<cell col="14" display="text" text="점용료(원)"/>
+						<cell col="15" display="text" text="예금주"/>
+						<cell col="16" display="text" text="은행명"/>
+						<cell col="17" display="text" text="계좌번호"/>
+						<cell col="18" display="text" text="비고"/>
+						<cell col="19" display="text" text="전표발행일자"/>
+						<cell col="20" display="text" text="전표번호"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="RNUM" display="normal" expandsize="18" expr="rowindex+1" text="0" wordwrap="word"/>
+						<cell align="center" col="1" colid="PAY_YEAR" display="text"/>
+						<cell align="center" col="2" colid="BACK_YEAR" display="text"/>
+						<cell align="center" col="3" colid="GOV_ROOM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="5" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="center" col="6" colid="INST_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="7" colid="LEASE_AMT_PAY_YMD" display="text"/>
+						<cell align="right" col="8" colid="PERSO_PUBLIC_PRC" display="number" edit="normal"/>
+						<cell col="9" colid="AGREE_SQUARE" display="numberexp" edit="number" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="10" colid="LEASE_RT" display="number" edit="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="11" colid="LEASE_DAY_CNT" display="text" edit="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="12" colid="CALCU_AMT" display="number" text="0"/>
+						<cell align="right" col="13" colid="VAT" display="text" edit="number"/>
+						<cell align="right" col="14" colid="PAY_TOT_AMT" display="number" text="0"/>
+						<cell align="center" col="15" colid="DEPOSITOR_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="16" colid="BNK_NM" display="text"/>
+						<cell align="left" col="17" colid="ACCOUNT_NUM" display="text"/>
+						<cell col="18" colid="RMK" display="text"/>
+						<cell align="center" col="19" colid="BILL_YMD" display="date"/>
+						<cell align="center" col="20" colid="BILL_SEQ" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="12" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1269">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="530" LeftMargin="12" Style="blt_search" TabOrder="13" Text="정압실명" Top="41" Width="84"></Image>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="922" LeftMargin="12" Style="blt_search" TabOrder="14" Text="부지분류" Top="41" Width="84"></Image>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="1066" LeftMargin="12" Style="blt_search" TabOrder="15" Text="소급여부" Top="41" Width="84"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BackYn" Left="1129" Style="combo" TabOrder="16" Top="39" Width="68"></Combo>
+		<Edit Border="Flat" Height="18" Id="edt_GovRoomName" Left="595" MaxLength="160" Style="edit" TabOrder="17" Top="40" Width="320"></Edit>
+		<Combo Border="Flat" Height="18" Id="cob_LeaseClass" Left="985" Style="combo" TabOrder="18" Top="39" Width="76"></Combo>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802030010F.xml
+* Form 설명  : 사유지 점용료 지급내역조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-11
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1802030010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+} 
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));
+	gfn_D1_All_SetComboBox_Comcode1("D10197", gfn_setDsObject_Comcode("cob_LeaseClass"), "D10197", "" , "전체");
+	gfn_D1_All_SetComboBox_Comcode("A10380",gfn_setDsObject_Comcode("cob_BackYn"));
+	
+	cob_BaseYear.Value   = Substr(Today(),0,4)+"년";
+	cob_LeaseClass.Index = 3;
+	cob_BackYn    .Index = 3;	
+	
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+		cob_ObjectFlag.Enable = true;
+		cob_ObjectFlag.Value = "";
+	 } else {
+		 cob_ObjectFlag.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+		 cob_ObjectFlag.Enable = false;
+	 }
+	 
+	cob_BranchCd_OnChanged();
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_ObjectFlag.Value, fn_setDsObject_Comcode("1", "cob_CountyFlag"));
+    cob_CountyFlag.Value = "";
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//---------------------------------------------------------
+function fn_CommonSave()
+{
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 : " +     RPad(cob_ObjectFlag.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :  " + RPad(cob_CountyFlag.Text," ",20);
+    SearchCondition = SearchCondition + "지급년도 : " + RPad(cob_BaseYear.Text," ",20);
+        
+    gfn_ExportExcel("사유지 점용료 지급내역 조회", 5, SearchCondition, "Grid0");             
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 출력 button 실행, 조회된데이터를 출력한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonPrint(){
+	PrintScreen();
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	fn_D1_Find();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  사유지 점용료 협의사항를 조회한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{	
+    var strSvcID        = "fn_D1_Find";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_RentalPaySpecSearMgr-service"
+					    + "&LEASE_AMT_PAY_YEAR="  + cob_BaseYear.Value
+					    + "&BRANCH_CD="           + cob_ObjectFlag.Value
+					    + "&ZIP_NO1="             + cob_CountyFlag.Value 
+					    + "&GOV_ROOM_NM="         + edt_GovRoomName.Text
+					    + "&EVENT_FLAG="          + cob_BackYn.Value
+					    + "&LEASE_CLASS="         + cob_LeaseClass.Value
+					    ;
+
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_FPay=ds_FPay";
+	var strArgument     = "view";
+	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_FPay.GetRowCount() == 0){
+		Grid0.NoDataText = gfn_GetMessage("M000009","%AAA%","조회를");
+	}
+}
+
+function Grid0_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_D1_SetGrid_Sort(Grid0);
+}
+
+
+//---------------------------------------
+//  코드정보를 추충하는 부분(전체항목 항목 추가, 사유지, 학교만 필요함)  
+//  Parameter : Input : 코드ID, Dataset Name
+//---------------------------------------
+function gfn_D1_All_SetComboBox_Comcode1(strCodeGrp,objComboDs,val, val1, val2)
+{
+		var strSvcID = strCodeGrp;
+		var strPart = "A10";
+		var strURL = "handle.do?ServiceName=A1101010021U-service&find1=1&CODE_ID="+strCodeGrp;
+		var strInDatasets  = "";
+		var strOutDatasets  = objComboDs+"=ds_CodeItems";
+		var strArgument  = "";
+
+	    gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets   
+				   , strArgument
+			   );
+		    
+		if (  ErrorCode<0 )   
+		{
+			return;
+		}else{
+		    
+		    eval(objComboDs).deleterow(eval(objComboDs).findrow("CODE_ITEM", "20"));
+		    eval(objComboDs).deleterow(eval(objComboDs).findrow("CODE_ITEM", "30"));
+		    eval(objComboDs).deleterow(eval(objComboDs).findrow("CODE_ITEM", "50"));
+		    
+		    var cnt = eval(objComboDs).rowcount();
+		    eval(objComboDs).addrow();
+		    eval(objComboDs).setcolumn(cnt, "CODE_ID"   , val   );
+		    eval(objComboDs).setcolumn(cnt, "CODE_ITEM" , val1  );
+		    eval(objComboDs).setcolumn(cnt, "ITEM_KNAME", val2  );
+			
+			return;
+		}
+}]]></Script>
+</Window>

@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1705010010F" Left="8" OnLoadCompleted="D1705010010F_OnLoadCompleted" PidAttrib="7" Title="이설보수&#32;잔존가&#32;폐관비용산정" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Close_Cost_h_List" OnRowPosChanged="ds_Close_Cost_h_List_OnRowPosChanged">
+				<Contents>
+					<colinfo id="CLOSE_COST_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CALCU_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLOSE_PIPE_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_DESIGN_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_DEPRE_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_CLOSE_PIPE_REQ_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STS_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="VAT_AMT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Close_Cost_h">
+				<Contents>
+					<colinfo id="CLOSE_COST_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CALCU_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLOSE_PIPE_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_DESIGN_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_DEPRE_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_CLOSE_PIPE_REQ_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Close_Cost_d" OnColumnChanged="ds_Close_Cost_d_OnColumnChanged">
+				<Contents>
+					<colinfo id="CLOSE_COST_NUM" size="256" type="STRING"/>
+					<colinfo id="CLOSE_PIPE_SEQ" size="256" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" type="STRING"/>
+					<colinfo id="LENG" size="256" type="STRING"/>
+					<colinfo id="DESIGN_AMT" size="256" type="STRING"/>
+					<colinfo id="DEPRE_AMT_TOTAL" size="256" type="STRING"/>
+					<colinfo id="CLOSE_PIPE_REQ_AMT" size="256" type="STRING"/>
+					<colinfo id="INST_YEAR" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DepreAmt">
+				<Contents>
+					<colinfo id="DEPRE_YEAR" size="256" type="STRING"/>
+					<colinfo id="CLOSE_COST_NUM" size="256" type="STRING"/>
+					<colinfo id="CLOSE_PIPE_SEQ" size="256" type="STRING"/>
+					<colinfo id="DEPRE_YY" size="256" type="STRING"/>
+					<colinfo id="DEPRE_AMT" size="256" type="STRING"/>
+					<colinfo id="RMK" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Max">
+				<Contents>
+					<colinfo id="MAX_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_FileList">
+				<Contents>
+					<colinfo id="FILE_ID" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NUM" size="256" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_FLAG" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_KIND" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_ID" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM" size="256" type="STRING"/>
+					<colinfo id="ORIG_ATTACH_FILE_NM" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_PATH" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_SIZE" size="256" type="STRING"/>
+					<colinfo id="ATTACH_FILE_TYPE" size="256" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" type="STRING"/>
+					<colinfo id="USE_YN" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Excel"></Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static14" Left="87" Style="table" TabOrder="51" Top="398" VAlign="Middle" Width="1175" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Color="user1" Height="22" Id="Static12" Left="613" Style="table" TabOrder="49" Text="부가세(%)" Top="398" VAlign="Middle" Visible="FALSE" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static13" Left="88" Style="table" TabOrder="50" Top="377" VAlign="Middle" Width="1174" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static4" Left="88" Style="table" TabOrder="41" Top="356" VAlign="Middle" Width="1174" WordWrap="TRUE"></Static>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1263" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="21" Top="30" Type="RoundRect" Width="1258"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1258" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="22" Top="35" Type="Rectangle" Width="1248"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image5" ImageID="blt" Left="15" LeftMargin="12" Style="blt_search_1" TabOrder="18" Text="지사" Top="41" Width="59"></Image>
+		<Image Align="Left" Color="blue" Height="18" Id="Image3" ImageID="blt" Left="181" LeftMargin="12" Style="blt_search_1" TabOrder="19" Text="시/구" Top="42" Width="59"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="20" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1257">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="#6cbae1" Bottom="94" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1262" TabOrder="24" Top="91" Type="Rectangle" Width="1257"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Close_Cost_h_List" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="330" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="236" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" NoDataText="조건에&#32;만족하는&#32;검색결과가&#32;없습니다." OnCellClick="Grid0_OnCellClick" OnHeadClick="Grid0_OnHeadClick" Right="1262" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="23" TabStop="true" Top="94" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1257">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="91"/>
+						<col width="82"/>
+						<col width="79"/>
+						<col width="79"/>
+						<col width="200"/>
+						<col width="64"/>
+						<col width="76"/>
+						<col width="93"/>
+						<col width="87"/>
+						<col width="88"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="60"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="잔존가번호"/>
+						<cell col="1" display="text" text="이설보수번호"/>
+						<cell col="2" display="text" text="진행상태"/>
+						<cell col="3" display="text" text="산출일자"/>
+						<cell col="4" display="text" text="공사명"/>
+						<cell col="5" display="text" text="의뢰자명"/>
+						<cell col="6" display="text" text="폐관요청일"/>
+						<cell col="7" display="text" text="설계금액(원)"/>
+						<cell col="8" display="text" text="상각금액(원)"/>
+						<cell col="9" display="text" text="잔존금액"/>
+						<cell col="10" display="text" text="지사"/>
+						<cell col="11" display="text" text="시/구"/>
+						<cell col="12" display="text" text="담당자"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CLOSE_COST_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="MOVE_REPAIR_NUM" display="text"/>
+						<cell align="center" col="2" colid="PROC_STS_NM" display="text"/>
+						<cell align="center" col="3" colid="CALCU_YMD" display="date"/>
+						<cell align="left" col="4" colid="WORK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="5" colid="WORK_FIRM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="6" colid="CLOSE_PIPE_REQ_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="7" colid="TOT_DESIGN_AMT" display="number" expandsize="18" wordwrap="word"/>
+						<cell col="8" colid="TOT_DEPRE_AMT" display="number"/>
+						<cell col="9" colid="TOT_CLOSE_PIPE_REQ_AMT" display="number"/>
+						<cell align="center" col="10" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="11" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="center" col="12" colid="TAKER_NAME" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" Left="55" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="25" Top="41" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" Left="226" Style="edit_Indis" TabOrder="26" Top="41" Width="114"></Combo>
+		<Image Align="Left" Height="13" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="27" Text="잔존가&#32;폐관비용&#32;산정내역" Top="75" Width="163"></Image>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static3" Left="613" Style="table" TabOrder="28" Text="폐관요청일" Top="377" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="9" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="29" Text="폐관내역&#32;등록" Top="340" Width="127"></Image>
+		<Image Align="Left" Height="9" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="31" Text="폐관내역" Top="451" Width="127"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Close_Cost_d" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="569" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="97" Id="Grid1" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="1265" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="15" TabStop="true" Top="472" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1257">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="98"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="text" text="관경(A)"/>
+						<cell bkcolor="user11" col="1" display="text" text="압력"/>
+						<cell bkcolor="user11" col="2" display="text" text="연장(m)"/>
+						<cell bkcolor="user11" col="3" display="text" text="매설년도"/>
+						<cell bkcolor="user11" col="4" display="text" text="설계금액(원)"/>
+						<cell bkcolor="user11" col="5" display="text" text="상각금액(원)"/>
+						<cell bkcolor="user11" col="6" display="text" text="잔존금액(원)"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="PIPE_DIAM_CD" display="combo" edit="expr:iif(rowtype==&apos;normal&apos;,&#32;&apos;none&apos;,&#32;&apos;combo&apos;)" expandsize="18" text="101" wordwrap="word"/>
+						<cell align="center" col="1" colid="PRESS_FLAG" display="text" edit="expr:iif(rowType!=&apos;insert&apos;,&#32;&apos;none&apos;,&#32;&apos;combo&apos;)"/>
+						<cell align="center" col="2" colid="LENG" display="text" edit="number" expandsize="18" limit="8" LimitDec="2" wordwrap="word"/>
+						<cell align="center" col="3" colid="INST_YEAR" display="number" edit="normal" expandsize="18" Mask="####" text="&#32;&#32;&#32;&#32;" wordwrap="word"/>
+						<cell col="4" colid="DESIGN_AMT" display="number" edit="number" limit="12" text="0"/>
+						<cell col="5" colid="DEPRE_AMT_TOTAL" display="number" expandsize="18" wordwrap="word"/>
+						<cell col="6" colid="CLOSE_PIPE_REQ_AMT" display="number" expandsize="18" wordwrap="word"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" display="text" text="합&#32;계"/>
+						<cell col="1" display="text"/>
+						<cell col="2" display="text"/>
+						<cell col="3" display="text"/>
+						<cell align="right" col="4" color="red" display="number" expr='iif(SumNF(&quot;DESIGN_AMT&quot;)==&apos;0&apos;,&#32;null,&#32;SumNF(&quot;DESIGN_AMT&quot;))'/>
+						<cell align="right" col="5" color="red" display="number" expr='iif(SumNF(&quot;DEPRE_AMT_TOTAL&quot;)==&apos;0&apos;,&#32;null,&#32;SumNF(&quot;DEPRE_AMT_TOTAL&quot;))'/>
+						<cell align="right" col="6" color="red" display="number" expr='iif(SumNF(&quot;CLOSE_PIPE_REQ_AMT&quot;)==&apos;0&apos;,&#32;null,&#32;SumNF(&quot;CLOSE_PIPE_REQ_AMT&quot;))'/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="#6cbae1" Bottom="471" Height="3" Id="Shape3" Left="5" LineWidth="0" Right="1262" TabOrder="30" Top="468" Type="Rectangle" Width="1257"></Shape>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static23" Left="5" Style="table" TabOrder="32" Text="설계금액(원)" Top="398" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="9" Id="Image2" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="34" Text="상각금액&#32;산출내역" Top="579" Width="127"></Image>
+		<Shape BKColor="#6cbae1" Bottom="601" Height="3" Id="Shape4" Left="5" LineWidth="0" Right="1262" TabOrder="33" Top="598" Type="Rectangle" Width="1257"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_DepreAmt" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="848" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="248" Id="Grid2" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" NoDataText="조건에&#32;만족하는&#32;검색결과가&#32;없습니다." OnHeadClick="Grid2_OnHeadClick" Right="1262" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="17" TabStop="true" Top="600" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1257">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="0"/>
+						<col width="30"/>
+						<col width="100"/>
+						<col width="311"/>
+						<col width="813"/>
+					</columns>
+					<head>
+						<cell col="0" display="text"/>
+						<cell col="1" display="text" text="순번"/>
+						<cell bkcolor="user11" col="2" display="text" text="상각년도"/>
+						<cell bkcolor="user11" col="3" display="text" text="상각금액(원)"/>
+						<cell col="4" display="text" text="비고"/>
+					</head>
+					<body>
+						<cell col="0" display="text"/>
+						<cell align="right" col="1" display="text" expr="rowindex+1"/>
+						<cell align="center" col="2" colid="DEPRE_YY" display="normal" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="DEPRE_AMT" display="number"/>
+						<cell col="4" colid="RMK" display="text" edit="expr:iif(rowType!=&apos;normal&apos;,&#32;&apos;normal&apos;,&#32;&apos;none&apos;)" expandsize="18" limit="100" wordwrap="word"/>
+					</body>
+					<summary>
+						<cell col="0" display="text"/>
+						<cell col="1" display="text"/>
+						<cell align="center" col="2" display="text" text="합계"/>
+						<cell align="right" col="3" display="number" expr='SumNF(&quot;DEPRE_AMT&quot;)'/>
+						<cell col="4" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Color="user1" Height="18" Id="Image4" ImageID="blt" Left="353" LeftMargin="12" Style="blt_search_1" TabOrder="35" Text="산출일" Top="41" Width="59"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_CalCu_Ymd_Start" Left="407" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="36" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_CalCu_Ymd_End" Left="506" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="38" Top="41" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static10" Left="496" Style="static" TabOrder="37" Text="~" Top="44" Width="10"></Static>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static0" Left="5" Style="table" TabOrder="39" Text="산출일자" Top="356" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="309" Style="table" TabOrder="40" Text="공사명" Top="356" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static5" Left="5" Style="table" TabOrder="42" Text="지사" Top="377" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static6" Left="309" Style="table" TabOrder="43" Text="상각금액(원)" Top="398" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static7" Left="947" Style="table" TabOrder="44" Text="의뢰자명" Top="356" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static8" Left="309" Style="table" TabOrder="45" Text="시/구" Top="377" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Close_Cost_h" Border="Flat" Column="CALCU_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar0" Left="127" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="1" Top="358" WeeksFont="Default,-1" Width="89"></Calendar>
+		<Calendar BindDataset="ds_Close_Cost_h" Border="Flat" Column="CLOSE_PIPE_REQ_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar1" Left="735" OnChanged="Calendar1_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="6" Top="379" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Close_Cost_h" Border="Flat" Column="WORK_NM" Height="18" Id="edt_Reason" ImeMode="none" Left="431" MaxLength="80" Style="edit" TabOrder="2" Top="358" Width="514"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Close_Cost_h" Border="Flat" Column="WORK_FIRM_NM" Height="18" Id="Edit2" ImeMode="none" Left="1069" MaxLength="80" Style="edit" TabOrder="3" Top="358" Width="189"></Edit>
+		<Combo BindDataset="ds_Close_Cost_h" Border="Flat" Column="BRANCH_CD" Enable="FALSE" Height="18" Id="cob_Branch" Left="126" OnChanged="cob_Branch_OnChanged" Style="combo_indis" TabOrder="4" Top="378" Width="91"></Combo>
+		<Combo BindDataset="ds_Close_Cost_h" Border="Flat" Column="ZIP_NO1" Enable="FALSE" Height="18" Id="cob_Zipno1" Left="430" Style="combo_indis" TabOrder="5" Top="378" Width="93"></Combo>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button3" ImageID="btn_7_Comm" Left="1154" LeftMargin="21" OnClick="Button257_OnClick" Style="button" TabOrder="16" Text="상각금액&#32;산출" Top="446" Width="106"></Button>
+		<Edit BindDataset="ds_Close_Cost_h" Border="Flat" Column="TAKER_EMPID" Height="18" Id="edt_TakerEmpid" ImeMode="none" Left="906" OnChanged="Edit3_OnChanged" Style="edit_Indis" TabOrder="47" Top="379" Width="0"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button44" ImageID="btn_5_From" Left="799" LeftMargin="21" OnClick="Button44_OnClick" Style="button" TabOrder="14" Text="표준설계서" Top="446" Width="87"></Button>
+		<Static Align="Right" Border="Flat" Color="user1" Height="22" Id="Static11" Left="613" Style="table" TabOrder="48" Text="잔존금액(원)" Top="398" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static19" Left="88" Style="table" TabOrder="52" Top="419" VAlign="Middle" Width="1174" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Color="blue" Height="22" Id="Static9" Left="5" Style="table" TabOrder="46" Text="담당자" Top="419" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit AutoSelect="TRUE" BindDataset="ds_Close_Cost_h" Border="Flat" Column="TAKER_NAME" Height="18" Id="edt_TakerName" ImeMode="none" Left="127" Readonly="TRUE" Style="edit_Indis" TabOrder="10" Top="421" Width="161"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="290" OnClick="Button1_OnClick" TabOrder="11" Text="Button8" Top="421" Width="17"></Button>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static21" Left="309" Style="table" TabOrder="53" Text="첨부문서" Top="419" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edtFileList" ImeMode="none" Left="431" Readonly="TRUE" Style="edit" TabOrder="12" Top="421" Width="750"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="18" Id="Button23" ImageID="btn_4_fileadd" Left="1183" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="13" Text="파일첨부&#32;" Top="421" Width="75"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="Button116" ImageID="btn_8_reg" Left="1134" LeftMargin="21" OnClick="Button116_OnClick" Style="button" TabOrder="54" Text="이설보수&#32;내역등록" Top="71" Width="128"></Button>
+		<MaskEdit AutoSkip="TRUE" BindDataset="ds_Close_Cost_h" Border="Flat" BorderColor="user2" Column="TOT_DESIGN_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_Tot_Design_Amt" Left="127" TabOrder="7" Top="400" Width="180"></MaskEdit>
+		<MaskEdit AutoSkip="TRUE" BindDataset="ds_Close_Cost_h" Border="Flat" BorderColor="user2" Column="TOT_DEPRE_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="edt_TotDepre_Amt" Left="431" TabOrder="8" Top="400" Value="MaskEdit0" Width="180"></MaskEdit>
+		<MaskEdit AutoSkip="TRUE" BindDataset="ds_Close_Cost_h" Border="Flat" BorderColor="user2" Column="TOT_CLOSE_PIPE_REQ_AMT" DisableBKColor="user20" DisableColor="user1" Enable="FALSE" Height="18" Id="Edit0" Left="735" TabOrder="9" Top="400" Width="180"></MaskEdit>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_excel" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="250" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="60" Id="grd_excel" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" NoDataText="조건에&#32;만족하는&#32;검색결과가&#32;없습니다." OnCellClick="Grid0_OnCellClick" OnHeadClick="Grid0_OnHeadClick" Right="1262" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="55" TabStop="true" Top="190" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1257">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="134"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="200"/>
+						<col width="70"/>
+						<col width="150"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="70"/>
+						<col width="60"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="잔존가번호"/>
+						<cell col="1" display="text" text="이설보수번호"/>
+						<cell col="2" display="text" text="산출일자"/>
+						<cell col="3" display="text" text="공사명"/>
+						<cell col="4" display="text" text="의뢰자명"/>
+						<cell col="5" display="text" text="폐관요청일"/>
+						<cell col="6" display="text" text="관경"/>
+						<cell col="7" display="text" text="압력"/>
+						<cell col="8" display="text" text="연장"/>
+						<cell col="9" display="text" text="매설년도"/>
+						<cell col="10" display="text" text="설계금액(원)"/>
+						<cell col="11" display="text" text="상각금액(원)"/>
+						<cell col="12" display="text" text="잔존금액(원)"/>
+						<cell col="13" display="text" text="지사"/>
+						<cell col="14" display="text" text="시/구"/>
+						<cell col="15" display="text" text="담당자"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CLOSE_COST_NUM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="1" colid="MOVE_REPAIR_NUM" display="text"/>
+						<cell align="center" col="2" colid="CALCU_YMD" display="date"/>
+						<cell align="center" col="3" colid="WORK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="WORK_FIRM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="5" colid="CLOSE_PIPE_REQ_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="6" colid="PIPE_DIAM_NM" display="text"/>
+						<cell align="center" col="7" colid="PRESS_NM" display="text"/>
+						<cell align="right" col="8" colid="LENG" display="text"/>
+						<cell align="center" col="9" colid="INST_YEAR" display="text"/>
+						<cell col="10" colid="TOT_DESIGN_AMT" display="number" expandsize="18" wordwrap="word"/>
+						<cell col="11" colid="TOT_DEPRE_AMT" display="number"/>
+						<cell col="12" colid="TOT_CLOSE_PIPE_REQ_AMT" display="number"/>
+						<cell align="center" col="13" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="14" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="center" col="15" colid="TAKER_NAME" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMONA10005.js";
+
+/***************************************************************************************************
+* FormID     : D1802030010F.xml
+* Form 설명  : 이설보수 잔존가 폐관비용 산저
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-29
+* 변경내용   : 
+****************************************************************************************************/
+var Close_Cost_h_Row = '';
+var save_Type = '';
+function D1705010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	//gfn_SetButton("1111011");
+	
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	// 지사코드, 영업구코드
+	//-----------------------------------------
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branch"));
+		
+	//-----------------------------------------
+	//  콤보박스의 초기 설정 : 지사, 구
+	//-----------------------------------------
+      if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+		cob_ObjectFlag.Enable = true;
+		cob_ObjectFlag.value = '';
+	 } else {
+		 cob_ObjectFlag.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+		 cob_ObjectFlag.Enable = false;
+	 }
+	 
+	 cal_CalCu_Ymd_Start.Value = substr(today(), 0, 6) + '01';
+	 cal_CalCu_Ymd_End.Value   = today();
+		
+	cob_BranchCd_OnChanged();
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    fn_SetComboBox_Comcode("1", cob_ObjectFlag.value , fn_setDsObject_Comcode("1", "cob_CountyFlag" ));    
+    fn_SetComboBox_Comcode("1", cob_Branch.value , fn_setDsObject_Comcode("1", "cob_Zipno1" ));  
+    cob_CountyFlag.value = '';
+    cob_Zipno1.value = '';
+    
+    save_Type = '';
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_Branch_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_Branch.value, fn_setDsObject_Comcode("1", "cob_Zipno1"));
+    cob_Zipno1.Value = cob_CountyFlag.Value;
+}
+
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonAddRow()
+// 설명: 구간등록 행을 추가한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonAddRow(){
+	
+	if(cob_ObjectFlag.Value == '' || cob_ObjectFlag.Value == null){
+		alert("지사를 선택해주세요. ");
+		return;
+	}  
+	
+	if(cob_CountyFlag.Value == '' || cob_CountyFlag.Value == null){
+		alert("시/구를 선택해주세요. ");
+		return;
+	}
+	
+	ds_Close_Cost_h.ClearData();
+	ds_Close_Cost_d.ClearData();
+	
+	edtFileList.Text = '';
+	Calendar0.Enable = true;
+	
+	ds_DepreAmt.ClearData();
+	
+	//Button3.Enable = true;
+	Button44.Enable = true;
+	addRowNum       = ds_Close_Cost_h.AddRow();
+	
+	ds_Close_Cost_d.AddRow();
+	//Grid1.Editable= true;
+	
+	gfn_SetGrdComboBox_Comcode("Grid1",1,"D10034");
+	gfn_SetGrdComboBox_Comcode("Grid1",0,"B30007");
+	
+	ds_Close_Cost_d.SetColumn(0, "PRESS_FLAG"     , "L"  );
+	ds_Close_Cost_d.SetColumn(0, "PIPE_DIAM_CD"   , "015");	
+	ds_Close_Cost_d.SetColumn(0, "DESIGN_AMT"     , "0"  );
+	ds_Close_Cost_d.SetColumn(0, "DEPRE_AMT_TOTAL", "0"  );
+		
+	cob_Branch.Value = cob_ObjectFlag.Value;
+	cob_Branch_OnChanged();	
+	
+	//Edit1.Text = ''; // 부가세 초기화
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonDeleteRow()
+// 설명: 접수행을 삭제 한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonDeleteRow()
+{
+	if(!gfn_isNull(ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "MOVE_REPAIR_NUM"))){
+			alert("이설보수번호가 존재할 경우에는 삭제가 불가능합니다. ");
+			return;
+	}
+	
+	if(ds_Close_Cost_h_List.GetRowCount() == '0'){
+		alert("삭제할 데이터가 존재하지 않습니다. ");
+		return;
+	}
+	
+	var result = Confirm(gfn_GetMessage("M000016","%AAA%","데이터를 삭제"));
+		
+	if(result == '0'){
+			return;
+	}
+	
+	fn_D1_Delete();
+	fn_D1_find();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonSave()
+// 설명: 등록된 내용을 저장한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSave(){
+
+	if(ds_Close_Cost_h.GetRowCount() == 0){
+		return;
+	}
+		
+	if(ds_Close_Cost_h.GetRowType(0) == 'update'){
+		/*if(ds_Close_Cost_h.GetColumn(0, "MOVE_REPAIR_NUM") != '' && ds_Close_Cost_h.GetColumn(0, "MOVE_REPAIR_NUM") != null){
+			alert("이설보수번호가 존재할 경우에는 변경이 불가능합니다. ");
+			return;
+		}*/	
+		if(ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "PROC_STS_CD") != '10' && length(trim(ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "MOVE_REPAIR_NUM"))) != 0){
+			alert("진행상태가 접수이거나 이설보수번호가 존재하지 않을경우에만 수정이 가능합니다.");
+			return;
+		}
+	}
+	
+	if(Calendar0.Value == ''){
+		alert("산출일자를 선택하세요. ");
+		Calendar0.SetFocus();
+		return;
+	}
+/*
+	if(cob_CountyFlag1.Value == ''){
+		alert("시/구 정보가 전체가 아닌 값을 선택하세요. ");
+		cob_CountyFlag1.SetFocus();
+		return;
+	}
+*/
+	if(Calendar1.Value == ''){
+		alert("폐관요청일을 선택하세요. ");
+		Calendar1.SetFocus();
+		return;
+	}
+	
+	if(edt_TakerName.Text == ''){
+		alert("담당자를 선택하세요. ");
+		Calendar1.SetFocus();
+		return;
+	}
+	
+	if(edt_Tot_Design_Amt.Text ==''){
+		alert("총 설계금액을 입력하세요. ");
+		edt_Tot_Design_Amt.SetFocus();
+		return;
+	}
+	if(edt_TotDepre_Amt.Text ==''){
+		alert("총 상각금액을 입력하세요. ");
+		edt_TotDepre_Amt.SetFocus();
+		return;
+	}
+//	if(edt_Tot_Close_Pipe_Req_Amt.Text ==''){
+//		alert("총 폐관청구액을 입력하세요. ");
+//		edt_Tot_Close_Pipe_Req_Amt.SetFocus();
+//		return;
+//	}
+	if(edt_TakerName.Text ==''){
+		alert("담당자명을 입력하세요. ");
+		edt_TakerName.SetFocus();
+		return;
+	}
+	
+	if(ds_Close_Cost_h.GetRowType(0) != 'normal'){
+		fn_D1_Count();
+		fn_GetDataSet_Value();
+	}
+	
+	//폐관내역등록의 설계금액과 폐관내역그리드의 설계금액이 틀릴시 
+	if(ds_Close_Cost_h.GetColumn(0,"TOT_DESIGN_AMT") != ds_Close_Cost_d.GetColumn(ds_Close_Cost_d.row,"DESIGN_AMT"))
+	{
+		Button257_OnClick();
+	}
+	
+	fn_D1_save();
+	btn_Com03_OnClick();
+	save_Type = '';	
+	fn_CommonSearch();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_SAVE
+//   설명  : 이설 보수 접수 내역 저장한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------
+//  Transition   : Service id
+//  ServicePart   : Service part
+//  Url          : Server url
+//  InputDsList   : Input Dataset List
+//  OutputDsList   : Output Dataset List
+//  Argument   :  Argument
+//-------------------------------------------------------------------------------
+function fn_D1_save(){		
+	
+	fn_GetDataSet_Value();
+	
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service";	
+	var strInDatasets    = "ds_Close_Cost_h=ds_Close_Cost_h:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "insert_h";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+			   
+
+	if(ErrorCode<0)
+	{    
+		return false;
+	}else{
+		gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+	}
+}
+
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+
+	ds_Close_Cost_d.ClearData();
+	ds_DepreAmt.ClearData();
+	
+	fn_D1_find();
+	fn_D1_view(ds_Close_Cost_h_List.row);
+	Grid1_OnCellClick();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 : "     + RPad(cob_ObjectFlag.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 : "    + RPad(cob_CountyFlag.Text," ",20);
+    SearchCondition = SearchCondition + "산출일자 : " + RPad(cal_CalCu_Ymd_Start.Value + ' ~ ' + cal_CalCu_Ymd_End.Value," ",20);
+        
+    gfn_ExportExcel("이설보수 잔존가 폐관비용 산정", 5, SearchCondition, "grd_excel");
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  잔존가 폐관비용 H 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+    var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service"
+						+ "&BRANCH_CD="       + cob_ObjectFlag.Value
+						+ "&ZIP_NO1="         + cob_CountyFlag     .Value
+						+ "&CALCU_YMD_START=" + cal_CalCu_Ymd_Start.Value
+						+ "&CALCU_YMD_END="   + cal_CalCu_Ymd_End  .Value
+						;
+						
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Close_Cost_h_List=ds_Close_Cost_h_List ds_Excel=ds_Excel";
+	var strArgument     = "search";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	save_Type = 'select';
+	fn_D1_view(ds_Close_Cost_h_List.row);	
+	Grid1_OnCellClick();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_view()
+//   설명  :  이설보수폐관 비용 H 상세 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_view(nRow){	
+	
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service"
+						+ "&CLOSE_COST_NUM="  + ds_Close_Cost_h_List.GetColumn(nRow, "CLOSE_COST_NUM")
+						;
+	
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Close_Cost_h=ds_Close_Cost_h ds_Close_Cost_d=ds_Close_Cost_d";
+	var strArgument     = "view";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+		
+	gfn_SetGrdComboBox_Comcode ("Grid1",1,"D10034") ;
+	gfn_SetGrdComboBox_Comcode ("Grid1",0,"B30007") ;
+	
+	Calendar0.Enable = false;
+	
+	// if(trim(ds_Close_Cost_d.GetColumn(0, "INST_YEAR")) != '' &&
+	// 	trim(ds_Close_Cost_d.GetColumn(0, "INST_YEAR")) != null)
+	// {
+    // 	Grid1.Editable= false;
+	// }
+	
+	Grid1_OnCellClick();
+	fn_d1_FileSearch();
+/*	
+	if(ds_Close_Cost_h.GetRowCount() > 0){
+		Edit1.Value = Truncate(toNumber(ds_Close_Cost_h.GetColumn(0, "TOT_AMT")) * 0.1);		
+	}
+*/
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fGrid0_OnCellClick() GRID Event
+//   설명  :  이설보수폐관 비용 H 상세 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Grid0_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	Edit1.Text = ''; // 부가세 초기화
+	Close_Cost_h_Row = nRow;
+	
+	cob_BranchCd1_OnChanged();
+		
+	fn_D1_view(nRow);
+	
+	fn_d1_FileSearch();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: Grid1_OnCellClick_GRID Event
+//   설명  :  이설보수폐관 비용 상각금액 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Grid1_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service"
+						+ "&CLOSE_COST_NUM="  + ds_Close_Cost_d.GetColumn(nRow, "CLOSE_COST_NUM")
+						+ "&CLOSE_PIPE_SEQ="  + ds_Close_Cost_d.GetColumn(nRow, "CLOSE_PIPE_SEQ") 
+						;
+	
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_DepreAmt=ds_DepreAmt";
+	var strArgument     = "view1";
+		 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_DepreAmt.GetRowCount()!=0) Button44.Enable = false;
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: btn_Com03_OnClick() BUTTON Event
+//   설명  :  이설보수폐관 비용 D 등록
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function btn_Com03_OnClick(obj)
+{
+	fn_GetDataSet_Value1();
+	
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service";	
+	var strInDatasets    = "ds_Close_Cost_d=ds_Close_Cost_d:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "insert_d";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+			   
+
+	if(ErrorCode<0)
+	{    
+		return false;
+	}
+	
+	//"저장을 완료하였습니다."
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+			
+	Button2_OnClick();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명 : Button2_OnClick()
+//   설명  : 이설 보수 폐관비용 상각금액 저장
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Button2_OnClick(obj)
+{
+	for(var i=0; i<ds_Close_Cost_h.GetRowCount(); i++){
+		
+		if(ds_Close_Cost_h.GetColumn(i, "CLOSE_COST_NUM") == ds_Max.GetColumn(0, "MAX_NUM")){
+			for(var i=0; i<ds_DepreAmt.GetRowCount(); i++){
+				ds_DepreAmt.SetRowType(i, 'insert');
+			}
+		}else{
+			for(var i=0; i<ds_DepreAmt.GetRowCount(); i++){
+				ds_DepreAmt.SetRowType(i, 'update');
+			}
+		}
+	}
+		
+	fn_GetDataSet_Value2();
+	
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service";	
+	var strInDatasets    = "ds_DepreAmt=ds_DepreAmt:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "insert_dep";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+			   
+
+	if(ErrorCode<0)
+	{    
+		return false;
+	}
+	
+	//"저장을 완료하였습니다."
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명 : fn_D1_SAVE
+//   설명  : 이설 보수 폐관비용 상각금액 저장 후 폐관비용_D 상각합계 및 폐관청구액 수정
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D10_Update(obj)
+{	
+	ds_DepreAmt.UpdateControl = false;
+	
+	for(var i=0; i<ds_DepreAmt.GetRowCount(); i++){
+		ds_DepreAmt.SetRowType(i, 'update');
+	}
+	
+	fn_GetDataSet_Value2();
+		
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service";	
+	var strInDatasets    = "ds_DepreAmt=ds_DepreAmt:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "update_dep";
+		
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart  	 
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );
+			   
+
+	if(ErrorCode<0)
+	{    
+		return false;
+	}
+	
+	//"저장을 완료하였습니다."
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 
+	
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_GetDataSet_Value()
+//   설명  :  이설보수 폐관비용_H 기본 셋팅
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_GetDataSet_Value(){
+
+	var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;   // SESSION ID
+	var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");   // SESSION IP
+
+	ds_Close_Cost_h.AddColumn("UPD_EMPID"      , "STRING", 256 );	// ID
+	ds_Close_Cost_h.AddColumn("UPD_IP"         , "STRING", 256 );	// IP
+	ds_Close_Cost_h.AddColumn("CRT_EMPID"      , "STRING", 256 );	// ID
+	ds_Close_Cost_h.AddColumn("CRT_IP"         , "STRING", 256 );	// IP
+	
+	ds_Close_Cost_h.SetColumn(0, "UPD_EMPID"   , USER_ID       );
+	ds_Close_Cost_h.SetColumn(0, "UPD_IP"      , USER_IP       );	
+	ds_Close_Cost_h.SetColumn(0, "CRT_EMPID"   , USER_ID       );
+	ds_Close_Cost_h.SetColumn(0, "CRT_IP"      , USER_IP       );
+	
+	if(ds_Close_Cost_h.GetRowType(0) == 'insert')
+	   ds_Close_Cost_h.SetColumn(0, "CLOSE_COST_NUM", ds_Max.GetColumn(0, "MAX_NUM")); // 폐관비용관리번호
+	}
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_GetDataSet_Value1()
+//   설명  :  이설보수 폐관비용_D 기본 셋팅
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_GetDataSet_Value1(){
+		
+	var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;   // SESSION ID
+	var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");   // SESSION IP
+	
+	ds_Close_Cost_d.AddColumn("UPD_EMPID"      , "STRING", 256 );	// ID
+	ds_Close_Cost_d.AddColumn("UPD_IP"         , "STRING", 256 );	// IP
+	ds_Close_Cost_d.AddColumn("CRT_EMPID"      , "STRING", 256 );	// ID
+	ds_Close_Cost_d.AddColumn("CRT_IP"         , "STRING", 256 );	// IP
+	
+
+	ds_Close_Cost_d.SetColumn(0, "UPD_EMPID" , USER_ID  );
+	ds_Close_Cost_d.SetColumn(0, "UPD_IP"    , USER_IP  );	
+	ds_Close_Cost_d.SetColumn(0, "CRT_EMPID" , USER_ID  );
+	ds_Close_Cost_d.SetColumn(0, "CRT_IP"    , USER_IP  );
+		
+	
+	if(ds_Close_Cost_d.GetColumn(0, "CLOSE_COST_NUM") == null || ds_Close_Cost_d.GetColumn(0, "CLOSE_COST_NUM") == ''){
+		ds_Close_Cost_d.SetColumn(0, "CLOSE_COST_NUM", ds_Max.GetColumn(0, "MAX_NUM")); // 폐관비용관리번호
+	}
+	
+	//  내역에서 선택한 이설보수 번호를 세팅
+	ds_Close_Cost_d.SetColumn(0, "CLOSE_COST_NUM", ds_Close_Cost_h.GetColumn(0, "CLOSE_COST_NUM"));
+	ds_Close_Cost_d.SetColumn(0, "INST_YEAR"     , subStr(ds_Close_Cost_d.GetColumn(0, "INST_YEAR"),0, 4));
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_GetDataSet_Value2()
+//   설명  :  이설보수 폐관비용_상각 기본 셋팅
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_GetDataSet_Value2(){
+	
+	var USER_ID = gfn_GetGlobalValue("G_USER_NO")  ;   // SESSION ID
+	var USER_IP = gfn_GetGlobalValue("G_IPADDRESS");   // SESSION IP
+	
+	ds_DepreAmt.AddColumn("UPD_EMPID"      , "STRING", 256 );	// ID
+	ds_DepreAmt.AddColumn("UPD_IP"         , "STRING", 256 );	// IP
+	ds_DepreAmt.AddColumn("CRT_EMPID"      , "STRING", 256 );	// ID
+	ds_DepreAmt.AddColumn("CRT_IP"         , "STRING", 256 );	// IP
+	
+	for(var i=0; i<ds_DepreAmt.getrowcount(); i++){	
+	
+		ds_DepreAmt.SetColumn(i, "UPD_EMPID" , USER_ID);
+		ds_DepreAmt.SetColumn(i, "UPD_IP"    , USER_IP);	
+		ds_DepreAmt.SetColumn(i, "CRT_EMPID" , USER_ID);
+		ds_DepreAmt.SetColumn(i, "CRT_IP"    , USER_IP);
+		
+		if(ds_DepreAmt.GetColumn(i, "CLOSE_COST_NUM") == null || ds_DepreAmt.GetColumn(i, "CLOSE_COST_NUM") == ''){
+			ds_DepreAmt.SetColumn(i, "CLOSE_COST_NUM", ds_Max.GetColumn(i, "MAX_NUM")); // 폐관비용관리번호
+		}		
+		//  내역에서 선택한 이설보수 번호를 세팅
+		ds_DepreAmt.SetColumn(i, "CLOSE_COST_NUM", ds_Close_Cost_d.GetColumn(0, "CLOSE_COST_NUM"));
+		ds_DepreAmt.SetColumn(i, "CLOSE_PIPE_SEQ", "001");	// 매설년도 하나로만 가기에 시퀀스 필요 무
+	}
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명: Button1_OnClick()
+//   설명: 사원번호 조회클릭시 우편번호 조회 popup화면 로딩
+// arguments   
+//          obj: 사용된 객체를 전달 한다.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Button1_OnClick(obj)
+{
+	var retValue = gfn_E2_SearchOutEmplDialogDept(edt_TakerName.Text, '안전공급');	
+	 
+	 if(retValue != null)
+	 {
+		 edt_TakerEmpid.Text = retValue[0];
+		 edt_TakerName .Text = retValue[1];
+	 }
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: ds_Close_Cost_d_OnColumnChanged()
+//   설명: 폐관내역 계산
+// arguments   
+//          obj: 사용된 객체를 전달 한다.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function ds_Close_Cost_d_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	if(strColumnID =='DESIGN_AMT' || strColumnID =='DEPRE_AMT_TOTAL'){
+		ds_Close_Cost_d.SetColumn(
+					  ds_Close_Cost_d.row, "CLOSE_PIPE_REQ_AMT", 
+                      Truncate(((toNumber(ds_Close_Cost_d.GetColumn(ds_Close_Cost_d.row, "DESIGN_AMT"))
+					        - toNumber(ds_Close_Cost_d.GetColumn(ds_Close_Cost_d.row, "DEPRE_AMT_TOTAL"))) / 100)) * 100
+		);
+	}
+}
+
+// 상각금액 산출
+function Button257_OnClick(obj)
+{	//2011.07.25 이상목 
+	//if(ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "MOVE_REPAIR_NUM") = '' || ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "MOVE_REPAIR_NUM") = null)
+	//이설번호가 있어도 접수일때는 가능하도록
+	if(ds_Close_Cost_h.GetColumn(ds_Close_Cost_h.row, "MOVE_REPAIR_NUM") = '' || ds_Close_Cost_h.GetColumn(ds_Close_Cost_h.row, "MOVE_REPAIR_NUM") = null || ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "PROC_STS_CD") == '10')
+	{
+	
+		if (ds_Close_Cost_d.GetColumn(0, "LENG") == null || ds_Close_Cost_d.GetColumn(0, "LENG") = '')
+		{
+			alert("연장을 입력하세요. ");
+			return;		
+		}
+		
+		var INST_YEAR = subStr(ds_Close_Cost_d.GetColumn(0, "INST_YEAR"), 0, 4);
+		
+		if (INST_YEAR == null || INST_YEAR == ''){
+			alert("매설년도 정보를 입력하세요. ");
+			return;
+		}
+		
+		var CURRENT_YEAR = subSTr(Calendar1.value, 0, 4);  // 폐관요청일
+		
+		if(CURRENT_YEAR < INST_YEAR){
+			alert("매설년도 이상의 폐관요청일을 지정하세요. ");
+			return;
+		}
+
+		//기존 20년에서 30년으로 변경
+		if((toNumber(CURRENT_YEAR) - toNumber(INST_YEAR)) +1> 30){
+			alert("감가상각 년수가 초과되어 산정하실 수 없습니다. ");
+			return;
+		}
+		
+		var DESIGN_AMT = ds_Close_Cost_d.GetColumn(0, "DESIGN_AMT");
+		
+		if (DESIGN_AMT == '0' || DESIGN_AMT == null || DESIGN_AMT == ''){
+				alert("설계금액을 입력하세요. ");
+				return;
+		}	
+		
+		if (ds_DepreAmt.GetRowCount() > 0)
+		{
+				ds_Close_Cost_h.UpdateControl = false;
+				ds_Close_Cost_h.SetRowType(0, "delete");
+					
+				var strSvcID        = "";
+				var strPart         = "D10";	
+				var strURL          = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service";
+				var strInDatasets   = "ds_Close_Cost_h=ds_Close_Cost_h:u";
+				var strOutDatasets  = "";
+				var strArgument     = "delete_d";
+					 
+				gfn_SyncCall( 
+								 strSvcID
+							   , strPart
+							   , strURL
+							   , strInDatasets
+							   , strOutDatasets
+							   , strArgument
+						   );
+				
+				if(ErrorCode < 0)
+				{
+					return;
+				}
+				ds_DepreAmt.ClearData();
+				ds_Close_Cost_h.UpdateControl = false;
+				ds_Close_Cost_h.SetRowType(0, "update");				
+		}
+	
+		if(toNumber(INST_YEAR) + 29 < CURRENT_YEAR)
+		{
+			CURRENT_YEAR = toNumber(INST_YEAR) + 29;
+		}else{
+			//CURRENT_YEAR = CURRENT_YEAR;
+		}
+
+		for(var i=toNumber(INST_YEAR); i<=toNumber(CURRENT_YEAR); i++){
+	
+			var v = ds_DepreAmt.AddRow();
+					
+			ds_DepreAmt.SetColumn(v, "DEPRE_YY" , i);
+		
+			var DESIGN_AMT = ds_Close_Cost_d.GetColumn(0, "DESIGN_AMT");		
+			
+			var DEPRE_AMT = '';
+					
+			if(i == CURRENT_YEAR){		
+				// 폐관요청일
+				var CURRENT_MONTH = subSTr(Calendar1.value, 4, 2);  
+				// 마지막 년도는 현재적용월 포함   20->30년으로 수정 0.05->0.33
+				DEPRE_AMT = toNumber(DESIGN_AMT) * 0.043 * (toNumber(CURRENT_MONTH)/12);	
+//trace("1 ::" + i + "년 :" + DEPRE_AMT );					
+			} else {	
+			   // 상각금액 적용 식 
+				DEPRE_AMT = toNumber(DESIGN_AMT) * 0.033;
+//trace("2 ::" + i + "년 :" + DEPRE_AMT );					
+			}
+			
+			DEPRE_AMT = truncate(truncate(DEPRE_AMT) * 0.1) * 10;
+			
+			ds_DepreAmt.SetColumn(v, "DEPRE_AMT", DEPRE_AMT);
+		}
+		
+		ds_Close_Cost_d.SetColumn(0, "DEPRE_AMT_TOTAL", ds_DepreAmt.Sum("DEPRE_AMT"));
+			
+		//폐관비용 내역에 정보 뿌려주기
+		// 설계금액
+		edt_Tot_Design_Amt.Value = ds_Close_Cost_d.GetColumn(0, "DESIGN_AMT");
+		
+		//상각금액
+		edt_TotDepre_Amt.Value = ds_Close_Cost_d.GetColumn(0, "DEPRE_AMT_TOTAL");
+		
+		//잔존금액
+		//Edit0.Value = Truncate(((toNumber(edt_Tot_Design_Amt.Value) - toNumber(edt_TotDepre_Amt.Value)) / 100)) * 100;					
+		
+		ds_Close_Cost_h.SetColumn(0, "TOT_CLOSE_PIPE_REQ_AMT", Truncate(((toNumber(edt_Tot_Design_Amt.Value) - toNumber(edt_TotDepre_Amt.Value)) / 100)) * 100);
+		
+		//부가세
+		//Edit1.Value = truncate(toNumber(Edit0.Value) * 0.1);	
+		
+		//edt_Tot_Close_Pipe_Req_Amt.Value = truncate(toNumber(Edit0.Value) + toNumber(Edit1.Value));
+		return true;
+	}	
+	else
+	{
+	//	alert("이설보수번호가 존재할 경우에는 변경이 불가능합니다. ");
+	//	return;		
+		//if(ds_Close_Cost_h.GetRowType(0) == 'update'){
+		if(ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "PROC_STS_CD") != '10' || length(trim(ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "MOVE_REPAIR_NUM"))) == 0){
+			alert("진행상태가 접수일때만 수정이 가능합니다.");
+			return;
+		}
+		//}		
+	}
+
+}
+
+// 설계금액 산출 팝업
+function Button44_OnClick(obj)
+{
+	// 설계금액 반환
+	var strPrefix = "B40";
+	var strFormid = "B2201010010F";
+	var strArg    = "" ;
+	
+	gfn_NewWindow(strPrefix, strFormid, strArg, "공사설계서 등록", strFormid, "", 0, "");
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Count()
+//   설명  :  잔존가 폐관비용 H  등록 번호 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Count()
+{	
+    var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service";
+						
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Max=ds_Max";
+	var strArgument     = "count";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_d1_FileSearch()
+//   설명: 첨부파일 조회
+// arguments   
+//          obj: 사용된 객체를 전달 한다.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_d1_FileSearch()
+{
+	var CLOSE_COST_NUM = '';
+	
+	if(ds_Close_Cost_h.GetColumn(0,"CLOSE_COST_NUM") == '' || ds_Close_Cost_h.GetColumn(0,"CLOSE_COST_NUM") == null ){
+	   ds_Close_Cost_h.SetColumn(0, "CLOSE_COST_NUM", ds_Max.GetColumn(0, "MAX_NUM")); // 폐관비용관리번호
+	}else {
+		CLOSE_COST_NUM = ds_Close_Cost_h.GetColumn(0,"CLOSE_COST_NUM");
+	}
+	
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service&findFile=1"
+	           + "&CLOSE_COST_NUM="    + CLOSE_COST_NUM
+	           + "&ATTACH_FILE_FLAG="  + '30'
+	           ;
+	           	
+	var strInDatasets   = "";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_FileList=ds_FileList";
+	var strArgument  = "";
+		
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+	
+	edtFileList.text = "";
+	
+	for(var i=0; i<ds_FileList.RowCount(); i++)
+	{
+		edtFileList.text += ds_FileList.GetColumn(i,"ATTACH_FILE_NM");
+		if(ds_FileList.RowCount()-1 != i) edtFileList.text += "/";
+	}
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명: Button0_OnClick()
+//   설명: 첨부파일 popup화면 로딩
+// arguments   
+//          obj: 사용된 객체를 전달 한다.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Button0_OnClick(obj)
+{	
+	if(ds_Close_Cost_h.GetRowCount() <= 0 ){
+		alert(gfn_GetMessage("M000040","%AAA%","폐관비용산정내역을"));
+		return;
+	}
+	
+	if(ds_Close_Cost_h.GetRowType(0) == 'insert'){
+		alert("폐관비용으로 산정된 정보를 저장 후 첨부파일을 입력바랍니다. ");
+		return;
+	}
+	
+	if(gfn_isNull(ds_Close_Cost_h.GetColumn(0, "MOVE_REPAIR_NUM")))
+	{
+		alert("첨부화일을 등록하시기전 폐관비용관리번호를 입력하세요.");
+		return;
+	}
+	
+	var arg = "fa_Url=handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service&CLOSE_COST_NUM="+ ds_Close_Cost_h.GetColumn(0, "CLOSE_COST_NUM") +"&ATTACH_FILE_FLAG=30 fa_Part=D10";
+	
+	var arrList = gfn_Dialog("D10","D1101010018U",arg,450,280,true,-1,-1);
+	
+	edtFileList.text = "";
+	
+	for(var i=0; i<arrList.length; i++)
+	{
+		edtFileList.text += arrList[i];
+		if(arrList.length-1 != i) edtFileList.text += "/";
+	}
+}
+
+function Grid0_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_D1_SetGrid_Sort(Grid0);
+}
+
+function Grid2_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_D1_SetGrid_Sort(Grid2);
+}
+
+// 잔존가 내역 접수 등록
+function Button116_OnClick(obj)
+{
+	if(!gfn_isNull(ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "MOVE_REPAIR_NUM"))){
+		alert("이설보수번호가 존재할 경우 이설보수내역등록이 불가능합니다. ");
+		return;
+	}
+	
+	var args  = '';
+	
+		args  = "BRANCH_CD="         + ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "BRANCH_CD") ;
+		args += " ZIP_NO1="          + ds_Close_Cost_h_List.GetColumn(ds_Close_Cost_h_List.row, "ZIP_NO1"  ) ;
+		args += " CALCU_YMD_START="  + cal_CalCu_Ymd_Start.Value ;
+		args += " CALCU_YMD_END="    + cal_CalCu_Ymd_End.Value ;
+		
+	gfn_Dialog("D10","D1705010011U",args,742,615,true,-1,-1);
+	
+	//D1705010010F.Reload();
+}
+
+
+// 폐관일자는 산출일자 이후 값만 들어갈 수 있도록
+function Calendar1_OnChanged(obj,strOldText,strNewText)
+{
+	if(Calendar0.Value == "" || Calendar0.Value == null){
+		alert("산출일자를 먼저 선택하세요. ");
+		
+		Calendar0.SetFocus();
+		Calendar1.value = "";
+		return false;
+	}
+
+	if (Calendar1.Value == "" || Calendar1.Value == null) {
+        return true; 
+    } else if (Calendar1.Value < Calendar0.Value) {
+    
+		alert("폐관일자는 산출일자보다 이전이 될 수 없습니다. ");
+		
+		Calendar1.SetFocus();
+		Calendar1.value = "";
+		return false;
+	}
+}
+
+function fn_D1_Delete()
+{		
+	ds_Close_Cost_h.UpdateControl = false;
+	ds_Close_Cost_h.SetRowType(0, "delete");
+		
+    var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_MoveingRepairClosingPipeMgr-service"
+						;
+	var strInDatasets   = "ds_Close_Cost_h=ds_Close_Cost_h:u";
+	var strOutDatasets  = "";
+	var strArgument     = "delete";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		return;
+	}
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 삭제를"),"black",true);
+}
+function ds_Close_Cost_h_List_OnRowPosChanged(obj,nOldRow,nRow)
+{
+	fn_D1_view(nRow);
+}
+
+]]></Script>
+</Window>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="232" Id="D1301010010U" Left="8" OnLoadCompleted="D1301010010U_OnLoadCompleted" OnUnloadCompleted="D1301010010U_OnUnloadCompleted" PidAttrib="7" Title="정기검사수수료등록_D1301010010U" Top="8" Ver="1.0" Width="456" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_CostCal">
+				<Contents>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_2UND_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_2_5UD_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_5_10UD_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_10K_OVER_UNIT_PRC" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_CostCalExcel">
+				<Contents>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_2UND_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_2_5UD_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_5_10UD_UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_10K_OVER_UNIT_PRC" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="정기검사수수료&#32;등록" Transparent="TRUE" Width="458"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static18" Left="5" Style="table" TabOrder="2" Top="183" VAlign="Middle" Width="445" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static22" Left="5" Style="table" TabOrder="3" Top="204" VAlign="Middle" Width="445" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="5" Style="table" TabOrder="5" Top="141" VAlign="Middle" Width="445" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="user6" Border="Flat" Height="22" Id="Static1" Left="5" Style="table_indis" TabOrder="4" Text="2KM~5KM미만" Top="141" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="5" Style="table" TabOrder="6" Top="162" VAlign="Middle" Width="445" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="user6" Border="Flat" Color="user2" Height="22" Id="Static11" Left="5" Style="table_indis" TabOrder="7" Text="배관연장" Top="99" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static12" Left="5" Style="table" TabOrder="9" Top="120" VAlign="Middle" Width="445" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="user6" Border="Flat" Height="22" Id="Static13" Left="5" Style="table_indis" TabOrder="8" Text="2KM미만" Top="120" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="user6" Border="Flat" Height="22" Id="Static3" Left="5" Style="table_indis" TabOrder="10" Text="5KM~10KM미만" Top="162" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="user6" Border="Flat" Height="22" Id="Static7" Left="5" Style="table_indis" TabOrder="11" Text="10KM이상" Top="183" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="user6" Border="Flat" Color="user1" Height="22" Id="Static4" Left="132" Style="table_indis" TabOrder="12" Text="단가(원)" Top="99" VAlign="Middle" Width="318" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="user6" Border="Flat" Height="22" Id="Static5" Left="5" Style="table_indis" TabOrder="13" Text="정압기&#32;단가" Top="204" VAlign="Middle" Width="128" WordWrap="TRUE"></Static>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="10" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="14" Text="Div0" Top="38" Url="globals::ComButton.xml" Visible="FALSE" Width="444">
+			<Contents></Contents>
+		</Div>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_CostCalExcel" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="312" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="64" Id="grd_Excel" InputPanel="FALSE" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="776" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="15" TabStop="true" Top="248" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="776">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="133"/>
+						<col width="138"/>
+						<col width="152"/>
+						<col width="124"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" edit="normal" rowspan="2" text="검사년도"/>
+						<cell col="1" display="normal" edit="normal" rowspan="2" text="배관_2KM미만단가"/>
+						<cell col="2" display="text" edit="normal" rowspan="2" text="배관_2_5KM미만단가"/>
+						<cell col="3" display="text" edit="normal" rowspan="2" text="배관_5_10KM미만단가"/>
+						<cell col="4" display="text" rowspan="2" text="배관_10KM이상단가"/>
+						<cell col="5" display="text" rowspan="2" text="정압기단가"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="INSPECT_YEAR" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" bkimagealign="right" col="1" colid="PIPE_2UND_UNIT_PRC" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="left" bkimagealign="right" col="2" colid="PIPE_2_5UD_UNIT_PRC" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="left" bkimagealign="right" col="3" colid="PIPE_5_10UD_UNIT_PRC" display="number" expandsize="18" wordwrap="word"/>
+						<cell bkimagealign="right" col="4" colid="PIPE_10K_OVER_UNIT_PRC" display="number"/>
+						<cell bkimagealign="right" col="5" colid="GOV_UNIT_PRC" display="number"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user9" Bottom="96" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="450" TabOrder="16" Top="72" Type="Rectangle" Width="445"></Shape>
+		<Spin Border="Flat" Height="18" Id="sp_Year" Left="74" Style="spin_indis" TabOrder="17" Text="2008" Top="75" Width="54"></Spin>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="12" LeftMargin="12" Style="blt_search_1" TabOrder="18" Text="기준년도" Top="75" Transparent="TRUE" Width="81"></Image>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_CostCal" Border="Flat" Column="PIPE_2UND_UNIT_PRC" Height="18" Id="edt_Pipe2und" Left="135" MaxLength="7" Style="edit_Indis" TabOrder="19" Top="122" Width="312"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_CostCal" Border="Flat" Column="PIPE_2_5UD_UNIT_PRC" Height="18" Id="edt_Pipe2_5und" Left="135" MaxLength="7" Style="edit_Indis" TabOrder="20" Top="143" Width="312"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_CostCal" Border="Flat" Column="PIPE_5_10UD_UNIT_PRC" Height="18" Id="edt_Pipe5_10und" Left="135" MaxLength="7" Style="edit_Indis" TabOrder="21" Top="164" Width="312"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_CostCal" Border="Flat" Column="PIPE_10K_OVER_UNIT_PRC" Height="18" Id="edt_Pipe10over" Left="135" MaxLength="7" Style="edit_Indis" TabOrder="22" Top="185" Width="312"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_CostCal" Border="Flat" Column="GOV_UNIT_PRC" Height="18" Id="edt_GovUnit" Left="135" MaxLength="7" Style="edit_Indis" TabOrder="23" Top="206" Width="312"></MaskEdit>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1301010010U.xml
+* Form 설명  : 정기검사비용계산
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2008-11-20
+* 변경내용   : 
+****************************************************************************************************/
+
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONB30001.js";
+#include "JS::COMMOND10001.js";
+
+//------------------------------------------------------------------------------- 
+// 함수명: D1301010010U_OnLoadCompleted()
+//   설명: 화면 로드 후 기본 셋팅
+// arguments  
+//			obj: form object: 설명
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function D1301010010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	sp_Year.Value = substr(today(),0,4);
+	fn_D1_Find();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonSearch()
+   설명: 공통 조회 클릭시 조회 업무  수행 
+   return 내용: 없음
+===============================================================================*/ 
+
+function fn_CommonSearch(){
+	fn_D1_Find();
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Find()
+//   설명:  정기검사 수수료를 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find()
+{	
+	if(!fn_DateCheckYear(sp_Year))
+	{		return;
+	}else
+	{
+		var strSvcID = "fn_D1_Find";
+		var strPart = "D10";	
+		var strURL = "handle.do?ServiceName=D1_RegularTimeTestCostCalcuMgr-service&INSPECT_YEAR=" + sp_Year.Value;
+		var strInDatasets  = "";
+		var strOutDatasets  = "ds_CostCal=ds_CostCal ds_CostCalExcel=ds_CostCalExcel";
+		var strArgument  = "searchCost";
+		
+		gfn_SyncCall( 
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+				   
+		if(ErrorCode < 0)
+		{    
+			return;
+		}
+		
+		if(ds_CostCal.GetRowCount() == 0){
+			ds_CostCal.AddRow();
+			ds_CostCal.SetColumn(0,"INSPECT_YEAR",sp_Year.Text);
+		}
+	}
+}
+
+
+/*===============================================================================
+ * 함수명: fn_CommonSave()
+   설명: 정기 검사수수료 등록내용를 저장 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonSave()
+{
+	fn_D1_Save();
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Save()
+//   설명: 정기검사수수료를 등록함
+// arguments   
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save()
+{
+	if(edt_Pipe2und.Text == "")
+	{
+		alert(gfn_GetMessage("M000011","%AAA%","2km미만을"));
+		return;
+	}
+	if(edt_Pipe2_5und.Text == "")
+	{
+		alert(gfn_GetMessage("M000011","%AAA%","2km~5km미만을"));
+		return;
+	}
+	if(edt_Pipe5_10und.Text == "")
+	{
+		alert(gfn_GetMessage("M000011","%AAA%","5km~10km미만을"));
+		return;
+	}
+	if(edt_Pipe10over.Text == "")
+	{
+		alert(gfn_GetMessage("M000011","%AAA%","10km이상을"));
+		return;
+	}
+	if(edt_GovUnit.Text == "")
+	{
+		alert(gfn_GetMessage("M000011","%AAA%","정압기 단가를"));
+		return;
+	}
+	
+	//수정 등록시 셋팅할 사용자 정보
+	ds_CostCal.SetColumn(0, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_CostCal.SetColumn(0, "UPD_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_CostCal.SetColumn(0, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_CostCal.SetColumn(0, "CRT_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));
+	
+	ds_CostCal.SetColumn(0, "GOV_UNIT_PRC"          , replace(edt_GovUnit.Value    , ",", ""));
+	ds_CostCal.SetColumn(0, "PIPE_2UND_UNIT_PRC"    , replace(edt_Pipe2und.Value   , ",", ""));
+	ds_CostCal.SetColumn(0, "PIPE_2_5UD_UNIT_PRC"   , replace(edt_Pipe2_5und.Value , ",", ""));
+	ds_CostCal.SetColumn(0, "PIPE_5_10UD_UNIT_PRC"  , replace(edt_Pipe5_10und.Value, ",", ""));
+	ds_CostCal.SetColumn(0, "PIPE_10K_OVER_UNIT_PRC", replace(edt_Pipe10over.Value , ",", ""));	
+	
+	var strSvcID = "fn_D1_Save";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_RegularTimeTestCostCalcuMgr-service";
+	var strInDatasets  = "ds_CostCal=ds_CostCal:u";
+	var strOutDatasets  = "";
+	var strArgument  = "saveCost";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	
+	alert(gfn_GetMessage("M000009","%AAA%","저장을"));
+	fn_CommonSearch();
+}
+
+
+function D1301010010U_OnUnloadCompleted(obj)
+{
+	if(ds_CostCal.GetUpdate()){
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 내용이 있습니다.종료")))
+		{
+			return false;
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonExcelExport()
+//   설명  :  엑셀다운 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonExcelExport()
+{
+	gfn_ExportExcel("정기검사수수료 조회 ", 5, "", "grd_Excel"); 
+}
+
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}]]></Script>
+</Window>

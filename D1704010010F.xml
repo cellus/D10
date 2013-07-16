@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="728" Id="D1704010010F" Left="8" OnLoadCompleted="D1704010010F_OnLoadCompleted" PidAttrib="7" Title="이설보수&#32;진행상태조회" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents>
+					<colinfo id="ADJ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REFUND_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="REFUND_AMT_PAY_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REASON_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDRESS" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_TYPE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STS_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIPT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIPT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_END_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_WORK_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DESIGN_MASTER_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_OPER_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_PRICE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESULT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="VAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_MoveDocu">
+				<Contents>
+					<colinfo id="MOVE_REPAIR_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REQ_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIPT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIPT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="REFUND_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="REFUND_AMT_PAY_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_STR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_END_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_ADJ_COST" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOVE_REPAIR_TYPE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="VAT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RESULT_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BILL_SEQ" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Excel" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="167" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="90" Id="grd_excel" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnExpandEdit="grd_MultiSave_OnExpandEdit" Right="2704" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="17" TabStop="FALSE" Top="77" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="2699">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="170"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="120"/>
+						<col width="350"/>
+						<col width="300"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="150"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="150"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="이설보수번호"/>
+						<cell col="1" display="text" text="이설보수공사명"/>
+						<cell align="center" col="2" display="text" text="지사"/>
+						<cell align="center" col="3" display="text" text="시/구"/>
+						<cell align="center" col="4" display="text" text="접수일자"/>
+						<cell align="center" col="5" display="text" text="의뢰자명"/>
+						<cell align="center" col="6" display="text" text="의뢰자&#32;전화번호"/>
+						<cell col="7" display="text" text="의뢰자&#32;주소"/>
+						<cell col="8" display="text" text="의뢰자&#32;요청내용"/>
+						<cell align="center" col="9" display="text" text="유형"/>
+						<cell align="center" col="10" display="text" text="담당자명"/>
+						<cell col="11" display="text" text="청구일자"/>
+						<cell col="12" display="text" text="청구금액"/>
+						<cell col="13" display="text" text="입금일자"/>
+						<cell col="14" display="text" text="입금액"/>
+						<cell col="15" display="text" text="공사명"/>
+						<cell col="16" display="text" text="공사시작일"/>
+						<cell col="17" display="text" text="공사완료일"/>
+						<cell col="18" display="text" text="시공업체명"/>
+						<cell col="19" display="text" text="순수공사비"/>
+						<cell col="20" display="text" text="설계감독비"/>
+						<cell col="21" display="text" text="도관운영비"/>
+						<cell col="22" display="text" text="공사비용합계"/>
+						<cell col="23" display="text" text="정산일자"/>
+						<cell col="24" display="text" text="정산금액"/>
+						<cell col="25" display="text" text="환불지급일자"/>
+						<cell align="center" col="26" display="text" text="환불지급액"/>
+						<cell col="27" display="text" text="진행상태"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MOVE_REPAIR_NUM" display="text"/>
+						<cell align="left" col="1" colid="MOVE_REPAIR_WORK_NM" display="text"/>
+						<cell align="center" col="2" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="3" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="center" col="4" colid="RECEIVE_YMD" display="date"/>
+						<cell align="center" col="5" colid="REASON_NM" display="text"/>
+						<cell align="center" col="6" colid="TEL" display="text"/>
+						<cell col="7" colid="ADDRESS" display="text"/>
+						<cell col="8" colid="MOVE_REPAIR_DESC" display="text"/>
+						<cell align="center" col="9" colid="MOVE_REPAIR_TYPE_NM" display="text"/>
+						<cell align="center" col="10" colid="TAKER_NAME" display="text"/>
+						<cell align="center" col="11" colid="REQ_YMD" display="date"/>
+						<cell align="right" col="12" colid="REQ_AMT" display="number"/>
+						<cell align="center" col="13" colid="RECEIPT_YMD" display="date"/>
+						<cell align="right" col="14" colid="RECEIPT_AMT" display="number"/>
+						<cell col="15" colid="WORK_NM" display="text"/>
+						<cell align="center" col="16" colid="WORK_STR_YMD" display="date"/>
+						<cell align="center" col="17" colid="WORK_END_YMD" display="date"/>
+						<cell align="center" col="18" colid="WORK_FIRM_NM" display="text"/>
+						<cell align="right" col="19" colid="BASE_WORK_AMT" display="number"/>
+						<cell align="right" col="20" colid="DESIGN_MASTER_AMT" display="number"/>
+						<cell align="right" col="21" colid="PIPE_OPER_AMT" display="number"/>
+						<cell align="right" col="22" colid="WORK_PRICE" display="number"/>
+						<cell align="center" col="23" colid="ADJ_YMD" display="date"/>
+						<cell align="right" col="24" colid="WORK_FIRM_ADJ_COST" display="number"/>
+						<cell align="center" col="25" colid="REFUND_AMT_PAY_YMD" display="date"/>
+						<cell align="center" col="26" colid="REFUND_AMT" display="number"/>
+						<cell align="center" col="27" colid="PROC_STS_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1265" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="3" Top="30" Type="RoundRect" Width="1260"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape0" Left="10" LineWidth="0" Right="1260" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="35" Type="Rectangle" Width="1250"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image7" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search" TabOrder="1" Text="지사" Top="40" Width="61"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="2" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1261">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" Left="53" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="5" Top="40" Width="125"></Combo>
+		<Shape BKColor="user15" Bottom="77" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="1266" TabOrder="6" Top="74" Type="Rectangle" Width="1261"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image0" ImageID="blt" Left="188" LeftMargin="12" Style="blt_search" TabOrder="7" Text="시/구" Top="40" Width="86"></Image>
+		<Image Align="Left" Color="blue" Height="18" Id="Image1" ImageID="blt" Left="351" LeftMargin="12" Style="blt_search" TabOrder="8" Text="이설보수유형" Top="40" Width="85"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ConstructFlag" Left="439" Style="combo_indis" TabOrder="9" Top="40" Width="102"></Combo>
+		<Image Align="Left" Color="user1" Height="18" Id="Image8" ImageID="blt" Left="551" LeftMargin="12" Style="blt_search" TabOrder="10" Text="진행상태" Top="40" Width="76"></Image>
+		<Image Align="Left" Color="user1" Height="18" Id="Image9" ImageID="blt" Left="715" LeftMargin="12" Style="blt_search" TabOrder="12" Text="접수일자" Top="40" Width="76"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Proc_Sts" Left="613" Style="combo" TabOrder="11" Top="40" Width="93"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" Left="232" Style="combo_indis" TabOrder="13" Top="40" Width="117"></Combo>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ReceiveStart" Left="779" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="14" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static10" Left="868" Style="static" TabOrder="15" Text="~" Top="43" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ReceiveEnd" Left="878" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="16" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Grid AutoEnter="TRUE" BindDataset="ds_MoveDocu" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="721" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="644" Id="Grid2" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" OnHeadClick="Grid2_OnHeadClick" Right="1266" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="18" TabStop="true" Top="77" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1261">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="107"/>
+						<col fix="left" width="80"/>
+						<col fix="left" width="50"/>
+						<col fix="left" width="300"/>
+						<col fix="left" width="70"/>
+						<col fix="left" width="10"/>
+						<col fix="left" width="70"/>
+						<col fix="left" width="80"/>
+						<col fix="left" width="97"/>
+						<col width="112"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="82"/>
+						<col width="102"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" rowspan="2" text="이설보수번호"/>
+						<cell col="1" display="text" rowspan="2" text="접수일자"/>
+						<cell col="2" display="text" rowspan="2" text="유형"/>
+						<cell col="3" display="text" rowspan="2" text="공사명"/>
+						<cell col="4" colspan="3" display="text" rowspan="2" text="공사기간"/>
+						<cell col="7" display="text" rowspan="2" text="지사"/>
+						<cell col="8" display="text" rowspan="2" text="시/구"/>
+						<cell col="9" display="text" rowspan="2" text="진행상태"/>
+						<cell col="10" display="text" rowspan="2" text="산정금액(원)"/>
+						<cell col="11" display="text" rowspan="2" text="부가세(원)"/>
+						<cell col="12" display="text" rowspan="2" text="청구금액(원)"/>
+						<cell col="13" display="text" rowspan="2" text="입금금액(원)"/>
+						<cell col="14" display="text" rowspan="2" text="공사금액(원)"/>
+						<cell col="15" display="text" rowspan="2" text="환불금액(원)"/>
+						<cell col="16" display="text" rowspan="2" text="청구일자"/>
+						<cell col="17" display="text" rowspan="2" text="입금일자"/>
+						<cell col="18" colspan="2" display="text" text="예수금전표"/>
+						<cell col="20" colspan="2" display="text" text="예수금대체전표"/>
+						<cell col="22" colspan="2" display="text" text="환불전표"/>
+						<cell col="18" display="text" row="1" text="전표발행일자"/>
+						<cell col="19" display="text" row="1" text="전표번호"/>
+						<cell col="20" display="text" row="1" text="전표발행일자"/>
+						<cell col="21" display="text" row="1" text="전표번호"/>
+						<cell col="22" display="text" row="1" text="전표발행일자"/>
+						<cell col="23" display="text" row="1" text="전표번호"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="MOVE_REPAIR_NUM" display="text"/>
+						<cell align="center" col="1" colid="RECEIVE_YMD" display="date"/>
+						<cell align="center" col="2" colid="MOVE_REPAIR_TYPE_NM" display="text"/>
+						<cell align="left" col="3" colid="MOVE_REPAIR_WORK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" colspan="3" display="text">
+							<cell align="center" col="0" colid="WORK_STR_YMD" display="date"/>
+							<cell align="center" col="1" display="text" expandsize="18" text="~" wordwrap="word"/>
+							<cell align="center" col="2" colid="WORK_END_YMD" display="date"/>
+						</cell>
+						<cell align="center" col="7" colid="BRANCH_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="8" colid="ZIP_NO1_NM" display="text"/>
+						<cell align="center" col="9" colid="PROC_STS_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="10" colid="REQ_AMT" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="11" colid="VAT" display="number"/>
+						<cell align="right" col="12" colid="RESULT_AMT" display="number"/>
+						<cell col="13" colid="RECEIPT_AMT" display="number" expandsize="18" wordwrap="word"/>
+						<cell col="14" colid="WORK_FIRM_ADJ_COST" display="number" expandsize="18" wordwrap="word"/>
+						<cell col="15" colid="REFUND_AMT" display="number" expandsize="18" wordwrap="word"/>
+						<cell col="16" colid="REQ_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="17" colid="RECEIPT_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="18" colid="BILL_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="19" colid="BILL_SEQ" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="20" colid="BILL_YMD_1" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="21" colid="BILL_SEQ_1" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="22" colid="BILL_YMD_2" display="date" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="23" colid="BILL_SEQ_2" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802030010F.xml
+* Form 설명  : 이설보수 청구내역 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-29
+* 변경내용   : 
+****************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+function D1704010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	
+	if (IsExistVar("PORTLET_FLAG", true)) {
+	   
+	    if (PORTLET_FLAG == "p") {
+	       
+			cob_ObjectFlag.Value = BRANCH_CD;
+			cob_ConstructFlag.Index = "4";	
+			cob_Proc_Sts.Value = "30";	
+			cob_BranchCd_OnChanged();
+			
+			fn_CommonSearch();
+	    }
+	}else{
+		cob_BranchCd_OnChanged();
+	}
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	//gfn_SetButton("0001011");
+	
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	// 지사코드, 영업구코드
+	//-----------------------------------------
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));
+	gfn_D1_All_SetComboBox_Comcode("D10130",gfn_setDsObject_Comcode("cob_ConstructFlag" ));
+	gfn_D1_SetComboBox_Comcode1("D10132",gfn_setDsObject_Comcode("cob_Proc_Sts"),"40");
+	
+	//-----------------------------------------
+	//  콤보박스의 초기 설정 : 지사, 구, 공사구분, 진행상태
+	//-----------------------------------------
+	cob_ObjectFlag     .Index = 0;
+	cob_ConstructFlag  .Index = 4;
+	cob_Proc_Sts       .Index = 7;
+}
+
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) {
+
+    // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_ObjectFlag.value, fn_setDsObject_Comcode("1", "cob_CountyFlag"));
+    
+    if (IsExistVar("PORTLET_FLAG", true)) {	   
+	    if (PORTLET_FLAG == "p") {
+			cob_CountyFlag.Value = ZIP_NO1;
+		}
+	}else{
+			cob_CountyFlag.Index = 5;
+	}
+}
+
+///-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: DB에 값을 조회한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+	fn_DateCheck(cal_ReceiveStart, cal_ReceiveEnd);
+	fn_D1_find()  ;
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  이설보수접수내역 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{		
+    if (IsExistVar("PORTLET_FLAG", true)) {
+	    if (PORTLET_FLAG == "p") {
+	    
+	    var strSvcID        = "";
+		var strPart         = "D10";	
+		var strURL          = "handle.do?ServiceName=D1_MoveingRepairProgrStsMgr-service"
+							+ "&BRANCH_CD="          + BRANCH_CD						
+							+ "&ZIP_NO1="            + ZIP_NO1
+							+ "&MOVE_REPAIR_TYPE="   + cob_ConstructFlag.Value
+							+ "&PROC_STS_CD="        + cob_Proc_Sts.Value
+							+ "&RECEIVE_YMD_START="  + cal_ReceiveStart.Value
+							+ "&RECEIVE_YMD_END="    + cal_ReceiveEnd.Value
+							;
+		
+		var strInDatasets   = "";
+		var strOutDatasets  = "ds_MoveDocu=ds_MoveDocu ds_Excel=ds_Excel";
+		var strArgument     = "search";
+			 
+		gfn_SyncCall( 
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+	    }
+	    
+	} else {
+	    
+		var strSvcID        = "";
+		var strPart         = "D10";	
+		var strURL          = "handle.do?ServiceName=D1_MoveingRepairProgrStsMgr-service"
+							+ "&BRANCH_CD="          + cob_ObjectFlag.Value						
+							+ "&ZIP_NO1="            + cob_CountyFlag.Value
+							+ "&MOVE_REPAIR_TYPE="   + cob_ConstructFlag.Value
+							+ "&PROC_STS_CD="        + cob_Proc_Sts.Value
+							+ "&RECEIVE_YMD_START="  + cal_ReceiveStart.Value
+							+ "&RECEIVE_YMD_END="    + cal_ReceiveEnd.Value
+							;
+		
+		var strInDatasets   = "";
+		var strOutDatasets  = "ds_MoveDocu=ds_MoveDocu ds_Excel=ds_Excel";
+		var strArgument     = "search";
+			 
+		gfn_SyncCall( 
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+	}
+			   
+	if(ds_MoveDocu.GetRowCount()==0) { Grid2.NoDataText = gfn_GetMessage("M000009","%AAA%","조회를"); }
+	//trace(ds_MoveDocu.SaveXML());
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{	
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 : "         +     RPad(cob_ObjectFlag.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 : "        +     RPad(cob_CountyFlag.Text," ",20);
+    SearchCondition = SearchCondition + "이설보수유형 : " +     RPad(cob_ConstructFlag.Text," ",20);
+    SearchCondition = SearchCondition + "진행상태 : "     +     RPad(cob_Proc_Sts.Text," ",20);
+    SearchCondition = SearchCondition + "접수일자 : "     +     RPad(cal_ReceiveStart.Value + ' ~ ' + cal_ReceiveEnd.Value," ",20);
+    
+        
+	gfn_ExportExcel("이설보수 진행상태 내역", 5, SearchCondition, "Grid2");        
+    //gfn_ExportExcel("이설보수 진행상태 내역", 5, SearchCondition, "grd_excel");
+}
+
+
+function Grid2_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_D1_SetGrid_Sort(Grid2);
+}
+]]></Script>
+</Window>

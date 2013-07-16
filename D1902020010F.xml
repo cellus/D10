@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="728" Id="D1902020010F" Left="8" OnLoadCompleted="D1902020010F_OnLoadCompleted" PidAttrib="7" Title="DCVG탐사계획&#32;등록" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Pln" OnColumnChanged="ds_Pln_OnColumnChanged">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORIGINAL_INPUT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSERT_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="DONG_NM_H" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Dummy">
+				<Contents>
+					<colinfo id="ID" size="256" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" type="STRING"/>
+					<colinfo id="PRESS_FLAG" size="256" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" type="STRING"/>
+					<colinfo id="PIPE_DIAM_FLAG" size="256" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" type="STRING"/>
+					<colinfo id="GU_NM" size="256" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Count">
+				<Contents>
+					<colinfo id="NCOUNT" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExplorFlag">
+				<Contents>
+					<colinfo id="EXPLOR_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<EXPLOR_FLAG>1</EXPLOR_FLAG>
+						<EXPLOR_NAME>기존탐사</EXPLOR_NAME>
+					</record>
+					<record>
+						<EXPLOR_FLAG>2</EXPLOR_FLAG>
+						<EXPLOR_NAME>신설탐사</EXPLOR_NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExcelData">
+				<Contents>
+					<colinfo id="EXCOL0" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL1" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL2" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL3" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL4" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL5" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL6" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL7" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL8" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL9" size="255" summ="default" type="STRING"/>
+					<colinfo id="EXCOL10" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXCOL11" size="256" summ="default" type="STRING"/>
+					<record>
+						<EXCOL0></EXCOL0>
+						<EXCOL1></EXCOL1>
+						<EXCOL10></EXCOL10>
+						<EXCOL11></EXCOL11>
+						<EXCOL2></EXCOL2>
+						<EXCOL3></EXCOL3>
+						<EXCOL4></EXCOL4>
+						<EXCOL5></EXCOL5>
+						<EXCOL6></EXCOL6>
+						<EXCOL7></EXCOL7>
+						<EXCOL8></EXCOL8>
+						<EXCOL9></EXCOL9>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_multi">
+				<Contents>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents>
+					<colinfo id="BASE_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MPIPE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SHIFT_WORK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_END_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExcelExport">
+				<Contents>
+					<colinfo id="ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_LENG" size="256" summ="default" type="STRING"/>
+					<colinfo id="PRESS_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_DIAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXPLOR_YMD_FROM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PressCd">
+				<Contents></Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DmPipCd"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BranchCd"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Gu"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Chk">
+				<Contents>
+					<colinfo id="NCOUNT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ZipNo1"></Dataset>
+		</Datasets>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Excel" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="604" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="474" Id="grd_excel" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnExpandEdit="grd_MultiSave_OnExpandEdit" Right="1568" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="12" TabStop="FALSE" Top="130" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1563">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="200"/>
+						<col width="200"/>
+						<col width="0"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="기준년도"/>
+						<cell col="1" display="text" text="공급관ID"/>
+						<cell col="2" display="text" text="탐사구분"/>
+						<cell col="3" display="text" text="지사"/>
+						<cell col="4" display="text" text="시/구"/>
+						<cell col="5" display="text" text="공사번호"/>
+						<cell col="6" display="text" text="탐사시작일자"/>
+						<cell col="7" display="text" text="탐사종료일자"/>
+						<cell col="8" display="text" text="설치일자"/>
+						<cell col="9" display="text" text="배관관경(A)"/>
+						<cell col="10" display="text" text="압력"/>
+						<cell col="11" display="text" text="연장(m)"/>
+						<cell col="12" display="text" text="시점주소"/>
+						<cell col="13" display="text" text="종점주소"/>
+						<cell col="14" display="text" text="탐사완료여부"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="BASE_YEAR" display="text"/>
+						<cell align="center" col="1" colid="MPIPE_ID" display="text"/>
+						<cell align="center" col="2" colid="EXPLOR_NM" display="text"/>
+						<cell align="center" col="3" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="4" colid="GU_NM" display="text"/>
+						<cell align="center" col="5" colid="WORK_NUM" display="text"/>
+						<cell align="center" col="6" colid="EXPLOR_YMD_FROM" display="date"/>
+						<cell align="center" col="7" colid="EXPLOR_YMD_TO" display="date"/>
+						<cell align="center" col="8" colid="COMPL_DATE" display="date"/>
+						<cell align="center" col="9" colid="PIPE_DIAM_NM" display="text"/>
+						<cell align="center" col="10" colid="PRESS_NM" display="text"/>
+						<cell align="center" col="11" colid="SYS_LENG" display="text"/>
+						<cell align="left" col="12" colid="STR_ADDR" display="text"/>
+						<cell align="left" col="13" colid="END_ADDR" display="text"/>
+						<cell align="center" col="14" colid="EXPLOR_END_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Pln" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="722" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="625" Id="grd_list" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnExpandEdit="grd_MultiSave_OnExpandEdit" OnHeadClick="grd_list_OnHeadClick" Right="1271" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="13" TabStop="FALSE" Top="97" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1266">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="20"/>
+						<col fix="left" width="60"/>
+						<col width="130"/>
+						<col width="84"/>
+						<col width="70"/>
+						<col width="80"/>
+						<col width="78"/>
+						<col width="210"/>
+						<col width="210"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="70"/>
+						<col width="70"/>
+					</columns>
+					<head>
+						<cell col="0" display="checkbox"/>
+						<cell bkcolor="user11" col="1" display="text" text="기준년도"/>
+						<cell bkcolor="user11" col="2" display="text" text="배관_ID"/>
+						<cell col="3" display="text" text="준공년도"/>
+						<cell col="4" display="text" text="관경(A)"/>
+						<cell bkcolor="user11" col="5" display="text" text="구명"/>
+						<cell col="6" display="text" text="동명"/>
+						<cell col="7" display="text" text="시점"/>
+						<cell col="8" display="text" text="종점"/>
+						<cell bkcolor="user11" col="9" display="text" text="연장(m)"/>
+						<cell col="10" display="text" text="압력"/>
+						<cell col="11" display="text" text="초기입력ID"/>
+						<cell bkcolor="user11" col="12" display="text" text="위치보기"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHK" display="checkbox" edit='expr:iif(ds_Pln.GetColumn(currow,&#32;&quot;EXPLOR_END_YN&quot;)&#32;==&apos;1&apos;,&#32;&apos;checkbox&apos;,&#32;&apos;none&apos;)'/>
+						<cell align="center" col="1" colid="BASE_YEAR" display="text" limit="4"/>
+						<cell align="center" col="2" colid="MPIPE_ID" display="text" edit="expr:iif(rowtype==&apos;insert&apos;,&#32;&apos;number&apos;&#32;,&apos;none&apos;&#32;)" expandsize="18" limit="11" wordwrap="word"/>
+						<cell align="center" col="3" colid="COMPL_YEAR" display="text"/>
+						<cell align="right" col="4" colid="PIPE_DIAM_NM" display="text"/>
+						<cell align="center" col="5" colid="GU_NM" display="text"/>
+						<cell align="center" col="6" colid="DONG_NM_H" display="text"/>
+						<cell align="left" col="7" colid="STR_ADDR" display="text"/>
+						<cell align="left" col="8" colid="END_ADDR" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="9" colid="SYS_LENG" display="text" edit='expr:iif(ds_Pln.GetColumn(currow,&#32;&quot;EXPLOR_END_YN&quot;)&#32;==&apos;1&apos;,&#32;&apos;normal&apos;,&#32;&apos;none&apos;)' expandsize="18" wordwrap="word"/>
+						<cell align="center" col="10" colid="PRESS_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="11" colid="ORIGINAL_INPUT_ID" display="text"/>
+						<cell align="center" col="12" display="text" expandimage="search" expandshow="true"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1270" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="30" Type="RoundRect" Width="1265"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1266" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="8" Top="35" Type="Rectangle" Width="1256"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image3" ImageID="blt" Left="18" LeftMargin="12" Style="blt_search" TabOrder="2" TabStop="FALSE" Text="지사" Top="40" Width="75"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" Left="58" OnChanged="cob_ObjectFlag_OnChanged" Style="combo_indis" TabOrder="3" Top="40" Width="108"></Combo>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="5" TabStop="FALSE" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1275">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="#6cbae1" Bottom="98" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1271" TabOrder="7" Top="95" Type="Rectangle" Width="1266"></Shape>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="334" LeftMargin="12" Style="blt_search" TabOrder="1" TabStop="FALSE" Text="기준년도" Top="40" Width="90"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Ymd_from" Left="423" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="4" Top="72" Visible="FALSE" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="8" LeftMargin="12" OnClick="Image5_OnClick" Style="text_title" TabOrder="6" TabStop="FALSE" Text="DCVG&#32;탐사계획" Top="78" Width="270"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button130" ImageID="btn_4_excel" Left="1195" LeftMargin="21" OnClick="btn_ExcelUp_OnClick" Style="button" TabOrder="10" Text="엑셀등록" Top="74" Width="76"></Button>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_Ymd_to" Left="527" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="11" Top="72" Visible="FALSE" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_ExcelExport" ImageID="btn_8_Excel&#32;File&#32;creation" Left="1073" LeftMargin="21" OnClick="btn_ExcelExport_OnClick" Style="button" TabOrder="14" Text="엑셀양식다운로드" Top="73" Width="121"></Button>
+		<Edit Border="Flat" BorderColor="user2" Color="user17" Height="12" Id="edt_UpperDiamPipeCd" Left="346" TabOrder="15" Top="77" UpperOnly="TRUE" Visible="FALSE" Width="0"></Edit>
+		<Image Align="Left" Color="blue" Height="18" Id="Image1" ImageID="blt" Left="171" LeftMargin="12" Style="blt_search_1" TabOrder="17" Text="시/구" Top="40" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_CountyFlag" ImeMode="none" Left="216" Style="combo_indis" TabOrder="16" Top="40" Width="114"></Combo>
+		<Edit AutoSelect="TRUE" Border="Flat" Height="18" Id="edt_MpipeSearch" ImeMode="none" Left="555" MaxLength="9" Style="edit" TabOrder="18" Top="41" Width="120"></Edit>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="492" LeftMargin="12" Style="blt_search" TabOrder="19" TabStop="FALSE" Text="배관번호" Top="40" Width="90"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_ExcelExport" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="784" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="49" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnExpandEdit="grd_MultiSave_OnExpandEdit" OnHeadClick="grd_list_OnHeadClick" Right="1271" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="20" TabStop="FALSE" Top="735" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1266">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="250"/>
+						<col width="250"/>
+						<col width="75"/>
+						<col width="75"/>
+						<col width="75"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="120"/>
+						<col width="120"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="text" text="배관_ID"/>
+						<cell col="1" display="text" text="시점"/>
+						<cell col="2" display="text" text="종점"/>
+						<cell bkcolor="user11" col="3" display="text" text="연장(m)"/>
+						<cell col="4" display="text" text="압력"/>
+						<cell col="5" display="text" text="관경(A)"/>
+						<cell col="6" display="text" text="설치일자"/>
+						<cell col="7" display="text" text="공사번호"/>
+						<cell bkcolor="user11" col="8" display="text" text="지사"/>
+						<cell bkcolor="user11" col="9" display="text" text="시/구"/>
+						<cell bkcolor="user11" col="10" display="text" text="계획시작일자"/>
+						<cell bkcolor="user11" col="11" display="text" text="계획종료일자"/>
+					</head>
+					<body>
+						<cell align="right" col="0" colid="ID" display="text" edit="expr:iif(rowtype==&apos;normal&apos;,&#32;&apos;none&apos;,&#32;&apos;number&apos;)" expandsize="18" limit="11" wordwrap="word"/>
+						<cell align="left" col="1" colid="STR_ADDR" display="text"/>
+						<cell align="left" col="2" colid="END_ADDR" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="3" colid="SYS_LENG" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="4" colid="PRESS_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="5" colid="PIPE_DIAM_NM" display="text"/>
+						<cell align="center" col="6" colid="COMPL_DATE" display="text"/>
+						<cell align="center" col="7" colid="WORK_NUM" display="text"/>
+						<cell align="center" col="8" colid="BRANCH_NM" display="text"/>
+						<cell align="center" col="9" colid="GU_NM" display="text"/>
+						<cell col="10" colid="EXPLOR_YMD_FROM" display="date" expandimage="calendar" expandshow="expr:iif(rowtype&#32;==&#32;&apos;insert&apos;,&#32;&apos;true&apos;,&#32;&apos;false&apos;)"/>
+						<cell col="11" colid="EXPLOR_YMD_TO" display="date" expandimage="calendar" expandshow="expr:iif(rowtype&#32;==&#32;&apos;insert&apos;,&#32;&apos;true&apos;,&#32;&apos;false&apos;)"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Height="13" Id="Static10" Left="515" Style="static" TabOrder="21" Text="~" Top="76" Visible="FALSE" Width="10"></Static>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="334" LeftMargin="12" Style="blt_search" TabOrder="22" TabStop="FALSE" Text="탐사계획일자" Top="72" Visible="FALSE" Width="90"></Image>
+		<Spin Border="Flat" Height="18" Id="sp_Year" Left="399" Style="spin_indis" TabOrder="23" Text="2012" Top="40" Width="83"></Spin>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1802020010F.xml
+* Form 설명  : DCVG탐사 계획 등록
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2009-01-30
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+var nAddNumber  = '';
+var Pln_RCount  = 0; // 초기조회 
+var Pln_RCount1 = 0; // 행추가 했을 경우 조회건수
+
+function D1902020010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	// 지사코드, 영업구코드
+	//-----------------------------------------
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));	
+	gfn_D1_SetComboBox_Branchcd("ds_BranchCd");
+	
+	gfn_D1_SetComboBox_Comcode("D10034", "ds_PressCd", "");
+	gfn_D1_SetComboBox_Comcode("B30007", "ds_DmPipCd", "");
+	
+	//-----------------------------------------
+	//  콤보박스의 초기 설정 : 기준년도, 지사
+	//-----------------------------------------
+
+	cob_ObjectFlag.Index = 0;
+	
+	cob_ObjectFlag_OnChanged();
+	
+	grd_zip();
+	
+}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+
+function fn_CommonSearch(){
+	
+	// 2012.12.12 이건민 - 탐사계획일자 삭제로 인한 주석처리
+	//fn_DateCheck(Cal_Ymd_From,Cal_Ymd_To);
+	
+	fn_D1_find();
+}
+
+function fn_CommonAddRow(){
+	
+	ds_Pln.InsertRow(0);	
+	ds_Pln.SetColumn(0, "BASE_YEAR", substr(today(), 0, 4));
+	ds_Pln.SetColumn(0, "INSERT_FLAG", "ADDROW"           ); // EXCEL_ADDROW : 엑셀,  : 추가버튼
+	
+	// 2012.12.18 이건민 추가
+	ds_Pln.SetColumn(0, "EXPLOR_END_NM", "준비"           );
+}
+
+function fn_CommonSave(){
+
+	//if(ds_Pln.GetRowType(0)=='normal'){
+	//	alert("변경할 데이터가 존재하지 않습니다");
+	//	return;
+	//}
+	
+	// 2012.12.18 이건민 추가
+	for(z=0 ; z < ds_pln.rowcount ; z++){
+		if(ds_Pln.GetRowType(z) == 'insert' || ds_Pln.GetRowType(z) == 'update'){
+		
+			var partCnt = 0;
+		
+			var temp_id_1 = '';
+			var temp_id_2 = '';
+			
+			for(var i=0; i<ds_Pln.GetRowCount(); i++){
+		
+				temp_id_1 = trim(ds_Pln.GetColumn(i,"MPIPE_ID"));	
+				
+				for(var j=0; j<=i; j++){			
+					if(i != j){				
+						temp_id_2 = trim(ds_Pln.GetColumn(j,"MPIPE_ID"));
+					
+						if(temp_id_1 == temp_id_2){
+							alert("동일한 배관 ID가 존재합니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. ");
+							return;
+						}
+					}
+				}
+			}
+			
+			for(var i=0; i<ds_Pln.GetRowCount(); i++){
+				
+				// MPIPE_ID
+				var str_Id = trim(ds_Pln.GetColumn(i,"MPIPE_ID"));	
+		
+				var Result = gfn_IsNumber(ds_Pln.GetColumn(i, "MPIPE_ID"));
+				
+				if(str_Id=="" || str_Id==null || Length(str_Id) < 0 || Length(str_Id) > 11 || Result == -1)
+				{
+					alert("배관 ID 번호 형식이 맞지 않습니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. ");
+					partCnt=partCnt+1;
+					return;
+				}
+				
+				//SYS_LENG
+				var str_Lng = trim(ds_Pln.GetColumn(i,"SYS_LENG"));
+				
+				if(str_Lng == "" || str_Lng == null || toNumber(str_Lng) < 0)
+				{
+					alert("연장 정보 형식이 맞지 않습니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. ");
+					partCnt=partCnt+1;
+					return;	
+				}
+				
+				var k_Cd = '';
+		
+				//PRESS_NM
+				var str_PrssNm = trim(ds_Pln.GetColumn(i,"PRESS_NM"));		
+					
+				if(str_PrssNm != '' && str_PrssNm != null){
+					for(var k=0; k<=ds_PressCd.GetRowCount(); k++){			
+					
+						var k_Nm      = trim(ds_PressCd.GetColumn(k, "ITEM_KNAME"));
+						var k_Cd_Temp = trim(ds_PressCd.GetColumn(k, "CODE_ITEM" ));
+						
+						if(str_PrssNm == k_Nm){
+							k_Cd = k_Cd_Temp;
+						}
+					}
+					
+					if(k_Cd = '' || k_Cd = null){
+						alert("압력 정보 형식이 맞지 않습니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. \n예) 저압, 중압, 중간압");
+						return;
+					}else{
+						ds_Pln.SetColumn(i, "PRESS_FLAG", k_Cd);
+					}
+					
+					k_Cd = '';
+				}
+						
+				//PIPE_DIAM_NM
+				var str_PpDmNm = trim(ds_Pln.GetColumn(i,"PIPE_DIAM_NM"));				
+				
+				if(str_PpDmNm != "" && str_PpDmNm != null)
+				{				
+					for(var k=0; k<=ds_DmPipCd.GetRowCount(); k++){			
+						
+							var k_Nm      = trim(ds_DmPipCd.GetColumn(k, "ITEM_KNAME"));
+							var k_Cd_Temp = trim(ds_DmPipCd.GetColumn(k, "CODE_ITEM" ));
+							
+							if(str_PpDmNm == k_Nm){
+								k_Cd = k_Cd_Temp;
+							}
+					}
+			
+					if(k_Cd = '' || k_Cd = null)
+					{
+						alert("관경 정보 형식이 맞지 않습니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. \n예) 15A, 20A");
+						partCnt=partCnt+1;
+						return;	
+					}else{
+						ds_Pln.SetColumn(i, "PIPE_DIAM_CD", k_Cd);
+					}
+					k_Cd = '';
+				}
+												
+				//COMPL_YMD
+				var str_CmplYmd = replace(ToString(trim(ds_Pln.GetColumn(i,"COMPL_DATE"))),"-","");
+									
+				if(str_CmplYmd != '' && str_CmplYmd != null){
+					if(Length(str_CmplYmd) > 8 || Length(str_CmplYmd) < 8)
+					{
+						alert("설치일자의 날짜 형식이 맞지 않습니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. ");
+						partCnt=partCnt+1;
+						return;
+					}else{
+						ds_Pln.SetColumn(i,"COMPL_YMD", str_CmplYmd);
+					}
+				}
+												
+				//WORK_NUM
+				var str_WorkNum = trim(ds_Pln.GetColumn(i,"WORK_NUM"));
+				
+				if(str_WorkNum != "" && str_WorkNum != null){
+					if(Length(str_WorkNum) > 11 || Length(str_WorkNum) < 11)
+					{
+						alert("공사번호 형식이 맞지 않습니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. ");
+						partCnt=partCnt+1;
+						return;
+					}
+				}
+		
+				//BRANCH_NM
+				var str_BrnchNm = trim(ds_Pln.GetColumn(i,"BRANCH_NM"));
+		
+				for(var k=0; k<=ds_BranchCd.GetRowCount(); k++){			
+					
+						var k_Nm      = trim(ds_BranchCd.GetColumn(k, "BRANCH_NM"));
+						var k_Cd_Temp = trim(ds_BranchCd.GetColumn(k, "BRANCH_CD"));
+						
+						if(str_BrnchNm == k_Nm){
+							k_Cd = k_Cd_Temp;
+						}
+				}
+					
+				if(k_Cd = '' || k_Cd = null){
+					alert("지사 정보 형식이 맞지 않습니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. \n예) 강북지사");
+					return;
+				}else{
+					ds_Pln.SetColumn(i, "BRANCH_CD", k_Cd);
+				}
+				
+				k_Cd = '';
+				
+				
+				//GU_NM
+				ds_Gu.ClearData();
+				fn_SetComboBox_Comcode("1", ds_Pln.GetColumn(i, "BRANCH_CD"), "ds_Gu");	
+						
+				var str_GuNm = trim(ds_Pln.GetColumn(i,"GU_NM"));
+		
+				for(var k=0; k<=ds_Gu.GetRowCount(); k++){
+					
+					var k_Nm      = trim(ds_Gu.GetColumn(k, "ITEM_KNAME"));
+					var k_Cd_Temp = trim(ds_Gu.GetColumn(k, "CODE_ITEM"));
+					
+					if(str_GuNm == k_Nm){
+						k_Cd = k_Cd_Temp;
+					}
+				}
+					
+				if(k_Cd = '' || k_Cd = null){
+					alert("지사에 해당하는 시/구 정보가 맞지 않습니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. \n예) 종로구, 마포구");
+					return;
+				}else{
+					ds_Pln.SetColumn(i, "ZIP_NO1", k_Cd);
+				}
+					k_Cd = '';
+		
+				//EXPLOR_YMD_FROM
+				var str_ExplrYmdF = replace(trim(ds_Pln.GetColumn(i,"EXPLOR_YMD_FROM")),"-","");	
+				if(str_ExplrYmdF == "" || Length(str_ExplrYmdF) > 8 || Length(str_ExplrYmdF) < 8)
+				{
+					alert("계획시작일자의 날짜 형식이 맞지 않습니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. ");
+					partCnt=partCnt+1;
+					return;
+				}
+				
+				//EXPLOR_YMD_TO
+				var str_ExplrYmdE = replace(trim(ds_Pln.GetColumn(i,"EXPLOR_YMD_TO")),"-","");
+				if(str_ExplrYmdE == "" || Length(str_ExplrYmdE) > 8 || Length(str_ExplrYmdE) < 8)
+				{
+					alert("계획종료일자의 날짜 형식이 맞지 않습니다. \n엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다. ");
+					partCnt=partCnt+1;
+					return;
+				}
+			}	
+			
+			if(partCnt==0)
+			{
+				var nCnt = ds_Pln.GetRowCount()	;
+		
+				for(var i=0; i<nCnt; i++){
+					var str_BaseYear = ds_Pln.GetColumn(0, "BASE_YEAR"    );
+					var str_MpipeId  = ds_Pln.GetColumn(0, "MPIPE_ID"     );
+				}
+			
+				fn_D1_save();
+				
+				gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"),"black",true); 	
+			}
+			else
+			{
+				alert("엑셀자료를 다시 확인 하시고 업로드 하시기 바랍니다.");
+			}
+		}
+	}
+}
+
+function fn_CommonDeleteRow(){
+	
+	var nChk = 0;
+	
+	if(ds_Pln.GetRowCount() == 0){
+		alert("데이터를 먼저 조회하세요. ");
+		return;
+	}
+	
+	var result = Confirm("데이터를 삭제하시겠습니까? ");
+		
+	if(result == '0'){
+		return;
+	}
+	
+	for(var i=0;i<ds_Pln.GetRowCount();i++)
+	{
+		if(ds_Pln.GetColumn(i,"CHK") == 1){
+			nChk = toNumber(nChk) + toNumber(1);
+		}
+	}
+	
+	if(nChk <= 0){
+		alert('체크된 항목이 없습니다. \n체크 선택 후 삭제 해주세요');
+		return;
+	}
+	
+	var Result = fn_D1_CheckCount();
+	
+	if(Result == '0'){
+		alert('이미 탐사 구간실적이 등록된 계획 정보가 포함되어 있습니다. ');
+		return;
+	}
+	
+	for(var i=ds_Pln.GetRowCount();i>=0;i--)
+	{
+		if(ds_Pln.GetColumn(i,"CHK") == 1){
+			ds_Pln.DeleteRow(i);
+			
+			// 2012.12.18 이건민 추가
+			fn_D1_delete();
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport()
+// 설명: 엑셀 button 실행, 조회된데이터를 엑셀형식으로변환한다
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+    /*
+    SearchCondition = SearchCondition + "지사 : "  +    RPad(cob_ObjectFlag.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 : " +    RPad(cob_CountyFlag.Text," ",20);
+    SearchCondition = SearchCondition + "탐사일자 : " + RPad(cal_Ymd_from.Value + ' ~ ' + cal_Ymd_to.Value," ",20);
+	SearchCondition = SearchCondition + "배관번호 : " + RPad(edt_MpipeSearch.Text," ",20);
+	*/
+	
+	// 2012.12.20 이건민 - 권과장님 추가 요청사항 (엑셀 탐사일지 대신 기준년도 교체)
+	SearchCondition = SearchCondition + "지사 : "  +    RPad(cob_ObjectFlag.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 : " +    RPad(cob_CountyFlag.Text," ",20);
+    SearchCondition = SearchCondition + "기준년도 : " + RPad(sp_Year.Value," ",20);
+	SearchCondition = SearchCondition + "배관번호 : " + RPad(edt_MpipeSearch.Text," ",20);
+        
+    gfn_ExportExcel("DCVG탐사계획 내역", 5, SearchCondition, "grd_excel");                                                      
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonPrint()
+// 설명: 인쇄 button 실행, 조회된데이터를 인쇄한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen();
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  계획 내역 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_find()
+{	
+	// 2012.12.12 이건민 - 탐사계획일자 삭제로 인한 주석처리
+	/*
+    var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechPlanRegisMgr-service"
+						+ "&BASE_YEAR="       + subStr(today(), 0, 4) 
+						+ "&BRANCH_CD="       + cob_ObjectFlag.Value
+						+ "&ZIP_NO1="         + cob_CountyFlag.Value
+						+ "&EXPLOR_YMD_FROM=" + cal_Ymd_from.Value
+						+ "&EXPLOR_YMD_TO="   + cal_Ymd_to.Value
+						+ "&MPIPE_ID="	      + trim(edt_MpipeSearch.Text)
+						+ "&EXPLOR_FLAG="     + '1'
+						;
+	
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Pln=ds_Pln ds_Excel=ds_Excel";
+	var strArgument     = "search";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+		
+	if(ds_Pln.GetRowCount()==0) grd_list.NoDataText = gfn_GetMessage("M000009","%AAA%","조회를");
+	 
+	Pln_RCount = ds_Pln.GetRowCount(); // DB 데이터 Count
+	*/
+	
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechPlanRegisMgr-service"
+						+ "&BASE_YEAR="       + sp_Year.Value
+						+ "&BRANCH_CD="       + cob_ObjectFlag.Value
+						+ "&ZIP_NO1="         + cob_CountyFlag.Value
+						+ "&MPIPE_ID="	      + trim(edt_MpipeSearch.Text)
+						+ "&EXPLOR_FLAG="     + '1'
+						;
+	
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Pln=ds_Pln ds_Excel=ds_Excel";
+	var strArgument     = "search";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+		
+	if(ds_Pln.GetRowCount()==0) grd_list.NoDataText = gfn_GetMessage("M000009","%AAA%","조회를");
+	 
+	Pln_RCount = ds_Pln.GetRowCount(); // DB 데이터 Count
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  계획 내역 등록 배관 ID 여부 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Count()
+{	
+	var nCnt = ds_Pln.GetRowCount();
+	
+	var Result = 0;
+	
+    for(var i=0; i<nCnt; i++){
+	
+			Result = 0;
+			
+			Result = gfn_IsNumber(ds_Pln.GetColumn(i, "MPIPE_ID"));
+	
+			if(Result == -1){
+				return;
+			}
+				
+				var strSvcID        = "";
+				var strPart         = "D10";	
+				var strURL          = "handle.do?ServiceName=D1_DCVGSechPlanRegisMgr-service"
+									+ "&BASE_YEAR="   + ds_Pln.GetColumn(i, "BASE_YEAR")
+									+ "&MPIPE_ID="    + ds_Pln.GetColumn(i, "MPIPE_ID" )
+									;
+				
+				var strInDatasets   = "";
+				var strOutDatasets  = "ds_Count=ds_Count";
+				var strArgument     = "count";
+					 
+				gfn_SyncCall( 
+								 strSvcID
+							   , strPart
+							   , strURL
+							   , strInDatasets
+							   , strOutDatasets
+							   , strArgument
+						   );						  
+							   
+			if(ds_Count.GetColumn(0, "NCOUNT") > 0 ){ 
+				ds_Pln.UpdateControl=false;
+				ds_Pln.SetRowType(i, "normal");
+			}				
+		}
+    }
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_CheckCount()
+//   설명  : 계획 내역 대한 구간실적 등록 여부 조회
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_CheckCount()
+{	
+	var nCnt = ds_Pln.GetRowCount();
+	
+	for(var i=0; i<nCnt; i++){
+	
+		if(ds_Pln.GetColumn(i, "CHK") == '1'){
+						
+			var strSvcID        = "";
+			var strPart         = "D10";	
+			var strURL          = "handle.do?ServiceName=D1_DCVGSechPlanRegisMgr-service"
+								+ "&BASE_YEAR="   + ds_Pln.GetColumn(i, "BASE_YEAR")
+								+ "&MPIPE_ID="    + ds_Pln.GetColumn(i, "MPIPE_ID" )
+								;
+			
+			var strInDatasets   = "";
+			var strOutDatasets  = "ds_Chk=ds_Chk";
+			var strArgument     = "check_Count";
+				 
+			gfn_SyncCall( 
+							 strSvcID
+						   , strPart
+						   , strURL
+						   , strInDatasets
+						   , strOutDatasets
+						   , strArgument
+					   );
+					   
+			if(ds_Chk.GetColumn(0, "NCOUNT") > 0 ){ 
+				return false;
+			}
+		}
+    }
+    
+    return true;
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_save()
+//   설명  :  계획 내역 저장
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_save()
+{      		
+    var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechPlanRegisMgr-service";				
+	var strInDatasets   = "ds_Pln=ds_Pln:u";
+	var strOutDatasets  = "";
+	var strArgument     = "save";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );   
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_delete()
+//   설명  :  계획 내역 삭제
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_delete()
+{      		
+    var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechPlanRegisMgr-service";				
+	var strInDatasets   = "ds_Pln=ds_Pln:u";
+	var strOutDatasets  = "";
+	var strArgument     = "delete";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );   
+}
+
+function btn_Dummn_Onclick(i){
+
+	var strSvcID        = "D1_View";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechPlanRegisMgr-service"
+						+ "&ID=" + i
+						;
+	
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Dummy=ds_Dummy";
+	var strArgument     = "view";
+	 	 
+	gfn_SyncCall(
+					strSvcID
+				  , strPart
+				  , strURL
+				  , strInDatasets
+				  , strOutDatasets
+				  , strArgument	
+				);
+	
+	fn_D1_Set_View();
+}
+
+function fn_D1_Set_View(){
+
+		var USER_ID    = gfn_GetGlobalValue("G_USER_NO");   // SESSION ID
+		var USER_IP    = gfn_GetGlobalValue("G_IPADDRESS"); // SESSION IP
+		
+		ds_Pln.AddColumn("EXPLOR_YMD_FROM" );
+		ds_Pln.AddColumn("EXPLOR_YMD_TO"   );
+		ds_Pln.AddColumn("EXPLOR_END_YN"   );
+		ds_Pln.AddColumn("EXPLOR_FLAG"     );
+	
+		ds_Pln.SetColumn(ds_Pln.row, "UPD_EMPID", USER_ID       );
+		ds_Pln.SetColumn(ds_Pln.row, "UPD_IP"   , USER_IP       );	
+		ds_Pln.SetColumn(ds_Pln.row, "CRT_EMPID", USER_ID       );
+		ds_Pln.SetColumn(ds_Pln.row, "CRT_IP"   , USER_IP       );
+
+		ds_Pln.SetColumn(ds_Pln.row, "EXPLOR_FLAG"  , "1"); // 1. 계획, 2. 비계획 3. 신설계획				
+		ds_Pln.SetColumn(ds_Pln.row, "EXPLOR_END_YN", "1");
+		
+		ds_Pln.SetColumn(ds_Pln.row, "STR_ADDR"      , ds_Dummy.GetColumn(0, "STR_ADDR"));
+		ds_Pln.SetColumn(ds_Pln.row, "END_ADDR"      , ds_Dummy.GetColumn(0, "END_ADDR"));
+		ds_Pln.SetColumn(ds_Pln.row, "SYS_LENG"      , ds_Dummy.GetColumn(0, "SYS_LENG"));
+		ds_Pln.SetColumn(ds_Pln.row, "PRESS_FLAG"    , ds_Dummy.GetColumn(0, "PRESS_FLAG"));
+		ds_Pln.SetColumn(ds_Pln.row, "PRESS_NM"      , ds_Dummy.GetColumn(0, "PRESS_NM"));
+		ds_Pln.SetColumn(ds_Pln.row, "PIPE_DIAM_FLAG", ds_Dummy.GetColumn(0, "PIPE_DIAM_FLAG"));
+		ds_Pln.SetColumn(ds_Pln.row, "PIPE_DIAM_NM"  , ds_Dummy.GetColumn(0, "PIPE_DIAM_NM"));
+		ds_Pln.SetColumn(ds_Pln.row, "COMPL_DATE"    , ds_Dummy.GetColumn(0, "COMPL_DATE"));
+		ds_Pln.SetColumn(ds_Pln.row, "WORK_NUM"      , ds_Dummy.GetColumn(0, "WORK_NUM"));
+		ds_Pln.SetColumn(ds_Pln.row, "BRANCH_NM"     , ds_Dummy.GetColumn(0, "BRANCH_NM"));
+		ds_Pln.SetColumn(ds_Pln.row, "GU_NM"         , ds_Dummy.GetColumn(0, "GU_NM"));
+		ds_Pln.SetColumn(ds_Pln.row, "ZIP_NO1"       , ds_Dummy.GetColumn(0, "ZIP_NO1"));
+		ds_Pln.SetColumn(ds_Pln.row, "BRANCH_CD"     , ds_Dummy.GetColumn(0, "BRANCH_CD"));	
+}
+
+
+//------------------------------------------------------------------------------- 
+//   함수명: grd_MultiSave_OnExpandEdit()
+//   설명  :  달력 기능
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function grd_MultiSave_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+    if(nCell == '13' || nCell == '14')
+	{
+		gfn_SetCalendar(obj, nRow, nCell);
+	}
+	
+	var str_InsertFlag = ds_Pln.GetColumn(nRow, "INSERT_FLAG");
+	 	 
+	if(nCell == '17'){		
+		
+		if(str_InsertFlag == "EXCEL_ADDROW" || str_InsertFlag == "ADDROW"){
+			alert("추가된 데이터는 저장 후 GIS 위치보기가 이용 가능합니다.");
+			return;	
+		}
+		
+	  var args  = "BUNGI='03'";
+		  args += " ID="                + ds_Pln.GetColumn(nRow, "MPIPE_ID"		     );
+		  args += " ORIGINAL_INPUT_ID=" + ds_Pln.GetColumn(nRow, "ORIGINAL_INPUT_ID" );
+	
+		  gfn_Dialog("D10","D1402060011U",args,705,552,true,-1,-1);
+		  return;
+	} 
+}
+
+function ds_Pln_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	// 추가버튼 클릭해서 등록했을 경우
+	if (strColumnID == "MPIPE_ID") {
+					
+		if(ds_Pln.GetColumn(nRow, "MPIPE_ID") != ''){
+			var i = ds_Pln.GetColumn(nRow, "MPIPE_ID");
+			btn_Dummn_Onclick(i);
+		}
+			
+		for(var i=0; i<ds_Pln.GetRowCount(); i++){
+			for(var j=0; j<i; j++){
+				if(ds_Pln.GetColumn(i, "MPIPE_ID") == ds_Pln.GetColumn(j, "MPIPE_ID")){
+						alert("중복된 배관 ID 정보가 존재합니다. ");
+						ds_Pln.SetColumn(nRow, "MPIPE_ID", "");
+						var i = ds_Pln.GetColumn(nRow, "MPIPE_ID");
+						btn_Dummn_Onclick(i);
+						return;
+				}
+			}
+		}
+		
+		ds_Count.ClearData();
+				    
+		var strSvcID        = "";
+		var strPart         = "D10";	
+		var strURL          = "handle.do?ServiceName=D1_DCVGSechPlanRegisMgr-service"
+							+ "&BASE_YEAR="   + ds_Pln.GetColumn(0, "BASE_YEAR")
+							+ "&MPIPE_ID="    + ds_Pln.GetColumn(0, "MPIPE_ID")
+							;
+		
+		var strInDatasets   = "";
+		var strOutDatasets  = "ds_Count=ds_Count";
+		var strArgument     = "count";
+			 
+		gfn_SyncCall( 
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+			   
+		if(ds_Count.GetColumn(0, "NCOUNT") > 0){ 
+			alert("이미 등록된 배관 ID 입니다. ");
+			ds_Pln.SetColumn(nRow, "MPIPE_ID", "");
+			var i = ds_Pln.GetColumn(nRow, "MPIPE_ID");
+			btn_Dummn_Onclick(i);
+			return;
+		}else if(ds_Dummy.GetRowCount() == 0){
+				alert("존재하지 않는 배관 ID 입니다. ");				
+				return;
+		}		   		    
+   }else if (strColumnID == "ZIP_NO1") {
+		ds_Pln.SetColumn(nRow,"GU_NM",ds_zipno1.GetColumn(ds_zipno1.FindRow("ZIP_NO1",varNewValue),"COUNTY"));
+   }
+   
+    
+   if (strColumnID == "EXPLOR_YMD_FROM" || strColumnID == "EXPLOR_YMD_TO") {
+		if(ds_Pln.GetColumn(nRow, "EXPLOR_YMD_FROM") > ds_Pln.GetColumn(nRow, "EXPLOR_YMD_TO")){
+			alert("계획시작날짜보다 이후 날짜로 선택해 주세요. ");
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_ExcelUp_OnClick
+// 설명: 엑셀 업로드 
+// arguments
+// 			없음
+// return: 없음
+//------------------------------------------------------------------------------- 
+function btn_ExcelUp_OnClick(obj)
+{	
+	var strColNms = "MPIPE_ID,STR_ADDR,END_ADDR,SYS_LENG,PRESS_NM,PIPE_DIAM_NM,COMPL_DATE,WORK_NUM,BRANCH_NM,GU_NM,EXPLOR_YMD_FROM,EXPLOR_YMD_TO";		              
+	
+	gfn_D1_UploadExcelData(ds_Pln, grd_list, strColNms);
+		
+	var nCount = ds_Pln.GetRowCount();
+	
+	var USER_ID    = gfn_GetGlobalValue("G_USER_NO");   // SESSION ID
+	var USER_IP    = gfn_GetGlobalValue("G_IPADDRESS"); // SESSION IP
+		
+	ds_Pln.AddColumn("UPD_EMPID"	);	// ID
+	ds_Pln.AddColumn("UPD_IP"   	);	// IP
+	ds_Pln.AddColumn("CRT_EMPID"	);	// ID
+	ds_Pln.AddColumn("CRT_IP"   	);	// IP
+	ds_Pln.AddColumn("EXPLOR_END_YN");
+	ds_Pln.AddColumn("EXPLOR_FLAG"  );
+	ds_Pln.AddColumn("COMPL_YMD"    );
+		
+	ds_Pln.UpdateControl = false;
+			
+	for(i=0; i<nCount; i++){		
+	
+		ds_Pln.SetRowType(i, 'insert');
+		ds_Pln.SetColumn(i, "UPD_EMPID", USER_ID);
+		ds_Pln.SetColumn(i, "UPD_IP"   , USER_IP);	
+		ds_Pln.SetColumn(i, "CRT_EMPID", USER_ID);
+		ds_Pln.SetColumn(i, "CRT_IP"   , USER_IP);
+		
+		ds_Pln.SetColumn(i, "EXPLOR_FLAG", '1'); // 1. 계획, 2. 비계획 3. 신설계획				
+		ds_Pln.SetColumn(i, "EXPLOR_END_YN"   , "1");
+		ds_Pln.SetColumn(i, "BASE_YEAR", subStr(today(), 0, 4));
+					
+		edt_UpperDiamPipeCd.Text = ds_Pln.GetColumn(i, "PIPE_DIAM_NM");
+		
+		ds_Pln.SetColumn(i, "PIPE_DIAM_NM", edt_UpperDiamPipeCd.Text);			
+		ds_Pln.SetColumn(i, "COMPL_DATE"  , replace(ds_Pln.GetColumn(i, "COMPL_DATE"), "-", ""));					
+		ds_Pln.SetColumn(i, "INSERT_FLAG" , "EXCEL_ADDROW"); // EXCEL_ADDROW : 엑셀, ADDROW : 추가버튼
+	}	
+	
+	fn_D1_Count();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: btn_ExcelExport_OnClick
+// 설명: 엑셀 양식 다운로드
+// arguments
+// 			없음
+// return: 없음
+//------------------------------------------------------------------------------- 
+function btn_ExcelExport_OnClick(obj)
+{
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechPlanRegisMgr-service"
+						+ "&ID=200065497"
+						;
+						
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_ExcelExport=ds_ExcelExport";
+	var strArgument     = "ds_ExcelEx";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );   
+ 
+   Grid0.ExportExcel("sheet1"); 
+}
+
+/********************************************************************************
+* 기      능   :  지사별 구를 조회하여 콤보박스에 셋팅
+********************************************************************************/
+function cob_ObjectFlag_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	 // 지사별 구 콤보 셋팅 시
+    fn_SetComboBox_Comcode("1", cob_ObjectFlag.value, fn_setDsObject_Comcode("1", "cob_CountyFlag"));    
+    cob_CountyFlag.Value = ""; 
+}
+
+function grd_list_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	if("CHK" == grd_list.GetCellProp("body",nCell,"ColId")){
+		gfn_GridSelChk(obj, "CHK");
+	}
+}
+
+function grd_zip()
+{
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_DCVGSechPlanRegisMgr-service"
+						+ "&BRANCH_CD="       + cob_ObjectFlag.Value
+						;
+	
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_ZipNo1=ds_ZipNo1";
+	var strArgument     = "zipno1";
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}]]></Script>
+</Window>

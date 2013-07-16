@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="432" Id="D1301020010U" Left="8" OnLoadCompleted="D1301020010U_OnLoadCompleted" PidAttrib="7" Title="배관정기,자율검사이력조회_D1301020010U" Top="8" Ver="1.0" Width="700" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PipeInfo">
+				<Contents>
+					<colinfo id="ZIP_NO1" size="256" type="STRING"/>
+					<colinfo id="FACI_NM" size="256" type="STRING"/>
+					<colinfo id="GOV_MODEL_NM" size="256" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="STD" size="256" type="STRING"/>
+					<colinfo id="INSPECT_YMD" size="256" type="STRING"/>
+					<colinfo id="INSPECT_RSLT_CD" size="256" type="STRING"/>
+					<colinfo id="NOT_PASS_WHY" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="5" Text="배관정기,자율검사이력조회" Transparent="TRUE" Width="700"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_PipeInfo" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="422" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="324" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="695" SelColor="MENU" Style="grid_pop" TabOrder="6" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="690">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="40"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="115"/>
+						<col width="132"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell col="1" display="text" text="구간"/>
+						<cell col="2" display="text" text="검사시작일자"/>
+						<cell col="3" display="text" text="검사종료일자"/>
+						<cell col="4" display="text" text="검사결과"/>
+						<cell col="5" display="text" text="불합격/부적합&#32;사유"/>
+					</head>
+					<body>
+						<cell col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell col="1" colid="BLOCK_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="INSPECT_STR_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="INSPECT_END_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="INSPECT_RSLT_CD" display="text"/>
+						<cell col="5" colid="NOT_PASS_WHY" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="98" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="695" TabOrder="7" Top="95" Type="Rectangle" Width="690"></Shape>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="695" TabOrder="8" Top="68" Type="Rectangle" Width="690"></Shape>
+		<Image Align="Left" Height="5" Id="Image1" ImageID="blt" Left="14" LeftMargin="12" Style="blt_search_Indis" TabOrder="9" Text="지사" Top="77" Transparent="TRUE" Width="81"></Image>
+		<Image Align="Left" Height="5" Id="Image2" ImageID="blt" Left="174" LeftMargin="12" Style="blt_search_Indis" TabOrder="10" Text="대상년도" Top="77" Transparent="TRUE" Width="81"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_BlockCd" Left="343" MaxLength="8" Style="edit" TabOrder="3" Top="71" Width="99"></Edit>
+		<Image Align="Left" Height="5" Id="Image3" ImageID="blt" Left="302" LeftMargin="12" Style="blt_search" TabOrder="11" Text="구간" Top="77" Transparent="TRUE" Width="66"></Image>
+		<Image Align="Left" Height="5" Id="Image4" ImageID="blt" Left="452" LeftMargin="12" Style="blt_search_Indis" TabOrder="12" Text="검사구분" Top="77" Transparent="TRUE" Width="81"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_InspectFlag" Left="516" Style="combo_indis" TabOrder="4" Top="70" Width="103"></Combo>
+		<Div Height="29" Id="Div0" Left="5" TabOrder="13" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="690">
+			<Contents></Contents>
+		</Div>
+		<Combo Border="Flat" Height="18" Id="cob_Branch" Left="54" Style="combo_indis" TabOrder="1" Top="70" Width="111"></Combo>
+		<Spin Border="Flat" Height="18" Id="sp_Year" Left="238" Style="spin_indis" TabOrder="2" Text="2008" Top="71" Width="54"></Spin>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1301020010U.xml
+* Form 설명  : 배관 정기, 자율 검사 이력을 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2008-12-26
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+function D1301020010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+	
+	// 임시
+	// 버튼을 강제 세팅할 경우만 사용
+	// 권한관리 하면 사용말것 *** 순서대로 세팅
+	gfn_SetButton("0001011");
+	//-----------------------------------------
+	//  콤보박스의 내용을 셋팅한다.
+	//-----------------------------------------
+	gfn_SetComboBox_Comcode("B10037",gfn_setDsObject_Comcode("cob_Branch"));
+	gfn_SetComboBox_Comcode("D10097",gfn_setDsObject_Comcode("cob_InspectFlag"));
+	//gfn_SetComboBox_Comcode("A10150",gfn_setDsObject_Comcode("cob_TeamCd"));
+	
+	//-----------------------------------------
+	//  콤보박스의 초기 설정
+	//-----------------------------------------
+	cob_Branch.Index = 0;
+	cob_InspectFlag.Index = 0;
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+		fn_D1_FindPipe();
+}
+
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FindPipe()
+//   설명:  정기 검사 배관 결과를 조회한다.
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_FindPipe()
+{	
+	var strSvcID = "fn_D1_Find";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1_PipeRegulSelfTestHistorySearMgr-service&BRANCH_CD="+cob_Branch.Value+"&INSPECT_YEAR="+sp_Year.Value+"&INSPECT_FLAG="+cob_InspectFlag.Value+"&BLOCK_CD="+edt_BlockCd.Value;
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_PipeInfo=ds_PipeInfo";
+	var strArgument  = "findPipe";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+
+	if(ds_PipeInfo.GetRowCount()==0) trace("조회결과가 없습니다.");
+	trace(ds_PipeInfo.SaveXML());
+}]]></Script>
+</Window>

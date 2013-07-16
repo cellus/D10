@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="500" Id="D1203010019U" Left="8" OnLoadCompleted="D1203010019U_OnLoadCompleted" PidAttrib="7" Title="배관순찰점검이력조회_D1203010019U" Top="8" Ver="1.0" Width="800" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_ResultList">
+				<Contents></Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SMALL_BLOCK_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_STRYMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PATROL_ENDYMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="2" Text="배관순찰점검&#32;이력조회" Transparent="TRUE" Width="800"></Image>
+		<Shape BKColor="user16" Bottom="98" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="795" TabOrder="3" Top="95" Type="Rectangle" Width="790"></Shape>
+		<Shape BKColor="user9" Bottom="92" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="795" TabOrder="4" Top="68" Type="Rectangle" Width="790"></Shape>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="16" LeftMargin="12" Style="blt_search" TabOrder="5" Text="순찰일자" Top="72" Transparent="TRUE" Width="81"></Image>
+		<Div DisableBKColor="white" Height="29" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="6" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="796">
+			<Contents></Contents>
+		</Div>
+		<Static Height="13" Id="C2502030010F" Left="174" Style="static" TabOrder="7" Text="~" Top="74" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PatrolYmd2" Left="184" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="1" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Combo Border="Flat" Height="18" Id="cob_PFlag" Left="331" Style="combo" TabOrder="8" Top="70" Width="71"></Combo>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_ResultList" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="495" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="397" Id="grd_List" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" NoDataText="이력내역이&#32;없습니다." Right="795" SelColor="MENU" Style="grid_pop" TabOrder="9" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="790">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="34"/>
+						<col width="75"/>
+						<col width="123"/>
+						<col width="65"/>
+						<col width="65"/>
+						<col width="57"/>
+						<col width="56"/>
+						<col width="55"/>
+						<col width="184"/>
+						<col width="66"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell col="1" display="normal" text="점검일자"/>
+						<cell col="2" display="text" text="구간"/>
+						<cell col="3" display="text" text="구분"/>
+						<cell col="4" display="text" text="연장(m)"/>
+						<cell col="5" display="text" text="가스누출"/>
+						<cell col="6" display="text" text="지반침하"/>
+						<cell col="7" display="text" text="라인마크"/>
+						<cell col="8" display="text" text="점검사항"/>
+						<cell col="9" display="text" text="점검자"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expr="rowindex+1"/>
+						<cell col="1" colid="PATROL_YMD" display="date" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="BLOCK_NM" display="text"/>
+						<cell col="3" colid="KIND" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="4" colid="LENG" display="number" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="5" colid="LEAK_YN" display="text"/>
+						<cell align="center" col="6" colid="PONDSIDE_SINK" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="7" colid="LINEMARK" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="8" colid="CHK_DESC" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="9" colid="TAKER_NM" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="289" LeftMargin="12" Style="blt_search" TabOrder="10" Text="구분" Top="72" Transparent="TRUE" Width="41"></Image>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_PatrolYmd1" Left="85" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="11" Top="71" WeeksFont="Default,-1" Width="88"></Calendar>
+	</Form>
+	<Script><![CDATA[/*************************************************************************************************** 
+* FormID     : D1203010019U.xml
+* Form 설명  : 배관순찰점검이력조회(POPUP)
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 임성수
+* 작성일     : 2009-04-23
+* 변경내용   : 변경일자, 변경내용,변경자 
+****************************************************************************************************/ 
+#include "JS::COMMONA10001.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONB30001.js";
+
+//---------------------------------------------------------
+//	화면초기화함수
+//---------------------------------------------------------
+function D1203010019U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	gfn_D1_SetGrid_Sort(grd_List);
+	 
+	// 콤보박스의 내용을 셋팅한다.
+	gfn_D1_All_SetComboBox_Comcode("D10071",gfn_setDsObject_Comcode("cob_PFlag"));	//구분
+	cob_PFlag.Index = 2;			//콤보박스의 초기 설정
+	
+	if (substr(today(), 4,2) == "01" || substr(today(), 4,2) == "02" || substr(today(), 4,2) == "03") {
+        
+        cal_PatrolYmd1.Text = substr(today(), 0, 4) + "01" + "01";
+        cal_PatrolYmd2.Text = today();
+    } else if (substr(today(), 4,2) == "04" || substr(today(), 4,2) == "05" || substr(today(), 4,2) == "06") {
+    
+        cal_PatrolYmd1.Text = substr(today(), 0, 4) + "04" + "01";
+        cal_PatrolYmd2.Text = today();
+    } else if (substr(today(), 4,2) == "07" || substr(today(), 4,2) == "08" || substr(today(), 4,2) == "09") {
+    
+        cal_PatrolYmd1.Text = substr(today(), 0, 4) + "07" + "01";
+        cal_PatrolYmd2.Text = today();
+    } else if (substr(today(), 4,2) == "10" || substr(today(), 4,2) == "11" || substr(today(), 4,2) == "12") {
+    
+        cal_PatrolYmd1.Text = substr(today(), 0, 4) + "10" + "01";
+        cal_PatrolYmd2.Text = today();
+    }	
+    
+    gfn_SetGrdComboBox_Comcode("grd_List",5,"D10151");		//누설여부
+    gfn_SetGrdComboBox_Comcode("grd_List",6,"A10200");		//지반침하
+    gfn_SetGrdComboBox_Comcode("grd_List",7,"A10200");		//라인마크
+   
+}    
+
+//-------------------------------------------------------------------------------
+// 엑셀 버튼 실행
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	grd_List.ExportExcelEx("sheet1");
+}
+
+
+//-------------------------------------------------------------------------------
+// 조회 버튼 실행
+//-------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	var strFlag = "";
+	
+	if(cob_PFlag.Value = "")			//전체
+	{
+		strFlag = "All";
+	}
+	else if(cob_PFlag.Value = "10")		//차량
+	{
+		strFlag = "Car";
+	}else if(cob_PFlag.Value = "20")	//도보
+	{
+		strFlag = "Walk";
+	}
+	
+	ds_Search.ClearData();
+	ds_Search.AddRow();
+	ds_Search.SetColumn(0,"BLOCK_CD", BLOCK_CD);		
+	ds_Search.SetColumn(0,"SMALL_BLOCK_CD", SMALL_BLOCK_CD);
+	ds_Search.SetColumn(0,"PATROL_STRYMD", cal_PatrolYmd1.Value);
+	ds_Search.SetColumn(0,"PATROL_ENDYMD", cal_PatrolYmd2.Value);
+			
+	var strSvcID = "searchList";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1203010019U-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_ResultList=ds_ResultList";
+	var strArgument     = "searchList_"+strFlag+"=1";
+	
+	gfn_syncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );					  
+}]]></Script>
+</Window>

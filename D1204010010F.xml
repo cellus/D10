@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D1204010010F" Left="8" OnLoadCompleted="fn_D2_OnLoadCompleted" OnUnloadCompleted="D1204010010F_OnUnloadCompleted" PidAttrib="7" Title="관말압력측정등록_D1204010010F" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_set"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_HeadData" OnRowPosChanged="ds_HeadData_OnRowPosChanged">
+				<Contents>
+					<colinfo id="INST_YEAR" size="4" summ="default" type="CHAR"/>
+					<colinfo id="BRANCH_SEQ" size="3" summ="default" type="CHAR"/>
+					<colinfo id="BRANCH_CD" size="6" summ="default" type="CHAR"/>
+					<colinfo id="OBJ_EXCEP_YN" size="1" summ="default" type="CHAR"/>
+					<colinfo id="TEAM_CD" size="6" summ="default" type="CHAR"/>
+					<colinfo id="NEW_ADDR_COUNTY" size="30" summ="default" type="STRING"/>
+					<colinfo id="TOWN" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR1_M" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR1_S" size="30" summ="default" type="STRING"/>
+					<colinfo id="BASIC_ADDR" size="300" summ="default" type="STRING"/>
+					<colinfo id="DIAM" size="3" summ="default" type="CHAR"/>
+					<colinfo id="PIPE_ANALYSIS_PRESS" size="4" summ="default" type="DECIMAL"/>
+					<colinfo id="RMK" size="300" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="UPD_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="UPD_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="CRT_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="CRT_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BodyData">
+				<Contents>
+					<colinfo id="INST_YEAR" size="4" summ="default" type="CHAR"/>
+					<colinfo id="BRANCH_SEQ" size="3" summ="default" type="CHAR"/>
+					<colinfo id="PIPE_PRESS_MEAS_YMD" size="8" summ="default" type="CHAR"/>
+					<colinfo id="PIPE_PRESS_MEAS_DTM" size="4" summ="default" type="CHAR"/>
+					<colinfo id="PIPE_END_PRESS" size="4" summ="default" type="DECIMAL"/>
+					<colinfo id="PIPE_END" size="2" summ="default" type="CHAR"/>
+					<colinfo id="PIPE_END_TEMPER" size="4" summ="default" type="DECIMAL"/>
+					<colinfo id="MEAS_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="RMK" size="300" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="UPD_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="UPD_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="CRT_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="CRT_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="PIPE_PRESS_MEAS_YMD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_PRESS_MEAS_YMD2" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_EMPNM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANAGE_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ObjExcepYn">
+				<Contents>
+					<colinfo id="textCol" size="256" summ="default" type="STRING"/>
+					<colinfo id="dataCol" size="256" summ="default" type="STRING"/>
+					<record>
+						<dataCol>0</dataCol>
+						<textCol>대상</textCol>
+					</record>
+					<record>
+						<dataCol>1</dataCol>
+						<textCol>제외</textCol>
+					</record>
+					<record>
+						<dataCol></dataCol>
+						<textCol>전체</textCol>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_team">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEPRT_NM_KOR" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEPART_DPT_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_branch">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOW_CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DESCRIPTION" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_right">
+				<Contents>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_ExcelExport" OnRowPosChanged="ds_HeadData_OnRowPosChanged">
+				<Contents>
+					<colinfo id="INST_YEAR" size="4" summ="default" type="CHAR"/>
+					<colinfo id="BRANCH_SEQ" size="3" summ="default" type="CHAR"/>
+					<colinfo id="BRANCH_CD" size="6" summ="default" type="CHAR"/>
+					<colinfo id="OBJ_EXCEP_YN" size="1" summ="default" type="CHAR"/>
+					<colinfo id="TEAM_CD" size="6" summ="default" type="CHAR"/>
+					<colinfo id="NEW_ADDR_COUNTY" size="30" summ="default" type="STRING"/>
+					<colinfo id="TOWN" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR1_M" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR1_S" size="30" summ="default" type="STRING"/>
+					<colinfo id="BASIC_ADDR" size="300" summ="default" type="STRING"/>
+					<colinfo id="DIAM" size="3" summ="default" type="CHAR"/>
+					<colinfo id="PIPE_ANALYSIS_PRESS" size="4" summ="default" type="DECIMAL"/>
+					<colinfo id="RMK" size="300" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEAM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_FLAG_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INST_YEAR2" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_SEQ2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_PRESS_MEAS_YMD2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_PRESS_MEAS_DTM2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_END_PRESS2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_END2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_END_TEMPER2" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_EMPID2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK2" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_PRESS_MEAS_YMD12" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_PRESS_MEAS_YMD22" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_EMPNM2" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_BodyExcel">
+				<Contents>
+					<colinfo id="INST_YEAR" size="4" summ="default" type="CHAR"/>
+					<colinfo id="BRANCH_SEQ" size="3" summ="default" type="CHAR"/>
+					<colinfo id="PIPE_PRESS_MEAS_YMD" size="8" summ="default" type="CHAR"/>
+					<colinfo id="PIPE_PRESS_MEAS_DTM" size="4" summ="default" type="CHAR"/>
+					<colinfo id="PIPE_END_PRESS" size="4" summ="default" type="DECIMAL"/>
+					<colinfo id="PIPE_END" size="2" summ="default" type="CHAR"/>
+					<colinfo id="PIPE_END_TEMPER" size="4" summ="default" type="DECIMAL"/>
+					<colinfo id="MEAS_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="RMK" size="300" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="UPD_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="UPD_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="CRT_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="CRT_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="PIPE_PRESS_MEAS_YMD1" size="256" summ="default" type="STRING"/>
+					<colinfo id="PIPE_PRESS_MEAS_YMD2" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEAS_EMPNM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_TempBranch"></Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape0" Left="5" LineColor="user7" Right="1265" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="3" Top="30" Type="RoundRect" Width="1260"></Shape>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="5" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1260">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1260" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="35" Type="Rectangle" Width="1250"></Shape>
+		<Shape BKColor="#6cbae1" Bottom="98" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="1265" TabOrder="2" Top="95" Type="Rectangle" Width="1260"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_HeadData" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="432" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="334" Id="grd_HeadData" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_HeadData_OnCellClick" OnExpandEdit="grd_HeadData_OnExpandEdit" OnHeadClick="grd_Head_OnHeadClick" Right="1265" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="1" TabStop="true" Top="98" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1260">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="50"/>
+						<col width="0"/>
+						<col width="50"/>
+						<col width="55"/>
+						<col width="55"/>
+						<col width="65"/>
+						<col width="65"/>
+						<col width="120"/>
+						<col width="230"/>
+						<col width="45"/>
+						<col width="55"/>
+						<col width="120"/>
+						<col width="369"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="일련번호"/>
+						<cell col="1" display="text" text="품명"/>
+						<cell col="2" display="text" text="적용제외"/>
+						<cell col="3" display="text" text="관리번호"/>
+						<cell bkcolor="user11" col="4" display="text" text="등록년도"/>
+						<cell col="5" display="text" text="지사"/>
+						<cell col="6" display="text" text="구청"/>
+						<cell col="7" display="text" text="팀"/>
+						<cell bkcolor="user11" col="8" display="text" text="주소"/>
+						<cell col="9" display="text" text="GIS위치"/>
+						<cell bkcolor="user11" col="10" display="text" text="관경"/>
+						<cell bkcolor="user11" col="11" display="text" text="배관망해석압력(kPa)"/>
+						<cell col="12" display="text" text="비고"/>
+					</head>
+					<body>
+						<cell align="right" col="0" colid="CUR_ROW1" combodisplayrowcnt="20" display="text" expr="currow+1" limit="3"/>
+						<cell col="1" display="text" edit="normal" limit="50"/>
+						<cell align="center" col="2" colid="OBJ_EXCEP_YN" combodisplayrowcnt="20" display="checkbox" edit="checkbox"/>
+						<cell align="center" col="3" colid="MANAGE_NUM" combodisplayrowcnt="20" display="normal" limit="7"/>
+						<cell align="center" col="4" colid="INST_YEAR" combodisplayrowcnt="20" display="normal" edit="expr:decode(rowtype,&apos;insert&apos;,&apos;number&apos;,&apos;none&apos;)" expandsize="18" limit="4" wordwrap="word"/>
+						<cell col="5" colid="BRANCH_NM" display="normal"/>
+						<cell col="6" colid="NEW_ADDR_COUNTY" display="normal"/>
+						<cell col="7" colid="TEAM_NM" display="normal"/>
+						<cell col="8" colid="BASIC_ADDR" display="text" expandimage="popup" expandshow="true"/>
+						<cell align="center" col="9" display="normal" expandimage="popup" expandshow="true"/>
+						<cell align="center" col="10" colid="DIAM" display="combo" edit="combo"/>
+						<cell align="right" col="11" colid="PIPE_ANALYSIS_PRESS" display="number" edit="expr:decode(OBJ_EXCEP_YN,1,&apos;none&apos;,&apos;number&apos;)" expandsize="18" limit="2" Mask="##.##" wordwrap="word"/>
+						<cell align="left" col="12" colid="RMK" display="text" edit="expr:decode(OBJ_EXCEP_YN,1,&apos;none&apos;,&apos;normal&apos;)" limit="300"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="10" Id="Image2" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="6" Text="관말압력&#32;측정대상&#32;등록" Top="75" Width="195"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_BodyData" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="853" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="365" Id="grd_BodyData" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellPosChanged="grd_BodyData_OnCellPosChanged" OnExpandEdit="grd_BodyData_OnExpandEdit" OnHeadClick="grd_Body_OnHeadClick" OnMouseOver="grd_BodyData_OnMouseOver" Right="1268" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="7" TabStop="true" Top="488" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1260">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="65"/>
+						<col width="65"/>
+						<col width="85"/>
+						<col width="120"/>
+						<col width="85"/>
+						<col width="65"/>
+						<col width="65"/>
+						<col width="625"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="일련번호"/>
+						<cell col="1" display="text" text="관리번호"/>
+						<cell bkcolor="user11" col="2" display="text" text="측정(년)"/>
+						<cell bkcolor="user11" col="3" display="text" text="측정(월일)"/>
+						<cell bkcolor="user11" col="4" display="text" text="측정시간"/>
+						<cell bkcolor="user11" col="5" display="text" text="현장측정압력(kPa)"/>
+						<cell bkcolor="user11" col="6" display="text" text="측정위치"/>
+						<cell bkcolor="user11" col="7" display="text" text="온도"/>
+						<cell bkcolor="user11" col="8" display="text" text="측정자"/>
+						<cell col="9" display="text" text="특이사항&#32;및&#32;담당자&#32;의견"/>
+					</head>
+					<body>
+						<cell align="right" col="0" colid="CUR_ROW2" display="text" expr="currow+1" limit="2"/>
+						<cell align="center" col="1" colid="MANAGE_NUM" display="normal" limit="11"/>
+						<cell align="center" col="2" colid="PIPE_PRESS_MEAS_YMD1" display="text" edit="mask" expandsize="18" limit="4" Mask="####" wordwrap="word"/>
+						<cell align="center" col="3" colid="PIPE_PRESS_MEAS_YMD2" display="text" edit="mask" limit="4" Mask="##/##"/>
+						<cell align="center" col="4" colid="PIPE_PRESS_MEAS_DTM" display="text" edit="mask" limit="4" Mask="##:##"/>
+						<cell col="5" colid="PIPE_END_PRESS" combodisplayrowcnt="20" display="number" edit="number" limit="2" Mask="##.##"/>
+						<cell align="center" col="6" colid="PIPE_END" display="text"/>
+						<cell col="7" colid="PIPE_END_TEMPER" display="number" edit="number" limit="2" Mask="##.##"/>
+						<cell col="8" colid="MEAS_EMPNM" display="text" expandimage="popup" expandshow="true" limit="10"/>
+						<cell col="9" colid="RMK" display="text" edit="normal" limit="255"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="#6cbae1" Bottom="488" Height="3" Id="Shape3" Left="5" LineWidth="0" Right="1265" TabOrder="8" Top="485" Type="Rectangle" Width="1260"></Shape>
+		<Image Align="Left" Height="10" Id="Image3" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="9" Text="측정대상&#32;결과등록" Top="465" Width="195"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button1" ImageID="btn_add" Left="1161" LeftMargin="20" OnClick="btn_addrowd_OnClick" Style="button" TabOrder="10" Text="추가" Top="456" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button8" ImageID="btn_delete" Left="1215" LeftMargin="20" OnClick="btn_delrowd_OnClick" Style="button" TabOrder="11" Text="삭제" Top="456" Width="50"></Button>
+		<Image Align="Left" Height="18" Id="Image10" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search" TabOrder="14" TabStop="FALSE" Text="지사" Top="42" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" ImeMode="none" Left="57" OnChanged="fn_d1_ChangBranchCd" ResetIndex="FIRST" Style="combo" TabOrder="12" Top="40" Width="126"></Combo>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="192" LeftMargin="12" Style="blt_search" TabOrder="15" TabStop="FALSE" Text="구청" Top="42" Width="71"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_StrZipNo1" ImeMode="none" Left="239" ResetIndex="FIRST" Style="combo" TabOrder="13" Top="40" Width="118"></Combo>
+		<Image Align="Left" Height="18" Id="Image6" ImageID="blt" Left="374" LeftMargin="12" Style="blt_search" TabOrder="17" TabStop="FALSE" Text="등록년도" Top="41" Width="73"></Image>
+		<Static Height="13" Id="Static10" Left="501" Style="static" TabOrder="16" Text="~" Top="44" Width="10"></Static>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="586" LeftMargin="12" Style="blt_search" TabOrder="19" TabStop="FALSE" Text="적용구분" Top="42" Width="73"></Image>
+		<Combo Border="Flat" CodeColumn="dataCol" DataColumn="textCol" DisplayRowCnt="3" Height="18" Id="cob_ObjExcepYn" InnerDataset="ds_ObjExcepYn" Left="648" ResetIndex="FIRST" Style="combo" TabOrder="18" Top="40" Width="104"></Combo>
+		<Image Align="Left" Height="15" Id="Image0" Left="-3" LeftMargin="12" Style="title" TabOrder="20" Text="※&#32;Check&#32;Box를&#32;Check하시면&#32;측정대상에서&#32;제외&#32;됩니다." Top="433" Width="579"></Image>
+		<Spin Border="Flat" Height="18" Id="cob_InstYear1" Left="440" Style="spin" TabOrder="21" Text="2009" Top="41" Width="54"></Spin>
+		<Spin Border="Flat" Height="18" Id="cob_InstYear2" Left="517" Style="spin" TabOrder="22" Text="2009" Top="41" Width="54"></Spin>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_ExcelExport" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="1032" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="160" Id="grd_ExcelExport" InputPanel="FALSE" Left="8" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnExpandEdit="grd_HeadData_OnExpandEdit" OnHeadClick="grd_Head_OnHeadClick" Right="1268" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="23" TabStop="true" Top="872" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="FALSE" VLineColor="default" WheelScrollRow="1" Width="1260">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="47"/>
+						<col width="78"/>
+						<col width="55"/>
+						<col width="97"/>
+						<col width="100"/>
+						<col width="180"/>
+						<col width="269"/>
+						<col width="55"/>
+						<col width="86"/>
+						<col width="312"/>
+						<col width="65"/>
+						<col width="65"/>
+						<col width="85"/>
+						<col width="86"/>
+						<col width="85"/>
+						<col width="65"/>
+						<col width="97"/>
+						<col width="333"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="일련번호"/>
+						<cell col="1" display="text" text="관리번호"/>
+						<cell bkcolor="user11" col="2" display="text" text="등록년도"/>
+						<cell col="3" display="text" text="지사"/>
+						<cell col="4" display="text" text="구청"/>
+						<cell col="5" display="text" text="팀"/>
+						<cell bkcolor="user11" col="6" display="text" text="주소"/>
+						<cell bkcolor="user11" col="7" display="text" text="관경"/>
+						<cell bkcolor="user11" col="8" display="text" text="배관망해석압력(kPa)"/>
+						<cell col="9" display="text" text="비고"/>
+						<cell bkcolor="user11" col="10" display="text" text="측정(년)"/>
+						<cell bkcolor="user11" col="11" display="text" text="측정(월일)"/>
+						<cell bkcolor="user11" col="12" display="text" text="측정시간"/>
+						<cell bkcolor="user11" col="13" display="text" text="현장측정압력(kPa)"/>
+						<cell bkcolor="user11" col="14" display="text" text="측정위치"/>
+						<cell bkcolor="user11" col="15" display="text" text="온도"/>
+						<cell bkcolor="user11" col="16" display="text" text="측정자"/>
+						<cell col="17" display="text" text="특이사항&#32;및&#32;담당자&#32;의견"/>
+					</head>
+					<body>
+						<cell align="right" col="0" colid="CUR_ROW1" combodisplayrowcnt="20" display="text" expr="currow+1" limit="3"/>
+						<cell align="center" col="1" colid="BRANCH_SEQ" combodisplayrowcnt="20" display="text" limit="7"/>
+						<cell align="center" col="2" colid="INST_YEAR" combodisplayrowcnt="20" display="normal" edit="expr:decode(OBJ_EXCEP_YN,1,&apos;none&apos;,&apos;number&apos;)" expandsize="18" limit="4" wordwrap="word"/>
+						<cell col="3" colid="BRANCH_NM" display="normal"/>
+						<cell col="4" colid="NEW_ADDR_COUNTY" display="normal"/>
+						<cell col="5" colid="TEAM_NM" display="normal"/>
+						<cell col="6" colid="BASIC_ADDR" display="text"/>
+						<cell align="center" col="7" colid="DIAM" display="combo" edit="combo"/>
+						<cell align="right" col="8" colid="PIPE_ANALYSIS_PRESS" display="number" edit="expr:decode(OBJ_EXCEP_YN,1,&apos;none&apos;,&apos;number&apos;)" expandsize="18" limit="2" Mask="##.##" wordwrap="word"/>
+						<cell align="left" col="9" colid="RMK" display="text" edit="expr:decode(OBJ_EXCEP_YN,1,&apos;none&apos;,&apos;normal&apos;)" limit="300"/>
+						<cell align="center" col="10" colid="PIPE_PRESS_MEAS_YMD12" display="text" expandsize="18" limit="4" wordwrap="word"/>
+						<cell align="center" col="11" colid="PIPE_PRESS_MEAS_YMD22" display="text" limit="4" Mask="##/##"/>
+						<cell align="center" col="12" colid="PIPE_PRESS_MEAS_DTM2" display="text" edit="mask" limit="4" Mask="##:##"/>
+						<cell col="13" colid="PIPE_END_PRESS2" combodisplayrowcnt="20" display="number" edit="number" limit="2" Mask="##.##"/>
+						<cell align="center" col="14" colid="PIPE_END2" display="text"/>
+						<cell col="15" colid="PIPE_END_TEMPER2" display="number" edit="number" limit="2" Mask="##.##"/>
+						<cell col="16" colid="MEAS_EMPNM2" display="text" limit="10"/>
+						<cell col="17" colid="RMK2" display="text" edit="normal" limit="255"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1204010010F.xml
+* Form 설명  : 관말압력 측정 등록
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 김진욱
+* 작성일     : 2009-07-01
+* 변경내용   : 변경일자, 변경내용,변경자
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js"
+#include "JS::COMMONA10002.js"
+#include "JS::COMMONB30001.js"
+#include "JS::COMMONC10001.js"
+#include "JS::COMMOND10001.js"
+//---------------------------------------------------------
+//	화면공통변수
+//---------------------------------------------------------
+var fv_ServiceId = "D1204010010F";
+var CurYear = "";
+var d1v_GridForExcelID = "";
+var EMP_ID = "";
+
+//---------------------------------------------------------
+//	Load Complete
+// 	Form Load 시 공통에서 사용하는 필수 함수를 호출
+//---------------------------------------------------------
+function fn_D2_OnLoadCompleted(obj)
+{
+	//------------------------------------
+	// 초기 처리
+	//------------------------------------	
+	EMP_ID = gfn_GetGlobalValue("G_USER_NO");
+	
+	gfn_LoadForm(obj);
+	gfn_CatchComponents(obj);
+	fn_D2_Init();
+}
+
+//---------------------------------------------------------
+//	종료시 처리
+//---------------------------------------------------------
+function D1204010010F_OnUnloadCompleted(obj)
+{
+    if(ds_HeadData.GetUpdate() || ds_BodyData.GetUpdate())
+	{
+	    if(!confirm(gfn_GetMessage("M000016","%AAA%","기본정보 편집중인 내용을 무시하고 종료"))) 
+		{
+			return false;
+		}
+	}
+}
+
+function fn_D2_Init()
+{
+    //-------------------------------------------------------------------------------
+    // 함수명   : fn_D2_Init()
+    // 설명     : 화면초기화
+    // return 내용 : 
+    //-------------------------------------------------------------------------------
+	var strSvcID = "init";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName="+fv_ServiceId+"-service&init=1&EMPLOYEE_ID="+EMP_ID;
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_branch=ds_branch ds_team=ds_team ds_right=ds_right";
+	var strArgument  = "";
+    var CallBack     = "fn_D2_CallBack";    
+
+    gfn_AsyncCall(strSvcID
+		        , strPart
+		        , strURL
+		        , strInDatasets
+		        , strOutDatasets
+		        , strArgument
+		        , CallBack);	
+}
+
+function fn_D2_CallBack(SrvID,ErrorCode,ErrorMsg)
+{
+	if(ErrorCode < 0) {
+		alert(ErrorMsg);
+		return;
+	}
+	
+    switch(SrvID){
+        case "init":    
+			fn_d1_Setting();
+			gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));
+
+			gfn_SetGrdComboBox_Comcode("grd_HeadData",10,"B30007");	
+			gfn_SetGrdComboBox_Comcode("grd_BodyData",6,"D10174");		
+		
+			CurYear = substr(GDS_VALUE.GetColumn(11,"ReqVariableValue"),0,4);        
+        
+			grd_HeadData.SetCellProp('body',10,'edit','expr:decode(OBJ_EXCEP_YN,1,"none","combo")');
+			tempCodeDs0.InsertRow(0);
+			tempCodeDs0.SetColumn(0,"BRANCH_CD"," ");
+			tempCodeDs0.SetColumn(0,"BRANCH_NM","전체");	
+
+			fn_d1_ChangBranchCd();
+			gfn_B3_SetComboIndex(this, 0);			
+
+			if(!gfn_isNull(ds_set.GetColumn(0,"BRANCH_CD"))){
+				cob_BranchCd.Value=ds_set.GetColumn(0,"BRANCH_CD"); // 로그인자 지사 세팅 
+				fn_SetComboBox_Comcode("1",cob_BranchCd.Value, fn_setDsObject_Comcode("1", "cob_StrZipNo1")); // 시/구
+				cob_StrZipNo1.Value= ds_set.GetColumn(0,"ZIP_NO1"); // 로그인자 시구 
+			}else{
+				fn_SetComboBox_Comcode("1",cob_BranchCd.Value, fn_setDsObject_Comcode("1", "cob_StrZipNo1")); // 시/구			
+			}
+			
+			fn_rightReload();
+			
+			break;
+			
+        case "find":
+			break;
+						
+        case "find2":
+			break;
+									
+        case "DeleteAll":
+
+			break;
+			
+		case "save":
+			alert(gfn_GetMessage("M000009","%AAA%","저장을"));
+			fn_CommonSearch();
+			break;
+     }
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_rightReload
+// 설명: 지사 유저일 경우 해당 유저의 지사만 보여준다.
+// arguments
+// 			SrvID: String: 서비스 ID
+//         ErrorCode: String: 에러코드
+//         ErrorMsg : String: 에러발생시 서버에서 보낸 에러메시지
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_rightReload()
+{
+	if(GDS_VALUE.GetColumn(18,"ReqVariableValue") == "Y"){	//지사사람일 경우
+		tempCodeDs0.Filter("BRANCH_CD == "+GDS_VALUE.GetColumn(19,"ReqVariableValue"));
+	}
+}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 행추가
+//---------------------------------------------------------
+function fn_CommonAddRow()
+{
+	ds_HeadData.FireEvent = false;
+	var nRow = ds_HeadData.AddRow();	
+
+	ds_HeadData.SetColumn(nRow, "INST_YEAR", CurYear);		
+	
+	ds_HeadData.SetColumn(nRow, "NEW_ADDR_COUNTY", "");		
+
+/*		
+	ds_HeadData.SetColumn(nRow, "BRANCH_CD", ds_right.GetColumn(0,"BRANCH_CD"));	
+	ds_HeadData.SetColumn(nRow, "BRANCH_NM", ds_right.GetColumn(0,"BRANCH_NM"));			
+	ds_HeadData.SetColumn(nRow, "TEAM_CD", ds_right.GetColumn(0,"TEAM_CD"));	
+	ds_HeadData.SetColumn(nRow, "TEAM_NM", ds_right.GetColumn(0,"TEAM_NM"));	
+*/
+	ds_HeadData.SetColumn(nRow, "BRANCH_CD", gfn_GetGlobalValue("G_BRANCH_CD"));	
+	//ds_HeadData.SetColumn(nRow, "BRANCH_NM", gfn_GetGlobalValue("G_BRANCH_CD"));			
+	ds_HeadData.SetColumn(nRow, "TEAM_CD", gfn_GetGlobalValue("G_DEPT_CODE"));	
+	ds_HeadData.SetColumn(nRow, "TEAM_NM", gfn_GetGlobalValue("G_DEPT_NAME"));	
+
+	gfn_getBranchCombo("ds_TempBranch");
+	var FindRow = ds_TempBranch.FindRow("CODE_ITEM",gfn_GetGlobalValue("G_BRANCH_CD"));
+	ds_HeadData.SetColumn(nRow, "BRANCH_NM", ds_TempBranch.GetColumn(FindRow,"ITEM_KNAME"));				
+
+	ds_HeadData.SetColumn(nRow, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_HeadData.SetColumn(nRow, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));    
+	ds_HeadData.SetColumn(nRow, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_HeadData.SetColumn(nRow, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));	
+	
+	if(gfn_isNull(ds_HeadData.GetColumn(nRow,"BRANCH_CD"))){
+		ds_HeadData.SetColumn(nRow, "BRANCH_CD", " ");
+	}
+	
+	if(gfn_isNull(ds_HeadData.GetColumn(nRow,"TEAM_CD"))){
+		ds_HeadData.SetColumn(nRow, "TEAM_CD", " ");
+	}	
+
+	ds_HeadData.FireEvent = true;
+}
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch()
+{
+	//-------------------------------------------------------------------------------
+    // 함수명   : fn_CommonSearch(obj)
+    // 설명     : 조회
+    // return 내용 : 
+    //-------------------------------------------------------------------------------
+	if(cob_InstYear1.Text > cob_InstYear2.Text){
+		alert("등록년도를 확인해 주세요.");
+		return;
+	}
+    
+    var StrZipNoTemp = "";
+		
+	if(trim(cob_StrZipNo1.text == "전체")){	            
+		StrZipNoTemp = "";
+	}else{	            
+		StrZipNoTemp = trim(cob_StrZipNo1.text);
+	}    
+    
+	var strSvcID = "find";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName="+fv_ServiceId+"-service&find=1"
+	            + "&BRANCH_CD="+cob_BranchCd.Value
+				+ "&OFFICE_FLAG=" +StrZipNoTemp
+	            + "&INST_YEAR1="  +cob_InstYear1.Value
+	            + "&INST_YEAR2="  +cob_InstYear2.Value
+	            + "&OBJ_EXCEP_YN="  +cob_ObjExcepYn.Value	            
+	            ;			
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_HeadData=ds_HeadData ds_BodyExcel=ds_BodyExcel";
+	var strArgument  = "";
+    var CallBack     = "fn_D2_CallBack";    
+
+    gfn_AsyncCall(strSvcID
+		        , strPart
+		        , strURL
+		        , strInDatasets
+		        , strOutDatasets
+		        , strArgument
+		        , CallBack);
+		        
+	grd_HeadData.NoDataText=gfn_GetMessage("M000008","%AAA%", "관말압력 측정대상 등록정보가"); 
+}	
+
+function fn_CommonSearchBody()
+{
+	var strSvcID = "find2";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName="+fv_ServiceId+"-service&find2=1"
+	            + "&BRANCH_CD="+grd_HeadData.GetCellText('body',ds_HeadData.row,3)
+	            ;			
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_BodyData=ds_BodyData";
+	var strArgument  = "";
+    var CallBack     = "fn_D2_CallBack";    
+
+    gfn_AsyncCall(strSvcID
+		        , strPart
+		        , strURL
+		        , strInDatasets
+		        , strOutDatasets
+		        , strArgument
+		        , CallBack);
+
+	gfn_SetStatusMsg(gfn_GetMessage("M000009","%AAA%","조회"),"black",true);
+}
+
+function fn_CommonSave()
+{
+	//-------------------------------------------------------------------------------
+	// 저장 버튼 실행
+	//-------------------------------------------------------------------------------
+	if( !(ds_HeadData.GetUpdate() || ds_BodyData.GetUpdate()) )
+	{
+		alert(gfn_GetMessage("M000008", "%AAA%", "변경된 내용이"));		
+		return;
+	}
+
+	if(fn_CommonPreSave() == false)
+	{
+		return;
+	}	
+	
+	for(i = 0 ; i < ds_HeadData.GetRowCount() ; i++){
+		if(toUpper(ds_HeadData.GetRowType(i))=="UPDATE"){
+			ds_HeadData.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_HeadData.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		}
+	}
+	
+	for(i = 0 ; i < ds_BodyData.GetRowCount() ; i++){
+		if(toUpper(ds_BodyData.GetRowType(i))=="UPDATE"){
+			ds_BodyData.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_BodyData.SetColumn(i, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+		}
+	}	
+
+	for(i = 0 ; i < ds_BodyData.GetRowCount() ; i++){
+		ds_BodyData.SetColumn(i, "PIPE_PRESS_MEAS_YMD", ds_BodyData.GetColumn(i,"PIPE_PRESS_MEAS_YMD1")+ds_BodyData.GetColumn(i,"PIPE_PRESS_MEAS_YMD2"));
+	}	
+
+	var strSvcID = "save";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName="+fv_ServiceId+"-service";
+	var strInDatasets  = "ds_HeadData=ds_HeadData:u ds_BodyData=ds_BodyData:u";
+	var strOutDatasets  = "";
+	var strArgument  = "save=1";
+    var CallBack     = "fn_D2_CallBack";    
+
+    gfn_AsyncCall(strSvcID
+		        , strPart
+		        , strURL
+		        , strInDatasets
+		        , strOutDatasets
+		        , strArgument
+		        , CallBack);
+}
+
+function fn_CommonPreSave()
+{
+	//-------------------------------------------------------------------------------
+	// 저장 전처리
+	//-------------------------------------------------------------------------------
+	for(var i=0;i<ds_HeadData.RowCount();i++)
+	{
+		if (gfn_isNull(ds_HeadData.GetColumn(i, "INST_YEAR"))) //설치년도
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "등록년도를"));
+			return false;
+		}
+		
+		if (gfn_isNull(ds_HeadData.GetColumn(i, "BRANCH_NM"))) //지사
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "지사를"));
+			return false;
+		}
+				
+		if (gfn_isNull(ds_HeadData.GetColumn(i, "TEAM_NM"))) //팀
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "팀을"));
+			return false;
+		}				
+		
+		if (gfn_isNull(ds_HeadData.GetColumn(i, "BASIC_ADDR"))) //기본주소
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "주소를"));
+			return false;
+		}
+		
+		if (gfn_isNull(ds_HeadData.GetColumn(i, "DIAM"))) //관경
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "관경을"));
+			return false;
+		}
+
+		if (gfn_isNull(ds_HeadData.GetColumn(i, "PIPE_ANALYSIS_PRESS"))) //배관망해석압력
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "배관망해석압력을"));
+			return false;
+		}				
+	}
+	
+	for(var j=0;j<ds_BodyData.RowCount();j++)
+	{
+		if (gfn_isNull(ds_BodyData.GetColumn(j, "PIPE_PRESS_MEAS_YMD1"))) //관말압력측정년월일
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "측정년을"));
+			return false;
+		}
+		
+		if (gfn_isNull(ds_BodyData.GetColumn(j, "PIPE_PRESS_MEAS_YMD2"))) //관말압력측정년월일
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "측정월을"));
+			return false;
+		}
+		
+		if (substr(ds_BodyData.GetColumn(j, "PIPE_PRESS_MEAS_YMD2"),0,2) > 12 || substr(ds_BodyData.GetColumn(j, "PIPE_PRESS_MEAS_YMD2"),2,2) > 31 || ds_BodyData.GetColumn(j, "PIPE_PRESS_MEAS_YMD2").length != 4) //관말압력측정년월일
+		{		
+			alert("측정 월일을 확인해 주세요.");
+			ds_BodyData.row = j;
+			grd_BodyData.SetCellPos(3);
+			grd_BodyData.ShowEditor(true);
+			return false;
+		}
+		
+		if (gfn_isNull(ds_BodyData.GetColumn(j, "PIPE_PRESS_MEAS_DTM"))) //관말압력측정시분
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "측정시분을"));
+			return false;
+		}	
+				
+		if (substr(ds_BodyData.GetColumn(j, "PIPE_PRESS_MEAS_DTM"),0,2) > 24 || substr(ds_BodyData.GetColumn(j, "PIPE_PRESS_MEAS_DTM"),2,2) > 60 || ds_BodyData.GetColumn(j, "PIPE_PRESS_MEAS_DTM").length != 4) //관말압력측정년월일		
+		{		
+			alert("측정 시간을 확인해 주세요.");
+			ds_BodyData.row = j;
+			grd_BodyData.SetCellPos(4);
+			grd_BodyData.ShowEditor(true);
+			return false;
+		}	
+
+		if (gfn_isNull(ds_BodyData.GetColumn(j, "PIPE_END_PRESS"))) //관말측정압력
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "관말측정압력을"));
+			return false;
+		}						
+		
+		if (gfn_isNull(ds_BodyData.GetColumn(j, "PIPE_END"))) //관말압력측정위치
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "관말압력측정위치를"));
+			return false;
+		}	
+
+		if (gfn_isNull(ds_BodyData.GetColumn(j, "PIPE_END_TEMPER"))) //관말온도
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "관말온도를"));
+			return false;
+		}	
+
+		if (gfn_isNull(ds_BodyData.GetColumn(j, "MEAS_EMPID"))) //측정자사번
+		{		
+			alert(gfn_GetMessage("M000040", "%AAA%", "측정자를"));
+			return false;
+		}							
+
+	}	
+}
+
+function fn_CommonDeleteRow()
+{
+	//-------------------------------------------------------------------------------
+	// 행삭제 버튼 실행 - Master Grid
+	//-------------------------------------------------------------------------------
+	if(ds_HeadData.GetColumn(ds_HeadData.currow,"CONF_YN") == "Y"){
+		alert("확정된건은 삭제할 수 없습니다.");
+	}else{
+		if(ds_BodyData.rowcount == 0){
+			ds_HeadData.DeleteRow(ds_HeadData.Row);
+			ds_HeadData.SelectRow(ds_HeadData.GetCurrow());
+		}else{
+			alert("측정대상 결과를 먼저 삭제해 주세요.");
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonExcelExport(Obj)
+// 설명: 조회한 결과를 엑셀로 출력한다.
+// arguments
+// 			Obj: 객체: 이벤트를 발생한 객체
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport(Obj){
+	//-------------------------------------------------------------------------------
+	// 엑셀 버튼 실행 
+	//-------------------------------------------------------------------------------
+	ds_ExcelExport.ClearData();
+	var nRow = 0;
+	
+	for(var i=0;i<ds_HeadData.GetRowCount();i++){
+
+		ds_BodyExcel.filter("INST_YEAR == "+Quote(ds_HeadData.GetColumn(i,'INST_YEAR'))+"&&BRANCH_SEQ=="+Quote(ds_HeadData.GetColumn(i,'BRANCH_SEQ')));		
+
+		if(ds_BodyExcel.GetRowCount() == 0){	//Head에 data가 한건도 없을경우
+
+			ds_ExcelExport.AddRow();
+		
+			ds_ExcelExport.SetColumn(nRow,"INST_YEAR",ds_HeadData.GetColumn(i,"INST_YEAR"));			
+			ds_ExcelExport.SetColumn(nRow,"BRANCH_SEQ",grd_HeadData.GetCellText('body',i,3));			
+			ds_ExcelExport.SetColumn(nRow,"BRANCH_CD",ds_HeadData.GetColumn(i,"BRANCH_CD"));			
+			ds_ExcelExport.SetColumn(nRow,"OBJ_EXCEP_YN",ds_HeadData.GetColumn(i,"OBJ_EXCEP_YN"));
+			ds_ExcelExport.SetColumn(nRow,"TEAM_CD",ds_HeadData.GetColumn(i,"TEAM_CD"));
+			ds_ExcelExport.SetColumn(nRow,"NEW_ADDR_COUNTY",grd_HeadData.GetCellText('body',i,6));
+			ds_ExcelExport.SetColumn(nRow,"TOWN",ds_HeadData.GetColumn(i,"TOWN"));
+			ds_ExcelExport.SetColumn(nRow,"ADDR1_M",ds_HeadData.GetColumn(i,"ADDR1_M"));
+			ds_ExcelExport.SetColumn(nRow,"ADDR1_S",ds_HeadData.GetColumn(i,"ADDR1_S"));
+			ds_ExcelExport.SetColumn(nRow,"BASIC_ADDR",ds_HeadData.GetColumn(i,"BASIC_ADDR"));		
+			ds_ExcelExport.SetColumn(nRow,"DIAM",grd_HeadData.GetCellText('body',i,10));			
+			ds_ExcelExport.SetColumn(nRow,"PIPE_ANALYSIS_PRESS",ds_HeadData.GetColumn(i,"PIPE_ANALYSIS_PRESS"));
+			ds_ExcelExport.SetColumn(nRow,"RMK",ds_HeadData.GetColumn(i,"RMK"));
+			ds_ExcelExport.SetColumn(nRow,"OFFICE_FLAG",ds_HeadData.GetColumn(i,"OFFICE_FLAG"));
+			ds_ExcelExport.SetColumn(nRow,"BRANCH_NM",ds_HeadData.GetColumn(i,"BRANCH_NM"));								
+			ds_ExcelExport.SetColumn(nRow,"TEAM_NM",ds_HeadData.GetColumn(i,"TEAM_NM"));       
+			ds_ExcelExport.SetColumn(nRow,"OFFICE_FLAG_NM",ds_HeadData.GetColumn(i,"OFFICE_FLAG_NM"));  		
+			
+			nRow = nRow + 1;			
+		}else{
+		
+			for(var j=0;j<ds_BodyExcel.GetRowCount();j++){
+	
+				ds_ExcelExport.AddRow();
+			
+				ds_ExcelExport.SetColumn(nRow,"INST_YEAR",ds_HeadData.GetColumn(i,"INST_YEAR"));
+				ds_ExcelExport.SetColumn(nRow,"BRANCH_SEQ",grd_HeadData.GetCellText('body',i,3));			
+				ds_ExcelExport.SetColumn(nRow,"BRANCH_CD",ds_HeadData.GetColumn(i,"BRANCH_CD"));
+				ds_ExcelExport.SetColumn(nRow,"OBJ_EXCEP_YN",ds_HeadData.GetColumn(i,"OBJ_EXCEP_YN"));
+				ds_ExcelExport.SetColumn(nRow,"TEAM_CD",ds_HeadData.GetColumn(i,"TEAM_CD"));
+				ds_ExcelExport.SetColumn(nRow,"NEW_ADDR_COUNTY",grd_HeadData.GetCellText('body',i,6));				
+				ds_ExcelExport.SetColumn(nRow,"TOWN",ds_HeadData.GetColumn(i,"TOWN"));
+				ds_ExcelExport.SetColumn(nRow,"ADDR1_M",ds_HeadData.GetColumn(i,"ADDR1_M"));
+				ds_ExcelExport.SetColumn(nRow,"ADDR1_S",ds_HeadData.GetColumn(i,"ADDR1_S"));
+				ds_ExcelExport.SetColumn(nRow,"BASIC_ADDR",ds_HeadData.GetColumn(i,"BASIC_ADDR"));		
+				ds_ExcelExport.SetColumn(nRow,"DIAM",grd_HeadData.GetCellText('body',i,10));							
+				ds_ExcelExport.SetColumn(nRow,"PIPE_ANALYSIS_PRESS",ds_HeadData.GetColumn(i,"PIPE_ANALYSIS_PRESS"));
+				ds_ExcelExport.SetColumn(nRow,"RMK",ds_HeadData.GetColumn(i,"RMK"));
+				ds_ExcelExport.SetColumn(nRow,"OFFICE_FLAG",ds_HeadData.GetColumn(i,"OFFICE_FLAG"));
+				ds_ExcelExport.SetColumn(nRow,"BRANCH_NM",ds_HeadData.GetColumn(i,"BRANCH_NM"));								
+				ds_ExcelExport.SetColumn(nRow,"TEAM_NM",ds_HeadData.GetColumn(i,"TEAM_NM"));       
+				ds_ExcelExport.SetColumn(nRow,"OFFICE_FLAG_NM",ds_HeadData.GetColumn(i,"OFFICE_FLAG_NM"));  
+
+
+				ds_ExcelExport.SetColumn(nRow,"PIPE_PRESS_MEAS_YMD12",substr(ds_BodyExcel.GetColumn(j,"PIPE_PRESS_MEAS_YMD"),0,4));
+				ds_ExcelExport.SetColumn(nRow,"PIPE_PRESS_MEAS_YMD22",substr(ds_BodyExcel.GetColumn(j,"PIPE_PRESS_MEAS_YMD"),4,4));
+				ds_ExcelExport.SetColumn(nRow,"BRANCH_SEQ2",ds_BodyExcel.GetColumn(j,"BRANCH_SEQ"));
+				ds_ExcelExport.SetColumn(nRow,"PIPE_PRESS_MEAS_DTM2",ds_BodyExcel.GetColumn(j,"PIPE_PRESS_MEAS_DTM"));
+				ds_ExcelExport.SetColumn(nRow,"PIPE_END_PRESS2",ds_BodyExcel.GetColumn(j,"PIPE_END_PRESS"));												
+				ds_ExcelExport.SetColumn(nRow,"PIPE_END2",ds_BodyExcel.GetColumn(j,"PIPE_END"));
+				ds_ExcelExport.SetColumn(nRow,"PIPE_END_TEMPER2",ds_BodyExcel.GetColumn(j,"PIPE_END_TEMPER"));
+				ds_ExcelExport.SetColumn(nRow,"MEAS_EMPID2",ds_BodyExcel.GetColumn(j,"MEAS_EMPID"));
+				ds_ExcelExport.SetColumn(nRow,"RMK2",ds_BodyExcel.GetColumn(j,"RMK"));
+				ds_ExcelExport.SetColumn(nRow ,"MEAS_EMPNM2",ds_BodyExcel.GetColumn(j,"MEAS_EMPNM"));			
+
+				nRow = nRow + 1;			
+			}			
+		}
+		ds_BodyExcel.UnFilter();		
+	}
+
+	var SearchCondition= "";
+
+    SearchCondition = SearchCondition + "지사 :"     + RPad(cob_BranchCd.Text," ",20);
+    SearchCondition = SearchCondition + "구청 :"    + RPad(cob_StrZipNo1.Text," ",20);
+    
+    var RegYear = cob_InstYear1.Text + "~" + cob_InstYear2.Text;
+    SearchCondition = SearchCondition + "등록년도 :"       + RPad(RegYear," ",20);
+    SearchCondition = SearchCondition + "적용구분 :"       + RPad(cob_ObjExcepYn.Text," ",20);
+
+	gfn_ExportExcel("관말압력 측정 등록 ", 5, SearchCondition, "grd_ExcelExport");
+}
+
+function btn_addrowd_OnClick(obj)
+{
+	//-------------------------------------------------------------------------------
+	// 행추가 버튼 실행 - Detail Grid
+	//-------------------------------------------------------------------------------
+
+	if(ds_HeadData.GetColumn(ds_HeadData.GetCurrow(),"OBJ_EXCEP_YN") == 1){
+		alert("적용제외건은 수정/삭제가 불가능합니다.");		
+		return;
+	}
+
+	if(gfn_isNull(ds_HeadData.GetColumn(ds_HeadData.GetCurrow(),"BRANCH_SEQ"))){
+		alert("관말압력 측정대상을 저장후 진행할수 있습니다.\n\n저장버튼을 눌러주세요.");		
+	}else{
+		ds_BodyData.FireEvent = false;
+		
+		var nRow = ds_BodyData.AddRow();			
+
+		//
+
+		//측정자 defult setting
+		ds_BodyData.SetColumn(nRow, "MEAS_EMPNM", trim(gfn_GetGlobalValue("G_NAME")));		
+		ds_BodyData.SetColumn(nRow, "MEAS_EMPID", trim(gfn_GetGlobalValue("G_USER_NO")));				
+
+		//key
+		ds_BodyData.SetColumn(nRow, "BRANCH_SEQ", grd_HeadData.GetCellText("body",ds_HeadData.row,3));		
+		ds_BodyData.SetColumn(nRow, "INST_YEAR", substr(grd_HeadData.GetCellText("body",ds_HeadData.row,3),0,4));		
+		ds_BodyData.SetColumn(nRow, "MANAGE_NUM", grd_HeadData.GetCellText("body",ds_HeadData.row,3));				
+		
+		ds_BodyData.SetColumn(nRow, "PIPE_PRESS_MEAS_YMD1", CurYear);				
+		ds_BodyData.SetColumn(nRow, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_BodyData.SetColumn(nRow, "UPD_IP", gfn_GetGlobalValue("G_IPADDRESS"));    
+		ds_BodyData.SetColumn(nRow, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_BodyData.SetColumn(nRow, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+	
+		ds_BodyData.FireEvent = true;	
+	}
+}
+
+function btn_delrowd_OnClick(obj)
+{
+	if(ds_HeadData.GetColumn(ds_HeadData.GetCurrow(),"OBJ_EXCEP_YN") == 1){
+		alert("적용제외건은 수정/삭제가 불가능합니다.");		
+		return;
+	}
+	
+	//-------------------------------------------------------------------------------
+	// 행삭제 버튼 실행 - Detail Grid
+	//-------------------------------------------------------------------------------
+	ds_BodyData.DeleteRow(ds_BodyData.row);		
+}
+
+function grd_Head_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	//-------------------------------------------------------------------------------
+	//	sorting - Master Grid
+	//-------------------------------------------------------------------------------
+	if(nCell == 1 || nCell == 2 || nCell == 3 || nCell == 4 || nCell == 5) {
+		gfn_SetGridSort(obj, nCell);
+	}
+}
+
+function grd_Body_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	//-------------------------------------------------------------------------------
+	//	sorting - Detail Grid
+	//-------------------------------------------------------------------------------
+	if(nCell == 1 || nCell == 2 || nCell == 3 || nCell == 4 || nCell == 5) {
+		gfn_SetGridSort(obj, nCell);
+	}
+}
+
+function ds_HeadData_OnRowPosChanged(obj,nOldRow,nRow)
+{
+	//-------------------------------------------------------------------------------
+	// TopData 그리드에서 OnRowPosChanged Event가 발생시 호출
+	//-------------------------------------------------------------------------------
+	//strCode1 = ds_HeadData.GetColumn(ds_HeadData.GetCurrow(),"RELAT_NUM");
+	//ds_BodyData.Filter("indexof(RELAT_NUM,strCode1)!=-1");
+	if(ds_BodyData.GetUpdate()) 
+	{
+		if(!confirm("변경된 내용을 저장하시겠습니까?"))
+		{
+			// 아니오
+			ds_HeadData.Reset();			
+			ds_BodyData.Reset();			
+		}
+		else
+		{
+			// 저장
+			fn_CommonSave();
+		}
+		fn_CommonSearchBody();			
+	}else{
+		if(ds_HeadData.GetColumn(nRow,"OBJ_EXCEP_YN") == 1){
+			grd_BodyData.Editable = false;
+		}else{
+			grd_BodyData.Editable = true;	
+		}
+		fn_CommonSearchBody();	
+	}
+}
+
+//  세션에 따른 지사 , 시/구 , 팀 조회 
+function fn_d1_Setting()
+{
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL = "handle.do?ServiceName=D1_DiggingWorkMgr-service&setting=1"
+	           + "&EMPID="+EMP_ID
+	           ;
+	var strInDatasets  = "";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_set=ds_set";
+	var strArgument  = "";
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		alert(ErrorMsg);
+		return;
+	}
+	
+}
+
+function fn_d1_ChangBranchCd(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+     fn_SetComboBox_Comcode("1", cob_BranchCd.Value, fn_setDsObject_Comcode("1", "cob_StrZipNo1")); // 시/구
+}
+
+function grd_HeadData_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+	if(nCell == 8){
+		if(ds_HeadData.GetColumn(ds_HeadData.GetCurrow(),"OBJ_EXCEP_YN") == 1){
+			alert("적용제외건은 수정/삭제가 불가능합니다.");		
+			return;
+		}
+		//-----------------------------------------
+		//  주소검색 팝업창을 부른다 
+		//-----------------------------------------	
+		var arrList = gfn_Dialog("A10", "A1101020010U", "", 1100, 600, true, -1, -1);
+		
+		//지번주소
+		ds_HeadData.SetColumn(nRow,"NEW_ADDR_COUNTY",arrList[6]);    // "시군구"
+		ds_HeadData.SetColumn(nRow,"OFFICE_FLAG_NM",arrList[6]);    // "시군구"
+		ds_HeadData.SetColumn(nRow,"OFFICE_FLAG",arrList[3]);   		
+		ds_HeadData.SetColumn(nRow,"TOWN",arrList[7]);    // "읍면동"
+		ds_HeadData.SetColumn(nRow,"ADDR1_M",arrList[11]);    // "본번"
+		ds_HeadData.SetColumn(nRow,"ADDR1_S",arrList[12]);    // "지번"
+		ds_HeadData.SetColumn(nRow,"BASIC_ADDR",arrList[17]);    // "지번주소조합" (새주소조합 arrList[23])
+	}else if(nCell == 9){
+			args = "BUNGI='01' GU_NM="  	+ds_HeadData.GetColumn(ds_HeadData.currow,"NEW_ADDR_COUNTY") //구명
+					 + " DONG_NM_H="  +ds_HeadData.GetColumn(ds_HeadData.currow,"TOWN") 	//동명
+					 + " FNU="   		+ds_HeadData.GetColumn(ds_HeadData.currow,"ADDR1_M") //본번
+					 + " SNU="   		+ds_HeadData.GetColumn(ds_HeadData.currow,"ADDR1_S");	//부번
+
+		gfn_Dialog("D10","D1402060011U",args,1208,840,true,-1,-1);	//GIS 불러오기		
+	}
+}
+
+function grd_BodyData_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+	if(nCell == 8)
+	{
+		//-------------------------------------------------------------------------------
+		// 사원 팝업
+		//-------------------------------------------------------------------------------
+		var Arguments = "";
+		var Result = gfn_Dialog("E20", "E2101010020U", Arguments,750,550);
+	
+		if(Result.length > 0)
+		{
+			ds_BodyData.SetColumn(ds_BodyData.row,"MEAS_EMPID",Result[0]);  //사원번호
+			ds_BodyData.SetColumn(ds_BodyData.row,"MEAS_EMPNM",Result[1]);  //한글사원명		
+		}
+	}
+	
+	if(nCell == 2 || nCell == 3)
+	{
+		fn_SetCalendar(obj, nRow, nCell);
+	}	
+}
+
+function grd_BodyData_OnCellPosChanged(obj,nRow,nCell,nOldRow,nOldCell,nPivotIndex,nOldPivotIndex)
+{
+/*
+	if(nCell == 0 || nCell == 1 || nCell == 2 || nCell == 4 || nCell == 5 || nCell == 6 || nCell == 7 || nCell == 8 || nCell == 9){
+		if(grd_BodyData.GetCellText('body',nRow,3).length != 5)
+		{
+			alert("측정 월일을 확인해 주세요.");
+			ds_BodyData.row = nOldRow;
+			grd_BodyData.SetCellPos(3);
+			grd_BodyData.ShowEditor(true);
+			return false;
+		}else{
+			if(substr(grd_BodyData.GetCellText('body',nRow,3),0,2) > 12 || substr(grd_BodyData.GetCellText('body',nRow,3),3,2) > 31){
+				alert("측정 월일을 확인해 주세요.");
+				ds_BodyData.row = nOldRow;
+				grd_BodyData.SetCellPos(3);
+				grd_BodyData.ShowEditor(true);
+				return false;
+			}
+		}
+	}
+	
+	if(nCell == 0 || nCell == 1 || nCell == 2 || nCell == 3 || nCell == 5 || nCell == 6 || nCell == 7 || nCell == 8 || nCell == 9){
+		if(grd_BodyData.GetCellText('body',nRow,4).length != 5)
+		{ 
+			alert("측정 시간을 확인해 주세요.");
+			ds_BodyData.row = nOldRow;
+			grd_BodyData.SetCellPos(4);
+			grd_BodyData.ShowEditor(true);
+			return false; 
+		}else{	
+			if(substr(grd_BodyData.GetCellText('body',nRow,4),0,2) > 24 || substr(grd_BodyData.GetCellText('body',nRow,4),3,2) > 60){
+				alert("측정 시간을 확인해 주세요.");
+				ds_BodyData.row = nOldRow;
+				grd_BodyData.SetCellPos(4);
+				grd_BodyData.ShowEditor(true);
+				return false;
+			}
+		}
+	}	
+*/	
+}
+
+function grd_HeadData_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(ds_HeadData.GetRowType(nRow) == 'insert'){
+		if(nCell == 3){
+			alert("시스템에서 자동부여 합니다.");
+		}	
+	
+		if(nCell == 6){
+			alert("주소에 의한 구청이 자동으로 부여 됩니다.");
+		}
+	}
+}
+
+
+function grd_BodyData_OnMouseOver(obj,nPosX,nPosY,nRow,nCell,nPivotIndex)
+{
+	if(ds_HeadData.GetColumn(ds_HeadData.row,"OBJ_EXCEP_YN") == 1){
+		grd_BodyData.Editable = false;
+	}else{
+		grd_BodyData.Editable = true;
+	}
+}
+]]></Script>
+</Window>

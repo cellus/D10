@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="816" Id="D1505010010F" Left="8" OnLoadCompleted="D1505010010F_OnLoadCompleted" PidAttrib="7" Title="정압기&#32;분해&#32;점검계획&#32;등록_D1505010010F" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi" OnRowPosChanged="ds_Multi_OnRowPosChanged">
+				<Contents>
+					<colinfo id="JOB_GUBUN_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BEFORE_JOB_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SELF_INSPECT_PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_DISJOINT_CHK_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="FILTER_CHK_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_GUBUN" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_ROOM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_ROOM_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_ROOM_TYPE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="STD" size="256" summ="default" type="STRING"/>
+					<colinfo id="STD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_MODEL_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="GOV_MODEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_FLAGS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPECT_YEAR" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAX_JOB_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DSP_JOB_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_END_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOBER_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOBER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOBER_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="DANGER_JOB_STS_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPRO_REQ_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPRO_REQ_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPRO_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_RTURN_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="DRAFTER_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="DRAFTER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_WHY" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_END_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_APPRO_REQ_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_DECIDE_PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_DECIDE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHG_YN" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_GUBUN" size="256" summ="default" type="STRING"/>
+					<record>
+						<BRANCH_CD></BRANCH_CD>
+						<END_DATE></END_DATE>
+						<JOB_GUBUN></JOB_GUBUN>
+						<STR_DATE></STR_DATE>
+						<ZIP_NO1></ZIP_NO1>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DangerStsFlag">
+				<Contents>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<NAME>위험작업&#32;등록</NAME>
+						<VALUE>01</VALUE>
+					</record>
+					<record>
+						<NAME>결재&#32;반려</NAME>
+						<VALUE>02</VALUE>
+					</record>
+					<record>
+						<NAME>변경&#32;승인</NAME>
+						<VALUE>03</VALUE>
+					</record>
+					<record>
+						<NAME>결재&#32;승인</NAME>
+						<VALUE>04</VALUE>
+					</record>
+					<record>
+						<NAME>변경요청반려</NAME>
+						<VALUE>05</VALUE>
+					</record>
+					<record>
+						<NAME>변경요청승인</NAME>
+						<VALUE>06</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="46" Id="Static24" Left="5" Style="table" TabOrder="109" Top="721" VAlign="Middle" Width="1249" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="46" Id="Static26" Left="5" Style="table" TabOrder="88" Top="766" VAlign="Middle" Width="1249" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="8" Style="table" TabOrder="39" Top="322" VAlign="Middle" Width="1156" WordWrap="TRUE"></Static>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1256" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="29" Top="30" Type="RoundRect" Width="1251"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1251" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="21" Top="35" Type="Rectangle" Width="1241"></Shape>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="18" LeftMargin="12" Style="blt_search_Indis" TabOrder="22" Text="지사" Top="40" Width="59"></Image>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="160" LeftMargin="12" Style="blt_search" TabOrder="23" Text="시/구" Top="40" Width="59"></Image>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="475" LeftMargin="12" Style="blt_search" TabOrder="24" Text="계획일자" Top="40" Width="59"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="28" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1253">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="#6cbae1" Bottom="93" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1255" TabOrder="31" Top="90" Type="Rectangle" Width="1250"></Shape>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="58" OnChanged="cob_BranchCd_OnChanged" Style="combo_indis" TabOrder="1" Top="40" Width="90"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo1" Left="206" Style="combo" TabOrder="2" Top="40" Width="90"></Combo>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="req_ymd_start" Left="540" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="3" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static10" Left="629" Style="static" TabOrder="32" Text="~" Top="43" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="req_ymd_end" Left="639" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="4" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="33" Text="정압기분해점검작업조회" Top="75" Width="162"></Image>
+		<Image Align="Left" Height="9" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="34" Text="정압기분해점검작업계획" Top="304" Width="157"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="VALUE" Height="18" Id="cob_JobFlag" Left="802" Style="combo" TabOrder="6" Top="40" Width="146"></Combo>
+		<Image Align="Left" Height="18" Id="Image" ImageID="blt" Left="738" LeftMargin="12" Style="blt_search" TabOrder="35" Text="점검구분" Top="40" Width="59"></Image>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static18" Left="110" Style="table" TabOrder="37" Top="364" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static21" Left="5" Style="table_indis" TabOrder="36" Text="작업일자" Top="364" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static1" Left="217" Style="table_indis" TabOrder="38" Text="정압기명" Top="322" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="110" Style="table" TabOrder="41" Top="343" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static3" Left="5" Style="table" TabOrder="40" Text="위치" Top="343" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_Multi" Border="Flat" Column="JOB_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_JobYmd" Left="116" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="11" Top="366" WeeksFont="Default,-1" Width="100"></Calendar>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static4" Left="110" Style="table" TabOrder="42" Top="406" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="110" Style="table" TabOrder="43" Top="385" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static8" Left="110" Style="table" TabOrder="44" Top="448" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static12" Left="110" Style="table" TabOrder="45" Top="427" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static16" Left="498" Style="table" TabOrder="46" Text="기종" Top="322" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static19" Left="5" Style="table" TabOrder="47" Text="작업자" Top="385" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" AutoSelect="TRUE" BindDataset="ds_Multi" Border="Flat" Column="JOBER_EMPID" Height="18" Id="edt_ChiefEmpid" ImeMode="none" Left="116" Style="edit" TabOrder="25" Top="387" Width="80"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static17" Left="215" Style="table" TabOrder="48" Text="외" Top="385" VAlign="Middle" Width="20" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" AutoSelect="TRUE" BindDataset="ds_Multi" Border="Flat" Column="JOBER_CNT" Height="18" Id="edt_JoberCnt" ImeMode="none" Left="236" MaxLength="3" Number="TRUE" Style="edit" TabOrder="15" Top="387" Width="33"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static11" Left="110" Style="table" TabOrder="50" Top="469" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static13" Left="110" Style="table" TabOrder="52" Top="490" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static14" Left="110" Style="table" TabOrder="51" Top="511" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="127" Id="Static9" Left="5" Style="table" TabOrder="49" Text="분해점검내용" Top="406" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static20" Left="125" Style="static" TabOrder="53" Text="1.&#32;필터(필터망&#32;및&#32;O-링,&#32;가스켓,&#32;기타)&#32;점검" Top="412" Width="255"></Static>
+		<Static Height="13" Id="Static22" Left="125" Style="static" TabOrder="54" Text="2.&#32;정압기(슬리브,&#32;다이어후렘,&#32;밸브시트,&#32;오리피스,&#32;작동상태,&#32;기타)&#32;점검" Top="433" Width="430"></Static>
+		<Static Height="13" Id="Static72" Left="125" Style="static" TabOrder="55" Text="3.&#32;긴급차단변(다이어후렘,&#32;오리피스,&#32;시트,&#32;작동상태,&#32;기타)&#32;점검" Top="454" Width="430"></Static>
+		<Static Height="13" Id="Static74" Left="125" Style="static" TabOrder="56" Text="4.&#32;안전밸브(다이어후렘,&#32;오리피스,&#32;시트,&#32;작동상태,&#32;기타)&#32;점검" Top="475" Width="430"></Static>
+		<Static Height="13" Id="Static75" Left="125" Style="static" TabOrder="57" Text="5.&#32;가스누출여부&#32;점검" Top="496" Width="255"></Static>
+		<Static Height="13" Id="Static179" Left="125" Style="static" TabOrder="58" Text="6.&#32;압력기록계,&#32;압력게이지&#32;등&#32;기타사항&#32;점검" Top="517" Width="255"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static180" Left="110" Style="table" TabOrder="59" Top="532" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static181" Left="110" Style="table" TabOrder="60" Top="574" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static182" Left="110" Style="table" TabOrder="61" Top="553" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static183" Left="110" Style="table" TabOrder="63" Top="595" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static184" Left="110" Style="table" TabOrder="65" Top="616" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static185" Left="110" Style="table" TabOrder="64" Top="637" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static187" Left="125" Style="static" TabOrder="66" Text="1.&#32;작업전&#32;출입문&#32;개방&#32;후&#32;충분한&#32;환기조치" Top="538" Width="255"></Static>
+		<Static Height="13" Id="Static188" Left="125" Style="static" TabOrder="67" Text="2.&#32;작업전&#32;상황실에&#32;작업내용&#32;통보" Top="559" Width="255"></Static>
+		<Static Height="13" Id="Static189" Left="125" Style="static" TabOrder="68" Text="3.&#32;현장주변&#32;소화기&#32;비치&#32;확인" Top="580" Width="255"></Static>
+		<Static Height="13" Id="Static190" Left="125" Style="static" TabOrder="69" Text="4.&#32;가스누출&#32;여부&#32;수시&#32;점검&#32;확인" Top="601" Width="255"></Static>
+		<Static Height="13" Id="Static191" Left="125" Style="static" TabOrder="70" Text="5.&#32;사전&#32;화기&#32;제거&#32;조치" Top="622" Width="255"></Static>
+		<Static Height="13" Id="Static192" Left="125" Style="static" TabOrder="71" Text="6.&#32;규정&#32;공구&#32;준비사항&#32;확인" Top="643" Width="255"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static5" Left="110" Style="table" TabOrder="72" Top="658" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static15" Left="125" Style="static" TabOrder="73" Text="7.&#32;작업&#32;완료&#32;후&#32;작동상태&#32;및&#32;누설여부&#32;등&#32;안전조치&#32;사항&#32;재확인" Top="664" Width="425"></Static>
+		<Static Align="Center" Border="Flat" Height="148" Id="Static186" Left="5" Style="table" TabOrder="62" Text="안전조치사항" Top="532" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static25" Left="110" Style="table" TabOrder="75" Top="700" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static23" Left="110" Style="table" TabOrder="74" Top="679" VAlign="Middle" Width="1144" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="43" Id="Static27" Left="5" Style="table" TabOrder="76" Text="특기사항" Top="679" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="APPRO_REQ_EMPID" Height="18" Id="edt_ApproReqEmpid" ImeMode="none" Left="724" Style="edit" TabOrder="27" Top="744" Width="100"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Appro" ImageID="btn_4_Confirmation" Left="961" LeftMargin="21" OnClick="btn_Appro_OnClick" Style="button" TabOrder="77" Text="변경결재" Top="787" Width="76"></Button>
+		<TextArea BindDataset="ds_Multi" Border="Flat" Column="RMK" Height="39" Id="edt_Rmk" Left="116" Style="textarea" TabOrder="16" Text="특기사항" Top="681" VScroll="TRUE" Width="1135"></TextArea>
+		<Static Height="13" Id="Static7" Left="385" Style="static" TabOrder="79" Text="~" Top="370" Width="10"></Static>
+		<MaskEdit BindDataset="ds_Multi" Border="Flat" ClipMode="IncludeSpace" Column="JOB_STR_TIME" DecimalLen="0" DigitLen="0" Height="18" Id="edt_JobStrTime" Left="328" Mask="&#32;&#32;&#32;##:##&#32;" Style="edit_Indis" TabOrder="12" Top="366" Type="STRING" Width="55"></MaskEdit>
+		<MaskEdit BindDataset="ds_Multi" Border="Flat" ClipMode="IncludeSpace" Column="JOB_END_TIME" DecimalLen="0" DigitLen="0" Height="18" Id="edt_JobEndTime" Left="397" Mask="&#32;&#32;&#32;##:##&#32;" Style="edit_Indis" TabOrder="13" Top="366" Type="STRING" Width="55"></MaskEdit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static33" Left="710" Style="table" TabOrder="80" Text="규격" Top="322" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static31" Left="5" Style="table" TabOrder="81" Text="위험작업번호" Top="322" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="DANGER_NUM" Enable="FALSE" Height="18" Id="edt_DangerNum" ImeMode="none" Left="116" Style="edit" TabOrder="7" Top="324" Width="100"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static35" Left="1122" Style="table" TabOrder="82" Top="322" VAlign="Middle" Width="132" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static38" Left="217" Style="table_indis" TabOrder="83" Text="작업시간" Top="364" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static39" Left="453" Style="table" TabOrder="84" Top="364" VAlign="Middle" Width="801" WordWrap="TRUE"></Static>
+		<Button Cursor="HAND" Height="17" Id="btn_Jober" ImageID="search" Left="197" OnClick="btn_Jober_OnClick" TabOrder="26" Text="Button8" Top="388" Width="17"></Button>
+		<Static Border="Flat" Height="22" Id="Static37" Left="270" Style="table" TabOrder="85" Text="명" Top="385" VAlign="Middle" Width="984" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static36" Left="381" Style="static" TabOrder="86" Text="상기와&#32;같이&#32;정압기&#32;분해점검&#32;작업을&#32;시행코져&#32;하오니&#32;재가하여&#32;주시기&#32;바랍니다." Top="727" Width="500"></Static>
+		<Calendar BindDataset="ds_Multi" Border="Flat" Column="CHG_APPRO_REQ_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ChgApproReqYmd" Left="264" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="17" Top="788" WeeksFont="Default,-1" Width="85"></Calendar>
+		<MaskEdit BindDataset="ds_Multi" Border="Flat" ClipMode="IncludeSpace" Column="CHG_APPRO_REQ_STR_TIME" DecimalLen="0" DigitLen="0" Height="18" Id="edt_ChgApproReqStrTime" Left="352" Mask="&#32;&#32;&#32;##:##&#32;" Style="edit" TabOrder="18" Top="788" Type="STRING" Width="55"></MaskEdit>
+		<MaskEdit BindDataset="ds_Multi" Border="Flat" ClipMode="IncludeSpace" Column="CHG_APPRO_REQ_END_TIME" DecimalLen="0" DigitLen="0" Height="18" Id="edt_ChgApproReqEndTime" Left="419" Mask="&#32;&#32;&#32;##:##&#32;" Style="edit" TabOrder="19" Top="788" Type="STRING" Width="55"></MaskEdit>
+		<Static Color="red" Height="13" Id="Static28" Left="365" Style="static" TabOrder="89" Text="※&#32;변경승인사항&#32;:&#32;정압기&#32;분해점검&#32;일정이&#32;변경될시&#32;변경승인(변경&#32;승인&#32;요청은&#32;1회에&#32;한합니다.)" Top="772" Width="532"></Static>
+		<Static Color="red" Height="13" Id="Static40" Left="210" Style="static" TabOrder="90" Text="변경일시&#32;" Top="792" Width="64"></Static>
+		<Static Color="red" Height="13" Id="Static41" Left="478" Style="static" TabOrder="91" Text="변경사유" Top="792" Width="120"></Static>
+		<Static Height="13" Id="Static46" Left="409" Style="static" TabOrder="87" Text="~" Top="792" Width="10"></Static>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="CHG_APPRO_REQ_WHY" Height="18" Id="edt_ChgApproWhy" ImeMode="none" Left="528" Style="edit" TabOrder="20" Top="788" Width="430"></Edit>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="309" LeftMargin="12" Style="blt_search" TabOrder="92" Text="계획구분" Top="40" Width="59"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="VALUE" Height="18" Id="cob_Gubun" Left="373" OnChanged="cob_Gubun_OnChanged" Style="combo" TabOrder="5" Top="40" Width="90"></Combo>
+		<Edit Align="CENTER" AutoSelect="TRUE" BindDataset="ds_Multi" Border="Flat" Column="JOBER_NM" Enable="FALSE" Height="18" Id="edt_ChiefEmpidNm" ImeMode="none" Left="116" Style="edit" TabOrder="14" Top="387" Width="80"></Edit>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="296" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="203" Id="grd_list" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" NoDataText="조회된&#32;내역이&#32;없습니다." OnHeadClick="grd_list_OnHeadClick" Right="1255" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="30" TabStop="true" Top="93" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1250">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="30"/>
+						<col width="88"/>
+						<col width="69"/>
+						<col width="59"/>
+						<col width="70"/>
+						<col width="292"/>
+						<col width="69"/>
+						<col width="70"/>
+						<col width="69"/>
+						<col width="68"/>
+						<col width="112"/>
+						<col width="42"/>
+						<col width="59"/>
+						<col width="63"/>
+						<col width="63"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="NO"/>
+						<cell align="center" col="1" display="text" text="위험작업번호"/>
+						<cell col="2" display="text" text="정압실&#32;번호"/>
+						<cell col="3" display="text" text="정압기No"/>
+						<cell col="4" display="text" text="정압기명"/>
+						<cell col="5" display="text" text="작업위치"/>
+						<cell col="6" display="text" text="기종"/>
+						<cell col="7" display="text" text="전점검일자"/>
+						<cell col="8" display="text" text="계획일자"/>
+						<cell col="9" display="text" text="작업일자"/>
+						<cell col="10" display="text" text="점검구분"/>
+						<cell col="11" display="text" text="구분"/>
+						<cell col="12" display="text" text="결재상태"/>
+						<cell col="13" display="text" text="결재일자"/>
+						<cell col="14" display="text" text="변경결재"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="normal" expandsize="18" expr="rowindex+1" wordwrap="word"/>
+						<cell align="center" col="1" colid="DANGER_NUM" display="text"/>
+						<cell align="center" col="2" colid="FACI_NUM" display="text"/>
+						<cell align="center" col="3" colid="GOV_NUM" display="text"/>
+						<cell align="left" col="4" colid="GOV_ROOM_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="5" colid="LOT_NUM_UNION" display="text" expandsize="18" wordwrap="word"/>
+						<cell align="left" col="6" colid="GOV_MODEL_NM" display="text"/>
+						<cell col="7" colid="BEFORE_JOB_YMD" display="date"/>
+						<cell align="center" col="8" colid="SELF_INSPECT_PLAN_YMD" display="text" expandsize="18" Mask="####-##-##" wordwrap="word"/>
+						<cell align="center" col="9" colid="DSP_JOB_YMD" display="text" Mask="####-##-##"/>
+						<cell align="left" col="10" colid="JOB_GUBUN" combocol="CODE" combodataset="ds_JobFlag" combotext="VALUE" display="text"/>
+						<cell align="center" col="11" colid="LOC" display="text"/>
+						<cell align="center" col="12" colid="DECIDE_PROC_STS" display="text"/>
+						<cell align="center" col="13" colid="DECIDE_YMD" display="text"/>
+						<cell col="14" colid="CHG_DECIDE_YMD" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="GOV_MODEL_NM" Height="18" Id="edt_GovModelNm" ImeMode="none" Left="609" Style="edit" TabOrder="93" Top="324" Width="100"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="STD" Height="18" Id="edt_Std" ImeMode="none" Left="821" Style="edit" TabOrder="94" Top="324" Width="100"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Multi" Border="Flat" Column="GOV_MODEL" Enable="FALSE" Height="18" Id="edt_GovModelNmm" ImeMode="none" Left="609" Style="edit" TabOrder="9" Top="324" Width="100"></Edit>
+		<Edit Align="CENTER" BindDataset="ds_Multi" Border="Flat" Column="STD_NM" Enable="FALSE" Height="18" Id="edt_StdNm" ImeMode="none" Left="821" Style="edit" TabOrder="10" Top="324" Width="100"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="GOV_NUM" Height="18" Id="edt_GovNum" ImeMode="none" Left="328" Style="edit" TabOrder="95" Top="324" Width="169"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="FACI_NUM" Height="18" Id="edt_FaciNum" ImeMode="none" Left="328" Style="edit" TabOrder="96" Top="324" Width="169"></Edit>
+		<Edit Border="Flat" Height="18" Id="edt_FaciNum_GovNum" ImeMode="none" Left="328" Style="edit" TabOrder="78" Top="324" Width="169"></Edit>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="GOV_ROOM_NM" Enable="FALSE" Height="18" Id="edt_GovNm" ImeMode="none" Left="328" Style="edit_Indis" TabOrder="8" Top="324" Width="169"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="SECOND_ADDR" Height="18" Id="edt_SecondAddr" ImeMode="none" Left="880" Style="edit" TabOrder="97" Top="345" Width="100"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="LOT_NUM_UNION" Height="18" Id="edt_LotNumUnion" ImeMode="none" Left="776" Style="edit" TabOrder="98" Top="345" Width="100"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="ZIP_NO2" Height="18" Id="edt_ZipNo2" ImeMode="none" Left="672" Style="edit" TabOrder="99" Top="345" Width="100"></Edit>
+		<Edit BindDataset="ds_Multi_Re" Border="Flat" Column="ZIP_NO1" Height="18" Id="edt_ZipNo1" ImeMode="none" Left="568" Style="edit" TabOrder="100" Top="345" Width="100"></Edit>
+		<Edit BindDataset="ds_Multi" Border="Flat" Column="LOT_NUM_UNION" Enable="FALSE" Height="18" Id="edt_Rocation" ImeMode="none" Left="116" Style="edit" TabOrder="101" Top="345" Width="1135"></Edit>
+		<Static Color="blue" Height="13" Id="Static47" Left="366" Style="static" TabOrder="102" Text="보고일자" Top="747" Width="100"></Static>
+		<Static Color="blue" Height="13" Id="Static48" Left="538" Style="static" TabOrder="103" Text="소속" Top="747" Width="50"></Static>
+		<Calendar BindDataset="ds_Multi" Border="Flat" Column="APPRO_REQ_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_ApproReqYmd" Left="422" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="104" Top="744" WeeksFont="Default,-1" Width="102"></Calendar>
+		<Combo BindDataset="ds_Multi" Border="Flat" Column="BRANCH_CD" Height="18" Id="cob_Branch" Left="567" Style="combo" TabOrder="105" Top="743" Width="100"></Combo>
+		<Static Color="blue" Height="13" Id="Static49" Left="681" Style="static" TabOrder="106" Text="보고자" Top="747" Width="50"></Static>
+		<Edit Align="CENTER" BindDataset="ds_Multi" Border="Flat" Column="APPRO_REQ_NM" Height="18" Id="edt_ApproReqEmpidNm" ImeMode="none" Left="724" Style="edit" TabOrder="107" Top="744" Width="100"></Edit>
+		<Button Cursor="HAND" Height="17" Id="btn_ApproReqEmpid" ImageID="search" Left="825" OnClick="btn_ApproReqEmpid_OnClick" TabOrder="108" Text="Button8" Top="745" Width="17"></Button>
+		<Edit AutoSelect="TRUE" BKColor="white" Border="None" Height="20" Id="Edit1" ImeMode="none" Left="166" MaxLength="10" Style="static" TabOrder="112" Text="(" Top="70" Width="7"></Edit>
+		<Edit Align="CENTER" AutoSelect="TRUE" BKColor="white" Border="None" DisableBKColor="white" Height="20" Id="edt_Count" ImeMode="none" Left="176" MaxLength="10" Number="TRUE" Readonly="TRUE" Style="static" TabOrder="110" Top="70" Width="30"></Edit>
+		<Edit AutoSelect="TRUE" BKColor="white" Border="None" Height="20" Id="Edit3" ImeMode="none" Left="223" MaxLength="10" Style="static" TabOrder="111" Text=")" Top="70" Width="7"></Edit>
+		<Image Align="Left" Height="6" Id="Image2" ImageID="blt" Left="194" LeftMargin="12" Style="blt_search" TabOrder="113" Text="건" Top="77" Width="30"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_Sanction" ImageID="btn_4" Left="1177" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="114" Text="전자결재" Top="301" Width="76"></Button>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static30" Left="922" Style="table" TabOrder="115" Text="위치구분" Top="322" VAlign="Middle" Width="110" WordWrap="TRUE"></Static>
+		<Edit Align="CENTER" BindDataset="ds_Multi" Border="Flat" Column="LOC" Enable="FALSE" Height="18" Id="Edit0" ImeMode="none" Left="1033" Style="edit" TabOrder="116" Top="324" Width="88"></Edit>
+	</Form>
+	<Script><![CDATA[//----------------------------------------------------------------------------------
+// FormID     : D1505010010F.xml
+// Form 설명  : 정압기 분해 점검계획 등록
+// 시스템 명  : 안전공급 (D1)
+// 작성자     : 정대권 
+// 작성일     : 2009-10-05
+// 변경내용   : 
+//----------------------------------------------------------------------------------
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "js::COMMONA10008.js";
+#include "JS::COMMONE20001.js";
+
+//----------------------------------------------------------------------------------
+// 공통 div_ComHead 에서 버튼 이벤트
+// 추가 fn_CommonAddRow
+// 삭제 fn_CommonDeleteRow
+// 저장 fn_CommonSave
+// 조회 fn_CommonSearch
+// 엑셀 fn_CommonExcelExport
+// 인쇄 fn_CommonPrint
+// 닫기 공통에서 처리
+//----------------------------------------------------------------------------------
+function D1505010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();	
+}
+
+function fn_Init()
+{
+	gfn_D1_SetGrid_Sort(grd_list);
+	btn_Appro.Enable = false;					// 변경승인 버튼 비활성화
+	btn_Sanction.Enable = false;				// 결제버튼 비활성화 
+	btn_Jober.Enable = false;					// 작업자 검색 팝업버튼 비활성화 
+
+	gfn_D1_SetComboBox_Comcode("A10405",gfn_setDsObject_Comcode("cob_Gubun"));
+	cob_Gubun.index = 0;
+	
+	gfn_D1_SetComboBox_Comcode1("D10229",gfn_setDsObject_Comcode("cob_JobFlag"));
+	cob_JobFlag.value = '';
+
+	
+	req_ymd_start.Value = substr(today(),0,6)+"01";		// 계획일자 default 이번달 1일부터 오늘까지 
+	req_ymd_end.Value = today();		
+	gfn_SetGrdComboBox_Comcode("grd_list",06,"C30067");  // 기종
+	gfn_SetGrdComboBox_Comcode("grd_list",10,"D10229");  // 점검구분
+	gfn_SetGrdComboBox_Comcode("grd_list",12,"A10411");  // 결재상태 
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd"));			//지사코드
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branch"));				//지사코드
+	cob_BranchCd.Index = 0;
+	
+	if (gfn_GetGlobalValue("G_BRANCH_CD") == "999999") {
+			cob_BranchCd.Enable = true;
+	}else{
+		 cob_BranchCd.Value = gfn_GetGlobalValue("G_BRANCH_CD");
+		 cob_BranchCd.Enable = false;
+	}	
+	
+	cob_BranchCd_OnChanged();
+	
+}
+
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex) 
+{
+    fn_SetComboBox_Comcode("1", cob_BranchCd.value, fn_setDsObject_Comcode("1", "cob_ZipNo1"));
+						
+	cob_ZipNo1.Value="";
+}
+
+//----------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//----------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	ds_Search.ClearData();
+    ds_Multi.ClearData();
+
+	ds_Search.AddRow();
+	
+    ds_Search.SetColumn(0,"BRANCH_CD"  , cob_BranchCd.Value );  // 지사
+    ds_Search.SetColumn(0,"ZIP_NO1"    , cob_ZipNo1.Value   );  // 구청
+    ds_Search.SetColumn(0,"STR_DATE"   , req_ymd_start.Value  );  // 시작일자
+    ds_Search.SetColumn(0,"END_DATE"   , req_ymd_end.Value  );  // 종료일자
+	ds_Search.SetColumn(0,"JOB_GUBUN"  , cob_JobFlag.Value    );  // 작업구분
+    	    
+    var str_STATUS = cob_Gubun.Value; // 진행상태	
+
+	var strSvcID = "searchList";
+	var strPart  = "D10";
+	var strURL  = "handle.do?ServiceName=D1505010010F-service";
+	var strInDatasets   = "ds_Search=ds_Search";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument     = "searchList_"+str_STATUS+"=1";	
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+		
+	
+	edt_Count.Text = ds_Multi.GetRowCount();
+	
+}
+
+/*===============================================================================
+ * 기      능   :  공통 Excel
+===============================================================================*/
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    SearchCondition = SearchCondition + "지사코드 :" + RPad(cob_BranchCd.Text," ",20);
+    
+	gfn_ExportExcel("정압기 분해 점검계획 조회", 5, SearchCondition, "grd_list"); 	    
+    //gfn_ExportExcel("정압기 분해 점검계획 조회", 5, SearchCondition, "grd_ExcelList"); 	
+}
+//===============================================================================
+//	공통의 추가버튼을 눌렀을때
+//===============================================================================
+function fn_CommonAddRow()
+{	
+}
+//------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Save()
+//   설명:  정압기 분해 점검계획 등록 및 수정
+// arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+//공통버튼의 저장 버튼을 눌렀을때 
+function fn_CommonSave()
+{
+	if (ds_Multi.GetRowType(ds_Multi.row) == 'normal')
+	{	
+		return;
+	}
+
+	ds_Multi.UpdateControl = false ;
+
+	ds_Multi.SetColumn(ds_Multi.row,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_Multi.SetColumn(ds_Multi.row,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));	
+
+	if (length(ds_Multi.GetColumn(ds_Multi.row,"DANGER_NUM")) == 0)
+	{
+		if(ds_Multi.GetColumn(ds_Multi.row,"JOB_YMD") == "" || ds_Multi.GetColumn(ds_Multi.row,"JOB_YMD") == NULL)
+		{
+			alert(gfn_GetMessage("M000015","%AAA%","작업일자는 "));
+			return;
+  	    }	
+		
+		if (fn_job_time_chk() == false)
+		{
+			return;
+		}	
+		
+		if(ds_Multi.GetColumn(ds_Multi.row,"APPRO_REQ_YMD") == "" || ds_Multi.GetColumn(ds_Multi.row,"APPRO_REQ_YMD") == null)
+		{
+			alert(gfn_GetMessage("M000015","%AAA%","보고일자는 "));
+			return;
+		}
+	
+		ds_Multi.SetRowType(ds_Multi.row, "insert");
+		ds_Multi.SetColumn(ds_Multi.row,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_Multi.SetColumn(ds_Multi.row,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+	}
+	else
+	{
+		ds_Multi.SetRowType(ds_Multi.row, "update");
+
+		if(ds_Multi.GetColumn(ds_Multi.row,"DANGER_JOB_STS_FLAG") == "01" && ds_Multi.GetColumn(ds_Multi.row,"DECIDE_PROC_STS") == '0')
+		{
+			if(ds_Multi.GetColumn(ds_Multi.row,"CHG_APPRO_REQ_YMD") != null && ds_Multi.GetColumn(ds_Multi.row,"CHG_APPRO_REQ_WHY") != null)
+			{				
+				ds_Multi.SetColumn(ds_Multi.row,"DANGER_JOB_STS_FLAG" , '03');	
+			}	
+		}	
+	}
+		
+	var strSvcID         = "save";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1505010010F-service";					
+	var strInDatasets    = "ds_Multi=ds_Multi:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save=1";
+					
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+				  
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	else
+	{
+		alert(gfn_GetMessage("M000009","%AAA%","정상적으로 저장을"));
+	}	
+	
+	fn_CommonSearch();
+}
+
+/*===============================================================================
+ * 함수명: fn_CommonDeleteRow()
+   설명: 탭별 삭제 하는 함수
+   return 내용: 없음
+===============================================================================*/ 
+function fn_CommonDeleteRow()
+{
+	if (ds_Multi.RowCount() == 0)
+	{	
+		return;
+	}
+
+	if(ds_Multi.GetColumn(ds_Multi.row,"DANGER_JOB_STS_FLAG") == "03")	// 등록 상태 	
+	{
+		alert("변경 신청건으로 삭제가 불가능합니다..");
+		return;
+	}	
+	else if(ds_Multi.GetColumn(ds_Multi.row,"DANGER_JOB_STS_FLAG") == "01")  // 등록 상태 	
+	{
+		var  decide_proc_sts = ds_Multi.GetColumn(ds_Multi.row,"DECIDE_PROC_STS");
+		if (decide_proc_sts == '0' || decide_proc_sts == '1' || decide_proc_sts == '2') //결재중
+		{
+			alert("결재중/완료건으로 삭제 할 수 없습니다..");
+			return;
+		}
+	}
+	else
+	{
+		return;
+	}		
+		
+	if (confirm("삭제하시겠습니까?"))
+    {	
+		ds_Multi.UpdateControl = false ;
+
+		ds_Multi.SetRowType(ds_Multi.row, "delete");	
+		
+		var strSvcID         = "delete";
+		var strPart          = "D10";	
+		var strURL           = "handle.do?ServiceName=D1505010010F-service";					
+		var strInDatasets    = "ds_Multi=ds_Multi:u";
+		var strOutDatasets   = "";		
+		var strArgument      = "delete=1";
+						
+		gfn_SyncCall(
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+					  );
+					  
+		if(ErrorCode < 0)
+		{    
+			return;
+		}
+		else
+		{
+			alert("정상적으로 삭제되었습니다..");
+		}	
+		
+		fn_CommonSearch();
+	}	
+}
+
+//--------------------------------------------------------------------------------------------
+//   검토 승인 후 전자 결제
+//--------------------------------------------------------------------------------------------
+function Button0_OnClick(obj)
+{
+	var dangernum = ds_Multi.GetColumn(ds_Multi.row,"DANGER_NUM");
+	var dangerjobflag = ds_Multi.GetColumn(ds_Multi.row,"DANGER_JOB_FLAG");
+//	var dangerjobstsflag = ds_Multi.GetColumn(ds_Multi.row,"DANGER_JOB_STS_FLAG");
+//	var facinum = ds_Multi.GetColumn(ds_Multi.row,"FACI_NUM");
+		
+	gfv_callGWInfo("fmD19","d10","",2,dangernum+','+dangerjobflag);
+}
+
+//-------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 인쇄
+//-------------------------------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+function btn_Appro_OnClick(obj)										//변경승인요청 
+{
+	ds_Multi.UpdateControl = false ;
+	
+	if(ds_Multi.GetColumn(ds_Multi.row,"DANGER_JOB_STS_FLAG") != "03")
+	{
+		alert("일정 변경사항을 등록 저장 후 결재 요청바랍니다..");
+		return;
+	}		
+
+	if(ds_Multi.GetColumn(ds_Multi.row,"CHG_APPRO_REQ_YMD") == null || ds_Multi.GetColumn(ds_Multi.row,"CHG_APPRO_REQ_WHY") == null)
+	{				
+		alert("변경일시와 변경사유는 필수 등록사항입니다..");
+		return;
+	}	
+	
+	if(ds_Multi.GetColumn(ds_Multi.row,"CHG_YN") == 0)
+	{
+		ds_Multi.SetRowType(ds_Multi.row, "insert");
+		ds_Multi.SetColumn(ds_Multi.row,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+		ds_Multi.SetColumn(ds_Multi.row,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+	}
+	else
+	{
+		ds_Multi.SetRowType(ds_Multi.row, "update");
+	}
+	ds_Multi.SetColumn(ds_Multi.row,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_Multi.SetColumn(ds_Multi.row,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));	
+		
+	var strSvcID         = "save_chg";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1505010010F-service";					
+	var strInDatasets    = "ds_Multi=ds_Multi:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_chg=1";
+					
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+				  
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	else
+	{
+		ds_Multi.SetColumn(ds_Multi.row,"CHG_YN",1);
+		var dangernum = ds_Multi.GetColumn(ds_Multi.row,"DANGER_NUM");
+		var dangerjobflag = ds_Multi.GetColumn(ds_Multi.row,"DANGER_JOB_FLAG");
+			
+		gfv_callGWInfo("fmD36","d10","",2,dangernum+','+dangerjobflag);	
+	}	
+}
+
+
+function ds_Multi_OnRowPosChanged(obj,nOldRow,nRow)
+{
+	if(ds_Multi.GetColumn(ds_Multi.row,"DANGER_JOB_STS_FLAG") == "03")						// 변경요청 상태
+	{
+		var  chg_decide_proc_sts = ds_Multi.GetColumn(ds_Multi.row,"CHG_DECIDE_PROC_STS");
+		btn_Sanction.Enable = false;
+		cal_JobYmd.Enable = false;
+		edt_JobStrTime.Enable = false;
+		edt_JobEndTime.Enable = false;
+		btn_Jober.Enable = false;
+		edt_JoberCnt.Enable = false;
+		edt_Rmk.Enable = false;
+		cal_ApproReqYmd.Enable = false;
+		cob_Branch.Enable = false;
+		edt_ApproReqEmpidNm.Enable = false;
+		btn_ApproReqEmpid.Enable = false;	
+
+		if (length(chg_decide_proc_sts) == 0 || chg_decide_proc_sts == '4' || chg_decide_proc_sts == '5') //결재전이거나 요청취소, 반려인경우
+		{
+			//변경 결재 가능
+			cal_ChgApproReqYmd.Enable = true;	
+			edt_ChgApproReqStrTime.Enable = true;	
+			edt_ChgApproReqEndTime.Enable = true;	
+			edt_ChgApproWhy.Enable = true;	
+			btn_Appro.enable = true;			
+		}
+		else
+		{
+			//변경 결재 불가능
+			cal_ChgApproReqYmd.Enable = false;	
+			edt_ChgApproReqStrTime.Enable = false;	
+			edt_ChgApproReqEndTime.Enable = false;	
+			edt_ChgApproWhy.Enable = false;	
+			btn_Appro.enable = false;			
+		}	
+	}	
+	else if(ds_Multi.GetColumn(ds_Multi.row,"DANGER_JOB_STS_FLAG") == "01")						// 등록 상태 	
+	{
+		var  decide_proc_sts = ds_Multi.GetColumn(ds_Multi.row,"DECIDE_PROC_STS");
+		if (length(decide_proc_sts) == 0 || decide_proc_sts == '4' || decide_proc_sts == '5') //결재전이거나 요청취소, 반려인경우
+		{
+			btn_Sanction.Enable = true;		
+			cal_JobYmd.Enable = true;
+			edt_JobStrTime.Enable = true;
+			edt_JobEndTime.Enable = true;
+			btn_Jober.Enable = true;
+			edt_JoberCnt.Enable = true;
+			edt_Rmk.Enable = true;
+			cal_ApproReqYmd.Enable = true;
+			cob_Branch.Enable = true;
+			edt_ApproReqEmpidNm.Enable = true;
+			btn_ApproReqEmpid.Enable = true;	
+			//변경 결재 불가능
+			cal_ChgApproReqYmd.Enable = false;	
+			edt_ChgApproReqStrTime.Enable = false;	
+			edt_ChgApproReqEndTime.Enable = false;	
+			edt_ChgApproWhy.Enable = false;	
+			btn_Appro.enable = false;
+		}
+		else
+		{
+			btn_Sanction.Enable = false;	
+			cal_JobYmd.Enable = false;
+			edt_JobStrTime.Enable = false;
+			edt_JobEndTime.Enable = false;
+			btn_Jober.Enable = false;
+			edt_JoberCnt.Enable = false;
+			edt_Rmk.Enable = false;
+			cal_ApproReqYmd.Enable = false;
+			cob_Branch.Enable = false;
+			edt_ApproReqEmpidNm.Enable = false;
+			btn_ApproReqEmpid.Enable = false;
+			//변경 결재 가능
+			cal_ChgApproReqYmd.Enable = true;	
+			edt_ChgApproReqStrTime.Enable = true;	
+			edt_ChgApproReqEndTime.Enable = true;	
+			edt_ChgApproWhy.Enable = true;	
+			btn_Appro.Enable = true;
+		}	
+	}
+	else
+	{
+			btn_Sanction.Enable = false;		
+			cal_JobYmd.Enable = true;
+			edt_JobStrTime.Enable = true;
+			edt_JobEndTime.Enable = true;
+			btn_Jober.Enable = true;
+			edt_JoberCnt.Enable = true;
+			edt_Rmk.Enable = true;
+			cal_ApproReqYmd.Enable = true;
+			cob_Branch.Enable = true;
+			edt_ApproReqEmpidNm.Enable = true;
+			btn_ApproReqEmpid.Enable = true;	
+			//변경 결재 불가능
+			cal_ChgApproReqYmd.Enable = false;	
+			edt_ChgApproReqStrTime.Enable = false;	
+			edt_ChgApproReqEndTime.Enable = false;	
+			edt_ChgApproWhy.Enable = false;	
+			btn_Appro.enable = false;	
+			
+			ds_Multi.SetColumn(ds_Multi.row,"DANGER_JOB_FLAG"    ,"40");
+			ds_Multi.SetColumn(ds_Multi.row,"JOB_YMD" ,ds_Multi.GetColumn(ds_Multi.row,"SELF_INSPECT_PLAN_YMD"));			
+			
+			ds_Multi.SetColumn(ds_Multi.row,"APPRO_REQ_YMD" , today());			
+			ds_Multi.SetColumn(ds_Multi.row,"DANGER_JOB_STS_FLAG" , '01');			
+			ds_Multi.SetColumn(ds_Multi.row,"APPRO_REQ_EMPID" , gfn_GetGlobalValue("G_USER_NO"   ));
+			ds_Multi.SetColumn(ds_Multi.row,"APPRO_REQ_NM" , gfn_GetGlobalValue("G_NAME"   ));			
+	}
+}
+function btn_Jober_OnClick(obj)
+{
+	var retValue = gfn_E2_SearchOutEmplDialog(); 
+	if(retValue == "" || retValue == null || retValue == 0){
+		return;
+	}
+	ds_Multi.SetColumn(ds_Multi.row,"JOBER_EMPID", retValue[0]);
+	ds_Multi.SetColumn(ds_Multi.row,"JOBER_NM", retValue[1]);		
+}
+
+function btn_ApproReqEmpid_OnClick(obj)								//승인 요청자 사번 가져오기
+{
+	var retValue = gfn_E2_SearchOutEmplDialog(); 
+	if(retValue == "" || retValue == null || retValue == 0){
+		return;
+	}
+	ds_Multi.SetColumn(ds_Multi.row,"APPRO_REQ_EMPID", retValue[0]);
+	ds_Multi.SetColumn(ds_Multi.row,"APPRO_REQ_NM", retValue[1]);		
+}
+
+
+function cob_Gubun_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	if(cob_Gubun.Value == "10"){
+		Image.Visible = true;
+		cob_JobFlag.Visible = true;
+		Image4.Visible = true;
+		req_ymd_start.Visible = true;
+		Static10.Visible = true;
+		req_ymd_end.Visible = true;
+	}else{
+		Image.Visible = false;
+		cob_JobFlag.Visible = false;	
+		Image4.Visible = false;
+		req_ymd_start.Visible = false;
+		Static10.Visible = false;
+		req_ymd_end.Visible = false;		
+	}
+}
+
+function fn_job_time_chk()
+{
+	if(edt_JobStrTime.Value == '' || edt_JobStrTime.Value == null)
+	{ 
+		alert("작업 시작시간을 입력하세요...");
+		edt_JobStrTime.SetFocus();
+		return false;
+	}				
+	
+	if(substr(edt_JobStrTime.Value,0,2) > "24")
+	{
+		alert("25시 이상 입력할 수 없습니다. ");
+		edt_JobStrTime.SetFocus();
+		return false;
+	}
+	
+	if(substr(edt_JobStrTime.Value,2,2) > "59")
+	{
+		alert("60분 이상 입력할 수 없습니다. ");
+		edt_JobStrTime.SetFocus();
+		return false;
+	}		
+	
+	if(edt_JobEndTime.value != '')
+	{
+		if(edt_JobStrTime.Value > edt_JobEndTime.Value)
+		{
+			alert("작업요청 종료시간보다 클 수 없습니다. ");
+			edt_JobStrTime.SetFocus();
+			return false;
+		}
+	}
+					
+	if(edt_JobEndTime.Value == '' || edt_JobEndTime.Value == null)
+	{
+		alert("작업 종료시간을 입력하세요...");
+		edt_JobEndTime.SetFocus();
+		return false;
+	}
+	
+	if(substr(edt_JobEndTime.Value,0,2) > "24")
+	{
+		alert("25시 이상 입력할 수 없습니다. ");
+		edt_JobEndTime.SetFocus();
+		return false;
+	}
+	if(substr(edt_JobEndTime.Value,2,2) > "59")
+	{
+		alert("60분 이상 입력할 수 없습니다. ");
+		edt_JobEndTime.SetFocus();
+		return false;
+	}
+	
+	if(edt_JobStrTime.value != '')
+	{
+		if(edt_JobStrTime.Value > edt_JobEndTime.Value)
+		{
+			alert("작업요청 시작시간보다 작을 수 없습니다. ");
+			edt_JobEndTime.SetFocus();
+			return false;
+		}
+	}
+	
+	return true;
+}
+
+]]></Script>
+</Window>

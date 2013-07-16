@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="577" Id="D1503010010F" Left="8" OnLoadCompleted="D1503010010F_OnLoadCompleted" PidAttrib="7" Title="위험작업&#32;승인_투자외부_D1503010010F" Top="8" Ver="1.0" Width="1005" WorkArea="false">
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static166" Left="110" Style="table" TabOrder="233" Top="1169" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static167" Left="110" Style="table" TabOrder="234" Top="1148" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static169" Left="110" Style="table" TabOrder="236" Top="1106" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static168" Left="110" Style="table" TabOrder="235" Top="1127" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static142" Left="110" Style="table" TabOrder="227" Top="1085" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static147" Left="110" Style="table" TabOrder="225" Top="1064" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static148" Left="110" Style="table" TabOrder="223" Top="1043" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static149" Left="110" Style="table" TabOrder="221" Top="1022" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static143" Left="110" Style="table" TabOrder="219" Top="1001" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static144" Left="110" Style="table" TabOrder="217" Top="980" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static61" Left="105" Style="table" TabOrder="205" Top="602" VAlign="Middle" Width="880" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static56" Left="110" Style="table" TabOrder="132" Top="875" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static57" Left="110" Style="table" TabOrder="133" Top="854" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static23" Left="110" Style="table" TabOrder="86" Top="581" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static24" Left="110" Style="table" TabOrder="87" Top="560" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="985" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="30" Type="RoundRect" Width="980"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="980" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="6" Top="35" Type="Rectangle" Width="970"></Shape>
+		<Image Align="Left" Height="6" Id="Image5" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="1" Text="지사" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image3" ImageID="blt" Left="179" LeftMargin="12" Style="blt_search_1" TabOrder="2" Text="구" Top="46" Width="59"></Image>
+		<Image Align="Left" Height="6" Id="Image4" ImageID="blt" Left="690" LeftMargin="12" Style="blt_search_1" TabOrder="3" Text="요청일자" Top="46" Width="59"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="4" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="980">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="#6cbae1" Bottom="99" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="985" TabOrder="8" Top="96" Type="Rectangle" Width="980"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_suppress" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="302" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="203" Id="Grid0" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="985" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="7" TabStop="true" Top="99" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="980">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="50"/>
+						<col width="100"/>
+						<col width="120"/>
+						<col width="120"/>
+						<col width="150"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="normal" text="NO"/>
+						<cell bkcolor="user11" col="1" display="text" text="위험작업코드"/>
+						<cell bkcolor="user11" col="2" display="text" text="위험작업명"/>
+						<cell bkcolor="user11" col="3" display="text" text="작업위치"/>
+						<cell bkcolor="user11" col="4" display="text" text="작업요청일"/>
+						<cell bkcolor="user11" col="5" display="text" text="작업구분"/>
+					</head>
+					<body>
+						<cell col="0" display="normal" expandsize="18" wordwrap="word"/>
+						<cell col="1" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" display="text"/>
+						<cell col="3" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="4" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="5" display="text" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Combo Border="Flat" Height="18" Id="Combo0" Left="53" Style="combo_indis" TabOrder="9" Top="39" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo1" Left="206" Style="combo_indis" TabOrder="10" Top="39" Width="114"></Combo>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar1" Left="755" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="11" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Height="13" Id="Static10" Left="844" Style="static" TabOrder="12" Text="~" Top="43" Width="10"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar2" Left="854" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="13" Top="40" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="9" Id="Image9" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="14" Text="위험작업조회" Top="75" Width="127"></Image>
+		<Image Align="Left" Height="9" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="15" Text="위험작업승인" Top="308" Width="157"></Image>
+		<Image Align="Left" Height="6" Id="Image8" ImageID="blt" Left="329" LeftMargin="12" Style="blt_search_1" TabOrder="16" Text="시공사" Top="46" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="Combo8" Left="381" Style="combo_indis" TabOrder="17" Top="39" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo9" Left="567" Style="combo_indis" TabOrder="19" Top="39" Width="114"></Combo>
+		<Image Align="Left" Height="6" Id="Image10" ImageID="blt" Left="504" LeftMargin="12" Style="blt_search_1" TabOrder="18" Text="작업구분" Top="46" Width="59"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button196" ImageID="btn_2_San" Left="935" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="21" Text="결재" Top="307" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="21" Id="Button14" ImageID="btn_appro" Left="746" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="20" Text="승인" Top="307" Width="50"></Button>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static18" Left="110" Style="table" TabOrder="23" Top="371" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static21" Left="5" Style="table" TabOrder="22" Text="작업요청일" Top="371" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="110" Style="table" TabOrder="25" Top="329" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="5" Style="table" TabOrder="24" Text="작업명" Top="329" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static2" Left="110" Style="table" TabOrder="27" Top="350" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static3" Left="5" Style="table" TabOrder="26" Text="작업위치" Top="350" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit1" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="28" Top="331" Width="405"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit4" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="29" Top="352" Width="405"></Edit>
+		<Calendar Border="Flat" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar7" Left="133" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="30" Top="373" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Combo Border="Flat" Enable="FALSE" Height="18" Id="Combo10" Left="221" Style="combo_indis" TabOrder="31" Top="372" Width="114"></Combo>
+		<Static Height="13" Id="Static7" Left="339" Style="static" TabOrder="32" Text="~" Top="377" Width="10"></Static>
+		<Combo Border="Flat" Enable="FALSE" Height="18" Id="Combo11" Left="351" Style="combo_indis" TabOrder="33" Top="372" Width="114"></Combo>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static4" Left="110" Style="table" TabOrder="34" Top="413" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static6" Left="110" Style="table" TabOrder="35" Top="392" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static8" Left="110" Style="table" TabOrder="36" Top="455" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static12" Left="110" Style="table" TabOrder="38" Top="434" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="85" Id="Static36" Left="5" Style="table" TabOrder="37" Text="작업내용" Top="392" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static37" Left="665" Style="table" TabOrder="39" Text="관경" Top="392" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static13" Left="129" Style="table" TabOrder="40" Text="압력구분" Top="455" VAlign="Middle" Width="250" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static72" Left="789" Style="table" TabOrder="41" Top="413" VAlign="Middle" Width="196" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static74" Left="789" Style="table" TabOrder="42" Top="434" VAlign="Middle" Width="196" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static75" Left="789" Style="table" TabOrder="43" Top="455" VAlign="Middle" Width="196" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static16" Left="665" Style="table" TabOrder="44" Text="승인구분" Top="329" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Combo Border="Flat" Height="18" Id="Combo2" Left="792" Style="combo_indis" TabOrder="45" Top="330" Width="105"></Combo>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static9" Left="129" Style="table" TabOrder="46" Text="작업방법" Top="434" VAlign="Middle" Width="250" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static11" Left="129" Style="table" TabOrder="47" Text="신규시설물" Top="413" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static14" Left="253" Style="table" TabOrder="48" Text="재질" Top="413" VAlign="Middle" Width="126" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static17" Left="253" Style="table" TabOrder="50" Text="재질" Top="392" VAlign="Middle" Width="126" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static19" Left="129" Style="table" TabOrder="49" Text="기존시설물" Top="392" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit0" ImeMode="none" Left="382" Style="edit_Indis" TabOrder="51" Top="394" Width="280"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit2" ImeMode="none" Left="382" Style="edit_Indis" TabOrder="52" Top="415" Width="280"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit3" ImeMode="none" Left="382" Style="edit_Indis" TabOrder="53" Top="436" Width="280"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit5" ImeMode="none" Left="382" Style="edit_Indis" TabOrder="54" Top="457" Width="280"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static20" Left="665" Style="table" TabOrder="55" Text="관경" Top="413" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static22" Left="665" Style="table" TabOrder="56" Text="작업개소" Top="434" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit6" ImeMode="none" Left="793" Style="edit_Indis" TabOrder="57" Top="394" Width="188"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit7" ImeMode="none" Left="793" Style="edit_Indis" TabOrder="58" Top="415" Width="188"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit8" ImeMode="none" Left="793" Style="edit_Indis" TabOrder="59" Top="436" Width="188"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static25" Left="110" Style="table" TabOrder="60" Top="497" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static27" Left="110" Style="table" TabOrder="61" Top="476" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static29" Left="110" Style="table" TabOrder="62" Top="539" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static34" Left="110" Style="table" TabOrder="64" Top="518" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="127" Id="Static5" Left="5" Style="table" TabOrder="63" Text="작업계획" Top="476" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static15" Left="377" Style="table" TabOrder="65" Text="작업내용" Top="476" VAlign="Middle" Width="413" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static42" Left="129" Style="table" TabOrder="66" Text="시간" Top="476" VAlign="Middle" Width="250" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static26" Left="789" Style="table" TabOrder="67" Text="비고" Top="476" VAlign="Middle" Width="196" WordWrap="TRUE"></Static>
+		<Combo Border="Flat" Height="18" Id="Combo3" Left="132" Style="combo_indis" TabOrder="68" Top="498" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo4" Left="262" Style="combo_indis" TabOrder="69" Top="498" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo19" Left="132" Style="combo_indis" TabOrder="70" Top="519" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo20" Left="262" Style="combo_indis" TabOrder="71" Top="519" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo21" Left="132" Style="combo_indis" TabOrder="72" Top="540" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo22" Left="262" Style="combo_indis" TabOrder="73" Top="540" Width="114"></Combo>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static38" Left="129" Style="table" TabOrder="74" Top="497" VAlign="Middle" Width="250" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static39" Left="129" Style="table" TabOrder="75" Top="518" VAlign="Middle" Width="250" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static41" Left="129" Style="table" TabOrder="76" Top="539" VAlign="Middle" Width="250" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static28" Left="250" Style="static" TabOrder="77" Text="~" Top="503" Width="10"></Static>
+		<Static Height="13" Id="Static40" Left="250" Style="static" TabOrder="78" Text="~" Top="524" Width="10"></Static>
+		<Static Height="13" Id="Static43" Left="250" Style="static" TabOrder="79" Text="~" Top="545" Width="10"></Static>
+		<Static Height="13" Id="Static48" Left="385" Style="static" TabOrder="80" Text="현장안전교육실시" Top="502" Width="255"></Static>
+		<Static Height="13" Id="Static49" Left="385" Style="static" TabOrder="81" Text="굴착완료(기존관,신설관,노출)" Top="523" Width="255"></Static>
+		<Static Height="13" Id="Static50" Left="385" Style="static" TabOrder="82" Text="연결작업&#32;및&#32;비파괴촬영판독" Top="544" Width="255"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static62" Left="789" Style="table" TabOrder="83" Top="497" VAlign="Middle" Width="196" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static63" Left="789" Style="table" TabOrder="84" Top="518" VAlign="Middle" Width="196" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static64" Left="789" Style="table" TabOrder="85" Top="539" VAlign="Middle" Width="196" WordWrap="TRUE"></Static>
+		<Combo Border="Flat" Height="18" Id="Combo5" Left="132" Style="combo_indis" TabOrder="88" Top="561" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo6" Left="262" Style="combo_indis" TabOrder="89" Top="561" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo7" Left="132" Style="combo_indis" TabOrder="90" Top="582" Width="114"></Combo>
+		<Combo Border="Flat" Height="18" Id="Combo12" Left="262" Style="combo_indis" TabOrder="91" Top="582" Width="114"></Combo>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static30" Left="129" Style="table" TabOrder="92" Top="560" VAlign="Middle" Width="250" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static31" Left="129" Style="table" TabOrder="93" Top="581" VAlign="Middle" Width="250" WordWrap="TRUE"></Static>
+		<Static Height="13" Id="Static32" Left="250" Style="static" TabOrder="94" Text="~" Top="566" Width="10"></Static>
+		<Static Height="13" Id="Static33" Left="250" Style="static" TabOrder="95" Text="~" Top="587" Width="10"></Static>
+		<Static Height="13" Id="Static35" Left="385" Style="static" TabOrder="96" Text="주변정리/되메우기" Top="565" Width="255"></Static>
+		<Static Height="13" Id="Static44" Left="385" Style="static" TabOrder="97" Text="가스공급&#32;재개" Top="586" Width="255"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static45" Left="789" Style="table" TabOrder="98" Top="560" VAlign="Middle" Width="196" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static46" Left="789" Style="table" TabOrder="99" Top="581" VAlign="Middle" Width="196" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static84" Left="110" Style="table" TabOrder="105" Top="833" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static85" Left="110" Style="table" TabOrder="106" Top="812" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static86" Left="110" Style="table" TabOrder="100" Top="749" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static87" Left="110" Style="table" TabOrder="101" Top="728" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static88" Left="110" Style="table" TabOrder="102" Top="791" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static89" Left="110" Style="table" TabOrder="104" Top="770" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="169" Id="Static90" Left="5" Style="table" TabOrder="103" Text="작업수행&#32;및&#13;&#10;비상연락망" Top="728" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="127" Id="Static91" Left="129" Style="table" TabOrder="107" Text="시공회사" Top="728" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static94" Left="665" Style="table" TabOrder="108" Text="전화번호" Top="728" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static95" Left="665" Style="table" TabOrder="109" Text="전화번호" Top="749" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static96" Left="665" Style="table" TabOrder="110" Text="전화번호" Top="770" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit9" ImeMode="none" Left="460" Style="edit_Indis" TabOrder="111" Top="730" Width="202"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit10" ImeMode="none" Left="460" Style="edit_Indis" TabOrder="112" Top="751" Width="202"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit11" ImeMode="none" Left="460" Style="edit_Indis" TabOrder="113" Top="772" Width="202"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit12" ImeMode="none" Left="833" Style="edit_Indis" TabOrder="114" Top="730" Width="148"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit13" ImeMode="none" Left="833" Style="edit_Indis" TabOrder="115" Top="751" Width="148"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit14" ImeMode="none" Left="833" Style="edit_Indis" TabOrder="116" Top="772" Width="148"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static99" Left="293" Style="table" TabOrder="117" Text="배관공" Top="812" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static101" Left="293" Style="table" TabOrder="118" Text="용접공" Top="833" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="43" Id="Static102" Left="730" Style="table" TabOrder="119" Text="교통&#13;&#10;유도원" Top="812" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static103" Left="854" Style="table" TabOrder="120" Top="812" VAlign="Middle" Width="131" WordWrap="TRUE"></Static>
+		<Combo Border="Flat" Height="18" Id="Combo32" Left="857" Style="combo_indis" TabOrder="121" Top="823" Width="125"></Combo>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static47" Left="293" Style="table" TabOrder="122" Text="시공회사" Top="728" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static51" Left="293" Style="table" TabOrder="123" Text="시공관리자" Top="749" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static52" Left="293" Style="table" TabOrder="124" Text="현장소장" Top="770" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static53" Left="293" Style="table" TabOrder="125" Text="소요인원" Top="791" VAlign="Middle" Width="692" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static54" Left="555" Style="table" TabOrder="126" Text="융착공" Top="812" VAlign="Middle" Width="75" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static55" Left="555" Style="table" TabOrder="127" Text="조공" Top="833" VAlign="Middle" Width="75" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit15" ImeMode="none" Left="460" Style="edit_Indis" TabOrder="128" Top="814" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit16" ImeMode="none" Left="460" Style="edit_Indis" TabOrder="129" Top="835" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit17" ImeMode="none" Left="633" Style="edit_Indis" TabOrder="131" Top="835" Width="94"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit18" ImeMode="none" Left="633" Style="edit_Indis" TabOrder="130" Top="814" Width="94"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static58" Left="293" Style="table" TabOrder="134" Text="공시감독" Top="854" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static59" Left="293" Style="table" TabOrder="135" Text="배관우영조" Top="875" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static60" Left="730" Style="table" TabOrder="136" Text="전화번호" Top="854" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit19" ImeMode="none" Left="460" Style="edit_Indis" TabOrder="137" Top="856" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit20" ImeMode="none" Left="460" Style="edit_Indis" TabOrder="138" Top="877" Width="92"></Edit>
+		<Static Align="Right" Border="Flat" Height="43" Id="Static67" Left="129" Style="table" TabOrder="139" Text="우리사" Top="854" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static65" Left="730" Style="table" TabOrder="140" Text="전화번호" Top="875" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit21" ImeMode="none" Left="858" Style="edit_Indis" TabOrder="141" Top="856" Width="123"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit22" ImeMode="none" Left="858" Style="edit_Indis" TabOrder="142" Top="877" Width="123"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static66" Left="110" Style="table" TabOrder="146" Top="707" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static68" Left="110" Style="table" TabOrder="147" Top="686" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static69" Left="105" Style="table" TabOrder="143" Top="623" VAlign="Middle" Width="880" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static70" Left="110" Style="table" TabOrder="144" Top="665" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static71" Left="110" Style="table" TabOrder="145" Top="644" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="127" Id="Static73" Left="5" Style="table" TabOrder="148" Text="안전장비" Top="602" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static76" Left="129" Style="table" TabOrder="149" Text="장비명" Top="623" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static77" Left="248" Style="table" TabOrder="150" Text="수량" Top="623" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static92" Left="248" Style="table" TabOrder="151" Top="644" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static93" Left="248" Style="table" TabOrder="152" Top="665" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static97" Left="248" Style="table" TabOrder="153" Top="686" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static98" Left="248" Style="table" TabOrder="154" Top="707" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static100" Left="129" Style="table" TabOrder="155" Text="소화기" Top="644" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static104" Left="129" Style="table" TabOrder="156" Text="절단기" Top="665" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static105" Left="129" Style="table" TabOrder="157" Text="조명장비" Top="686" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static106" Left="129" Style="table" TabOrder="158" Text="가스검지기" Top="707" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static115" Left="466" Style="table" TabOrder="161" Top="644" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static116" Left="466" Style="table" TabOrder="162" Top="665" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static117" Left="466" Style="table" TabOrder="163" Top="686" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static118" Left="466" Style="table" TabOrder="164" Top="707" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static119" Left="347" Style="table" TabOrder="165" Text="산소농도측정기" Top="644" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static120" Left="347" Style="table" TabOrder="166" Text="질소" Top="665" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static121" Left="347" Style="table" TabOrder="167" Text="휀스" Top="686" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static122" Left="347" Style="table" TabOrder="168" Text="유도표시" Top="707" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static125" Left="347" Style="table" TabOrder="159" Text="장비명" Top="623" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static126" Left="466" Style="table" TabOrder="160" Text="수량" Top="623" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static78" Left="564" Style="table" TabOrder="169" Text="장비명" Top="623" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static79" Left="683" Style="table" TabOrder="170" Text="수량" Top="623" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static80" Left="683" Style="table" TabOrder="171" Top="644" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static81" Left="683" Style="table" TabOrder="172" Top="665" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static82" Left="683" Style="table" TabOrder="173" Top="686" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static83" Left="683" Style="table" TabOrder="174" Top="707" VAlign="Middle" Width="100" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static107" Left="564" Style="table" TabOrder="175" Text="가스검지기" Top="644" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static108" Left="564" Style="table" TabOrder="176" Text="산소농도측정기" Top="665" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static109" Left="564" Style="table" TabOrder="177" Text="소화기" Top="686" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static110" Left="564" Style="table" TabOrder="178" Text="국소배기장치" Top="707" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static127" Left="901" Style="table" TabOrder="181" Top="644" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static128" Left="901" Style="table" TabOrder="182" Top="665" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static129" Left="901" Style="table" TabOrder="183" Top="686" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static130" Left="901" Style="table" TabOrder="184" Top="707" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static131" Left="782" Style="table" TabOrder="185" Text="퍼지봉" Top="644" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static132" Left="782" Style="table" TabOrder="186" Text="통신장비" Top="665" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static133" Left="782" Style="table" TabOrder="187" Text="밸브키" Top="686" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="22" Id="Static134" Left="782" Style="table" TabOrder="188" Text="송기마스크" Top="707" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static137" Left="782" Style="table" TabOrder="179" Text="장비명" Top="623" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static138" Left="901" Style="table" TabOrder="180" Text="수량" Top="623" VAlign="Middle" Width="84" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit23" ImeMode="none" Left="252" Style="edit_Indis" TabOrder="189" Top="646" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit24" ImeMode="none" Left="252" Style="edit_Indis" TabOrder="190" Top="667" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit25" ImeMode="none" Left="252" Style="edit_Indis" TabOrder="191" Top="688" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit26" ImeMode="none" Left="252" Style="edit_Indis" TabOrder="192" Top="709" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit27" ImeMode="none" Left="470" Style="edit_Indis" TabOrder="196" Top="709" Width="91"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit28" ImeMode="none" Left="470" Style="edit_Indis" TabOrder="195" Top="688" Width="91"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit29" ImeMode="none" Left="470" Style="edit_Indis" TabOrder="194" Top="667" Width="91"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit30" ImeMode="none" Left="470" Style="edit_Indis" TabOrder="193" Top="646" Width="91"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit31" ImeMode="none" Left="687" Style="edit_Indis" TabOrder="197" Top="646" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit32" ImeMode="none" Left="687" Style="edit_Indis" TabOrder="198" Top="667" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit33" ImeMode="none" Left="687" Style="edit_Indis" TabOrder="199" Top="688" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit34" ImeMode="none" Left="687" Style="edit_Indis" TabOrder="200" Top="709" Width="92"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit35" ImeMode="none" Left="905" Style="edit_Indis" TabOrder="201" Top="646" Width="76"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit36" ImeMode="none" Left="905" Style="edit_Indis" TabOrder="202" Top="667" Width="76"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit37" ImeMode="none" Left="905" Style="edit_Indis" TabOrder="203" Top="688" Width="76"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit38" ImeMode="none" Left="905" Style="edit_Indis" TabOrder="204" Top="709" Width="76"></Edit>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static111" Left="129" Style="table" TabOrder="206" Text="시공회사" Top="602" VAlign="Middle" Width="436" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static123" Left="564" Style="table" TabOrder="207" Text="우리사" Top="602" VAlign="Middle" Width="421" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static112" Left="110" Style="table" TabOrder="214" Top="959" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static113" Left="110" Style="table" TabOrder="209" Top="938" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static114" Left="110" Style="table" TabOrder="210" Top="917" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static124" Left="110" Style="table" TabOrder="208" Top="896" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static135" Left="129" Style="table" TabOrder="211" Text="1.작업전&#32;안전장비를&#32;점검하여&#32;최상의&#32;상태로&#32;사용한다" Top="896" VAlign="Middle" Width="856" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static136" Left="129" Style="table" TabOrder="212" Text="2.작업전&#32;안전에&#32;대하여&#32;대화하고&#32;합의한&#32;후&#32;실천한다" Top="917" VAlign="Middle" Width="856" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static139" Left="129" Style="table" TabOrder="213" Text="3.밸브철개&#32;열기전&#32;허리운동실시하여&#32;요통사고&#32;예방한다" Top="938" VAlign="Middle" Width="856" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static140" Left="129" Style="table" TabOrder="215" Text="4.밀폐공간&#32;출입전&#32;가스누출여부&#32;및&#32;산소농도&#32;측정한다" Top="959" VAlign="Middle" Width="856" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="211" Id="Static141" Left="5" Style="table" TabOrder="216" Text="작업시&#13;&#10;안전조치준수사항" Top="896" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static145" Left="129" Style="table" TabOrder="218" Text="5.위험작업현장에는&#32;안전장비와&#32;소화기를&#32;비치한다" Top="980" VAlign="Middle" Width="856" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static146" Left="129" Style="table" TabOrder="220" Text="6.밀폐공간에서의&#32;가스방출은&#32;어떤&#32;경우라도&#32;엄금한다" Top="1001" VAlign="Middle" Width="856" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static150" Left="129" Style="table" TabOrder="222" Text="7.질소&#32;치환&#32;완벽하게&#32;시행한&#32;후&#32;절단작업&#32;시행한다" Top="1022" VAlign="Middle" Width="856" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static151" Left="129" Style="table" TabOrder="224" Text="8.스토퍼는&#32;이중설치하고&#32;종료시까지&#32;확실하게&#32;감시한다" Top="1043" VAlign="Middle" Width="856" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static152" Left="129" Style="table" TabOrder="226" Text="9.작업현장&#32;주변에는&#32;절대금연하고&#32;화기접근을&#32;통제한다." Top="1064" VAlign="Middle" Width="856" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static153" Left="129" Style="table" TabOrder="228" Text="10.퍼지작업시&#32;방출가스의&#32;안전확보&#32;다시&#32;한번&#32;확인한다." Top="1085" VAlign="Middle" Width="856" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static154" Left="129" Style="table" TabOrder="229" Text="중단세대" Top="1106" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static155" Left="129" Style="table" TabOrder="230" Text="중단지역" Top="1127" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static163" Left="129" Style="table" TabOrder="231" Text="가스방출량" Top="1148" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="85" Id="Static165" Left="5" Style="table" TabOrder="232" Text="공급중단" Top="1106" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static170" Left="129" Style="table" TabOrder="237" Text="중단홍보" Top="1169" VAlign="Middle" Width="165" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static156" Left="293" Style="table" TabOrder="238" Text="가정용" Top="1106" VAlign="Middle" Width="85" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static157" Left="466" Style="table" TabOrder="239" Text="영업용" Top="1106" VAlign="Middle" Width="85" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static158" Left="639" Style="table" TabOrder="240" Text="산업용" Top="1106" VAlign="Middle" Width="85" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static159" Left="812" Style="table" TabOrder="241" Text="계" Top="1106" VAlign="Middle" Width="85" WordWrap="TRUE"></Static>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit39" ImeMode="none" Left="381" Style="edit_Indis" TabOrder="242" Top="1108" Width="82"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit40" ImeMode="none" Left="554" Style="edit_Indis" TabOrder="243" Top="1108" Width="82"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit41" ImeMode="none" Left="727" Style="edit_Indis" TabOrder="244" Top="1108" Width="82"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit42" ImeMode="none" Left="900" Style="edit_Indis" TabOrder="245" Top="1108" Width="81"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static160" Left="639" Style="table" TabOrder="246" Text="공급중단시간" Top="1148" VAlign="Middle" Width="85" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static161" Left="110" Style="table" TabOrder="247" Top="1232" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static162" Left="110" Style="table" TabOrder="248" Top="1211" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static164" Left="110" Style="table" TabOrder="249" Top="1190" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static175" Left="5" Style="table" TabOrder="250" Text="담당자&#32;검토의견" Top="1190" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static176" Left="5" Style="table" TabOrder="251" Text="굴착&#32;허가기간" Top="1211" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static177" Left="5" Style="table" TabOrder="252" Text="특별지시사항" Top="1232" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static171" Left="110" Style="table" TabOrder="253" Top="1274" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static172" Left="110" Style="table" TabOrder="254" Top="1253" VAlign="Middle" Width="875" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static173" Left="5" Style="table" TabOrder="255" Text="변경작업일시" Top="1253" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static174" Left="5" Style="table" TabOrder="256" Text="변경사유" Top="1274" VAlign="Middle" Width="125" WordWrap="TRUE"></Static>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar0" Left="133" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="257" Top="1255" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Combo Border="Flat" Height="18" Id="Combo13" Left="221" Style="combo_indis" TabOrder="258" Top="1254" Width="114"></Combo>
+		<Static Height="13" Id="Static178" Left="339" Style="static" TabOrder="259" Text="~" Top="1259" Width="10"></Static>
+		<Combo Border="Flat" Height="18" Id="Combo14" Left="351" Style="combo_indis" TabOrder="260" Top="1254" Width="114"></Combo>
+		<Edit Border="Flat" Height="18" Id="Edit43" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="261" Top="1276" Width="331"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit44" ImeMode="none" Left="297" Style="edit_Indis" TabOrder="262" Top="1129" Width="684"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit45" ImeMode="none" Left="297" Style="edit_Indis" TabOrder="263" Top="1171" Width="684"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit46" ImeMode="none" Left="297" Style="edit_Indis" TabOrder="264" Top="1150" Width="339"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit47" ImeMode="none" Left="727" Style="edit_Indis" TabOrder="265" Top="1150" Width="254"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit48" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="266" Top="1192" Width="848"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit49" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="267" Top="1213" Width="848"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="Edit50" ImeMode="none" Left="133" Style="edit_Indis" TabOrder="268" Top="1234" Width="848"></Edit>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button264" ImageID="btn_2_Companion" Left="881" LeftMargin="21" OnClick="fn_Return" Style="button" TabOrder="270" Text="반려" Top="307" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Button256" ImageID="btn_4_Confirmation" Left="801" LeftMargin="21" OnClick="Button0_OnClick" Style="button" TabOrder="269" Text="변경승인" Top="307" Width="76"></Button>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+function D1503010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+}
+
+function fn_Return(obj)
+{
+	gfn_Dialog("D10","D1502010012U","",450,400,true,-1,-1);
+}
+]]></Script>
+</Window>

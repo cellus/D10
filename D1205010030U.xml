@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1205010030U" Left="8" OnLoadCompleted="D1205010030U_OnLoadCompleted" PidAttrib="7" Title="시설물조회_D1205010030U" Top="8" Ver="1.0" Width="660" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_list"></Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="시설물정보&#32;조회" Transparent="TRUE" Width="660"></Image>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_list" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="394" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="294" Id="grd_list" InputPanel="FALSE" Left="6" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellDBLClick="grd_list_OnCellDblClick" Right="656" SelColor="MENU" Style="grid_pop" TabOrder="2" TabStop="true" Top="100" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="650">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="285"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="지사"/>
+						<cell col="1" display="text" text="시/구"/>
+						<cell col="2" display="text" text="시설물코드"/>
+						<cell col="3" display="text" text="주소"/>
+					</head>
+					<body>
+						<cell col="0" colid="BRANCH_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="ZIP_NO1_NM" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="FACI_NUM" display="text"/>
+						<cell col="3" colid="LOT_NUM_UNION" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user16" Bottom="101" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="655" TabOrder="3" Top="98" Type="Rectangle" Width="650"></Shape>
+		<Shape BKColor="user9" Bottom="93" Height="24" Id="Shape0" Left="5" LineColor="user10" Right="655" TabOrder="4" Top="69" Type="Rectangle" Width="650"></Shape>
+		<Image Align="Left" Color="blue" Height="18" Id="Image1" ImageID="blt" Left="7" LeftMargin="12" Style="blt_search" TabOrder="5" Text="시설물구분" Top="72" Transparent="TRUE" Width="73"></Image>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="481" LeftMargin="12" Style="blt_search" TabOrder="6" Text="시설물코드" Top="72" Transparent="TRUE" Width="81"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="7" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="659">
+			<Contents></Contents>
+		</Div>
+		<Edit Border="Flat" Height="18" Id="edt_FaciNm" ImeMode="none" Left="556" Style="edit" TabOrder="8" Top="72" Width="93"></Edit>
+		<Combo Border="Flat" Enable="FALSE" Height="18" Id="cob_FaciFlag" ImeMode="none" Left="81" Style="combo_indis" TabOrder="9" Top="72" Width="96"></Combo>
+		<Image Align="Left" Color="blue" Height="18" Id="Image8" ImageID="blt" Left="182" LeftMargin="12" Style="blt_search" TabOrder="11" TabStop="FALSE" Text="지사" Top="72" Transparent="TRUE" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_Branc" Left="224" OnChanged="cob_Branc_OnChanged" Style="combo_indis" TabOrder="10" TabStop="FALSE" Top="72" Width="93"></Combo>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo1" INDEX="0" Left="382" Style="combo" TabOrder="12" TabStop="FALSE" Top="72" Width="93"></Combo>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="328" LeftMargin="12" Style="blt_search" TabOrder="13" TabStop="FALSE" Text="시/구" Top="72" Transparent="TRUE" Width="59"></Image>
+	</Form>
+	<Script><![CDATA[/*******************************************************************************
+* FormID     : D1205010030U.xml
+* Form 설명  : 시설물정보조회
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 노준배
+* 작성일     : 2009-06-10
+* 변경내용   : 변경일자, 변경내용,변경자
+*******************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONB30001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+
+var arrList = array();
+//---------------------------------------------------------
+//	화면 구동시 
+//---------------------------------------------------------
+function D1205010030U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+	
+	if (IsExistVar("FLAG", true)) {
+	    if (FLAG == "0") {
+	        cob_FaciFlag.Enable = false;
+	    } 
+	}
+	
+	if (IsExistVar("BRANCH_CD", true)) {
+	    cob_Branc.Value = BRANCH_CD;
+	    cob_Branc_OnChanged();
+	}
+	
+	if (IsExistVar("ZIP_NO", true)) {
+	    cob_ZipNo1.Value = ZIP_NO;
+	}
+	
+	// 2012.06.25 이건민 - 권기철 과장님 추가요청 사항 정류기/배류기 선택 로직
+	/*
+	if (IsExistVar("CATHODIC_FLAG", true)) {
+	    if (CATHODIC_FLAG == 10){
+			cob_FaciFlag.Index = 0;
+	    }else{
+			cob_FaciFlag.Index = 1;
+	    }
+	}
+	*/
+	gfn_SetButton("00010001");
+	fn_CommonSearch();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init() {  
+    
+    var flag = "";
+    
+    if (IsExistVar("TB_FLAG", true)) {
+	    flag = "AP#BH#DO#DU#DW#GR#GV#LD#MD#OP#RO#SP#TB#UC#VB#VT#VV#WD";
+	} else {
+		flag = "AP#BH#DO#DU#DW#LD#MD#OP#RO#SP#UC#VT";
+	}	
+	gfn_D1_SetComboBox_Comcode("D10001",gfn_setDsObject_Comcode("cob_FaciFlag"), flag);
+
+	gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_Branc"));
+	
+	//2013.07.12 시설물 정보조회 Default 지사 조회조건 '전체' 변경 by Moo - jin Paeng  
+	//cob_Branc.Index = 0;
+	cob_Branc.Value = "";
+	  
+	cob_Branc_OnChanged();
+	gfn_D1_SetGrid_Sort(grd_list);
+	
+	
+	//TB  10  : Test BOX 
+    //VB  20  : 벨브박스
+    if( fa_code == '10' ) {
+		cob_FaciFlag.Value = 'TB';
+    } else if( fa_code == '20' ) {
+		cob_FaciFlag.Value = 'VB';
+    }
+}
+
+function cob_Branc_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	// 지사별 구 콤보 셋팅 시0
+    fn_SetComboBox_Comcode("1", cob_Branc.value, fn_setDsObject_Comcode("1", "cob_ZipNo1"));
+    cob_ZipNo1.Index = 0;
+    
+    
+    if(cob_Branc.Value = ""){							//서부
+		cob_ZipNo1.Value="";
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 조회 버튼 실행 
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(Obj)
+{   
+	var ServiceId     = "find";
+    var ServicePart     = "D10";
+    var Url             = "handle.do?ServiceName=D1101010011U-service"
+                        + "&BRANCH_CD="+cob_Branc.Value
+                        + "&GUBUN="+cob_FaciFlag.Value                        
+                        + "&FACI_NM="+edt_FaciNm.Text
+                        + "&ZIP_NO1="+cob_ZipNo1.Value;
+    var InputDsList     = "";
+    var OutputDsList = "ds_list=ds_list";
+    var Argument      = "find";
+
+    gfn_SyncCall(ServiceId, ServicePart, Url, InputDsList, OutputDsList, Argument);
+
+    if (ErrorCode < 0) {
+        alert(ErrorMsg);
+		return;
+	}
+	
+    if (ds_list.GetRowCount()==0) {
+        grd_list.NoDataText="조회결과가 없습니다.";
+    }    
+}
+
+//-------------------------------------------------------------------------------
+// 엑셀 버튼 실행 
+//-------------------------------------------------------------------------------
+function fn_CommonExcelExport() {
+
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "시설물구분 :" + RPad(cob_FaciFlag.Text," ",20);
+    SearchCondition = SearchCondition + "지사 :" + RPad(cob_Branc.Text," ",20);
+    SearchCondition = SearchCondition + "시/구 :" + RPad(cob_ZipNo1.Text," ",20);
+    SearchCondition = SearchCondition + "시설물명 :" + RPad(edt_FaciNm.Text," ",20);
+	gfn_ExportExcel("시설물정보 조회 ", 5, SearchCondition, "grd_list"); 
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 선택
+//---------------------------------------------------------
+function fn_CommonSelect() {
+
+	var nRow = ds_list.row;
+   
+	arrList[0] = ds_list.GetColumn(nRow,"FACI_NUM");   // 시설물번호
+	arrList[1] = ds_list.GetColumn(nRow,"BRANCH_CD");  // 지사코드
+	arrList[2] = ds_list.GetColumn(nRow,"BRANCH_NM");  // 지사
+	arrList[3] = ds_list.GetColumn(nRow,"ZIP_NO1");    // 우편번호1
+	arrList[4] = ds_list.GetColumn(nRow,"ZIP_NO1_NM"); // 시/구
+	arrList[5] = ds_list.GetColumn(nRow,"FACI_NM");    // 시설물명
+	arrList[6] = ds_list.GetColumn(nRow,"GUBUN");      // 시설물구분 
+	arrList[7] = ds_list.GetColumn(nRow,"LOT_NUM_UNION");      // 시설물 주소 
+	for (var i = 0; i <= 6; i++) {
+		trace("arrList["+i+"] = "+arrList[i]);
+	}
+	
+	Close(arrList);
+}
+
+//---------------------------------------------------------
+//	그리드 cell 더블 클릭 이벤트
+//---------------------------------------------------------
+
+function grd_list_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fn_CommonSelect();
+}
+ ]]></Script>
+</Window>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D2001010013U" Left="8" OnLoadCompleted="D1301010013U_OnLoadCompleted" PidAttrib="7" Title="D2001010013U_GIS&#32;오류내역통보" Top="8" Ver="1.0" Width="700" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_SearchTop">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SERIAL_NUM" size="256" summ="default" type="STRING"/>
+					<record>
+						<SERIAL_NUM></SERIAL_NUM>
+						<WORK_NUM></WORK_NUM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_TopData" OnColumnChanged="ds_TopData_OnColumnChanged">
+				<Contents>
+					<colinfo id="WORK_NUM" size="11" summ="default" type="CHAR"/>
+					<colinfo id="SERIAL_NUM" size="2" summ="default" type="CHAR"/>
+					<colinfo id="UNSUIT_FLAG" size="2" summ="default" type="CHAR"/>
+					<colinfo id="UPD_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="UPD_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="UPD_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="CRT_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="CRT_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="UNSUIT_YN" size="1" summ="default" type="CHAR"/>
+					<colinfo id="UNSUIT_INF" size="200" summ="default" type="STRING"/>
+					<colinfo id="GIS_INPUT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_INPUT_EMPNM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_D10195">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_D10190">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE_ID></CODE_ID>
+						<CODE_ITEM>Y</CODE_ITEM>
+						<ITEM_KNAME>오류있음(Y)</ITEM_KNAME>
+					</record>
+					<record>
+						<CODE_ID></CODE_ID>
+						<CODE_ITEM>N</CODE_ITEM>
+						<ITEM_KNAME>오류없음</ITEM_KNAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_CallProInit">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SERIAL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="UPD_IP" size="32" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PermitSearch">
+				<Contents>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SERIAL_NUM" size="256" summ="default" type="STRING"/>
+					<record>
+						<SERIAL_NUM></SERIAL_NUM>
+						<WORK_NUM></WORK_NUM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PermitData">
+				<Contents>
+					<colinfo id="PERMIT_YN" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_TopData" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="394" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="324" Id="grd_multi" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" Right="695" ScrollCell="true" SelColor="MENU" Style="grid_pop" TabOrder="4" TabStop="true" Top="70" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="690">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="40"/>
+						<col width="173"/>
+						<col width="71"/>
+						<col width="247"/>
+						<col width="70"/>
+						<col width="60"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell col="1" display="text" text="오류구분"/>
+						<cell col="2" display="text" text="오류여부"/>
+						<cell col="3" display="text" text="오류내역"/>
+						<cell col="4" colspan="2" display="text" text="GIS입력자"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="text" expandsize="18" expr="rowindex&#32;+1" wordwrap="word"/>
+						<cell col="1" colid="UNSUIT_FLAG" combocol="CODE_ITEM" combodataset="ds_D10195" combodisplayrowcnt="20" combotext="ITEM_KNAME" display="combo" expandsize="18" wordwrap="word"/>
+						<cell align="center" col="2" colid="UNSUIT_YN" combocol="CODE_ITEM" combodataset="ds_D10190" combodisplayrowcnt="20" combotext="ITEM_KNAME" display="combo" edit="combo"/>
+						<cell col="3" colid="UNSUIT_INF" display="text" edit='expr:decode(UNSUIT_YN,&quot;N&quot;,&quot;none&quot;,&quot;normal&quot;)'/>
+						<cell col="4" colid="GIS_INPUT_EMPID" display="text"/>
+						<cell col="5" colid="GIS_INPUT_EMPNM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="오류내역&#32;통보" Transparent="TRUE" Width="700"></Image>
+		<Shape BKColor="user16" Bottom="71" Height="3" Id="Shape1" Left="5" LineWidth="0" Right="695" TabOrder="2" Top="68" Type="Rectangle" Width="690"></Shape>
+		<Div DisableBKColor="white" Height="29" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Visible="FALSE" Width="690">
+			<Contents></Contents>
+		</Div>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_APPRO" ImageID="btn_5_dec" Left="447" LeftMargin="21" OnClick="btn_APPRO_OnClick" Style="button" TabOrder="5" Text="일괄등록" Top="44" Visible="FALSE" Width="89"></Button>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D2001010013U.xml
+* Form 설명  : GIS 오류내역통보
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : hjh
+* 작성일     : 2009-07-06
+* 변경내용   : 
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+var fv_ServiceId = "D2001010013U";
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D1301010013U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	
+	// 파라미터가 존재하면
+	if( IsExistVar("arg_WORK_NUM",true) )
+	{
+		Init();
+	}
+	else
+	{
+		alert("화면 권한이 없습니다.");
+		close();
+	}
+}
+
+//--------------------------------------------------------------------------------------------------
+//	검수결과 초기화
+//--------------------------------------------------------------------------------------------------
+function Init()
+{
+
+	// CallPro 
+	ds_CallProInit.ClearData();
+	ds_CallProInit.AddRow();
+	ds_CallProInit.SetColumn(0,"WORK_NUM"   , arg_WORK_NUM); //
+	ds_CallProInit.SetColumn(0,"SERIAL_NUM" , arg_SERIAL_NUM);
+	ds_CallProInit.SetColumn(0,"UPD_EMPID"  , gfn_GetGlobalValue("G_USER_NO")); 
+	ds_CallProInit.SetColumn(0,"UPD_IP"     , gfn_GetLocalIpAddress());
+
+	// Permit
+	ds_PermitSearch.ClearData();
+	var nRow = ds_PermitSearch.AddRow();	
+	ds_PermitSearch.SetColumn(nRow, "WORK_NUM",   arg_WORK_NUM);
+	ds_PermitSearch.SetColumn(nRow, "SERIAL_NUM", arg_SERIAL_NUM);
+	
+	ds_PermitData.ClearData();
+	
+	var strSvcID       = "init";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName="+fv_ServiceId+"-service";
+	var strInDatasets  = "ds_CallProInit=ds_CallProInit:u ds_PermitSearch=ds_PermitSearch";
+	var strOutDatasets = "ds_PermitData=ds_PermitData";
+	var strArgument    = "init=1";
+    var CallBack       = "fn_D1_CallBack";
+
+    gfn_AsyncCall(strSvcID
+		        , strPart
+		        , strURL
+		        , strInDatasets
+		        , strOutDatasets
+		        , strArgument
+		        , CallBack);
+
+
+}
+//--------------------------------------------------------------------------------------------------
+//	서비스 CallBack
+//--------------------------------------------------------------------------------------------------
+function fn_D1_CallBack(SrvID,ErrorCode,ErrorMsg)
+{
+	
+	if(ErrorCode < 0) {
+	
+		alert(ErrorMsg);
+		return;
+	}
+	
+	switch(SrvID){
+		
+		case "init":
+			
+			var str_PERMIT_YN =  ds_PermitData.GetColumn(0, "PERMIT_YN");
+			// 진행상태가 - 50 GIS접수
+			if(str_PERMIT_YN == "Y")
+			{
+				// 등록 권한 
+				gfn_SetButton("00110001");
+				btn_APPRO.Visible = true;
+			}
+			else
+			{
+				// 읽기전용 
+				gfn_SetButton("00010001");	
+				btn_APPRO.Visible = false;
+			}
+			
+			gfn_SetComboBox_Comcode("D10195","ds_D10195"); // 준공도검수 오류종류(D10195)		
+			//gfn_SetComboBox_Comcode("D10190","ds_D10190"); // 점검결과 (D10190) 
+
+			fn_CommonSearch();
+		
+			break;
+			
+		// 조회
+		case "find":
+			break;
+			
+		// 상세조회
+		case "save":
+			alert(gfn_GetMessage("M000009","%AAA%","저장을"));
+			
+			fn_CommonSearch();
+			break;
+
+	}	
+	
+}
+//--------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//--------------------------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+
+	ds_SearchTop.ClearData();
+	var nRow = ds_SearchTop.AddRow();	
+	ds_SearchTop.SetColumn(nRow, "WORK_NUM",   arg_WORK_NUM);
+	ds_SearchTop.SetColumn(nRow, "SERIAL_NUM", arg_SERIAL_NUM);
+	
+	ds_TopData.ClearData();
+	
+	var strSvcID       = "find";
+	var strPart        = "D10";	
+	var strURL         = "handle.do?ServiceName="+fv_ServiceId+"-service";
+	var strInDatasets  = "ds_SearchTop=ds_SearchTop";
+	var strOutDatasets = "ds_TopData=ds_TopData";
+	var strArgument    = "find=1";
+    var strCallBack    = "fn_D1_CallBack";	
+	
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallBack
+			   );
+
+}
+
+//--------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//--------------------------------------------------------------------------------------------------
+function fn_CommonSave()
+{
+
+	if( ! ds_TopData.GetUpdate() )
+	{
+		//변경된 내용이 없습니다.
+		alert(gfn_GetMessage("M000008", "%AAA%", "변경된 내용이"));		
+		return;
+	}	
+	
+	if(!fn_CommonPreSave())
+	{
+		return;
+	}
+		
+    var strSvcID       = "save";
+    var strPart        = "D10";
+    var strURL         = "handle.do?ServiceName="+fv_ServiceId+"-service";
+    var strInDatasets  = "ds_TopData=ds_TopData:u";
+    var strOutDatasets = "";
+    var strArgument    = "save=1";   
+    var strCallBack    = "fn_D1_CallBack";
+        
+    gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallBack
+			   );
+
+}
+
+
+//--------------------------------------------------------------------------------------------------
+// 저장 전처리
+//--------------------------------------------------------------------------------------------------
+function fn_CommonPreSave()
+{
+
+	//---------------------------------------------------------
+	//	전처리 
+	//---------------------------------------------------------
+	for(var i=0; i<ds_TopData.RowCount(); i++)
+	{	
+
+		if( gfn_isNull(ds_TopData.GetColumn(i, "UNSUIT_YN")) )
+		{
+			alert("오류여부를 선택하십시오.");
+			ds_TopData.row = i;
+			return false;
+		}	
+		
+		if( ds_TopData.GetColumn(i, "UNSUIT_YN") == "Y" )
+		{
+			if( gfn_isNull(ds_TopData.GetColumn(i, "UNSUIT_INF")) )
+			{
+				alert("오류내역을 입력하십시오.");
+				ds_TopData.row = i;
+				return false;
+			}	
+		}	
+		
+		ds_TopData.FireEvent = false;
+			
+		// 수정된 로우 셋팅
+		if (ds_TopData.GetRowType(i) == "update"){
+
+			ds_TopData.SetColumn(i, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+			ds_TopData.SetColumn(i, "UPD_IP", gfn_GetLocalIpAddress());
+		
+		}	// update end	
+		
+		ds_TopData.FireEvent = true;	
+	}
+	
+
+	return true;
+}
+//--------------------------------------------------------------------------------------------------
+// 일괄 승인
+//--------------------------------------------------------------------------------------------------
+function btn_APPRO_OnClick(obj)
+{
+	for(var i=0; i<ds_TopData.RowCount(); i++)
+	{
+		ds_TopData.FireEvent = false;
+			
+		ds_TopData.SetColumn(i, "UNSUIT_YN", "N");
+		ds_TopData.SetColumn(i, "GIS_INPUT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_TopData.SetColumn(i, "GIS_INPUT_EMPNM", gfn_GetGlobalValue("G_NAME"));
+		
+		ds_TopData.FireEvent = true;	
+	}
+}
+
+function ds_TopData_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	if(strColumnID == "UNSUIT_YN")
+	{
+		ds_TopData.FireEvent = false;
+		ds_TopData.SetColumn(nRow, "GIS_INPUT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+		ds_TopData.SetColumn(nRow, "GIS_INPUT_EMPNM", gfn_GetGlobalValue("G_NAME"));
+		
+		// 오류없음(N)
+		if(varNewValue == "N") 
+		{
+			ds_TopData.SetColumn(nRow, "UNSUIT_INF", "");		
+		}
+		
+		ds_TopData.FireEvent = true;
+	}
+}
+]]></Script>
+</Window>

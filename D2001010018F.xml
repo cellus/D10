@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="853" Id="D2001010018F" Left="8" OnLoadCompleted="D2001010018F_OnLoadCompleted" PidAttrib="7" Title="D2001010018F_전자결재&#32;준공도&#32;등록" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_SearchBRANCH_CD">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SORT_ORDER" size="256" summ="default" type="INT"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchCityGu">
+				<Contents>
+					<colinfo id="LOW_CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_OverFlag">
+				<Contents>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE></CODE>
+						<NAME>전체</NAME>
+					</record>
+					<record>
+						<CODE>Y</CODE>
+						<NAME>초과</NAME>
+					</record>
+					<record>
+						<CODE>N</CODE>
+						<NAME>미초과</NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchD10198">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchD10196">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchColumnFlag">
+				<Contents>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE>0</CODE>
+						<NAME>준공일자</NAME>
+					</record>
+					<record>
+						<CODE>1</CODE>
+						<NAME>등록일자</NAME>
+					</record>
+					<record>
+						<CODE>2</CODE>
+						<NAME>공사담당접수</NAME>
+					</record>
+					<record>
+						<CODE>3</CODE>
+						<NAME>GIS접수</NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_IncludeFlag">
+				<Contents>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE>Y</CODE>
+						<NAME>포함</NAME>
+					</record>
+					<record>
+						<CODE>N</CODE>
+						<NAME>미포함</NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SearchD10200">
+				<Contents>
+					<colinfo id="CODE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Search1">
+				<Contents>
+					<colinfo id="SBRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="SOVER_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="SWORK_FG" size="256" summ="default" type="STRING"/>
+					<colinfo id="SPROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="STEAM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="STAKER_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="RETURN_FG" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEARCH_FG" size="256" summ="default" type="STRING"/>
+					<colinfo id="SFROM_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="STO_DATE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_InfoSummary" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REG_DELAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_DELAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_TREAT_DELAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_DELAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="REG_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REG_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="REG_EMP_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_EMP_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_EMP_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="RETURN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RECEIVE_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RECEIVE_EMP_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_TREAT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_TREAT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_TREAT_EMP_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RETURN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPRO_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_InfoAll" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SERIAL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="LOT_NUM_UNION" size="256" summ="default" type="STRING"/>
+					<colinfo id="COMPL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STS" size="256" summ="default" type="STRING"/>
+					<colinfo id="REG_DELAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_DELAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_TREAT_DELAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT_DELAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="REG_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REG_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="REG_EMP_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECEIVE_EMP_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="REVIEW_EMP_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="RETURN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RECEIVE_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RECEIVE_EMP_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_TREAT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_TREAT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_TREAT_EMP_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="GIS_RETURN_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPRO_YMD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DelayBase">
+				<Contents>
+					<colinfo id="WORK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DELAY_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_DATE" size="256" summ="default" type="STRING"/>
+					<record>
+						<BASE_DATE>4</BASE_DATE>
+						<DELAY_TYPE>REG_DELAY</DELAY_TYPE>
+						<WORK_FLAG>10</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>4</BASE_DATE>
+						<DELAY_TYPE>REVIEW_DELAY</DELAY_TYPE>
+						<WORK_FLAG>10</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>7</BASE_DATE>
+						<DELAY_TYPE>GIS_TREAT_DELAY</DELAY_TYPE>
+						<WORK_FLAG>10</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>15</BASE_DATE>
+						<DELAY_TYPE>TOT_DELAY</DELAY_TYPE>
+						<WORK_FLAG>10</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>7</BASE_DATE>
+						<DELAY_TYPE>REG_DELAY</DELAY_TYPE>
+						<WORK_FLAG>20</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>7</BASE_DATE>
+						<DELAY_TYPE>REVIEW_DELAY</DELAY_TYPE>
+						<WORK_FLAG>20</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>14</BASE_DATE>
+						<DELAY_TYPE>GIS_TREAT_DELAY</DELAY_TYPE>
+						<WORK_FLAG>20</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>28</BASE_DATE>
+						<DELAY_TYPE>TOT_DELAY</DELAY_TYPE>
+						<WORK_FLAG>20</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>7</BASE_DATE>
+						<DELAY_TYPE>REG_DELAY</DELAY_TYPE>
+						<WORK_FLAG>30</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>7</BASE_DATE>
+						<DELAY_TYPE>REVIEW_DELAY</DELAY_TYPE>
+						<WORK_FLAG>30</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>14</BASE_DATE>
+						<DELAY_TYPE>GIS_TREAT_DELAY</DELAY_TYPE>
+						<WORK_FLAG>30</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>28</BASE_DATE>
+						<DELAY_TYPE>TOT_DELAY</DELAY_TYPE>
+						<WORK_FLAG>30</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>7</BASE_DATE>
+						<DELAY_TYPE>REG_DELAY</DELAY_TYPE>
+						<WORK_FLAG>70</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>7</BASE_DATE>
+						<DELAY_TYPE>GIS_TREAT_DELAY</DELAY_TYPE>
+						<WORK_FLAG>70</WORK_FLAG>
+					</record>
+					<record>
+						<BASE_DATE>21</BASE_DATE>
+						<DELAY_TYPE>TOT_DELAY</DELAY_TYPE>
+						<WORK_FLAG>70</WORK_FLAG>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Analyze" UseClientLayout="1">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_CNT" size="256" summ="default" type="INT"/>
+					<colinfo id="REG_DELAY_SUM" size="256" summ="default" type="INT"/>
+					<colinfo id="REVIEW_DELAY_SUM" size="256" summ="default" type="INT"/>
+					<colinfo id="GIS_TREAT_DELAY_SUM" size="256" summ="default" type="INT"/>
+					<colinfo id="TOT_DELAY_SUM" size="256" summ="default" type="INT"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_TeamCd">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEPART_DPT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEPT_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_NoticeFlag">
+				<Contents>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE>Y</CODE>
+						<NAME>포함</NAME>
+					</record>
+					<record>
+						<CODE>N</CODE>
+						<NAME>미포함</NAME>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="89" Height="59" Id="Shape1" Left="5" LineColor="user7" Right="1265" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="30" Type="RoundRect" Width="1260"></Shape>
+		<Shape BKColor="user8" Bottom="84" Height="49" Id="Shape2" Left="11" LineWidth="0" Right="1261" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="35" Type="Rectangle" Width="1250"></Shape>
+		<Image Align="Left" Height="18" Id="Image7" ImageID="blt" Left="17" LeftMargin="12" Style="blt_search" TabOrder="1" Text="지사구분" Top="36" Width="84"></Image>
+		<Combo Border="Flat" CodeColumn="CODE_ITEM" DataColumn="ITEM_KNAME" Height="18" Id="cob_SWORK_FLAG" InnerDataset="ds_SearchD10200" Left="891" Style="combo" TabOrder="2" Top="36" Width="103"></Combo>
+		<Image Align="Left" Height="18" Id="Image10" ImageID="blt" Left="822" LeftMargin="12" Style="blt_search" TabOrder="3" Text="공사구분" Top="36" Width="84"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" Style="edit" TabOrder="6" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1260">
+			<Contents></Contents>
+		</Div>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_SREG_YMD_FROM" Left="788" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="7" Top="60" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar Border="Flat" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_SREG_YMD_TO" Left="891" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="8" Top="60" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Image Align="Left" Height="18" Id="Image0" ImageID="blt" Left="599" LeftMargin="12" Style="blt_search" TabOrder="9" Text="조회기준" Top="60" Width="84"></Image>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="1033" LeftMargin="12" Style="blt_search" TabOrder="10" Text="진행상태" Top="36" Width="75"></Image>
+		<Combo Border="Flat" CodeColumn="CODE_ITEM" DataColumn="ITEM_KNAME" Height="18" Id="cob_SPROC_STS" InnerDataset="ds_SearchD10196" Left="1103" Style="combo" TabOrder="11" Top="36" Width="100"></Combo>
+		<Combo Border="Flat" CodeColumn="BRANCH_CD" DataColumn="BRANCH_NM" Height="18" Id="cob_SBRANCH_CD" ImeMode="none" InnerDataset="ds_SearchBRANCH_CD" Left="91" OnChanged="cob_SBRANCH_CD_OnChanged" Style="combo" TabOrder="12" Top="36" Value="&#32;" Width="85"></Combo>
+		<Image Align="Left" Height="18" Id="Image8" ImageID="blt" Left="336" LeftMargin="12" Style="blt_search" TabOrder="14" Text="시/구" Top="36" Width="68"></Image>
+		<Combo Border="Flat" CodeColumn="CODE_ITEM" DataColumn="ITEM_KNAME" Height="18" Id="cob_ZipNo1" InnerDataset="ds_SearchCityGu" Left="427" Style="combo" TabOrder="13" Top="36" Width="101"></Combo>
+		<Image Align="Left" Height="18" Id="Image9" ImageID="blt" Left="15" LeftMargin="12" Style="blt_search" TabOrder="16" Text="공사담당자" Top="60" Width="75"></Image>
+		<Edit Border="Flat" CanChange="edt_Taker_EmpId_CanChange" Height="18" Id="edt_Taker_EmpId" Left="91" TabOrder="18" Top="60" Width="75"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_Taker_EmpNm" ImeMode="none" Left="168" Style="edit" TabOrder="17" Top="60" Width="114"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button0" ImageID="search" Left="283" OnClick="btn_TAKER_EMP_OnClick" TabOrder="19" Text="Button8" Top="61" Width="17"></Button>
+		<Static Height="13" Id="C2502030010F" Left="879" Style="static" TabOrder="20" Text="~" Top="63" Width="10"></Static>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="599" LeftMargin="12" Style="blt_search" TabOrder="21" Text="초과여부" Top="36" Width="91"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="NAME" Height="18" Id="cobSearchColumnFlag" INDEX="0" InnerDataset="ds_SearchColumnFlag" Left="667" Style="combo" TabOrder="22" Top="60" Width="103"></Combo>
+		<Image Align="Left" Height="18" Id="Image11" ImageID="blt" Left="335" LeftMargin="12" Style="blt_search" TabOrder="23" Text="반려/오류통보" Top="60" Width="91"></Image>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="NAME" Height="18" Id="cob_OverFlag" INDEX="0" InnerDataset="ds_OverFlag" Left="667" Style="combo" TabOrder="24" Top="36" Width="103"></Combo>
+		<Combo Border="Flat" CodeColumn="CODE" DataColumn="NAME" Height="18" Id="cob_ReturnFlag" INDEX="0" InnerDataset="ds_NoticeFlag" Left="427" Style="combo" TabOrder="25" Top="60" Width="103"></Combo>
+		<Tab Border="Flat" FixedImage="FALSE" Height="747" Id="tab_Result" Left="5" MouseOverColor="user17" OnChanged="tab_Result_OnChanged" PreLoad="TRUE" SelColor="user18" TabOrder="26" Top="104" Width="1260">
+			<Contents>
+				<TabPage Height="717" Id="tab1" ImageID="TAB" Left="2" TabOrder="55" Text="기본내역" Top="28" Url="D2001010018F_T01.xml" Width="1256"></TabPage>
+				<TabPage Height="717" Id="tab2" ImageID="TAB" Left="2" TabOrder="55" Text="전체내역" Top="28" Url="D2001010018F_T02.xml" Width="1256"></TabPage>
+				<TabPage Height="717" Id="tab3" ImageID="TAB" Left="2" TabOrder="55" Text="집계표" Top="28" Url="D2001010018F_T03.xml" Width="1256"></TabPage>
+			</Contents>
+		</Tab>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="323" LeftMargin="12" Style="blt_search" TabOrder="27" Text="기본내역&#32;:&#32;반려,&#32;오류통보&#32;날짜&#32;반영" Top="112" Width="210"></Image>
+		<Image Align="Left" Height="18" Id="Image4" ImageID="blt" Left="627" LeftMargin="12" Style="blt_search" TabOrder="28" Text="전체내역&#32;:&#32;차수별&#32;진행내역&#32;전체" Top="112" Width="194"></Image>
+		<Image Align="Left" Height="18" Id="Image2" ImageID="blt" Left="995" LeftMargin="12" Style="blt_search" TabOrder="15" Text="팀" Top="64" Visible="FALSE" Width="68"></Image>
+		<Edit Border="Flat" Height="18" Id="edt_TeamCd" Left="1059" TabOrder="30" Top="64" Visible="FALSE" Width="75"></Edit>
+		<Edit Border="Flat" Enable="FALSE" Height="18" Id="edt_TeamNm" ImeMode="none" Left="1136" Style="edit" TabOrder="29" Top="64" Visible="FALSE" Width="114"></Edit>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="1251" TabOrder="31" Text="Button8" Top="65" Visible="FALSE" Width="17"></Button>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D2001010018F.xml
+* Form 설명  : 협력업체 준공도 등록 및 현황 조회
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : kdw
+* 작성일     : 2013-04-01
+****************************************************************************************************/
+/***************************************************************************************************
+*                                         공통 Script Include                                      *
+***************************************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONA10005.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE50001.js";
+
+/***************************************************************************************************
+*                                          화면 변수 선언부                                        *
+***************************************************************************************************/
+var fv_ServiceId = "D2001010018F";
+var fv_FindRow_ShowRow = -1; 		  // 조회후 보여줄 컬럼 체크변수
+var fv_FindRow_ShowKey = -1;          // 공사번호
+
+
+var str_COM_ID = "";
+/***************************************************************************************************
+*                                         공통 Event 처리 부분                                     *
+***************************************************************************************************/
+//--------------------------------------------------------------------------------------------------
+//	OnLoadCompleted
+//--------------------------------------------------------------------------------------------------
+function D2001010018F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	gfn_E5_InitGridSteting(tab_Result.tab1.grd_InfoSummary,"");
+	
+	cal_SREG_YMD_FROM.value	= Addmonth(today(), -12);
+	cal_SREG_YMD_TO.value	= today();
+	
+	
+	
+	
+	gfn_SetComboBox_Comcode("D10200","ds_SearchD10200"); //공사구분	
+	gfn_SetComboBox_Comcode("D10198","ds_SearchD10198"); //GIS 공사구분
+	
+	ds_SearchD10198.deleteRow(ds_SearchD10198.findrow("CODE_ITEM", "50"));		// 정비보수 제외
+	ds_SearchD10198.deleteRow(ds_SearchD10198.findrow("CODE_ITEM", "60"));		// 중폐지 제외
+	
+		
+	//공사구분과 GIS 공사구분 통합
+	ds_SearchD10200.AppendDataset(ds_SearchD10198);
+	
+	
+	gfn_SetComboBox_Comcode("D10196","ds_SearchD10196"); //준공도상태
+	
+	
+	fn_D1_GetSysList();
+	
+}
+
+/*===============================================================================
+ * 콤보리스트 관련 이벤트
+===============================================================================*/
+function fn_D1_GetSysList()
+{
+	var strSvcID       = "init";
+	var strPart        = "D10";
+	var strURL         = "handle.do?ServiceName=D2001010018F-service";
+	var strInDatasets  = "";
+	var strOutDatasets = "ds_SearchBRANCH_CD=ds_SearchBRANCH_CD ds_SearchCityGu=ds_SearchCityGu";
+	var strArgument    = "init=1";
+    var CallBack       = "fn_D1_CallBack";
+
+    gfn_AsyncCall(strSvcID
+		        , strPart
+		        , strURL
+		        , strInDatasets
+		        , strOutDatasets
+		        , strArgument
+		        , CallBack);
+	
+}
+//--------------------------------------------------------------------------------------------------
+//	서비스 CallBack
+//--------------------------------------------------------------------------------------------------
+function fn_D1_CallBack(SrvID,ErrorCode,ErrorMsg)
+{
+	
+	if(ErrorCode < 0) {
+	
+		alert(ErrorMsg);
+		return;
+	}
+	
+	switch(SrvID){
+		//초기화
+		case "init":
+			// 검색조건에 전체 추가
+			//gfn_MakeComboAll("cob_SBRANCH_CD" , "BRANCH_CD", "BRANCH_NM" );		// 20130628 지사는 필수조건으로 변경
+			gfn_MakeComboAll("cob_ZipNo1"     , "CODE_ITEM", "ITEM_KNAME");
+			gfn_MakeComboAll("cob_SWORK_FLAG" , "CODE_ITEM", "ITEM_KNAME");
+			gfn_MakeComboAll("cob_SPROC_STS"  , "CODE_ITEM", "ITEM_KNAME");
+			
+			var branch_row = ds_SearchBRANCH_CD.findRow("BRANCH_CD", gfn_GetGlobalValue("G_BRANCH_CD"));
+						
+			if(branch_row < 0){
+				cob_SBRANCH_CD.index = 0;
+			}else{
+				cob_SBRANCH_CD.index = branch_row;
+			}
+			cob_SBRANCH_CD_OnChanged();
+			cob_ZipNo1.value		= "";
+			cob_SWORK_FLAG.value	= "";
+			cob_SPROC_STS.value		= "";
+			
+			break;
+		case "searchTab1":	
+			break;
+		case "searchTab2":	
+			if(ds_InfoAll.GetRowCount() > 0)
+			{
+			//	calcDate();
+			}
+			break;
+		case "searchTab3":	
+			//alert(ds_InfoSummary.rowcount);
+			break;
+	}	
+	
+}
+
+
+//--------------------------------------------------------------------------------------------------
+// 제출초과, 검수초과, 입력초과, 전체초과 구하기
+//--------------------------------------------------------------------------------------------------
+function calcDate()
+{
+	var reg_delay = 0;
+	var work_type = "";
+	
+	for(var i=0; i < ds_InfoAll.GetRowCount(); i++)
+	{
+		work_flag = ds_InfoAll.getColumn(i, "WORK_FLAG");
+		
+		// 제출초과일자 구하기
+		// 1차수 일 경우
+		if(ds_InfoAll.getColumn(i, "SERIAL_NUM") == "01")
+		{
+			reg_ymd 	= parseDateTime(ds_InfoAll.getColumn(i, "REG_YMD"));
+			compl_ymd 	= parseDateTime(ds_InfoAll.getColumn(i, "COMPL_YMD"));
+			reg_delay 	= reg_ymd - compl_ymd;
+			ds_InfoAll.setColumn(i, "REG_DELAY", reg_delay);
+		}
+		else		// 2차수 이상인 경우
+		{
+			
+			if(trim(ds_InfoAll.getColumn(i-1, "RETURN_YMD")) != "")		// 전 차수가 반려 된 경우
+			{
+				reg_ymd 	= parseDateTime(ds_InfoAll.getColumn(i	, "REG_YMD"));
+				return_ymd 	= parseDateTime(ds_InfoAll.getColumn(i-1, "RETURN_YMD"));
+				
+				reg_delay 	= reg_ymd - return_ymd - getBaseDate(work_flag, "RETURN_DELAY");
+				
+				ds_InfoAll.setColumn(i, "REG_DELAY", reg_delay);
+			}
+			else if(trim(ds_InfoAll.getColumn(i-1, "GIS_RETURN_YMD")) != "")		// 전 차수가 오류통보 된 경우
+			{
+				reg_ymd 		= parseDateTime(ds_InfoAll.getColumn(i	, "REG_YMD"));
+				gis_return_ymd 	= parseDateTime(ds_InfoAll.getColumn(i-1, "GIS_RETURN_YMD"));
+				
+				reg_delay 	= reg_ymd - gis_return_ymd - getBaseDate(work_flag, "RETURN_DELAY");
+				
+				ds_InfoAll.setColumn(i, "REG_DELAY", reg_delay);
+			}
+		}
+		
+		// 검수초과일자 구하기
+		review_ymd		= parseDateTime(ds_InfoAll.getColumn(i	, "REVIEW_YMD"));
+		reg_ymd 		= parseDateTime(ds_InfoAll.getColumn(i	, "REG_YMD"));
+		
+		review_delay	= review_ymd - reg_ymd - getBaseDate(work_flag, "REVIEW_DELAY");
+		ds_InfoAll.setColumn(i, "REVIEW_DELAY", reg_delay);
+		
+		// 입력초과일자 구하기
+		if(trim(ds_InfoAll.getColumn(i, "GIS_TREAT_YMD")) != "")
+		{
+			gis_treat_ymd	= parseDateTime(ds_InfoAll.getColumn(i	, "GIS_TREAT_YMD"));
+			
+			gis_treat_delay	= gis_treat_ymd - reg_ymd - getBaseDatE(work_flag, "GIS_TREAT_DELAY");
+			ds_InfoAll.setColumn(i, "GIS_TREAT_DELAY", gis_treat_delay);
+		
+		// 전체초과일자 구하기
+			gis_treat_ymd	= parseDateTime(ds_InfoAll.getColumn(i	, "GIS_TREAT_YMD"));
+			compl_ymd 		= parseDateTime(ds_InfoAll.getColumn(i	, "COMPL_YMD"));
+			
+			tot_delay	= gis_treat_ymd - compl_ymd - getBaseDatE(work_flag, "TOT_DELAY");
+			ds_InfoAll.setColumn(i, "TOT_DELAY", tot_delay);
+		}
+	}
+}
+
+//--------------------------------------------------------------------------------------------------
+// 제출 기준일 구하기
+//--------------------------------------------------------------------------------------------------
+function getBaseDate(work_flag, delay_type)
+{
+	var temp_row = ds_DelayBase.SearchRow("WORK_FLAG='"+work_flag+"' && DELAY_TYPE='" + delay_type + "'" );
+	return parseInt(ds_DelayBase.getColumn(temp_row, "BASE_DATE"));
+}
+
+
+//--------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//--------------------------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	if(length(cal_SREG_YMD_FROM.value) < 8 || length(cal_SREG_YMD_TO.value) < 8)
+	{
+		alert("조회기간을 확인 하시기 바랍니다.");
+		return ;
+	}
+	
+	if(toString(parseInt(substr(cal_SREG_YMD_FROM.value, 0, 4))+3)+substr(cal_SREG_YMD_FROM.value, 4) < cal_SREG_YMD_TO.value )
+	{
+		alert("조회기간은 최대 3년까지 가능합니다.");
+		return ;
+	}
+	
+	ds_Search1.ClearData();
+	var nRow = ds_Search1.AddRow();	
+	ds_Search1.SetColumn(nRow, "SBRANCH_CD", cob_SBRANCH_CD.Value);
+	ds_Search1.SetColumn(nRow, "ZIP_NO1", 	cob_ZipNo1.Value);
+	ds_Search1.SetColumn(nRow, "SOVER_FLAG", 	cob_OverFlag.Value);
+	ds_Search1.SetColumn(nRow, "SWORK_FG", cob_SWORK_FLAG.Value);
+	ds_Search1.SetColumn(nRow, "SPROC_FG", cob_SPROC_STS.Value);
+	ds_Search1.SetColumn(nRow, "STEAM_CD", edt_TeamCd.Value);
+	ds_Search1.SetColumn(nRow, "STAKER_EMPID", edt_Taker_EmpId.Value);
+	ds_Search1.SetColumn(nRow, "SRETURN_FLAG", cob_ReturnFlag.Value);
+	ds_Search1.SetColumn(nRow, "SEARCH_FG", cobSearchColumnFlag.Value);
+	ds_Search1.SetColumn(nRow, "SFROM_DATE", cal_SREG_YMD_FROM.Value);
+	ds_Search1.SetColumn(nRow, "STO_DATE", cal_SREG_YMD_TO.Value);
+	
+	var strSvcID       = "searchTab";
+	var strPart        = "D10";	
+	var strURL         = "handle.do?ServiceName=D2001010018F-service";
+	var strInDatasets  = "ds_Search1=ds_Search1";
+	var strOutDatasets = "";
+	var strArgument    = "";
+    var strCallBack    = "fn_D1_CallBack";	
+    
+
+	if(tab_Result.TabIndex == 0)
+	{
+		strSvcID       = "searchTab1";
+		strArgument    = "searchTab1_"+ds_Search1.GetColumn(0, "SEARCH_FG");
+		strOutDatasets = "ds_InfoSummary=ds_InfoSummary";
+	}else if(tab_Result.TabIndex == 1)
+	{
+		strSvcID       = "searchTab2";
+		strArgument    = "searchTab2_"+ds_Search1.GetColumn(0, "SEARCH_FG");
+		strOutDatasets = "ds_InfoAll=ds_InfoAll";	
+	}else if(tab_Result.tabIndex == 2)
+	{
+		strSvcID       = "searchTab3";
+		strArgument    = "searchTab3_"+ds_Search1.GetColumn(0, "SEARCH_FG");
+		strOutDatasets = "ds_Analyze=ds_Analyze";	
+	}
+
+	gfn_AsyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				   , strCallBack
+			   );
+	
+}
+
+
+//--------------------------------------------------------------------------------------------------
+// (팝업)공사담당자 검색
+//--------------------------------------------------------------------------------------------------
+function btn_TAKER_EMP_OnClick(obj)
+{
+    if(gfn_IsNull(cob_SBRANCH_CD.value))
+	{
+		alert("먼저 지사를 선택하여 주십시오.");
+		return;
+	}
+	
+	var Arguments = "BRANCH_CD=" + cob_SBRANCH_CD.Value + " TEAM_CD=" + edt_TeamCd.Value+ " SFALG=D2001010018F";
+		
+	var Result = gfn_Dialog("D10", "D1101020015U", Arguments);
+	
+	if(Result.length > 0)
+	{
+		edt_Taker_EmpId.Text = Result[0];  // 공사담당자사번
+		edt_Taker_EmpNm.Text = Result[1];  // 공사담당자명
+	}
+}
+
+//--------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 엑셀
+//--------------------------------------------------------------------------------------------------
+function fn_CommonExcelExport()
+{
+	//grd_JunList.ExportExcelEx("Sheet1");
+}
+
+function btn_ScgCharge_OnClick(obj)
+{
+}
+
+//상단 리스트 리프레쉬 된후에 하단 그리드 조회 되로록
+function ds_JunList_OnLoadCompleted(obj,nErrorCode,strErrorMsg,nReason)
+{
+	if(nReason == 0)
+	{
+		ds_JunList_OnRowPosChanged();
+	}
+}
+
+function edt_Taker_EmpId_CanChange(obj,stroldText,strText)
+{
+	if(stroldText.length > 0)
+	{
+		edt_Taker_EmpNm.Text = "";
+	}
+}
+
+function cob_SBRANCH_CD_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	ds_SearchCityGu.UnFilter();
+	if(ds_SearchBRANCH_CD.getColumn(cob_SBRANCH_CD.index, "CODE_ITEM") != null)
+	{
+		ds_SearchCityGu.Filter("CODE_ITEM=='' || LOW_CODE_ITEM=='" + ds_SearchBRANCH_CD.getColumn(cob_SBRANCH_CD.index, "CODE_ITEM") + "'");
+	}
+	cob_ZipNo1.index = ds_SearchCityGu.rowcount -1;
+}
+
+function tab_Result_OnChanged(obj,nOldIndex,nNewindex)
+{
+	//Destroy
+	Destroy("ds_InitGrid");
+	Destroy("ds_E5hideGridCol");
+	if(nNewindex == 0){
+		gfn_E5_InitGridSteting(tab_Result.tab1.grd_InfoSummary,"");
+	}else if(nNewindex == 1){
+		gfn_E5_InitGridSteting(tab_Result.tab2.grd_InfoAll,"");
+	}else if(nNewindex == 2){
+		gfn_E5_InitGridSteting(tab_Result.tab3.grd_Analyze,"");
+	}
+	
+	
+}
+]]></Script>
+</Window>

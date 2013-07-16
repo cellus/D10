@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="450" Id="D1801010010F_T01" Left="8" OnLoadCompleted="D1801010010F_T01_OnLoadCompleted" PidAttrib="7" Title="사유지점용료&#32;협의사항등록" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_GvRmView">
+				<Contents>
+					<colinfo id="FACI_NM" size="256" type="STRING"/>
+					<colinfo id="GOV_ROOM_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" type="STRING"/>
+					<colinfo id="GOV_ROOM_TYPE_NM" size="256" type="STRING"/>
+					<colinfo id="GOV_ROOM_MATER_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="ADDRRESS" size="256" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" type="STRING"/>
+					<colinfo id="LEASE_CLASS_NM" size="256" type="STRING"/>
+					<colinfo id="SITE_NM" size="256" type="STRING"/>
+					<colinfo id="LEASE_STS_NM" size="256" type="STRING"/>
+					<colinfo id="WIDTH" size="256" type="STRING"/>
+					<colinfo id="VERTICAL" size="256" type="STRING"/>
+					<colinfo id="AREA" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GvRmInst">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_RSLT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SALES_TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SALES_TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="READ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_SEND_PLACE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_RECEIVE_PLACE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="AGREE_SQUARE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Radio">
+				<Contents>
+					<colinfo id="name" size="256" summ="default" type="STRING"/>
+					<colinfo id="value" size="256" summ="default" type="STRING"/>
+					<record>
+						<name>사용</name>
+						<value>0</value>
+					</record>
+					<record>
+						<name>미사용</name>
+						<value>1</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GvRmHis">
+				<Contents>
+					<colinfo id="NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPDATE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_RSLT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SALES_TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="READ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_SEND_PLACE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_RECEIVE_PLACE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Excel">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" type="STRING"/>
+					<colinfo id="GOV_ROOM_NM" size="256" type="STRING"/>
+					<colinfo id="ADDR" size="256" type="STRING"/>
+					<colinfo id="INST_YMD" size="256" type="STRING"/>
+					<colinfo id="LEASE_CLASS_NM" size="256" type="STRING"/>
+					<colinfo id="SITE_NM" size="256" type="STRING"/>
+					<colinfo id="LEASE_STS_NM" size="256" type="STRING"/>
+					<colinfo id="WIDTH" size="256" type="STRING"/>
+					<colinfo id="VERTICAL" size="256" type="STRING"/>
+					<colinfo id="RT" size="256" type="STRING"/>
+					<colinfo id="AREA" size="256" type="STRING"/>
+					<colinfo id="DISCU_YMD" size="256" type="STRING"/>
+					<colinfo id="DISCU_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="DISCU_TAKER_NM" size="256" type="STRING"/>
+					<colinfo id="DISCU_DESC" size="256" type="STRING"/>
+					<colinfo id="DISCU_RSLT" size="256" type="STRING"/>
+					<colinfo id="DOCU_RECEIVE_YMD" size="256" type="STRING"/>
+					<colinfo id="SALES_TAKER_NM" size="256" type="STRING"/>
+					<colinfo id="DOCU_TAKER_NM" size="256" type="STRING"/>
+					<colinfo id="READ_YMD" size="256" type="STRING"/>
+					<colinfo id="DOCU_SEND_PLACE" size="256" type="STRING"/>
+					<colinfo id="DOCU_RECEIVE_PLACE" size="256" type="STRING"/>
+					<colinfo id="RMK" size="256" type="STRING"/>
+					<colinfo id="AGREE_TAKER_NM" size="256" type="STRING"/>
+					<colinfo id="AGREE_YMD" size="256" type="STRING"/>
+					<colinfo id="AGREE_TAKER_TEL" size="256" type="STRING"/>
+					<colinfo id="AGREE_MAIN" size="256" type="STRING"/>
+					<colinfo id="COMPL_INSPECT_YMD" size="256" type="STRING"/>
+					<colinfo id="PAS_DU_YMD" size="256" type="STRING"/>
+					<colinfo id="LEASE_COND" size="256" type="STRING"/>
+					<colinfo id="LEASE_STR_YMD" size="256" type="STRING"/>
+					<colinfo id="LEASE_END_YMD" size="256" type="STRING"/>
+					<colinfo id="AGREE_SQUARE" size="256" type="STRING"/>
+					<colinfo id="PERSO_PUBLIC_PRC" size="256" type="STRING"/>
+					<colinfo id="LEASE_DAY_CNT" size="256" type="STRING"/>
+					<colinfo id="VAT_YN" size="256" type="STRING"/>
+					<colinfo id="PAY_YEAR" size="256" type="STRING"/>
+					<colinfo id="BIZ_REGI_NUM" size="256" type="STRING"/>
+					<colinfo id="DEPOSITOR_NM" size="256" type="STRING"/>
+					<colinfo id="BNK_NM" size="256" type="STRING"/>
+					<colinfo id="ACCOUNT_NUM" size="256" type="STRING"/>
+					<colinfo id="PAY_NM_TEL" size="256" type="STRING"/>
+					<colinfo id="LEASE_AMT_PAY_YMD" size="256" type="STRING"/>
+					<colinfo id="EVIDENCE_YN" size="256" type="STRING"/>
+					<colinfo id="ADMIT_PERIOD" size="256" type="STRING"/>
+					<colinfo id="TXBILL_PUBL_YN" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_GvRmInst_copy">
+				<Contents>
+					<colinfo id="FACI_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISCU_RSLT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_RECEIVE_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SALES_TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SALES_TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_TAKER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="READ_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_SEND_PLACE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOCU_RECEIVE_PLACE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="AGREE_SQUARE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static17" Left="109" Style="table" TabOrder="68" Top="21" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static18" Left="109" Style="table" TabOrder="71" Top="42" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static22" Left="109" Style="table" TabOrder="72" Top="63" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static28" Left="109" Style="table" TabOrder="69" Top="84" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="109" Style="table" TabOrder="67" Top="130" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static1" Left="104" Style="table" TabOrder="66" Top="151" VAlign="Middle" Width="1151" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static4" Left="104" Style="table" TabOrder="63" Top="172" VAlign="Middle" Width="1151" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="bar_1" Left="109" Style="table" TabOrder="70" Top="198" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="bar_2" Left="109" Style="table" TabOrder="59" Top="219" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="bar_3" Left="109" Style="table" TabOrder="54" Top="240" VAlign="Middle" Width="1146" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="10" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="17" Text="협의이력정보" Top="271" Width="210"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button0" ImageID="search" Left="843" OnClick="Button4_OnClick" TabOrder="11" Text="Button8" Top="201" Width="17"></Button>
+		<Radio BindDataset="ds_Radio" Border="None" CodeColumn="value" Color="user17" ColumnCount="2" DataColumn="name" Height="13" Id="Radio" INDEX="0" InnerDataset="ds_Radio" Left="1033" OnClick="Radio_OnClick" Style="radio" TabOrder="4" Top="135" Width="105">
+			<Contents>
+				<Layout Height="20" left="0" text="명" width="80"/>
+				<Layout Height="20" left="80" text="코드" width="80"/>
+			</Contents>
+		</Radio>
+		<Edit AutoSelect="TRUE" BindDataset="ds_GvRmInst" Border="Flat" Column="RMK" Height="18" Id="edt_Rmk" Left="128" MaxLength="50" Style="edit" TabOrder="18" Top="242" Width="1123"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static9" Left="905" Style="table_1" TabOrder="19" Text="공문여부" Top="130" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static7" Left="904" Style="table_1" TabOrder="20" Top="84" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_GvRmView" Border="Flat" Column="WORK_NUM" Enable="FALSE" Height="18" Id="Edit33" Left="128" Readonly="TRUE" Style="edit_Indis" TabOrder="21" Top="44" Width="177"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static43" Left="6" Style="table" TabOrder="22" Text="공사코드" Top="42" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static26" Left="6" Style="table" TabOrder="23" Text="점용료분류" Top="63" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static29" Left="6" Style="table" TabOrder="24" Text="가로(m)" Top="84" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_GvRmView" Border="Flat" Column="LEASE_CLASS_NM" Enable="FALSE" Height="18" Id="Edit8" Left="128" Readonly="TRUE" Style="edit_Indis" TabOrder="25" Top="65" Width="177"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static27" Left="308" Style="table" TabOrder="26" Text="부지분류" Top="63" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_GvRmView" Border="Flat" Column="SITE_NM" Enable="FALSE" Height="18" Id="Edit15" Left="430" Readonly="TRUE" Style="edit_Indis" TabOrder="27" Top="65" Width="178"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_GvRmView" Border="Flat" Column="WIDTH" Enable="FALSE" Height="18" Id="Edit13" Left="128" Readonly="TRUE" Style="edit_Indis" TabOrder="28" Top="86" Width="177"></Edit>
+		<Edit Align="RIGHT" BindDataset="ds_GvRmView" Border="Flat" Column="VERTICAL" Enable="FALSE" Height="18" Id="Edit16" Left="430" Readonly="TRUE" Style="edit_Indis" TabOrder="29" Top="86" Width="178"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static30" Left="308" Style="table" TabOrder="30" Text="세로(m)" Top="84" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static41" Left="611" Style="table" TabOrder="31" Text="면적(㎡)" Top="84" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit Align="RIGHT" BindDataset="ds_GvRmView" Border="Flat" Column="AREA" Enable="FALSE" Height="18" Id="Edit30" Left="733" Readonly="TRUE" Style="edit_Indis" TabOrder="32" Top="86" Width="168"></Edit>
+		<Edit BindDataset="ds_GvRmView" Border="Flat" Column="LEASE_STS_NM" Enable="FALSE" Height="18" Id="Edit29" Left="733" Readonly="TRUE" Style="edit_Indis" TabOrder="33" Top="65" Width="168"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static44" Left="611" Style="table" TabOrder="34" Text="점용상태" Top="63" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Calendar BindDataset="ds_GvRmView" Border="Flat" Column="INST_YMD" DayFont="Default,-1" Enable="FALSE" HeaderFont="Default,-1" Height="18" Id="Calendar5" Left="1026" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="35" TextColor="user4" Top="65" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static48" Left="904" Style="table_1" TabOrder="36" Text="설치일자" Top="63" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="10" Id="Image5" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="37" Text="협의정보" Top="114" Width="210"></Image>
+		<Image Align="Left" Height="10" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" Style="text_title" TabOrder="38" Text="기본정보" Top="5" Width="210"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="1170" OnClick="Button4_OnClick" TabOrder="14" Text="Button8" Top="201" Width="17"></Button>
+		<Edit BindDataset="ds_GvRmInst" Border="Flat" Column="DOCU_TAKER_NAME" Enable="FALSE" Height="18" Id="edt_DocuTakerName" ImeMode="none" Left="1121" MaxLength="9" Style="edit" TabOrder="13" Top="200" Width="48"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="ds_GvRmInst" Border="Flat" Column="DOCU_TAKER_NM" Height="18" Id="edt_DocuTakerNm" ImeMode="none" Left="1026" MaxLength="9" Readonly="TRUE" Style="edit_Indis" TabOrder="12" Top="200" Width="94"></Edit>
+		<Edit BindDataset="ds_GvRmInst" Border="Flat" Column="SALES_TAKER_NAME" Enable="FALSE" Height="18" Id="edt_SalesTakerName" ImeMode="none" Left="801" MaxLength="9" Style="edit" TabOrder="10" Top="200" Width="41"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="ds_GvRmInst" Border="Flat" Column="SALES_TAKER_NM" Height="18" Id="edt_SalesTakerNm" ImeMode="none" Left="733" MaxLength="9" Readonly="TRUE" Style="edit_Indis" TabOrder="9" Top="200" Width="67"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static20" Left="6" Style="table" TabOrder="39" Text="시설물코드" Top="21" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static21" Left="905" Style="table" TabOrder="40" Text="정압실형태" Top="21" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static23" Left="611" Style="table" TabOrder="41" Text="주소" Top="42" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static31" Left="308" Style="table" TabOrder="42" Text="정압실명" Top="21" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static24" Left="611" Style="table" TabOrder="43" Text="정압실재질" Top="21" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static45" Left="308" Style="table" TabOrder="44" Text="시공회사" Top="42" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_GvRmView" Border="Flat" Column="ADDRESS" Enable="FALSE" Height="18" Id="Edit1" Left="733" Readonly="TRUE" Style="edit_Indis" TabOrder="45" Top="44" Width="518"></Edit>
+		<Edit BindDataset="ds_GvRmView" Border="Flat" Column="GOV_ROOM_TYPE_NM" Enable="FALSE" Height="18" Id="Edit2" Left="1027" Readonly="TRUE" Style="edit_Indis" TabOrder="46" Top="23" Width="224"></Edit>
+		<Edit BindDataset="ds_GvRmView" Border="Flat" Column="FACI_NUM" Enable="FALSE" Height="18" Id="Edit3" Left="128" Readonly="TRUE" Style="edit_Indis" TabOrder="47" Top="23" Width="177"></Edit>
+		<Edit BindDataset="ds_GvRmView" Border="Flat" Column="GOV_ROOM_MATER_NM" Enable="FALSE" Height="18" Id="Edit18" Left="733" Readonly="TRUE" Style="edit_Indis" TabOrder="48" Top="23" Width="169"></Edit>
+		<Edit BindDataset="ds_GvRmView" Border="Flat" Column="GOV_ROOM_NM" Enable="FALSE" Height="18" Id="Edit19" Left="430" Readonly="TRUE" Style="edit_Indis" TabOrder="49" Top="23" Width="178"></Edit>
+		<Edit BindDataset="ds_GvRmView" Border="Flat" Column="WORK_FIRM_NM" Enable="FALSE" Height="18" Id="Edit32" Left="430" Readonly="TRUE" Style="edit_Indis" TabOrder="50" Top="44" Width="178"></Edit>
+		<Calendar BindDataset="ds_GvRmInst" Border="Flat" Column="READ_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="edt_ReadYmd" Left="431" OnChanged="edt_ReadYmd_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="8" Top="200" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar BindDataset="ds_GvRmInst" Border="Flat" Column="DOCU_RECEIVE_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="edt_DocuReceiveYmd" Left="128" OnChanged="edt_DocuReceiveYmd_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="7" Top="200" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Calendar BindDataset="ds_GvRmInst" Border="Flat" Column="DISCU_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="edt_DiscuYmd" Left="128" OnChanged="edt_DiscuYmd_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="1" Top="132" WeeksFont="Default,-1" Width="88"></Calendar>
+		<Edit AutoSelect="TRUE" BindDataset="ds_GvRmInst" Border="Flat" Column="DOCU_SEND_PLACE" Height="18" Id="edt_DocuSendPlace" Left="128" MaxLength="15" Style="edit" TabOrder="15" Top="221" Width="481"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_4" Left="904" Style="table" TabOrder="51" Text="공급담당자" Top="198" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_3" Left="611" Style="table" TabOrder="52" Text="영업담당자" Top="198" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_7" Left="6" Style="table" TabOrder="53" Text="특기사항" Top="240" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_6" Left="611" Style="table" TabOrder="55" Text="공문수신처" Top="219" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit AutoSelect="TRUE" BindDataset="ds_GvRmInst" Border="Flat" Column="DOCU_RECEIVE_PLACE" Height="18" Id="edt_DocuReceivePlac" Left="733" MaxLength="30" Style="edit" TabOrder="16" Top="221" Width="518"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="title_5" Left="6" Style="table" TabOrder="56" Text="공문발송처" Top="219" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="title_2" Left="309" Style="table" TabOrder="57" Text="회람일자" Top="198" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="title_1" Left="6" Style="table" TabOrder="58" Text="접수일자" Top="198" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Edit AutoSelect="TRUE" BindDataset="ds_GvRmInst" Border="Flat" Column="DISCU_TAKER_NM" Height="18" Id="edt_DiscuTakerNm" Left="733" MaxLength="30" Style="edit_Indis" TabOrder="3" Top="132" Width="169"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="ds_GvRmInst" Border="Flat" Column="DISCU_FIRM_NM" Height="18" Id="edt_DiscuFirmNm" Left="430" MaxLength="30" Style="edit_Indis" TabOrder="2" Top="132" Width="178"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="ds_GvRmInst" Border="Flat" Column="DISCU_DESC" Height="18" Id="edt_DiscuDesc" Left="128" MaxLength="50" Style="edit" TabOrder="5" Top="153" Width="1123"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="ds_GvRmInst" Border="Flat" Column="DISCU_RSLT" Height="18" Id="edt_DiscuRslt" Left="128" MaxLength="50" OnChanged="edt_DiscuRslt_OnChanged" Style="edit" TabOrder="6" Top="174" Width="1123"></Edit>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static8" Left="611" Style="table" TabOrder="60" Text="협의담당자" Top="130" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static6" Left="308" Style="table" TabOrder="61" Text="협의주체" Top="130" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static5" Left="6" Style="table" TabOrder="62" Text="협의결과" Top="172" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Height="22" Id="Static3" Left="6" Style="table" TabOrder="64" Text="협의내용" Top="151" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Static Align="Right" BKColor="#f1f1f1" Border="Flat" Color="blue" Height="22" Id="Static2" Left="6" Style="table" TabOrder="65" Text="협의일자" Top="130" VAlign="Middle" Width="120" WordWrap="TRUE"></Static>
+		<Grid AutoEnter="TRUE" BindDataset="ds_GvRmHis" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="450" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="164" Id="Guid_Before" InputPanel="FALSE" Left="6" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" NoDataText="조회된&#32;내용이&#32;없습니다." Right="1255" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="73" TabStop="true" Top="286" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1249">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="50"/>
+						<col width="70"/>
+						<col width="250"/>
+						<col width="102"/>
+						<col width="250"/>
+						<col width="238"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="110"/>
+						<col width="110"/>
+						<col width="250"/>
+						<col width="250"/>
+						<col width="250"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="순번"/>
+						<cell col="1" display="text" text="협의일자"/>
+						<cell align="center" col="2" display="text" text="협의주체"/>
+						<cell col="3" display="text" text="협의담당자"/>
+						<cell col="4" display="text" text="협의내용"/>
+						<cell col="5" display="text" text="협의결과"/>
+						<cell col="6" display="text" text="접수일자"/>
+						<cell col="7" display="text" text="회람일자"/>
+						<cell col="8" display="text" text="영업담당자"/>
+						<cell col="9" display="text" text="공급담당자"/>
+						<cell col="10" display="text" text="공문발송처"/>
+						<cell col="11" display="text" text="공문수신처"/>
+						<cell col="12" display="text" text="특기사항"/>
+					</head>
+					<body>
+						<cell align="right" col="0" display="text" expr="rowIndex+1" text="0"/>
+						<cell col="1" colid="DISCU_YMD" display="date"/>
+						<cell col="2" colid="DISCU_FIRM_NM" display="text"/>
+						<cell align="left" col="3" colid="DISCU_TAKER_NM" display="text"/>
+						<cell col="4" colid="DISCU_DESC" display="text"/>
+						<cell col="5" colid="DISCU_RSLT" display="text"/>
+						<cell col="6" colid="DOCU_RECEIVE_YMD" display="date"/>
+						<cell col="7" colid="READ_YMD" display="date"/>
+						<cell align="center" col="8" colid="SALES_TAKER_NAME" display="text"/>
+						<cell align="center" col="9" colid="DOCU_TAKER_NAME" display="text"/>
+						<cell col="10" colid="DOCU_SEND_PLACE" display="text"/>
+						<cell col="11" colid="DOCU_RECEIVE_PLACE" display="text"/>
+						<cell col="12" colid="RMK" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1801010010f.xml
+* Form 설명  : 사유지 점용료 협의사항 협의 정보
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜 
+* 작성일     : 2008-12-16
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+
+//---------------------------------------------------------
+//	화면 OnLoadCompleted 이벤트처리 발생하는 함수( 화면ID_OnLoadCompleted )
+//---------------------------------------------------------
+function D1801010010F_T01_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+				
+	fn_D1_Find(parent.FaciNumRow, parent.FaciNum, parent.ValueType);
+} 
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init(){}
+
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+		추가	fn_CommonAddRow
+		삭제	fn_CommonDeleteRow
+		저장	fn_CommonSave
+		조회	fn_CommonSearch
+		엑셀	fn_CommonExcelExport
+		인쇄	fn_CommonPrint
+		닫기	공통에서 처리
+===============================================================================*/ 
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//---------------------------------------------------------
+function fn_CommonSave()
+{	
+	fn_D1_Save();
+}
+
+function fn_CommonAddRow(){
+		
+	if(ds_GvRmInst.GetRowCount() == 0){
+		
+		if(ds_GvRmInst_copy.GetRowCount() > 0){			
+			ds_GvRmInst.Copy("ds_GvRmInst_copy");						
+			ds_GvRmInst.UpdateControl = false;
+			ds_GvRmInst.SetRowType(ds_GvRmInst.row, "update");		
+		}else{		
+			ds_GvRmInst.AddRow();			
+		}
+	}
+}
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_SAVE
+//   설명  : 사유지 점용료 협의사항를 등록/업데이트한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Save(value)
+{	
+	if(ds_GvRmInst.GetRowType(0) == "normal"){
+		alert("등록 또는 변경 내용이 존재하지 않습니다. ");
+		return false;
+	}
+	
+	if(edt_DiscuYmd.Value == ''){
+		alert("협의일자를 입력하세요. ");
+		return false;
+	}
+	
+	if(edt_DiscuFirmNm.Text == ''){
+		alert("협의회사를 입력하세요. ");
+		return false;
+	}
+	
+	if(edt_DiscuTakerNm.Text == ''){
+		alert("협의담당자 입력하세요. ");
+		return false;
+	}
+	
+	if(Radio.Value == '0'){
+		if(edt_DocuReceiveYmd.Value == ''){
+			alert("접수일자를 입력하세요. ");
+			return false;
+		}	
+		
+		if(edt_ReadYmd.Value == ''){
+			alert("회람일자를 입력하세요. ");
+			return false;
+		}	
+	}	
+		
+	var USER_ID    = gfn_GetGlobalValue("G_USER_NO");   // SESSION ID
+	var USER_IP    = gfn_GetGlobalValue("G_IPADDRESS"); // SESSION IP
+
+	// DB에 입력시킬 다음 값들을  셋팅 시켜 준다.
+	ds_GvRmInst.SetColumn(0, "FACI_NUM"   , ds_GvRmView.GetColumn(0, "FACI_NUM"));
+	ds_GvRmInst.SetColumn(0, "BRANCH_CD"  , ds_GvRmView.GetColumn(0, "BRANCH_CD"));
+	
+	ds_GvRmInst.SetColumn(0, "UPD_EMPID"  , USER_ID       );
+	ds_GvRmInst.SetColumn(0, "UPD_IP"     , USER_IP		  );	
+	ds_GvRmInst.SetColumn(0, "CRT_EMPID"  , USER_ID       );
+	ds_GvRmInst.SetColumn(0, "CRT_IP"     , USER_IP		  );
+						
+	ds_GvRmInst.SetColumn(0, "AGREE_SQUARE", ds_GvRmView.GetColumn(ds_GvRmView.row, "AREA"));
+	
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_RentalDiscuRmkRegisMgr-service" ;					
+	var strInDatasets    = "ds_GvRmInst=ds_GvRmInst:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "save_Tab01";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   	
+	if(ErrorCode<0)
+	{
+		return false;
+	}
+			
+	// history save
+	ds_GvRmInst.UpdateControl = false;
+	ds_GvRmInst.SetRowType(0, "insert");
+
+	var strSvcID         = "";
+	var strPart          = "D10";	
+	var strURL           = "handle.do?ServiceName=D1_RentalDiscuRmkRegisMgr-service" ;					
+	var strInDatasets    = "ds_GvRmInst=ds_GvRmInst:u";
+	var strOutDatasets   = "";		
+	var strArgument      = "his_Tab01";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode<0)
+	{
+		return false;
+	}
+
+	alert("정상적으로 저장을 완료하였습니다. ");
+	return true;
+}
+
+//---------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------
+function fn_CommonSearch(){
+	fn_D1_Find(parent.FaciNumRow, parent.FaciNum, parent.ValueType);
+}	
+
+//------------------------------------------------------------------------------- 
+//   함수명: fn_D1_Find()
+//   설명  :  사유지 점용료 협의사항를 조회한다.
+//   arguments
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_D1_Find(nRow, value, value1)
+{	
+    var strSvcID        = "fn_D1_Find";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1_RentalDiscuRmkRegisMgr-service"
+						+ "&FACI_NUM=" + value
+						;
+							
+	var strInDatasets   = "";
+	
+	// 협의사항 DataSet & 협의의정보 DataSet	
+	var strOutDatasets  = "ds_GvRmView=ds_GvRmView ds_GvRmInst=ds_GvRmInst ds_GvRmHis=ds_GvRmHis";
+	var strArgument     = "view_Tab01";
+	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+		
+	if(ds_GvRmInst.GetColumn(0, "DOCU_RECEIVE_YMD") == '' || ds_GvRmInst.GetColumn(0, "DOCU_RECEIVE_YMD") == null){
+		Radio.Value = 1;
+		Radio_OnClick();
+	}else{
+		Radio.Value = 0;
+		Radio_OnClick();
+	}
+	
+	Button0.Enable = true;
+	Button1.Enable = true;
+	
+	if(ds_GvRmInst.RowCount() == 0)
+	{
+		Radio.Value = 0;
+		Radio_OnClick();
+	}
+		
+	ds_GvRmInst_copy.ClearData();
+	ds_GvRmInst_copy.Copy("ds_GvRmInst");
+	
+	if(ds_GvRmInst.GetColumn(0, "DISCU_YMD") == null || ds_GvRmInst.GetColumn(0, "DISCU_YMD") == ''){
+		ds_GvRmInst.ClearData();
+	}	
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: Button4_OnClick()
+//   설명: 사원번호 조회클릭시 우편번호 조회 popup화면 로딩
+// arguments   
+//          obj: 사용된 객체를 전달 한다.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Button4_OnClick(obj)
+{
+	var retValue = array();
+	
+	/*
+	if(obj = Button0){				
+		retValue = gfn_E2_SearchOutEmplDialogDept(edt_SalesTakerName.Text, '영업공사');				
+	}else if(obj = Button1){
+		retValue = gfn_E2_SearchOutEmplDialogDept(edt_DocuTakerName.Text, '안전공급');
+	}
+	*/
+	
+	// 2012.10.11. 이건민 - 권기철 과장님 요청사항으로 로직변경 (기본적으로 영업공사/안전공급 셋팅 삭제)
+	if(obj = Button0){				
+		retValue = gfn_E2_SearchOutEmplDialogDept(edt_SalesTakerName.Text, '');
+	}else if(obj = Button1){
+		retValue = gfn_E2_SearchOutEmplDialogDept(edt_DocuTakerName.Text, '');
+	}
+ 
+	 if(retValue != null && length(retValue)!=0)
+	 {
+	 
+		// 2012.10.11. 이건민 - 권기철 과장님 요청사항으로 로직변경 (영업공사/안전공급 비교 로직 삭제)
+		if(obj = Button0){		
+			edt_SalesTakerNm.Text   = retValue[0];
+			edt_SalesTakerName.Text = retValue[1];
+			return;
+		 }
+		 
+		 if(obj = Button1){	 
+			edt_DocuTakerNm.Text   	= retValue[0];
+			edt_DocuTakerName.Text 	= retValue[1];
+			return;
+		 }
+		
+		// 2012.10.11. 이건민 - 권기철 과장님 요청사항으로 주석처리
+		/*
+		 if(obj = Button0){		
+			if(substr(retValue[3], 0, 4) == '영업공사'){
+				edt_SalesTakerNm.Text   = retValue[0];
+				edt_SalesTakerName.Text = retValue[1];
+				return;
+			}else{
+				alert('영업공사팀만 선택 가능합니다. ');
+				edt_SalesTakerNm.Text   = "";
+				edt_SalesTakerName.Text = "";
+				return;
+			}
+		 }
+		 
+		 if(obj = Button1){	 
+			if(substr(retValue[3], 0, 4) == '안전공급'){
+				edt_DocuTakerNm.Text   = retValue[0];
+				edt_DocuTakerName.Text = retValue[1];
+				return; 
+			}else{
+				alert('안전공급팀만 선택 가능합니다. ');
+				edt_DocuTakerNm.Text   = "";
+				edt_DocuTakerName.Text = "";
+				return;			
+			}
+		 }
+		*/
+	 } 
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: Radio_OnClick()
+//   설명: 공문사용여부에 대한 라디오 버튼
+// arguments   
+//          obj: 사용된 객체를 전달 한다.
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function Radio_OnClick(obj)
+{	
+	if(Radio.Value == 0)
+	{
+		for(var i=1; i<=7; i++){
+			eval("title_" + i).Visible = true;			
+		}
+		
+		edt_DocuReceiveYmd.Visible = true;			
+		edt_ReadYmd.Visible = true;			
+		edt_SalesTakerNm.Visible = true;			
+		edt_SalesTakerName.Visible = true;			
+		edt_DocuTakerNm.Visible = true;			
+		edt_DocuTakerName.Visible = true;			
+		Button0.Visible = true;			
+		Button1.Visible = true;	
+		edt_DocuSendPlace.Visible = true;			
+		edt_DocuReceivePlac.Visible = true;			
+		edt_Rmk.Visible = true;			
+		bar_1.Visible = true;			
+		bar_2.Visible = true;			
+		bar_3.Visible = true;
+		
+		Image1.Top = 271;
+		
+		Guid_Before.Top = 289;
+		Guid_Before.Height = 162;		
+	}else{
+		for(var i=1; i<=7; i++){
+			eval("title_" + i).Visible = false;
+		}
+		edt_DocuReceiveYmd.Visible = false;
+		edt_ReadYmd.Visible = false;
+		edt_SalesTakerNm.Visible = false;
+		edt_SalesTakerName.Visible = false;
+		edt_DocuTakerNm.Visible = false;
+		edt_DocuTakerName.Visible = false;
+		Button0.Visible = false;
+		Button1.Visible = false;
+		edt_DocuSendPlace.Visible = false;
+		edt_DocuReceivePlac.Visible = false;
+		edt_Rmk.Visible = false;
+		bar_1.Visible = false;
+		bar_2.Visible = false;
+		bar_3.Visible = false;
+		
+		edt_DocuReceiveYmd.Text = '';
+		edt_ReadYmd.Text = '';
+		edt_SalesTakerNm.Text = '';
+		edt_SalesTakerName.Text = '';
+		edt_DocuTakerNm.Text = '';
+		edt_DocuTakerName.Text = '';
+		edt_DocuSendPlace.Text = '';
+		edt_DocuReceivePlac.Text = '';
+		edt_Rmk.Text = '';
+		
+		Image1.Top = 202;
+		
+		Guid_Before.Top = 218;
+		Guid_Before.Height = 233;
+	}
+}
+
+function fn_D1_Print(){
+	PrintScreen();
+}
+
+function Guid_Before_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	gfn_D1_SetGrid_Sort(Guid_Before);
+}
+
+// 데이터셋 초기화
+function fn_D1_ClearData(){
+	ds_GvRmView.ClearData();
+	ds_GvRmHis.ClearData();
+	ds_GvRmInst.ClearData();
+	ds_GvRmView.ClearData();
+}
+
+function edt_DiscuYmd_OnChanged(obj,strOldText,strNewText)
+{
+	if(fn_DateCheckTodayGrid(edt_DiscuYmd, "협의일자") == 0){
+		edt_DiscuYmd.Value = '';
+	}
+}
+
+
+function edt_DocuReceiveYmd_OnChanged(obj,strOldText,strNewText)
+{
+	if(Radio.Value == '0'){
+
+		if(fn_DateCheckTodayGrid(edt_DocuReceiveYmd, "접수일자") == 0){
+			edt_DocuReceiveYmd.Value = '';
+		}
+	}
+}
+
+function edt_ReadYmd_OnChanged(obj,strOldText,strNewText)
+{
+	if(Radio.Value == '0'){
+		
+		if(fn_DateCheckTodayGrid(edt_ReadYmd, "회람일자") == 0){
+			edt_ReadYmd.Value = '';
+		}
+	}
+}
+]]></Script>
+</Window>

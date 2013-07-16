@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="700" Id="D1402060010U" Left="8" OnLoadCompleted="D1402060010U_OnLoadCompleted" PidAttrib="7" Title="GIS데이터&#32;수정의뢰서작성" Top="8" Ver="1.0" Width="645" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Search">
+				<Contents>
+					<colinfo id="JOIN_YMD" size="256" type="STRING"/>
+					<colinfo id="DIG_WORK_PATH_FLAG" size="256" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" type="STRING"/>
+					<colinfo id="EMPID_1" size="256" type="STRING"/>
+					<colinfo id="EMPID_2" size="256" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" type="STRING"/>
+					<colinfo id="ZIP_NO2" size="256" type="STRING"/>
+					<colinfo id="BASIC_ADDR" size="256" type="STRING"/>
+					<colinfo id="DETA_ADDR" size="256" type="STRING"/>
+					<colinfo id="WORK_NM" size="256" type="STRING"/>
+					<colinfo id="BEFO_MATER_FLAG" size="256" type="STRING"/>
+					<colinfo id="BEFO_PIPE_DIAM_CD" size="256" type="STRING"/>
+					<colinfo id="COATING_STS" size="256" type="STRING"/>
+					<colinfo id="CONF_MATER_FLAG" size="256" type="STRING"/>
+					<colinfo id="CONF_DIAM_CD" size="256" type="STRING"/>
+					<colinfo id="RMK" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static10" Left="110" Style="table" TabOrder="25" Top="115" VAlign="Middle" Width="530" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static18" Left="110" Style="table" TabOrder="19" Top="94" VAlign="Middle" Width="530" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static0" Left="110" Style="table" TabOrder="15" Top="73" VAlign="Middle" Width="530" WordWrap="TRUE"></Static>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="GIS데이터&#32;수정의뢰서" Transparent="TRUE" Width="645"></Image>
+		<Image Align="Left" Height="9" Id="Image3" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="2" Text="도면" Top="311" Width="117"></Image>
+		<Static Align="Center" BKColor="white" Border="Flat" Height="369" Id="Static9" Left="5" Style="photo" TabOrder="3" Text="도면캡쳐&#32;&amp;&#32;스케치" Top="326" VAlign="Middle" Width="635" WordWrap="TRUE"></Static>
+		<Div Height="29" Id="Div0" Left="42" TabOrder="4" Text="Div0" Top="44" Url="globals::ComButton.xml" Width="598">
+			<Contents></Contents>
+		</Div>
+		<Calendar BindDataset="ds_Search" Border="Flat" Column="JOIN_YMD" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="Calendar2" Left="143" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="5" Top="75" WeeksFont="Default,-1" Width="176"></Calendar>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="MAINTER_NUM" Height="18" Id="Edit8" ImeMode="none" Left="143" Style="edit" TabOrder="6" Top="96" Width="176"></Edit>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="BASIC_ADDR" Height="18" Id="Edit6" ImeMode="none" Left="247" Style="edit" TabOrder="7" Top="117" Width="180"></Edit>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="ZIP_NO2" Height="18" Id="Edit0" ImeMode="none" Left="190" Style="edit" TabOrder="8" Top="117" Width="38"></Edit>
+		<Static Height="13" Id="C2502030010F" Left="182" Style="static" TabOrder="9" Text="-" Top="120" Width="10"></Static>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="ZIP_NO1" Height="18" Id="Edit1" ImeMode="none" Left="143" Style="edit" TabOrder="10" Top="117" Width="38"></Edit>
+		<Combo BindDataset="ds_Search" Border="Flat" Column="DIG_WORK_PATH_FLAG" Height="18" Id="Combo7" Left="459" Style="combo" TabOrder="11" Top="74" Width="178"></Combo>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static2" Left="322" Style="pop_table" TabOrder="13" Text="공사구분" Top="73" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static25" Left="109" Style="table" TabOrder="17" Top="186" VAlign="Middle" Width="108" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static8" Left="5" Style="pop_table" TabOrder="12" Text="관리번호" Top="94" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static1" Left="5" Style="pop_table" TabOrder="14" Text="확인일자" Top="73" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Center" Border="Flat" Height="22" Id="Static23" Left="5" Style="table" TabOrder="18" Text="시설내역" Top="165" VAlign="Middle" Width="635" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static5" Left="110" Style="table" TabOrder="26" Top="136" VAlign="Middle" Width="530" WordWrap="TRUE"></Static>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="WORK_NM" Height="18" Id="Edit3" ImeMode="none" Left="143" Style="edit" TabOrder="20" Top="138" Width="493"></Edit>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="EMPID_1" Height="18" Id="Edit23" ImeMode="none" Left="460" Style="edit" TabOrder="21" Top="96" Width="176"></Edit>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static34" Left="322" Style="pop_table" TabOrder="23" Text="입회자" Top="94" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static35" Left="5" Style="pop_table" TabOrder="22" Text="공사명" Top="136" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static40" Left="5" Style="pop_table" TabOrder="24" Text="주소" Top="115" VAlign="Middle" Width="135" WordWrap="TRUE"></Static>
+		<Button Cursor="HAND" Height="17" Id="C3601030040F_T01" ImageID="search" Left="229" OnClick="Button8_OnClick" TabOrder="27" Text="Button8" Top="118" Width="17"></Button>
+		<Edit BindDataset="ds_Search" Border="Flat" Column="DETA_ADDR" Height="18" Id="Edit24" ImeMode="none" Left="428" Style="edit" TabOrder="28" Top="117" Width="208"></Edit>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static21" Left="320" Style="table" TabOrder="30" Top="186" VAlign="Middle" Width="108" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="43" Id="Static24" Left="531" Style="table" TabOrder="32" Top="186" VAlign="Middle" Width="109" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="43" Id="Static22" Left="427" Style="pop_table" TabOrder="31" Text="코팅상태" Top="186" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static12" Left="216" Style="pop_table" TabOrder="29" Text="기존관경" Top="186" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static29" Left="5" Style="pop_table" TabOrder="16" Text="기존재질" Top="186" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Search" Border="Flat" Column="BEFO_MATER_FLAG" Height="18" Id="Combo0" Left="112" Style="combo" TabOrder="33" Top="187" Width="101"></Combo>
+		<Combo BindDataset="ds_Search" Border="Flat" Column="BEFO_PIPE_DIAM_CD" Height="18" Id="Combo1" Left="323" Style="combo" TabOrder="34" Top="187" Width="102"></Combo>
+		<Combo BindDataset="ds_Search" Border="Flat" Column="COATING_STS" Height="18" Id="Combo2" Left="534" Style="combo" TabOrder="35" Top="198" Width="103"></Combo>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static3" Left="109" Style="table" TabOrder="37" Top="207" VAlign="Middle" Width="108" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="22" Id="Static4" Left="320" Style="table" TabOrder="39" Top="207" VAlign="Middle" Width="108" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static6" Left="216" Style="pop_table" TabOrder="38" Text="확인관경" Top="207" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Combo BindDataset="ds_Search" Border="Flat" Column="CONF_MATER_FLAG" Height="18" Id="Combo3" Left="112" Style="combo" TabOrder="40" Top="208" Width="101"></Combo>
+		<Combo BindDataset="ds_Search" Border="Flat" Column="CONF_DIAM_CD" Height="18" Id="Combo4" Left="323" Style="combo" TabOrder="41" Top="208" Width="102"></Combo>
+		<Static Align="Right" Border="Flat" Height="22" Id="Static11" Left="5" Style="pop_table" TabOrder="36" Text="확인재질" Top="207" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Static Align="Right" Border="Flat" Height="77" Id="Static13" Left="5" Style="pop_table" TabOrder="42" Text="특기사항" Top="228" VAlign="Middle" Width="105" WordWrap="TRUE"></Static>
+		<Static BKColor="white" Border="Flat" Height="77" Id="Static14" Left="109" Style="table" TabOrder="43" Top="228" VAlign="Middle" Width="531" WordWrap="TRUE"></Static>
+		<TextArea BindDataset="ds_Search" Border="Flat" Column="RMK" Height="73" Id="TextArea0" Left="113" Style="textarea" TabOrder="44" Text="TextArea0" Top="230" VScroll="TRUE" Width="523"></TextArea>
+	</Form>
+	<Script><![CDATA[#include "JS::COMMONA10001.js";
+
+function D1402060010U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_D10_Serach();
+}
+
+
+function fn_CommonSearch()
+{
+    fn_D10_Serach();
+}
+
+//-----------------------------------------
+//   조회 함수 
+//-----------------------------------------
+function fn_D10_Serach()
+{
+    var vgisNum="1000000001";
+    var vgiscd="01";
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkReqrRptMgr-service&search=1"
+	            + "&GIS_UPD_REQ_NUM="+ vgisNum
+	            + "&GIS_UPD_REQ_PATH_CD="+ vgiscd
+	            ;
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Search=ds_Search";
+	var strArgument     = "";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+
+			   );
+
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+
+}]]></Script>
+</Window>

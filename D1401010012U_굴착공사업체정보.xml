@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1401010012U" Left="8" OnLoadCompleted="D1401010012U_OnLoadCompleted" OnUnloadCompleted="D1401010012U_OnUnloadCompleted" PidAttrib="7" Title="굴착공사업체&#32;정보" Top="8" Ver="1.0" Width="680" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" type="STRING"/>
+					<colinfo id="DIG_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="CHIEF_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_DDD" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_EXN" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_NUM" size="256" type="STRING"/>
+					<colinfo id="RMK" size="256" type="STRING"/>
+					<colinfo id="COM_ID" size="256" type="STRING"/>
+					<colinfo id="CHK" size="256" type="STRING"/>
+					<colinfo id="DIG_FIRM_NUM" size="256" type="STRING"/>
+					<colinfo id="DIG_NUM" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_cond">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" type="STRING"/>
+					<colinfo id="DIG_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="CHIEF_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_DDD" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_EXN" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_NUM" size="256" type="STRING"/>
+					<colinfo id="RMK" size="256" type="STRING"/>
+					<colinfo id="COM_ID" size="256" type="STRING"/>
+					<colinfo id="CHK" size="256" type="STRING"/>
+					<colinfo id="DIG_FIRM_NUM" size="256" type="STRING"/>
+					<colinfo id="DIG_NUM" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Chk">
+				<Contents>
+					<colinfo id="NUM_CHK" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_del">
+				<Contents>
+					<colinfo id="DIG_FIRM_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="굴착공사업체&#32;정보" Transparent="TRUE" Width="680"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="92"></Button>
+		<Div Height="24" Id="Div0" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="675">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user16" Bottom="87" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="675" TabOrder="4" Top="84" Type="Rectangle" Width="670"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="395" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="308" Id="grd_Insert" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" OnHeadClick="grd_Insert_OnHeadClick" Right="675" SelColor="MENU" Style="grid_pop" TabOrder="5" TabStop="true" Top="87" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="670">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="30"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="110"/>
+						<col width="90"/>
+						<col width="51"/>
+						<col width="48"/>
+						<col width="51"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="checkbox"/>
+						<cell col="1" display="text" text="구분"/>
+						<cell col="2" display="text" text="구청"/>
+						<cell col="3" display="text" text="업체명"/>
+						<cell col="4" display="text" text="소장"/>
+						<cell col="5" colspan="3" display="text">
+							<cell col="0" display="text"/>
+							<cell col="1" display="text" text="연락처"/>
+							<cell col="2" display="text"/>
+						</cell>
+						<cell col="8" display="text" text="비고"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHK" display="checkbox" edit="checkbox" expandsize="18" wordwrap="word"/>
+						<cell col="1" colid="BRANCH_CD" combodataset="ds_Multi" display="combo" edit="combo" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="ZIP_NO1" combodataset="ds_Multi" display="combo" edit="combo" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="DIG_FIRM_NM" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="CHIEF_NM" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="5" colid="WORK_FIRM_TEL_DDD" display="normal" edit="number" limit="4"/>
+						<cell col="6" colid="WORK_FIRM_TEL_EXN" display="normal" edit="integer" limit="4"/>
+						<cell col="7" colid="WORK_FIRM_TEL_NUM" display="normal" edit="number" expandsize="18" limit="4" wordwrap="word"/>
+						<cell col="8" colid="RMK" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button ButtonStyle="TRUE" Height="19" Id="btn_AAA" ImageID="btn_4_add" Left="519" LeftMargin="21" OnClick="btn_AAA_OnClick" Style="button" TabOrder="6" Text="업체추가" Top="63" Width="76"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="deleteKey" ImageID="btn_4_Cancellation" Left="599" LeftMargin="21" OnClick="fn_CommonDeleteRow" Style="button" TabOrder="7" Text="업체삭제" Top="63" Width="76"></Button>
+	</Form>
+	<Script><![CDATA[
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+
+
+function D1401010012U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+
+	fn_Init();
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+
+function fn_Init()
+{
+	gfn_SetGrdComboBox_Comcode("grd_Insert",1,"B10037");
+	gfn_SetGrdComboBox_Comcode("grd_Insert",2,"B10004");
+	gfn_SetGrdComboBox_Comcode("grd_Insert",5,"A10110");
+}
+
+
+//----------------------
+// 업체 추가 버튼 
+//----------------------
+function btn_AAA_OnClick(obj)
+{   
+	var idx = ds_Multi.AddRow();			
+}
+
+//-------------------------
+// 업체 삭제 버튼 
+//-------------------------
+function fn_CommonDeleteRow()
+{   var j=0;
+   	for(var i=ds_Multi.RowCount(); i>-1; i--)
+   	{ 
+		if(ds_Multi.GetColumn(i,"CHK")=="1")
+		{   
+			ds_del.AddRow();
+			ds_del.UpdateControl=false;
+			ds_del.SetRowType(j,"delete");
+			ds_del.SetColumn(j,"DIG_FIRM_NUM",ds_Multi.GetColumn(i,"DIG_FIRM_NUM"));
+			ds_Multi.DeleteRow(i);
+			j++;
+		}
+	}
+}
+
+//-----------------------
+//  체크박스 체크
+//-----------------------
+function grd_Insert_OnHeadClick(obj,nCell,nX,nY,nPivotIndex)
+{
+	if(nCell == 0){
+	gfn_GridSelChk(obj, "CHK");
+	}
+	
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonSearch()
+//   설명  :  조회 클릭시 굴착공사업체정보 조회 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+
+function fn_CommonSearch()
+{
+    
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkEnterpriseInfoMgr-service&Search=1";       
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+	
+
+   
+}
+
+//-----------------------------
+// 공통저장 버튼 
+//  
+//-----------------------------
+
+function fn_CommonSave()
+{
+   var h=0;
+   for (var i = 0; i < ds_Multi.RowCount(); i ++) {
+        
+       if (ds_Multi.GetColumn(i, "CHK") == 1) {
+       
+           var j = ds_Multi.GetRowType(i);
+           
+           ds_cond.addrow();
+           
+           ds_cond.SetColumn(h, "BRANCH_CD"   , ds_Multi.GetColumn(i, "BRANCH_CD"));  
+		   ds_cond.SetColumn(h, "ZIP_NO1"     , ds_Multi.GetColumn(i, "ZIP_NO1")); 
+		   ds_cond.SetColumn(h, "DIG_FIRM_NM" , ds_Multi.GetColumn(i, "DIG_FIRM_NM")); 
+		   ds_cond.SetColumn(h, "CHIEF_NM"    , ds_Multi.GetColumn(i, "CHIEF_NM")); 
+		   ds_cond.SetColumn(h, "DIG_FIRM_NUM", ds_Multi.GetColumn(i, "DIG_FIRM_NUM")); 
+		   
+		   ds_cond.SetColumn(h, "WORK_FIRM_TEL_DDD", ds_Multi.GetColumn(i, "WORK_FIRM_TEL_DDD"));
+		   ds_cond.SetColumn(h, "WORK_FIRM_TEL_EXN", ds_Multi.GetColumn(i, "WORK_FIRM_TEL_EXN"));
+		   ds_cond.SetColumn(h, "WORK_FIRM_TEL_NUM", ds_Multi.GetColumn(i, "WORK_FIRM_TEL_NUM"));
+		   ds_cond.SetColumn(h, "RMK", ds_Multi.GetColumn(i, "RMK"));
+		   
+		   if(j=="insert"){
+		        fn_D10_Chk();
+				ds_cond.UpdateControl=false;
+				ds_cond.SetRowType(h,"Insert");
+				var num_chk = ds_Chk.GetColumn(0,"NUM_CHK");  
+				var temp_chk = "1"+num_chk;
+				num_chk= toString(parseInt(temp_chk)+1);
+				temp_chk = SubStr(num_chk,1,3);
+				ds_cond.SetColumn(h, "DIG_NUM",temp_chk );
+		  }else if(j=="update")
+          {
+				ds_cond.UpdateControl=false;
+				ds_cond.SetRowType(h,"Update");
+		  }
+		  ds_cond.SetColumn(h, "CRT_EMPID", "00000000");
+	      ds_cond.SetColumn(h, "CRT_IP","192.1.1.1");
+         h++;
+       }
+   } 
+   
+   fn_d10_save();
+}
+
+//----------------------
+// 함수명: fn_d10_save()
+// return: 없음
+// 내용  :  등록, 수정 
+//----------------------
+function fn_d10_save()
+{   
+    	
+	var strSvcID = "";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_DiggingWorkEnterpriseInfoMgr-service&Insert=1";       
+	var strInDatasets   = "ds_cond=ds_cond:u ds_del=ds_del:u";
+	var strOutDatasets  = "";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+}
+
+
+
+
+//-------------------
+// seq check
+//-------------------
+function fn_D10_Chk()
+{
+   
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkEnterpriseInfoMgr-service&chk=1";       
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Chk=ds_Chk";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		alert(ErrorMsg);
+		return;
+	}
+}
+
+function D1401010012U_OnUnloadCompleted(obj)
+{
+	if(ds_Multi.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 값이 있습니다. 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+
+]]></Script>
+</Window>

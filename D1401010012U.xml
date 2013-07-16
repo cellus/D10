@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="400" Id="D1401010012U" Left="8" OnLoadCompleted="D1401010012U_OnLoadCompleted" OnUnloadCompleted="D1401010012U_OnUnloadCompleted" PidAttrib="7" Title="굴착공사업체&#32;정보" Top="8" Ver="1.0" Width="680" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Multi">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_FIRM_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHIEF_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RMK" size="256" summ="default" type="STRING"/>
+					<colinfo id="COM_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHK" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_FIRM_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_WORK_TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_TAKER_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_TAKER_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="DIG_TAKER_TEL_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_cond">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" type="STRING"/>
+					<colinfo id="ZIP_NO1" size="256" type="STRING"/>
+					<colinfo id="DIG_FIRM_NM" size="256" type="STRING"/>
+					<colinfo id="CHIEF_NM" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_DDD" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_EXN" size="256" type="STRING"/>
+					<colinfo id="WORK_FIRM_TEL_NUM" size="256" type="STRING"/>
+					<colinfo id="RMK" size="256" type="STRING"/>
+					<colinfo id="COM_ID" size="256" type="STRING"/>
+					<colinfo id="CHK" size="256" type="STRING"/>
+					<colinfo id="DIG_FIRM_NUM" size="256" type="STRING"/>
+					<colinfo id="DIG_NUM" size="256" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Chk">
+				<Contents>
+					<colinfo id="NUM_CHK" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_del">
+				<Contents>
+					<colinfo id="DIG_FIRM_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="104" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="675" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="6" Top="65" Type="RoundRect" Width="670"></Shape>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" LeftMargin="33" Style="popup_title" TabOrder="1" Text="굴착공사업체&#32;정보" Transparent="TRUE" Width="680"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-152" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="92"></Button>
+		<Div Height="24" Id="Div0" TabOrder="3" Text="Div0" Top="39" Url="globals::ComButton.xml" Width="675">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="user16" Bottom="112" Height="3" Id="Shape2" Left="5" LineWidth="0" Right="675" TabOrder="4" Top="109" Type="Rectangle" Width="670"></Shape>
+		<Grid AutoEnter="TRUE" BindDataset="ds_Multi" BkColor2="user19" BoldHead="FALSE" Border="None" Bottom="396" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="284" Id="grd_Insert" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" Right="675" SelColor="MENU" Style="grid_pop" TabOrder="5" TabStop="true" Top="112" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="670">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="30"/>
+						<col fix="left" width="84"/>
+						<col fix="left" width="82"/>
+						<col fix="left" width="117"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="90"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="232"/>
+					</columns>
+					<head>
+						<cell col="0" display="normal" text="No"/>
+						<cell col="1" display="text" text="지사"/>
+						<cell col="2" display="text" text="시/구"/>
+						<cell col="3" display="text" text="업체명"/>
+						<cell col="4" display="text" text="굴착종류"/>
+						<cell col="5" display="text" text="굴착담당자"/>
+						<cell col="6" colspan="3" display="text">
+							<cell col="0" display="text"/>
+							<cell col="1" display="text" text="연락처"/>
+							<cell col="2" display="text"/>
+						</cell>
+						<cell col="9" display="text" text="현장소장"/>
+						<cell col="10" colspan="3" display="text">
+							<cell col="0" display="text"/>
+							<cell col="1" display="text" text="연락처"/>
+							<cell col="2" display="text"/>
+						</cell>
+						<cell col="13" display="text" text="비고"/>
+					</head>
+					<body>
+						<cell align="center" col="0" display="normal" edit="normal" expandsize="18" expr="rowindex&#32;+1" wordwrap="word"/>
+						<cell col="1" colid="BRANCH_CD" display="combo" edit="combo" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="ZIP_NO1" display="combo" edit="combo" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="DIG_FIRM_NM" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="4" colid="JOB_CD" display="text" expandimage="combo" expandshow="true"/>
+						<cell col="5" colid="DIG_WORK_TAKER_NM" display="text" edit="normal"/>
+						<cell col="6" colid="DIG_TAKER_TEL_DDD" display="combo" edit="combo" expandimage="combo" expandshow="true"/>
+						<cell col="7" colid="DIG_TAKER_TEL_EXN" display="text" edit="numchar" limit="4"/>
+						<cell col="8" colid="DIG_TAKER_TEL_NUM" display="text" edit="numchar" limit="4"/>
+						<cell col="9" colid="CHIEF_NM" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+						<cell col="10" colid="WORK_FIRM_TEL_DDD" display="normal" edit="number" expandimage="combo" expandshow="true" limit="4"/>
+						<cell col="11" colid="WORK_FIRM_TEL_EXN" display="normal" edit="numchar" limit="4"/>
+						<cell col="12" colid="WORK_FIRM_TEL_NUM" display="normal" edit="numchar" expandsize="18" limit="4" wordwrap="word"/>
+						<cell col="13" colid="RMK" display="text" edit="normal" expandsize="18" wordwrap="word"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="user8" Bottom="99" Height="29" Id="Shape0" Left="10" LineWidth="0" Right="670" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="7" Top="70" Type="Rectangle" Width="660"></Shape>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="19" LeftMargin="12" Style="blt_search_Indis" TabOrder="10" TabStop="FALSE" Text="지사" Top="75" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_BranchCd" Left="62" OnChanged="cob_BranchCd_OnChanged" ResetIndex="FIRST" Search="FILTERED" Style="combo_indis" TabOrder="8" Top="75" Width="84"></Combo>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="152" LeftMargin="12" Style="blt_search_Indis" TabOrder="11" TabStop="FALSE" Text="시/구" Top="75" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ZipNo" Left="198" ResetIndex="FIRST" Style="combo_indis" TabOrder="9" Top="75" Width="84"></Combo>
+		<Image Align="Left" Height="18" Id="Image1" ImageID="blt" Left="288" LeftMargin="12" Style="blt_search_Indis" TabOrder="13" TabStop="FALSE" Text="굴착종류" Top="75" Width="59"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_JobCd" Left="358" ResetIndex="FIRST" Style="combo_indis" TabOrder="12" Top="75" Width="84"></Combo>
+	</Form>
+	<Script><![CDATA[/*******************************************************************************
+* FormID     : D1401010012U.xml
+* Form 설명  : 굴착공사업체를 등록 조회한다.
+* 시스템 명  : 안전공급(D1)
+* 작성자     : 문달호
+* 작성일     : 2009-12-20
+* 변경내용   : 
+*******************************************************************************/
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONA10005.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONA10008.js";
+#include "JS::COMMONE20001.js";
+
+var save_flag = "";
+
+function D1401010012U_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+
+	fn_Init();
+	gfn_D1_SetGrid_Sort(grd_Insert);
+}
+
+//---------------------------------------------------------
+//	초기 설정
+//---------------------------------------------------------
+function fn_Init()
+{
+    gfn_D1_All_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_BranchCd")); // 지사 
+    fn_SetComboBox_Comcode("1", cob_BranchCd.Value, fn_setDsObject_Comcode("1", "cob_ZipNo")); // 시/구
+    gfn_D1_All_SetComboBox_Comcode("D10166",gfn_setDsObject_Comcode("cob_JobCd"),""); //작업종류
+	gfn_D1_SetGrdComboBox_Comcode("grd_Insert",1);
+	//gfn_SetGrdComboBox_Comcode("grd_Insert",1,"B10037");
+	gfn_SetGrdComboBox_Comcode("grd_Insert",4,"D10166");
+	gfn_SetGrdComboBox_Comcode("grd_Insert",2,"B10004");
+	gfn_SetGrdComboBox_Comcode("grd_Insert",6,"A10110");
+	gfn_SetGrdComboBox_Comcode("grd_Insert",10,"A10110");
+	fn_CommonSearch();
+}
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonExcelExport()
+//   설명  :  엑셀다운 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    
+    SearchCondition = SearchCondition + "지사 :" + RPad(cob_BranchCd.Text," ",20);
+    SearchCondition = SearchCondition + "시/구  :" + RPad(cob_ZipNo.Text," ",20);
+    SearchCondition = SearchCondition + "공사종류 :" + RPad(cob_JobCd.Text," ",20);
+    gfn_ExportExcel("굴착업체정보", 5, SearchCondition, "grd_Insert"); 
+	
+}
+//----------------------
+// 업체 추가 버튼 
+//----------------------
+function fn_CommonAddRow()
+{   
+	save_flag = "insert";
+	ds_Multi.AddRow();				
+}
+
+//-------------------------
+// 업체 삭제 버튼 
+//-------------------------
+function fn_CommonDeleteRow()
+{
+	if(confirm("삭제하시겠습니까?"))
+    {
+		save_flag = "delete";
+		ds_Multi.DeleteRow(grd_Insert.ClickedRow);
+		fn_CommonSave();
+		fn_CommonSearch();
+	}
+}
+
+
+//-------------------------------------------------------------------------------
+//   함수명: fn_CommonSearch()
+//   설명  :  조회 클릭시 굴착공사업체정보 조회 
+//   arguments   
+//   obj
+//   return 내용: 없음
+//------------------------------------------------------------------------------- 
+function fn_CommonSearch()
+{
+    
+	var strSvcID = "";
+	var strPart = "D10";
+	var strURL  = "handle.do?ServiceName=D1_DiggingWorkEnterpriseInfoMgr-service&Search=1"
+		        + "&BRANCH_CD="+cob_BranchCd.VALUE
+	            + "&ZIP_NO="+cob_ZipNo.Value
+	            + "&JOB_CD="+cob_JobCd.Value
+	            ;       
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+	if(ds_Multi.GetRowCount()<1)
+	{
+		
+		grd_Insert.NoDataText = gfn_GetMessage("M000022","%AAA%","조회결과가");
+	}
+    save_flag="";
+   
+}
+
+//---------------------------------------------------------------------
+//  Function : fn_CommonSave()
+//  comment  : 업체를 등록 , 수정한다. 
+//  arg      :
+//  return   : 없음 
+//---------------------------------------------------------------------
+function fn_CommonSave()
+{   
+    for(var i=0;i<ds_Multi.GetRowCount();i++)
+    {
+        
+		ds_Multi.SetColumn(i, "CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+		ds_Multi.SetColumn(i, "CRT_IP",gfn_GetGlobalValue("G_IPADDRESS"));	
+	}
+	
+	var strSvcID = "";
+	var strPart  = "D10";
+	var strURL   = "handle.do?ServiceName=D1_DiggingWorkEnterpriseInfoMgr-service&Insert=1";       
+	var strInDatasets   = "ds_Multi=ds_Multi:u";
+	var strOutDatasets  = "";
+	var strArgument     = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+		
+	if(ErrorCode < 0)
+	{    
+		return;
+	}
+    else
+    {
+        if(save_flag == "delete")
+        {
+			alert(gfn_GetMessage("M000009", "%AAA%", "정상적으로 삭제를"));
+		}
+		else
+		{
+			alert(gfn_GetMessage("M000009", "%AAA%", "정상적으로 저장을"));
+		}
+		save_flag="";
+    }
+}
+
+
+// 화면 종료시 이벤트 
+function D1401010012U_OnUnloadCompleted(obj)
+{
+	if(ds_Multi.GetUpdate())
+	{
+		if(!confirm(gfn_GetMessage("M000016","%AAA%","변경된 값이 있습니다. 종료")))
+		 {
+			 return false;
+		 }	
+	}
+}
+
+// 지사선택시 이벤트 
+function cob_BranchCd_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	fn_SetComboBox_Comcode("1", cob_BranchCd.Value, fn_setDsObject_Comcode("1", "cob_ZipNo")); // 시/구
+}
+]]></Script>
+</Window>

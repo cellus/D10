@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="568" Id="D1602050010F" Left="8" OnLoadCompleted="D1602050010F_OnLoadCompleted" PidAttrib="7" Title="시공사&#32;휴일&#32;근무계획_D1602050010F" Top="8" Ver="1.0" Width="1270" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Detail" OnColumnChanged="ds_Detail_OnColumnChanged">
+				<Contents>
+					<colinfo id="OFFDAY_WAIT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFF_REP_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="STR_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="END_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="LABOR_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PERS" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<record>
+						<CRT_DTM></CRT_DTM>
+						<CRT_EMPID></CRT_EMPID>
+						<CRT_IP></CRT_IP>
+						<END_TIME></END_TIME>
+						<LABOR_AMT></LABOR_AMT>
+						<OFF_REP_FLAG></OFF_REP_FLAG>
+						<OFFDAY_WAIT_YMD></OFFDAY_WAIT_YMD>
+						<PERS></PERS>
+						<STR_TIME></STR_TIME>
+						<UNIT_PRC></UNIT_PRC>
+						<UPD_DTM></UPD_DTM>
+						<UPD_EMPID></UPD_EMPID>
+						<UPD_IP></UPD_IP>
+						<WORK_FIRM_CD></WORK_FIRM_CD>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Prc">
+				<Contents>
+					<colinfo id="MAINTER_REAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Cost">
+				<Contents>
+					<colinfo id="MAINTER_REAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_CLASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_STD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRC" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Excel">
+				<Contents>
+					<colinfo id="OFFDAY_WAIT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WAIT_PERS" size="256" summ="default" type="STRING"/>
+					<colinfo id="LABOR_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_ADD_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL_TAKER" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL_SITE_CHIEF" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_TAX" size="256" summ="default" type="STRING"/>
+					<colinfo id="SUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_WorkFirmCd">
+				<Contents>
+					<colinfo id="WORK_EXEC_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEAL_CD_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi_Ex">
+				<Contents>
+					<colinfo id="OFFDAY_WAIT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="JOB_DESC" size="256" summ="default" type="STRING"/>
+					<colinfo id="WAIT_PERS" size="256" summ="default" type="STRING"/>
+					<colinfo id="LABOR_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_ADD_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL_TAKER" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL_SITE_CHIEF" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="DAY" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_DDD" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_EXN" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_TAX" size="256" summ="default" type="STRING"/>
+					<colinfo id="SUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Ext">
+				<Contents>
+					<colinfo id="IND" size="256" summ="default" type="STRING"/>
+					<colinfo id="SAN" size="256" summ="default" type="STRING"/>
+					<colinfo id="EXT" size="256" summ="default" type="STRING"/>
+					<colinfo id="AN" size="256" summ="default" type="STRING"/>
+					<colinfo id="SUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="IL" size="256" summ="default" type="STRING"/>
+					<colinfo id="LE" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Cost1" OnColumnChanged="ds_Cost1_OnColumnChanged">
+				<Contents>
+					<colinfo id="MAINTER_REAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_CLASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_STD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="EA" size="256" summ="default" type="STRING"/>
+					<colinfo id="AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODENAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFDAY_WAIT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_ADD_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Cost2">
+				<Contents>
+					<colinfo id="MAINTER_REAL_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_CLASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REAL_PRC_STD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="UNIT_PRC" size="256" summ="default" type="STRING"/>
+					<colinfo id="EA" size="256" summ="default" type="STRING"/>
+					<colinfo id="AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODENAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFDAY_WAIT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="ETC_ADD_FLAG" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Multi" OnRowPosChanged="ds_Multi_OnRowPosChanged">
+				<Contents>
+					<colinfo id="OFFDAY_WAIT_YMD" size="8" summ="default" type="CHAR"/>
+					<colinfo id="WORK_FIRM_CD" size="13" summ="default" type="CHAR"/>
+					<colinfo id="WORK_FIRM_CD_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="UPD_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="UPD_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="CRT_DTM" size="7" summ="default" type="DATE"/>
+					<colinfo id="CRT_EMPID" size="9" summ="default" type="CHAR"/>
+					<colinfo id="CRT_IP" size="32" summ="default" type="STRING"/>
+					<colinfo id="MAINTER_NUM" size="11" summ="default" type="CHAR"/>
+					<colinfo id="JOB_DESC" size="160" summ="default" type="STRING"/>
+					<colinfo id="WAIT_PERS" size="3" summ="default" type="DECIMAL"/>
+					<colinfo id="LABOR_AMT" size="9" summ="default" type="DECIMAL"/>
+					<colinfo id="ETC_ADD_AMT" size="9" summ="default" type="DECIMAL"/>
+					<colinfo id="ETC_TAX" size="9" summ="default" type="DECIMAL"/>
+					<colinfo id="LAVOR_SUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TAKER_NM" size="100" summ="default" type="STRING"/>
+					<colinfo id="TAKER_TEL_DDD" size="4" summ="default" type="STRING"/>
+					<colinfo id="TAKER_TEL_EXN" size="4" summ="default" type="STRING"/>
+					<colinfo id="TAKER_TEL_NUM" size="4" summ="default" type="STRING"/>
+					<colinfo id="TEL_TAKER" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_NM" size="100" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_DDD" size="4" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_EXN" size="4" summ="default" type="STRING"/>
+					<colinfo id="SITE_CHIEF_TEL_NUM" size="4" summ="default" type="STRING"/>
+					<colinfo id="TEL_SITE_CHIEF" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_CD" size="6" summ="default" type="CHAR"/>
+					<colinfo id="BILL_YMD" size="8" summ="default" type="CHAR"/>
+					<colinfo id="BILL_SEQ" size="4" summ="default" type="CHAR"/>
+					<colinfo id="BILL_APPRO_YN" size="1" summ="default" type="CHAR"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Lavor_amt">
+				<Contents>
+					<colinfo id="OFFDAY_WAIT_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_FIRM_CD" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="69" Height="39" Id="Shape1" Left="5" LineColor="user7" Right="1255" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="30" Type="RoundRect" Width="1250"></Shape>
+		<Shape BKColor="user8" Bottom="64" Height="29" Id="Shape2" Left="10" LineWidth="0" Right="1249" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="35" Type="Rectangle" Width="1239"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Multi" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="384" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="288" Id="grd_List" InputPanel="FALSE" Left="7" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_List_OnCellClick" OnExpandEdit="grd_List_OnExpandEdit" Right="1257" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="6" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1250">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="110"/>
+						<col width="150"/>
+						<col width="300"/>
+						<col width="80"/>
+						<col width="150"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="text" text="휴일일자"/>
+						<cell bkcolor="user11" col="1" display="text" text="시공회사"/>
+						<cell align="center" col="2" display="text" text="작업내용"/>
+						<cell col="3" display="text" text="대기인원(명)"/>
+						<cell align="center" col="4" display="text" text="기타부대공사비(원)"/>
+						<cell col="5" display="text" text="기타과세(원)"/>
+						<cell align="center" col="6" display="text" text="총&#32;인건비(원)"/>
+						<cell col="7" display="text" text="전체비용(원)"/>
+						<cell col="8" display="text" text="정산일자"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="OFFDAY_WAIT_YMD" display="text" expandimage="calendar" expandshow="true" expandsize="18" Mask="####-##-##" wordwrap="word"/>
+						<cell col="1" colid="WORK_FIRM_CD_NM" display="normal" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="JOB_DESC" display="text" edit="normal"/>
+						<cell align="right" col="3" colid="WAIT_PERS" display="number"/>
+						<cell align="right" col="4" colid="ETC_ADD_AMT" display="number" expr="ToNumber(ETC_ADD_AMT)"/>
+						<cell align="right" col="5" colid="ETC_TAX" display="number" expr="ToNumber(ETC_TAX)"/>
+						<cell align="right" col="6" colid="LABOR_AMT" display="number" expr="ToNumber(LABOR_AMT)"/>
+						<cell align="right" col="7" colid="LAVOR_SUM" display="number" expr="ToNumber(ETC_ADD_AMT)+ToNumber(ETC_TAX)+ToNumber(LABOR_AMT)"/>
+						<cell align="center" col="8" colid="BILL_YMD" display="date"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" display="text" expr='&quot;합&#32;&#32;계(&quot;&#32;+&#32;COUNT(&apos;OFFDAY_WAIT_YMD&apos;)&#32;+&#32;&quot;건)&quot;'/>
+						<cell col="1" display="text"/>
+						<cell col="2" display="text"/>
+						<cell align="right" col="3" color="red" display="number" expr="SUM(&apos;WAIT_PERS&apos;)"/>
+						<cell align="right" col="4" color="red" display="number" expr="SUM(&apos;ETC_ADD_AMT&apos;)"/>
+						<cell align="right" col="5" color="red" display="number" expr="SUM(&apos;ETC_TAX&apos;)"/>
+						<cell align="right" col="6" color="red" display="number" expr="SUM(&apos;LABOR_AMT&apos;)"/>
+						<cell align="right" col="7" color="red" display="number" expr="SUM(&apos;LAVOR_SUM&apos;)"/>
+						<cell col="8" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Align="Left" Height="18" Id="Image5" ImageID="blt" Left="13" LeftMargin="12" Style="blt_search_1" TabOrder="1" Text="시공회사" Top="40" Width="59"></Image>
+		<Image Align="Left" Height="18" Id="Image3" ImageID="blt" Left="222" LeftMargin="12" Style="blt_search_Indis" TabOrder="2" Text="휴일대기일자" Top="40" Width="88"></Image>
+		<Div DisableBKColor="white" Height="30" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnSize="ComButton_OnSize" OnTimer="ComButton_OnTimer" TabOrder="3" Text="Div0" Url="globals::ComHead.xml" Visible="FALSE" Width="1250">
+			<Contents></Contents>
+		</Div>
+		<Shape BKColor="#6cbae1" Bottom="98" Height="3" Id="Shape0" Left="5" LineWidth="0" Right="1255" TabOrder="7" Top="95" Type="Rectangle" Width="1250"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_Detail" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="554" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="140" Id="grd_LavorAmt" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" OnCellClick="grd_LavorAmt_OnCellClick" Right="744" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="8" TabStop="true" Top="414" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="739">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="84"/>
+						<col width="88"/>
+						<col width="95"/>
+						<col width="135"/>
+						<col width="113"/>
+						<col width="88"/>
+						<col width="113"/>
+						<col width="0"/>
+					</columns>
+					<head>
+						<cell bkcolor="user11" col="0" display="text" text="휴일일자"/>
+						<cell col="1" display="text" text="시작시간"/>
+						<cell col="2" display="text" text="종료시간"/>
+						<cell bkcolor="user11" col="3" display="text" text="직책구분"/>
+						<cell col="4" display="text" text="인건비(시간당)단가"/>
+						<cell col="5" display="text" text="인원수"/>
+						<cell col="6" display="text" text="인건비"/>
+						<cell col="7" display="text" text="단가"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="OFFDAY_WAIT_YMD" display="text" expandsize="18" Mask="####-##-##" wordwrap="word"/>
+						<cell align="center" checklength="Byte" col="1" colid="STR_TIME" display="text" limit="5" Mask="##&#32;:&#32;##"/>
+						<cell align="center" checklength="Byte" col="2" colid="END_TIME" display="text" expandsize="18" limit="5" Mask="##&#32;:&#32;##" wordwrap="word"/>
+						<cell col="3" colid="OFF_REP_FLAG" combocol="MAINTER_REAL_CD" combodataset="ds_Prc" combotext="REAL_PRC_NM" display="combo" edit="combo" expandsize="18" wordwrap="word"/>
+						<cell align="right" col="4" colid="UNIT_PRC" display="number"/>
+						<cell col="5" colid="PERS" display="number" edit="normal"/>
+						<cell align="right" col="6" colid="LABOR_AMT" display="number" expandsize="18" wordwrap="word"/>
+						<cell col="7" colid="UNIT_PRC" display="currency"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" display="text" expr='&quot;합&#32;&#32;계(&quot;&#32;+&#32;COUNT(&apos;OFFDAY_WAIT_YMD&apos;)&#32;+&#32;&quot;건)&quot;'/>
+						<cell col="1" display="text"/>
+						<cell col="2" display="text"/>
+						<cell col="3" display="text"/>
+						<cell col="4" display="text"/>
+						<cell align="right" col="5" colid="PERS" color="red" display="text" edit="normal" expr="sum(&apos;PERS&apos;)"/>
+						<cell align="right" col="6" colid="LABOR_AMT" color="red" display="number" expr="sum(&apos;LABOR_AMT&apos;)"/>
+						<cell col="7" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="btn_DangerJobSearch" ImageID="btn_8_Inquiry" Left="1123" LeftMargin="21" OnClick="btn_DangerJobSearch_OnClick" Style="button" TabOrder="9" Text="휴일근무계획&#32;조회" Top="74" Width="127"></Button>
+		<Image Align="Left" Height="9" Id="Image1" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="10" Text="휴일대기&#32;등록" Top="78" Width="110"></Image>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Btn_Delete" ImageID="btn_delete" Left="692" LeftMargin="20" OnClick="Btn_Delete_OnClick" Style="button" TabOrder="11" Text="삭제" Top="390" Width="50"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="19" Id="Btn_Add" ImageID="btn_add" Left="638" LeftMargin="20" OnClick="Btn_Add_OnClick" Style="button" TabOrder="12" Text="추가" Top="390" Width="50"></Button>
+		<Shape BKColor="#6cbae1" Bottom="415" Height="3" Id="Shape3" Left="5" LineWidth="0" Right="744" TabOrder="13" Top="412" Type="Rectangle" Width="739"></Shape>
+		<Image Align="Left" Height="9" Id="Image0" ImageID="blt_8" Left="5" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="14" Text="인건비&#32;상세내역&#32;등록" Top="394" Width="167"></Image>
+		<Static Height="11" Id="Static10" Left="499" Style="static" TabOrder="15" Text="~" Top="44" Width="10"></Static>
+		<Image Align="Left" Height="9" Id="Image4" ImageID="blt_8" Left="763" LeftMargin="12" OnClick="Image2_OnClick" Style="text_title" TabOrder="16" Text="기타과세상세" Top="394" Width="167"></Image>
+		<Combo Border="Flat" CodeColumn="DEAL_CD" DataColumn="DEAL_CD_NM" Height="18" Id="cob_WorkFirmCd" ImeMode="none" InnerDataset="ds_WorkFirmCd" Left="80" Style="combo" TabOrder="17" Top="39" Width="130"></Combo>
+		<Static Align="Right" Height="21" Id="Static0" Left="752" TabOrder="18" Text="간접노무비" Top="424" Width="96"></Static>
+		<Static Align="Right" Height="21" Id="Static1" Left="752" TabOrder="19" Text="산재고용보험료" Top="448" Width="96"></Static>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Ext" Border="Flat" Color="user17" Column="IND" DisableColor="ACTIVECAPTION" Enable="FALSE" Height="18" Id="edt_ind" Left="864" Mask="#,###" Readonly="TRUE" Style="edit" TabOrder="20" Top="421" Value="MaskEdit0" Width="124"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Ext" Border="Flat" Color="user17" Column="SAN" DisableColor="ACTIVECAPTION" Enable="FALSE" Height="18" Id="edt_san" Left="864" Mask="#,###" Readonly="TRUE" Style="edit" TabOrder="21" Top="444" Value="MaskEdit0" Width="124"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Ext" Border="Flat" Color="user17" Column="EXT" DisableColor="ACTIVECAPTION" Enable="FALSE" Height="18" Id="edt_ext" Left="864" Mask="#,###" Readonly="TRUE" Style="edit" TabOrder="22" Top="469" Value="MaskEdit0" Width="124"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Ext" Border="Flat" Color="user17" Column="AN" DisableColor="ACTIVECAPTION" Enable="FALSE" Height="18" Id="edt_an" Left="864" Mask="#,###" Readonly="TRUE" Style="edit" TabOrder="23" Top="493" Value="MaskEdit0" Width="124"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Ext" Border="Flat" Color="user17" Column="SUM" DisableColor="ACTIVECAPTION" Enable="FALSE" Height="18" Id="edt_sum" Left="864" Mask="#,###" Readonly="TRUE" Style="edit" TabOrder="24" Top="518" Value="MaskEdit0" Width="124"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Ext" Border="Flat" Color="user17" Column="IL" DisableColor="ACTIVECAPTION" Enable="FALSE" Height="18" Id="edt_il" Left="1104" Mask="#,###" Readonly="TRUE" Style="edit" TabOrder="25" Top="469" Value="MaskEdit0" Width="124"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Ext" Border="Flat" Color="user17" Column="LE" DisableColor="ACTIVECAPTION" Enable="FALSE" Height="18" Id="edt_le" Left="1104" Mask="#,###" Readonly="TRUE" Style="edit" TabOrder="26" Top="493" Value="MaskEdit0" Width="124"></MaskEdit>
+		<MaskEdit AutoSelect="TRUE" BindDataset="ds_Ext" Border="Flat" Color="user17" Column="TOT" DisableColor="red" Enable="FALSE" Height="18" Id="edt_tot" Left="1104" Mask="#,###" Readonly="TRUE" Style="edit" TabOrder="27" Top="518" Value="MaskEdit0" Width="124"></MaskEdit>
+		<Static Align="Right" Height="21" Id="Static2" Left="752" TabOrder="28" Text="기타경비" Top="471" Width="96"></Static>
+		<Static Align="Right" Height="21" Id="Static3" Left="752" TabOrder="29" Text="안전관리비" Top="495" Width="96"></Static>
+		<Static Align="Right" Height="21" Id="Static4" Left="752" TabOrder="30" Text="소&#32;&#32;&#32;&#32;계" Top="519" Width="96"></Static>
+		<Static Align="Right" Height="21" Id="Static5" Left="997" TabOrder="31" Text="일반관리비" Top="472" Width="96"></Static>
+		<Static Align="Right" Height="21" Id="Static6" Left="997" TabOrder="32" Text="이&#32;&#32;&#32;&#32;윤" Top="495" Width="96"></Static>
+		<Static Align="Right" Color="blue" Height="21" Id="Static7" Left="997" TabOrder="33" Text="기타과세&#32;합계" Top="519" Width="96"></Static>
+		<Calendar Border="Flat" Dateformat="LONGDATE" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_StrYm" Left="318" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="34" Top="41" WeeksFont="Default,-1" Width="173"></Calendar>
+		<Calendar Border="Flat" Dateformat="LONGDATE" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_EndYm" Left="518" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar_indis" SundayTextColor="red" TabOrder="35" Top="41" WeeksFont="Default,-1" Width="173"></Calendar>
+	</Form>
+	<Script><![CDATA[/*******************************************************************************************************************
+* FormID     : D1602050010F.xml
+* Form 설명  : 시공사 휴일 근무계획
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 권기철 
+* 작성일     : 2010-06-13
+* 변경내용   : 
+********************************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMONE20001.js";
+#include "JS::COMMOND10001.js";
+
+function D1602050010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_D1_WorkFirmCdList();													// 시공사 가져오기 
+	
+	if(gfn_GetGlobalValue("G_COM_ID") == "92"){					
+		cob_WorkFirmCd.Value = trim(gfn_GetGlobalValue("G_DEAL_CD"));				// 시공사 default 주기 
+		cob_WorkFirmCd.Enable = false;
+	}else if(gfn_GetGlobalValue("G_COM_ID") == "10"){
+		if(gfn_GetGlobalValue("G_BRANCH_YN") == "N"){
+			cob_WorkFirmCd.Index = 0;
+			cob_WorkFirmCd.Enable = true;
+		}
+	}
+	
+	gfn_D1_SetGrid_Sort(grd_List);
+
+	cal_StrYm.Value=substr(addmonth(today(), -1),0,6) + '01';
+	cal_EndYm.Value=today();	
+	
+	fn_D1_Offrepflag();
+}
+
+//---------------------------------------------------------------------------------------------------------
+// 함수명   : fn_D1_Offrepflag()
+// 설명     : 직책구분 가져오기 
+// return 내용 : 
+//---------------------------------------------------------------------------------------------------------
+function fn_D1_Offrepflag()
+{	
+	ds_Prc.ClearData();
+	
+    var strSvcID        = "Offrepflag";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1602050010F-service";
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Prc=ds_Prc";
+	var strArgument     = "Offrepflag=1";
+
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			    );					    
+}		   
+
+
+//---------------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 조회
+//---------------------------------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	fn_D1_FindList();											//인건비 내역조회
+	
+//	edt_Count.Text = ds_Multi.GetRowCount();
+}
+//--------------------------------------------------------------------------------------------------------- 
+// 함수명: fn_D1_WorkFirmCdList()
+//   설명:  정비 관련 시공사코드및 명 가져오기 
+// arguments
+//   return 내용: 없음
+//--------------------------------------------------------------------------------------------------------- 
+function fn_D1_WorkFirmCdList()
+{	
+	var strSvcID = "";
+	var strPart = "D10";	
+	var strURL = "handle.do?ServiceName=D1602050010F-service&firm_search=1"
+			   ;  
+	var strInDatasets  = "";
+	var strOutDatasets  = "ds_WorkFirmCd=ds_WorkFirmCd";
+	var strArgument  = "";
+	
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+//--------------------------------------------------------------------------------------------------------- 
+// 함수명: fn_D1_FindList()
+//   설명:  인건비 내역을 조회한다.
+// arguments
+//   return 내용: 없음
+//--------------------------------------------------------------------------------------------------------- 
+function fn_D1_FindList()
+{	
+	ds_Multi.ClearData();
+	
+    var strSvcID        = "search_job";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1602050010F-service";
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Multi=ds_Multi";
+	var strArgument     = "search_job=1";
+		strArgument	   += " WORK_FIRM_CD="  + quote(cob_WorkFirmCd.Value);
+		strArgument	   += " REQ_DAY_START=" + quote(cal_StrYm.Value);
+		strArgument	   += " REQ_DAY_END="   + quote(cal_EndYm.Value);
+				
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+function fn_CommonExcelExport()
+{
+	var SearchCondition= "";
+    SearchCondition = SearchCondition + "시공사 :" + RPad(edt_WorkFirmCd.Text," ",20);
+    SearchCondition = SearchCondition + "휴일일자 :" + RPad(req_day_start.Text +" ~ "+ req_day_end.Text," ",20);
+    
+    gfn_ExportExcel("시공사 휴일 대기내역", 5, SearchCondition, "grd_Excel"); 	
+}
+
+//------------------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 추가
+//------------------------------------------------------------------------------------------------------------
+function fn_CommonAddRow()
+{
+	var row = ds_Multi.AddRow();
+	ds_Detail.ClearData();									//인건비 상세내역 초기화 
+	ds_Multi.SetColumn(row,"WORK_FIRM_CD",cob_WorkFirmCd.Value);
+	ds_Multi.SetColumn(row,"WORK_FIRM_CD_NM",cob_WorkFirmCd.GetSelText()); 
+}
+
+//------------------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 저장
+//------------------------------------------------------------------------------------------------------------
+function fn_CommonSave()
+{
+	for(var i=0; i<ds_Multi.RowCount(); i++)
+	{	
+		if(ds_Multi.GetColumn(i,"OFFDAY_WAIT_YMD") == null || trim(ds_Multi.GetColumn(i,"OFFDAY_WAIT_YMD")) == '')
+		{
+			alert("휴일일자가 등록되지 않았습니다...");
+			return;
+		}			
+		if(ds_Multi.GetColumn(i,"WORK_FIRM_CD_NM") == null || trim(ds_Multi.GetColumn(i,"WORK_FIRM_CD_NM")) == '')
+		{
+			alert("시공회사가 선택되지 않았습니다...");
+			return;
+		}						
+		if(ds_Multi.GetColumn(i,"JOB_DESC") == null || trim(ds_Multi.GetColumn(i,"JOB_DESC")) == '')
+		{
+			alert("작업내용을 입력하세요....");
+			return;
+		}			
+		if(ds_Multi.GetRowType() == 'insert'){
+			ds_Multi.SetColumn(i,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+			ds_Multi.SetColumn(i,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+			ds_Multi.SetColumn(i,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+			ds_Multi.SetColumn(i,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));				
+		}
+		else
+		{
+			ds_Multi.SetColumn(i,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+			ds_Multi.SetColumn(i,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));	
+		}
+	}
+	
+	for(var i=0; ds_Detail.GetRowCount()>i; i++)
+	{
+		if(ds_Detail.GetColumn(i,"STR_TIME") == null || length(trim(ds_Detail.GetColumn(i,"STR_TIME"))) < 4)
+		{
+			alert("시작시간 등록 오류입니다...");
+			return;
+		}
+		if(ds_Detail.GetColumn(i,"END_TIME") == null || length(trim(ds_Detail.GetColumn(i,"END_TIME"))) < 4)
+		{
+			alert("종료시간 등록 오류입니다...");
+			return;
+		}		
+		if(ds_Detail.GetColumn(i,"OFF_REP_FLAG") == null || trim(ds_Detail.GetColumn(i,"OFF_REP_FLAG")) == '')
+		{
+			alert("직책을 선택하세요...");
+			return;
+		}		
+		if(ds_Detail.GetColumn(i,"UNIT_PRC") == null || trim(ds_Detail.GetColumn(i,"UNIT_PRC")) == '')
+		{
+			alert("인건비에 대한 단가 없습니다.. 단가를 확인 바랍니다...");
+			return;
+		}						
+		if(ds_Detail.GetColumn(i,"PERS") == null || trim(ds_Detail.GetColumn(i,"PERS")) == '')
+		{
+			alert("인원수를 등록하세요..");
+			return;
+		}				
+		if(ds_Detail.GetRowType() == "insert"){
+			ds_Detail.SetColumn(i,"CRT_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+			ds_Detail.SetColumn(i,"CRT_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+			ds_Detail.SetColumn(i,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+			ds_Detail.SetColumn(i,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS")); 		
+		}else{
+			ds_Detail.SetColumn(i,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+			ds_Detail.SetColumn(i,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS")); 
+		}
+	}	
+	
+    var strSvcID        = "save";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1602050010F-service";
+	var strInDatasets   = "ds_Multi=ds_Multi:u ds_Detail=ds_Detail:u";
+	var strOutDatasets  = "";
+	var strArgument     = "save=1";
+			
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+				  
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else{
+		alert("정상 등록/수정 되었습니다...");
+	}				  	
+}
+
+function grd_List_OnExpandEdit(obj,nRow,nCell,strVal,nPivotIndex)
+{
+	if(nCell == 0)
+	{
+		if(ds_Multi.GetRowType(nRow) == "insert")
+		{
+			gfn_SetCalendar(obj, nRow, nCell);
+		}
+	}
+}
+
+//------------------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 삭제
+//------------------------------------------------------------------------------------------------------------
+function fn_CommonDeleteRow()
+{
+	if (ds_Multi.GetColumn(ds_Multi.Row, "BILL_YMD") == null || length(TRIM(ds_Multi.GetColumn(ds_Multi.Row, "BILL_YMD"))) == 0)
+	{
+		if(confirm("선택한 인건비 내역 및 인건비 상세내역을 삭제하시겠습니까?")){
+			fn_D1_Delete();
+		}else{
+			return;
+		}
+	}
+	else
+	{	
+		alert("정산 완료건으로 삭제가 불가능합니다...");
+		return;
+	}
+		
+}
+//------------------------------------------------------------------------------------------------------------
+// 함수명: fn_D1_Delete()
+// 설명:   휴일대기 삭제
+// arguments
+// return 내용: 없음
+//------------------------------------------------------------------------------------------------------------
+function fn_D1_Delete()
+{    
+	ds_Lavor_amt.ClearData();
+	ds_Lavor_amt.UpdateControl = false ;
+	var row = ds_Lavor_amt.AddRow();
+	
+	ds_Lavor_amt.SetRowType(row, "delete");
+	ds_Lavor_amt.SetColumn(row, "OFFDAY_WAIT_YMD", ds_Multi.GetColumn(ds_Multi.row, "OFFDAY_WAIT_YMD"));
+	ds_Lavor_amt.SetColumn(row, "WORK_FIRM_CD", ds_Multi.GetColumn(ds_Multi.row, "WORK_FIRM_CD"));
+			
+	ds_Multi.DeleteRow(ds_Multi.Row);
+	
+	
+    var strSvcID        = "delete";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1602050010F-service";
+	var strInDatasets   = "ds_Multi=ds_Multi:u ds_Lavor_amt=ds_Lavor_amt:u";	
+	var strOutDatasets  = "";
+	var strArgument     = "delete=1";
+	
+	gfn_SyncCall(
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+				  );
+
+	if(ErrorCode < 0)
+	{    
+		return;
+	}else{
+		alert("정상 삭제 되었습니다..");
+	}					  
+}
+//-----------------------------------------------------------------------------------------------------------
+//ds_Detail 행 추가 부분
+//-----------------------------------------------------------------------------------------------------------
+function Btn_Add_OnClick(obj)
+{	
+	var row = ds_Detail.AddRow();
+		
+	ds_Detail.SetColumn(row,"OFFDAY_WAIT_YMD",ds_Multi.GetColumn(ds_Multi.row, "OFFDAY_WAIT_YMD"));
+	ds_Detail.SetColumn(row,"WORK_FIRM_CD",ds_Multi.GetColumn(ds_Multi.row,"WORK_FIRM_CD"));
+	
+	ds_Detail.SetColumn(row,"STR_TIME","0900");
+	ds_Detail.SetColumn(row,"END_TIME","1800");		
+}
+//-----------------------------------------------------------------------------------------------------------
+// ds_Detail 행 삭제 부분(인건비 상세내역)
+//-----------------------------------------------------------------------------------------------------------
+function Btn_Delete_OnClick(obj)
+{
+	if (ds_Detail.GetRowCount() == 0)
+	{
+		return;
+	}
+	
+	if(ds_Detail.GetRowType(ds_Detail.row) == "insert")
+	{
+		ds_Detail.DeleteRow(ds_Detail.row);
+		return;
+	}
+		
+	if(confirm("등록된 인건비 상세내역을 삭제하시겠습니까?"))
+	{
+		ds_Detail.DeleteRow(ds_Detail.row);
+		
+		ds_Multi.SetColumn(ds_Multi.Row,"WAIT_PERS",ds_Detail.sum("PERS"));
+		ds_Multi.SetColumn(ds_Multi.Row,"LABOR_AMT",ds_Detail.sum("LABOR_AMT"));
+		ds_Detail.SetColumn(ds_Multi.row,"UPD_EMPID",gfn_GetGlobalValue("G_USER_NO"));
+		ds_Detail.SetColumn(ds_Multi.row,"UPD_IP",gfn_GetGlobalValue("G_IPADDRESS")); 		
+	
+		var strSvcID        = "lavor_amt_del";
+		var strPart         = "D10";	
+		var strURL          = "handle.do?ServiceName=D1602050010F-service";
+		var strInDatasets   = "ds_Multi=ds_Multi:u ds_Detail=ds_Detail:u";
+		var strOutDatasets  = "";
+		var strArgument     = "lavor_amt_del=1";
+				
+		gfn_SyncCall(
+						 strSvcID
+					   , strPart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+					  );
+					  
+		if(ErrorCode < 0)
+		{    
+			return;
+		}else{
+			alert("정상 삭제 되었습니다...");
+		}	
+					  	
+		fn_D11_Sum();			  	
+	}		
+}
+
+function fn_D11_Sum()
+{
+	ds_Ext.ClearData();
+	ds_Ext.AddRow();
+	
+	var LoborAmt = ds_Multi.GetColumn(ds_Multi.Row,"LABOR_AMT"); // 직접노무비
+	
+	var ind = Round(parseInt(LoborAmt)*0.133);												// 간접노무비
+	ds_Ext.SetColumn(0,"IND",ind);		
+		
+	var san = Round((parseInt(LoborAmt)+parseInt(ind))*0.041);							// 산재고용보험료
+	ds_Ext.SetColumn(0,"SAN",san);
+	
+	var ext = Round((parseInt(LoborAmt)+parseInt(ind))*0.0655);							// 기타경비
+	ds_Ext.SetColumn(0,"EXT",ext);	
+	
+	var an = Round(parseInt(LoborAmt)*0.0248);												// 안전관리비
+	ds_Ext.SetColumn(0,"AN",an);	
+	
+	var sum = Round(parseInt(ind)+parseInt(san)+parseInt(ext)+parseInt(an));					// 소계
+	ds_Ext.SetColumn(0,"SUM",sum);	
+	
+	//var il = Round((parseInt(ext)+parseInt(sum)+parseInt(LoborAmt))*0.06);					// 일반관리비
+    var il = Round((parseInt(sum)+parseInt(LoborAmt))*0.06);					// 일반관리비	
+	ds_Ext.SetColumn(0,"IL",il);
+	
+	var le = Round((parseInt(LoborAmt)+parseInt(sum)+parseInt(il))*0.15);	// 이윤
+	ds_Ext.SetColumn(0,"LE",le);
+	
+	var tot = Round(parseInt(sum)+parseInt(il)+parseInt(le));					// 총합계
+	ds_Ext.SetColumn(0,"TOT",tot);
+	ds_Multi.SetColumn(grd_List.ClickedRow,"ETC_TAX",tot);
+}
+//-----------------------------------------------------------------------------------------------------------
+// 인건비 계산하기
+//-----------------------------------------------------------------------------------------------------------
+function ds_Detail_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{	
+	
+	if(strColumnID == "OFF_REP_FLAG" || strColumnID == "PERS") 
+	{			
+		if (ds_Multi.GetColumn(ds_Multi.row, "BILL_YMD") == null || length(TRIM(ds_Multi.GetColumn(ds_Multi.row, "BILL_YMD"))) == 0)
+		{
+			if(strColumnID == "OFF_REP_FLAG")
+			{
+				var OffRepFlag = ds_Detail.GetColumn(ds_Detail.row,"OFF_REP_FLAG");
+				
+				for(var i=0; i < ds_Detail.GetRowCount(); i++){
+					
+					if(OffRepFlag == ds_Detail.GetColumn(i, "OFF_REP_FLAG") && i != ds_Detail.row){
+					
+						alert("이미 작성된 직책 입니다. 재입력 해주세요");
+						ds_Detail.SetColumn(ds_Detail.row,"OFF_REP_FLAG","");
+						return;
+					 }
+				}
+						
+				fn_D1_Cost(OffRepFlag);
+				ds_Detail.SetColumn(nRow,"UNIT_PRC",ds_Cost.GetColumn(0,"UNIT_PRC"));					
+			}
+	
+			//휴일대기는 09:00~18:00고정 인건비 계산시간은 8시간임		
+			// var strtime = parseInt(substr(ds_Detail.GetColumn(nRow,"STR_TIME"),0,2));
+			// var endtime = parseInt(substr(ds_Detail.GetColumn(nRow,"END_TIME"),0,2));
+			// var work_time = parseInt(endtime - strtime);
+	
+			var offrepflag = parseInt(ds_Detail.GetColumn(nRow,"OFF_REP_FLAG"));
+			var pers = parseInt(ds_Detail.GetColumn(nRow,"PERS"));
+			var unitprc = parseInt(ds_Detail.GetColumn(nRow,"UNIT_PRC"));
+	
+			ds_Detail.SetColumn(nRow,"LABOR_AMT",(unitprc * 8 * pers));
+		
+				
+			ds_Multi.SetColumn(ds_Multi.Row,"WAIT_PERS",ds_Detail.sum("PERS"));
+			ds_Multi.SetColumn(ds_Multi.Row,"LABOR_AMT",ds_Detail.sum("LABOR_AMT"));
+			
+			fn_D11_Sum();			
+		}
+	}	
+	
+}
+//--------------------------------------------------------------------------------------------------------- 
+// 함수명: fn_D1_Cost()
+// 설명:   시간당 직책에 따른 인건비 조회
+// arguments
+// return 내용: 없음
+//--------------------------------------------------------------------------------------------------------- 
+function fn_D1_Cost(OffRepFlag)
+{	
+	ds_Cost.ClearData();
+	
+    var strSvcID        = "search_danga";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1602050010F-service";
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Cost=ds_Cost";
+	var strArgument     = "search_danga=1";
+		strArgument	   += " MAINTER_REAL_CD="  + quote(OffRepFlag);
+			
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+}
+
+//---------------------------------------------------------------------------------------------------------
+//	공통 버튼 클릭 - 인쇄
+//---------------------------------------------------------------------------------------------------------
+function fn_CommonPrint()
+{
+	PrintScreen(true);
+}
+
+//휴일근무 계획 조회
+function btn_DangerJobSearch_OnClick(obj)
+{
+	var args = "STRYM="+cal_StrYm.Value
+	         + " ENDYM="+cal_EndYm.Value;
+	gfn_Dialog("D10","D1602050010U",args,690,500,true,-1,-1);	
+}
+
+function ds_Multi_OnRowPosChanged(obj,nOldRow,nRow)
+{
+	if (ds_Multi.GetColumn(ds_Multi.Row, "BILL_YMD") == null || length(TRIM(ds_Multi.GetColumn(ds_Multi.Row, "BILL_YMD"))) == 0)
+	{
+		Btn_Delete.Enable = true;
+		Btn_Add.Enable = true;
+	}
+	else
+	{
+		Btn_Delete.Enable = false;
+		Btn_Add.Enable = false;	
+	}
+
+	ds_Detail.ClearData();
+	
+    var strSvcID        = "search_amt";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1602050010F-service";
+	var strInDatasets   = "";
+	var strOutDatasets  = "ds_Detail=ds_Detail";
+	var strArgument     = "search_amt=1";
+		strArgument	   += " OFFDAY_WAIT_YMD="  + quote(ds_Multi.GetColumn(nRow,"OFFDAY_WAIT_YMD"));
+		strArgument	   += " WORK_FIRM_CD=" + quote(ds_Multi.GetColumn(nRow,"WORK_FIRM_CD"));
+				
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );	
+	
+		
+	fn_D11_Sum();
+}
+
+function grd_LavorAmt_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if (ds_Multi.GetColumn(ds_Multi.Row, "BILL_YMD") == null || length(TRIM(ds_Multi.GetColumn(ds_Multi.Row, "BILL_YMD"))) == 0)
+	{
+		// grd_LavorAmt.SetCellProp("body",1,"Edit","normal");		//시작시간
+		// grd_LavorAmt.SetCellProp("body",2,"Edit","normal");		//종료시간
+		grd_LavorAmt.SetCellProp("body",3,"Edit","combo");		//직책구분
+		grd_LavorAmt.SetCellProp("body",5,"Edit","normal");		//인원수
+	}	
+	else
+	{
+		// grd_LavorAmt.SetCellProp("body",1,"Edit","none");		//시작시간
+		// grd_LavorAmt.SetCellProp("body",2,"Edit","none");		//종료시간
+		grd_LavorAmt.SetCellProp("body",3,"Edit","none");		//직책구분
+		grd_LavorAmt.SetCellProp("body",5,"Edit","none");		//인원수
+	}
+}
+
+function grd_List_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if (ds_Multi.GetRowType(nRow) == 'insert')
+	{
+		grd_List.SetCellProp("body",0,"Edit","normal");		//휴일일자시간
+	}
+	else
+	{
+		grd_List.SetCellProp("body",0,"Edit","none");		//휴일일자시간
+
+	}
+		
+	if (ds_Multi.GetColumn(nRow, "BILL_YMD") == null || length(TRIM(ds_Multi.GetColumn(nRow, "BILL_YMD"))) == 0)
+	{
+		grd_List.SetCellProp("body",2,"Edit","normal");		//작업내용
+	}
+	else
+	{
+		grd_List.SetCellProp("body",2,"Edit","none");		//작업내용	
+	}	
+}
+
+]]></Script>
+</Window>

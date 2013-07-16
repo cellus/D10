@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="280" Id="D1101010020U" Left="8" OnLoadCompleted="fn_OnLoadCompleted" OnUnloadCompleted="D1101010020U_OnUnloadCompleted" PidAttrib="7" Title="첨부파일이미지등록_D1101010020U" Top="8" Ver="1.0" Width="450" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_FileList2">
+				<Contents>
+					<colinfo id="FILE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_EMPID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CRT_IP" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_FLAG" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_KIND" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORIG_ATTACH_FILE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_PATH" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_SIZE" size="256" summ="default" type="STRING"/>
+					<colinfo id="ATTACH_FILE_TYPE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="USE_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="FILE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORG_FILE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="SECOND_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Align="Left" Height="39" Id="Image0" ImageID="popup_top" Left="1" LeftMargin="33" Style="popup_title" TabOrder="1" Text="이미지&#32;첨부화일&#32;등록" Transparent="TRUE" Width="450"></Image>
+		<Button Cursor="HAND" Height="17" Id="Button1" ImageID="search" Left="-151" OnClick="Button8_OnClick" TabOrder="2" Text="Button8" Top="-134" Width="17"></Button>
+		<Shape BKColor="user16" Bottom="70" Height="3" Id="Shape2" Left="4" LineWidth="0" Right="444" TabOrder="4" Top="67" Type="Rectangle" Width="440"></Shape>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_FileList2" BkColor2="user19" BoldHead="FALSE" Border="Flat" Bottom="255" ColSizing="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="185" Id="grd_FileList" InputPanel="FALSE" Left="4" LineColor="default" LineType="ExVERT" MinWidth="100" OnCellDBLClick="grd_FileList_OnCellDblClick" Right="444" SelColor="MENU" Style="grid_pop" TabOrder="3" TabStop="true" Top="70" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="440">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="50"/>
+						<col width="214"/>
+						<col width="66"/>
+						<col width="107"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="NO"/>
+						<cell col="1" display="text" text="화일명"/>
+						<cell col="2" display="text" text="관리번호"/>
+						<cell col="3" display="text" text="PC경로"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="FILE_NUM" display="numberexp" expandsize="18" expr="rowidx+1" wordwrap="word"/>
+						<cell col="1" colid="ORG_FILE_NAME" display="text" expandsize="18" wordwrap="word"/>
+						<cell col="2" colid="FILE_ID" display="number" expandsize="18" wordwrap="word"/>
+						<cell col="3" colid="ATTACH_FILE_PATH" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_AddLine" ImageID="btn_addrow" Left="246" LeftMargin="15" OnClick="fn_CommonAddRow" Style="button" TabOrder="5" Text="추가" Top="45" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_DelLine" ImageID="btn_deleterow" Left="297" LeftMargin="15" OnClick="fn_CommonDeleteRow" Style="button" TabOrder="6" Text="삭제" Top="45" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="20" Id="btn_Save" ImageID="btn_2" Left="348" LeftMargin="15" OnClick="fn_CommonSave" Style="button" TabOrder="7" Text="저장" Top="45" Width="48"></Button>
+		<Button Align="Left" ButtonStyle="TRUE" Cursor="HAND" Height="21" Id="btn_Close" ImageID="btn_c" Left="398" LeftMargin="15" OnClick="fn_D1_Close" Style="button" TabOrder="8" Text="닫기" Top="45" Transparent="TRUE" Width="47" WordWrap="TRUE"></Button>
+		<Static Font="돋움,8" Height="12" Id="Static0" Left="4" Style="static" TabOrder="9" Text="▶&#32;해당파일을&#32;Double&#32;Click&#32;후&#32;다운가능함" Top="51" Width="228"></Static>
+		<Static Color="DKSHADOW" Height="16" Id="Static1" Left="6" TabOrder="10" Text="※&#32;첨부가능한&#32;확장자명(&#32;JPG,&#32;JPEG,&#32;BMP,&#32;GIF,&#32;DJVU&#32;)" Top="260" Width="336"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1101010018U.xml
+* Form 설명  : 파일등록(조회, 등록, 수정, 삭제)
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 김태화 
+* 작성일     : 2009-02-23
+* 변경내용   : 
+****************************************************************************************************/
+
+//-----------------------------------------
+// 전처리 함수 선언
+//-----------------------------------------
+#include "JS::COMMONA10001.js"
+#include "JS::COMMONA10002.js"
+#include "JS::COMMONA10005.js"
+
+var fa_Url;
+var strPart;
+var strSvcUrl;
+var strSequence = 1;
+var strGubun = "0";
+//-------------------------------------------------------------------------------
+// 함수명: fn_OnLoadCompleted
+// 설명: Form Load 시 공통에서 사용하는 필수 함수를 호출
+// arguments
+// 			없음
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	
+	//------------------------------------
+	// 초기 처리
+	//------------------------------------
+	fn_Init();
+	
+	//------------------------------------
+	// 화면버튼 처리
+	//------------------------------------
+	// 넘어온 파라메터가 있으면
+	if(IsExistVar("fa_Enable"))
+	{
+		if(fa_Enable == "Y")
+		{
+			btn_AddLine.Visible = false; // 추가
+			btn_DelLine.Visible = false; // 삭제
+			btn_Save.Visible    = false; // 저장
+		}
+	}	
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_Init
+// 설명: 초기 설정
+// arguments
+// 			없음
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_Init()
+{
+	// 넘어온 파라메터가 있으면
+	if(IsExistVar("fa_Part"))
+	{
+		strPart = fa_Part;
+	}
+	
+	var strArray  = Split(fa_Url,"&");
+	strSvcUrl = strArray[0];
+	
+	fn_CommonSearch();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch
+// 설명: 공통 버튼 클릭 - 조회
+// arguments
+// 			없음
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch()
+{
+	var strSvcID = "search";
+	var strURL = replace(fa_Url,"%$","");
+	var ServicePart     = "D10";
+	var strInDatasets  = "";
+	var strOutDatasets  = "";
+	    strOutDatasets += "ds_FileList2=ds_FileList2";
+	var strArgument  = "findFile2";
+	gfn_SyncCall( 
+					 strSvcID
+				   , ServicePart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+	
+	if(ErrorCode < 0)
+	{
+		alert(ErrorMsg);
+		return;
+	}
+	
+	if(ds_FileList2.RowCount() > 0)
+	{
+		strSequence = ds_FileList2.GetColumn(ds_FileList2.RowCount()-1,"ATTACH_FILE_NUM") + 1;
+	}
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonSave
+// 설명: 공통 버튼 클릭 - 저장
+// arguments
+// 			없음
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_CommonSave()
+{
+
+	if(!ds_FileList2.GetUpdate())
+	{
+		return;
+	} 
+
+	// Upload 경로정보 설정 
+	var strFilePath = strPart;
+	var strSvcID = "fn_CommonSave";
+	var ServicePart     = "D10";
+	var strURL = strSvcUrl;
+	var strInDatasets  = "ds_FileList2=ds_FileList2:u";
+	var strOutDatasets  = "";
+	var strArgument  = "saveFile2";
+
+	var arrList = array();
+		arrList = gfn_FileUploadMulti(strFilePath,ds_FileList2,"FILE_ID","ATTACH_FILE_NM");
+
+	if(arrList[0] == "SUCC")
+	{
+		gfn_SyncCall( 
+						 strSvcID
+					   , ServicePart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+	}
+	else
+	{
+		alert('File Upload 오류 발생 ');
+	}
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonAddRow
+// 설명: 추가 버튼 클릭시 처음 추가면 시퀀스를 넣어주고 아니면 기본 데이터의 값을 넣어준다.
+// arguments
+// 			없음
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_CommonAddRow(obj)
+{
+	if(ds_FileList2.GetRowCount()>0)
+	{
+		return;
+	}
+	// 하단에 행 추가 
+	var arrFile = gfn_OpenFile("","","");
+	var tempChk = Split(arrFile[1],".");
+	if(ToUpper(tempChk[1])=="GIF"||ToUpper(tempChk[1])=="JPG"||ToUpper(tempChk[1])=="BMP"||ToUpper(tempChk[1])=="JPEG"||ToUpper(tempChk[1])=="DJVU")
+	{
+		ds_FileList2.AddRow();
+	}
+	else
+	{
+		alert("지정된 그림파일확장자가 아닙니다.");
+		return;
+	}
+	var nRow = ds_FileList2.row;
+	var arrayUrl = Split(fa_Url,"&");
+		
+	for(var i=1; i<arrayUrl.length; i++)
+	{
+		var strTmp = arrayUrl[i];
+		
+		var strIndex = IndexOf(strTmp,"=");
+		
+		var strArgNm = SubStr(strTmp,0,strIndex);
+		
+		var strArgValue = SubStr(strTmp,strIndex + 1);
+		
+		if(ds_FileList2.GetColIndex(strArgNm) < 0)
+		{
+			ds_FileList2.AddColumn(strArgNm,"String",255);
+		}
+		ds_FileList2.SetColumn(nRow,strArgNm,replace(strArgValue,"%$",""));
+	}
+	ds_FileList2.SetColumn(nRow, "CRT_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_FileList2.SetColumn(nRow, "CRT_IP", gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_FileList2.SetColumn(nRow, "UPD_EMPID", gfn_GetGlobalValue("G_USER_NO"));
+	ds_FileList2.SetColumn(nRow, "UPD_IP"   , gfn_GetGlobalValue("G_IPADDRESS"));
+	ds_FileList2.SetColumn(nRow,"ATTACH_FILE_PATH",arrFile[0]);
+	ds_FileList2.SetColumn(nRow,"ATTACH_FILE_NM",arrFile[1]);
+	ds_FileList2.SetColumn(nRow,"ORG_FILE_NAME",arrFile[1]);
+	ds_FileList2.SetColumn(nRow,"ATTACH_FILE_NUM", strSequence);
+	ds_FileList2.SetColumn(grd_FileList.ClickedRow,"ATTACH_FILE_TYPE","10");
+	strSequence = ++strSequence;
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonDeleteRow
+// 설명: 파일 삭제
+// arguments
+// 			없음
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_CommonDeleteRow(obj)
+{
+	if(confirm("삭제하시겠습니까?"))
+    {
+		ds_FileList2.DeleteRow(grd_FileList.ClickedRow);
+		fn_Del();
+	}
+}
+
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_E1_Delete
+// 설  명: 삭제 
+// arguments
+// 			없음
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_Del()
+{
+	// Upload 경로정보 설정 
+	var strFilePath = strPart;
+	var strSvcID = "fn_CommonSave";
+	var ServicePart     = "D10";
+	var strURL = strSvcUrl;
+	var strInDatasets  = "ds_FileList2=ds_FileList2:u";
+	var strOutDatasets  = "";
+	var strArgument  = "saveFile2";
+	
+		gfn_SyncCall( 
+						 strSvcID
+					   , ServicePart
+					   , strURL
+					   , strInDatasets
+					   , strOutDatasets
+					   , strArgument
+				   );
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: grd_FileList_OnCellDblClick
+// 설명: 파일 다운로드 함수 호출
+// arguments
+// 			없음
+// return: 없음
+//-------------------------------------------------------------------------------
+function grd_FileList_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	//gfn_FileDownload(ds_FileList.GetColumn(nRow,"FILE_ID"),ds_FileList.GetColumn(nRow,"ATTACH_FILE_NM"));
+	//G_ISLOCAL = "N";
+	gfn_FileDownloadExec(ds_FileList2.GetColumn(nRow,"FILE_ID"),ds_FileList2.GetColumn(nRow,"ORG_FILE_NAME"));
+	
+   //	gfn_FileDownloadExec(ds_FileList.GetColumn(nRow,"FILE_ID"),ds_FileList.GetColumn(nRow,"ATTACH_FILE_NM"));
+	
+	//G_ISLOCAL = "Y";
+	
+	
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_E2_Close
+// 설명: 창 닫기 함수
+// arguments
+// 		   없음
+// return: 없음
+//-------------------------------------------------------------------------------
+function fn_D1_Close()
+{
+	var arrList = array();
+
+	for(var i=0; i<ds_FileList2.RowCount(); i++)
+	{
+	    if(ds_FileList2.GetRowType(i)=="normal")
+	    {
+			arrList[i] = ds_FileList2.GetColumn(i,"ORG_FILE_NAME");
+		}
+	}
+	
+	Close(arrList);
+}
+function D1101010020U_OnUnloadCompleted(obj)
+{
+
+	var arrList = array();
+
+	for(var i=0; i<ds_FileList2.RowCount(); i++)
+	{
+		if(ds_FileList2.GetRowType(i)=="normal")
+		{
+			arrList[i] = ds_FileList2.GetColumn(i,"ORG_FILE_NAME");
+		}
+	}
+	return arrList;
+
+	
+}
+]]></Script>
+</Window>

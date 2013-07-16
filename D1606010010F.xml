@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="720" Id="D1606010010F" Left="8" OnLoadCompleted="D1606010010F_OnLoadCompleted" PidAttrib="7" Style="calendar_indis" Title="정산지급&#32;및&#32;용역&#32;시행현황" Top="8" Ver="1.0" Width="1280" WorkArea="false">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_WorkFlag_10">
+				<Contents>
+					<colinfo id="WORK_L_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_L_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_M_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_M_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_KNAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CNT_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="AMT_1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CNT_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="AMT_2" size="256" summ="default" type="STRING"/>
+					<colinfo id="CNT_3" size="256" summ="default" type="STRING"/>
+					<colinfo id="AMT_3" size="256" summ="default" type="STRING"/>
+					<colinfo id="BRANCH_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_WorkFlag">
+				<Contents>
+					<colinfo id="BRANCH_CD" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_MONTH" size="256" summ="default" type="STRING"/>
+					<colinfo id="BASE_YYYY" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Shape BKColor="user6" Bottom="80" Height="44" Id="Shape8" Left="5" LineColor="user7" Right="1269" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="4" Top="36" Type="RoundRect" Width="1264"></Shape>
+		<Shape BKColor="user8" Bottom="74" Height="33" Id="Shape9" Left="10" LineWidth="0" Right="1264" RoundHeight="3" RoundUnit="Pixel" RoundWidth="3" TabOrder="5" Top="41" Type="Rectangle" Width="1254"></Shape>
+		<Div DisableBKColor="white" Height="28" Id="Div0" Left="5" OnLoadCompleted="ComButton_OnLoadCompleted" OnTimer="ComButton_OnTimer" TabOrder="2" Text="Div0" Top="5" Url="globals::ComHead.xml" Visible="FALSE" Width="1264">
+			<Contents></Contents>
+		</Div>
+		<Image Align="Left" Height="18" Id="Image18" ImageID="blt" Left="21" LeftMargin="12" Style="blt_search_Indis" TabOrder="3" Text="지사" Top="47" Width="61"></Image>
+		<Combo Border="Flat" Height="18" Id="cob_ObjectFlag" Left="61" OnChanged="cob_ObjectFlag_OnChanged" Style="combo_indis" TabOrder="1" Top="47" Width="80"></Combo>
+		<Image Align="Left" Color="blue" Height="18" Id="Image10" ImageID="blt" Left="150" LeftMargin="12" Style="blt_search" TabOrder="6" Text="정산지급년월" Top="48" Width="84"></Image>
+		<Calendar Border="Flat" Dateformat="yyyy-MM" DayFont="Default,-1" HeaderFont="Default,-1" Height="18" Id="cal_BaseMonth" Left="239" OnChanged="cal_BaseMonth_OnChanged" SaturdayTextColor="blue" SelectedDayFont="Default,-1" Style="calendar" SundayTextColor="red" TabOrder="7" Top="48" WeeksFont="Default,-1" Width="72"></Calendar>
+		<Grid AutoEnter="TRUE" BindDataset="ds_WorkFlag_10" BkColor2="user3" BoldHead="FALSE" Border="Flat" Bottom="685" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" HeadHeight="20" Height="566" Id="grd_WorkFlag_10" InputPanel="FALSE" Left="5" LineColor="default" LineType="ExVERT" MultiSelect="TRUE" Right="1265" ScrollCell="true" SelColor="BACKGROUND" Style="grid" TabOrder="8" TabStop="true" Top="119" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="1260">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="120"/>
+						<col fix="left" width="180"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="150"/>
+						<col width="92"/>
+						<col width="94"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="150"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell col="0" colspan="2" display="text" rowspan="2" text="구&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;분"/>
+						<cell col="2" colspan="7" display="text" text="기완료건수"/>
+						<cell col="9" colspan="7" display="text" text="금회완료건수"/>
+						<cell col="16" colspan="7" display="text" text="완료건수[누계]"/>
+						<cell col="2" colspan="6" display="text" row="1" text="강북지사"/>
+						<cell col="8" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="9" colspan="6" display="text" row="1" text="강북지사"/>
+						<cell col="15" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="16" colspan="6" display="text" row="1" text="강북지사"/>
+						<cell col="22" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="0" display="text" row="2" text="대분류"/>
+						<cell col="1" display="text" row="2" text="중분류"/>
+						<cell col="2" display="text" row="2" text="마포"/>
+						<cell col="3" display="text" row="2" text="용산"/>
+						<cell col="4" display="text" row="2" text="종로"/>
+						<cell col="5" display="text" row="2" text="서대문"/>
+						<cell col="6" display="text" row="2" text="은평"/>
+						<cell col="7" display="text" row="2" text="계"/>
+						<cell col="9" display="text" row="2" text="마포"/>
+						<cell col="10" display="text" row="2" text="용산"/>
+						<cell col="11" display="text" row="2" text="종로"/>
+						<cell col="12" display="text" row="2" text="서대문"/>
+						<cell col="13" display="text" row="2" text="은평"/>
+						<cell col="14" display="text" row="2" text="계"/>
+						<cell col="16" display="text" row="2" text="마포"/>
+						<cell col="17" display="text" row="2" text="용산"/>
+						<cell col="18" display="text" row="2" text="종로"/>
+						<cell col="19" display="text" row="2" text="서대문"/>
+						<cell col="20" display="text" row="2" text="은평"/>
+						<cell col="21" display="text" row="2" text="계"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="WORK_L_NM" display="text"/>
+						<cell col="1" colid="WORK_M_NM" display="text"/>
+						<cell align="right" col="2" colid="MP1" display="normal"/>
+						<cell align="right" col="3" colid="YS1" display="normal"/>
+						<cell align="right" col="4" colid="JR1" display="normal"/>
+						<cell align="right" col="5" colid="SD1" display="normal"/>
+						<cell align="right" col="6" colid="EP1" display="normal"/>
+						<cell align="right" col="7" colid="CNT_1" display="normal"/>
+						<cell align="right" col="8" colid="AMT_1" display="normal"/>
+						<cell align="right" col="9" colid="MP2" display="normal"/>
+						<cell align="right" col="10" colid="YS2" display="normal"/>
+						<cell align="right" col="11" colid="JR2" display="normal"/>
+						<cell align="right" col="12" colid="SD2" display="normal"/>
+						<cell align="right" col="13" colid="EP2" display="normal"/>
+						<cell align="right" col="14" colid="CNT_2" display="normal"/>
+						<cell align="right" col="15" colid="AMT_2" display="normal"/>
+						<cell align="right" col="16" colid="MP3" display="normal"/>
+						<cell align="right" col="17" colid="YS3" display="normal"/>
+						<cell align="right" col="18" colid="JR3" display="normal"/>
+						<cell align="right" col="19" colid="SD3" display="normal"/>
+						<cell align="right" col="20" colid="EP3" display="normal"/>
+						<cell align="right" col="21" colid="CNT_3" display="normal"/>
+						<cell align="right" col="22" colid="AMT_3" display="normal"/>
+					</body>
+				</format>
+				<format id="Format2">
+					<columns>
+						<col fix="left" width="120"/>
+						<col fix="left" width="180"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="150"/>
+						<col width="92"/>
+						<col width="94"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="150"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell col="0" colspan="2" display="text" rowspan="2" text="구&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;분"/>
+						<cell col="2" colspan="5" display="text" text="기완료건수"/>
+						<cell col="7" colspan="5" display="text" text="금회완료건수"/>
+						<cell col="12" colspan="5" display="text" text="완료건수[누계]"/>
+						<cell col="2" colspan="4" display="text" row="1" text="남부지사"/>
+						<cell col="6" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="7" colspan="4" display="text" row="1" text="남부지사"/>
+						<cell col="11" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="12" colspan="4" display="text" row="1" text="남부지사"/>
+						<cell col="16" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="0" display="text" row="2" text="대분류"/>
+						<cell col="1" display="text" row="2" text="중분류"/>
+						<cell col="2" display="text" row="2" text="서초"/>
+						<cell col="3" display="text" row="2" text="관악"/>
+						<cell col="4" display="text" row="2" text="동작"/>
+						<cell col="5" display="text" row="2" text="계"/>
+						<cell col="7" display="text" row="2" text="서초"/>
+						<cell col="8" display="text" row="2" text="관악"/>
+						<cell col="9" display="text" row="2" text="동작"/>
+						<cell col="10" display="text" row="2" text="계"/>
+						<cell col="12" display="text" row="2" text="서초"/>
+						<cell col="13" display="text" row="2" text="관악"/>
+						<cell col="14" display="text" row="2" text="동작"/>
+						<cell col="15" display="text" row="2" text="계"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="WORK_L_NM" display="text"/>
+						<cell col="1" colid="WORK_M_NM" display="text"/>
+						<cell align="right" col="2" colid="SC1" display="normal"/>
+						<cell align="right" col="3" colid="GY1" display="normal"/>
+						<cell align="right" col="4" colid="DJ1" display="normal"/>
+						<cell align="right" col="5" colid="CNT_1" display="normal"/>
+						<cell align="right" col="6" colid="AMT_1" display="normal"/>
+						<cell align="right" col="7" colid="SC2" display="normal"/>
+						<cell align="right" col="8" colid="GY2" display="normal"/>
+						<cell align="right" col="9" colid="DJ2" display="normal"/>
+						<cell align="right" col="10" colid="CNT_2" display="normal"/>
+						<cell align="right" col="11" colid="AMT_2" display="normal"/>
+						<cell align="right" col="12" colid="SC3" display="normal"/>
+						<cell align="right" col="13" colid="GY3" display="normal"/>
+						<cell align="right" col="14" colid="DJ3" display="normal"/>
+						<cell align="right" col="15" colid="CNT_3" display="normal"/>
+						<cell align="right" col="16" colid="AMT_3" display="normal"/>
+					</body>
+				</format>
+				<format id="Format3">
+					<columns>
+						<col fix="left" width="120"/>
+						<col fix="left" width="180"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="150"/>
+						<col width="92"/>
+						<col width="94"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="150"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell col="0" colspan="2" display="text" rowspan="2" text="구&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;분"/>
+						<cell col="2" colspan="5" display="text" text="기완료건수"/>
+						<cell col="7" colspan="5" display="text" text="금회완료건수"/>
+						<cell col="12" colspan="5" display="text" text="완료건수[누계]"/>
+						<cell col="2" colspan="4" display="text" row="1" text="서부지사"/>
+						<cell col="6" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="7" colspan="4" display="text" row="1" text="서부지사"/>
+						<cell col="11" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="12" colspan="4" display="text" row="1" text="서부지사"/>
+						<cell col="16" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="0" display="text" row="2" text="대분류"/>
+						<cell col="1" display="text" row="2" text="중분류"/>
+						<cell col="2" display="text" row="2" text="영등포"/>
+						<cell col="3" display="text" row="2" text="강서"/>
+						<cell col="4" display="text" row="2" text="양천"/>
+						<cell col="5" display="text" row="2" text="계"/>
+						<cell col="7" display="text" row="2" text="영등포"/>
+						<cell col="8" display="text" row="2" text="강서"/>
+						<cell col="9" display="text" row="2" text="양천"/>
+						<cell col="10" display="text" row="2" text="계"/>
+						<cell col="12" display="text" row="2" text="영등포"/>
+						<cell col="13" display="text" row="2" text="강서"/>
+						<cell col="14" display="text" row="2" text="양천"/>
+						<cell col="15" display="text" row="2" text="계"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="WORK_L_NM" display="text"/>
+						<cell col="1" colid="WORK_M_NM" display="text"/>
+						<cell align="right" col="2" colid="YD1" display="normal"/>
+						<cell align="right" col="3" colid="GS1" display="normal"/>
+						<cell align="right" col="4" colid="YC1" display="normal"/>
+						<cell align="right" col="5" colid="CNT_1" display="normal"/>
+						<cell align="right" col="6" colid="AMT_1" display="normal"/>
+						<cell align="right" col="7" colid="YD2" display="normal"/>
+						<cell align="right" col="8" colid="GS2" display="normal"/>
+						<cell align="right" col="9" colid="YC2" display="normal"/>
+						<cell align="right" col="10" colid="CNT_2" display="normal"/>
+						<cell align="right" col="11" colid="AMT_2" display="normal"/>
+						<cell align="right" col="12" colid="YD3" display="normal"/>
+						<cell align="right" col="13" colid="GS3" display="normal"/>
+						<cell align="right" col="14" colid="YC3" display="normal"/>
+						<cell align="right" col="15" colid="CNT_3" display="normal"/>
+						<cell align="right" col="16" colid="AMT_3" display="normal"/>
+					</body>
+				</format>
+				<format id="format4">
+					<columns>
+						<col fix="left" width="120"/>
+						<col fix="left" width="180"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="150"/>
+						<col width="92"/>
+						<col width="94"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="92"/>
+						<col width="150"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="150"/>
+					</columns>
+					<head>
+						<cell col="0" colspan="2" display="text" rowspan="2" text="구&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;분"/>
+						<cell col="2" colspan="7" display="text" text="기완료건수"/>
+						<cell col="9" colspan="7" display="text" text="금회완료건수"/>
+						<cell col="16" colspan="7" display="text" text="완료건수[누계]"/>
+						<cell col="2" colspan="6" display="text" row="1" text="경기지사"/>
+						<cell col="8" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="9" colspan="6" display="text" row="1" text="경기지사"/>
+						<cell col="15" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="16" colspan="6" display="text" row="1" text="경기지사"/>
+						<cell col="22" display="text" row="1" rowspan="2" text="지급금액"/>
+						<cell col="0" display="text" row="2" text="대분류"/>
+						<cell col="1" display="text" row="2" text="중분류"/>
+						<cell col="2" display="text" row="2" text="일산동구"/>
+						<cell col="3" display="text" row="2" text="일산서구"/>
+						<cell col="4" display="text" row="2" text="덕양구"/>
+						<cell col="5" display="text" row="2" text="파주시"/>
+						<cell col="6" display="text" row="2" text="김포시"/>
+						<cell col="7" display="text" row="2" text="계"/>
+						<cell col="9" display="text" row="2" text="일산동구"/>
+						<cell col="10" display="text" row="2" text="일산서구"/>
+						<cell col="11" display="text" row="2" text="덕양구"/>
+						<cell col="12" display="text" row="2" text="파주시"/>
+						<cell col="13" display="text" row="2" text="김포시"/>
+						<cell col="14" display="text" row="2" text="계"/>
+						<cell col="16" display="text" row="2" text="일산동구"/>
+						<cell col="17" display="text" row="2" text="일산서구"/>
+						<cell col="18" display="text" row="2" text="덕양구"/>
+						<cell col="19" display="text" row="2" text="파주시"/>
+						<cell col="20" display="text" row="2" text="김포시"/>
+						<cell col="21" display="text" row="2" text="계"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="WORK_L_NM" display="text"/>
+						<cell col="1" colid="WORK_M_NM" display="text"/>
+						<cell align="right" col="2" colid="ISD1" display="normal"/>
+						<cell align="right" col="3" colid="ISS1" display="normal"/>
+						<cell align="right" col="4" colid="DYG1" display="normal"/>
+						<cell align="right" col="5" colid="PJS1" display="normal"/>
+						<cell align="right" col="6" colid="KPS1" display="normal"/>
+						<cell align="right" col="7" colid="CNT_1" display="normal"/>
+						<cell align="right" col="8" colid="AMT_1" display="normal"/>
+						<cell align="right" col="9" colid="ISD2" display="normal"/>
+						<cell align="right" col="10" colid="ISS2" display="normal"/>
+						<cell align="right" col="11" colid="DYG2" display="normal"/>
+						<cell align="right" col="12" colid="KPS2" display="normal"/>
+						<cell align="right" col="13" colid="KPS2" display="normal"/>
+						<cell align="right" col="14" colid="CNT_2" display="normal"/>
+						<cell align="right" col="15" colid="AMT_2" display="normal"/>
+						<cell align="right" col="16" colid="ISD3" display="normal"/>
+						<cell align="right" col="17" colid="ISS3" display="normal"/>
+						<cell align="right" col="18" colid="DYG3" display="normal"/>
+						<cell align="right" col="19" colid="PJS3" display="normal"/>
+						<cell align="right" col="20" colid="KPS3" display="normal"/>
+						<cell align="right" col="21" colid="CNT_3" display="normal"/>
+						<cell align="right" col="22" colid="AMT_3" display="normal"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape BKColor="#6cbae1" Bottom="119" Height="17" Id="Shape0" Left="5" LineWidth="0" Right="1265" TabOrder="9" Top="102" Type="Rectangle" Width="1260"></Shape>
+		<Image Align="Left" Height="9" Id="Image1" ImageID="blt_8" Left="1037" LeftMargin="12" OnClick="Image13_OnClick" Style="text_title" TabOrder="10" Text="용역기간&#32;:" Top="86" Width="75"></Image>
+		<Edit Align="CENTER" AutoSelect="TRUE" BKColor="white" Border="None" DisableBKColor="white" Enable="FALSE" Height="18" Id="edt_Count" ImeMode="none" Left="1120" MaxLength="10" Number="TRUE" Readonly="TRUE" Style="static" TabOrder="11" Top="82" Width="60"></Edit>
+		<Edit Align="CENTER" AutoSelect="TRUE" BKColor="white" Border="None" DisableBKColor="white" Enable="FALSE" Height="18" Id="Edit0" ImeMode="none" Left="1202" MaxLength="10" Number="TRUE" Readonly="TRUE" Style="static" TabOrder="12" Top="82" Width="60"></Edit>
+		<Static Height="18" Id="Static73" Left="1186" Style="static" TabOrder="13" Text="~" Top="86" Width="15"></Static>
+	</Form>
+	<Script><![CDATA[/***************************************************************************************************
+* FormID     : D1606010010F.xml
+* Form 설명  : 정산지급 및 용역 시행현황
+* 시스템 명  : 안전공급 (D1)
+* 작성자     : 정주혜
+* 작성일     : 2009-07-10
+* 변경내용   : 
+****************************************************************************************************/
+
+#include "JS::COMMONA10001.js";
+#include "JS::COMMONA10002.js";
+#include "JS::COMMOND10001.js";
+#include "JS::COMMONE20001.js";
+
+var strarg = "";
+/*===============================================================================
+ * 공통 div_ComHead 에서 버튼 이벤트
+  추가 fn_CommonAddRow
+  삭제 fn_CommonDeleteRow
+  저장 fn_CommonSave
+  조회 fn_CommonSearch
+  엑셀 fn_CommonExcelExport
+  인쇄 fn_CommonPrint
+  선택 fn_CommonSelect
+  닫기 공통에서 처리
+===============================================================================*/ 
+function D1606010010F_OnLoadCompleted(obj)
+{
+	gfn_LoadForm(obj);
+	fn_Init();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_Init()
+// 설명: 초기설정
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_Init()
+{
+	//  콤보박스의 내용을 셋팅한다.
+	gfn_D1_SetComboBox_Branchcd(gfn_D1_setDsObject_Branchcd("cob_ObjectFlag"));
+	cob_ObjectFlag.Index = 0;
+	cal_BaseMonth.Value = today();
+	fn_CommonSearch();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_CommonSearch()
+// 설명: 정산지급 및 용역 시행현황 조회 한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_CommonSearch(){
+	
+	if(cal_BaseMonth.Value == '' || cal_BaseMonth.Value == null){
+		alert("정산지급기준일을 선택하세요. ");
+		return; 
+	}
+	ds_WorkFlag.ClearData();
+	ds_WorkFlag.AddRow();
+	ds_WorkFlag.SetColumn(0,"BRANCH_CD",cob_ObjectFlag.Value);
+	ds_WorkFlag.SetColumn(0,"BASE_MONTH",substr(cal_BaseMonth.Value, 0, 6));
+	ds_WorkFlag.SetColumn(0,"BASE_YYYY",substr(cal_BaseMonth.Value, 0, 4));
+	
+	cob_ObjectFlag_OnChanged();
+}
+
+//-------------------------------------------------------------------------------
+// 함수명: fn_D1_find()
+// 설명: 정산지급 및 용역 시행현황 조회 한다.
+// arguments	없음
+// return  없음
+//-------------------------------------------------------------------------------
+function fn_D1_find(){
+	
+	
+	
+	var strSvcID        = "";
+	var strPart         = "D10";	
+	var strURL          = "handle.do?ServiceName=D1606010010F-service"
+						;
+						
+	var strInDatasets   = "ds_WorkFlag=ds_WorkFlag";
+	var strOutDatasets  = "ds_WorkFlag_10=ds_WorkFlag_10";
+	var strArgument     = strarg;
+	 	 
+	gfn_SyncCall( 
+					 strSvcID
+				   , strPart
+				   , strURL
+				   , strInDatasets
+				   , strOutDatasets
+				   , strArgument
+			   );
+			   
+	if(ds_WorkFlag_10.GetRowCount()==0) {
+		grd_WorkFlag_10.NoDataText = "조회된 데이터가 없습니다. ";	
+		return;
+	}
+}
+
+function cal_BaseMonth_OnChanged(obj,strOldText,strNewText)
+{
+	
+}
+
+function cob_ObjectFlag_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	if(cob_ObjectFlag.Value == "100664")
+	{
+		grd_WorkFlag_10.Format = "Default";
+		strarg = "gsearch";
+		fn_D1_find();
+	}
+	else if(cob_ObjectFlag.Value == "100591")
+	{
+		grd_WorkFlag_10.Format = "Format2";
+		strarg = "nsearch2";
+		fn_D1_find();
+	}
+	else if(cob_ObjectFlag.Value == "100584")
+	{
+		grd_WorkFlag_10.Format = "Format3";
+		strarg = "ssearch3";
+		fn_D1_find();
+	}
+	else if(cob_ObjectFlag.Value == "101500")
+	{
+		grd_WorkFlag_10.Format = "Format4";
+		strarg = "ksearch4";
+		fn_D1_find();
+	}
+}
+]]></Script>
+</Window>
